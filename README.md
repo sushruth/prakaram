@@ -5,13 +5,21 @@
 
 ---
 
+## 📚 Documentation & Guides
+
+* **[AGENTS.md](AGENTS.md)** — Operating manual and architectural invariants for AI agents and LLM orchestrators.
+* **[ASSUMPTIONS.md](ASSUMPTIONS.md)** — Comprehensive record of architectural assumptions, Chandaḥ-śāstra formulas, Vedic accent encodings, and Phase 2 Panchangam roadmap.
+* **[MAINTAINERS.md](MAINTAINERS.md)** — Operational manual, Cloudflare Pages/Workers deployment, and D1 database commands.
+
+---
+
 ## ✨ Key Capabilities
 
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
 * **Single-Chunk Focus:** Highlights one line/chunk at a time with smooth ambient scrolling.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights.
-* **Option A Rhythm Learning:** Tap screen or spacebar along with your chant; the engine learns your per-syllable, per-akshara cadence and statistical variance in real-time.
-* **Confidence Gauge & Auto-Progress:** When rhythm consistency reaches $\ge 80\%$, the engine suggests "Auto Progress" and can smoothly advance chunk-by-chunk at your personal cadence.
+* **Option A Rhythm Learning:** Tap screen or spacebar along with your chant; the engine learns your per-syllable cadence and statistical variance in real-time.
+* **Confidence Gauge & Auto-Progress:** When rhythm consistency reaches $\ge 80\%$, the engine suggests "Auto Progress" and smoothly advances chunk-by-chunk at your learned cadence.
 * **Laya Scales:**
   - **Dhyāna (ध्यान / Vilambita Laya):** 48 BPM (Meditative, deliberate)
   - **Abhyāsa (अभ्यास / Madhya Laya):** 72 BPM (Standard daily study)
@@ -85,7 +93,6 @@ bun test
 ### Cloudflare Worker (Optional Backend)
 ```bash
 cd worker
-# Run locally with wrangler
 bunx wrangler dev
 ```
 
@@ -95,7 +102,9 @@ bunx wrangler dev
 
 ```
 parayanam/
-├── ASSUMPTIONS.md                 # Architectural assumptions & mathematical formulas
+├── AGENTS.md                      # Guide & invariants for AI coding agents
+├── ASSUMPTIONS.md                 # Architectural assumptions & prosody formulas
+├── MAINTAINERS.md                 # Deployment & maintenance guide
 ├── index.html                     # HTML mount root with Indic serif fonts
 ├── vite.config.ts                 # Preact + Vite bundler configuration
 ├── tsconfig.json                  # Strict TypeScript configuration
