@@ -1,0 +1,138 @@
+{
+  "id": "narayana-suktam",
+  "title": {
+    "sanskrit": "नारायण सूक्तम्",
+    "transliteration": "Nārāyaṇa Sūktam",
+    "english": "Hymn to the Cosmic Narayana"
+  },
+  "metadata": {
+    "veda": "Krishna Yajurveda (Taittiriya Aranyaka 10.13 / Mahanarayana Upanishad)",
+    "source": "Saswara Veda Mantrah (Ramakrishna Math)",
+    "rishi": "Narayana",
+    "devata": "Paramatman / Sri Maha Vishnu",
+    "chandas": "Anushtubh & Trishtubh"
+  },
+  "sections": [
+    {
+      "id": "narayana-anuvaka-1",
+      "title": "Narayana Suktam",
+      "sectionNumber": 1,
+      "chunks": [
+        {
+          "id": "ns-1a",
+          "chunkNumber": 1,
+          "sanskrit": "ॐ स॒हस्र॑शीर्षं दे॒वं वि॒श्वाक्षं॑ वि॒श्वश॑म्भुवम् ।",
+          "translation": "Om, we meditate on the thousand-headed Deity, whose eyes look upon the entire universe, the fountainhead of universal auspiciousness."
+        },
+        {
+          "id": "ns-1b",
+          "chunkNumber": 2,
+          "sanskrit": "विश्वं॑ ना॒राय॑णं दे॒वम॒क्षरं॑ पर॒मं पदम् ॥ १ ॥",
+          "translation": "The entire universe is Lord Narayana, the imperishable divine Lord, the Supreme Abode."
+        },
+        {
+          "id": "ns-2a",
+          "chunkNumber": 3,
+          "sanskrit": "वि॒श्वतः॒ पर॑मान्नि॒त्यं॒ वि॒श्वं ना॑राय॒णꣳ ह॑रिम् ।",
+          "translation": "Transcending the entire cosmos, eternal, all-pervading Narayana, Hari who removes all sorrow."
+        },
+        {
+          "id": "ns-2b",
+          "chunkNumber": 4,
+          "sanskrit": "विश्व॑मे॒वेदं पुरु॑ष॒स्तद्विश्व॒मुप॑जीवति ॥ २ ॥",
+          "translation": "This entire universe is indeed the Purusha; upon that Supreme Reality all existence lives and breathes."
+        },
+        {
+          "id": "ns-3a",
+          "chunkNumber": 5,
+          "sanskrit": "पतिं॒ विश्व॑स्या॒त्मेश्व॑रꣳ शाश्व॑तꣳ शि॒वम॑च्यु॒तम् ।",
+          "translation": "The Sovereign of the universe, the Ruler of the soul, the Eternal, the Auspicious, the Infallible."
+        },
+        {
+          "id": "ns-3b",
+          "chunkNumber": 6,
+          "sanskrit": "ना॒राय॒णं म॑हाज्ञे॒यं॒ वि॒श्वात्मानं॑ पsourceरा॒यणम् ॥ ३ ॥",
+          "translation": "Narayana, the supreme Object of knowledge, the innermost Soul of the cosmos, the ultimate Refuge."
+        },
+        {
+          "id": "ns-4a",
+          "chunkNumber": 7,
+          "sanskrit": "ना॒राय॒णप॑रो ज्यो॒ति॒रा॒त्मा ना॑राय॒णः प॑रः ।",
+          "translation": "Narayana is the supreme transcendent Light; Narayana is the supreme innermost Self."
+        },
+        {
+          "id": "ns-4b",
+          "chunkNumber": 8,
+          "sanskrit": "ना॒राय॒णप॑रं ब्र॒ह्म॒ तत्त्वं ना॑राय॒णः प॑रः ॥ ४ ॥",
+          "translation": "Narayana is the supreme Brahman; Narayana is the supreme ultimate Reality."
+        },
+        {
+          "id": "ns-5a",
+          "chunkNumber": 9,
+          "sanskrit": "ना॒राय॒णप॑रो ध्या॒ता॒ ध्या॒नं ना॑राय॒णः प॑रः ।",
+          "translation": "Narayana is the highest object of contemplation; Narayana Himself is the transcendent meditation."
+        },
+        {
+          "id": "ns-5b",
+          "chunkNumber": 10,
+          "sanskrit": "यच्च॑ कि॒ञ्चिज्जग॒त्सर्वं॒ दृ॒श्यते᳚ श्रूय॒तेऽपि॑ वा ।",
+          "translation": "Whatever exists in this boundless universe that is seen or heard,"
+        },
+        {
+          "id": "ns-5c",
+          "chunkNumber": 11,
+          "sanskrit": "अन्त॑र्ब॒हिश्च॑ तत्स॒र्वं॒ व्या॒प्य ना॑राय॒णः स्थि॑तः ॥ ५ ॥",
+          "translation": "Within and without, pervading everything entirely, Narayana abides."
+        },
+        {
+          "id": "ns-6a",
+          "chunkNumber": 12,
+          "sanskrit": "पद्म॑कोशप्रतीका॒शꣳ हृ॒दयं॑ चाप्य॒धोमु॑खम् ।",
+          "translation": "Resembling an inverted lotus bud is the sacred spiritual heart within the chest."
+        },
+        {
+          "id": "ns-6b",
+          "chunkNumber": 13,
+          "sanskrit": "अधो॑ नि॒ष्ट्या वि॑तस्त्या॒न्ते॒ नाभ्या॑मुप॑रि तिष्ठति ॥ ६ ॥",
+          "translation": "A span below the throat and above the navel, this center of consciousness shines."
+        },
+        {
+          "id": "ns-7a",
+          "chunkNumber": 14,
+          "sanskrit": "तस्य॒ शिखा॑या म॒ध्ये प॒रमा᳚त्मा व्य॒वस्थि॑तः ।",
+          "translation": "In the center of that slender flame of consciousness, the Supreme Paramatman is enthroned."
+        },
+        {
+          "id": "ns-7b",
+          "chunkNumber": 15,
+          "sanskrit": "स ब्र॒ह्मा स शि॒वः स हरिः॒ सेन्द्रः॒ सोऽक्ष॑रः पर॒मः स्व॒राट् ॥ ७ ॥",
+          "translation": "He is Brahma, He is Shiva, He is Hari, He is Indra, He is the Imperishable Supreme Self-Luminous Lord."
+        },
+        {
+          "id": "ns-8a",
+          "chunkNumber": 16,
+          "sanskrit": "ऋ॒तꣳ स॒त्यं प॑रं ब्र॒ह्म॒ पु॒रुषं॑ कृष्ण॒पिङ्ग॑लम् ।",
+          "translation": "The Cosmic Order, the Absolute Truth, the Supreme Brahman, the Being adorned in dark blue and golden radiance."
+        },
+        {
+          "id": "ns-8b",
+          "chunkNumber": 17,
+          "sanskrit": "ऊ॒र्ध्वरे॑तं वि॑रूपा॒क्षं॒ वि॒श्वरू॑पाय॒ वै नमः॑ ॥ ८ ॥",
+          "translation": "Whose energy is transcendent, the all-seeing Lord of universal forms — salutations unto Thee!"
+        },
+        {
+          "id": "ns-9a",
+          "chunkNumber": 18,
+          "sanskrit": "ॐ ना॒रा॒य॒णाय॑ वि॒द्महे॑ वासुदे॒वाय॑ धीमहि । तन्नो॑ विष्णुः प्रचो॒दया᳚त् ॥",
+          "translation": "We meditate upon Narayana; we contemplate Lord Vasudeva. May Lord Vishnu awaken and guide our intellect."
+        },
+        {
+          "id": "ns-9b",
+          "chunkNumber": 19,
+          "sanskrit": "ॐ शान्तिः॒ शान्तिः॒ शान्तिः॑ ॥",
+          "translation": "Om Peace, Peace, Peace."
+        }
+      ]
+    }
+  ]
+}
