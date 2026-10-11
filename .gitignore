@@ -1,0 +1,15 @@
+# Node / Bun
+node_modules/
+dist/
+.output/
+*.log
+
+# Environment & Cloudflare
+.env
+.env.local
+.dev.vars
+.wrangler/
+
+# OS
+.DS_Store
+Thumbs.db
