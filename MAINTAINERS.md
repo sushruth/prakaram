@@ -144,6 +144,15 @@ The Koshah wiki is built from the documents in `src/data`. Nothing is stored sep
    - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
 4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
 
+### Keeping line numbers stable (nirdeśa)
+
+Readers, prakarams and links store addresses like `rudram-namakam/3.2-3.9`: section number, then line (chunk) position inside the section (AGENTS.md §1b). So when you edit a source:
+
+- Never renumber or reorder published sections or lines. Fix wording in place; do not split or merge a chunk in the middle of a section.
+- Add new text at the end of a section, or as a new last section. Section numbers stay `1..n` with no gaps and no empty section (`nirdesa.test.ts` enforces it).
+- If lines truly must move, note it in the commit and bump the document's source/revision note so old links can be reviewed; do not silently shift lines under existing addresses.
+- `metadata.cite` (e.g. `TS 4.5`) is optional; fill it only when you have checked it. It is a citation of the whole text, not a mantra number.
+
 ### Declaring media, and compositions
 
 Text, transliteration and translation are derived; do not declare them. Declare only what the text cannot show, in `metadata.media`: `kind` (`audio`, `commentary`, `image`, or an extra `text` or `translation`), and optionally `label`, `language`, `script`, `swara`, `source`, `license`, `url`. Declare only what exists: no audio is declared anywhere yet.
@@ -280,4 +289,7 @@ bun run build
 * Bundle size: the JS is 294.10 kB against the 220 KB target (and the build is 1.3 s against 1 s). Trim or raise the target in `AGENTS.md` §4.
 * Wiki parts are whole sections only. Line-range parts (`docId/n` plus a line span) are not supported.
 * Big task, not started: fill the four Vedas as primary sources ourselves, from the original Sanskrit (public-domain printed editions and manuscripts), so the library does not depend on licensed typed editions. Needs the address scheme and the work/edition split first (decided, not built). See `AGENTS.md` §1b.
+* Not started (parallel task): glossary tooltips. Every Sanskrit jargon term in the UI shows its English meaning on hover or tap, from one glossary data file and one component that follows the selected script. See the task list.
+* Naming: the line unit is called a **Pāda** in the UI (decided). Code still says `line` and `chunk` until the mantra-grouping refactor.
+* Not started (parallel task): player scale rail on the left edge (anuvaka and pāda numbers, faint ticks, one solid line from the start to the end of the media), more space around the three highlighted lines, an unbolded scaled-up centre line, smooth scale/colour/opacity animation, and the minimap mimicking it. It needs a named §7b exception in DESIGN.md first. See the task list.
 * Idea, not built: keep the texts in a separate content repository, with each layer (text, swara marks, translation) stating its own licence. Today the texts live in `src/data` and changes come by pull request.

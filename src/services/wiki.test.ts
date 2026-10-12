@@ -3,7 +3,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { ALL_SUKTAMS, SUKTA_FILE } from '../data';
 import { MantraDocument } from '../types/mantra';
-import { articlesForName, articlesInCategory, getArticle, listArticles, listCategories, searchArticles } from './wiki';
+import { pratika, articlesForName, articlesInCategory, getArticle, listArticles, listCategories, searchArticles } from './wiki';
 
 const doc = (id: string, over: Partial<MantraDocument['metadata']> & { sections?: number } = {}): MantraDocument => {
   const { sections = 1, ...meta } = over;
@@ -175,5 +175,22 @@ describe('media and composed articles', () => {
 
   it('finds articles by media kind words', () => {
     expect(searchArticles('audio', [doc('x', { media: [{ kind: 'audio' }] }), doc('y')]).map((a) => a.id)).toEqual(['x']);
+  });
+});
+
+describe('pratika', () => {
+  it('takes about four words and an ellipsis', () => {
+    expect(pratika(['नमस्ते रुद्र मन्यव उतोत इषवे नमः'])).toBe('नमस्ते रुद्र मन्यव उतोत…');
+    expect(pratika(['नमस्ते रुद्र'])).toBe('नमस्ते रुद्र');
+  });
+  it('caps aksharas', () => {
+    expect(pratika(['अअअअअअअअअअअअअअ अअअअअअअअअअअअअअ अअअ']).endsWith('…')).toBe(true);
+  });
+  it('skips a line that is only ॐ', () => {
+    expect(pratika(['ॐ', 'नमस्ते रुद्र'])).toBe('नमस्ते रुद्र');
+  });
+  it('is empty for an empty section', () => {
+    expect(pratika([])).toBe('');
+    expect(pratika(['  ', 'ॐ'])).toBe('');
   });
 });

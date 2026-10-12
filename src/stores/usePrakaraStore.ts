@@ -1,8 +1,9 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Prakara, MantraChunk } from '../types/mantra';
-import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_MAP } from '../data';
-import { PIECE_PREFIX, findPiece, pieceAsPrakara } from '../services/koshah';
+import { ALL_SUKTAMS, DEFAULT_PRAKARAS } from '../data';
+import { PIECE_PREFIX, findPiece, itemNirdesa, nirdesaAsPrakara, normalizePrakara, pieceAsPrakara } from '../services/koshah';
+import { resolveNirdesa } from '../services/nirdesa';
 import { useSettingsStore } from './useSettingsStore';
 import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
 
@@ -20,8 +21,6 @@ interface PrakaraState {
 }
 
 const isDefault = (p: Prakara) => DEFAULT_PRAKARAS.some((d) => d.id === p.id);
-const isPrakara = (v: unknown): v is Prakara =>
-  typeof v === 'object' && v !== null && typeof (v as Prakara).id === 'string' && Array.isArray((v as Prakara).items);
 
 export const usePrakaraStore = create<PrakaraState>()(
   persist(
@@ -36,8 +35,10 @@ export const usePrakaraStore = create<PrakaraState>()(
       getActivePrakara: () => {
         const { prakaras, activePrakaraId } = get();
         if (activePrakaraId.startsWith(PIECE_PREFIX)) {
-          const piece = findPiece(ALL_SUKTAMS, activePrakaraId.slice(PIECE_PREFIX.length));
-          if (piece) return pieceAsPrakara(piece);
+          const addr = activePrakaraId.slice(PIECE_PREFIX.length);
+          const piece = findPiece(ALL_SUKTAMS, addr);
+          const run = piece ? pieceAsPrakara(piece) : nirdesaAsPrakara(addr);
+          if (run) return run;
         }
         return prakaras.find((p) => p.id === activePrakaraId) ?? prakaras[0];
       },
@@ -49,12 +50,9 @@ export const usePrakaraStore = create<PrakaraState>()(
 
         for (const item of prakara.items) {
           if (item.type === 'sukta_ref' && item.suktaId) {
-            const sukta = SUKTA_MAP.get(item.suktaId);
-            for (const section of sukta?.sections ?? []) {
-              if (item.sectionId && section.id !== item.sectionId) continue;
-              for (const ch of section.chunks) {
-                chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
-              }
+            const r = resolveNirdesa(itemNirdesa(item) ?? item.suktaId);
+            for (const ch of r.ok && r.document.id === item.suktaId ? r.chunks : []) {
+              chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
             }
           } else if (item.type === 'vakya') {
             chunks.push({
@@ -93,7 +91,7 @@ export const usePrakaraStore = create<PrakaraState>()(
       }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as { customPrakaras?: unknown; activePrakaraId?: unknown };
-        const stored = Array.isArray(p.customPrakaras) ? p.customPrakaras.filter(isPrakara) : null;
+        const stored = Array.isArray(p.customPrakaras) ? p.customPrakaras.flatMap((x) => normalizePrakara(x) ?? []) : null;
         const custom = stored ?? [];
         return {
           ...current,

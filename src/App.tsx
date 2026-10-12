@@ -158,7 +158,7 @@ export function App() {
         <>
           <div className="wiki-main">
             {route.kind === 'home' && <WikiHome />}
-            {route.kind === 'article' && <WikiArticle id={route.id} section={route.section} onRun={runPiece} />}
+            {route.kind === 'article' && <WikiArticle id={route.id} section={route.section} range={route.range} onRun={runPiece} />}
             {route.kind === 'category' && <WikiCategory name={route.name} />}
             {route.kind === 'search' && <WikiSearch q={route.q} />}
             {route.kind === 'compose' && <WikiCompose />}

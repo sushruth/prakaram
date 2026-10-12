@@ -1,12 +1,15 @@
 import { useState } from 'preact/hooks';
-import { ALL_SUKTAMS } from '../data';
-import { findPiece } from '../services/koshah';
+import { rangeWords, resolveNirdesa } from '../services/nirdesa';
 import { getArticle } from '../services/wiki';
 import { articleHash } from '../services/wikiNav';
 import { basketToPrakara } from '../services/basket';
 import { ArticleTitle } from './Sanskrit';
 import { useBasketStore } from '../stores/useBasketStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
+
+/** '§3 lines 3–9', '§3.2–§4.5', or the section's title for a whole section. */
+const part = ({ nirdesa, sections }: Extract<ReturnType<typeof resolveNirdesa>, { ok: true }>) =>
+  nirdesa.line === undefined ? sections[0].title : nirdesa.to && nirdesa.to.section !== nirdesa.section ? rangeWords(nirdesa) : `§${nirdesa.section} ${rangeWords(nirdesa)}`;
 
 /** Special:Compose: the basket in order, with a name, a line total, and the two ways to finish. */
 export function WikiCompose() {
@@ -15,10 +18,10 @@ export function WikiCompose() {
   const [name, setName] = useState('');
 
   const rows = items.flatMap((i) => {
-    const piece = findPiece(ALL_SUKTAMS, i.pieceId);
-    return piece ? [{ id: i.pieceId, piece }] : [];
+    const r = resolveNirdesa(i);
+    return r.ok ? [{ id: i, r }] : [];
   });
-  const total = rows.reduce((n, r) => n + r.piece.lines, 0);
+  const total = rows.reduce((n, x) => n + x.r.chunks.length, 0);
 
   const finish = (followNow: boolean) => {
     usePrakaraStore.getState().addPrakara(basketToPrakara(items, name));
@@ -55,10 +58,10 @@ export function WikiCompose() {
         {rows.map((r, i) => (
           <li key={r.id} className="wiki-compose-item">
             <span className="wiki-compose-what">
-              <a href={articleHash(r.piece.documentId)}><ArticleTitle title={r.piece.title} /></a>
-              {r.piece.sectionId && <span className="wiki-muted"> · {r.piece.title.english.split(': ').slice(1).join(': ')}</span>}
-              <span className="wiki-muted"> · {r.piece.lines} lines</span>
-              <span className="wiki-muted"> · brings {[...new Set(getArticle(r.piece.documentId)?.media.map((m) => m.kind))].join(', ')}</span>
+              <a href={articleHash(r.r.document.id)}><ArticleTitle title={r.r.document.title} /></a>
+              {r.r.nirdesa.section !== undefined && <span className="wiki-muted"> · {part(r.r)}</span>}
+              <span className="wiki-muted"> · {r.r.chunks.length} lines</span>
+              <span className="wiki-muted"> · brings {[...new Set(getArticle(r.r.document.id)?.media.map((m) => m.kind))].join(', ')}</span>
             </span>
             <button type="button" disabled={i === 0} onClick={() => move(r.id, -1)}>up</button>
             <button type="button" disabled={i === rows.length - 1} onClick={() => move(r.id, 1)}>down</button>

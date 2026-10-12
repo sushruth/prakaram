@@ -2,10 +2,12 @@
 export const HOME_HASH = '#/wiki';
 export const REPO_URL = 'https://github.com/sushruth/prakaram';
 
+import { formatNirdesa, parseNirdesa, resolveNirdesa, type Pos } from './nirdesa';
+
 export type Route =
   | { kind: 'player' }
   | { kind: 'home' }
-  | { kind: 'article'; id: string; section?: number }
+  | { kind: 'article'; id: string; section?: number; /** Lines to mark, from `<s>.<a>-<b>` or `<s>.<l>`. */ range?: { from: Pos; to: Pos } }
   | { kind: 'category'; name: string }
   | { kind: 'search'; q: string }
   | { kind: 'random' }
@@ -34,6 +36,11 @@ export function parseRoute(hash: string): Route {
   if (path.startsWith('Category:')) return { kind: 'category', name: dec(path.slice('Category:'.length)) };
   const [id, section] = path.split('/');
   const n = Number(section);
+  const addr = section !== undefined ? parseNirdesa(`x/${section}`) : null;
+  if (addr?.line !== undefined) {
+    const from = { section: addr.section!, line: addr.line };
+    return { kind: 'article', id: dec(id), section: addr.section, range: { from, to: addr.to ?? from } };
+  }
   return section !== undefined && Number.isInteger(n) && n > 0
     ? { kind: 'article', id: dec(id), section: n }
     : { kind: 'article', id: dec(id) };
@@ -42,6 +49,12 @@ export function parseRoute(hash: string): Route {
 /** Ids and section numbers are encoded, so a `/` inside an id (a koshah piece id) cannot read as a section. */
 export const articleHash = (id: string, section?: string | number) =>
   `#/wiki/${encodeURIComponent(id)}${section === undefined ? '' : `/${section}`}`;
+
+/** The wiki address of a nirdeśa: `#/wiki/<source>` or `#/wiki/<source>/<s>[.<a>[-<b>]]`. */
+export const nirdesaHash = (addr: string) => {
+  const i = addr.indexOf('/');
+  return i < 0 ? articleHash(addr) : `#/wiki/${encodeURIComponent(addr.slice(0, i))}/${addr.slice(i + 1)}`;
+};
 
 export const COMPOSE_HASH = '#/wiki/Special:Compose';
 
@@ -56,3 +69,7 @@ export function legacyHash(hash: string): string | undefined {
   const [id, sec] = dec(m[1]).split('/');
   return articleHash(id, sec && /^\d+$/.test(sec) ? sec : undefined);
 }
+
+/** True when a linked range resolves in the corpus (sections and lines exist, not reversed); no range is fine. */
+export const routeRangeOk = (id: string, range?: { from: Pos; to: Pos }) =>
+  !range || resolveNirdesa(formatNirdesa({ source: id, ...range.from, ...(range.to.section !== range.from.section || range.to.line !== range.from.line ? { to: range.to } : {}) })).ok;
