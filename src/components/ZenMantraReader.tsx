@@ -10,6 +10,7 @@ import { sourcePieces } from '../services/swaraSegments';
 import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
 import { useFrozen } from '../hooks/useFrozen';
+import { useGuest } from '../hooks/useGuest';
 
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
@@ -29,6 +30,7 @@ export function ZenMantraReader() {
   const phase = useCadenceStore((s) => s.phase);
   const autoRunning = useCadenceStore(isAutoRunning);
   const frozen = useFrozen();
+  const guest = useGuest();
   const frozenRef = useRef(frozen);
   frozenRef.current = frozen;
   const setHolding = useMantraStore((s) => s.setHolding);
@@ -66,6 +68,7 @@ export function ZenMantraReader() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (guest) return;
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
       if (e.code === 'Space') {
@@ -85,7 +88,7 @@ export function ZenMantraReader() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [chunks, nextChunk, prevChunk, toggleZenMode]);
+  }, [chunks, nextChunk, prevChunk, toggleZenMode, guest]);
 
   useEffect(() => {
     if (!autoRunning || frozen) return;
@@ -104,6 +107,7 @@ export function ZenMantraReader() {
 
   const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {
+    if (guest) return;
     if (suppressClick.current) {
       suppressClick.current = false;
       return;
@@ -149,7 +153,7 @@ export function ZenMantraReader() {
               className={`chunk-row ${isActive ? 'active' : ''} ${Math.abs(idx - activeChunkIndex) === 1 ? 'is-near' : ''}`}
               onClick={() => handleChunkClick(idx)}
               onPointerDown={() => {
-                if (!isActive) return;
+                if (!isActive || guest) return;
                 // Touching the current line pauses at once. In auto modes the touch does not advance; in Learn it still counts as a tap.
                 pressed.current = true;
                 suppressClick.current = isAutoRunning(useCadenceStore.getState());

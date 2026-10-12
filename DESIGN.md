@@ -205,6 +205,8 @@ The header ring is yellow. A faint full ring shows behind the moving arc. It emp
 - **Away.** When the tab is hidden or the window loses focus, auto-advance pauses and resumes on return. This is the "Pause when away" setting, on by default.
 - Holding and away are not saved.
 
+**Shared sessions.** A host's lines and timing are followed by guests. A guest has no local cadence control: taps, Next, arrow and Space keys, line clicks, the pause ring, the pace slider and the mode control are disabled, and away-pause does not apply. A guest can leave the room to use the app alone.
+
 ### Pace
 
 One slider, in milliseconds per mātrā, from 50 to 3000, default 833. The scale is logarithmic: equal moves of the slider multiply the pace by the same factor, so the slow and fast ends get as much room as the middle. Moving right is faster (a shorter pace), so the left end is the slowest. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.

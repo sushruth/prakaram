@@ -1,11 +1,13 @@
 import { useCadenceStore } from '../../stores/useCadenceStore';
+import { useGuest } from '../../hooks/useGuest';
 import { PACE_SLIDER_STEPS, paceToSlider, sliderToPace } from '../../services/cadenceEngine';
 
 export function TempoControl() {
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
   const setMsPerMatra = useCadenceStore((s) => s.setMsPerMatra);
   const phase = useCadenceStore((s) => s.phase);
-  const off = phase === 'off';
+  const guest = useGuest();
+  const off = phase === 'off' || guest;
 
   return (
     <label className="tempo" data-phase={phase} data-off={off}>

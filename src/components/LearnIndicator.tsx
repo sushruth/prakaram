@@ -4,6 +4,7 @@ import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
 import { useElapsedSeconds } from './cadence/useElapsedSeconds';
 import { useFrozen } from '../hooks/useFrozen';
+import { useGuest } from '../hooks/useGuest';
 
 export function LearnIndicator() {
   const phase = useCadenceStore((s) => s.phase);
@@ -11,6 +12,7 @@ export function LearnIndicator() {
   const firstTapAt = useCadenceStore((s) => s.firstTapAt);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
   const frozen = useFrozen();
+  const guest = useGuest();
   const togglePause = useCadenceStore((s) => s.togglePause);
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
   const chunks = useChunks();
@@ -24,6 +26,7 @@ export function LearnIndicator() {
         <button
           className="learn-ring-btn"
           onClick={togglePause}
+          disabled={guest}
           aria-pressed={frozen}
           aria-label={frozen ? 'Resume auto progress' : 'Pause auto progress'}
           title={frozen ? 'Resume auto progress' : 'Pause auto progress'}

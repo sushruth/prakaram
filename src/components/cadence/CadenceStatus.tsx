@@ -1,5 +1,5 @@
 import { CadenceMode, LEARN_LINES, modeOf, useCadenceStore } from '../../stores/useCadenceStore';
-import { useRoomStore } from '../../stores/useRoomStore';
+import { useGuest } from '../../hooks/useGuest';
 
 const MODES: { id: CadenceMode; label: string; hint: string }[] = [
   { id: 'off', label: 'Off', hint: 'Off: you move the lines' },
@@ -11,8 +11,7 @@ export function CadenceStatus() {
   const phase = useCadenceStore((s) => s.phase);
   const learnedLines = useCadenceStore((s) => s.learnedLines);
   const setMode = useCadenceStore((s) => s.setMode);
-  const { isInRoom, isHost } = useRoomStore();
-  const followingHost = isInRoom && !isHost;
+  const followingHost = useGuest();
   const mode = modeOf(phase);
 
   const status =
