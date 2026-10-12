@@ -169,7 +169,6 @@
   /* One square per syllable, square-cornered. Swara syllables take the reader's swara colours. */
   .minimap-cells {
     display: flex;
-    gap: 1px;
     height: 100%;
   }
 

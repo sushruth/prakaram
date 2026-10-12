@@ -1,3 +1,4 @@
+import { useMemo } from 'preact/hooks';
 import { minimap, MinimapCell } from '../services/minimap';
 import { MantraChunk } from '../types/mantra';
 
@@ -22,7 +23,7 @@ interface MinimapProps {
 
 /** Previous, current and next line in miniature. The current line fills as you sing along; tapping pauses. */
 export function Minimap({ chunks, index, duration, frozen, disabled, onToggle }: MinimapProps) {
-  const rows = minimap([chunks[index - 1], chunks[index], chunks[index + 1]]);
+  const rows = useMemo(() => minimap([chunks[index - 1], chunks[index], chunks[index + 1]]), [chunks, index]);
   const label = frozen ? 'Resume auto progress' : 'Pause auto progress';
   return (
     <button className="minimap" onClick={onToggle} disabled={disabled} aria-pressed={frozen} data-frozen={frozen} aria-label={label} title={label}>
