@@ -109,9 +109,9 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   },
   {
     id: 'sri-rudram',
-    title: 'श्री रुद्रम् (Sri Rudram · Namakam)',
+    title: 'श्री रुद्रम् (Sri Rudram · Namakam & Chamakam)',
     author: 'Taittiriya Samhita 4.5 (Krishna Yajurveda). Text from Vignanam, supplied by the maintainer.',
-    description: 'The Namakam, eleven anuvakas and the concluding mantras, with swara. Chamakam to follow.',
+    description: 'The Namakam and the Chamakam, eleven anuvakas each with their concluding mantras, with swara.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
     items: [
@@ -120,6 +120,12 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         type: 'sukta_ref',
         suktaId: 'rudram-namakam',
         customTitle: 'Namakam'
+      },
+      {
+        id: 'sr-2',
+        type: 'sukta_ref',
+        suktaId: 'rudram-chamakam',
+        customTitle: 'Chamakam'
       }
     ]
   }
