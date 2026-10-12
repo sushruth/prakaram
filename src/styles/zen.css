@@ -47,6 +47,10 @@
     backdrop-filter: none;
   }
 
+  .zen-active .chrome::after {
+    display: none;
+  }
+
   .zen-active .cadence-strip {
     opacity: 0;
     visibility: hidden;

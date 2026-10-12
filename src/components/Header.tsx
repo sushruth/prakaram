@@ -4,6 +4,7 @@ import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
 import { displayTitle } from '../services/titles';
+import { FlameMark } from './FlameMark';
 import { Icon } from './Icon';
 
 interface HeaderProps {
@@ -37,7 +38,7 @@ export function Header({
     <header className="app-header">
       <div className="header-start">
         <span className="header-flame" aria-hidden="true">
-          <Icon name="flame" size={22} />
+          <FlameMark size={24} />
         </span>
         <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={prakara.title}>
           {transliterateVedic(displayTitle(prakara.title), script)}

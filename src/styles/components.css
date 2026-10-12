@@ -316,3 +316,69 @@
     pointer-events: none;
   }
 }
+
+@layer components {
+  /* Live flame: the glow breathes on the wrapper, the body sways from its base, the core flickers. */
+  .header-flame {
+    display: inline-flex;
+    flex-shrink: 0;
+    animation: flame-glow 1.3s ease-in-out infinite alternate;
+  }
+
+  .flame-body,
+  .flame-core {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+  }
+
+  .flame-body {
+    animation: flame-sway 2.4s ease-in-out infinite;
+  }
+
+  .flame-core {
+    animation: flame-tongue 0.9s ease-in-out infinite alternate;
+  }
+
+  @keyframes flame-glow {
+    from {
+      filter: drop-shadow(0 0 2px color-mix(in srgb, var(--flame-mid) 45%, transparent))
+        drop-shadow(0 0 5px color-mix(in srgb, var(--flame-tip) 25%, transparent));
+    }
+    to {
+      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--flame-mid) 85%, transparent))
+        drop-shadow(0 0 11px color-mix(in srgb, var(--flame-tip) 50%, transparent));
+    }
+  }
+
+  @keyframes flame-sway {
+    0%,
+    100% {
+      transform: scale(1, 1) skewX(0deg);
+    }
+    35% {
+      transform: scale(0.985, 1.02) skewX(-1.2deg);
+    }
+    70% {
+      transform: scale(1.01, 0.99) skewX(1deg);
+    }
+  }
+
+  @keyframes flame-tongue {
+    from {
+      transform: scale(0.94, 0.97);
+      opacity: 0.85;
+    }
+    to {
+      transform: scale(1.04, 1.05);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header-flame,
+    .flame-body,
+    .flame-core {
+      animation: none;
+    }
+  }
+}
