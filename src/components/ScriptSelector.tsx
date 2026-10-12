@@ -14,7 +14,7 @@ export function ScriptSelector() {
   const { targetScript, setScript } = useMantraStore();
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+    <div className="script-picker">
       <select
         value={targetScript}
         onChange={(e) => setScript((e.target as HTMLSelectElement).value as TargetScript)}

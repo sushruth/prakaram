@@ -22,18 +22,18 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
 
   return (
     <header className="app-header">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-        <h1 className="title-serif" style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0, color: 'var(--accent)' }}>
+      <div className="header-brand">
+        <h1 className="title-display" style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0, color: 'var(--accent)' }}>
           पारायणम्
         </h1>
-        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Parayanam</span>
+        <span className="brand-sub">Parayanam</span>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+      <div className="header-tools">
         <ScriptSelector />
 
         {/* Font size adjustment */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', border: '1px solid var(--border-subtle)', borderRadius: '8px', padding: '0.1rem 0.3rem' }}>
+        <div className="font-size-pill">
           <button
             className="btn-icon"
             style={{ width: '1.6rem', height: '1.6rem', border: 'none', fontSize: '0.8rem' }}

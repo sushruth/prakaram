@@ -12,7 +12,7 @@ export function ZenMantraReader() {
   const { targetScript, fontSize, activeChunkIndex, setActiveChunkIndex, nextChunk, prevChunk } = useMantraStore();
   const { isAutoProgress, msPerMatra, registerTap } = useCadenceStore();
   const { getFlattenedChunks, getActivePrakara } = usePrakaraStore();
-  const { showTranslations, zenMode, toggleZenMode } = useThemeStore();
+  const { zenMode, toggleZenMode } = useThemeStore();
   const { isHost, isInRoom } = useRoomStore();
 
   const activeChunkRef = useRef<HTMLDivElement | null>(null);
@@ -112,7 +112,7 @@ export function ZenMantraReader() {
 
       {/* Prakara Title Header */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 className="title-serif" style={{ fontSize: '1.4rem', color: 'var(--accent)', marginBottom: '0.4rem' }}>
+        <h2 className="title-display" style={{ fontSize: '1.4rem', color: 'var(--accent)', marginBottom: '0.4rem' }}>
           {activePrakara.title}
         </h2>
         <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
@@ -148,19 +148,6 @@ export function ZenMantraReader() {
                 {transliteratedText}
               </div>
 
-              {showTranslations && chunk.translation && (
-                <div
-                  style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--text-muted)',
-                    marginTop: '0.4rem',
-                    lineHeight: 1.4,
-                    fontStyle: 'italic',
-                  }}
-                >
-                  {chunk.translation}
-                </div>
-              )}
             </div>
           );
         })}
