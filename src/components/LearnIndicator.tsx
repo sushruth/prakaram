@@ -37,13 +37,6 @@ export function LearnIndicator() {
               r="8"
               style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
             />
-            <g
-              key={`hand-${activeChunkIndex}`}
-              className="learn-ring-hand"
-              style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
-            >
-              <line x1="10" y1="0.8" x2="10" y2="3.2" />
-            </g>
             {paused && (
               <g className="learn-pause-mark">
                 <rect x="7" y="6.5" width="2" height="7" rx="0.5" />

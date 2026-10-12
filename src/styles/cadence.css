@@ -171,29 +171,12 @@
     animation-fill-mode: forwards;
   }
 
-  .learn-ring-hand {
-    transform-origin: 10px 10px;
-    animation-name: ring-hand;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-
-  .learn-ring-hand line {
-    stroke: var(--text-primary);
-    stroke-width: 0.7;
-  }
-
   @keyframes ring-drain {
     to {
       stroke-dashoffset: 50.27;
     }
   }
 
-  @keyframes ring-hand {
-    to {
-      transform: rotate(360deg);
-    }
-  }
 }
 
 @layer components {
