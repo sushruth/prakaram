@@ -324,25 +324,20 @@
 }
 
 @layer components {
-  /* Live flame: the glow breathes on the wrapper, the body sways from its base, the core flickers. */
+  /* Live flame: the glow flickers on the wrapper and the outline sways from its base. */
   .header-flame {
     display: inline-flex;
     flex-shrink: 0;
     animation: flame-glow 1.4s ease-in-out infinite;
   }
 
-  .flame-body,
-  .flame-core {
+  .flame-body {
     transform-box: fill-box;
     transform-origin: 50% 100%;
   }
 
   .flame-body {
     animation: flame-sway 2.4s ease-in-out infinite;
-  }
-
-  .flame-core {
-    animation: flame-tongue 0.9s ease-in-out infinite alternate;
   }
 
   /* Two halos: a tight warm core and a wider orange bloom. Flares rise fast and fall back slowly, at uneven steps, so it reads as fire. */
@@ -390,21 +385,9 @@
     }
   }
 
-  @keyframes flame-tongue {
-    from {
-      transform: scale(0.94, 0.97);
-      opacity: 0.85;
-    }
-    to {
-      transform: scale(1.04, 1.05);
-      opacity: 1;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .header-flame,
     .flame-body,
-    .flame-core,
     .cadence-modes[data-phase] [data-mode="learn"],
     .tempo[data-phase] input,
     .tempo[data-phase] .tempo-value,
