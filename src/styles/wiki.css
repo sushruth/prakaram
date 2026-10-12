@@ -1,9 +1,10 @@
+/* Wiki articles: text only. Space and type scale separate things; no borders, boxes or tints (DESIGN.md §7b). */
 @layer components {
   .wiki-article {
     box-sizing: border-box;
-    max-width: 48rem;
+    max-width: 44rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem 1.25rem 3rem;
     overflow-wrap: anywhere;
   }
 
@@ -25,28 +26,24 @@
     outline: none;
   }
 
-  /* Tabs: a row of words, the current one in ink. */
+  /* Tabs: spaced words, the current one in the accent colour. */
   .wiki-tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem 1rem;
+    gap: 0.5rem 1.5rem;
     font-size: 0.85rem;
   }
 
-  .wiki-tabs [aria-current="page"] {
-    color: var(--text-primary);
+  .wiki-article .wiki-tabs a {
+    color: var(--text-secondary);
   }
 
-  .wiki-tab-disabled {
-    color: var(--text-muted);
-    opacity: 0.6;
-    cursor: not-allowed;
+  .wiki-article .wiki-tabs [aria-current="page"] {
+    color: var(--accent);
   }
 
   .wiki-article .wiki-title {
-    margin: 1rem 0 0;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid var(--text-muted);
+    margin: 2.5rem 0 0;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.85rem;
     font-weight: 400;
@@ -54,39 +51,40 @@
   }
 
   .wiki-subtitle {
-    margin: 0.35rem 0 0;
-    color: var(--text-muted);
-    font-size: 0.95rem;
+    margin: 0.5rem 0 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
   }
 
   .wiki-notice {
-    margin: 1rem 0 0;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--text-muted);
+    margin: 1.5rem 0 0;
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
-  /* Infobox: floats right beside the lead on wide screens, stacks on phones. */
+  .wiki-notice-word {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .wiki-lead {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  /* Facts: a plain definition list. Right column on wide screens, a calm block on phones. */
   .wiki-infobox {
-    box-sizing: border-box;
-    margin: 1rem 0;
-    padding: 0.75rem;
-    border: 1px solid var(--text-muted);
-    font-size: 0.85rem;
-  }
-
-  .wiki-infobox-title {
-    margin: 0;
-    font-size: 1.15rem;
-    text-align: center;
+    margin: 2rem 0 0;
+    font-size: 0.9rem;
   }
 
   .wiki-infobox dl {
     display: grid;
-    grid-template-columns: 6rem 1fr;
-    gap: 0.4rem 0.75rem;
-    margin: 0.75rem 0 0;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.6rem 1rem;
+    margin: 1.25rem 0 0;
   }
 
   .wiki-infobox dt {
@@ -95,16 +93,17 @@
 
   .wiki-infobox dd {
     margin: 0;
+    color: var(--text-primary);
   }
 
   .wiki-chant {
-    display: block;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
     min-height: 2.5rem;
-    margin: 0.5rem 0 0;
-    padding: 0.5rem;
+    margin: 0;
+    padding: 0;
     border: 0;
-    background: var(--accent-light);
+    background: none;
     color: var(--accent);
     font: inherit;
     font-size: 1rem;
@@ -113,52 +112,47 @@
   }
 
   .wiki-status {
-    font-weight: 600;
     color: var(--text-secondary);
   }
 
-  .wiki-status[data-status="proofread"] {
+  .wiki-status[data-status="proofread"],
+  .wiki-status[data-status="reviewed"] {
     color: var(--accent);
   }
 
-  .wiki-status[data-status="reviewed"] {
-    color: var(--shloka);
-  }
-
-  .wiki-lead {
-    margin: 1rem 0;
-    line-height: 1.6;
-  }
-
   .wiki-toc {
-    display: inline-block;
-    min-width: 14rem;
-    margin: 0 0 1.25rem;
-    font-size: 0.9rem;
+    margin: 0 0 3rem;
+    font-size: 0.95rem;
   }
 
-  .wiki-toc h2 {
-    margin: 0 0 0.35rem;
+  .wiki-toc h2,
+  .wiki-related h2 {
+    margin: 0 0 0.75rem;
     color: var(--text-muted);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
-  .wiki-toc ol {
+  .wiki-toc ol,
+  .wiki-related ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   .wiki-toc li {
-    margin: 0.15rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .wiki-section {
+    margin-top: 3.5rem;
   }
 
   .wiki-section-title {
     scroll-margin-top: calc(var(--header-h) + var(--fade-h));
-    margin: 2rem 0 0.75rem;
-    padding-bottom: 0.2rem;
-    border-bottom: 1px solid var(--bg-card);
+    margin: 0 0 1.25rem;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.35rem;
     font-weight: 400;
@@ -171,22 +165,21 @@
     white-space: nowrap;
   }
 
+  .wiki-article .wiki-section-actions :is(a, button) {
+    margin-left: 0.75rem;
+    color: var(--text-muted);
+  }
+
   .wiki-link {
     padding: 0;
     border: 0;
     background: none;
     font: inherit;
-    color: var(--accent);
     cursor: pointer;
   }
 
-  .wiki-section-actions .wiki-link,
-  .wiki-section-actions a {
-    margin-left: 0.4rem;
-  }
-
   .wiki-line {
-    margin: 0 0 0.9rem;
+    margin: 0 0 1rem;
     overflow-wrap: anywhere;
   }
 
@@ -195,30 +188,40 @@
     color: var(--text-muted);
   }
 
+  .wiki-related {
+    margin-top: 4rem;
+  }
+
   .wiki-related ul {
-    margin: 0;
-    padding-left: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
   }
 
   .wiki-article > .wiki-footer {
-    margin-top: 2.5rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--bg-card);
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.85rem;
   }
 
-  @media (min-width: 40rem) {
-    .wiki-infobox {
-      float: right;
-      width: 17rem;
-      margin: 0.25rem 0 1rem 1.25rem;
+  @media (min-width: 52rem) {
+    .wiki-article {
+      max-width: 62rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 15rem;
+      column-gap: 4rem;
     }
 
-    .wiki-toc {
-      display: block;
-      min-width: 0;
-      max-width: 22rem;
+    .wiki-article > * {
+      grid-column: 1;
+    }
+
+    .wiki-article > .wiki-infobox {
+      grid-column: 2;
+      grid-row: 2 / span 4;
+      margin-top: 2.5rem;
     }
   }
 }

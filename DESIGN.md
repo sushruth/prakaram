@@ -272,17 +272,19 @@ Each section heading in an article chants that section's piece. The **Chant this
 
 ### Article anatomy
 
-An article is a Wikipedia-style page, top to bottom:
+An article is a page of text with no boxes, borders, rules or tints. Space and type scale do the separating (§7b). Top to bottom:
 
-1. **Tabs.** Article, Talk (greyed out), Read, Edit and View history. Edit and View history go to GitHub.
-2. **Title.** The Sanskrit in the chosen script, with the English title below.
-3. **Notice.** A note under the title when the status is `draft` or the licence says "not yet confirmed".
-4. **Infobox.** The Sanskrit title, a **Chant this** button, then Veda, Deity, Usage, Source, Status, Licence and Lines. A missing optional field is left out. Licence reads "Not stated" when empty.
-5. **Lead.** The `summary`.
-6. **Contents.** One entry per section, each linking to `#/wiki/<id>/<n>`.
-7. **Sections.** Each has a heading `n. title`, with **[chant]** (runs that section) and **[edit]** (opens the document's JSON on GitHub). The verse lines follow, with swara colours as in §5c.
-8. **Related articles.** From `related`.
-9. **Categories.** A footer of links to the category pages.
+1. **Tabs.** Spaced words: Article, Read, Edit, View history. The current one is accent. Edit and View history go to GitHub.
+2. **Title.** A large quiet title (1.85rem), the Sanskrit in the chosen script, with the English title below. No rule beneath.
+3. **Notice.** An inline paragraph under the title when the status is `draft` or the licence says "not yet confirmed", led by the status word in accent ("Draft.").
+4. **Lead.** The `summary`, set larger.
+5. **Facts.** A plain definition list: muted label, ink value, with a text **Chant this** button above it. Veda, Deity, Usage, Source, Status, Licence, Lines; a missing optional field is left out; Licence reads "Not stated" when empty. Status is a coloured word (draft muted, proofread and reviewed accent). On wide screens it sits as a right column, still unframed.
+6. **Contents.** A quiet numbered list, each entry linking to `#/wiki/<id>/<n>`.
+7. **Sections.** Heading `n. title` with generous space above, and small muted text links **[chant]** (runs that section) and **[edit]** (opens the document's JSON on GitHub). The verse lines follow, with swara colours as in §5c.
+8. **Related articles.** Spaced words, from `related`.
+9. **Categories.** Spaced words linking to the category pages.
+
+The main page, search and category pages follow the same rule: large welcome line, counts as plain figures, stacked text entries, matches in accent colour (no `<mark>` fill). The wiki search field has no border or underline; it is a caret and muted placeholder, with the focus ring on `:focus-visible` only. Its suggestion list is an opaque `--bg-base` surface with no border or shadow.
 
 The text shown is the text the player runs. A missing article id shows "This article does not exist yet" and a link to create it on GitHub.
 
@@ -353,7 +355,7 @@ Exceptions: the switch is the one rounded control (a pill track with a round kno
 Text first. The app is words on paper, and controls are words too.
 
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
-- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. The wiki pages (§5f) add a Wikipedia-style look: a thin rule under article titles, a bordered infobox and notice banner, and a faint tint on the chant link. They live in `src/styles/wiki.css` and apply only on `#/wiki` routes. Add any new exception here first.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
 - **Groups are rows of words.** Mode and option choices (Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.

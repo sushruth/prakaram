@@ -28,14 +28,15 @@ export function WikiHome() {
 
   return (
     <div className="wiki-page">
-      <h1>Koshah — the free, open library of Vedic chants with swara</h1>
-      <p className="wiki-muted">
-        {articles.length} articles · {lines} lines
+      <h1 className="wiki-welcome">Koshah, the free, open library of Vedic chants with swara.</h1>
+      <p className="wiki-figures">
+        <span><b>{articles.length}</b> <span className="wiki-muted">articles</span></span>
+        <span><b>{lines}</b> <span className="wiki-muted">lines</span></span>
       </p>
 
       <div className="wiki-grid">
         {featured && (
-          <section className="wiki-box wiki-featured">
+          <section className="wiki-block wiki-featured">
             <h2>Featured article</h2>
             <a className="wiki-result-title" href={articleHash(featured.id)}>
               {articleLabel(featured, script)}
@@ -44,7 +45,7 @@ export function WikiHome() {
           </section>
         )}
 
-        <section className="wiki-box">
+        <section className="wiki-block">
           <h2>Browse by Veda</h2>
           <ul className="wiki-inline">
             {vedas.map((v) => (
@@ -55,7 +56,7 @@ export function WikiHome() {
           </ul>
         </section>
 
-        <section className="wiki-box">
+        <section className="wiki-block">
           <h2>Browse by deity</h2>
           <ul className="wiki-inline">
             {deities.map((d) => (
@@ -66,7 +67,7 @@ export function WikiHome() {
           </ul>
         </section>
 
-        <section className="wiki-box">
+        <section className="wiki-block">
           <h2>Categories</h2>
           <ul className="wiki-list">
             {categories.map((c) => (
@@ -77,7 +78,7 @@ export function WikiHome() {
           </ul>
         </section>
 
-        <section className="wiki-box">
+        <section className="wiki-block">
           <h2>Recently added</h2>
           <ul className="wiki-list">
             {recent.map((a) => (
@@ -88,7 +89,7 @@ export function WikiHome() {
           </ul>
         </section>
 
-        <section className="wiki-box">
+        <section className="wiki-block">
           <h2>Compile your own prakaram</h2>
           <p>Put pieces from the library together into one sequence, and chant it in the player.</p>
           <a className="wiki-action" href="#compose">

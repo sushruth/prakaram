@@ -95,9 +95,6 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
         <a href={articleHref(article.id)} aria-current="page">
           Article
         </a>
-        <span aria-disabled="true" className="wiki-tab-disabled">
-          Talk
-        </span>
         <a href={articleHref(article.id)}>Read</a>
         <a href={article.editUrl}>Edit</a>
         <a href={article.historyUrl}>View history</a>
@@ -108,12 +105,11 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
 
       {unconfirmed && (
         <p className="wiki-notice" role="note">
-          This text has not been proofread / permission pending. Status: {STATUS_LABEL[article.status]}.
+          <span className="wiki-notice-word">{STATUS_LABEL[article.status]}.</span> This text has not been proofread / permission pending.
         </p>
       )}
 
       <aside className="wiki-infobox" aria-label="Facts about this text">
-        <p className="wiki-infobox-title vedic-text">{transliterateVedic(article.title.sanskrit, script)}</p>
         <button type="button" className="wiki-chant" onClick={() => onRun(article.id)}>
           ▶ Chant this
         </button>
@@ -184,10 +180,9 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
       )}
 
       <footer className="wiki-footer">
-        Categories:{' '}
+        <span className="wiki-muted">Categories</span>{' '}
         {article.categories.map((c, i) => (
           <span key={c}>
-            {i > 0 && ' | '}
             <a href={`#/wiki/Category:${encodeURIComponent(c)}`}>{c}</a>
           </span>
         ))}
