@@ -45,7 +45,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
-| `--paused` | `#ca8a04` (dark `#facc15`) | Pause mark inside the countdown ring |
+| `--countdown` | `#ca8a04` (dark `#facc15`) | Countdown ring arc, its faint full track, and the pause mark inside it |
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -175,7 +175,7 @@ Smart controls use the flame glow on the glyph or value, as with any active cont
 
 **Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its mātrā weight times the pace.
 
-**Pause.** Tapping the ring pauses auto progress. The ring freezes and a yellow pause mark appears inside it. Tapping again resumes with the time that was left. Pause is for the engaged phase only, and it is not saved: a reload starts unpaused. Jumping to another line while paused restarts that line at full time when you resume.
+**Pause.** Tapping the ring pauses auto progress. The ring freezes and a yellow pause mark appears inside it. The ring is yellow, with a faint full track behind the moving arc. A thin radial marker at the arc's leading end is black in light mode and white in dark mode, so the moving end stands out from the track. Tapping again resumes with the time that was left. Pause is for the engaged phase only, and it is not saved: a reload starts unpaused. Jumping to another line while paused restarts that line at full time when you resume.
 
 **Only chant is timed.** A line's time counts Devanagari letters, marks, swara and dandas. Anything else adds nothing: Latin text, brackets, pipes, and verse numbers such as `॥ २ ॥` or `|| 12 ||`. A numbered end keeps one danda, so the line still pauses at its end. The Vedic sign `ꣳ` belongs to the syllable before it, like anusvara.
 

@@ -151,9 +151,16 @@
     height: 1.5rem;
   }
 
-  .learn-ring circle {
+  .learn-ring-track {
     fill: none;
-    stroke: currentColor;
+    stroke: var(--countdown);
+    stroke-width: 2;
+    opacity: 0.25;
+  }
+
+  .learn-ring-arc {
+    fill: none;
+    stroke: var(--countdown);
     stroke-width: 2;
     stroke-dasharray: 50.27;
     stroke-dashoffset: 0;
@@ -164,9 +171,27 @@
     animation-fill-mode: forwards;
   }
 
+  .learn-ring-hand {
+    transform-origin: 10px 10px;
+    animation-name: ring-hand;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .learn-ring-hand line {
+    stroke: var(--text-primary);
+    stroke-width: 0.7;
+  }
+
   @keyframes ring-drain {
     to {
       stroke-dashoffset: 50.27;
+    }
+  }
+
+  @keyframes ring-hand {
+    to {
+      transform: rotate(360deg);
     }
   }
 }
@@ -182,6 +207,6 @@
   }
 
   .learn-pause-mark rect {
-    fill: var(--paused);
+    fill: var(--countdown);
   }
 }

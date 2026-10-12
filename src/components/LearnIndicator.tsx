@@ -28,13 +28,22 @@ export function LearnIndicator() {
           title={paused ? 'Resume auto progress' : 'Pause auto progress'}
         >
           <svg className="learn-ring" viewBox="0 0 20 20" aria-hidden="true">
+            <circle className="learn-ring-track" cx="10" cy="10" r="8" />
             <circle
-              key={activeChunkIndex}
+              key={`arc-${activeChunkIndex}`}
+              className="learn-ring-arc"
               cx="10"
               cy="10"
               r="8"
               style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
             />
+            <g
+              key={`hand-${activeChunkIndex}`}
+              className="learn-ring-hand"
+              style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
+            >
+              <line x1="10" y1="0.8" x2="10" y2="3.2" />
+            </g>
             {paused && (
               <g className="learn-pause-mark">
                 <rect x="7" y="6.5" width="2" height="7" rx="0.5" />
