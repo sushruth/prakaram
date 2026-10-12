@@ -71,15 +71,10 @@ export const useCadenceStore = create<CadenceState>()(
         learnedLines,
         msPerMatra,
       }),
-      // Older saves are passed through, so their phases can be mapped to modes in merge.
-      migrate: (persisted) => persisted as { mode: CadenceMode; learnedLines: number; msPerMatra: number },
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
+        const mode = oneOf(p.mode, MODES, 'manual');
         const learned = clampNumber(p.learnedLines, 0, LEARN_LINES, 0);
-        // Older saves used phases; a plain save meant no auto-advance.
-        const legacy: CadenceMode =
-          p.phase === 'plain' ? 'off' : p.smart === true || typeof p.phase === 'string' ? 'learn' : 'manual';
-        const mode = oneOf(p.mode, MODES, legacy);
         const phase: CadencePhase =
           mode === 'off' ? 'off' : mode === 'manual' ? 'manual' : learned >= LEARN_LINES ? 'engaged' : 'waiting';
         return {

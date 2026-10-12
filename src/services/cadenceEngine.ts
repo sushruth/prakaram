@@ -6,6 +6,18 @@ export const MIN_CHUNK_MATRAS = 2;
 // Milliseconds per matra. Lower is faster.
 export const TEMPO = { min: 250, max: 3000, fallback: 833, step: 10 } as const;
 
+// The slider is logarithmic: equal moves multiply the pace by the same factor.
+export const PACE_SLIDER_STEPS = 200;
+
+export function paceToSlider(ms: number): number {
+  return Math.round((Math.log(ms / TEMPO.min) / Math.log(TEMPO.max / TEMPO.min)) * PACE_SLIDER_STEPS);
+}
+
+export function sliderToPace(position: number): number {
+  const ms = TEMPO.min * Math.pow(TEMPO.max / TEMPO.min, position / PACE_SLIDER_STEPS);
+  return Math.round(ms / TEMPO.step) * TEMPO.step;
+}
+
 export function chunkMatras(sanskrit: string): number {
   return Math.max(MIN_CHUNK_MATRAS, calculateChunkWeight(sanskrit));
 }
