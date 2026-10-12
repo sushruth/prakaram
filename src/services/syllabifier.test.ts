@@ -30,3 +30,15 @@ describe('only chant is timed', () => {
     expect(calculateChunkWeight('नमꣳ')).toBe(calculateChunkWeight('नम') + 1);
   });
 });
+
+describe('tokens without a vowel sound take no time', () => {
+  it('a bare word-final consonant adds nothing, and closes the syllable before it', () => {
+    expect(calculateChunkWeight('सहस्रपात्')).toBe(calculateChunkWeight('सहस्रपा'));
+    expect(calculateChunkWeight('अग्निम्')).toBe(4);
+  });
+
+  it('avagraha and chandrabindu take no time', () => {
+    expect(calculateChunkWeight('नमः ऽ')).toBe(calculateChunkWeight('नमः'));
+    expect(calculateChunkWeight('नमः ँ')).toBe(calculateChunkWeight('नमः'));
+  });
+});

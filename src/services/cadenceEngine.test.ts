@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'bun:test';
-import { CadenceLearningEngine, TEMPO } from './cadenceEngine';
+import { CadenceLearningEngine, PACE_FLOOR, TEMPO } from './cadenceEngine';
 
 describe('CadenceLearningEngine (Option A)', () => {
   it('initializes at the default pace of 833 ms per matra', () => {
@@ -12,13 +12,13 @@ describe('CadenceLearningEngine (Option A)', () => {
     engine.setMsPerMatra(1250);
     expect(engine.getMsPerMatra()).toBe(1250);
     engine.setMsPerMatra(10);
-    expect(engine.getMsPerMatra()).toBe(TEMPO.min);
+    expect(engine.getMsPerMatra()).toBe(PACE_FLOOR);
     engine.setMsPerMatra(99999);
     expect(engine.getMsPerMatra()).toBe(TEMPO.max);
   });
 
   it('learns pacing and boosts confidence with steady tapping', () => {
-    const engine = new CadenceLearningEngine(72);
+    const engine = new CadenceLearningEngine();
     const testSanskrit = 'ॐ स॒हस्र॑शीर्षा॒ पुरु॑षः ।';
     let t = 10000;
 

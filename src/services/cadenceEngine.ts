@@ -6,6 +6,9 @@ export const MIN_CHUNK_MATRAS = 2;
 // Milliseconds per matra. Lower is faster.
 export const TEMPO = { min: 400, max: 3000, fallback: 833, step: 10 } as const;
 
+// Learned pace may go below the slider's range, down to a physical floor, so a fast reader is not reported at the slider minimum.
+export const PACE_FLOOR = 120;
+
 // The slider is logarithmic: equal moves multiply the pace by the same factor.
 // Moving right is faster, so position 0 is the slowest pace and the last position is the fastest.
 export const PACE_SLIDER_STEPS = 200;
@@ -40,13 +43,16 @@ export class CadenceLearningEngine {
   private lastTapTime: number = 0;
   private currentMsPerMatra: number = 833;
   private maxHistory: number = 12;
+  // Least-squares sums for pace = sum(interval * weight) / sum(weight^2).
+  private sumIntervalWeight: number = 0;
+  private sumWeightSquared: number = 0;
 
   constructor(initialMs: number = TEMPO.fallback) {
     this.setMsPerMatra(initialMs);
   }
 
   public setMsPerMatra(ms: number) {
-    this.currentMsPerMatra = Math.round(Math.max(TEMPO.min, Math.min(TEMPO.max, ms)));
+    this.currentMsPerMatra = Math.round(Math.max(PACE_FLOOR, Math.min(TEMPO.max, ms)));
   }
 
   public getMsPerMatra(): number {
@@ -87,9 +93,10 @@ export class CadenceLearningEngine {
       this.history.shift();
     }
 
-    const alpha = 0.35;
-    const learned = alpha * instantaneousMsPerMatra + (1 - alpha) * this.currentMsPerMatra;
-    this.currentMsPerMatra = Math.round(Math.max(TEMPO.min, Math.min(TEMPO.max, learned)));
+    this.sumIntervalWeight += intervalMs * matraWeight;
+    this.sumWeightSquared += matraWeight * matraWeight;
+    const learned = this.sumIntervalWeight / this.sumWeightSquared;
+    this.currentMsPerMatra = Math.round(Math.max(PACE_FLOOR, Math.min(TEMPO.max, learned)));
 
     return this.getMetrics();
   }
@@ -124,5 +131,7 @@ export class CadenceLearningEngine {
   public resetSession() {
     this.history = [];
     this.lastTapTime = 0;
+    this.sumIntervalWeight = 0;
+    this.sumWeightSquared = 0;
   }
 }

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { CadenceLearningEngine, TEMPO } from '../services/cadenceEngine';
+import { CadenceLearningEngine, PACE_FLOOR, TEMPO } from '../services/cadenceEngine';
 import {
   CadenceEvent,
   CadenceMode,
@@ -83,7 +83,7 @@ export const useCadenceStore = create<CadenceState>()(
           learnedLines: phase === 'engaged' ? LEARN_LINES : mode === 'learn' ? learned : 0,
           firstTapAt: null,
           paused: false,
-          msPerMatra: clampNumber(p.msPerMatra, TEMPO.min, TEMPO.max, current.msPerMatra),
+          msPerMatra: clampNumber(p.msPerMatra, PACE_FLOOR, TEMPO.max, current.msPerMatra),
         };
       },
     },

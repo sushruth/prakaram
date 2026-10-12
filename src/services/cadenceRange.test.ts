@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { CadenceLearningEngine, PACE_SLIDER_STEPS, TEMPO, paceToSlider, sliderToPace } from './cadenceEngine';
+import { CadenceLearningEngine, PACE_SLIDER_STEPS, TEMPO, chunkMatras, paceToSlider, sliderToPace } from './cadenceEngine';
 
 describe('cadence tempo range', () => {
   it('keeps learned tempo inside the slider range', () => {
@@ -32,5 +32,21 @@ describe('logarithmic pace slider', () => {
 
   it('round-trips the default pace to within one slider step', () => {
     expect(Math.abs(sliderToPace(paceToSlider(TEMPO.fallback)) - TEMPO.fallback)).toBeLessThan(TEMPO.max / TEMPO.min);
+  });
+});
+
+describe('learning a fast reader', () => {
+  it('learns a pace below the slider minimum instead of pinning at it', () => {
+    const lines = ['ॐ सहस्रशीर्षा पुरुषः । सहस्राक्षः सहस्रपात् ।', 'स भूमिं विश्वतो वृत्वा । अत्यतिष्ठद्दशाङ्गुलम् ॥'];
+    const engine = new CadenceLearningEngine();
+    let t = 1_000_000;
+    engine.registerTap('0', lines[0], t);
+    for (let i = 1; i <= 5; i++) {
+      const prev = lines[(i - 1) % 2];
+      t += chunkMatras(prev) * 200;
+      engine.registerTap(String(i), lines[i % 2], t);
+    }
+    expect(engine.getMsPerMatra()).toBeGreaterThanOrEqual(195);
+    expect(engine.getMsPerMatra()).toBeLessThanOrEqual(205);
   });
 });
