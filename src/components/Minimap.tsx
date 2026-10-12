@@ -29,17 +29,13 @@ export function Minimap({ chunks, index, duration, frozen, disabled, onToggle }:
     <button className="minimap" onClick={onToggle} disabled={disabled} aria-pressed={frozen} data-frozen={frozen} aria-label={label} title={label}>
       <span className="minimap-lines" aria-hidden="true">
         {rows.map((row, i) => (
-          <span key={i} className={`minimap-line ${row?.className ?? ''}`} data-now={i === 1}>
+          <span
+            key={i === 1 ? `now-${index}` : i}
+            className={`minimap-line ${row?.className ?? ''}`}
+            data-now={i === 1}
+            style={i === 1 ? { animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' } : undefined}
+          >
             {row && <Cells cells={row.cells} />}
-            {i === 1 && row && (
-              <span
-                key={index}
-                className="minimap-fill"
-                style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
-              >
-                <Cells cells={row.cells} />
-              </span>
-            )}
           </span>
         ))}
       </span>

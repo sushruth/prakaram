@@ -183,26 +183,25 @@
     background: none;
   }
 
-  .minimap-line[data-now="true"] .minimap-cells > span {
-    opacity: 0.6;
+  /* The current line is drawn once. A mask sweeps left to right: sung boxes are full strength, the rest dimmer. */
+  @property --sung {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
   }
 
-  .minimap-fill {
-    position: absolute;
-    inset: 0;
+  .minimap-line[data-now="true"] {
+    mask-image: linear-gradient(90deg, #000 var(--sung), rgb(0 0 0 / 0.55) var(--sung));
     animation: minimap-sing linear forwards;
   }
 
-  .minimap-fill .minimap-cells > span {
+  .minimap-line[data-now="true"] .minimap-cells > span {
     opacity: 1;
   }
 
   @keyframes minimap-sing {
-    from {
-      clip-path: inset(0 100% 0 0);
-    }
     to {
-      clip-path: inset(0 0 0 0);
+      --sung: 100%;
     }
   }
 
