@@ -1,13 +1,13 @@
 # AGENTS.md
 
-> **Operating Manual & Invariants for Autonomous Coding Agents working on Parayanam**  
+> **Operating Manual & Invariants for Autonomous Coding Agents working on Prakaram**  
 > *Target audience: LLM Coding Agents (Antigravity, Opencode, Claude, DeepSeek, Gemini, etc.) and Human Maintainers.*
 
 ---
 
 ## 1. Mission & System Overview
 
-**Parayanam** (पारायणम्) is an ultra-minimal, privacy-first Vedic chanting companion and Prakara studio. It enables practitioners to chant sacred Vedic texts line-by-line, learns their personal reciting cadence (*laya*) using classical prosody (*Chandaḥ-śāstra*), allows compilation of custom ritual sequences (*Prakaras*), and supports real-time synchronized group chanting via serverless WebRTC.
+**Prakaram** (प्रकारम्) is an ultra-minimal, privacy-first Vedic chanting companion and Prakara studio. It enables practitioners to chant sacred Vedic texts line-by-line, learns their personal reciting cadence (*laya*) using classical prosody (*Chandaḥ-śāstra*), allows compilation of custom ritual sequences (*Prakaras*), and supports real-time synchronized group chanting via serverless WebRTC.
 
 ---
 

@@ -87,7 +87,7 @@ export const usePrakaraStore = create<PrakaraState>()(
         })),
     }),
     {
-      name: 'parayanam-prakaras',
+      name: 'prakaram-prakaras',
       version: 1,
       partialize: (s) => ({
         customPrakaras: s.prakaras.filter((p) => !isDefault(p)),

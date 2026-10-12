@@ -1,12 +1,12 @@
 # DESIGN.md
 
-> Visual direction for Parayanam. Read before changing any color, type, or chunk styling.
+> Visual direction for Prakaram. Read before changing any color, type, or chunk styling.
 
 ---
 
 ## 1. Direction
 
-Parayanam is a chanting tool, not a temple. It should feel like a printed page on good paper, with the text doing all the work.
+Prakaram is a chanting tool, not a temple. It should feel like a printed page on good paper, with the text doing all the work.
 
 **We do not use:** saffron, maroon, temple gold, lotus or om ornaments, mandala backgrounds, gradients, ambient glows (the flame glow is only for active controls), drop shadows on text, card borders around verses, or the serif-and-gold "devotional" look that most sites in this space share.
 

@@ -14,7 +14,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
 
   const [username, setUsername] = useState('');
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(() => {
-    const saved = localStorage.getItem('parayanam_user');
+    const saved = localStorage.getItem('prakaram_user');
     return saved ? JSON.parse(saved) : null;
   });
   const [isRegistering, setIsRegistering] = useState(false);
@@ -38,7 +38,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
       setMessage('Touch fingerprint sensor or scan FaceID / Windows Hello to create passkey...');
       const user = await PasskeyService.register(username.trim());
       setCurrentUser(user);
-      localStorage.setItem('parayanam_user', JSON.stringify(user));
+      localStorage.setItem('prakaram_user', JSON.stringify(user));
       setMessage(`Passkey account created for ${user.username}!`);
       setTimeout(() => onClose(), 1500);
     } catch (err: any) {
@@ -49,7 +49,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
         displayName: username.trim(),
       };
       setCurrentUser(fallbackUser);
-      localStorage.setItem('parayanam_user', JSON.stringify(fallbackUser));
+      localStorage.setItem('prakaram_user', JSON.stringify(fallbackUser));
       setMessage(`Logged in locally as ${fallbackUser.username} (Passkey saved)`);
       setTimeout(() => onClose(), 1500);
     } finally {
@@ -69,7 +69,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
       setMessage('Touch fingerprint sensor or scan FaceID / Windows Hello...');
       const user = await PasskeyService.login(username.trim() || undefined);
       setCurrentUser(user);
-      localStorage.setItem('parayanam_user', JSON.stringify(user));
+      localStorage.setItem('prakaram_user', JSON.stringify(user));
       setMessage(`Welcome back, ${user.username}!`);
       setTimeout(() => onClose(), 1500);
     } catch (err: any) {
@@ -81,7 +81,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
           displayName: username.trim(),
         };
         setCurrentUser(fallbackUser);
-        localStorage.setItem('parayanam_user', JSON.stringify(fallbackUser));
+        localStorage.setItem('prakaram_user', JSON.stringify(fallbackUser));
         setMessage(`Signed in as ${fallbackUser.username}`);
         setTimeout(() => onClose(), 1500);
       } else {
@@ -94,7 +94,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
 
   const handleLogout = () => {
     setCurrentUser(null);
-    localStorage.removeItem('parayanam_user');
+    localStorage.removeItem('prakaram_user');
     setMessage('Logged out successfully');
   };
 

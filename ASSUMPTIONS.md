@@ -1,6 +1,6 @@
 # Architectural Assumptions & System Design Documentation
 
-**Project:** Parayanam (Vedic Mantra Companion & Prakara Chanting Engine)  
+**Project:** Prakaram (Vedic Mantra Companion & Prakara Chanting Engine)  
 **Author:** Pair programming with Antigravity AI  
 **Repository:** `sushruth/parayanam` (Private)  
 **Date:** October 2026  
@@ -26,7 +26,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
 * Learn fits the pace by recency-weighted least squares over per-line active times (the time a line was on screen, excluding deliberate pauses and away time, including holds), pace = Σ(λ^age × interval × weight) / Σ(λ^age × weight²), with λ = 0.7. Recent taps, including a line that was held, weigh more than an average would give them. It has no prior, so six taps give the reader's pace directly. The learned pace may fall below the slider's range, down to a physical floor of 50 ms per mātrā, so a fast reader is not reported at the slider minimum.
 * A word-final bare consonant (virama-closed, like `त्`) counts as one mātrā. This is deliberate. It absorbs the extra time consonant-heavy lines take, which varies from line to line. Do not remove it to make a line count look more prosodic.
-* Parayanam normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
+* Prakaram normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
   $$\hat{m}_k = \frac{\Delta t_k}{W_k}$$
   where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 50–3000 ms.
 * **Pace on screen:** the slider and the learned value are milliseconds per mātrā. A line takes its weight times the pace.

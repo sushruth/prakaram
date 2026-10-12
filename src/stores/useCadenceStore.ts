@@ -68,7 +68,7 @@ export const useCadenceStore = create<CadenceState>()(
       };
     },
     {
-      name: 'parayanam-cadence',
+      name: 'prakaram-cadence',
       version: 5,
       partialize: ({ phase, learnedLines, msPerMatra, paused }) => ({
         mode: modeOf(phase),

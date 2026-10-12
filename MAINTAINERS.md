@@ -1,6 +1,6 @@
 # MAINTAINERS.md
 
-> **Maintainer Operations & Deployment Manual for Parayanam**
+> **Maintainer Operations & Deployment Manual for Prakaram**
 
 ---
 
@@ -11,10 +11,10 @@
   ├── Preact UI: header (flame, title, learning ring, icons), reader, back-to-line,
   │     drop panels (settings, prakara details, cadence), modals
   ├── zustand stores
-  │     ├── persisted: useSettingsStore (parayanam-settings)
-  │     │             useCadenceStore  (parayanam-cadence: mode, learned lines, pace)
-  │     │             usePrakaraStore  (parayanam-prakaras)
-  │     │             useMantraStore   (parayanam-progress: line per prakara, zen)
+  │     ├── persisted: useSettingsStore (prakaram-settings)
+  │     │             useCadenceStore  (prakaram-cadence: mode, learned lines, pace)
+  │     │             usePrakaraStore  (prakaram-prakaras)
+  │     │             useMantraStore   (prakaram-progress: line per prakara, zen)
   │     └── in memory: useRoomStore, cadence pause and learning clock
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
@@ -31,7 +31,7 @@
   └── POST /api/auth/*/verify  -> 501 until WebAuthn verification is implemented
 ```
 
-Stored preference keys (zustand persist) hold only validated values. Cadence phases change only through `transition()` in `services/cadenceMachine.ts`. See DESIGN.md §5b for the three modes. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
+Stored preference keys (zustand persist) hold only validated values. Cadence phases change only through `transition()` in `services/cadenceMachine.ts`. See DESIGN.md §5b for the three modes. A corrupt or unknown value falls back to its default on load. The old `prakaram_*` keys are no longer read, except the custom prakara list, which is migrated once.
 
 ---
 
@@ -43,7 +43,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 
 ```jsonc
 {
-  "name": "parayanam",
+  "name": "prakaram",
   "compatibility_date": "2026-01-01",
   "assets": { "directory": "./dist", "not_found_handling": "single-page-application" }
 }
@@ -68,21 +68,21 @@ If you wish to enable the optional cloud sync and passkey auth backend:
 
 2. **Create the Cloudflare D1 SQLite database:**
    ```bash
-   bunx wrangler d1 create parayanam-db
+   bunx wrangler d1 create prakaram-db
    ```
    *Copy the output `database_id` into `worker/wrangler.jsonc` under `d1_databases`.*
 
 3. **Initialize the database schema:**
    ```bash
-   bunx wrangler d1 execute parayanam-db --file=./schema.sql --remote
+   bunx wrangler d1 execute prakaram-db --file=./schema.sql --remote
    ```
 
 4. **Update Production Environment Variables in `wrangler.jsonc`:**
    ```jsonc
    "vars": {
-     "RP_NAME": "Parayanam",
-     "RP_ID": "parayanam.app",             // Your production domain
-     "EXPECTED_ORIGIN": "https://parayanam.app",
+     "RP_NAME": "Prakaram",
+     "RP_ID": "prakaram.sushruth.dev",             // Your production domain
+     "EXPECTED_ORIGIN": "https://prakaram.sushruth.dev",
      "JWT_SECRET": "YOUR_STRONG_RANDOM_SECRET_KEY"
    }
    ```

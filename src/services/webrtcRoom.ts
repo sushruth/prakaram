@@ -18,7 +18,7 @@ export class ChantingRoomService {
     this.isHost = isHost;
     this.currentRoomCode = roomCode;
 
-    const config = { appId: 'parayanam-vedic-chanting-v1' };
+    const config = { appId: 'prakaram-vedic-chanting-v1' };
     this.room = joinRoom(config, roomCode);
 
     const [sendMsg, getMsg] = this.room.makeAction('sync');

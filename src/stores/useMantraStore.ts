@@ -53,7 +53,7 @@ export const useMantraStore = create<MantraState>()(
       toggleZenMode: () => set((s) => ({ zenMode: !s.zenMode })),
     }),
     {
-      name: 'parayanam-progress',
+      name: 'prakaram-progress',
       version: 1,
       partialize: ({ prakaraId, positions, zenMode, lineLeft }) => ({ prakaraId, positions, zenMode, lineLeft }),
       merge: (persisted, current) => {

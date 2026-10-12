@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "parayanam",
+      "name": "prakaram",
       "dependencies": {
         "@simplewebauthn/browser": "^13.1.0",
         "preact": "^10.26.4",

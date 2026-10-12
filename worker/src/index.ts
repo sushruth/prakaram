@@ -44,7 +44,7 @@ export default {
 
         const options = {
           challenge,
-          rp: { name: env.RP_NAME || 'Parayanam', id: env.RP_ID || url.hostname },
+          rp: { name: env.RP_NAME || 'Prakaram', id: env.RP_ID || url.hostname },
           user: {
             id: btoa(userId),
             name: username,

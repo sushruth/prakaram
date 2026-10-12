@@ -43,7 +43,7 @@ export const useSettingsStore = create<SettingsState>()(
       togglePauseWhenAway: () => set((s) => ({ pauseWhenAway: !s.pauseWhenAway })),
     }),
     {
-      name: 'parayanam-settings',
+      name: 'prakaram-settings',
       version: 1,
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Partial<SettingsState>;

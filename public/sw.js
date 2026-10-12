@@ -1,6 +1,6 @@
 // Network first, falling back to the last good copy, so the app opens offline after one visit.
 // ponytail: no precache list; hashed build assets get cached on first load. Add a versioned precache if the shell grows.
-const CACHE = 'parayanam-shell-v1';
+const CACHE = 'prakaram-shell-v1';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));

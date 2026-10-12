@@ -1,20 +1,20 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "parayanam-api",
+  "name": "prakaram-api",
   "main": "src/index.ts",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "parayanam-db",
-      "database_id": "parayanam-d1-preview-id"
+      "database_name": "prakaram-db",
+      "database_id": "prakaram-d1-preview-id"
     }
   ],
   "vars": {
-    "RP_NAME": "Parayanam Vedic Companion",
+    "RP_NAME": "Prakaram Vedic Companion",
     "RP_ID": "localhost",
     "EXPECTED_ORIGIN": "http://localhost:5173",
-    "JWT_SECRET": "vedic-parayanam-super-secret-key-32-chars-minimum"
+    "JWT_SECRET": "vedic-prakaram-super-secret-key-32-chars-minimum"
   }
 }
