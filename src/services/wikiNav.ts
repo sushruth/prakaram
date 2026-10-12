@@ -2,7 +2,7 @@
 export const HOME_HASH = '#/wiki';
 export const REPO_URL = 'https://github.com/sushruth/prakaram';
 
-import { parseNirdesa, type Pos } from './nirdesa';
+import { formatNirdesa, parseNirdesa, resolveNirdesa, type Pos } from './nirdesa';
 
 export type Route =
   | { kind: 'player' }
@@ -69,3 +69,7 @@ export function legacyHash(hash: string): string | undefined {
   const [id, sec] = dec(m[1]).split('/');
   return articleHash(id, sec && /^\d+$/.test(sec) ? sec : undefined);
 }
+
+/** True when a linked range resolves in the corpus (sections and lines exist, not reversed); no range is fine. */
+export const routeRangeOk = (id: string, range?: { from: Pos; to: Pos }) =>
+  !range || resolveNirdesa(formatNirdesa({ source: id, ...range.from, ...(range.to.section !== range.from.section || range.to.line !== range.from.line ? { to: range.to } : {}) })).ok;

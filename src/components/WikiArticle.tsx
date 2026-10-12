@@ -4,7 +4,7 @@ import { findPiece, pieceChunks } from '../services/koshah';
 import { getArticle, type WikiArticle as Article, type WikiSection } from '../services/wiki';
 import { lineClass } from '../config/lineClass';
 import { useSettingsStore } from '../stores/useSettingsStore';
-import { HOME_HASH, categoryHash, nirdesaHash, type Route } from '../services/wikiNav';
+import { HOME_HASH, categoryHash, nirdesaHash, routeRangeOk, type Route } from '../services/wikiNav';
 import { type Pos, parseNirdesa, rangeNirdesa, rangeWords } from '../services/nirdesa';
 import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
@@ -58,7 +58,9 @@ function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
 /** A Wikipedia-style article about one piece of the corpus: lead, infobox, contents and sections of text. */
 export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   // The lines picked by tapping the numbers: a start, then optionally an end. A deep link starts with its range.
-  const fromRoute = (): Sel | undefined => (range ? { a: range.from, ...(cmp(range.from, range.to) ? { b: range.to } : {}) } : undefined);
+  // A linked range is used only when its full address resolves (in range, not reversed); otherwise nothing is selected.
+  const rangeOk = routeRangeOk(id, range);
+  const fromRoute = (): Sel | undefined => (range && rangeOk ? { a: range.from, ...(cmp(range.from, range.to) ? { b: range.to } : {}) } : undefined);
   const [sel, setSel] = useState<Sel | undefined>(fromRoute);
   const [copied, setCopied] = useState(false);
   const titleText = useTitleText();
@@ -78,11 +80,11 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   useEffect(() => {
     setSel(fromRoute());
     setCopied(false);
-  }, [id, range?.from.section, range?.from.line, range?.to.section, range?.to.line]);
+  }, [id, range?.from.section, range?.from.line, range?.to.section, range?.to.line, rangeOk]);
 
   useEffect(() => {
     if (section === undefined) return;
-    const target = document.getElementById(range ? lineDomId(range.from) : sectionDomId(section));
+    const target = document.getElementById(range && rangeOk ? lineDomId(range.from) : sectionDomId(section));
     target?.scrollIntoView({ block: 'start' });
     target?.focus({ preventScroll: true });
   }, [id, section, range?.from.line, range?.to.line]);
@@ -202,6 +204,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         </button>
       </div>
       <ArticleSubtitle title={article.title} />
+      {!rangeOk && <p className="wiki-muted" role="note">That range is not in this text.</p>}
 
       <details className="wiki-info">
         <summary>

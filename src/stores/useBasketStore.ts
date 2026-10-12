@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { type BasketItem, migrateBasket, moveItem } from '../services/basket';
+import { type BasketItem, mergeStoredBasket, migrateStoredBasket, moveItem } from '../services/basket';
 
 interface BasketState {
   /** Nirdeśa strings (a piece id is one). */
@@ -25,11 +25,8 @@ export const useBasketStore = create<BasketState>()(
       name: 'prakaram-basket',
       version: 2,
       partialize: (s) => ({ items: s.items }),
-      merge: (persisted, current) => {
-        const raw = (persisted as { items?: unknown } | null)?.items;
-        const items = migrateBasket(raw);
-        return { ...current, items };
-      },
+      migrate: migrateStoredBasket,
+      merge: mergeStoredBasket,
     },
   ),
 );

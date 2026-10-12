@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test';
-import { articleHash, categoryHash, legacyHash, nirdesaHash, parseRoute, searchHash } from './wikiNav';
+import { articleHash, categoryHash, legacyHash, nirdesaHash, parseRoute, routeRangeOk, searchHash } from './wikiNav';
 
 test('hash routes', () => {
   expect(parseRoute('')).toEqual({ kind: 'player' });
@@ -33,4 +33,17 @@ test('line and range addresses', () => {
   expect(parseRoute('#/wiki/rudram-namakam/x.2')).toEqual({ kind: 'article', id: 'rudram-namakam' });
   expect(nirdesaHash('rudram-namakam/3.2-9')).toBe('#/wiki/rudram-namakam/3.2-9');
   expect(nirdesaHash('rudram-namakam')).toBe('#/wiki/rudram-namakam');
+});
+
+test('linked ranges must resolve: out-of-range and reversed ones are rejected', () => {
+  const ok = (h: string) => {
+    const r = parseRoute(h) as Extract<ReturnType<typeof parseRoute>, { kind: 'article' }>;
+    return routeRangeOk(r.id, r.range);
+  };
+  expect(ok('#/wiki/rudram-namakam/3.2-4')).toBe(true);
+  expect(ok('#/wiki/rudram-namakam/3.2-999')).toBe(false);
+  expect(ok('#/wiki/rudram-namakam/3.999')).toBe(false);
+  expect(ok('#/wiki/rudram-namakam/3.9-2')).toBe(false);
+  expect(ok('#/wiki/rudram-namakam/999.1')).toBe(false);
+  expect(ok('#/wiki/rudram-namakam/3')).toBe(true);
 });

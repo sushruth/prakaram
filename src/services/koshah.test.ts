@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { findPiece, listPieces, pieceAsPrakara, pieceChunks, searchPieces } from './koshah';
+import { findPiece, listPieces, normalizePrakara, pieceAsPrakara, pieceChunks, searchPieces } from './koshah';
 import { MantraDocument } from '../types/mantra';
 
 const doc = (id: string, sections: number): MantraDocument => ({
@@ -48,5 +48,30 @@ describe('koshah', () => {
     expect(searchPieces(listPieces(docs), 'HYMN').length).toBe(5);
     expect(searchPieces(listPieces(docs), 'anuvaka 3').map((p) => p.id)).toEqual(['many/3']);
     expect(searchPieces(listPieces(docs), 'nothing')).toEqual([]);
+  });
+});
+
+describe('normalizePrakara steps', () => {
+  const docs = [doc('one', 1), doc('many', 3)];
+  const step = (o: object) => ({ id: 's', type: 'sukta_ref', ...o });
+  const run = (o: object) => normalizePrakara({ id: 'p', items: [step(o)] }, docs)!.items;
+
+  it('keeps a nirdesa inside its own source', () => {
+    expect(run({ suktaId: 'many', nirdesa: 'many/2.1-2' })[0].nirdesa).toBe('many/2.1-2');
+  });
+  it('never plays another source: a mismatched nirdesa falls back to the whole suktaId', () => {
+    const [i] = run({ suktaId: 'many', nirdesa: 'one/1' });
+    expect(i.suktaId).toBe('many');
+    expect(i.nirdesa).toBeUndefined();
+  });
+  it('falls back on an unknown section or an out-of-range line', () => {
+    expect(run({ suktaId: 'many', nirdesa: 'many/9' })[0].nirdesa).toBeUndefined();
+    expect(run({ suktaId: 'many', nirdesa: 'many/1.99' })[0].nirdesa).toBeUndefined();
+  });
+  it('drops the step when its suktaId does not exist either', () => {
+    expect(run({ suktaId: 'gone', nirdesa: 'gone/1' })).toEqual([]);
+  });
+  it('still migrates an old sectionId', () => {
+    expect(run({ suktaId: 'many', sectionId: 'many-2' })[0].nirdesa).toBe('many/2');
   });
 });

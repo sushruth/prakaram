@@ -1,5 +1,5 @@
 import type { Prakara } from '../types/mantra';
-import { formatNirdesa, normaliseNirdesa, resolveNirdesa } from './nirdesa';
+import { formatNirdesa, normaliseNirdesa, rangeWords, resolveNirdesa } from './nirdesa';
 
 /** A basket item is a nirdeśa string: a whole source, a section, a line or a range of lines. */
 export type BasketItem = string;
@@ -24,8 +24,11 @@ export function basketToPrakara(items: BasketItem[], title: string, now = Date.n
     items: items.flatMap((addr, i) => {
       const r = resolveNirdesa(addr);
       if (!r.ok) return [];
-      const whole = r.nirdesa.section === undefined;
-      return [{ id: `b${i}-${addr}`, type: 'sukta_ref' as const, suktaId: r.document.id, ...(whole ? {} : { nirdesa: formatNirdesa(r.nirdesa) }), customTitle: r.document.title.english }];
+      const n = r.nirdesa;
+      const whole = n.section === undefined;
+      const doc = r.document.title.english;
+      const customTitle = whole ? doc : n.line === undefined ? `${doc}: ${r.sections[0].title}` : `${doc}: ${n.to && n.to.section !== n.section ? rangeWords(n) : `§${n.section} ${rangeWords(n)}`}`;
+      return [{ id: `b${i}-${addr}`, type: 'sukta_ref' as const, suktaId: r.document.id, ...(whole ? {} : { nirdesa: formatNirdesa(n) }), customTitle }];
     }),
   };
 }
@@ -41,3 +44,9 @@ export function migrateBasket(raw: unknown): BasketItem[] {
     return [a];
   });
 }
+
+/** zustand persist `migrate`: any older stored shape (v1 `{ items: [{ pieceId }] }`) becomes nirdeśa strings. Without it zustand drops a stale-version state. */
+export const migrateStoredBasket = (persisted: unknown): { items: BasketItem[] } => ({ items: migrateBasket((persisted as { items?: unknown } | null)?.items) });
+
+/** zustand persist `merge`: tolerant of a missing or malformed stored state. */
+export const mergeStoredBasket = <T extends { items: BasketItem[] }>(persisted: unknown, current: T): T => ({ ...current, ...migrateStoredBasket(persisted) });

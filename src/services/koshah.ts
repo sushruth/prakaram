@@ -111,7 +111,7 @@ export function itemNirdesa(item: PrakaraItem, docs: MantraDocument[] = ALL_SUKT
 
 /**
  * Validates a prakara read from storage or a `#p=` link and moves old `sectionId` steps to `nirdesa`.
- * Returns null when it is not a prakara. A malformed nirdesa is dropped (the step then follows the whole sukta).
+ * Returns null when it is not a prakara. A nirdesa that is malformed, unresolvable or names another source than `suktaId` is dropped (the step then follows the whole sukta, or is removed if that does not exist).
  */
 export function normalizePrakara(v: unknown, docs: MantraDocument[] = ALL_SUKTAMS): Prakara | null {
   const p = v as Prakara | null;
@@ -121,7 +121,11 @@ export function normalizePrakara(v: unknown, docs: MantraDocument[] = ALL_SUKTAM
     const { sectionId, nirdesa, ...rest } = i;
     const given = typeof nirdesa === 'string' ? normaliseNirdesa(nirdesa) : undefined;
     const addr = given ?? (typeof sectionId === 'string' ? itemNirdesa(i, docs) : undefined);
-    return [addr && addr !== rest.suktaId ? { ...rest, nirdesa: addr } : rest];
+    if (!addr || addr === rest.suktaId) return [rest];
+    // The address must resolve, and into the step's own source; otherwise the step follows the whole sukta, or is dropped.
+    const r = resolveNirdesa(addr, docs);
+    if (r.ok && r.document.id === rest.suktaId) return [{ ...rest, nirdesa: addr }];
+    return docs.some((d) => d.id === rest.suktaId) ? [rest] : [];
   });
   return { ...p, items };
 }

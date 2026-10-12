@@ -51,7 +51,7 @@ export const usePrakaraStore = create<PrakaraState>()(
         for (const item of prakara.items) {
           if (item.type === 'sukta_ref' && item.suktaId) {
             const r = resolveNirdesa(itemNirdesa(item) ?? item.suktaId);
-            for (const ch of r.ok ? r.chunks : []) {
+            for (const ch of r.ok && r.document.id === item.suktaId ? r.chunks : []) {
               chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
             }
           } else if (item.type === 'vakya') {
