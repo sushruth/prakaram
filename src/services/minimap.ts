@@ -16,7 +16,7 @@ export interface MinimapRow {
 }
 
 /** The longest screen line of the window is shrunk to at most this many boxes; every other line uses the same ratio. */
-export const MINIMAP_MAX_CELLS = 24;
+export const MINIMAP_MAX_CELLS = 20;
 
 const isSpace = (k: string) => /^\s+$/.test(k);
 

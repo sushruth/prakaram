@@ -16,9 +16,9 @@ function Cells({ cells }: { cells: MinimapCell[] }) {
 
 const WINDOW = [-2, -1, 0, 1, 2];
 // Must match the row and line sizes in cadence.css (rem).
-const LINE = 0.1;
-const LINE_GAP = 0.06;
-const ROW_GAP = 0.16;
+const LINE = 0.14;
+const LINE_GAP = 0.03;
+const ROW_GAP = 0.1;
 const rowHeight = (lines: number) => (lines ? lines * LINE + (lines - 1) * LINE_GAP : 0);
 
 /** How the reader wrapped the chunks around the current one. Re-measured when the line, font, script or width changes. */
