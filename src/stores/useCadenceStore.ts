@@ -13,7 +13,7 @@ import {
   modeOf,
   transition,
 } from '../services/cadenceMachine';
-import { clampNumber, oneOf } from './persistence';
+import { boolOr, clampNumber, oneOf } from './persistence';
 
 export { LEARN_LINES, isAutoRunning, isLearning, modeOf };
 export type { CadenceMode, CadencePhase };
@@ -70,10 +70,11 @@ export const useCadenceStore = create<CadenceState>()(
     {
       name: 'parayanam-cadence',
       version: 5,
-      partialize: ({ phase, learnedLines, msPerMatra }) => ({
+      partialize: ({ phase, learnedLines, msPerMatra, paused }) => ({
         mode: modeOf(phase),
         learnedLines,
         msPerMatra,
+        paused,
       }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
@@ -86,7 +87,7 @@ export const useCadenceStore = create<CadenceState>()(
           phase,
           learnedLines: phase === 'engaged' ? LEARN_LINES : mode === 'learn' ? learned : 0,
           firstTapAt: null,
-          paused: false,
+          paused: (phase === 'manual' || phase === 'engaged') && boolOr(p.paused, false),
           msPerMatra: clampNumber(p.msPerMatra, PACE_FLOOR, TEMPO.max, current.msPerMatra),
         };
       },

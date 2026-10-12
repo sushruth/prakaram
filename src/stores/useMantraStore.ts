@@ -2,6 +2,11 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { boolOr, clampNumber } from './persistence';
 
+export interface LineLeft {
+  index: number;
+  ms: number;
+}
+
 interface MantraState {
   prakaraId: string | null;
   activeChunkIndex: number;
@@ -9,6 +14,8 @@ interface MantraState {
   zenMode: boolean;
   holding: boolean;
   away: boolean;
+  lineLeft: LineLeft | null;
+  setLineLeft: (lineLeft: LineLeft | null) => void;
   setHolding: (holding: boolean) => void;
   setAway: (away: boolean) => void;
   openPrakara: (id: string) => void;
@@ -34,6 +41,8 @@ export const useMantraStore = create<MantraState>()(
       zenMode: false,
       holding: false,
       away: false,
+      lineLeft: null,
+      setLineLeft: (lineLeft) => set({ lineLeft }),
       setHolding: (holding) => set({ holding }),
       setAway: (away) => set({ away }),
       openPrakara: (id) =>
@@ -46,16 +55,22 @@ export const useMantraStore = create<MantraState>()(
     {
       name: 'parayanam-progress',
       version: 1,
-      partialize: ({ prakaraId, positions, zenMode }) => ({ prakaraId, positions, zenMode }),
+      partialize: ({ prakaraId, positions, zenMode, lineLeft }) => ({ prakaraId, positions, zenMode, lineLeft }),
       merge: (persisted, current) => {
-        const p = (persisted ?? {}) as { prakaraId?: unknown; positions?: unknown };
+        const p = (persisted ?? {}) as { prakaraId?: unknown; positions?: unknown; lineLeft?: unknown };
         const raw = p.positions && typeof p.positions === 'object' ? (p.positions as Record<string, unknown>) : {};
         const positions = Object.fromEntries(
           Object.entries(raw).filter(([, v]) => typeof v === 'number' && Number.isInteger(v) && v >= 0),
         ) as Record<string, number>;
         const prakaraId = typeof p.prakaraId === 'string' ? p.prakaraId : null;
+        const ll = p.lineLeft as Partial<LineLeft> | null | undefined;
+        const lineLeft =
+          ll && Number.isInteger(ll.index) && ll.index! >= 0 && typeof ll.ms === 'number' && ll.ms >= 0
+            ? { index: ll.index!, ms: ll.ms }
+            : null;
         return {
           ...current,
+          lineLeft,
           zenMode: boolOr((p as { zenMode?: unknown }).zenMode, current.zenMode),
           prakaraId,
           positions,

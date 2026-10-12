@@ -36,7 +36,6 @@ export function ZenMantraReader() {
   const setHolding = useMantraStore((s) => s.setHolding);
   const pressed = useRef(false);
   const suppressClick = useRef(false);
-  const leftover = useRef<{ index: number; ms: number } | null>(null);
   const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
@@ -95,13 +94,19 @@ export function ZenMantraReader() {
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
-    const left = leftover.current?.index === activeChunkIndex ? leftover.current.ms : lineMs(current.sanskrit, msPerMatra);
-    leftover.current = null;
+    const { lineLeft, setLineLeft } = useMantraStore.getState();
+    const left = lineLeft?.index === activeChunkIndex ? lineLeft.ms : lineMs(current.sanskrit, msPerMatra);
+    if (lineLeft) setLineLeft(null);
     const started = Date.now();
+    const remaining = () => Math.max(0, left - (Date.now() - started));
     const timer = setTimeout(() => nextChunk(chunks.length), left);
+    // Closing the page mid-line keeps the rest of the line for the next visit.
+    const saveOnHide = () => setLineLeft({ index: activeChunkIndex, ms: remaining() });
+    window.addEventListener('pagehide', saveOnHide);
     return () => {
       clearTimeout(timer);
-      if (frozenRef.current) leftover.current = { index: activeChunkIndex, ms: Math.max(0, left - (Date.now() - started)) };
+      window.removeEventListener('pagehide', saveOnHide);
+      if (frozenRef.current) setLineLeft({ index: activeChunkIndex, ms: remaining() });
     };
   }, [autoRunning, frozen, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
