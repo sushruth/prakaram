@@ -43,7 +43,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 
 ```jsonc
 {
-  "name": "prakaram",
+  "name": "parayanam",
   "compatibility_date": "2026-01-01",
   "assets": { "directory": "./dist", "not_found_handling": "single-page-application" }
 }
@@ -134,6 +134,8 @@ bunx tsc --noEmit
 **Repo.** The repo is `sushruth/prakaram` (renamed from `parayanam`; the old URL redirects). The app is served at `prakaram.sushruth.dev`. The production branch is `main`, which replaced `master`.
 
 **Git access in a new session.** Attach the repo first (`add_repo` for `sushruth/prakaram`), then clone it shallow. A clone of the old name works through the redirect, but attach the new name so the session's repo scope matches. Before pushing from a shallow clone, run `git fetch origin main` so the push sends a thin pack.
+
+**Worker name.** The Cloudflare Worker is still named `parayanam`, and the root `wrangler.jsonc` keeps that name so deploys update the Worker that owns the domain. Renaming it means creating a new Worker and moving `prakaram.sushruth.dev` to it. Do not merge Cloudflare's auto-generated `wrangler.jsonc` PR until that is decided.
 
 **Still to verify on the Cloudflare side:** the Git link to the Workers project (it should build `main`), and that `prakaram.sushruth.dev` routes to the `prakaram` Worker. Neither could be checked from the sandbox.
 
