@@ -15,7 +15,7 @@ export interface MinimapRow {
 }
 
 /** The longest of the three lines is shrunk to at most this many boxes; the others use the same ratio. */
-export const MINIMAP_MAX_CELLS = 16;
+export const MINIMAP_MAX_CELLS = 24;
 
 /** Take the previous, current and next chunk and return the three rows to draw. A missing chunk is null. */
 export function minimap(chunks: [MantraChunk?, MantraChunk?, MantraChunk?]): (MinimapRow | null)[] {

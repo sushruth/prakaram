@@ -141,7 +141,7 @@
   .minimap {
     position: relative;
     display: block;
-    width: 4.2rem;
+    width: 3.2rem;
     height: 1.9rem;
     padding: 0;
     background: none;
@@ -155,7 +155,8 @@
     inset: 0.2rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 0.14rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
@@ -173,7 +174,7 @@
   }
 
   .minimap-cells > span {
-    width: 0.2rem;
+    width: 0.12rem;
     height: 100%;
     background: currentColor;
     opacity: 0.18;
