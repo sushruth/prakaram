@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
-import { useMantraStore } from '../stores/useMantraStore';
+import { useSettingsStore } from '../stores/useSettingsStore';
 import { ALL_SUKTAMS } from '../data';
 import { Prakara, PrakaraItem } from '../types/mantra';
 import { encodePrakaraToUrlHash } from '../services/urlCodec';
@@ -16,10 +16,8 @@ interface PrakaraModalProps {
 const newItemId = () => 'item-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6);
 
 export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
-  if (!isOpen) return null;
-
   const { prakaras, activePrakaraId, selectPrakara, addPrakara } = usePrakaraStore();
-  const { targetScript } = useMantraStore();
+  const targetScript = useSettingsStore((s) => s.script);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newDesc, setNewDesc] = useState('');
@@ -79,6 +77,8 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
     setShareMsg(`Copied link for "${prakara.title}"!`);
     setTimeout(() => setShareMsg(''), 3000);
   };
+
+  if (!isOpen) return null;
 
   return (
     <ModalFrame title={isCreatingNew ? 'Create New Prakara' : 'Prakara Sequence Studio'} onClose={onClose}>

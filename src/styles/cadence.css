@@ -1,0 +1,26 @@
+@layer components {
+  .cadence-mode,
+  .tempo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bar-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .tempo input {
+    width: 90px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  .tempo-value {
+    min-width: 4.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+}

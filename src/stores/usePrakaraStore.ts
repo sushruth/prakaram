@@ -1,7 +1,8 @@
 import { create } from 'zustand';
-import { Prakara, PrakaraItem, MantraChunk } from '../types/mantra';
+import { persist } from 'zustand/middleware';
+import { Prakara, MantraChunk } from '../types/mantra';
 import { DEFAULT_PRAKARAS, SUKTA_MAP } from '../data';
-import { useMantraStore } from './useMantraStore';
+import { useSettingsStore } from './useSettingsStore';
 import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
 
 interface PrakaraState {
@@ -15,96 +16,92 @@ interface PrakaraState {
   deletePrakara: (id: string) => void;
 }
 
-const LOCAL_STORAGE_KEY = 'parayanam_custom_prakaras';
+const isDefault = (p: Prakara) => DEFAULT_PRAKARAS.some((d) => d.id === p.id);
+const isPrakara = (v: unknown): v is Prakara =>
+  typeof v === 'object' && v !== null && typeof (v as Prakara).id === 'string' && Array.isArray((v as Prakara).items);
 
-function loadInitialPrakaras(): Prakara[] {
+const LEGACY_KEY = 'parayanam_custom_prakaras';
+
+function legacyCustomPrakaras(): Prakara[] {
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw) as Prakara[];
-      if (Array.isArray(parsed) && parsed.length > 0) {
-        return [...DEFAULT_PRAKARAS, ...parsed];
-      }
-    }
-  } catch (e) {
-    console.error('Failed to parse local prakaras:', e);
+    const raw = localStorage.getItem(LEGACY_KEY);
+    const parsed: unknown = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed.filter(isPrakara) : [];
+  } catch {
+    return [];
   }
-  return DEFAULT_PRAKARAS;
 }
 
-export const usePrakaraStore = create<PrakaraState>((set, get) => ({
-  prakaras: loadInitialPrakaras(),
-  activePrakaraId: 'maha-parayanam',
+export const usePrakaraStore = create<PrakaraState>()(
+  persist(
+    (set, get) => ({
+      prakaras: DEFAULT_PRAKARAS,
+      activePrakaraId: 'maha-parayanam',
 
-  selectPrakara: (id: string) => {
-    set({ activePrakaraId: id });
-  },
+      selectPrakara: (id) => set({ activePrakaraId: id }),
 
-  getActivePrakara: () => {
-    const state = get();
-    return state.prakaras.find((p) => p.id === state.activePrakaraId) || state.prakaras[0];
-  },
+      getActivePrakara: () => {
+        const { prakaras, activePrakaraId } = get();
+        return prakaras.find((p) => p.id === activePrakaraId) ?? prakaras[0];
+      },
 
-  getFlattenedChunks: () => {
-    const prakara = get().getActivePrakara();
-    const chunks: MantraChunk[] = [];
-    let chunkCounter = 1;
+      getFlattenedChunks: () => {
+        const prakara = get().getActivePrakara();
+        const chunks: MantraChunk[] = [];
+        let chunkCounter = 1;
 
-    for (const item of prakara.items) {
-      if (item.type === 'sukta_ref' && item.suktaId) {
-        const sukta = SUKTA_MAP.get(item.suktaId);
-        if (sukta) {
-          for (const section of sukta.sections) {
-            for (const ch of section.chunks) {
-              chunks.push({
-                ...ch,
-                chunkNumber: chunkCounter++,
-              });
+        for (const item of prakara.items) {
+          if (item.type === 'sukta_ref' && item.suktaId) {
+            const sukta = SUKTA_MAP.get(item.suktaId);
+            for (const section of sukta?.sections ?? []) {
+              for (const ch of section.chunks) {
+                chunks.push({ ...ch, chunkNumber: chunkCounter++ });
+              }
             }
+          } else if (item.type === 'vakya') {
+            chunks.push({
+              id: item.id,
+              chunkNumber: chunkCounter++,
+              sanskrit: item.customText || '',
+              translation: item.customTranslation || item.customTitle || 'Procedural Vakya',
+              isInstruction: true,
+            });
           }
         }
-      } else if (item.type === 'vakya') {
-        chunks.push({
-          id: item.id,
-          chunkNumber: chunkCounter++,
-          sanskrit: item.customText || '',
-          translation: item.customTranslation || item.customTitle || 'Procedural Vakya',
-          isInstruction: true,
-        });
-      }
-    }
 
-    const mode = useMantraStore.getState().splitLines ? 'phrase' : 'verse';
-    return applyTransforms(chunks, READING_TRANSFORMS[mode]);
-  },
+        const mode = useSettingsStore.getState().splitLines ? 'phrase' : 'verse';
+        return applyTransforms(chunks, READING_TRANSFORMS[mode]);
+      },
 
-  addPrakara: (newPrakara) => {
-    set((s) => {
-      const updated = [...s.prakaras, newPrakara];
-      const customOnly = updated.filter((p) => !DEFAULT_PRAKARAS.some((dp) => dp.id === p.id));
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(customOnly));
-      return { prakaras: updated, activePrakaraId: newPrakara.id };
-    });
-  },
+      addPrakara: (prakara) =>
+        set((s) => ({ prakaras: [...s.prakaras, prakara], activePrakaraId: prakara.id })),
 
-  updatePrakara: (prakara) => {
-    set((s) => {
-      const updated = s.prakaras.map((p) => (p.id === prakara.id ? prakara : p));
-      const customOnly = updated.filter((p) => !DEFAULT_PRAKARAS.some((dp) => dp.id === p.id));
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(customOnly));
-      return { prakaras: updated };
-    });
-  },
+      updatePrakara: (prakara) =>
+        set((s) => ({ prakaras: s.prakaras.map((p) => (p.id === prakara.id ? prakara : p)) })),
 
-  deletePrakara: (id: string) => {
-    set((s) => {
-      const updated = s.prakaras.filter((p) => p.id !== id);
-      const customOnly = updated.filter((p) => !DEFAULT_PRAKARAS.some((dp) => dp.id === p.id));
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(customOnly));
-      return {
-        prakaras: updated,
-        activePrakaraId: s.activePrakaraId === id ? DEFAULT_PRAKARAS[0].id : s.activePrakaraId,
-      };
-    });
-  },
-}));
+      deletePrakara: (id) =>
+        set((s) => ({
+          prakaras: s.prakaras.filter((p) => p.id !== id),
+          activePrakaraId: s.activePrakaraId === id ? DEFAULT_PRAKARAS[0].id : s.activePrakaraId,
+        })),
+    }),
+    {
+      name: 'parayanam-prakaras',
+      version: 1,
+      partialize: (s) => ({
+        customPrakaras: s.prakaras.filter((p) => !isDefault(p)),
+        activePrakaraId: s.activePrakaraId,
+      }),
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as { customPrakaras?: unknown; activePrakaraId?: unknown };
+        const stored = Array.isArray(p.customPrakaras) ? p.customPrakaras.filter(isPrakara) : null;
+        const custom = stored ?? legacyCustomPrakaras();
+        return {
+          ...current,
+          prakaras: [...DEFAULT_PRAKARAS, ...custom.filter((c) => !isDefault(c))],
+          activePrakaraId: typeof p.activePrakaraId === 'string' ? p.activePrakaraId : current.activePrakaraId,
+        };
+      },
+    },
+  ),
+);

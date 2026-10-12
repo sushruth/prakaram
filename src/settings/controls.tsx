@@ -1,5 +1,4 @@
-import { useMantraStore } from '../stores/useMantraStore';
-import { useThemeStore } from '../stores/useThemeStore';
+import { FONT_SIZE, useSettingsStore } from '../stores/useSettingsStore';
 import { THEMES } from '../config/themes';
 
 export function Switch({ checked, onToggle }: { checked: boolean; onToggle: () => void }) {
@@ -7,7 +6,8 @@ export function Switch({ checked, onToggle }: { checked: boolean; onToggle: () =
 }
 
 export function FontSizeStepper() {
-  const { fontSize, setFontSize } = useMantraStore();
+  const fontSize = useSettingsStore((s) => s.fontSize);
+  const setFontSize = useSettingsStore((s) => s.setFontSize);
   return (
     <div className="stepper">
       <button className="btn-icon" onClick={() => setFontSize(fontSize - 2)} aria-label="Decrease text size">
@@ -22,17 +22,20 @@ export function FontSizeStepper() {
 }
 
 export function WrapSwitch() {
-  const { wrapLines, toggleWrapLines } = useMantraStore();
-  return <Switch checked={wrapLines} onToggle={toggleWrapLines} />;
+  const checked = useSettingsStore((s) => s.wrapLines);
+  const onToggle = useSettingsStore((s) => s.toggleWrapLines);
+  return <Switch checked={checked} onToggle={onToggle} />;
 }
 
 export function SplitSwitch() {
-  const { splitLines, toggleSplitLines } = useMantraStore();
-  return <Switch checked={splitLines} onToggle={toggleSplitLines} />;
+  const checked = useSettingsStore((s) => s.splitLines);
+  const onToggle = useSettingsStore((s) => s.toggleSplitLines);
+  return <Switch checked={checked} onToggle={onToggle} />;
 }
 
 export function ThemeSegmented() {
-  const { theme, setTheme } = useThemeStore();
+  const theme = useSettingsStore((s) => s.theme);
+  const setTheme = useSettingsStore((s) => s.setTheme);
   return (
     <div className="segmented" role="radiogroup" aria-label="Theme">
       {THEMES.map((t) => (

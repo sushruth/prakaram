@@ -8,8 +8,6 @@ interface RoomModalProps {
 }
 
 export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
-  if (!isOpen) return null;
-
   const { isInRoom, roomCode, isHost, peerCount, joinRoom, leaveRoom } = useRoomStore();
   const [inputCode, setInputCode] = useState('');
   const [role, setRole] = useState<'host' | 'follower'>('host');
@@ -26,6 +24,8 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2500);
   };
+
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>

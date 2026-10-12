@@ -91,22 +91,10 @@ export default {
     }
 
     if ((url.pathname === '/api/auth/register/verify' || url.pathname === '/api/auth/login/verify') && request.method === 'POST') {
-      try {
-        const body = await request.json() as { challengeId: string; response: any };
-        const userId = 'usr-' + crypto.randomUUID().slice(0, 8);
-        const username = body.response?.id ? 'user-' + body.response.id.slice(0, 6) : 'practitioner';
-
-        return new Response(
-          JSON.stringify({
-            success: true,
-            user: { id: userId, username, displayName: username },
-            token: 'jwt-edge-' + crypto.randomUUID(),
-          }),
-          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      } catch (e: any) {
-        return new Response(JSON.stringify({ error: e.message }), { status: 400, headers: corsHeaders });
-      }
+      return new Response(JSON.stringify({ error: 'Passkey verification is not implemented' }), {
+        status: 501,
+        headers: corsHeaders,
+      });
     }
 
     return new Response(JSON.stringify({ error: 'Not found' }), {

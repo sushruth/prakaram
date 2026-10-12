@@ -1,92 +1,84 @@
 import { create } from 'zustand';
-import { LayaType, LAYA_PRESETS } from '../types/cadence';
-import { CadenceLearningEngine } from '../services/cadenceEngine';
+import { persist } from 'zustand/middleware';
+import { LAYA_PRESETS, LayaType } from '../types/cadence';
+import { CadenceLearningEngine, TEMPO } from '../services/cadenceEngine';
+import { clampNumber, oneOf } from './persistence';
+
+export type CadenceMode = 'off' | 'learn' | 'auto';
+export const CADENCE_MODES: readonly CadenceMode[] = ['off', 'learn', 'auto'];
+
+const LAYA_IDS = Object.keys(LAYA_PRESETS) as LayaType[];
 
 interface CadenceState {
-  bpm: number;
+  mode: CadenceMode;
   laya: LayaType;
+  bpm: number;
   msPerMatra: number;
   confidenceScore: number;
-  canAutoProgress: boolean;
-  isAutoProgress: boolean;
-  historyCount: number;
-
   engine: CadenceLearningEngine;
-
+  setMode: (mode: CadenceMode) => void;
   setBpm: (bpm: number, laya?: LayaType) => void;
   setLayaPreset: (laya: LayaType) => void;
   registerTap: (chunkId: string, chunkSanskrit: string) => void;
-  toggleAutoProgress: () => void;
-  setAutoProgress: (active: boolean) => void;
   resetCadence: () => void;
 }
 
-const engineInstance = new CadenceLearningEngine(72);
+const engine = new CadenceLearningEngine(TEMPO.fallback);
 
-export const useCadenceStore = create<CadenceState>((set, get) => ({
-  bpm: 72,
-  laya: 'abhyasa',
-  msPerMatra: 833,
-  confidenceScore: 0,
-  canAutoProgress: false,
-  isAutoProgress: false,
-  historyCount: 0,
-  engine: engineInstance,
+const snapshot = () => {
+  const m = engine.getMetrics();
+  return {
+    bpm: m.currentBpm,
+    laya: m.activeLaya,
+    msPerMatra: m.msPerMatra,
+    confidenceScore: m.confidenceScore,
+  };
+};
 
-  setBpm: (bpm: number, laya: LayaType = 'custom') => {
-    get().engine.setBpm(bpm, laya);
-    const metrics = get().engine.getMetrics();
-    set({
-      bpm: metrics.currentBpm,
-      laya: metrics.activeLaya,
-      msPerMatra: metrics.msPerMatra,
-      confidenceScore: metrics.confidenceScore,
-      canAutoProgress: metrics.canAutoProgress,
-    });
-  },
-
-  setLayaPreset: (laya: LayaType) => {
-    get().engine.setLayaPreset(laya);
-    const metrics = get().engine.getMetrics();
-    set({
-      bpm: metrics.currentBpm,
-      laya: metrics.activeLaya,
-      msPerMatra: metrics.msPerMatra,
-      confidenceScore: metrics.confidenceScore,
-      canAutoProgress: metrics.canAutoProgress,
-    });
-  },
-
-  registerTap: (chunkId: string, chunkSanskrit: string) => {
-    const metrics = get().engine.registerTap(chunkId, chunkSanskrit);
-    set({
-      bpm: metrics.currentBpm,
-      msPerMatra: metrics.msPerMatra,
-      confidenceScore: metrics.confidenceScore,
-      canAutoProgress: metrics.canAutoProgress,
-      laya: metrics.activeLaya,
-      historyCount: metrics.historyLength,
-    });
-  },
-
-  toggleAutoProgress: () => {
-    set((s) => ({ isAutoProgress: !s.isAutoProgress }));
-  },
-
-  setAutoProgress: (active: boolean) => {
-    set({ isAutoProgress: active });
-  },
-
-  resetCadence: () => {
-    get().engine.resetSession();
-    const metrics = get().engine.getMetrics();
-    set({
+export const useCadenceStore = create<CadenceState>()(
+  persist(
+    (set) => ({
+      mode: 'off',
+      laya: 'abhyasa',
+      bpm: TEMPO.fallback,
+      msPerMatra: engine.getMsPerMatra(),
       confidenceScore: 0,
-      canAutoProgress: false,
-      isAutoProgress: false,
-      historyCount: 0,
-      bpm: metrics.currentBpm,
-      msPerMatra: metrics.msPerMatra,
-    });
-  },
-}));
+      engine,
+      setMode: (mode) => set({ mode }),
+      setBpm: (bpm, laya = 'custom') => {
+        engine.setBpm(clampNumber(bpm, TEMPO.min, TEMPO.max, TEMPO.fallback), laya);
+        set(snapshot());
+      },
+      setLayaPreset: (laya) => {
+        engine.setLayaPreset(laya);
+        set(snapshot());
+      },
+      registerTap: (chunkId, chunkSanskrit) => {
+        engine.registerTap(chunkId, chunkSanskrit);
+        set(snapshot());
+      },
+      resetCadence: () => {
+        engine.resetSession();
+        set(snapshot());
+      },
+    }),
+    {
+      name: 'parayanam-cadence',
+      version: 1,
+      partialize: ({ mode, laya, bpm }) => ({ mode, laya, bpm }),
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as Partial<CadenceState>;
+        return {
+          ...current,
+          mode: oneOf(p.mode, CADENCE_MODES, current.mode),
+          laya: oneOf(p.laya, LAYA_IDS, current.laya),
+          bpm: clampNumber(p.bpm, TEMPO.min, TEMPO.max, current.bpm),
+        };
+      },
+    },
+  ),
+);
+
+const hydrated = useCadenceStore.getState();
+engine.setBpm(hydrated.bpm, hydrated.laya);
+useCadenceStore.setState(snapshot());

@@ -35,17 +35,18 @@
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    width: min(92%, 760px);
+    width: min(96%, 980px);
     background: var(--bg-overlay);
     backdrop-filter: blur(16px);
     border: 1px solid var(--border-subtle);
-    border-radius: 9999px;
-    padding: 0.65rem 1.4rem;
+    border-radius: 18px;
+    padding: 0.65rem 1rem;
     box-shadow: var(--shadow-floating);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.6rem 1rem;
     z-index: 50;
     transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s ease;
   }

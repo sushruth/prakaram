@@ -1,14 +1,15 @@
 import { TargetScript } from '../types/mantra';
-import { useMantraStore } from '../stores/useMantraStore';
+import { useSettingsStore } from '../stores/useSettingsStore';
 import { SCRIPTS } from '../services/transliteration';
 
 export function ScriptSelector() {
-  const { targetScript, setScript } = useMantraStore();
+  const script = useSettingsStore((s) => s.script);
+  const setScript = useSettingsStore((s) => s.setScript);
 
   return (
     <div className="script-picker">
       <select
-        value={targetScript}
+        value={script}
         onChange={(e) => setScript((e.target as HTMLSelectElement).value as TargetScript)}
         style={{
           background: 'var(--bg-card)',

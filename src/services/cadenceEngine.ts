@@ -1,6 +1,14 @@
 import { TapRecord, LayaType, LAYA_PRESETS } from '../types/cadence';
 import { calculateChunkWeight } from './syllabifier';
 
+export const MIN_CHUNK_MATRAS = 2;
+
+export const TEMPO = { min: 36, max: 130, fallback: 72 } as const;
+
+export function chunkMatras(sanskrit: string): number {
+  return Math.max(MIN_CHUNK_MATRAS, calculateChunkWeight(sanskrit));
+}
+
 export interface CadenceMetrics {
   currentBpm: number;
   msPerMatra: number;
@@ -22,7 +30,7 @@ export class CadenceLearningEngine {
   }
 
   public setBpm(bpm: number, laya: LayaType = 'custom') {
-    const clampedBpm = Math.max(30, Math.min(150, bpm));
+    const clampedBpm = Math.max(TEMPO.min, Math.min(TEMPO.max, bpm));
     this.currentMsPerMatra = Math.round(60000 / clampedBpm);
     this.activeLaya = laya;
   }
@@ -43,7 +51,7 @@ export class CadenceLearningEngine {
   }
 
   public registerTap(chunkId: string, chunkSanskrit: string, timestamp: number = Date.now()): CadenceMetrics {
-    const matraWeight = Math.max(2, calculateChunkWeight(chunkSanskrit));
+    const matraWeight = chunkMatras(chunkSanskrit);
 
     if (this.lastTapTime === 0) {
       this.lastTapTime = timestamp;
@@ -77,7 +85,8 @@ export class CadenceLearningEngine {
     }
 
     const alpha = 0.35;
-    this.currentMsPerMatra = Math.round(alpha * instantaneousMsPerMatra + (1 - alpha) * this.currentMsPerMatra);
+    const learned = alpha * instantaneousMsPerMatra + (1 - alpha) * this.currentMsPerMatra;
+    this.currentMsPerMatra = Math.round(Math.min(60000 / TEMPO.min, Math.max(60000 / TEMPO.max, learned)));
 
     return this.getMetrics();
   }

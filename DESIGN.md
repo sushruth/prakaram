@@ -84,6 +84,16 @@ The reader is a page, not a set of cards.
 - **Split** (off by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
 - The instruction label appears on the first phrase of an instruction only.
 
+## 5b. Cadence
+
+The control bar has three labelled cadence modes. The mode is always visible; nothing is hidden behind an icon.
+
+- **Off:** Tap or Space moves to the next line. Nothing is recorded.
+- **Learn:** each tap is measured to learn your pace. Lines do not advance by themselves. A "Steadiness" readout shows how consistent your taps are.
+- **Auto:** lines advance by themselves at the current tempo. Tempo is in matras per minute, so a long line takes longer than a short one.
+
+Tempo is one slider, labelled Tempo, from 36 to 130. Learned tempo is clamped to the same range. Presets (Dhyāna, Abhyāsa, Pārāyaṇa) set the tempo directly.
+
 ## 6. Translations
 
 Translation lines are not shown under mantras. Do not reintroduce them as a default. The data stays in the corpus for future use.

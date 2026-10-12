@@ -6,7 +6,6 @@ The icon paths in `src/icons/phosphor.ts` (regular weight) are vendored from
 Phosphor Icons, licensed under the MIT License.
 
 - Source: https://phosphoricons.com
-- Copyright (c) 2020 Phosphor Icons
 
 ### MIT License
 

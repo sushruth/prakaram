@@ -1,17 +1,17 @@
-import { useThemeStore } from '../stores/useThemeStore';
+import { useMantraStore } from '../stores/useMantraStore';
 import { useRoomStore } from '../stores/useRoomStore';
 import { Icon } from './Icon';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
   onOpenRoom: () => void;
-  onOpenAuth: () => void;
   onOpenSettings: () => void;
   settingsOpen: boolean;
 }
 
-export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, settingsOpen }: HeaderProps) {
-  const { zenMode, toggleZenMode } = useThemeStore();
+export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, settingsOpen }: HeaderProps) {
+  const zenMode = useMantraStore((s) => s.zenMode);
+  const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
   const { isInRoom, isHost, peerCount } = useRoomStore();
 
   return (
@@ -62,14 +62,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
               }}
             />
           )}
-        </button>
-
-        <button
-          className="btn-icon"
-          onClick={onOpenAuth}
-          title="Passkey Authentication"
-        >
-          <Icon name="key" size={20} />
         </button>
 
         <button

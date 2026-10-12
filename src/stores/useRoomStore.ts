@@ -35,8 +35,10 @@ export const useRoomStore = create<RoomState>((set) => ({
             const bpm = Math.round(60000 / msg.msPerMatra);
             useCadenceStore.getState().setBpm(bpm);
           }
-          if (typeof msg.autoProgress === 'boolean') {
-            useCadenceStore.getState().setAutoProgress(msg.autoProgress);
+          if (msg.autoProgress) {
+            useCadenceStore.getState().setMode('auto');
+          } else if (useCadenceStore.getState().mode === 'auto') {
+            useCadenceStore.getState().setMode('off');
           }
         }
       },
