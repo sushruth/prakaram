@@ -25,7 +25,7 @@
   - **Abhyāsa (अभ्यास / Madhya Laya):** 72 BPM (Standard daily study)
   - **Pārāyaṇa (पारायण / Druta Laya):** 100 BPM (Fluent continuous recital)
 * **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide the header and controls, leaving only the verses.
-* **Line Kinds:** Vedic mantras with swara marks are indigo, plain mantras are primary text, shlokas are medium weight, and vakyas (procedure) are italic and muted.
+* **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured by its tone. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 
 ### 1. Authentic Vedic Corpus (*Saswara Veda Mantrah*)
 * Editorial benchmark: *Saswara Veda Mantrah* by Sri Ramakrishna Math.

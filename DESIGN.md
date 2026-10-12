@@ -18,7 +18,7 @@ Parayanam is a chanting tool, not a temple. It should feel like a printed page o
 
 1. **One line is the focus.** The active chunk is fully opaque. Every other chunk is semi-transparent. No box, no background, no border, no scale, no glow around the active line.
 2. **Opacity is the hierarchy.** Do not use size, weight, color, or boxes to mark the current line. Lines recede by opacity only.
-3. **One accent.** Teal ink (`#1f5f63`) is used for active controls, focus, and the prakara title. Swara indigo colours only mantras with swara marks. Nothing else is coloured.
+3. **One accent.** Teal ink (`#1f5f63`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
 5. **No decoration.** No gradients, no glows, no blur except zen-mode dimming, no emoji in primary chrome.
 6. **Motion is opacity only.** Transitions are 300–350 ms opacity fades. No scale, no slide.
@@ -38,7 +38,11 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#1f5f63` | Active control, focus, prakara title |
-| `--swara` | `#4a45b8` | Mantras with swara marks |
+| `--swara-svarita` | `#4a45b8` | Syllable with svarita (U+0951) |
+| `--swara-anudatta` | `#b0582c` | Syllable with anudatta (U+0952) |
+| `--swara-dirgha` | `#9a7a10` | Syllable with dirgha svarita (U+1CDA) |
+| `--shloka` | `#3d7a55` | Shloka lines (green tint) |
+| `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
@@ -97,10 +101,11 @@ The reader is a page, not a set of cards.
 
 | Kind | Looks like | Source |
 | :--- | :--- | :--- |
-| Mantra with swara | Indigo `--swara` | Sukta line containing U+0951, U+0952 or U+1CDA |
-| Mantra without swara | Primary ink, regular weight | Sukta line with no swara marks |
-| Shloka | Primary ink, medium weight, small "Shloka" label | Custom verse ending in `॥` |
-| Vakya | Muted ink, italic, small "Vakya" label | Other procedural text |
+| Mantra | Primary ink, regular weight. Each syllable carrying a swara mark takes its tone colour: svarita indigo, anudatta rust, dirgha ochre | Sukta line. Colour is per syllable, so conjuncts stay whole |
+| Shloka | Green tint `--shloka`, medium weight, small "Shloka" label | Custom verse ending in `॥` |
+| Vakya | Purplish grey `--vakya`, italic, small "Vakya" label | Other procedural text |
+
+The swara and line-kind colours are provisional. Other kinds may get colours later; add them here first.
 
 Only the first phrase of a split line carries the label.
 

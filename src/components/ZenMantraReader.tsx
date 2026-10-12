@@ -6,6 +6,7 @@ import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
 import { transliterateVedic } from '../services/transliteration';
 import { hasSwara } from '../services/swara';
+import { sourcePieces } from '../services/swaraSegments';
 import { chunkMatras } from '../services/cadenceEngine';
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
@@ -19,6 +20,7 @@ export function ZenMantraReader() {
 
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
   const setActiveChunkIndex = useMantraStore((s) => s.setActiveChunkIndex);
+  const openPrakara = useMantraStore((s) => s.openPrakara);
   const prevChunk = useMantraStore((s) => s.prevChunk);
   const nextChunk = useMantraStore((s) => s.nextChunk);
   const zenMode = useMantraStore((s) => s.zenMode);
@@ -39,6 +41,14 @@ export function ZenMantraReader() {
     () => usePrakaraStore.getState().getFlattenedChunks(),
     [prakaras, activePrakaraId, splitLines],
   );
+
+  useEffect(() => {
+    openPrakara(activePrakara.id);
+  }, [activePrakara.id, openPrakara]);
+
+  useEffect(() => {
+    if (chunks.length > 0 && activeChunkIndex >= chunks.length) setActiveChunkIndex(0);
+  }, [chunks.length, activeChunkIndex, setActiveChunkIndex]);
 
   useEffect(() => {
     activeChunkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -91,7 +101,20 @@ export function ZenMantraReader() {
   const lineClass = (chunk: { kind?: string; sanskrit: string }) => {
     if (chunk.kind === 'shloka') return 'line-shloka';
     if (chunk.kind === 'vakya') return 'line-vakya';
-    return hasSwara(chunk.sanskrit) ? 'line-swara' : 'line-mantra';
+    return 'line-mantra';
+  };
+
+  const renderText = (sanskrit: string) => {
+    if (!hasSwara(sanskrit)) return transliterateVedic(sanskrit, script);
+    return sourcePieces(sanskrit).map((piece, i) =>
+      piece.tone ? (
+        <span key={i} className={`swara-${piece.tone}`}>
+          {transliterateVedic(piece.text, script)}
+        </span>
+      ) : (
+        transliterateVedic(piece.text, script)
+      ),
+    );
   };
 
   return (
@@ -126,7 +149,7 @@ export function ZenMantraReader() {
                   overflowX: wrapLines ? 'visible' : 'auto',
                 }}
               >
-                {transliterateVedic(chunk.sanskrit, script)}
+                {renderText(chunk.sanskrit)}
               </div>
             </div>
           );

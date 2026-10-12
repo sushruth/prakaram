@@ -256,17 +256,25 @@
     color: var(--text-primary);
   }
 
-  .line-swara {
-    color: var(--swara);
-  }
-
   .line-shloka {
-    color: var(--text-primary);
+    color: var(--shloka);
     font-weight: 500;
   }
 
   .line-vakya {
-    color: var(--text-secondary);
+    color: var(--vakya);
     font-style: italic;
+  }
+
+  .swara-svarita {
+    color: var(--swara-svarita);
+  }
+
+  .swara-anudatta {
+    color: var(--swara-anudatta);
+  }
+
+  .swara-dirgha {
+    color: var(--swara-dirgha);
   }
 }
