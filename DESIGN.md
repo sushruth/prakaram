@@ -160,7 +160,7 @@ Taps in `engaged` and `plain` are ignored. A reload moves `measuring` back to `w
 
 ### Tap target
 
-- Clicking the active line or the next line counts as a tap while learning. Clicking a line further away jumps to it without counting.
+- Clicking the active line or the next line counts as a tap while learning. Clicking a line further away resets learning to `waiting` with the count at zero, then jumps to that line. Outside learning, it just jumps.
 - While learning, the page does not scroll and text cannot be selected. The next line is drawn at 60% opacity, and the rest stay at 35%, so the tap target is visible.
 - Space and the Tap button do the same as tapping the active line.
 

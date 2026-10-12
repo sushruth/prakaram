@@ -25,6 +25,7 @@ export function ZenMantraReader() {
   const nextChunk = useMantraStore((s) => s.nextChunk);
 
   const phase = useCadenceStore((s) => s.phase);
+  const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
   const prakaras = usePrakaraStore((s) => s.prakaras);
@@ -93,8 +94,12 @@ export function ZenMantraReader() {
   const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {
     const isNextLine = index === activeChunkIndex + 1;
-    if (index === activeChunkIndex || (learning && isNextLine)) advanceChunk(chunks);
-    else setActiveChunkIndex(index);
+    if (index === activeChunkIndex || (learning && isNextLine)) {
+      advanceChunk(chunks);
+      return;
+    }
+    if (learning) resetLearning();
+    setActiveChunkIndex(index);
   };
 
   const kindLabel = (kind: string) => (kind === 'shloka' ? 'Shloka' : 'Vakya');
