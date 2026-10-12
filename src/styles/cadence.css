@@ -156,18 +156,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.1rem;
+    gap: 0.16rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  .minimap-line {
-    position: relative;
-    display: block;
-    width: max-content;
-    height: 0.12rem;
+  /* A chunk, which may wrap onto several screen lines just as it does on the page. */
+  .minimap-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.06rem;
   }
 
-  /* One square per syllable, square-cornered. Swara syllables take the reader's swara colours. */
+  .minimap-line {
+    display: block;
+    width: max-content;
+    height: 0.1rem;
+  }
+
+  /* One box per syllable. Swara syllables take the reader's swara colours. */
   .minimap-cells {
     display: flex;
     height: 100%;
@@ -184,19 +190,26 @@
     background: none;
   }
 
-  /* The current line is drawn once. A mask sweeps left to right: sung boxes are full strength, the rest dimmer. */
+  /*
+   * The current chunk is drawn once. --sung runs 0 to 100% across the whole chunk; each screen line
+   * turns that into its own position, so the sweep goes along line one, then line two.
+   */
   @property --sung {
     syntax: "<percentage>";
-    inherits: false;
+    inherits: true;
     initial-value: 0%;
   }
 
-  .minimap-line[data-now="true"] {
-    mask-image: linear-gradient(90deg, #000 var(--sung), rgb(0 0 0 / 0.22) var(--sung));
+  .minimap-row[data-now="true"] {
     animation: minimap-sing linear forwards;
   }
 
-  .minimap-line[data-now="true"] .minimap-cells > span {
+  .minimap-row[data-now="true"] .minimap-line {
+    --pos: clamp(0%, calc((var(--sung) - var(--from)) * var(--scale)), 100%);
+    mask-image: linear-gradient(90deg, #000 var(--pos), rgb(0 0 0 / 0.22) var(--pos));
+  }
+
+  .minimap-row[data-now="true"] .minimap-cells > span {
     opacity: 1;
   }
 
