@@ -104,7 +104,8 @@ When adding a new Suktam from *Saswara Veda Mantrah*:
 2. Ensure every chunk includes authentic Devanagari with swara marks. Translations may be kept in the data but are not displayed.
 3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`.
 4. Optionally add it as an item in a default Prakara preset in `src/data/defaultPrakaras.ts`.
-5. Run `bun run build` to verify type safety.
+5. Set `metadata.status` and `metadata.license` as in MAINTAINERS.md §4a. Status is `draft` until proofread, and text with unconfirmed permission stays `draft`.
+6. Run `bun run build` to verify type safety.
 
 ---
 

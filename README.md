@@ -32,7 +32,7 @@
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
 * **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.
 * **Install:** Prakaram is an installable PWA (manifest and icons in `public/`). A production build registers `public/sw.js`, which keeps the app shell available offline after one visit.
-* **Header:** a flame mark and the prakara title on the left (tap the title for details), then four icons: settings, prakara sequences, live room, and zen. Under them, a cadence strip shows the mode (Off, Manual, Learn), a readout, and the countdown ring. Tap the readout for the pace.
+* **Header:** a flame mark and the prakara title on the left (tap the title for details), then four icons: settings, Koshah, live room, and zen. Under them, a cadence strip shows the mode (Off, Manual, Learn), a readout, and the countdown ring. Tap the readout for the pace.
 * **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide everything except the verses and that icon. Hidden controls keep their space, so nothing shifts.
 * **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured: up (svarita) purple, down (anudatta) blue, double up (dirgha svarita) red. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 
@@ -45,6 +45,7 @@
   - **श्री सूक्तम् (Sri Suktam):** Complete 16 Riks with Vedic accents
   - **दुर्गा सूक्तम् (Durga Suktam):** Complete hymn to Agni-Durga
   - **नारायण सूक्तम् (Narayana Suktam):** Complete hymn to Cosmic Narayana
+* **Koshah and Sri Rudram:** the Koshah library lists every sukta and each anuvaka, with search, a reading page and Run for any piece; the Sri Rudram prakaram (Namakam and Chamakam) is included, but its text is from Vignanam and its reuse permission is not yet confirmed, so it stays a draft until that is settled.
 
 ### 2. Multi-Script Indic Engine
 * Client-side, zero-dependency, ultra-fast (>1,000,000 mantras/sec) Brahmic transliteration.
@@ -139,4 +140,4 @@ bunx wrangler dev
 ---
 
 ## 📜 License
-Vedic texts are public domain (*sanātana*). Code is released under the MIT License.
+The Vedic texts themselves are ancient, but a typed, proofread edition can carry rights. Each text's source and licence status is shown in the Koshah and listed in `THIRD_PARTY_NOTICES.md`. Code is released under the MIT License.

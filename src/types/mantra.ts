@@ -46,6 +46,10 @@ export interface MantraDocument {
     rishi?: string;
     devata?: string;
     chandas?: string;
+    /** Review state of the text. Missing means draft. */
+    status?: 'draft' | 'proofread' | 'reviewed';
+    /** Licence or permission note for this text. */
+    license?: string;
   };
   sections: SuktaSection[];
 }
@@ -54,6 +58,8 @@ export interface PrakaraItem {
   id: string;
   type: 'sukta_ref' | 'vakya';
   suktaId?: string;
+  /** Only this section of the sukta (an anuvaka). Omitted means the whole sukta. */
+  sectionId?: string;
   chunkId?: string;
   customTitle?: string;
   customText?: string;

@@ -4,9 +4,6 @@ import { isAutoRunning, isLearning, useCadenceStore } from '../stores/useCadence
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
-import { transliterateVedic } from '../services/transliteration';
-import { hasSwara } from '../services/swara';
-import { sourcePieces } from '../services/swaraSegments';
 import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
 import { useFrozen } from '../hooks/useFrozen';
@@ -14,6 +11,7 @@ import { useGuest } from '../hooks/useGuest';
 
 import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
+import { renderVedic } from './renderVedic';
 import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
@@ -128,21 +126,6 @@ export function ZenMantraReader() {
   };
 
   const kindLabel = (kind: string) => (kind === 'shloka' ? 'Shloka' : 'Vakya');
-  const renderText = (raw: string) => {
-    // Non-breaking spaces keep a danda with the word before it and with its verse number.
-    const sanskrit = raw.replace(/ ([।॥])/g, '\u00a0$1').replace(/([।॥]) (\d)/g, '$1\u00a0$2');
-    if (!hasSwara(sanskrit)) return transliterateVedic(sanskrit, script);
-    return sourcePieces(sanskrit).map((piece, i) =>
-      piece.tone ? (
-        <span key={i} className={`swara-${piece.tone}`}>
-          {transliterateVedic(piece.text, script)}
-        </span>
-      ) : (
-        transliterateVedic(piece.text, script)
-      ),
-    );
-  };
-
   return (
     <div className="main-content">
       <div className="chunks-container">
@@ -183,7 +166,7 @@ export function ZenMantraReader() {
                   overflowX: wrapLines ? 'visible' : 'auto',
                 }}
               >
-                {renderText(chunk.sanskrit)}
+                {renderVedic(chunk.sanskrit, script)}
               </div>
             </div>
           );

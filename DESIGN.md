@@ -100,7 +100,7 @@ The reader is a page, not a set of cards.
 
 ## 5e. Header, Title and Flyouts
 
-- The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, prakara sequences, live room, zen). The cadence strip sits directly under it (36px), and the header and strip are one sticky block. Lines scrolling under the block fade out over 20px in the page colour (`.chrome::after`), so they follow the theme. There is no site name in the header.
+- The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, Koshah, live room, zen). The cadence strip sits directly under it (36px), and the header and strip are one sticky block. Lines scrolling under the block fade out over 20px in the page colour (`.chrome::after`), so they follow the theme. There is no site name in the header.
 - The flame mark is Phosphor's flame outline with an amber-to-red gradient (the same everywhere); the favicon and PWA icons add a static glow. On screen its glow, sway and squash follow a random walk (`src/components/FlameMark.tsx`): each channel eases toward random targets at random intervals, so it never settles into a loop (off under reduced motion). The favicon and PWA icons are static, with a fixed glow. The sources are `src/components/FlameMark.tsx` and `public/favicon.svg`; `public/icons/*.png` are rendered from the SVG.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
@@ -235,6 +235,62 @@ Zen shows only the content and the zen (lotus) button. Everything else in the he
 - Any open drop panel closes when zen turns on.
 - The lotus is the only way to leave zen, along with the Z key. There is no separate exit hint.
 
+## 5f. Koshah
+
+The Koshah is the library: every piece of text the app holds, with search, a reading page and a way to run each piece. It opens as a drop panel from the header scroll icon, like settings and cadence. Only one drop panel is open at a time.
+
+### Pieces
+
+A piece is one thing that can be read or run. Pieces are derived from the documents in `src/data` by `listPieces()` in `src/services/koshah.ts`. They are never stored, so a piece cannot drift from the text it came from.
+
+| Document | Pieces |
+| :--- | :--- |
+| One section | One piece: the whole sukta |
+| Several sections (anuvakas) | One piece for the whole sukta, and one piece for each section |
+
+| Piece | `id` | Kind | Title |
+| :--- | :--- | :--- | :--- |
+| Whole sukta | `<documentId>`, e.g. `rudram-namakam` | `sukta` | The document title |
+| One section | `<documentId>/<sectionNumber>`, e.g. `rudram-namakam/3` | `anuvaka` | The document title, then the section title in English |
+
+The id is stable and is used in addresses (`#k=`).
+
+### The panel
+
+- **Search** matches the Sanskrit, transliterated and English titles, and the source, ignoring case. While searching, matching prakaras and pieces are listed, anuvakas included.
+- **Prakarams** lists the default and saved prakaras. Tapping one makes it the active prakara and closes the panel. A "Compile new prakara" action opens the composer.
+- **Pieces** lists each sukta. A sukta with sections has a toggle that shows its anuvakas below it.
+- Each piece shows its line count and status, with two actions: **Read** and **Run**.
+
+### Read and Run
+
+- **Read** opens the piece page at `#k=<pieceId>`, described below.
+- **Run** makes `piece:<pieceId>` the active prakara, so the player runs that piece alone. A section piece runs only its section. Nothing is added to the saved prakaras.
+
+### The piece page
+
+- Opened by `#k=<pieceId>`. It replaces the player while the address is set. Its back button clears the address and returns to the player. An unknown id shows "This piece does not exist."
+- Shows the title, the English subtitle, the source, the status, the licence, the line count and the text, with swara colours as in §5c.
+- A whole sukta with sections is read section by section, each with a heading. An anuvaka shows only its own lines.
+- **Run in the player** runs the piece and returns to the player.
+
+### Status
+
+Status is set per document in `metadata.status`. A missing status is `draft`.
+
+| Status | Meaning |
+| :--- | :--- |
+| `draft` | Not yet checked against a printed edition. The default. |
+| `proofread` | Checked against a printed edition. Not yet checked a second time. |
+| `reviewed` | Proofread, then checked a second time. |
+
+### Source and licence
+
+- Every document gives `metadata.source`, and every piece shows it.
+- Every document gives `metadata.license` where it is known, and every piece shows it. A piece with no licence note shows "Not stated".
+- Text with unconfirmed permission stays `draft`, even when it has been proofread.
+- Pieces come only from the corpus in `src/data`.
+
 ## 6. Translations
 
 Translation lines are not shown under mantras. Do not reintroduce them as a default. The data stays in the corpus for future use.
@@ -244,7 +300,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header is one row, vertically centred: flame and prakara title on the left, four borderless icon buttons on the right (settings, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
+- Header is one row, vertically centred: flame and prakara title on the left, four borderless icon buttons on the right (settings, Koshah, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
 - Touch targets are 40 px on every screen. Icon buttons keep 40 px on phones too (the header row fits at 412 px). Do not shrink text targets.
