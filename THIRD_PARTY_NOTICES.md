@@ -2,7 +2,7 @@
 
 ## Phosphor Icons
 
-The flame mark (`src/components/FlameMark.tsx`, `public/favicon.svg`) uses Phosphor's `flame` outline path, in one colour with its own glow.
+The flame mark (`src/components/FlameMark.tsx`, `public/favicon.svg`) uses Phosphor's `flame` outline path, with its own gradient and glow.
 
 
 The icon paths in `src/icons/phosphor.ts` (regular weight) are vendored from
