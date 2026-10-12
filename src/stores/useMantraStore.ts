@@ -5,7 +5,11 @@ interface MantraStoreState {
   targetScript: TargetScript;
   fontSize: number;
   activeChunkIndex: number;
+  wrapLines: boolean;
+  splitLines: boolean;
 
+  toggleWrapLines: () => void;
+  toggleSplitLines: () => void;
   setScript: (script: TargetScript) => void;
   setFontSize: (size: number) => void;
   setActiveChunkIndex: (index: number) => void;
@@ -14,11 +18,29 @@ interface MantraStoreState {
 }
 
 const SAVED_SCRIPT = (localStorage.getItem('parayanam_script') as TargetScript) || 'devanagari';
+const SAVED_WRAP = localStorage.getItem('parayanam_wrap') !== 'false';
+const SAVED_SPLIT = localStorage.getItem('parayanam_split') === 'true';
 
 export const useMantraStore = create<MantraStoreState>((set) => ({
   targetScript: SAVED_SCRIPT,
   fontSize: 26,
   activeChunkIndex: 0,
+  wrapLines: SAVED_WRAP,
+  splitLines: SAVED_SPLIT,
+
+  toggleWrapLines: () => {
+    set((s) => {
+      localStorage.setItem('parayanam_wrap', String(!s.wrapLines));
+      return { wrapLines: !s.wrapLines };
+    });
+  },
+
+  toggleSplitLines: () => {
+    set((s) => {
+      localStorage.setItem('parayanam_split', String(!s.splitLines));
+      return { splitLines: !s.splitLines };
+    });
+  },
 
   setScript: (script) => {
     localStorage.setItem('parayanam_script', script);

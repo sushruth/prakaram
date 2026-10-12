@@ -12,7 +12,7 @@ interface HeaderProps {
 export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
   const { theme, setTheme, zenMode, toggleZenMode } = useThemeStore();
   const { isInRoom, isHost, peerCount } = useRoomStore();
-  const { fontSize, setFontSize } = useMantraStore();
+  const { fontSize, setFontSize, wrapLines, toggleWrapLines, splitLines, toggleSplitLines } = useMantraStore();
 
   const cycleTheme = () => {
     const themes: AppTheme[] = ['sandhya', 'dark', 'light'];
@@ -49,6 +49,26 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
             title="Increase font size"
           >
             A+
+          </button>
+        </div>
+
+        {/* Reading options */}
+        <div className="font-size-pill">
+          <button
+            className="btn-icon view-toggle"
+            aria-pressed={wrapLines}
+            onClick={toggleWrapLines}
+            title={wrapLines ? 'Wrap long lines (on)' : 'Wrap long lines (off)'}
+          >
+            Wrap
+          </button>
+          <button
+            className="btn-icon view-toggle"
+            aria-pressed={splitLines}
+            onClick={toggleSplitLines}
+            title={splitLines ? 'Split at danda and long phrases (on)' : 'Split at danda and long phrases (off)'}
+          >
+            Split
           </button>
         </div>
 

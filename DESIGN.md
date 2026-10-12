@@ -74,6 +74,16 @@ The instruction label ("Vakya / Procedure") is an uppercase teal label above the
 
 ---
 
+## 5a. Reading Layout
+
+The reader is a page, not a set of cards.
+
+- Verse lines have 0.2 rem padding and 0.45 rem between lines. Do not add card padding or large gaps.
+- Verse text line-height is 1.85.
+- **Wrap** (on by default) wraps long lines. Off, each line stays on one row and scrolls sideways.
+- **Split** (off by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
+- The instruction label appears on the first phrase of an instruction only.
+
 ## 6. Translations
 
 Translation lines are not shown under mantras. Do not reintroduce them as a default. The data stays in the corpus for future use.

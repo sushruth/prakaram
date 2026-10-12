@@ -9,7 +9,7 @@ import { calculateChunkWeight } from '../services/syllabifier';
 import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
-  const { targetScript, fontSize, activeChunkIndex, setActiveChunkIndex, nextChunk, prevChunk } = useMantraStore();
+  const { targetScript, fontSize, activeChunkIndex, setActiveChunkIndex, nextChunk, prevChunk, wrapLines } = useMantraStore();
   const { isAutoProgress, msPerMatra, registerTap } = useCadenceStore();
   const { getFlattenedChunks, getActivePrakara } = usePrakaraStore();
   const { zenMode, toggleZenMode } = useThemeStore();
@@ -143,6 +143,8 @@ export function ZenMantraReader() {
                   fontSize: `${fontSize}px`,
                   color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
                   fontWeight: isActive ? 600 : 400,
+                  whiteSpace: wrapLines ? 'normal' : 'nowrap',
+                  overflowX: wrapLines ? 'visible' : 'auto',
                 }}
               >
                 {transliteratedText}

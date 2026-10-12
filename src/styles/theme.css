@@ -112,7 +112,7 @@
   .vedic-text {
     font-family: 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Geist', system-ui, sans-serif;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "mark" 1, "mkmk" 1;
-    line-height: 2.2;
+    line-height: 1.85;
     text-rendering: optimizeLegibility;
   }
 
@@ -220,11 +220,25 @@
   /* Chunk Display Card */
   .chunk-row {
     position: relative;
-    padding: 1.2rem 1.5rem;
-    margin-bottom: 1.2rem;
+    padding: 0.2rem 0;
+    margin-bottom: 0.45rem;
     border-radius: 0;
     cursor: pointer;
     transition: opacity 0.35s ease;
+  }
+
+  .view-toggle {
+    width: auto;
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .view-toggle[aria-pressed="true"] {
+    background: var(--accent-light);
+    color: var(--accent);
   }
 
   /* Active line: fully opaque, no container. Others recede. */
@@ -423,7 +437,7 @@
     }
 
     .chunk-row {
-      padding: 1rem;
+      padding: 0.2rem 0;
     }
   }
 }
