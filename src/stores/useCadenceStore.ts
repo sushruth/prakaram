@@ -30,6 +30,7 @@ interface CadenceState extends LearningState {
   followHost: (on: boolean) => void;
   togglePause: () => void;
   setMsPerMatra: (ms: number) => void;
+  learnLine: (chunkId: string, chunkSanskrit: string, activeMs: number) => void;
 }
 
 const engine = new CadenceLearningEngine(TEMPO.fallback);
@@ -44,7 +45,6 @@ export const useCadenceStore = create<CadenceState>()(
         const next = transition(before, event);
         if (next === before) return;
         if (event.type === 'setMode' || event.type === 'reset') engine.resetSession();
-        if (event.type === 'tap') engine.registerTap(event.chunkId, event.chunkSanskrit);
         set({ ...next, ...snapshot() });
       };
       return {
@@ -57,6 +57,10 @@ export const useCadenceStore = create<CadenceState>()(
         resetLearning: () => send({ type: 'reset' }),
         followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
         togglePause: () => send({ type: 'togglePause' }),
+        learnLine: (chunkId, chunkSanskrit, activeMs) => {
+          engine.registerLine(chunkId, chunkSanskrit, activeMs);
+          set(snapshot());
+        },
         setMsPerMatra: (ms) => {
           engine.setMsPerMatra(clampNumber(ms, TEMPO.min, TEMPO.max, TEMPO.fallback));
           set(snapshot());

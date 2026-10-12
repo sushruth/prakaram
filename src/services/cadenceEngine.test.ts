@@ -20,13 +20,8 @@ describe('CadenceLearningEngine (Option A)', () => {
   it('learns pacing and boosts confidence with steady tapping', () => {
     const engine = new CadenceLearningEngine();
     const testSanskrit = 'ॐ स॒हस्र॑शीर्षा॒ पुरु॑षः ।';
-    let t = 10000;
-
-    engine.registerTap('c1', testSanskrit, t);
-
     for (let i = 1; i <= 5; i++) {
-      t += 9600;
-      engine.registerTap(`c${i + 1}`, testSanskrit, t);
+      engine.registerLine(`c${i}`, testSanskrit, 9600);
     }
 
     const metrics = engine.getMetrics();

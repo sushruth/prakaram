@@ -201,8 +201,11 @@ The header ring is yellow. A faint full ring shows behind the moving arc. It emp
 
 ### Hold and away
 
-- **Hold.** Touching the active line pauses auto-advance at once. The yellow pause mark shows while held, and releasing resumes with the time that was left. In Manual and once learned, the touch does not advance the line. In Learn, a tap on the active line still counts as a learning tap. Hold does not change the learned pace by itself: the tap interval already contains the time it was held.
-- **Away.** When the tab is hidden or the window loses focus, auto-advance pauses and resumes on return. This is the "Pause when away" setting, on by default.
+- **Hold** (touch the active line). Pauses auto-advance at once, and releasing resumes with the time that was left. It is a relearn signal: the time held stays in the line's reading time, so a long hold teaches the learner that the line is slower. In Manual and once learned, the touch does not advance the line. In Learn, a tap on the active line still counts as a learning tap.
+- **Pause** (the ring). A deliberate pause, to come back to later. It stops the line clock, so the time paused adds nothing to learning.
+- **Away.** When the tab is hidden or the window loses focus, auto-advance and the line clock stop, and resume on return. This is the "Pause when away" setting, on by default.
+
+**Learning samples.** While Learn is active (learning, or learned), each line's active time is a sample: the time it was on screen, excluding ring pauses and away time, including holds. Every advance of one line gives a sample: a learning tap, a timer advance, Next, or a click on the next line. A jump of more than one line gives none. Guests give none.
 - Holding and away are not saved.
 
 **Shared sessions.** A host's lines and timing are followed by guests. A guest has no local cadence control: taps, Next, arrow and Space keys, line clicks, the pause ring, the pace slider and the mode control are disabled, and away-pause does not apply. A guest can leave the room to use the app alone.

@@ -11,6 +11,7 @@ import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
+import { initLineClock } from './services/lineClock';
 
 type DropKind = 'settings' | 'details' | 'cadence';
 
@@ -37,6 +38,8 @@ export function App() {
       window.removeEventListener('focus', onFocus);
     };
   }, [setAway]);
+
+  useEffect(() => initLineClock(), []);
 
   const toggle = (kind: DropKind) => setDrop((current) => (current === kind ? null : kind));
   const closeDrop = () => setDrop(null);

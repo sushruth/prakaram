@@ -21,6 +21,7 @@
 * **Three modes:** **Off** (you move the lines), **Manual** (lines advance at the set pace; the default), and **Learn** (six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider).
 * **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 50 to 3000 on a logarithmic scale (833 by default). Learned pace is clamped to the same range.
 * **Shared sessions:** guests follow the host's lines and timing and have no local cadence controls. Leave the room to control your own.
+* **Learning from every line:** while Learn is on, each line's active time teaches the pace, including lines moved on by the timer or Next. Holding a line counts as slower reading; the ring pause does not.
 * **Touch to pause:** touching the highlighted line pauses auto-advance at once; release to resume. In auto modes a touch does not advance the line.
 * **Pause when away:** auto-advance pauses when the tab is hidden or loses focus, and resumes on return. Turn it off in settings.
 * **Countdown ring:** in Manual, and once Learn has finished, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.

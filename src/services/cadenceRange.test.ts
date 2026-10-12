@@ -4,11 +4,8 @@ import { CadenceLearningEngine, PACE_SLIDER_STEPS, TEMPO, chunkMatras, paceToSli
 describe('cadence tempo range', () => {
   it('keeps learned tempo inside the slider range', () => {
     const engine = new CadenceLearningEngine(TEMPO.fallback);
-    let t = 1_000_000;
-    engine.registerTap('a', 'अ आ', t);
     for (let i = 0; i < 20; i++) {
-      t += 150;
-      engine.registerTap('a', 'अ आ', t);
+      engine.registerLine('a', 'अ आ', 150);
     }
     const ms = engine.getMsPerMatra();
     expect(ms).toBeLessThanOrEqual(TEMPO.max);
@@ -39,12 +36,9 @@ describe('learning a fast reader', () => {
   it('learns a pace below the slider minimum instead of pinning at it', () => {
     const lines = ['ॐ सहस्रशीर्षा पुरुषः । सहस्राक्षः सहस्रपात् ।', 'स भूमिं विश्वतो वृत्वा । अत्यतिष्ठद्दशाङ्गुलम् ॥'];
     const engine = new CadenceLearningEngine();
-    let t = 1_000_000;
-    engine.registerTap('0', lines[0], t);
-    for (let i = 1; i <= 5; i++) {
-      const prev = lines[(i - 1) % 2];
-      t += chunkMatras(prev) * 200;
-      engine.registerTap(String(i), lines[i % 2], t);
+    for (let i = 0; i < 5; i++) {
+      const line = lines[i % 2];
+      engine.registerLine(String(i), line, chunkMatras(line) * 200);
     }
     expect(engine.getMsPerMatra()).toBeGreaterThanOrEqual(195);
     expect(engine.getMsPerMatra()).toBeLessThanOrEqual(205);

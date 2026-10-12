@@ -3,6 +3,9 @@ import { calculateChunkWeight } from './syllabifier';
 
 export const MIN_CHUNK_MATRAS = 2;
 
+// Shorter active times are accidental, not readings.
+const MIN_LINE_MS = 200;
+
 // Milliseconds per matra. Lower is faster.
 export const TEMPO = { min: 50, max: 3000, fallback: 833, step: 10 } as const;
 
@@ -43,7 +46,6 @@ export interface CadenceMetrics {
 
 export class CadenceLearningEngine {
   private history: TapRecord[] = [];
-  private lastTapTime: number = 0;
   private currentMsPerMatra: number = 833;
   private maxHistory: number = 12;
   // Least-squares sums for pace = sum(interval * weight) / sum(weight^2).
@@ -62,41 +64,25 @@ export class CadenceLearningEngine {
     return this.currentMsPerMatra;
   }
 
-  public registerTap(chunkId: string, chunkSanskrit: string, timestamp: number = Date.now()): CadenceMetrics {
+  // Records one line's active time: the time the line was on screen, not paused, including holds.
+  public registerLine(chunkId: string, chunkSanskrit: string, activeMs: number): CadenceMetrics {
+    if (activeMs < MIN_LINE_MS) return this.getMetrics();
+
     const matraWeight = chunkMatras(chunkSanskrit);
-
-    if (this.lastTapTime === 0) {
-      this.lastTapTime = timestamp;
-      return this.getMetrics();
-    }
-
-    const intervalMs = timestamp - this.lastTapTime;
-    this.lastTapTime = timestamp;
-
-    if (intervalMs < 400) {
-      return this.getMetrics();
-    }
-
-    const expectedDuration = matraWeight * this.currentMsPerMatra;
-    if (intervalMs > 3.0 * expectedDuration) {
-      return this.getMetrics();
-    }
-
-    const instantaneousMsPerMatra = intervalMs / matraWeight;
+    const instantaneousMsPerMatra = activeMs / matraWeight;
 
     this.history.push({
-      timestamp,
+      timestamp: Date.now(),
       chunkId,
       matraWeight,
-      intervalMs,
+      intervalMs: activeMs,
       instantaneousMsPerMatra
     });
-
     if (this.history.length > this.maxHistory) {
       this.history.shift();
     }
 
-    this.sumIntervalWeight = RECENCY * this.sumIntervalWeight + intervalMs * matraWeight;
+    this.sumIntervalWeight = RECENCY * this.sumIntervalWeight + activeMs * matraWeight;
     this.sumWeightSquared = RECENCY * this.sumWeightSquared + matraWeight * matraWeight;
     const learned = this.sumIntervalWeight / this.sumWeightSquared;
     this.currentMsPerMatra = Math.round(Math.max(PACE_FLOOR, Math.min(TEMPO.max, learned)));
@@ -133,7 +119,6 @@ export class CadenceLearningEngine {
 
   public resetSession() {
     this.history = [];
-    this.lastTapTime = 0;
     this.sumIntervalWeight = 0;
     this.sumWeightSquared = 0;
   }
