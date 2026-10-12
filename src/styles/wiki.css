@@ -1,0 +1,285 @@
+/* Wiki articles: text only. Space and type scale separate things; no borders, boxes or tints (DESIGN.md §7b). */
+@layer components {
+  .wiki-article {
+    box-sizing: border-box;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+    overflow-wrap: anywhere;
+  }
+
+  .wiki-article a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .wiki-article a:hover {
+    text-decoration: underline;
+  }
+
+  .wiki-article a:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wiki-article h2:focus {
+    outline: none;
+  }
+
+  /* Breadcrumb: one muted line of plain links. */
+  .wiki-crumbs {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .wiki-article .wiki-crumbs a {
+    color: var(--text-muted);
+  }
+
+  .wiki-crumbs [aria-current="page"] {
+    color: var(--text-secondary);
+  }
+
+  .wiki-titlerow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .wiki-article .wiki-follow {
+    flex: none;
+    margin: -0.35rem -0.5rem 0 0;
+  }
+
+  .wiki-article .wiki-follow:hover {
+    color: var(--accent);
+  }
+
+  .wiki-article .wiki-title {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+
+  .wiki-subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .wiki-notice {
+    margin: 1.5rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .wiki-notice-word {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .wiki-lead {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* Facts: a plain definition list. Right column on wide screens, a calm block on phones. */
+  .wiki-facts {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.6rem 1rem;
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+  }
+
+  .wiki-facts dt {
+    color: var(--text-muted);
+  }
+
+  .wiki-facts dd {
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  .wiki-status {
+    color: var(--text-secondary);
+  }
+
+  .wiki-status[data-status="proofread"],
+  .wiki-status[data-status="reviewed"] {
+    color: var(--accent);
+  }
+
+  .wiki-add {
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+
+  .wiki-add[data-added] {
+    color: var(--text-muted);
+  }
+
+  .wiki-article .wiki-section-actions .wiki-add {
+    color: var(--accent);
+  }
+
+  .wiki-article .wiki-section-actions .wiki-add[data-added] {
+    color: var(--text-muted);
+  }
+
+  .wiki-related h2 {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .wiki-related ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-section {
+    margin-top: 2rem;
+  }
+
+  .wiki-section-title {
+    scroll-margin-top: calc(var(--header-h) + var(--fade-h));
+    margin: 0 0 1.25rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .wiki-section-actions {
+    font-family: 'Geist', system-ui, sans-serif;
+    font-size: 0.75rem;
+    display: block;
+    margin: 0.35rem 0 0;
+  }
+
+  .wiki-article .wiki-section-actions :is(a, button) {
+    margin: 0 1rem 0 0;
+    color: var(--text-muted);
+  }
+
+  .wiki-link {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .wiki-line {
+    padding: 0.2rem 0;
+    margin: 0 0 0.45rem;
+    overflow-wrap: anywhere;
+  }
+
+  .wiki-article .wiki-muted {
+    font-size: inherit;
+    color: var(--text-muted);
+  }
+
+  .wiki-related {
+    margin-top: 2rem;
+  }
+
+  .wiki-related ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .wiki-article .wiki-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 1.5rem 0 0;
+    font-size: 0.85rem;
+  }
+
+  .wiki-brings {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .wiki-brings h2 {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .wiki-brings ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-brings li {
+    margin: 0.4rem 0;
+    color: var(--text-secondary);
+  }
+
+  .wiki-brings-kind {
+    display: inline-block;
+    min-width: 7rem;
+    color: var(--text-primary);
+    text-transform: capitalize;
+  }
+
+  .wiki-from {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  /* Info: a native disclosure, closed by default. A caret and a one-line peek; nothing framed. */
+  .wiki-info {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+  }
+
+  .wiki-info > summary {
+    cursor: pointer;
+    list-style: none;
+    color: var(--text-secondary);
+  }
+
+  .wiki-info > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .wiki-info > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 0.4rem;
+  }
+
+  .wiki-info[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  .wiki-info > summary:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wiki-info > .wiki-notice {
+    margin-top: 1rem;
+  }
+}

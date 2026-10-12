@@ -1,8 +1,8 @@
 import { useState } from 'preact/hooks';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
-import { useSettingsStore } from '../stores/useSettingsStore';
 import { ALL_SUKTAMS } from '../data';
 import { Prakara, PrakaraItem } from '../types/mantra';
+import { mixedTitle } from '../services/titles';
 import { encodePrakaraToUrlHash } from '../services/urlCodec';
 import { ModalFrame } from './ModalFrame';
 import { PrakaraList } from './PrakaraList';
@@ -17,7 +17,6 @@ const newItemId = () => 'item-' + Date.now() + '-' + Math.random().toString(36).
 
 export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
   const { prakaras, activePrakaraId, selectPrakara, addPrakara } = usePrakaraStore();
-  const targetScript = useSettingsStore((s) => s.script);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newDesc, setNewDesc] = useState('');
@@ -34,7 +33,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
       id: newItemId(),
       type: 'sukta_ref',
       suktaId: sukta.id,
-      customTitle: sukta.title.sanskrit + ' (' + sukta.title.english + ')',
+      customTitle: mixedTitle(sukta.title),
     };
     setSelectedItems([...selectedItems, newItem]);
   };
@@ -94,7 +93,6 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
         <PrakaraList
           prakaras={prakaras}
           activePrakaraId={activePrakaraId}
-          script={targetScript}
           onSelect={(id) => {
             selectPrakara(id);
             onClose();
@@ -108,7 +106,6 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
         />
       ) : (
         <PrakaraComposer
-          script={targetScript}
           title={newTitle}
           onTitleChange={setNewTitle}
           author={newAuthor}

@@ -75,7 +75,7 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 7. Mangalam / Samarpanam
 
 ### B. Phase 1 vs Phase 2 (Panchangam Roadmap)
-* **Milestone 1 (Current):** Prakara builder with custom vakya insertion and an optional creator name, Off, Manual and Learn cadence modes, with a learned pace, a pausable countdown ring, persisted pace and reading position, script-aware titles, a back-to-line control, and instant link sharing. Drag-and-drop reordering is not implemented.
+* **Milestone 1 (Current):** Prakara builder with custom vakya insertion and an optional creator name, Off (the default), Manual and Learn cadence modes, with a learned pace, a pausable countdown ring, persisted pace and reading position, script-aware titles, a back-to-line control, instant link sharing, and the Koshah wiki with a My prakaram basket (section 8). Drag-and-drop reordering is not implemented.
 * **Milestone 2 (Future Phase):** Dynamic Panchangam calculation:
   - Client-side astronomical ephemeris (Lahiri / Drik) deriving Samvatsara, Ayana, Ritu, Masa, Paksha, Tithi, Vasara, Nakshatra, Yoga, Karana.
   - Dynamic Sankalpam generator filling in family Gotra, Nakshatra, Rasi, Name, and geographic Kshetra (river/temple/city coordinates).
@@ -115,3 +115,16 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 * **Responsive & Adaptive:** Fully responsive across mobile smartphones, tablets, and wide desktop displays.
 * **Color:** Three themes (System, Light, Dark). System follows the OS. Light is paper `#f7f7f5` with ink `#161614`; dark is `#121413` with ink `#ecece8`. Both use one slate-blue accent. Swara colours (purple for up, blue for down, red for double up) and the shloka and vakya tints are provisional. No saffron, maroon or gold: see `DESIGN.md`.
 * **Borders:** none by default; exceptions are named in `DESIGN.md` §7b.
+
+---
+
+## 8. Koshah Wiki
+
+* **Git is the wiki's database.** Every article is a document in `src/data`, and an edit is a commit and a pull request on GitHub. There is no in-app editor, no accounts and no server. The wiki is derived from the documents on each render (`src/services/wiki.ts`), so it cannot drift from the text the player runs.
+* **Sources own text; compositions own none.** A source's sections are its addressable parts (`docId/n`). A composition (`metadata.kind: 'composition'`, `metadata.parts`) only references parts, so text lives in one place. The built-in prakaras are derived as compositions. A source lists the compositions that use it ("Used in"). Line ranges are not supported as parts: a part is a whole section.
+* **An article declares what it brings.** Text, transliteration and translation are derived from the lines; audio, commentary and images are declared in `metadata.media`. None is declared yet. The player plays text only.
+* **The action is Follow.** The player's cadence follows the reader, so the wiki says Follow rather than Chant.
+* **My prakaram is a local basket** (`useBasketStore`, persisted in the browser). Pieces are whole texts or sections, and a saved basket becomes an ordinary prakara. It is not shared or synced.
+* **Addresses are hash routes** (`#/wiki/...`), so the app needs no server routing, and old `#k=` links redirect.
+* **One Sanskrit renderer.** All Sanskrit shown goes through `src/components/Sanskrit.tsx`, so the selected script applies everywhere, and verse numerals follow the script (Arabic digits in Tamil and IAST, offset-mapped digits in the other Brahmic scripts).
+* **Licence honesty.** Each article shows its source, status and licence. Text whose permission is unconfirmed (the Vignanam Sri Rudram) stays `draft`.

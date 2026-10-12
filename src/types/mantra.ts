@@ -33,6 +33,27 @@ export interface SuktaSection {
   chunks: MantraChunk[];
 }
 
+export type VedaName = 'rigveda' | 'yajurveda' | 'samaveda' | 'atharvaveda' | 'other';
+
+/** One kind of media an article brings. Text, transliteration and translation are derived; declare anything else (audio, commentary, image). */
+export interface MediaDecl {
+  kind: 'text' | 'translation' | 'transliteration' | 'audio' | 'commentary' | 'image';
+  label?: string;
+  language?: string;
+  script?: string;
+  swara?: boolean;
+  source?: string;
+  license?: string;
+  url?: string;
+}
+
+/** A reference to part of a source article: one section (by number), or all of it when `section` is missing. Line ranges are not supported. */
+export interface ComposedPart {
+  article: string;
+  section?: number;
+  note?: string;
+}
+
 export interface MantraDocument {
   id: string;
   title: {
@@ -41,7 +62,10 @@ export interface MantraDocument {
     english: string;
   };
   metadata: {
-    veda: string;
+    /** The Veda the text belongs to. */
+    veda?: VedaName;
+    /** Free-text description of the Veda, branch and references. */
+    vedaNote?: string;
     source: string;
     rishi?: string;
     devata?: string;
@@ -50,6 +74,22 @@ export interface MantraDocument {
     status?: 'draft' | 'proofread' | 'reviewed';
     /** Licence or permission note for this text. */
     license?: string;
+    /** The deity addressed, in plain English. */
+    deity?: string;
+    /** Category names for the wiki, e.g. 'Suktas', 'Rudram', 'Devi'. */
+    categories?: string[];
+    /** Two or three sentences in plain English, like the lead of a Wikipedia article. */
+    summary?: string;
+    /** Ids of related documents. */
+    related?: string[];
+    /** When the text is chanted. */
+    usage?: string;
+    /** Media this article brings beyond what is derived from its text. */
+    media?: MediaDecl[];
+    /** `source` (default) owns text and its sections are addressable parts. `composition` owns no text and references parts of sources. */
+    kind?: 'source' | 'composition';
+    /** For a composition: the parts of other articles it is made of, in order. */
+    parts?: ComposedPart[];
   };
   sections: SuktaSection[];
 }

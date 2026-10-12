@@ -5,7 +5,7 @@ import { MantraDocument } from '../types/mantra';
 const doc = (id: string, sections: number): MantraDocument => ({
   id,
   title: { sanskrit: 'रुद्रम्', transliteration: 'Rudram', english: 'Hymn to Rudra' },
-  metadata: { veda: 'YV', source: 'Test source' },
+  metadata: { veda: 'yajurveda', source: 'Test source' },
   sections: Array.from({ length: sections }, (_, i) => ({
     id: `${id}-${i + 1}`,
     title: `Anuvaka ${i + 1}`,

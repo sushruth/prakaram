@@ -1,17 +1,16 @@
 import { Prakara } from '../types/mantra';
-import { transliterateVedic } from '../services/transliteration';
+import { SanskritTitle } from './Sanskrit';
 import { Icon } from './Icon';
 
 interface PrakaraListProps {
   prakaras: Prakara[];
   activePrakaraId: string;
-  script: Parameters<typeof transliterateVedic>[1];
   onSelect: (id: string) => void;
   onShare: (prakara: Prakara) => void;
   onCompose: () => void;
 }
 
-export function PrakaraList({ prakaras, activePrakaraId, script, onSelect, onShare, onCompose }: PrakaraListProps) {
+export function PrakaraList({ prakaras, activePrakaraId, onSelect, onShare, onCompose }: PrakaraListProps) {
   return (
     <div>
       <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
@@ -37,7 +36,7 @@ export function PrakaraList({ prakaras, activePrakaraId, script, onSelect, onSha
             >
               <div>
                 <div style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text-primary)' }}>
-                  {transliterateVedic(p.title, script)}
+                  <SanskritTitle title={p.title} full />
                 </div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                   {p.description} ({p.items.length} sections)

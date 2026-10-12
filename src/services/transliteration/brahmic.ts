@@ -23,7 +23,7 @@ export function createBrahmicScript({ id, label, native, base, om }: BrahmicOffs
           out += om;
         } else if (c === 0x0951 || c === 0x0952 || c === 0x1cda || c === 0x0964 || c === 0x0965) {
           out += src[i];
-        } else if ((c >= 0x0901 && c <= 0x094d) || (c >= 0x0960 && c <= 0x0963)) {
+        } else if ((c >= 0x0901 && c <= 0x094d) || (c >= 0x0960 && c <= 0x0963) || (c >= 0x0966 && c <= 0x096f)) {
           out += String.fromCharCode(base + (c - 0x0900));
         } else {
           out += src[i];

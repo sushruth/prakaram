@@ -1,0 +1,297 @@
+@layer components {
+  /* Bar height, padding, flame and icon buttons come from .app-header / .icon-btn, as in the player. */
+  .wiki-bar {
+    gap: 0.6rem;
+  }
+
+  .wiki-search {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .wiki-search input {
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    caret-color: var(--accent);
+    font: inherit;
+    font-size: 1rem;
+  }
+
+  .wiki-search input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .wiki-suggest {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0.25rem 0 0;
+    padding: 0.75rem 0;
+    list-style: none;
+    background: var(--bg-base);
+  }
+
+  .wiki-suggest a {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .wiki-suggest a:hover,
+  .wiki-suggest a:focus-visible {
+    color: var(--accent);
+  }
+
+  .wiki-main {
+    flex: 1;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .wiki-page h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  .wiki-page h2 {
+    margin: 0 0 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .wiki-page p {
+    margin: 0.35rem 0 0;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .wiki-page a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .wiki-page a:hover {
+    text-decoration: underline;
+  }
+
+  .wiki-page mark {
+    background: none;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .wiki-muted {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .wiki-result-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .wiki-welcome {
+    margin: 1.5rem 0 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .wiki-page h1.wiki-welcome {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .wiki-figures {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+  }
+
+  .wiki-figures b {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .wiki-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3.5rem;
+  }
+
+  .wiki-block {
+    min-width: 0;
+  }
+
+  .wiki-featured .wiki-result-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .wiki-block p {
+    font-size: 1rem;
+  }
+
+  .wiki-action {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 500;
+  }
+
+  .wiki-list,
+  .wiki-inline,
+  .wiki-results {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .wiki-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.5rem;
+  }
+
+  .wiki-results {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .wiki-results .wiki-muted {
+    margin-left: 0.5rem;
+  }
+
+  .wiki-site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 2rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .wiki-site-footer p {
+    margin: 0 0 0.35rem;
+  }
+
+  .wiki-site-footer a {
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .wiki-main,
+    .wiki-site-footer {
+      padding-inline: 0.9rem;
+    }
+  }
+
+  /* Basket link under the bar, plain text; accent when it holds something. */
+  .wiki-basket-row {
+    margin: 0;
+    padding: 0 1rem 0.5rem;
+    text-align: right;
+    font-size: 0.85rem;
+  }
+
+  .wiki-basket {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .wiki-basket:not([data-count="0"]) {
+    color: var(--accent);
+  }
+
+  .wiki-compose-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+  }
+
+  .wiki-compose-item .wiki-compose-what {
+    flex: 1 1 100%;
+  }
+
+  .wiki-page .wiki-compose-item button,
+  .wiki-page .wiki-compose-actions button:not(.btn-primary) {
+    padding: 0.25rem 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .wiki-page .wiki-compose-item button:disabled {
+    color: var(--text-muted);
+    cursor: default;
+  }
+
+  .wiki-page .wiki-compose-actions .btn-primary {
+    border: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .wiki-compose-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .wiki-name {
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 1.5rem 0 0;
+    padding: 0.5rem 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    caret-color: var(--accent);
+    font: inherit;
+    font-size: 1.05rem;
+  }
+
+  .wiki-name::placeholder {
+    color: var(--text-muted);
+  }
+
+  .wiki-steps {
+    margin: 1.5rem 0 0;
+    padding-left: 1.25rem;
+    line-height: 1.6;
+  }
+}

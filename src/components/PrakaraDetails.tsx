@@ -1,10 +1,9 @@
 import { DropPanel, DropHead } from './DropPanel';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
-import { useSettingsStore } from '../stores/useSettingsStore';
 import { SUKTA_MAP } from '../data';
 import { PrakaraItem } from '../types/mantra';
-import { transliterateVedic } from '../services/transliteration';
-import { splitTitle } from '../services/titles';
+import { mixedTitle } from '../services/titles';
+import { SanskritTitle } from './Sanskrit';
 
 interface PrakaraDetailsProps {
   isOpen: boolean;
@@ -14,7 +13,7 @@ interface PrakaraDetailsProps {
 function itemName(item: PrakaraItem): string {
   if (item.type === 'sukta_ref' && item.suktaId) {
     const sukta = SUKTA_MAP.get(item.suktaId);
-    if (sukta) return `${sukta.title.sanskrit} (${sukta.title.english})`;
+    if (sukta) return mixedTitle(sukta.title);
   }
   return item.customTitle ?? 'Vakya';
 }
@@ -22,8 +21,6 @@ function itemName(item: PrakaraItem): string {
 export function PrakaraDetails({ isOpen, onClose }: PrakaraDetailsProps) {
   const prakara = usePrakaraStore((s) => s.getActivePrakara());
   const lineCount = usePrakaraStore((s) => s.getFlattenedChunks().length);
-  const script = useSettingsStore((s) => s.script);
-  const title = splitTitle(prakara.title);
 
   return (
     <DropPanel label="Prakara details" isOpen={isOpen} onClose={onClose}>
@@ -31,8 +28,7 @@ export function PrakaraDetails({ isOpen, onClose }: PrakaraDetailsProps) {
 
       <div className="details-body">
         <h2 className="details-title title-display">
-          {transliterateVedic(title.sanskrit, script)}
-          {title.english && <span className="details-english"> ({title.english})</span>}
+          <SanskritTitle title={prakara.title} full />
         </h2>
 
         <dl className="details-meta">
@@ -47,7 +43,7 @@ export function PrakaraDetails({ isOpen, onClose }: PrakaraDetailsProps) {
         <h3 className="details-toc-title">Contents</h3>
         <ol className="details-toc">
           {prakara.items.map((item) => (
-            <li key={item.id}>{transliterateVedic(itemName(item), script)}</li>
+            <li key={item.id}><SanskritTitle title={itemName(item)} full /></li>
           ))}
         </ol>
       </div>
