@@ -1,18 +1,20 @@
 import { describe, it, expect } from 'bun:test';
-import { CadenceLearningEngine } from './cadenceEngine';
+import { CadenceLearningEngine, TEMPO } from './cadenceEngine';
 
 describe('CadenceLearningEngine (Option A)', () => {
-  it('initializes with default Abhyasa 72 BPM', () => {
-    const engine = new CadenceLearningEngine(72);
-    expect(engine.getBpm()).toBe(72);
+  it('initializes at the default pace of 833 ms per matra', () => {
+    const engine = new CadenceLearningEngine();
     expect(engine.getMsPerMatra()).toBe(833);
   });
 
-  it('updates BPM and msPerMatra on scale change', () => {
-    const engine = new CadenceLearningEngine(72);
-    engine.setBpm(48);
-    expect(engine.getBpm()).toBe(48);
+  it('sets the pace and clamps it to the slider range', () => {
+    const engine = new CadenceLearningEngine();
+    engine.setMsPerMatra(1250);
     expect(engine.getMsPerMatra()).toBe(1250);
+    engine.setMsPerMatra(10);
+    expect(engine.getMsPerMatra()).toBe(TEMPO.min);
+    engine.setMsPerMatra(99999);
+    expect(engine.getMsPerMatra()).toBe(TEMPO.max);
   });
 
   it('learns pacing and boosts confidence with steady tapping', () => {

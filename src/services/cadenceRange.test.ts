@@ -10,8 +10,8 @@ describe('cadence tempo range', () => {
       t += 150;
       engine.registerTap('a', 'अ आ', t);
     }
-    const bpm = engine.getBpm();
-    expect(bpm).toBeLessThanOrEqual(TEMPO.max);
-    expect(bpm).toBeGreaterThanOrEqual(TEMPO.min);
+    const ms = engine.getMsPerMatra();
+    expect(ms).toBeLessThanOrEqual(TEMPO.max);
+    expect(ms).toBeGreaterThanOrEqual(TEMPO.min);
   });
 });

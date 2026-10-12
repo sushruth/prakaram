@@ -127,7 +127,7 @@ Cadence has one state machine. It lives in `src/services/cadenceMachine.ts` as a
 | `plain` | Smart is off. You move the lines. | off | hidden (space kept) | hidden | "Next", enabled | plain | normal scroll |
 | `waiting` | Smart is on. No tap yet this run, or a reload happened mid-run. | on, glow pulses | ring pulses | `0 s` | "Tap", pulses | learning glow pulses | scroll locked, next line 60% |
 | `measuring` | Taps are being counted. The clock runs from the first tap. | on, glow pulses | ring steady | ticking | "Tap", steady | learning glow pulses | scroll locked, next line 60% |
-| `engaged` | Six lines learned. The app advances lines at the learned tempo. | on, glow steady | ring filled | frozen | "Next", disabled | glow steady | normal scroll, lines advance on their own |
+| `engaged` | Six lines learned. The app advances lines at the learned pace. | on, glow steady | countdown ring, no numbers, restarts each line | frozen | "Next", disabled | glow steady | normal scroll, lines advance on their own |
 
 `LEARN_LINES` is 6. Every tap while learning counts as one learned line. The seconds clock starts on the first tap, not when Smart turns on.
 
@@ -171,6 +171,8 @@ Taps in `engaged` and `plain` are ignored. A reload moves `measuring` back to `w
 ### Highlights
 
 Smart controls use the flame glow on the glyph or value, as with any active control. Waiting and measuring pulse that glow; engaged holds it steady. The tempo slider takes the same highlight in both learning phases to show that it is being learned. Dragging the slider while Smart is on nudges the learned pace.
+
+**Countdown.** Once engaged, the header ring empties over the time left on the current line, then refills for the next line. The line's time is its matra weight times the pace.
 
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
 

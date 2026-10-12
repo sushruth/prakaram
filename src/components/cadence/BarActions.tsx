@@ -8,8 +8,8 @@ export function ShareButton() {
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    const bpm = useCadenceStore.getState().bpm;
-    const shared = { ...usePrakaraStore.getState().getActivePrakara(), preferredBpm: bpm };
+    const preferredBpm = Math.round(60000 / useCadenceStore.getState().msPerMatra);
+    const shared = { ...usePrakaraStore.getState().getActivePrakara(), preferredBpm };
     const hash = await encodePrakaraToUrlHash(shared);
     const url = `${window.location.origin}${window.location.pathname}#p=${hash}`;
     await navigator.clipboard.writeText(url);
@@ -18,7 +18,7 @@ export function ShareButton() {
   };
 
   return (
-    <button className="icon-btn" onClick={handleShare} title="Copy a link to this prakara and tempo" aria-label="Copy link">
+    <button className="icon-btn" onClick={handleShare} title="Copy a link to this prakara and pace" aria-label="Copy link">
       <Icon name={copied ? 'check' : 'link'} size={16} />
     </button>
   );

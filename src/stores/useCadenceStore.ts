@@ -18,7 +18,6 @@ export type { CadencePhase };
 const PHASES: readonly CadencePhase[] = ['plain', 'waiting', 'measuring', 'engaged'];
 
 interface CadenceState extends LearningState {
-  bpm: number;
   msPerMatra: number;
   engine: CadenceLearningEngine;
   send: (event: CadenceEvent) => void;
@@ -27,15 +26,12 @@ interface CadenceState extends LearningState {
   tap: (chunkId: string, chunkSanskrit: string) => void;
   resetLearning: () => void;
   followHost: (on: boolean) => void;
-  setBpm: (bpm: number) => void;
+  setMsPerMatra: (ms: number) => void;
 }
 
 const engine = new CadenceLearningEngine(TEMPO.fallback);
 
-const snapshot = () => {
-  const m = engine.getMetrics();
-  return { bpm: m.currentBpm, msPerMatra: m.msPerMatra };
-};
+const snapshot = () => ({ msPerMatra: engine.getMsPerMatra() });
 
 export const useCadenceStore = create<CadenceState>()(
   persist(
@@ -50,7 +46,6 @@ export const useCadenceStore = create<CadenceState>()(
       };
       return {
         ...INITIAL_LEARNING,
-        bpm: TEMPO.fallback,
         msPerMatra: engine.getMsPerMatra(),
         engine,
         send,
@@ -59,19 +54,19 @@ export const useCadenceStore = create<CadenceState>()(
         tap: (chunkId, chunkSanskrit) => send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit }),
         resetLearning: () => send({ type: 'reset' }),
         followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
-        setBpm: (bpm) => {
-          engine.setBpm(clampNumber(bpm, TEMPO.min, TEMPO.max, TEMPO.fallback));
+        setMsPerMatra: (ms) => {
+          engine.setMsPerMatra(clampNumber(ms, TEMPO.min, TEMPO.max, TEMPO.fallback));
           set(snapshot());
         },
       };
     },
     {
       name: 'parayanam-cadence',
-      version: 3,
-      partialize: ({ phase, learnedLines, bpm }) => ({
+      version: 4,
+      partialize: ({ phase, learnedLines, msPerMatra }) => ({
         phase: phase === 'measuring' ? 'waiting' : phase,
         learnedLines,
-        bpm,
+        msPerMatra,
       }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
@@ -84,7 +79,12 @@ export const useCadenceStore = create<CadenceState>()(
           phase,
           learnedLines: phase === 'plain' ? 0 : phase === 'engaged' ? LEARN_LINES : learned,
           firstTapAt: null,
-          bpm: clampNumber(p.bpm, TEMPO.min, TEMPO.max, current.bpm),
+          msPerMatra: clampNumber(
+            p.msPerMatra ?? (typeof p.bpm === 'number' ? 60000 / p.bpm : undefined),
+            TEMPO.min,
+            TEMPO.max,
+            current.msPerMatra,
+          ),
         };
       },
     },
@@ -92,5 +92,5 @@ export const useCadenceStore = create<CadenceState>()(
 );
 
 const hydrated = useCadenceStore.getState();
-engine.setBpm(hydrated.bpm);
+engine.setMsPerMatra(hydrated.msPerMatra);
 useCadenceStore.setState(snapshot());

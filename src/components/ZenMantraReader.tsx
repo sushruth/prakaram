@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'preact/hooks';
+import { useEffect, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
 import { isLearning, useCadenceStore } from '../stores/useCadenceStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
@@ -7,7 +7,8 @@ import { useRoomStore } from '../stores/useRoomStore';
 import { transliterateVedic } from '../services/transliteration';
 import { hasSwara } from '../services/swara';
 import { sourcePieces } from '../services/swaraSegments';
-import { chunkMatras } from '../services/cadenceEngine';
+import { lineMs } from '../services/cadenceEngine';
+import { useChunks } from '../hooks/useChunks';
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
 
@@ -15,7 +16,6 @@ export function ZenMantraReader() {
   const script = useSettingsStore((s) => s.script);
   const fontSize = useSettingsStore((s) => s.fontSize);
   const wrapLines = useSettingsStore((s) => s.wrapLines);
-  const splitLines = useSettingsStore((s) => s.splitLines);
 
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
@@ -28,18 +28,13 @@ export function ZenMantraReader() {
   const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
-  const prakaras = usePrakaraStore((s) => s.prakaras);
-  const activePrakaraId = usePrakaraStore((s) => s.activePrakaraId);
   const getActivePrakara = usePrakaraStore((s) => s.getActivePrakara);
   const isHost = useRoomStore((s) => s.isHost);
   const isInRoom = useRoomStore((s) => s.isInRoom);
 
   const activeChunkRef = useRef<HTMLDivElement | null>(null);
   const activePrakara = getActivePrakara();
-  const chunks = useMemo(
-    () => usePrakaraStore.getState().getFlattenedChunks(),
-    [prakaras, activePrakaraId, splitLines],
-  );
+  const chunks = useChunks();
 
   useEffect(() => {
     openPrakara(activePrakara.id);
@@ -87,7 +82,7 @@ export function ZenMantraReader() {
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
-    const timer = setTimeout(() => nextChunk(chunks.length), chunkMatras(current.sanskrit) * msPerMatra);
+    const timer = setTimeout(() => nextChunk(chunks.length), lineMs(current.sanskrit, msPerMatra));
     return () => clearTimeout(timer);
   }, [phase, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 

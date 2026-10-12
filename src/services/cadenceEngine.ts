@@ -3,14 +3,18 @@ import { calculateChunkWeight } from './syllabifier';
 
 export const MIN_CHUNK_MATRAS = 2;
 
-export const TEMPO = { min: 36, max: 130, fallback: 72 } as const;
+// Milliseconds per matra. Lower is faster.
+export const TEMPO = { min: 250, max: 3000, fallback: 833, step: 10 } as const;
 
 export function chunkMatras(sanskrit: string): number {
   return Math.max(MIN_CHUNK_MATRAS, calculateChunkWeight(sanskrit));
 }
 
+export function lineMs(sanskrit: string, msPerMatra: number): number {
+  return chunkMatras(sanskrit) * msPerMatra;
+}
+
 export interface CadenceMetrics {
-  currentBpm: number;
   msPerMatra: number;
   confidenceScore: number;
   canAutoProgress: boolean;
@@ -23,21 +27,16 @@ export class CadenceLearningEngine {
   private currentMsPerMatra: number = 833;
   private maxHistory: number = 12;
 
-  constructor(initialBpm: number = 72) {
-    this.setBpm(initialBpm);
+  constructor(initialMs: number = TEMPO.fallback) {
+    this.setMsPerMatra(initialMs);
   }
 
-  public setBpm(bpm: number) {
-    const clampedBpm = Math.max(TEMPO.min, Math.min(TEMPO.max, bpm));
-    this.currentMsPerMatra = Math.round(60000 / clampedBpm);
+  public setMsPerMatra(ms: number) {
+    this.currentMsPerMatra = Math.round(Math.max(TEMPO.min, Math.min(TEMPO.max, ms)));
   }
 
   public getMsPerMatra(): number {
     return this.currentMsPerMatra;
-  }
-
-  public getBpm(): number {
-    return Math.round(60000 / this.currentMsPerMatra);
   }
 
   public registerTap(chunkId: string, chunkSanskrit: string, timestamp: number = Date.now()): CadenceMetrics {
@@ -76,7 +75,7 @@ export class CadenceLearningEngine {
 
     const alpha = 0.35;
     const learned = alpha * instantaneousMsPerMatra + (1 - alpha) * this.currentMsPerMatra;
-    this.currentMsPerMatra = Math.round(Math.min(60000 / TEMPO.min, Math.max(60000 / TEMPO.max, learned)));
+    this.currentMsPerMatra = Math.round(Math.max(TEMPO.min, Math.min(TEMPO.max, learned)));
 
     return this.getMetrics();
   }
@@ -101,7 +100,6 @@ export class CadenceLearningEngine {
     }
 
     return {
-      currentBpm: this.getBpm(),
       msPerMatra: this.currentMsPerMatra,
       confidenceScore: confidence,
       canAutoProgress: canAuto,

@@ -144,3 +144,29 @@
     opacity: 0.6;
   }
 }
+
+@layer components {
+  .learn-ring {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .learn-ring circle {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-dasharray: 50.27;
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    transform-origin: 10px 10px;
+    animation-name: ring-drain;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes ring-drain {
+    to {
+      stroke-dashoffset: 50.27;
+    }
+  }
+}

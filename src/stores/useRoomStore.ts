@@ -32,8 +32,7 @@ export const useRoomStore = create<RoomState>((set) => ({
         if (!asHost) {
           useMantraStore.getState().setActiveChunkIndex(msg.chunkIndex);
           if (msg.msPerMatra) {
-            const bpm = Math.round(60000 / msg.msPerMatra);
-            useCadenceStore.getState().setBpm(bpm);
+            useCadenceStore.getState().setMsPerMatra(msg.msPerMatra);
           }
           useCadenceStore.getState().followHost(msg.autoProgress);
         }

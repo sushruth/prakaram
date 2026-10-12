@@ -20,7 +20,7 @@ export function App() {
   const [drop, setDrop] = useState<DropKind | null>(null);
 
   const { addPrakara } = usePrakaraStore();
-  const { setBpm } = useCadenceStore();
+  const { setMsPerMatra } = useCadenceStore();
   const zenMode = useMantraStore((s) => s.zenMode);
 
   const toggle = (kind: DropKind) => setDrop((current) => (current === kind ? null : kind));
@@ -44,7 +44,7 @@ export function App() {
         if (decoded) {
           addPrakara(decoded);
           if (decoded.preferredBpm) {
-            setBpm(decoded.preferredBpm);
+            setMsPerMatra(60000 / decoded.preferredBpm);
           }
         }
       }
@@ -56,7 +56,7 @@ export function App() {
     };
 
     handleUrlState();
-  }, [addPrakara, setBpm]);
+  }, [addPrakara, setMsPerMatra]);
 
   return (
     <>
