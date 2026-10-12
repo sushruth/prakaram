@@ -149,4 +149,4 @@ bunx wrangler dev
 ---
 
 ## 📜 License
-The Vedic texts themselves are ancient, but a typed, proofread edition can carry rights. Each text's source and licence status is shown in the Koshah and listed in `THIRD_PARTY_NOTICES.md`. Code is released under the MIT License.
+Everything in the Koshah belongs to the public: we admit only text, translation, commentary, audio and readings dedicated to the public domain (CC0), and nobody owns an edition or a prakaram. The Vedic texts themselves are ancient, but a typed, proofread edition can carry rights, so texts whose permission we cannot confirm stay `draft` until we replace them with our own from the original. Each text's source and licence status is shown in the Koshah and listed in `THIRD_PARTY_NOTICES.md`. Code is released under the MIT License.

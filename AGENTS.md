@@ -22,6 +22,36 @@ Everything in the library is either a **source** or a **prakaram**. Keep this sp
 * **Media belong to sources, compositions inherit.** What a source brings is declared on it (Brings). A composition brings what its parts bring. The player plays text today; other media are declared for later.
 * **Where it shows in the code:** `metadata.kind` (`source` by default, `composition`), `metadata.parts`, `metadata.categories` and `metadata.veda` for classification, `metadata.media` for declared media, and `src/services/wiki.ts` for the derived view. A new song or shloka collection is a source with its own categories. A new vrata is a composition. Section 3E has the wiki rules.
 
+### Core belief: everything belongs to the public
+
+Everything in the Koshah belongs to the public. We admit only text, translation, commentary, audio and readings that their authors have dedicated to the public domain (CC0), and nobody owns an edition, a reading or a prakaram. A typed edition that carries rights we cannot clear stays out, or stays `draft` until we replace it with our own text from the original. Provenance (which printed edition or manuscript a text was established from) is recorded so that scholars can check it, and it is never a licence. Contributions that need credit-only licences are not accepted.
+
+### Canonical text, readings and the model going forward (decided, not built)
+
+* Each source has **one canonical text** (`mūla`), established by us from the original Sanskrit and kept in git (git history is its version history). Recensions (`śākhā`) are separate sources: Taittiriya, Kāṇva and Mādhyandina differ in wording and accents.
+* A **reading** (`pāṭhāntara`) is a named patch on a source: the mantra address, the position, and the replacement or skip, anchored to the source revision it was made against (marked stale if the source moves). A prakaram step can carry readings. A personal reading stays in the user's prakaram and never alters the source. A reading can be published as a named variant, attributed and not owned, and a widely used variant or a real correction can be promoted into the source by pull request.
+* Order of work: (1) the address scheme (`nirdeśa`) at mantra level with ranges, (2) steps that carry readings in the data model, (3) the editing UI for readings, (4) the contents page per source, (5) audio with per-line timings, (6) songs and shlokas.
+
+### Naming (Sanskrit terms, with English glosses in the UI)
+
+| Concept | Term | Gloss |
+| :--- | :--- | :--- |
+| Source text | **Mūla** (मूल) | the root text |
+| Recension | **Śākhā** (शाखा) | branch |
+| Composition (vrata, upakarma, puja, parayana) | **Prakāra / Prakaram** (प्रकारम्) | arrangement |
+| Rite or procedure around a composition | **Vidhi** (विधि) | the prescribed procedure |
+| Ordered steps | **Krama** (क्रम) | sequence |
+| One step | **Aṅga** (अङ्ग) | a limb of the rite |
+| Address of a mantra or range | **Nirdeśa** (निर्देश) | citation |
+| Variant or personal reading | **Pāṭhāntara** (पाठान्तर) | another reading |
+| What an article brings | **Sāmagrī** (सामग्री) | the materials |
+| Translation | **Anuvāda** (अनुवाद) | |
+| Commentary | **Bhāṣya** (भाष्य) | |
+| Audio recording | **Dhvani** (ध्वनि) | |
+| The library | **Koshah** (कोश) | treasury |
+
+The traditional divisions keep their own names in addresses and breadcrumbs (kāṇḍa, prapāṭhaka, anuvāka, mantra). In the UI, show the Sanskrit term with its English gloss on first use. Code identifiers move to these names when the refactor lands; until then they keep the current English ones (`source`, `composition`, `parts`, `media`).
+
 ---
 
 ## 2. Technical Stack & Invariants
