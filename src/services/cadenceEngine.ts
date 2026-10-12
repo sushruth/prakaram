@@ -4,10 +4,10 @@ import { calculateChunkWeight } from './syllabifier';
 export const MIN_CHUNK_MATRAS = 2;
 
 // Milliseconds per matra. Lower is faster.
-export const TEMPO = { min: 400, max: 3000, fallback: 833, step: 10 } as const;
+export const TEMPO = { min: 50, max: 3000, fallback: 833, step: 10 } as const;
 
 // Learned pace may go below the slider's range, down to a physical floor, so a fast reader is not reported at the slider minimum.
-export const PACE_FLOOR = 120;
+export const PACE_FLOOR = 50;
 
 // The slider is logarithmic: equal moves multiply the pace by the same factor.
 // Moving right is faster, so position 0 is the slowest pace and the last position is the fastest.

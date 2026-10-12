@@ -19,7 +19,7 @@
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
   ├── Cadence mode machine (services/cadenceMachine.ts: Off, Manual, Learn; pure transition function)
-  ├── Cadence engine (pace 400-3000 ms per mātrā, learned from taps)
+  ├── Cadence engine (pace 50-3000 ms per mātrā, learned from taps)
   ├── Syllabifier (mātrā weights; only chant counts, verse numbers ignored)
   ├── URL codec (CompressionStream deflate -> #p=...)
   └── Trystero WebRTC (serverless DataChannels)

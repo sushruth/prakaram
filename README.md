@@ -19,7 +19,7 @@
 * **Single-Chunk Focus:** Highlights one line at a time. Other lines fade. At least one line is always highlighted.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.
 * **Three modes:** **Off** (you move the lines), **Manual** (lines advance at the set pace; the default), and **Learn** (six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider).
-* **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 400 to 3000 on a logarithmic scale (833 by default). Learned pace is clamped to the same range.
+* **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 50 to 3000 on a logarithmic scale (833 by default). Learned pace is clamped to the same range.
 * **Countdown ring:** in Manual, and once Learn has finished, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
 * **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.

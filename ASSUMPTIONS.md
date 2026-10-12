@@ -24,10 +24,10 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 
 **Assumption on Cadence Learning:**
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
-* Learn fits the pace by least squares over the tap intervals, pace = Σ(interval × weight) / Σ(weight²). It has no prior, so six taps give the reader's pace directly. The learned pace may fall below the slider's range, down to a physical floor of 120 ms per mātrā, so a fast reader is not reported at the slider minimum.
+* Learn fits the pace by least squares over the tap intervals, pace = Σ(interval × weight) / Σ(weight²). It has no prior, so six taps give the reader's pace directly. The learned pace may fall below the slider's range, down to a physical floor of 50 ms per mātrā, so a fast reader is not reported at the slider minimum.
 * Parayanam normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
   $$\hat{m}_k = \frac{\Delta t_k}{W_k}$$
-  where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 400–3000 ms.
+  where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 50–3000 ms.
 * **Pace on screen:** the slider and the learned value are milliseconds per mātrā. A line takes its weight times the pace.
 * **Variance & Confidence:** The engine still computes a steadiness score (Welford's variance over the last taps). It is not shown and does not gate learning. Learn takes the first six lines the user advances, then advances at the learned pace. The same pace is used by Manual, which is set by the slider.
 
