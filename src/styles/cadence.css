@@ -172,18 +172,19 @@
     height: 100%;
   }
 
+  /* Dashes take the line's text colour (mantra, shloka or vakya); the sung part is at full strength. */
   .minimap-words > span {
     flex-basis: 0;
     min-width: 2px;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--text-muted) 45%, transparent);
+    background: currentColor;
+    opacity: 0.35;
   }
 
   .minimap-line[data-now="true"] .minimap-words > span {
-    background: color-mix(in srgb, var(--text-muted) 60%, transparent);
+    opacity: 0.55;
   }
 
-  /* The fill is the same words in the accent colour, revealed left to right. */
   .minimap-fill {
     position: absolute;
     inset: 0;
@@ -191,7 +192,7 @@
   }
 
   .minimap-fill .minimap-words > span {
-    background: var(--countdown);
+    opacity: 1;
   }
 
   @keyframes minimap-sing {

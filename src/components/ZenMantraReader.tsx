@@ -13,6 +13,7 @@ import { useFrozen } from '../hooks/useFrozen';
 import { useGuest } from '../hooks/useGuest';
 
 import { advanceChunk } from '../services/advance';
+import { lineClass } from '../config/lineClass';
 import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
@@ -127,12 +128,6 @@ export function ZenMantraReader() {
   };
 
   const kindLabel = (kind: string) => (kind === 'shloka' ? 'Shloka' : 'Vakya');
-  const lineClass = (chunk: { kind?: string; sanskrit: string }) => {
-    if (chunk.kind === 'shloka') return 'line-shloka';
-    if (chunk.kind === 'vakya') return 'line-vakya';
-    return 'line-mantra';
-  };
-
   const renderText = (raw: string) => {
     // Non-breaking spaces keep a danda with the word before it and with its verse number.
     const sanskrit = raw.replace(/ ([।॥])/g, '\u00a0$1').replace(/([।॥]) (\d)/g, '$1\u00a0$2');

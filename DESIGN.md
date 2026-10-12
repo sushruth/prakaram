@@ -47,7 +47,6 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
-| `--countdown` | `#ca8a04` (dark `#facc15`) | The sing-along fill of the minimap's current line |
 | `--accent-light` | `#e8f0f6` | Selected-state tint |
 | `--accent-gold` | `#a9cbe0` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -202,7 +201,7 @@ Learn uses the flame glow on its label when on. It pulses while waiting and meas
 
 The minimap is a picture of the three lines the reader highlights: the previous line on top, the current line in the middle, the next line at the bottom. Each row is drawn as its own words, one dash per word, left aligned like the text. Row width follows the line's length against the longest of the three, so a long line draws long and a short one short. At the first or last line the missing neighbour is an empty row. The rows change whenever the active line changes.
 
-The current line fills with `--countdown` yellow, word by word from the left, over the time that line has. It restarts for the next line. Tapping the minimap pauses: the rows shrink to 70% and fade, and a pause mark appears over them. The mark is `--text-primary` with a `--bg-base` outline, so it reads on light and dark. Tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume. The minimap is 2.6 × 1.9 rem and the strip keeps its height.
+Dashes take the colour of the line's text: `--text-primary` for mantra, `--shloka` for shloka, `--vakya` for vakya (the same classes the reader uses). Neighbours are faint, the current line a little stronger. The current line fills to full strength, word by word from the left, over the time that line has. It restarts for the next line. Tapping the minimap pauses: the rows shrink to 70% and fade, and a pause mark appears over them. The mark is `--text-primary` with a `--bg-base` outline, so it reads on light and dark. Tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume. The minimap is 2.6 × 1.9 rem and the strip keeps its height.
 
 ### Hold and away
 

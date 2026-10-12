@@ -1,3 +1,4 @@
+import { lineClass } from '../config/lineClass';
 import { MantraChunk } from '../types/mantra';
 
 // Each row is a real line drawn as its words: width follows the line's length, gaps fall between words.
@@ -30,7 +31,7 @@ export function Minimap({ chunks, index, duration, frozen, disabled, onToggle }:
     <button className="minimap" onClick={onToggle} disabled={disabled} aria-pressed={frozen} data-frozen={frozen} aria-label={label} title={label}>
       <span className="minimap-lines" aria-hidden="true">
         {rows.map((c, i) => (
-          <span key={i} className="minimap-line" data-now={i === 1} style={{ width: `${c ? (100 * c.sanskrit.length) / longest : 0}%` }}>
+          <span key={i} className={`minimap-line ${c ? lineClass(c) : ''}`} data-now={i === 1} style={{ width: `${c ? (100 * c.sanskrit.length) / longest : 0}%` }}>
             {c && <Words chunk={c} />}
             {i === 1 && c && (
               <span
