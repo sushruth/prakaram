@@ -4,7 +4,8 @@ import { useRoomStore } from '../stores/useRoomStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { searchArticles } from '../services/wiki';
 import { useBasketStore } from '../stores/useBasketStore';
-import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, searchHash } from '../services/wikiNav';
+import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, nirdesaHash, searchHash } from '../services/wikiNav';
+import { resolveNirdesa } from '../services/nirdesa';
 import { ArticleTitle, SanskritTitle, useTitleText } from './Sanskrit';
 import { FlameMark } from './FlameMark';
 import { Icon } from './Icon';
@@ -99,7 +100,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
           e.preventDefault();
           if (!term) return;
           setOpen(false);
-          window.location.hash = searchHash(term);
+          window.location.hash = resolveNirdesa(term).ok ? nirdesaHash(term) : searchHash(term);
         }}
       >
         <input

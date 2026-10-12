@@ -47,7 +47,7 @@ export interface MediaDecl {
   url?: string;
 }
 
-/** A reference to part of a source article: one section (by number), or all of it when `section` is missing. Line ranges are not supported. */
+/** A reference to part of a source article: one section (by number), or all of it when `section` is missing. */
 export interface ComposedPart {
   article: string;
   section?: number;
@@ -67,6 +67,8 @@ export interface MantraDocument {
     /** Free-text description of the Veda, branch and references. */
     vedaNote?: string;
     source: string;
+    /** Optional traditional citation of the whole text, e.g. 'TS 4.5'. Shown before our own section.line numbers (nirdeśa), which are not traditional mantra numbers. */
+    cite?: string;
     rishi?: string;
     devata?: string;
     chandas?: string;
@@ -98,7 +100,9 @@ export interface PrakaraItem {
   id: string;
   type: 'sukta_ref' | 'vakya';
   suktaId?: string;
-  /** Only this section of the sukta (an anuvaka). Omitted means the whole sukta. */
+  /** Nirdeśa of the part this step follows (`<source>/<s>` or `<source>/<s>.<a>-<b>`). Omitted means the whole sukta. */
+  nirdesa?: string;
+  /** Old way to take one section (a section id). Read for backward compatibility and rewritten to `nirdesa` when loaded. */
   sectionId?: string;
   chunkId?: string;
   customTitle?: string;

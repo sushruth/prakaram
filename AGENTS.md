@@ -30,7 +30,17 @@ Everything in the Koshah belongs to the public. We admit only text, translation,
 
 * Each source has **one canonical text** (`mūla`), established by us from the original Sanskrit and kept in git (git history is its version history). Recensions (`śākhā`) are separate sources: Taittiriya, Kāṇva and Mādhyandina differ in wording and accents.
 * A **reading** (`pāṭhāntara`) is a named patch on a source: the mantra address, the position, and the replacement or skip, anchored to the source revision it was made against (marked stale if the source moves). A prakaram step can carry readings. A personal reading stays in the user's prakaram and never alters the source. A reading can be published as a named variant, attributed and not owned, and a widely used variant or a real correction can be promoted into the source by pull request.
-* Order of work: (1) the address scheme (`nirdeśa`) at mantra level with ranges, (2) steps that carry readings in the data model, (3) the editing UI for readings, (4) the contents page per source, (5) audio with per-line timings, (6) songs and shlokas.
+* Order of work: (1) the address scheme (`nirdeśa`) with ranges (built, at line level; see below), (2) steps that carry readings in the data model, (3) the editing UI for readings, (4) the contents page per source, (5) audio with per-line timings, (6) songs and shlokas.
+
+### Nirdeśa (the address scheme, built)
+
+A chunk is a **line** (a pada group), not a traditional mantra, so the finest honest address is section plus line. Never invent mantra numbers. `src/services/nirdesa.ts` (pure) owns the grammar:
+
+* `<source>` | `<source>/<s>` | `<source>/<s>.<l>` | `<source>/<s>.<from>-<to>` | `<source>/<s1>.<l1>-<s2>.<l2>`. `s` is the section's `sectionNumber`, `l` the 1-based line inside that section; `from <= to`, and `s.3-3` normalises to `s.3`. A piece id (`docId`, `docId/n`) is already a nirdeśa.
+* `resolveNirdesa(addr)` returns the document, the sections, the actual `MantraChunk[]` slice and label parts, or a typed error (`syntax`, `unknown-source`, `unknown-section`, `line-out-of-range`, `reversed-range`). `lineOf` and `nirdesaOfChunk` give a chunk's address by position, never by parsing the chunk id.
+* `metadata.cite` is an optional traditional prefix (`TS 4.5`), filled only when verified; it shows before our numbering (`TS 4.5 §3.2-§3.9`), and `§s.l` is never claimed to be the traditional mantra number.
+* A prakara step carries `PrakaraItem.nirdesa`; the old `sectionId` is read for compatibility and rewritten to `nirdesa` on load (`normalizePrakara` in `koshah.ts`, used by the prakara store and the `#p=` decoder). The My prakaram basket is a list of nirdeśa strings (old `{ pieceId }` baskets migrate).
+* Numbering is stable once published (`MAINTAINERS.md` §4a). `nirdesa.test.ts` checks the corpus: unique ids, sections numbered 1..n, no empty section.
 
 ### Naming (Sanskrit terms, with English glosses in the UI)
 
@@ -42,7 +52,7 @@ Everything in the Koshah belongs to the public. We admit only text, translation,
 | Rite or procedure around a composition | **Vidhi** (विधि) | the prescribed procedure |
 | Ordered steps | **Krama** (क्रम) | sequence |
 | One step | **Aṅga** (अङ्ग) | a limb of the rite |
-| Address of a mantra or range | **Nirdeśa** (निर्देश) | citation |
+| Address of a source, section, line or range | **Nirdeśa** (निर्देश) | citation |
 | Variant or personal reading | **Pāṭhāntara** (पाठान्तर) | another reading |
 | What an article brings | **Sāmagrī** (सामग्री) | the materials |
 | Translation | **Anuvāda** (अनुवाद) | |
@@ -113,11 +123,11 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 
 ### E. Koshah Wiki
 
-* The wiki is derived from `src/data` on each render (`src/services/wiki.ts`); nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
-* A **source** owns text and its sections are the addressable parts (`docId/n`; line ranges are not supported). A **composition** (`metadata.kind: 'composition'`, `metadata.parts`) owns no text and references parts. The default prakaras are derived as compositions. Do not copy text into a composition.
+* The wiki is derived from `src/data` on each render (`src/services/wiki.ts`); nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/<id>/<s>.<from>-<to>` (a nirdeśa), `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
+* A **source** owns text and its sections are the addressable parts (`docId/n`); a nirdeśa also addresses lines and ranges of lines. A **composition** (`metadata.kind: 'composition'`, `metadata.parts`) owns no text and references parts. The default prakaras are derived as compositions. Do not copy text into a composition.
 * Media are declared per article: text, transliteration and translation are derived; declare only audio, commentary, images or extras in `metadata.media`. The player plays text only.
-* The action word is **Follow** (the cadence follows the reader), not "Chant". The article's own play button is the Phosphor `play` icon.
-* **My prakaram** is `useBasketStore` (`prakaram-basket`, persisted, validated on load). Section pieces keep their `sectionId`. Following a composition saves it as a prakara first, so it re-saves each time.
+* The action word is **Follow** (the cadence follows the reader), not "Chant". Each source line has a quiet number (its section-relative line); tapping two numbers selects a range with Follow, Add to my prakaram, Copy link and clear. The article's own play button is the Phosphor `play` icon.
+* **My prakaram** is `useBasketStore` (`prakaram-basket`, persisted, validated on load). Items are nirdeśa strings (a section or a line range keeps its address into the prakara step). Following a composition saves it as a prakara first, so it re-saves each time.
 * Wiki pages use the player's header (`WikiTopBar`), tokens and gutters, and obey `DESIGN.md` §7b. Layout and anatomy are in `DESIGN.md` §5f.
 
 ---

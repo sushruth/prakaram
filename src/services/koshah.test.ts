@@ -36,7 +36,7 @@ describe('koshah', () => {
     const p = pieceAsPrakara(findPiece(docs, 'many/2')!);
     expect(p.id).toBe('piece:many/2');
     expect(p.items).toHaveLength(1);
-    expect(p.items[0].sectionId).toBe('many-2');
+    expect(p.items[0].nirdesa).toBe('many/2');
   });
 
   it('returns the same prakara object for a piece every time', () => {

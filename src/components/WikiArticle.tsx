@@ -1,10 +1,11 @@
-import { useEffect } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { ALL_SUKTAMS } from '../data';
 import { findPiece, pieceChunks } from '../services/koshah';
 import { getArticle, type WikiArticle as Article, type WikiSection } from '../services/wiki';
 import { lineClass } from '../config/lineClass';
 import { useSettingsStore } from '../stores/useSettingsStore';
-import { HOME_HASH, categoryHash } from '../services/wikiNav';
+import { HOME_HASH, categoryHash, nirdesaHash, type Route } from '../services/wikiNav';
+import { type Pos, parseNirdesa, rangeNirdesa, rangeWords } from '../services/nirdesa';
 import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
@@ -20,18 +21,28 @@ const STATUS_LABEL = { draft: 'Draft', proofread: 'Proofread', reviewed: 'Review
 
 const articleHref = (id: string) => `#/wiki/${encodeURIComponent(id)}`;
 const sectionDomId = (n: number) => `wiki-s-${n}`;
+const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.line}`;
+const cmp = (a: Pos, b: Pos) => a.section - b.section || a.line - b.line;
+
+/** A selection of lines: the tapped start, and the end once a second number is tapped. */
+interface Sel {
+  a: Pos;
+  b?: Pos;
+}
 
 interface WikiArticleProps {
   id: string;
   /** Section number to bring into view, from the `#/wiki/<id>/<n>` address. */
   section?: number;
-  /** Play a piece in the player. Called with an article id or a section's piece id. */
+  /** Lines to mark and scroll to, from `#/wiki/<id>/<s>.<from>-<to>`. */
+  range?: Extract<Route, { kind: 'article' }>['range'];
+  /** Play a nirdeśa in the player: an article id, a section's piece id or a range. */
   onRun: (pieceId: string) => void;
 }
 
 /** Text toggle: adds a piece to the basket, then reads "Added ✓ · remove". */
 function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
-  const added = useBasketStore((s) => pieceIds.length > 0 && pieceIds.every((p) => s.items.some((i) => i.pieceId === p)));
+  const added = useBasketStore((s) => pieceIds.length > 0 && pieceIds.every((p) => s.items.includes(p)));
   const { add, remove } = useBasketStore.getState();
   return added ? (
     <button type="button" className="wiki-link wiki-add" data-added onClick={() => pieceIds.forEach(remove)}>
@@ -45,7 +56,11 @@ function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
 }
 
 /** A Wikipedia-style article about one piece of the corpus: lead, infobox, contents and sections of text. */
-export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
+export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
+  // The lines picked by tapping the numbers: a start, then optionally an end. A deep link starts with its range.
+  const fromRoute = (): Sel | undefined => (range ? { a: range.from, ...(cmp(range.from, range.to) ? { b: range.to } : {}) } : undefined);
+  const [sel, setSel] = useState<Sel | undefined>(fromRoute);
+  const [copied, setCopied] = useState(false);
   const titleText = useTitleText();
   const fontSize = useSettingsStore((s) => s.fontSize);
   const article = getArticle(id);
@@ -61,18 +76,23 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
   }, [pageTitle]);
 
   useEffect(() => {
+    setSel(fromRoute());
+    setCopied(false);
+  }, [id, range?.from.section, range?.from.line, range?.to.section, range?.to.line]);
+
+  useEffect(() => {
     if (section === undefined) return;
-    const target = document.getElementById(sectionDomId(section));
+    const target = document.getElementById(range ? lineDomId(range.from) : sectionDomId(section));
     target?.scrollIntoView({ block: 'start' });
     target?.focus({ preventScroll: true });
-  }, [id, section]);
+  }, [id, section, range?.from.line, range?.to.line]);
 
   // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
   const followAll = () => {
     if (!article || article.kind !== 'composition') return onRun(id);
     const store = usePrakaraStore.getState();
     if (store.prakaras.some((p) => p.id === id)) store.selectPrakara(id);
-    else store.addPrakara(basketToPrakara(article.sections.map((x) => ({ pieceId: x.pieceId })), mixedTitle(article.title)));
+    else store.addPrakara(basketToPrakara(article.sections.map((x) => x.pieceId), mixedTitle(article.title)));
     window.location.hash = '';
   };
 
@@ -92,6 +112,24 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
 
   const unconfirmed = article.status === 'draft' || /not yet confirmed/i.test(article.license ?? '');
 
+  const own = article.kind === 'source';
+  const [lo, hi] = sel ? (sel.b && cmp(sel.b, sel.a) < 0 ? [sel.b, sel.a] : [sel.a, sel.b ?? sel.a]) : [undefined, undefined];
+  const picked = (p: Pos) => !!lo && !!hi && cmp(p, lo) >= 0 && cmp(p, hi) <= 0;
+  const addr = lo && hi ? rangeNirdesa(article.id, lo, hi) : '';
+  const tap = (p: Pos) => {
+    setCopied(false);
+    setSel((cur) => (!cur || cur.b ? { a: p } : cmp(cur.a, p) === 0 ? undefined : { a: cur.a, b: p }));
+  };
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(`${location.origin}${location.pathname}${location.search}${nirdesaHash(addr)}`);
+      setCopied(true);
+    } catch {
+      /* clipboard blocked: the address bar still holds the link after Follow */
+    }
+  };
+  const words = addr ? rangeWords(parseNirdesa(addr)!) : '';
+
   const renderSection = (s: WikiSection) => {
     const piece = findPiece(ALL_SUKTAMS, s.pieceId);
     return (
@@ -110,11 +148,27 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
           </span>
         </h2>
         {piece ? (
-          pieceChunks(ALL_SUKTAMS, piece).map((chunk, i) => (
-            <p key={`${chunk.id}-${i}`} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }}>
-              <Sanskrit text={chunk.sanskrit} />
-            </p>
-          ))
+          pieceChunks(ALL_SUKTAMS, piece).flatMap((chunk, i) => {
+            const pos = { section: s.number, line: i + 1 };
+            return [
+              <p key={`${chunk.id}-${i}`} id={lineDomId(pos)} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }} data-numbered={own ? '' : undefined}>
+                {own && (
+                  <button type="button" className="wiki-ln" data-in={picked(pos) ? '' : undefined} aria-label={`Line ${pos.line}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
+                    {pos.line}
+                  </button>
+                )}
+                <span><Sanskrit text={chunk.sanskrit} /></span>
+              </p>,
+              ...(own && hi && cmp(pos, hi) === 0 ? [
+                <p key="range" className="wiki-range">
+                  <button type="button" className="wiki-link wiki-range-follow" onClick={() => onRun(addr)}>Follow {words}</button>
+                  <AddToPrakaram pieceIds={[addr]} />
+                  <button type="button" className="wiki-link" onClick={copyLink}>{copied ? 'Copied' : 'Copy link'}</button>
+                  <button type="button" className="wiki-link" onClick={() => setSel(undefined)}>clear</button>
+                </p>,
+              ] : []),
+            ];
+          })
         ) : (
           <p className="wiki-muted">The text of this section is not available.</p>
         )}

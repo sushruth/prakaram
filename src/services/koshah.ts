@@ -1,5 +1,7 @@
 import { mixedTitle } from './titles';
-import { MantraChunk, MantraDocument, Prakara } from '../types/mantra';
+import { MantraChunk, MantraDocument, Prakara, PrakaraItem } from '../types/mantra';
+import { ALL_SUKTAMS } from '../data';
+import { formatNirdesa, normaliseNirdesa, rangeWords, resolveNirdesa } from './nirdesa';
 
 /** One browsable item in the Koshah: a whole sukta, or one of its sections (an anuvaka). Derived, never stored. */
 export interface KoshahPiece {
@@ -74,10 +76,54 @@ export function pieceAsPrakara(piece: KoshahPiece): Prakara {
     description: piece.source,
     author: piece.source,
     createdTimestamp: 0,
-    items: [{ id: 'piece', type: 'sukta_ref', suktaId: piece.documentId, sectionId: piece.sectionId, customTitle: piece.title.english }],
+    items: [{ id: 'piece', type: 'sukta_ref', suktaId: piece.documentId, ...(piece.sectionId ? { nirdesa: piece.id } : {}), customTitle: piece.title.english }],
   };
   prakaraCache.set(piece.id, prakara);
   return prakara;
+}
+
+/** A one-item prakara that runs the lines a nirdeśa addresses (a range, say). Cached like `pieceAsPrakara`. */
+export function nirdesaAsPrakara(addr: string): Prakara | undefined {
+  const cached = prakaraCache.get(addr);
+  if (cached) return cached;
+  const r = resolveNirdesa(addr);
+  if (!r.ok) return undefined;
+  const title = mixedTitle(r.document.title);
+  const prakara: Prakara = {
+    id: PIECE_PREFIX + addr,
+    title,
+    description: [r.label.text, rangeWords(r.nirdesa)].join(' · '),
+    author: r.document.metadata.source,
+    createdTimestamp: 0,
+    items: [{ id: 'piece', type: 'sukta_ref', suktaId: r.document.id, nirdesa: formatNirdesa(r.nirdesa), customTitle: r.document.title.english }],
+  };
+  prakaraCache.set(addr, prakara);
+  return prakara;
+}
+
+/** The nirdeśa a step follows: its own, or the one its old `sectionId` stands for, or the whole source. */
+export function itemNirdesa(item: PrakaraItem, docs: MantraDocument[] = ALL_SUKTAMS): string | undefined {
+  if (item.nirdesa) return item.nirdesa;
+  if (!item.suktaId) return undefined;
+  const sec = item.sectionId ? docs.find((d) => d.id === item.suktaId)?.sections.find((x) => x.id === item.sectionId) : undefined;
+  return sec ? `${item.suktaId}/${sec.sectionNumber}` : item.suktaId;
+}
+
+/**
+ * Validates a prakara read from storage or a `#p=` link and moves old `sectionId` steps to `nirdesa`.
+ * Returns null when it is not a prakara. A malformed nirdesa is dropped (the step then follows the whole sukta).
+ */
+export function normalizePrakara(v: unknown, docs: MantraDocument[] = ALL_SUKTAMS): Prakara | null {
+  const p = v as Prakara | null;
+  if (typeof p !== 'object' || p === null || typeof p.id !== 'string' || !Array.isArray(p.items)) return null;
+  const items = p.items.flatMap((i): PrakaraItem[] => {
+    if (typeof i !== 'object' || i === null || typeof i.id !== 'string' || (i.type !== 'sukta_ref' && i.type !== 'vakya')) return [];
+    const { sectionId, nirdesa, ...rest } = i;
+    const given = typeof nirdesa === 'string' ? normaliseNirdesa(nirdesa) : undefined;
+    const addr = given ?? (typeof sectionId === 'string' ? itemNirdesa(i, docs) : undefined);
+    return [addr && addr !== rest.suktaId ? { ...rest, nirdesa: addr } : rest];
+  });
+  return { ...p, items };
 }
 
 /** Case-insensitive match on the English, transliterated and Devanagari titles and the source. */

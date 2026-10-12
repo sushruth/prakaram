@@ -1,6 +1,7 @@
 import { MantraDocument, MediaDecl, Prakara, SuktaSection } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_FILE } from '../data';
-import { listPieces } from './koshah';
+import { itemNirdesa, listPieces } from './koshah';
+import { parseNirdesa } from './nirdesa';
 import { splitTitle } from './titles';
 import { transliterateVedic } from './transliteration';
 
@@ -95,8 +96,9 @@ export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument
   const title = splitTitle(p.title);
   const parts = p.items.flatMap((i) => {
     if (i.type !== 'sukta_ref' || !i.suktaId) return [];
-    const sec = i.sectionId ? docs.find((d) => d.id === i.suktaId)?.sections.find((x) => x.id === i.sectionId) : undefined;
-    return [{ article: i.suktaId, ...(sec ? { section: sec.sectionNumber } : {}) }];
+    // ponytail: a composition part is a whole section; a line range widens to its section here.
+    const section = parseNirdesa(itemNirdesa(i, docs) ?? '')?.section;
+    return [{ article: i.suktaId, ...(section ? { section } : {}) }];
   });
   return {
     id: p.id,

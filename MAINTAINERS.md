@@ -144,6 +144,15 @@ The Koshah wiki is built from the documents in `src/data`. Nothing is stored sep
    - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
 4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
 
+### Keeping line numbers stable (nirdeśa)
+
+Readers, prakarams and links store addresses like `rudram-namakam/3.2-3.9`: section number, then line (chunk) position inside the section (AGENTS.md §1b). So when you edit a source:
+
+- Never renumber or reorder published sections or lines. Fix wording in place; do not split or merge a chunk in the middle of a section.
+- Add new text at the end of a section, or as a new last section. Section numbers stay `1..n` with no gaps and no empty section (`nirdesa.test.ts` enforces it).
+- If lines truly must move, note it in the commit and bump the document's source/revision note so old links can be reviewed; do not silently shift lines under existing addresses.
+- `metadata.cite` (e.g. `TS 4.5`) is optional; fill it only when you have checked it. It is a citation of the whole text, not a mantra number.
+
 ### Declaring media, and compositions
 
 Text, transliteration and translation are derived; do not declare them. Declare only what the text cannot show, in `metadata.media`: `kind` (`audio`, `commentary`, `image`, or an extra `text` or `translation`), and optionally `label`, `language`, `script`, `swara`, `source`, `license`, `url`. Declare only what exists: no audio is declared anywhere yet.

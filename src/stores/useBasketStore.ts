@@ -1,15 +1,14 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { ALL_SUKTAMS } from '../data';
-import { findPiece } from '../services/koshah';
-import { type BasketItem, moveItem } from '../services/basket';
+import { type BasketItem, migrateBasket, moveItem } from '../services/basket';
 
 interface BasketState {
+  /** Nirdeśa strings (a piece id is one). */
   items: BasketItem[];
-  add: (pieceId: string) => void;
-  remove: (pieceId: string) => void;
+  add: (nirdesa: string) => void;
+  remove: (nirdesa: string) => void;
   /** Moves an item one step up (-1) or down (+1). */
-  move: (pieceId: string, by: -1 | 1) => void;
+  move: (nirdesa: string, by: -1 | 1) => void;
   clear: () => void;
 }
 
@@ -17,24 +16,18 @@ export const useBasketStore = create<BasketState>()(
   persist(
     (set) => ({
       items: [],
-      add: (pieceId) => set((s) => (s.items.some((i) => i.pieceId === pieceId) ? s : { items: [...s.items, { pieceId }] })),
-      remove: (pieceId) => set((s) => ({ items: s.items.filter((i) => i.pieceId !== pieceId) })),
-      move: (pieceId, by) => set((s) => ({ items: moveItem(s.items, pieceId, by) })),
+      add: (a) => set((s) => (s.items.includes(a) ? s : { items: [...s.items, a] })),
+      remove: (a) => set((s) => ({ items: s.items.filter((i) => i !== a) })),
+      move: (a, by) => set((s) => ({ items: moveItem(s.items, a, by) })),
       clear: () => set({ items: [] }),
     }),
     {
       name: 'prakaram-basket',
-      version: 1,
+      version: 2,
       partialize: (s) => ({ items: s.items }),
       merge: (persisted, current) => {
         const raw = (persisted as { items?: unknown } | null)?.items;
-        const seen = new Set<string>();
-        const items = (Array.isArray(raw) ? raw : []).flatMap((i): BasketItem[] => {
-          const id = (i as BasketItem | null)?.pieceId;
-          if (typeof id !== 'string' || seen.has(id) || !findPiece(ALL_SUKTAMS, id)) return [];
-          seen.add(id);
-          return [{ pieceId: id }];
-        });
+        const items = migrateBasket(raw);
         return { ...current, items };
       },
     },

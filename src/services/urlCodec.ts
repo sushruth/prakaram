@@ -1,4 +1,5 @@
 import { Prakara } from '../types/mantra';
+import { normalizePrakara } from './koshah';
 
 export async function encodePrakaraToUrlHash(prakara: Prakara): Promise<string> {
   const json = JSON.stringify(prakara);
@@ -34,7 +35,7 @@ export async function decodePrakaraFromUrlHash(encodedHash: string): Promise<Pra
     const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
     const response = new Response(stream);
     const json = await response.text();
-    return JSON.parse(json) as Prakara;
+    return normalizePrakara(JSON.parse(json));
   } catch (err) {
     console.error('Failed to decode Prakara URL hash:', err);
     return null;
