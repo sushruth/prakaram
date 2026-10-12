@@ -172,11 +172,9 @@ Taps in `engaged` and `plain` are ignored. A reload moves `measuring` back to `w
 
 Smart controls use the flame glow on the glyph or value, as with any active control. Waiting and measuring pulse that glow; engaged holds it steady. The tempo slider takes the same highlight in both learning phases to show that it is being learned. Dragging the slider while Smart is on nudges the learned pace.
 
-**Countdown.** Once engaged, the header ring empties over the time left on the current line, then refills for the next line. The line's time is its matra weight times the pace.
+**Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its mātrā weight times the pace.
 
-**Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its matra weight times the pace.
-
-**Pace.** One slider in milliseconds per matra, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
+**Pace.** One slider in milliseconds per mātrā, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
 
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
 

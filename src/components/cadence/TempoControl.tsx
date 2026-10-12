@@ -16,9 +16,9 @@ export function TempoControl() {
         step={TEMPO.step}
         value={msPerMatra}
         onInput={(e) => setMsPerMatra(Number((e.currentTarget as HTMLInputElement).value))}
-        aria-label="Milliseconds per matra"
+        aria-label="Milliseconds per mātrā"
       />
-      <span className="tempo-value">{msPerMatra} ms/matra</span>
+      <span className="tempo-value">{msPerMatra} ms per mātrā</span>
     </label>
   );
 }

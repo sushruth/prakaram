@@ -16,7 +16,7 @@
   │     └── in memory: useMantraStore (active line, zen), useRoomStore
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
-  ├── Cadence engine (Smart learning from taps; pace 250-3000 ms per matra)
+  ├── Cadence engine (Smart learning from taps; pace 250-3000 ms per mātrā)
   ├── URL codec (CompressionStream deflate -> #p=...)
   └── Trystero WebRTC (serverless DataChannels)
             │
