@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/favicon.svg" width="96" alt="Prakaram flame logo" />
+</p>
+
 # प्रकारम् • Prakaram
 
 > **Ultra-minimal, Zen-Mode Vedic Chanting Companion & Prakara Studio**  
