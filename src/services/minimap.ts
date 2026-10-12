@@ -15,18 +15,18 @@ export interface MinimapRow {
   lines: MinimapCell[][];
 }
 
-/** The longest screen line is shrunk to at most this many boxes; every other line uses the same ratio. */
+/** The longest screen line of the window is shrunk to at most this many boxes; every other line uses the same ratio. */
 export const MINIMAP_MAX_CELLS = 24;
 
 const isSpace = (k: string) => /^\s+$/.test(k);
 
 /**
- * Take the previous, current and next chunk and return the rows to draw.
+ * Take a window of chunks (the minimap uses two before and two after the current one) and return the rows to draw.
  * `breaks[i]` is how many characters of chunk i sit on each wrapped screen line, as measured from the page.
  * Without it a chunk is one line. A missing chunk is null.
  */
 export function minimap(
-  chunks: [MantraChunk?, MantraChunk?, MantraChunk?],
+  chunks: (MantraChunk | undefined)[],
   breaks: (number[] | undefined)[] = [],
 ): (MinimapRow | null)[] {
   // Split each chunk's syllables across its screen lines, in proportion to the measured characters.

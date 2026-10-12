@@ -150,14 +150,24 @@
     cursor: pointer;
   }
 
+  /* The window clips the track and fades its top and bottom edges. */
   .minimap-lines {
     position: absolute;
-    inset: 0.2rem 0;
+    inset: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Its top sits at the window's middle; the inline transform slides the current row onto it. */
+  .minimap-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 0.16rem;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   /* A chunk, which may wrap onto several screen lines just as it does on the page. */
@@ -165,6 +175,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.06rem;
+    transition: opacity 0.45s ease;
+  }
+
+  .minimap-row[data-far="true"] {
+    opacity: 0;
   }
 
   .minimap-line {
@@ -184,6 +199,7 @@
     height: 100%;
     background: currentColor;
     opacity: 0.18;
+    transition: opacity 0.45s ease;
   }
 
   .minimap-cells > span[data-blank="true"] {
