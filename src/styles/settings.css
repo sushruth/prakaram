@@ -116,20 +116,28 @@
 
   .segmented {
     display: flex;
-    padding: 2px;
-    background: var(--bg-card);
+    align-items: center;
+    gap: 0.9rem;
+    background: none;
+    padding: 0;
   }
 
   .segment {
-    padding: 0.3rem 0.6rem;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.78rem;
+    padding: 0.25rem 0;
+    background: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
     cursor: pointer;
+    transition: color 0.2s ease, filter 0.35s ease;
+  }
+
+  .segment:hover {
+    color: var(--text-primary);
   }
 
   .segment[aria-checked="true"] {
-    background: var(--bg-base);
+    background: none;
     color: var(--accent);
+    filter: var(--flame);
   }
 }

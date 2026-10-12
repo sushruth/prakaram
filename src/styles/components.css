@@ -18,19 +18,24 @@
   }
 
   .btn-primary {
-    background: var(--accent);
-    color: var(--on-accent);
-    padding: 0.55rem 1.25rem;
-    font-weight: 500;
+    background: none;
+    color: var(--accent);
+    padding: 0.25rem 0;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    transition: color 0.2s ease, filter 0.35s ease, transform 0.12s ease;
   }
 
   .btn-primary:hover {
-    filter: brightness(1.1);
+    color: var(--text-primary);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.97);
+    filter: var(--flame);
   }
 
   .chunk-row {

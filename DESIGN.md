@@ -110,8 +110,23 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 
 ---
 
+## 7b. Surfaces, Borders and Buttons
+
+Text first. The app is words on paper, and controls are words too.
+
+- **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), and the switch track in settings. Add any new exception here first.
+- **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
+- **Groups are rows of words.** Mode and option choices (Off / Learn / Auto, Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
+- **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
+- **Pressed state is a small scale-down and the flame glow.** No background change on press.
+- **Surfaces are fills, not frames.** A panel is an opaque `--bg-base` surface with no border and no shadow. Content behind a flyout sits under the half-strength `--scrim`.
+- **Separation is space**, not lines. Use spacing and type scale before adding any rule.
+
 ## 8. Checklist for a Design Change
 
+- [ ] Are there no borders, outlines or pills (except the listed exceptions)?
+- [ ] Is every button text, with the active state shown by accent colour and glow?
 - [ ] Does the active line still have no container?
 - [ ] Are inactive lines still semi-transparent, and the active one fully opaque?
 - [ ] Is there still only one accent hue?
