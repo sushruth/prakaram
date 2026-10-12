@@ -39,6 +39,11 @@ describe('koshah', () => {
     expect(p.items[0].sectionId).toBe('many-2');
   });
 
+  it('returns the same prakara object for a piece every time', () => {
+    const piece = findPiece(docs, 'many/2')!;
+    expect(pieceAsPrakara(piece)).toBe(pieceAsPrakara(piece));
+  });
+
   it('searches titles and source, ignoring case', () => {
     expect(searchPieces(listPieces(docs), 'HYMN').length).toBe(5);
     expect(searchPieces(listPieces(docs), 'anuvaka 3').map((p) => p.id)).toEqual(['many/3']);

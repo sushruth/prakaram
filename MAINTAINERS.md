@@ -9,7 +9,7 @@
 ```
 [ User Browser / PWA ]
   ├── Preact UI: header (flame, title, progress strip, icons), reader, back-to-line,
-  │     drop panels (settings, prakara details, cadence), modals
+  │     drop panels (settings, prakara details, cadence, Koshah), piece page, modals
   ├── zustand stores
   │     ├── persisted: useSettingsStore (prakaram-settings)
   │     │             useCadenceStore  (prakaram-cadence: mode, learned lines, pace)
@@ -113,6 +113,39 @@ bunx tsc --noEmit
 
 ---
 
+## 4a. Adding Content to the Koshah
+
+The Koshah is built from the documents in `src/data`. Nothing is stored separately: a new document adds its pieces (DESIGN.md §5f).
+
+1. Write the document as `src/data/<id>.json`. Its shape is `MantraDocument` in `src/types/mantra.ts`: `id`, `title` (`sanskrit`, `transliteration`, `english`), `metadata`, and `sections`. Each section has `id`, `title`, `sectionNumber` and `chunks`.
+2. Fill in `metadata`:
+   - `source`: where the text comes from. Every piece shows it.
+   - `status`: `draft` until the text is proofread against a printed edition, then `proofread`. Use `reviewed` only after a second check. A missing status counts as `draft`.
+   - `license`: the licence or permission note. Every piece shows it. If permission is not confirmed, say so here and keep `status` at `draft`.
+3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`. Without this the document has no pieces.
+4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
+5. Check:
+
+```bash
+bunx tsc --noEmit && bun test && bun run build
+```
+
+### Converting Kannada-script text
+
+`scripts/kannadaToDocument.ts` turns saswara text in Kannada script into a document with Devanagari source:
+
+```bash
+bun scripts/kannadaToDocument.ts <in.txt> <out.json> <id> <idPrefix>
+```
+
+- **Input:** one verse line per line. A line that ends `॥ N ॥` closes an anuvaka. The verse number must use ASCII digits (`0`–`9`), because the converter matches only those. A Kannada digit does not close the anuvaka.
+- Only characters in the Kannada block are converted. The danda `॥` and the swara marks are shared with Devanagari and are kept as they are.
+- Sections are named `Anuvaka 1`, `Anuvaka 2` and so on. Lines after the last marker form `Concluding mantras`. Chunk ids are `<idPrefix>-<section>-<line>`.
+- **Output:** the converter writes only `id` and `sections`. Add `title` and `metadata` by hand (step 2 above) before registering the file.
+- The output is `draft` until it has been proofread.
+
+---
+
 ## 5. Continuous Integration
 
 `.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. The Bun package cache (`~/.bun/install/cache`) is restored from `actions/cache`, keyed on `bun.lock`. Deploys are not part of CI; Cloudflare's Git integration deploys `master`, and its build only needs install and build (the typecheck and tests run in CI).
@@ -165,3 +198,6 @@ bun run build
 * `PasskeyAuthModal.tsx` is unmounted and calls hooks after an early return. Delete it or fix it.
 * The back-to-line arrow is green, the only green in the UI. Confirm or change it.
 * Known gaps in §6 still apply: the passkey verify endpoints are not implemented, and the Worker config has a placeholder D1 ID and a committed `JWT_SECRET`.
+* Confirm permission to reuse the Vignanam text of the Sri Rudram (Namakam and Chamakam), in writing, or replace it with text under a stated open licence. Until then both documents stay `draft` (see `THIRD_PARTY_NOTICES.md`).
+* Proofread Rudram Namakam and Chamakam against a printed edition, then set `metadata.status` to `proofread`. The status stays `draft` until the permission above is settled.
+* Idea, not built: a wiki-style Koshah. The texts would live in a separate content repository, each layer (text, swara marks, translation) would state its own licence, and contributions would come by pull request.

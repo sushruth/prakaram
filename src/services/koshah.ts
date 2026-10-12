@@ -58,9 +58,16 @@ export function pieceChunks(docs: MantraDocument[], piece: KoshahPiece): MantraC
   return sections.flatMap((s) => s.chunks);
 }
 
-/** A one-item prakara that runs just this piece. Not saved anywhere. */
+const prakaraCache = new Map<string, Prakara>();
+
+/**
+ * A one-item prakara that runs just this piece. Not saved anywhere.
+ * Cached per piece: store selectors return it directly, so a fresh object each call would re-render forever.
+ */
 export function pieceAsPrakara(piece: KoshahPiece): Prakara {
-  return {
+  const cached = prakaraCache.get(piece.id);
+  if (cached) return cached;
+  const prakara: Prakara = {
     id: PIECE_PREFIX + piece.id,
     title: `${piece.title.sanskrit} (${piece.title.english})`,
     description: piece.source,
@@ -68,6 +75,8 @@ export function pieceAsPrakara(piece: KoshahPiece): Prakara {
     createdTimestamp: 0,
     items: [{ id: 'piece', type: 'sukta_ref', suktaId: piece.documentId, sectionId: piece.sectionId, customTitle: piece.title.english }],
   };
+  prakaraCache.set(piece.id, prakara);
+  return prakara;
 }
 
 /** Case-insensitive match on the English, transliterated and Devanagari titles and the source. */

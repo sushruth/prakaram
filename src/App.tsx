@@ -104,7 +104,7 @@ export function App() {
           settingsOpen={drop === 'settings'}
           detailsOpen={drop === 'details'}
         />
-        <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />
+        {!pieceId && <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />}
       </div>
 
       <SettingsSheet isOpen={drop === 'settings'} onClose={closeDrop} />
