@@ -1,14 +1,6 @@
 import { TargetScript } from '../types/mantra';
 import { useMantraStore } from '../stores/useMantraStore';
-
-const SCRIPTS: { id: TargetScript; label: string; native: string }[] = [
-  { id: 'devanagari', label: 'Devanagari', native: 'संस्कृतम्' },
-  { id: 'telugu', label: 'Telugu', native: 'తెలుగు' },
-  { id: 'kannada', label: 'Kannada', native: 'ಕನ್ನಡ' },
-  { id: 'tamil', label: 'Tamil', native: 'தமிழ்' },
-  { id: 'malayalam', label: 'Malayalam', native: 'മലയാളം' },
-  { id: 'iast', label: 'IAST Roman', native: 'IAST' },
-];
+import { SCRIPTS } from '../services/transliteration';
 
 export function ScriptSelector() {
   const { targetScript, setScript } = useMantraStore();
