@@ -25,7 +25,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
 * Parayanam normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
   $$\hat{m}_k = \frac{\Delta t_k}{W_k} \implies \text{BPM}_k = \frac{60000}{\hat{m}_k}$$
-* **Variance & Confidence:** Using Welford's running variance over a 5-chunk window, the engine calculates the Coefficient of Variation ($CV = \frac{\sigma}{\bar{m}}$). If $CV \le 0.12$ over 3–5 chunks, the practitioner has established a steady cadence. The engine flags $\ge 85\%$ confidence and offers one-click "Auto-Progress".
+* **Variance & Confidence:** Using Welford's running variance over a 5-chunk window, the engine calculates the Coefficient of Variation ($CV = \frac{\sigma}{\bar{m}}$). If $CV \le 0.12$ over 3–5 chunks, the practitioner has established a steady cadence. The Steadiness readout shows the score in Learn mode. Auto mode does not wait for a confidence threshold; it advances at the current tempo.
 * **Tempo Scales:** Three classical Vedic layas are provided as presets:
   1. **Dhyāna (ध्यान / Vilambita Laya)**: $40 - 52\text{ BPM}$ (Slow, meditative, deliberate)
   2. **Abhyāsa (अभ्यास / Madhya Laya)**: $60 - 75\text{ BPM}$ (Daily adhyayana study speed)
@@ -73,7 +73,7 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 7. Mangalam / Samarpanam
 
 ### B. Phase 1 vs Phase 2 (Panchangam Roadmap)
-* **Milestone 1 (Current):** Full Prakara builder with drag-and-drop reordering, custom vakya insertion, bilingual subtitle support, cadence persistence, and instant link sharing.
+* **Milestone 1 (Current):** Prakara builder with custom vakya insertion and an optional creator name, cadence modes with persisted tempo, script-aware titles, and instant link sharing. Drag-and-drop reordering is not implemented.
 * **Milestone 2 (Future Phase):** Dynamic Panchangam calculation:
   - Client-side astronomical ephemeris (Lahiri / Drik) deriving Samvatsara, Ayana, Ritu, Masa, Paksha, Tithi, Vasara, Nakshatra, Yoga, Karana.
   - Dynamic Sankalpam generator filling in family Gotra, Nakshatra, Rasi, Name, and geographic Kshetra (river/temple/city coordinates).
@@ -97,20 +97,19 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 
 ## 6. Authentication & Cloudflare Backend
 
-### A. Zero-Password WebAuthn Passkeys
+### A. Zero-Password WebAuthn Passkeys (Deferred)
+* **Status:** The account UI is hidden. The Worker verify endpoints return `501` until real verification exists, so no account is created or trusted.
 * **UX Assumption:** No passwords, no SMS OTPs, no email links.
 * **Registration:** User enters a username $\rightarrow$ browser prompts biometric passkey (TouchID, FaceID, Windows Hello, YubiKey) $\rightarrow$ registered.
 * **Login (Conditional UI / Autofill):** Clicking the username field shows the native saved passkey suggestion. One touch signs the user in.
-* **Backend:** Cloudflare Workers + D1 SQLite database storing credential public keys and counters using `@simplewebauthn`. Private keys never leave the user's hardware enclave.
+* **Backend (planned):** Cloudflare Workers + D1 SQLite storing credential public keys and counters, verified with `@simplewebauthn/server`. Private keys never leave the user's hardware enclave.
 
 ---
 
 ## 7. Styling & Modern CSS Philosophy
 
 * **No Tailwind CSS:** Per explicit design requirements, styling uses pure modern CSS with native `@layer`:
-  - `@layer reset, theme, typography, components, zen;`
+  - `@layer reset, theme, typography, layout, components, zen;`
 * **Responsive & Adaptive:** Fully responsive across mobile smartphones, tablets, and wide desktop displays.
-* **Color Palettes:**
-  1. **Vedic Sandhya (Default):** Warm parchment background (`#fcf8f2`), saffron/terracotta accents (`#9a3412`), deep charcoal ink (`#292524`).
-  2. **Midnight Zen (Dark Mode):** Pure slate/obsidian (`#0f172a`), muted gold accents (`#fbbf24`), luminous ivory text (`#f8fafc`).
-  3. **Pristine Dawn (Light Mode):** Clean minimalist alabaster (`#ffffff`), warm earthen tones (`#78350f`).
+* **Color:** Three themes (System, Light, Dark). System follows the OS. Light is paper `#f7f7f5` with ink `#161614`; dark is `#121413` with ink `#ecece8`. Both use one teal accent and a swara indigo. No saffron, maroon or gold: see `DESIGN.md`.
+* **Borders:** none by default; exceptions are named in `DESIGN.md` §7b.

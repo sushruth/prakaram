@@ -20,12 +20,12 @@ Agents modifying or extending this repository must strictly adhere to the follow
 | **Runtime & Package Manager** | **Bun** (`bun 1.3+`) | **Never use `npm` or `yarn`**. Run `bun install`, `bun test`, `bun run dev`. |
 | **UI Framework** | **Preact** (`preact/hooks`) | Keep DOM footprint minimal. Do not bloat virtual DOM or add heavy React wrappers. |
 | **Language** | **TypeScript** (Strict) | All models and functions must have explicit types in `src/types/`. |
-| **State Management** | **Zustand** | Store state in atomic stores (`src/stores/`). Avoid unnecessary re-renders. |
-| **Styling & CSS** | **Pure Modern CSS (`@layer`)** | **STRICT RULE: NO TAILWIND**. All styles live in `src/styles/`: `index.css` is the entry and imports one file per concern (`layers.css` declares `@layer reset, theme, typography, layout, components, zen;`, then `reset`, `tokens` (theme colours, light/dark), `typography`, `layout`, `components`, `settings`, `cadence`, `zen`, `responsive`). Import order defines the cascade within each layer, so keep it. Add new rules to the matching concern file, inside the right `@layer`. |
+| **State Management** | **Zustand** | Store state in atomic stores (`src/stores/`). Avoid unnecessary re-renders. Preferences that must survive reloads use zustand `persist` with a `merge` that validates every field (see `persistence.ts`). Keep view state (active line, zen) in memory. Never read `localStorage` by hand in a store. |
+| **Styling & CSS** | **Pure Modern CSS (`@layer`)** | **STRICT RULE: NO TAILWIND**. Borders and shadows are not used unless `DESIGN.md` §7b names the exception. All styles live in `src/styles/`: `index.css` is the entry and imports one file per concern (`layers.css` declares `@layer reset, theme, typography, layout, components, zen;`, then `reset`, `tokens` (theme colours, light/dark), `typography`, `layout`, `components`, `settings`, `cadence`, `zen`, `responsive`). Import order defines the cascade within each layer, so keep it. Add new rules to the matching concern file, inside the right `@layer`. |
 | **Transliteration** | **Zero-Dependency Brahmic Engine** | Do NOT install heavy WASM libraries like Pyodide Aksharamukha. Theme definitions (ids, labels, `data-theme` attribute) live in `src/config/themes.ts`; a new theme also needs its tokens in `src/styles/tokens.css`. Settings rows are descriptors in `src/settings/registry.ts`. Keep transliteration in `src/services/transliteration/` (>1M ops/sec). Each script is one module implementing `ScriptTransliterator`, listed once in `registry.ts`. |
 | **P2P Sync** | **Trystero WebRTC** | Serverless WebRTC via BitTorrent/Nostr public trackers. Zero server costs. |
 | **State Serialization** | **CompressionStream Deflate** | Custom Prakaras & cadences encode into URL fragments (`#p=...`). Never transmit user playlists to backend HTTP endpoints. |
-| **Authentication** | **WebAuthn Passkeys** | **Zero passwords**. Use username + biometric passkeys (TouchID, FaceID, Windows Hello, YubiKey). |
+| **Authentication** | **WebAuthn Passkeys** (deferred) | **Zero passwords**. The account UI is hidden and the Worker verify endpoints return `501`. Do not expose accounts or mint sessions until verification with `@simplewebauthn/server` is implemented. |
 | **Backend (Optional)** | **Cloudflare Workers + D1** | Keep backend code isolated in `worker/` using Hono and `@simplewebauthn`. |
 
 ---
@@ -57,18 +57,29 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 
 ---
 
+### D. Line Kinds and Display Rules
+* A line is **swara** if its Devanagari source contains U+0951, U+0952 or U+1CDA (`src/services/swara.ts`). Detect swara on the source, never on transliterated output.
+* A **shloka** is a custom verse ending in `॥`; a **vakya** is other procedural text. Sukta lines are **mantras**.
+* Titles are shown by Sanskrit akshara count (`src/services/aksharas.ts`), never by UTF-16 length. The header limit is the longest default title.
+* Brand, titles and Sanskrit labels follow the selected script; English text does not change.
+
+---
+
 ## 4. Agent Workflows & Commands
 
 Before concluding any code editing session, an agent must execute and verify:
 
 ```bash
-# 1. Run unit tests
+# 1. Type check (CI runs this too)
+bunx tsc --noEmit
+
+# 2. Run unit tests
 bun test
 
-# 2. Verify production build and bundle size
+# 3. Verify production build and bundle size
 bun run build
 
-# 3. Check git status
+# 4. Check git status
 git status
 ```
 
@@ -82,7 +93,7 @@ Target benchmarks:
 
 When adding a new Suktam from *Saswara Veda Mantrah*:
 1. Create a new JSON file in `src/data/<suktamId>.json` matching `MantraDocument` type.
-2. Ensure every chunk includes authentic Devanagari swara marks and an English translation.
+2. Ensure every chunk includes authentic Devanagari with swara marks. Translations may be kept in the data but are not displayed.
 3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`.
 4. Optionally add it as an item in a default Prakara preset in `src/data/defaultPrakaras.ts`.
 5. Run `bun run build` to verify type safety.

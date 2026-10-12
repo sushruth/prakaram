@@ -8,7 +8,7 @@
 
 Parayanam is a chanting tool, not a temple. It should feel like a printed page on good paper, with the text doing all the work.
 
-**We do not use:** saffron, maroon, temple gold, lotus or om ornaments, mandala backgrounds, gradients, glows, drop shadows on text, card borders around verses, or the serif-and-gold "devotional" look that most sites in this space share.
+**We do not use:** saffron, maroon, temple gold, lotus or om ornaments, mandala backgrounds, gradients, ambient glows (the flame glow is only for active controls), drop shadows on text, card borders around verses, or the serif-and-gold "devotional" look that most sites in this space share.
 
 **We do use:** one ink color, one accent tint, generous space, opacity as the only hierarchy for lines, and type that is sharp at small sizes.
 
@@ -18,7 +18,7 @@ Parayanam is a chanting tool, not a temple. It should feel like a printed page o
 
 1. **One line is the focus.** The active chunk is fully opaque. Every other chunk is semi-transparent. No box, no background, no border, no scale, no glow around the active line.
 2. **Opacity is the hierarchy.** Do not use size, weight, color, or boxes to mark the current line. Lines recede by opacity only.
-3. **One accent.** Teal ink (`#1f5f63`) is used for the title, the instruction label, and focus states. Nothing else is colored.
+3. **One accent.** Teal ink (`#1f5f63`) is used for active controls, focus, and the prakara title. Swara indigo colours only mantras with swara marks. Nothing else is coloured.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
 5. **No decoration.** No gradients, no glows, no blur except zen-mode dimming, no emoji in primary chrome.
 6. **Motion is opacity only.** Transitions are 300–350 ms opacity fades. No scale, no slide.
@@ -33,11 +33,13 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | :--- | :--- | :--- |
 | `--bg-base` | `#f7f7f5` | Page paper (light) |
 | `--bg-card` | `#eeeeeb` | Pressed or hovered neutral |
-| `--border-subtle` | `#e4e4e0` | Hairlines only |
+| `--scrim` | `rgba(247,247,245,.5)` | Half-strength cover behind drop panels |
 | `--text-primary` | `#161614` | Active line, headings |
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
-| `--accent` | `#1f5f63` | Title, active control, focus |
+| `--accent` | `#1f5f63` | Active control, focus, prakara title |
+| `--swara` | `#4a45b8` | Mantras with swara marks |
+| `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -51,7 +53,7 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 
 | Role | Face | Notes |
 | :--- | :--- | :--- |
-| UI and titles | Geist (400, 500, 600) | Titles at 600, tracking `-0.01em`. No uppercase except the instruction label. |
+| UI and titles | Geist (400, 500, 600) | Titles at 600, tracking `-0.01em`. Uppercase only for small kind labels (Shloka, Vakya) and section captions. |
 | Devanagari | Noto Sans Devanagari | Sans only. Serif Indic faces are not used. |
 | Telugu, Kannada, Tamil, Malayalam | Noto Sans (matching script) | Same rules as Devanagari. |
 
@@ -83,6 +85,24 @@ The reader is a page, not a set of cards.
 - **Wrap** (on by default) wraps long lines. Off, each line stays on one row and scrolls sideways.
 - **Split** (off by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
 - The instruction label appears on the first phrase of an instruction only.
+
+## 5a. Header, Title and Flyouts
+
+- The header is one vertically centred row: brand, prakara title, and icons.
+- The prakara title is the centre of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
+- The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
+- Settings and details use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
+
+## 5c. Line Kinds
+
+| Kind | Looks like | Source |
+| :--- | :--- | :--- |
+| Mantra with swara | Indigo `--swara` | Sukta line containing U+0951, U+0952 or U+1CDA |
+| Mantra without swara | Primary ink, regular weight | Sukta line with no swara marks |
+| Shloka | Primary ink, medium weight, small "Shloka" label | Custom verse ending in `॥` |
+| Vakya | Muted ink, italic, small "Vakya" label | Other procedural text |
+
+Only the first phrase of a split line carries the label.
 
 ## 5b. Cadence
 

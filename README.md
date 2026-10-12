@@ -16,16 +16,16 @@
 ## ✨ Key Capabilities
 
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
-* **Single-Chunk Focus:** Highlights one line/chunk at a time with smooth ambient scrolling.
+* **Single-Chunk Focus:** Highlights one line at a time. Other lines fade to half transparency.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights.
-* **Option A Rhythm Learning:** Tap screen or spacebar along with your chant; the engine learns your per-syllable cadence and statistical variance in real-time.
-* **Confidence Gauge & Auto-Progress:** When rhythm consistency reaches $\ge 80\%$, the engine suggests "Auto Progress" and smoothly advances chunk-by-chunk at your learned cadence.
+* **Three Cadence Modes:** **Off** (tap or Space moves on, nothing recorded), **Learn** (each tap is measured to learn your pace, lines do not advance by themselves, a *Steadiness* readout shows consistency), **Auto** (lines advance on their own at the current tempo).
+* **Tempo:** one labelled slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range.
 * **Laya Scales:**
   - **Dhyāna (ध्यान / Vilambita Laya):** 48 BPM (Meditative, deliberate)
   - **Abhyāsa (अभ्यास / Madhya Laya):** 72 BPM (Standard daily study)
   - **Pārāyaṇa (पारायण / Druta Laya):** 100 BPM (Fluent continuous recital)
-  - **Custom Laya:** Continuous slider from 36 to 130 BPM.
-* **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to make all interface chrome melt away, leaving only the sacred verse and subtle breathing ambient glow.
+* **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide the header and controls, leaving only the verses.
+* **Line Kinds:** Vedic mantras with swara marks are indigo, plain mantras are primary text, shlokas are medium weight, and vakyas (procedure) are italic and muted.
 
 ### 1. Authentic Vedic Corpus (*Saswara Veda Mantrah*)
 * Editorial benchmark: *Saswara Veda Mantrah* by Sri Ramakrishna Math.
@@ -56,17 +56,14 @@
 * **Live Satsang Rooms:** Host chants while followers' screens synchronize active chunks and cadence in real-time with $<100\text{ ms}$ latency via serverless WebRTC (Trystero).
 * **Zero-Server Link Sharing:** Custom Prakaras and cadence configurations compress into native URL fragments (`#p=...`) using `CompressionStream('deflate-raw')`. URL fragments are never sent to servers (100% client-side privacy).
 
-### 5. WebAuthn Passkeys & Cloudflare Edge Backend
-* **Zero Passwords:** Sign in or register via device biometrics (TouchID, FaceID, Windows Hello, YubiKey).
-* **Conditional UI Autofill:** One-tap sign in directly from the username input.
-* **Cloudflare Workers + D1 Backend:** Lightweight API structure included in `worker/` using `@simplewebauthn` and SQLite.
+### 5. Accounts (Hidden) & Cloudflare Worker
+* **Passkey accounts are hidden.** The UI entry point is not mounted. The code stays in `src/services/passkeyAuth.ts` and `src/components/PasskeyAuthModal.tsx` for the proper build later.
+* **Worker verify endpoints fail closed.** `/api/auth/*/verify` returns `501` until WebAuthn verification is implemented in `worker/`.
+* **Cloudflare Workers + D1:** the API skeleton and schema live in `worker/`.
 
 ### 6. Modern Layered CSS (No Tailwind)
-* Structured using native `@layer reset, theme, typography, layout, components, zen;`.
-* Three hand-crafted color palettes:
-  - **🌅 Sandhya (Default):** Warm parchment, saffron, terracotta, gold
-  - **🌙 Midnight Zen (Dark):** Pure obsidian slate, luminous gold
-  - **☀️ Pristine Dawn (Light):** Alabaster and deep earthen ink
+* Native `@layer` cascade, split by concern under `src/styles/`. Rules and borders are governed by `DESIGN.md`.
+* Three themes: **System** (default, follows the OS), **Light**, and **Dark**. Light and dark are near-monochrome with one teal accent and a swara indigo.
 
 ---
 
@@ -100,56 +97,31 @@ bunx wrangler dev
 
 ## 📁 Project Structure
 
-```
-parayanam/
-├── AGENTS.md                      # Guide & invariants for AI coding agents
-├── ASSUMPTIONS.md                 # Architectural assumptions & prosody formulas
-├── MAINTAINERS.md                 # Deployment & maintenance guide
-├── index.html                     # HTML mount root with Indic serif fonts
-├── vite.config.ts                 # Preact + Vite bundler configuration
-├── tsconfig.json                  # Strict TypeScript configuration
+```text
+├── AGENTS.md              # Operating manual & invariants for coding agents
+├── DESIGN.md              # Visual direction, tokens, borders and button rules
+├── MAINTAINERS.md         # Deployment, Worker and D1 operations
+├── ASSUMPTIONS.md         # Architectural and Vedic assumptions
+├── THIRD_PARTY_NOTICES.md # Vendored third-party assets
+├── wrangler.jsonc         # Workers static-assets config (serves dist/)
 ├── src/
-│   ├── main.tsx                   # App entry point
-│   ├── App.tsx                    # Master coordinator & modal manager
-│   ├── types/
-│   │   ├── mantra.ts              # Mantra, Chunk, Akshara, and Prakara models
-│   │   └── cadence.ts             # Laya presets, metrics, and WebRTC packets
-│   ├── styles/
-│   │   └── theme.css              # Native @layer modern CSS & Zen styling
-│   ├── services/
-│   │   ├── transliteration.ts     # Zero-dependency Indic transliterator
-│   │   ├── syllabifier.ts         # Chandaḥ-śāstra Laghu/Guru/Pluta prosody parser
-│   │   ├── cadenceEngine.ts       # Option A rhythm learning & confidence scoring
-│   │   ├── webrtcRoom.ts          # Serverless Trystero WebRTC live synchronization
-│   │   ├── urlCodec.ts            # Native CompressionStream URL hash encoder
-│   │   └── passkeyAuth.ts         # SimpleWebAuthn client service
-│   ├── stores/
-│   │   ├── useMantraStore.ts      # Active chunk, script, font-size store
-│   │   ├── useCadenceStore.ts     # BPM, laya, confidence, auto-progress store
-│   │   ├── usePrakaraStore.ts     # Prakara sequences & compiler store
-│   │   ├── useRoomStore.ts        # WebRTC room peer connection store
-│   │   └── useThemeStore.ts       # Sandhya/Dark/Light and Zen mode store
-│   ├── data/
-│   │   ├── shantiMantras.json     # Authentic Shanti Mantras with swaras
-│   │   ├── ganapatiPrarthana.json # Rigveda 2.23.1 Ganapati Prarthana
-│   │   ├── purushaSuktam.json     # Complete 18 Riks of Purusha Suktam
-│   │   ├── sriSuktam.json         # Complete 16 Riks of Sri Suktam
-│   │   ├── durgaSuktam.json       # Complete Durga Suktam
-│   │   ├── narayanaSuktam.json    # Complete Narayana Suktam
-│   │   └── index.ts               # Manifest & default Prakara presets
-│   └── components/
-│       ├── Header.tsx             # Minimal top bar with controls
-│       ├── ZenMantraReader.tsx    # Chanting reader & active chunk highlighter
-│       ├── CadenceControlBar.tsx  # Floating bottom bar with BPM slider & tap
-│       ├── ScriptSelector.tsx     # Indic script switcher
-│       ├── PrakaraBuilderModal.tsx# Custom playlist & vakya compiler
-│       ├── ChantingRoomModal.tsx  # WebRTC live room connect/share modal
-│       └── PasskeyAuthModal.tsx   # WebAuthn passkey authentication modal
-└── worker/
-    ├── wrangler.jsonc             # Cloudflare Worker configuration
-    ├── schema.sql                 # D1 database schema for credentials
-    └── src/
-        └── index.ts               # Worker API for passkey attestation & sync
+│   ├── App.tsx            # Shell: header, reader, cadence bar, drop panels, modals
+│   ├── components/        # Header, ZenMantraReader, DropPanel, SettingsSheet,
+│   │                      # PrakaraDetails, PrakaraBuilderModal, cadence/ controls
+│   ├── config/themes.ts   # Theme ids, labels, data-theme attribute
+│   ├── data/              # Sukta JSON corpus and default prakaras
+│   ├── icons/phosphor.ts  # Vendored Phosphor icon paths (MIT)
+│   ├── services/          # Transliteration registry, cadence engine, chunking,
+│   │                      # aksharas, titles, swara, URL codec, WebRTC room
+│   ├── settings/          # Settings registry and controls
+│   ├── stores/            # zustand stores; persisted settings, cadence, prakaras
+│   ├── styles/            # index.css entry; one file per concern and @layer
+│   └── types/             # Shared TypeScript types
+├── worker/
+│   ├── src/index.ts       # Worker API (health, register/login options)
+│   ├── schema.sql         # D1 schema
+│   └── wrangler.jsonc     # Worker configuration
+└── .github/workflows/ci.yml  # Typecheck, tests and build on push and PR
 ```
 
 ---

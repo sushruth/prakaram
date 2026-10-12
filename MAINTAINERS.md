@@ -8,36 +8,50 @@
 
 ```
 [ User Browser / PWA ]
-  ├── Preact UI (Zen Mode, Reader, Studio, Controls)
-  ├── Zustand Stores (Mantra, Cadence, Prakara, Room, Theme)
-  ├── Indic Transliteration Engine (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
-  ├── Prosodic Syllabifier (Chandaḥ-śāstra Laghu/Guru/Pluta)
-  ├── Cadence Learning Engine (Option A tap rhythm, EMA tempo, Welford variance)
-  ├── URL Codec (Native CompressionStream Deflate -> Base64URL #p=...)
-  └── Trystero WebRTC (Serverless P2P DataChannels via BitTorrent/Nostr)
+  ├── Preact UI: header, reader, cadence bar, drop panels (settings, prakara details), modals
+  ├── zustand stores
+  │     ├── persisted: useSettingsStore (parayanam-settings)
+  │     │             useCadenceStore  (parayanam-cadence)
+  │     │             usePrakaraStore  (parayanam-prakaras)
+  │     └── in memory: useMantraStore (active line, zen), useRoomStore
+  ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
+  ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
+  ├── Cadence engine (Learn mode: tap measurement, steadiness; tempo 36-130)
+  ├── URL codec (CompressionStream deflate -> #p=...)
+  └── Trystero WebRTC (serverless DataChannels)
             │
-            ▼ (Optional Cloud Backup & WebAuthn)
-[ Cloudflare Workers + D1 SQLite ]
-  ├── POST /api/auth/register/options & verify
-  ├── POST /api/auth/login/options & verify
-  └── D1 Database (Users, Passkey Credentials, Challenges, Stored Prakaras)
+            ▼ (optional, not yet used by the UI)
+[ Cloudflare Worker + D1 ]
+  ├── GET  /api/health
+  ├── POST /api/auth/register/options and login/options
+  └── POST /api/auth/*/verify  -> 501 until WebAuthn verification is implemented
 ```
+
+Stored preference keys (zustand persist) hold only validated values. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
 
 ---
 
 ## 2. Deployment Workflows
 
-### A. Frontend Deployment (Cloudflare Pages)
+### A. Frontend Deployment (Cloudflare Workers with static assets)
 
-The frontend is an offline-first Single Page App built with Vite:
+Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` through static assets, configured by the root `wrangler.jsonc`:
 
-1. Connect your GitHub repository `sushruth/parayanam` to **Cloudflare Pages**.
-2. Configure build settings:
-   * **Framework Preset:** Vite
-   * **Build Command:** `bun run build`
-   * **Build Output Directory:** `dist`
-   * **Root Directory:** `/`
-3. Environment variables: None strictly required for static hosting.
+```jsonc
+{
+  "name": "parayanam",
+  "compatibility_date": "2026-01-01",
+  "assets": { "directory": "./dist", "not_found_handling": "single-page-application" }
+}
+```
+
+1. In Cloudflare: **Workers & Pages → Create → Import a repository**, select `sushruth/parayanam`.
+2. Build command: `bun install --frozen-lockfile && bun run build`
+3. Deploy command: `npx wrangler deploy`
+4. Production branch: `master`. Each push to it builds and deploys.
+5. No environment variables are needed for the frontend.
+
+Before every push to `master`, check that CI passed (see §5).
 
 ### B. Backend Deployment (Cloudflare Workers + D1)
 
@@ -87,15 +101,22 @@ If you wish to enable the optional cloud sync and passkey auth backend:
 ## 4. Maintenance Commands Reference
 
 ```bash
-# Development server with Hot Module Reload
 bun run dev
-
-# Production build
 bun run build
-
-# Run unit tests
 bun test
-
-# Type check without emitting
 bunx tsc --noEmit
 ```
+
+---
+
+## 5. Continuous Integration
+
+`.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. Deploys are not part of CI; Cloudflare's Git integration deploys `master`.
+
+---
+
+## 6. Known Gaps
+
+* Passkey accounts are hidden, and the Worker verify endpoints fail closed (`501`). Implement WebAuthn verification with `@simplewebauthn/server` before exposing accounts.
+* `worker/wrangler.jsonc` still has a placeholder D1 `database_id`, and it commits a `JWT_SECRET`. Move the secret to `wrangler secret put` before deploying the Worker.
+* `THIRD_PARTY_NOTICES.md` lacks the Phosphor copyright line. Add it from the upstream licence before distribution.
