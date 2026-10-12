@@ -31,3 +31,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Sri Rudram, Namakam text
+
+`src/data/rudramNamakam.json` was converted from the Kannada-script swara text published by Vignanam
+(vignanam.org), supplied by the maintainer, using `scripts/kannadaToDocument.ts`. The Vedic text itself is ancient;
+Vignanam's typed and proofread edition may carry rights. **Permission to reuse it has not been confirmed.** Confirm in
+writing, or replace the text with one from a source with a stated open licence, before treating it as cleared.

@@ -6,6 +6,7 @@ import purushaSuktam from './purushaSuktam.json';
 import sriSuktam from './sriSuktam.json';
 import durgaSuktam from './durgaSuktam.json';
 import narayanaSuktam from './narayanaSuktam.json';
+import rudramNamakam from './rudramNamakam.json';
 
 export const ALL_SUKTAMS: MantraDocument[] = [
   shantiMantras as MantraDocument,
@@ -14,6 +15,7 @@ export const ALL_SUKTAMS: MantraDocument[] = [
   sriSuktam as MantraDocument,
   durgaSuktam as MantraDocument,
   narayanaSuktam as MantraDocument,
+  rudramNamakam as MantraDocument,
 ];
 
 export const SUKTA_MAP = new Map<string, MantraDocument>(
