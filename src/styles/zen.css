@@ -1,0 +1,42 @@
+@layer zen {
+  
+  .zen-active .app-header {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+  }
+
+  .zen-active .bottom-bar {
+    opacity: 0.18;
+    transform: translateX(-50%) translateY(4px);
+  }
+
+  .zen-active .bottom-bar:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .zen-active .chunk-row:not(.active) {
+    opacity: 0.18;
+    filter: blur(0.4px);
+  }
+
+  .zen-active .chunk-row.active {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .zen-exit-hint {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 60;
+  }
+
+  .zen-active:hover .zen-exit-hint {
+    opacity: 0.85;
+  }
+}

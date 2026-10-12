@@ -1,0 +1,22 @@
+@layer typography {
+  body {
+    font-family: 'Geist', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .vedic-text {
+    font-family: 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Geist', system-ui, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "mark" 1, "mkmk" 1;
+    line-height: 1.85;
+    text-rendering: optimizeLegibility;
+  }
+
+  .title-display {
+    font-family: 'Geist', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
