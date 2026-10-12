@@ -328,6 +328,7 @@
   .header-flame {
     display: inline-flex;
     flex-shrink: 0;
+    color: var(--flame-tip);
     animation: flame-glow 1.4s ease-in-out infinite;
   }
 
