@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Prakara, MantraChunk } from '../types/mantra';
-import { DEFAULT_PRAKARAS, SUKTA_MAP } from '../data';
+import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_MAP } from '../data';
+import { PIECE_PREFIX, findPiece, pieceAsPrakara } from '../services/koshah';
 import { useSettingsStore } from './useSettingsStore';
 import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
 
@@ -9,6 +10,8 @@ interface PrakaraState {
   prakaras: Prakara[];
   activePrakaraId: string;
   selectPrakara: (id: string) => void;
+  /** Run one Koshah piece on its own, without saving a prakara. */
+  runPiece: (pieceId: string) => void;
   getActivePrakara: () => Prakara;
   getFlattenedChunks: () => MantraChunk[];
   addPrakara: (prakara: Prakara) => void;
@@ -28,8 +31,14 @@ export const usePrakaraStore = create<PrakaraState>()(
 
       selectPrakara: (id) => set({ activePrakaraId: id }),
 
+      runPiece: (pieceId) => set({ activePrakaraId: PIECE_PREFIX + pieceId }),
+
       getActivePrakara: () => {
         const { prakaras, activePrakaraId } = get();
+        if (activePrakaraId.startsWith(PIECE_PREFIX)) {
+          const piece = findPiece(ALL_SUKTAMS, activePrakaraId.slice(PIECE_PREFIX.length));
+          if (piece) return pieceAsPrakara(piece);
+        }
         return prakaras.find((p) => p.id === activePrakaraId) ?? prakaras[0];
       },
 
@@ -42,6 +51,7 @@ export const usePrakaraStore = create<PrakaraState>()(
           if (item.type === 'sukta_ref' && item.suktaId) {
             const sukta = SUKTA_MAP.get(item.suktaId);
             for (const section of sukta?.sections ?? []) {
+              if (item.sectionId && section.id !== item.sectionId) continue;
               for (const ch of section.chunks) {
                 chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
               }

@@ -8,21 +8,23 @@ import { FlameMark } from './FlameMark';
 import { Icon } from './Icon';
 
 interface HeaderProps {
-  onOpenPrakara: () => void;
+  onOpenKoshah: () => void;
   onOpenRoom: () => void;
   onOpenSettings: () => void;
   onOpenDetails: () => void;
   settingsOpen: boolean;
   detailsOpen: boolean;
+  koshahOpen: boolean;
 }
 
 export function Header({
-  onOpenPrakara,
+  onOpenKoshah,
   onOpenRoom,
   onOpenSettings,
   onOpenDetails,
   settingsOpen,
   detailsOpen,
+  koshahOpen,
 }: HeaderProps) {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
@@ -57,7 +59,13 @@ export function Header({
         </button>
 
 
-        <button className="icon-btn" onClick={onOpenPrakara} aria-label="Prakara sequences" title="Prakara sequences">
+        <button
+          className="icon-btn"
+          onClick={onOpenKoshah}
+          aria-label="Koshah"
+          aria-expanded={koshahOpen}
+          title="Koshah"
+        >
           <Icon name="scroll" size={20} />
         </button>
 

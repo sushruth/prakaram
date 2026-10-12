@@ -8,18 +8,33 @@ import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { ChantingRoomModal } from './components/ChantingRoomModal';
 import { SettingsSheet } from './components/SettingsSheet';
 import { PrakaraDetails } from './components/PrakaraDetails';
+import { KoshahPanel } from './components/KoshahPanel';
+import { PieceView } from './components/PieceView';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 import { initLineClock } from './services/lineClock';
 
-type DropKind = 'settings' | 'details' | 'cadence';
+type DropKind = 'settings' | 'details' | 'cadence' | 'koshah';
+
+/** The piece id in a `#k=<id>` address, or null. */
+const pieceFromHash = () => {
+  const m = window.location.hash.match(/^#k=(.+)$/);
+  return m ? decodeURIComponent(m[1]) : null;
+};
 
 export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
   const [isRoomOpen, setIsRoomOpen] = useState(false);
   const [drop, setDrop] = useState<DropKind | null>(null);
+  const [pieceId, setPieceId] = useState<string | null>(pieceFromHash);
+
+  useEffect(() => {
+    const onHash = () => setPieceId(pieceFromHash());
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   const { addPrakara } = usePrakaraStore();
   const { setMsPerMatra } = useCadenceStore();
@@ -81,7 +96,8 @@ export function App() {
     <>
       <div className="chrome">
         <Header
-          onOpenPrakara={() => setIsPrakaraOpen(true)}
+          onOpenKoshah={() => toggle('koshah')}
+          koshahOpen={drop === 'koshah'}
           onOpenRoom={() => setIsRoomOpen(true)}
           onOpenSettings={() => toggle('settings')}
           onOpenDetails={() => toggle('details')}
@@ -93,10 +109,24 @@ export function App() {
 
       <SettingsSheet isOpen={drop === 'settings'} onClose={closeDrop} />
       <PrakaraDetails isOpen={drop === 'details'} onClose={closeDrop} />
+      <KoshahPanel
+        isOpen={drop === 'koshah'}
+        onClose={closeDrop}
+        onCompose={() => {
+          closeDrop();
+          setIsPrakaraOpen(true);
+        }}
+      />
       <CadencePanel isOpen={drop === 'cadence'} onClose={closeDrop} />
 
-      <ZenMantraReader />
-      <LocateLine />
+      {pieceId ? (
+        <PieceView pieceId={pieceId} onClose={() => (window.location.hash = '')} />
+      ) : (
+        <>
+          <ZenMantraReader />
+          <LocateLine />
+        </>
+      )}
 
       <PrakaraBuilderModal isOpen={isPrakaraOpen} onClose={() => setIsPrakaraOpen(false)} />
       <ChantingRoomModal isOpen={isRoomOpen} onClose={() => setIsRoomOpen(false)} />
