@@ -14,8 +14,8 @@
     --accent-gold: #a9cbe0;
     --accent-glow: rgba(47, 95, 122, 0.12);
     --on-accent: #ffffff;
-    --spectrum: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
-    --spectrum-ink: linear-gradient(100deg, #b5652e 0%, #a88a2e 50%, #2f7fb8 100%);
+    --spectrum: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
+    --spectrum-ink: linear-gradient(100deg, #a88a2e 0%, #b5652e 50%, #2f7fb8 100%);
 
     --locate: #16a34a;
     --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
@@ -50,7 +50,7 @@
       --accent-gold: #2a4256;
       --accent-glow: rgba(156, 203, 232, 0.14);
       --on-accent: #ffffff;
-      --spectrum-ink: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
+      --spectrum-ink: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
 
       --locate: #4ade80;
       --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
@@ -82,7 +82,7 @@
     --accent-gold: #2a4256;
     --accent-glow: rgba(156, 203, 232, 0.14);
     --on-accent: #ffffff;
-    --spectrum-ink: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
+    --spectrum-ink: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
 
     --countdown: #facc15;
     --swara-up: #c084fc;

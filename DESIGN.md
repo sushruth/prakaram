@@ -39,7 +39,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#2f5f7a` (dark `#9ccbe8`) | Active control, focus, prakara title |
 | `--spectrum` | orange, yellow, pale blue | Fill of an on switch |
-| `--spectrum-ink` | deeper orange, gold, blue (dark: pale) | Active segment and primary text buttons (gradient text) |
+| `--spectrum-ink` | deeper gold, orange, blue (dark: pale) | Active segment and primary text buttons (gradient text) |
 | `--swara-up` | `#6d28d9` (dark `#c084fc`) | Svarita, U+0951 (up): purple |
 | `--swara-down` | `#1d4ed8` (dark `#60a5fa`) | Anudatta, U+0952 (down): blue |
 | `--swara-double` | `#b91c1c` (dark `#f05252`) | Dirgha svarita, U+1CDA (double up): red |
