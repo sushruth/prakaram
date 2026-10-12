@@ -78,7 +78,7 @@ export const useCadenceStore = create<CadenceState>()(
       }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
-        const mode = oneOf(p.mode, MODES, 'manual');
+        const mode = oneOf(p.mode, MODES, 'off');
         const learned = clampNumber(p.learnedLines, 0, LEARN_LINES, 0);
         const phase: CadencePhase =
           mode === 'off' ? 'off' : mode === 'manual' ? 'manual' : learned >= LEARN_LINES ? 'engaged' : 'waiting';

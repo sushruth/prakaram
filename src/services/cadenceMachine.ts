@@ -28,8 +28,8 @@ export const isAutoRunning = (s: Pick<LearningState, 'phase' | 'paused'>) =>
   (s.phase === 'manual' || s.phase === 'engaged') && !s.paused;
 
 const MANUAL: LearningState = { phase: 'manual', learnedLines: 0, firstTapAt: null, paused: false };
-export const INITIAL_LEARNING = MANUAL;
 const OFF: LearningState = { phase: 'off', learnedLines: 0, firstTapAt: null, paused: false };
+export const INITIAL_LEARNING = OFF;
 const WAITING: LearningState = { phase: 'waiting', learnedLines: 0, firstTapAt: null, paused: false };
 
 export function transition(state: LearningState, event: CadenceEvent): LearningState {
