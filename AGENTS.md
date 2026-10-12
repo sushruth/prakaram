@@ -11,6 +11,18 @@
 
 ---
 
+## 1b. Mental Model of the Media
+
+Everything in the library is either a **source** or a **prakaram**. Keep this split when adding content, data fields or UI.
+
+* **Sources are primary things.** The four Vedas (Rigveda, Yajurveda, Samaveda, Atharvaveda) with their samhitas, brahmanas, aranyakas and upanishads (a Taittiriya Upanishad is a source), plus shlokas (the Gita, stotras, smriti and itihasa verses), songs (bhajans, kirtanas, devotional songs) and other primary texts. A source owns its text and its media (swara text, transliteration, translation, audio, commentary). It is an article in the wiki, and its sections are the addressable parts.
+* **Prakarams are combinations.** A vrata, an upakarma, a puja, a parayana or any custom sequence is a composition. It owns no source text. It is an ordered list of references to parts of sources (`metadata.parts`, or the items of a prakara), and it shows the referenced text inline. Its own words are only procedure: the sankalpa, instructions and links between parts (vakyas).
+* **Decompose, never copy.** People take parts out of a source to make something new, so the parts must be addressable and the source stays the single copy. Never paste source text into a composition. A source shows where it is used (Used in); a composition shows where each part comes from.
+* **Media belong to sources, compositions inherit.** What a source brings is declared on it (Brings). A composition brings what its parts bring. The player plays text today; other media are declared for later.
+* **Where it shows in the code:** `metadata.kind` (`source` by default, `composition`), `metadata.parts`, `metadata.categories` and `metadata.veda` for classification, `metadata.media` for declared media, and `src/services/wiki.ts` for the derived view. A new song or shloka collection is a source with its own categories. A new vrata is a composition. Section 3E has the wiki rules.
+
+---
+
 ## 2. Technical Stack & Invariants
 
 Agents modifying or extending this repository must strictly adhere to the following stack:
