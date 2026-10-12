@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test';
-import { articleHash, categoryHash, parseRoute, searchHash } from './wikiNav';
+import { articleHash, categoryHash, legacyHash, parseRoute, searchHash } from './wikiNav';
 
 test('hash routes', () => {
   expect(parseRoute('')).toEqual({ kind: 'player' });
@@ -13,4 +13,12 @@ test('hash routes', () => {
   expect(parseRoute(articleHash('rudram-namakam/3'))).toEqual({ kind: 'article', id: 'rudram-namakam/3' });
   expect(parseRoute(categoryHash('Rig Veda'))).toEqual({ kind: 'category', name: 'Rig Veda' });
   expect(parseRoute(searchHash('śrī sūkta'))).toEqual({ kind: 'search', q: 'śrī sūkta' });
+});
+
+test('legacy #k= links', () => {
+  expect(legacyHash('#k=rudram-namakam/3')).toBe('#/wiki/rudram-namakam/3');
+  expect(legacyHash('#k=rudram-namakam%2F3')).toBe('#/wiki/rudram-namakam/3');
+  expect(legacyHash('#k=rudram-namakam')).toBe('#/wiki/rudram-namakam');
+  expect(legacyHash('#k=%E0%A4%A0%')).toBeDefined();
+  expect(legacyHash('#/wiki')).toBeUndefined();
 });

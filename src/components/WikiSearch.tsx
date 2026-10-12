@@ -41,7 +41,7 @@ export function WikiSearch({ q }: { q: string }) {
       <ul className="wiki-results">
         {results.map((a) => (
           <li key={a.id}>
-            <a className="wiki-title" href={articleHash(a.id)}>
+            <a className="wiki-result-title" href={articleHash(a.id)}>
               {articleLabel(a, script)}
             </a>
             {a.title.english && <span className="wiki-muted"> {a.title.english}</span>}

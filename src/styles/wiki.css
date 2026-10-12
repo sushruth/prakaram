@@ -43,7 +43,7 @@
     cursor: not-allowed;
   }
 
-  .wiki-title {
+  .wiki-article .wiki-title {
     margin: 1rem 0 0;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid var(--text-muted);
@@ -155,6 +155,7 @@
   }
 
   .wiki-section-title {
+    scroll-margin-top: calc(var(--header-h) + var(--fade-h));
     margin: 2rem 0 0.75rem;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--bg-card);
@@ -189,7 +190,8 @@
     overflow-wrap: anywhere;
   }
 
-  .wiki-muted {
+  .wiki-article .wiki-muted {
+    font-size: inherit;
     color: var(--text-muted);
   }
 
@@ -198,7 +200,7 @@
     padding-left: 1.25rem;
   }
 
-  .wiki-footer {
+  .wiki-article > .wiki-footer {
     margin-top: 2.5rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--bg-card);

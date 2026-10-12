@@ -1,5 +1,5 @@
 import { useSettingsStore } from '../stores/useSettingsStore';
-import { listArticles, listCategories, type WikiArticle } from '../services/wiki';
+import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
 import { articleHash, articleLabel, categoryHash } from '../services/wikiNav';
 
 const DAY_MS = 86_400_000;
@@ -11,7 +11,7 @@ function tally(articles: WikiArticle[], field: (a: WikiArticle) => string | unde
     const v = field(a);
     if (v) counts.set(v, (counts.get(v) ?? 0) + 1);
   }
-  return [...counts].map(([name, count]) => ({ name, count })).sort((x, y) => x.name.localeCompare(y.name));
+  return [...counts].map(([name]) => ({ name, count: articlesForName(name).length })).sort((x, y) => x.name.localeCompare(y.name));
 }
 
 export function WikiHome() {
@@ -37,7 +37,7 @@ export function WikiHome() {
         {featured && (
           <section className="wiki-box wiki-featured">
             <h2>Featured article</h2>
-            <a className="wiki-title" href={articleHash(featured.id)}>
+            <a className="wiki-result-title" href={articleHash(featured.id)}>
               {articleLabel(featured, script)}
             </a>
             <p>{featured.summary}</p>

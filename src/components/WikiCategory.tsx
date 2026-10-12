@@ -1,19 +1,11 @@
 import { useSettingsStore } from '../stores/useSettingsStore';
-import { articlesInCategory, listArticles } from '../services/wiki';
+import { articlesForName } from '../services/wiki';
 import { articleHash, articleLabel } from '../services/wikiNav';
 
 /** The pages in a category. A Veda or deity name also lists the pages that carry it, so the home page links work. */
 export function WikiCategory({ name }: { name: string }) {
   const script = useSettingsStore((s) => s.script);
-  const want = name.trim().toLowerCase();
-  const items = [
-    ...articlesInCategory(name),
-    ...listArticles().filter(
-      (a) =>
-        (a.veda?.toLowerCase() === want || a.deity?.toLowerCase() === want) &&
-        !a.categories.some((c) => c.toLowerCase() === want),
-    ),
-  ];
+  const items = articlesForName(name);
 
   return (
     <div className="wiki-page">
@@ -25,7 +17,7 @@ export function WikiCategory({ name }: { name: string }) {
       <ul className="wiki-results">
         {items.map((a) => (
           <li key={a.id}>
-            <a className="wiki-title" href={articleHash(a.id)}>
+            <a className="wiki-result-title" href={articleHash(a.id)}>
               {articleLabel(a, script)}
             </a>
             {a.title.english && <span className="wiki-muted"> {a.title.english}</span>}

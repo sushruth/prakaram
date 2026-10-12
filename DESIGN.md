@@ -248,7 +248,7 @@ The Koshah is the library: every piece of text the app holds, presented as a wik
 | `#/wiki/<id>/<n>` | The same article, scrolled to section `n` |
 | `#/wiki/Category:<name>` | Articles in one category |
 | `#/wiki/Special:Search?q=<text>` | Search results |
-| `#/wiki/Special:Random` | A random article. The route is parsed, but `App.tsx` does not render it yet |
+| `#/wiki/Special:Random` | A random article; the app redirects to it. |
 
 Ids, category names and search text are URL-encoded. Anything outside `#/wiki` is the player. `#compose` opens the prakara composer in the player.
 

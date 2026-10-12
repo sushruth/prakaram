@@ -130,7 +130,7 @@
     font-size: 0.85rem;
   }
 
-  .wiki-title {
+  .wiki-result-title {
     font-size: 1.05rem;
     font-weight: 600;
   }
@@ -186,7 +186,7 @@
     margin-top: 1.25rem;
   }
 
-  .wiki-footer {
+  .wiki-site-footer {
     max-width: 52rem;
     margin: 0 auto;
     padding: 1.5rem 1rem 2rem;
@@ -195,11 +195,11 @@
     line-height: 1.5;
   }
 
-  .wiki-footer p {
+  .wiki-site-footer p {
     margin: 0 0 0.35rem;
   }
 
-  .wiki-footer a {
+  .wiki-site-footer a {
     color: var(--text-secondary);
   }
 

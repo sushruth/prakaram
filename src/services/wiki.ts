@@ -95,10 +95,18 @@ export function articlesInCategory(name: string, docs: MantraDocument[] = ALL_SU
   return listArticles(docs).filter((a) => a.categories.some((c) => c.toLowerCase() === want));
 }
 
+/** Pages in a category, or carrying the name as their Veda or deity. Used by the category page and the home counts. */
+export function articlesForName(name: string, docs: MantraDocument[] = ALL_SUKTAMS): WikiArticle[] {
+  const want = name.trim().toLowerCase();
+  return listArticles(docs).filter(
+    (a) => a.categories.some((c) => c.toLowerCase() === want) || a.veda?.toLowerCase() === want || a.deity?.toLowerCase() === want,
+  );
+}
+
 /** Lower case, with Latin diacritics removed, so "Sri" finds "Śrī". Devanagari matras are left alone. */
 const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
-/** Ranked: a title match scores 3, a category or deity match 2, a summary match 1. Ties keep document order. */
+/** Ranked: a title match scores 3, a category or deity match 2, a summary match 1, a section title or source match 0.5. Ties keep document order. */
 export function searchArticles(query: string, docs: MantraDocument[] = ALL_SUKTAMS): WikiArticle[] {
   const q = fold(query.trim());
   if (!q) return listArticles(docs);
@@ -107,7 +115,7 @@ export function searchArticles(query: string, docs: MantraDocument[] = ALL_SUKTA
     .map((a) => {
       const title = [a.title.sanskrit, a.title.transliteration, a.title.english].some(hit);
       const meta = hit(a.deity) || a.categories.some(hit);
-      const score = title ? 3 : meta ? 2 : hit(a.summary) ? 1 : 0;
+      const score = title ? 3 : meta ? 2 : hit(a.summary) ? 1 : a.sections.some((s) => hit(s.title)) || hit(a.source) ? 0.5 : 0;
       return { a, score };
     })
     .filter((x) => x.score > 0)

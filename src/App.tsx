@@ -18,15 +18,14 @@ import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 import { initLineClock } from './services/lineClock';
 import { listArticles } from './services/wiki';
-import { HOME_HASH, type Route, articleHash, parseRoute } from './services/wikiNav';
+import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute } from './services/wikiNav';
 
 type DropKind = 'settings' | 'details' | 'cadence';
 
 /** The route for the current hash. Old `#k=<id>` links are moved to the wiki address of their piece. */
 const readRoute = (): Route => {
-  const legacy = window.location.hash.match(/^#k=(.+)$/);
-  if (legacy) {
-    const to = articleHash(decodeURIComponent(legacy[1]));
+  const to = legacyHash(window.location.hash);
+  if (to) {
     window.location.replace(to);
     return parseRoute(to);
   }
@@ -46,7 +45,9 @@ export function App() {
         setIsPrakaraOpen(true);
         history.replaceState(null, '', window.location.pathname + window.location.search);
       }
-      setRoute(readRoute());
+      const next = readRoute();
+      if (next.kind !== 'article' || next.section === undefined) window.scrollTo(0, 0);
+      setRoute(next);
       setDrop(null);
     };
     onHash();

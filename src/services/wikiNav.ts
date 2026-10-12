@@ -53,3 +53,11 @@ type Script = Parameters<typeof transliterateVedic>[1];
 export function articleLabel(a: WikiArticle, script: Script): string {
   return a.title.sanskrit ? transliterateVedic(a.title.sanskrit, script) : a.title.english;
 }
+
+/** Old `#k=<docId>/<n>` links (the `/` may be `%2F`) become the wiki address of that document or section. */
+export function legacyHash(hash: string): string | undefined {
+  const m = hash.match(/^#k=(.+)$/);
+  if (!m) return undefined;
+  const [id, sec] = dec(m[1]).split('/');
+  return articleHash(id, sec && /^\d+$/.test(sec) ? sec : undefined);
+}

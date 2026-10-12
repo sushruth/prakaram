@@ -3,7 +3,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { ALL_SUKTAMS, SUKTA_FILE } from '../data';
 import { MantraDocument } from '../types/mantra';
-import { articlesInCategory, getArticle, listArticles, listCategories, searchArticles } from './wiki';
+import { articlesForName, articlesInCategory, getArticle, listArticles, listCategories, searchArticles } from './wiki';
 
 const doc = (id: string, over: Partial<MantraDocument['metadata']> & { sections?: number } = {}): MantraDocument => {
   const { sections = 1, ...meta } = over;
@@ -124,5 +124,16 @@ describe('wiki search', () => {
 
   it('returns nothing when nothing matches', () => {
     expect(searchArticles('zzz', docs)).toEqual([]);
+  });
+});
+
+describe('real data', () => {
+  it('searches section titles and source', () => {
+    expect(searchArticles('Prathama Anuvakah').length).toBeGreaterThan(0);
+    expect(searchArticles('Ramakrishna Math').length).toBeGreaterThan(0);
+  });
+  it('counts an article under every Veda it carries', () => {
+    expect(articlesForName('Rigveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
+    expect(articlesForName('Yajurveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
   });
 });

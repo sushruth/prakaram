@@ -140,7 +140,7 @@ export function WikiTopBar({ query }: { query: string }) {
 
 export function WikiFooter() {
   return (
-    <footer className="wiki-footer">
+    <footer className="wiki-site-footer">
       <p>Each page states its licence and source. Text whose permission is not yet confirmed stays a draft.</p>
       <p>
         Contribute: <a href={REPO_URL}>edit any page on GitHub</a>.
