@@ -1,38 +1,50 @@
-import { LEARN_LINES, useCadenceStore } from '../../stores/useCadenceStore';
+import { CadenceMode, LEARN_LINES, modeOf, useCadenceStore } from '../../stores/useCadenceStore';
 import { useRoomStore } from '../../stores/useRoomStore';
-import { Icon } from '../Icon';
+
+const MODES: { id: CadenceMode; label: string; hint: string }[] = [
+  { id: 'off', label: 'Off', hint: 'Off: you move the lines' },
+  { id: 'manual', label: 'Manual', hint: 'Manual: lines advance at the set pace' },
+  { id: 'learn', label: 'Learn', hint: 'Learn: lines advance at the pace you teach' },
+];
 
 export function CadenceStatus() {
   const phase = useCadenceStore((s) => s.phase);
   const learnedLines = useCadenceStore((s) => s.learnedLines);
-  const smartOn = useCadenceStore((s) => s.smartOn);
-  const smartOff = useCadenceStore((s) => s.smartOff);
+  const setMode = useCadenceStore((s) => s.setMode);
   const { isInRoom, isHost } = useRoomStore();
   const followingHost = isInRoom && !isHost;
+  const mode = modeOf(phase);
 
-  const text =
-    phase === 'plain'
-      ? 'Plain: you move the lines'
-      : phase === 'waiting'
-        ? 'Waiting for your first tap'
-        : phase === 'measuring'
-          ? `Learning: ${learnedLines} of ${LEARN_LINES} lines`
-          : 'Smart: following your pace';
+  const status =
+    phase === 'off'
+      ? 'Off: you move the lines'
+      : phase === 'manual'
+        ? 'Manual: lines advance at the set pace'
+        : phase === 'waiting'
+          ? 'Learn: tap the next line to begin'
+          : phase === 'measuring'
+            ? `Learn: ${learnedLines} of ${LEARN_LINES} lines`
+            : 'Learned: lines advance at the learned pace';
 
   return (
     <div className="cadence-status">
-      <button
-        className="icon-btn"
-        data-phase={phase}
-        aria-pressed={phase !== 'plain'}
-        disabled={followingHost}
-        onClick={() => (phase === 'plain' ? smartOn() : smartOff())}
-        aria-label={phase === 'plain' ? 'Turn on Smart cadence' : 'Turn off Smart cadence'}
-        title={followingHost ? 'The host controls cadence' : text}
-      >
-        <Icon name="sparkle" size={20} />
-      </button>
-      <span className="cadence-text">{text}</span>
+      <div className="segmented cadence-modes" role="radiogroup" aria-label="Cadence mode" data-phase={phase}>
+        {MODES.map((m) => (
+          <button
+            key={m.id}
+            role="radio"
+            aria-checked={mode === m.id}
+            className="segment"
+            data-mode={m.id}
+            disabled={followingHost}
+            title={followingHost ? 'The host controls cadence' : m.hint}
+            onClick={() => setMode(m.id)}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
+      <span className="cadence-text">{followingHost ? 'The host controls cadence' : status}</span>
     </div>
   );
 }

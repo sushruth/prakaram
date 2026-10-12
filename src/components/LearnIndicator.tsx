@@ -15,11 +15,11 @@ export function LearnIndicator() {
   const chunks = useChunks();
   const seconds = useElapsedSeconds(firstTapAt, phase === 'measuring');
 
-  if (phase === 'engaged') {
+  if (phase === 'manual' || phase === 'engaged') {
     const current = chunks[activeChunkIndex];
     const duration = current ? lineMs(current.sanskrit, msPerMatra) : 0;
     return (
-      <div className="learn-indicator" data-phase="engaged">
+      <div className="learn-indicator" data-phase={phase}>
         <button
           className="learn-ring-btn"
           onClick={togglePause}
@@ -50,7 +50,7 @@ export function LearnIndicator() {
   }
 
   return (
-    <div className="learn-indicator" data-phase={phase} aria-hidden={phase === 'plain'} title="Learning your pace">
+    <div className="learn-indicator" data-phase={phase} aria-hidden={phase === 'off'} title="Learning your pace">
       <span className="learn-seconds">{seconds} s</span>
       <span className="learn-progress">
         <svg className="learn-led" viewBox="0 0 10 10" aria-hidden="true">

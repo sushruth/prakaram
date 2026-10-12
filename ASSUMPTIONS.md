@@ -28,7 +28,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
   $$\hat{m}_k = \frac{\Delta t_k}{W_k}$$
   where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 250–3000 ms.
 * **Pace on screen:** the slider and the learned value are milliseconds per mātrā. A line takes its weight times the pace.
-* **Variance & Confidence:** The engine still computes a steadiness score (Welford's variance over the last taps). It is not shown and does not gate learning. Smart learns from the first six lines the user advances, then advances at the learned pace.
+* **Variance & Confidence:** The engine still computes a steadiness score (Welford's variance over the last taps). It is not shown and does not gate learning. Learn takes the first six lines the user advances, then advances at the learned pace. The same pace is used by Manual, which is set by the slider.
 
 
 ---
@@ -73,7 +73,7 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 7. Mangalam / Samarpanam
 
 ### B. Phase 1 vs Phase 2 (Panchangam Roadmap)
-* **Milestone 1 (Current):** Prakara builder with custom vakya insertion and an optional creator name, Smart and Plain cadence with a learning phase, a pausable countdown ring, persisted pace and reading position, script-aware titles, a back-to-line control, and instant link sharing. Drag-and-drop reordering is not implemented.
+* **Milestone 1 (Current):** Prakara builder with custom vakya insertion and an optional creator name, Off, Manual and Learn cadence modes, with a learned pace, a pausable countdown ring, persisted pace and reading position, script-aware titles, a back-to-line control, and instant link sharing. Drag-and-drop reordering is not implemented.
 * **Milestone 2 (Future Phase):** Dynamic Panchangam calculation:
   - Client-side astronomical ephemeris (Lahiri / Drik) deriving Samvatsara, Ayana, Ritu, Masa, Paksha, Tithi, Vasara, Nakshatra, Yoga, Karana.
   - Dynamic Sankalpam generator filling in family Gotra, Nakshatra, Rasi, Name, and geographic Kshetra (river/temple/city coordinates).

@@ -42,9 +42,17 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .cadence-status .icon-btn[data-phase="waiting"] svg,
-  .cadence-status .icon-btn[data-phase="measuring"] svg {
+  .cadence-modes[data-phase="waiting"] [data-mode="learn"],
+  .cadence-modes[data-phase="measuring"] [data-mode="learn"] {
     animation: learn-pulse 1.6s ease-in-out infinite;
+  }
+
+  .tempo[data-off="true"] {
+    opacity: 0.3;
+  }
+
+  .tempo[data-off="true"] input {
+    cursor: default;
   }
 
   .tempo[data-phase="engaged"] input,
@@ -86,7 +94,7 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .learn-indicator[data-phase="plain"] {
+  .learn-indicator[data-phase="off"] {
     visibility: hidden;
   }
 
@@ -111,9 +119,6 @@
     stroke-width: 1.4;
   }
 
-  .learn-indicator[data-phase="engaged"] .learn-led circle {
-    fill: currentColor;
-  }
 
   .learn-indicator[data-phase="waiting"] .learn-led {
     animation: led-pulse 1.4s ease-in-out infinite;

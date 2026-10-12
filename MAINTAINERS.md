@@ -12,13 +12,13 @@
   │     drop panels (settings, prakara details, cadence), modals
   ├── zustand stores
   │     ├── persisted: useSettingsStore (parayanam-settings)
-  │     │             useCadenceStore  (parayanam-cadence)
+  │     │             useCadenceStore  (parayanam-cadence: mode, learned lines, pace)
   │     │             usePrakaraStore  (parayanam-prakaras)
   │     │             useMantraStore   (parayanam-progress: line per prakara, zen)
   │     └── in memory: useRoomStore, cadence pause and learning clock
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
-  ├── Cadence phase machine (services/cadenceMachine.ts, pure transition function)
+  ├── Cadence mode machine (services/cadenceMachine.ts: Off, Manual, Learn; pure transition function)
   ├── Cadence engine (pace 250-3000 ms per mātrā, learned from taps)
   ├── Syllabifier (mātrā weights; only chant counts, verse numbers ignored)
   ├── URL codec (CompressionStream deflate -> #p=...)
@@ -31,7 +31,7 @@
   └── POST /api/auth/*/verify  -> 501 until WebAuthn verification is implemented
 ```
 
-Stored preference keys (zustand persist) hold only validated values. Cadence phases change only through `transition()` in `services/cadenceMachine.ts`. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
+Stored preference keys (zustand persist) hold only validated values. Cadence phases change only through `transition()` in `services/cadenceMachine.ts`. See DESIGN.md §5b for the three modes. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
 
 ---
 

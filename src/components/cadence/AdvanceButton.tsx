@@ -10,9 +10,8 @@ export function AdvanceButton() {
     <button
       className="btn-primary"
       data-phase={phase}
-      disabled={phase === 'engaged'}
       onClick={() => advanceChunk(usePrakaraStore.getState().getFlattenedChunks())}
-      title={learning ? 'Tap the line or press Space to teach your pace' : 'Press Space to move to the next line'}
+      title={learning ? 'Tap the line or press Space to teach your pace' : 'Next line (Space). Restarts the countdown'}
     >
       {learning ? 'Tap' : 'Next'}
     </button>

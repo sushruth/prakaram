@@ -3,31 +3,33 @@ import { persist } from 'zustand/middleware';
 import { CadenceLearningEngine, TEMPO } from '../services/cadenceEngine';
 import {
   CadenceEvent,
+  CadenceMode,
   CadencePhase,
   INITIAL_LEARNING,
   LEARN_LINES,
   LearningState,
+  isAutoRunning,
   isLearning,
+  modeOf,
   transition,
 } from '../services/cadenceMachine';
 import { clampNumber, oneOf } from './persistence';
 
-export { LEARN_LINES, isLearning };
-export type { CadencePhase };
+export { LEARN_LINES, isAutoRunning, isLearning, modeOf };
+export type { CadenceMode, CadencePhase };
 
-const PHASES: readonly CadencePhase[] = ['plain', 'waiting', 'measuring', 'engaged'];
+const MODES: readonly CadenceMode[] = ['off', 'manual', 'learn'];
 
 interface CadenceState extends LearningState {
   msPerMatra: number;
   engine: CadenceLearningEngine;
   send: (event: CadenceEvent) => void;
-  smartOn: () => void;
-  smartOff: () => void;
+  setMode: (mode: CadenceMode) => void;
   tap: (chunkId: string, chunkSanskrit: string) => void;
   resetLearning: () => void;
   followHost: (on: boolean) => void;
-  setMsPerMatra: (ms: number) => void;
   togglePause: () => void;
+  setMsPerMatra: (ms: number) => void;
 }
 
 const engine = new CadenceLearningEngine(TEMPO.fallback);
@@ -41,7 +43,7 @@ export const useCadenceStore = create<CadenceState>()(
         const before = get();
         const next = transition(before, event);
         if (next === before) return;
-        if (event.type === 'smartOn' || event.type === 'smartOff' || event.type === 'reset') engine.resetSession();
+        if (event.type === 'setMode' || event.type === 'reset') engine.resetSession();
         if (event.type === 'tap') engine.registerTap(event.chunkId, event.chunkSanskrit);
         set({ ...next, ...snapshot() });
       };
@@ -50,8 +52,7 @@ export const useCadenceStore = create<CadenceState>()(
         msPerMatra: engine.getMsPerMatra(),
         engine,
         send,
-        smartOn: () => send({ type: 'smartOn' }),
-        smartOff: () => send({ type: 'smartOff' }),
+        setMode: (mode) => send({ type: 'setMode', mode }),
         tap: (chunkId, chunkSanskrit) => send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit }),
         resetLearning: () => send({ type: 'reset' }),
         followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
@@ -64,29 +65,30 @@ export const useCadenceStore = create<CadenceState>()(
     },
     {
       name: 'parayanam-cadence',
-      version: 4,
+      version: 5,
       partialize: ({ phase, learnedLines, msPerMatra }) => ({
-        phase: phase === 'measuring' ? 'waiting' : phase,
+        mode: modeOf(phase),
         learnedLines,
         msPerMatra,
       }),
+      // Older saves are passed through, so their phases can be mapped to modes in merge.
+      migrate: (persisted) => persisted as { mode: CadenceMode; learnedLines: number; msPerMatra: number },
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
         const learned = clampNumber(p.learnedLines, 0, LEARN_LINES, 0);
-        const legacy: CadencePhase =
-          p.smart === true ? (learned >= LEARN_LINES ? 'engaged' : 'waiting') : 'plain';
-        const phase = oneOf(p.phase, PHASES, legacy);
+        // Older saves used phases; a plain save meant no auto-advance.
+        const legacy: CadenceMode =
+          p.phase === 'plain' ? 'off' : p.smart === true || typeof p.phase === 'string' ? 'learn' : 'manual';
+        const mode = oneOf(p.mode, MODES, legacy);
+        const phase: CadencePhase =
+          mode === 'off' ? 'off' : mode === 'manual' ? 'manual' : learned >= LEARN_LINES ? 'engaged' : 'waiting';
         return {
           ...current,
           phase,
-          learnedLines: phase === 'plain' ? 0 : phase === 'engaged' ? LEARN_LINES : learned,
+          learnedLines: phase === 'engaged' ? LEARN_LINES : mode === 'learn' ? learned : 0,
           firstTapAt: null,
-          msPerMatra: clampNumber(
-            p.msPerMatra ?? (typeof p.bpm === 'number' ? 60000 / p.bpm : undefined),
-            TEMPO.min,
-            TEMPO.max,
-            current.msPerMatra,
-          ),
+          paused: false,
+          msPerMatra: clampNumber(p.msPerMatra, TEMPO.min, TEMPO.max, current.msPerMatra),
         };
       },
     },

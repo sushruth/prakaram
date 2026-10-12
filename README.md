@@ -18,9 +18,9 @@
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
 * **Single-Chunk Focus:** Highlights one line at a time. Other lines fade. At least one line is always highlighted.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.
-* **Smart or Plain:** one icon in the cadence panel. **Plain** moves on with Tap, Next or Space and learns nothing. **Smart** waits for your first tap, measures six lines you tap through while the header shows seconds and the count, then advances the lines itself at the learned pace. Learning is one run; a reload resumes it from the count.
+* **Three modes:** **Off** (you move the lines), **Manual** (lines advance at the set pace; the default), and **Learn** (six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider).
 * **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 250 to 3000 (833 by default). Learned pace is clamped to the same range.
-* **Countdown ring:** once engaged, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.
+* **Countdown ring:** in Manual, and once Learn has finished, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
 * **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.
 * **Header:** a flame mark and the prakara title on the left (tap the title for details), then the learning indicator and five icons: settings, cadence, prakara sequences, live room, and zen.

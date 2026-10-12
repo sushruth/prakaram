@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
-import { isLearning, useCadenceStore } from '../stores/useCadenceStore';
+import { isAutoRunning, isLearning, useCadenceStore } from '../stores/useCadenceStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
@@ -26,6 +26,7 @@ export function ZenMantraReader() {
 
   const phase = useCadenceStore((s) => s.phase);
   const paused = useCadenceStore((s) => s.paused);
+  const autoRunning = useCadenceStore(isAutoRunning);
   const pausedRef = useRef(paused);
   pausedRef.current = paused;
   const leftover = useRef<{ index: number; ms: number } | null>(null);
@@ -54,9 +55,9 @@ export function ZenMantraReader() {
 
   useEffect(() => {
     if (isInRoom && isHost) {
-      chantingRoom.broadcastChunkChange(activeChunkIndex, msPerMatra, phase === 'engaged', activePrakara.id);
+      chantingRoom.broadcastChunkChange(activeChunkIndex, msPerMatra, autoRunning, activePrakara.id);
     }
-  }, [activeChunkIndex, msPerMatra, phase, isInRoom, isHost, activePrakara.id]);
+  }, [activeChunkIndex, msPerMatra, autoRunning, isInRoom, isHost, activePrakara.id]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -82,7 +83,7 @@ export function ZenMantraReader() {
   }, [chunks, nextChunk, prevChunk, toggleZenMode]);
 
   useEffect(() => {
-    if (phase !== 'engaged' || paused) return;
+    if (!autoRunning) return;
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
@@ -94,7 +95,7 @@ export function ZenMantraReader() {
       clearTimeout(timer);
       if (pausedRef.current) leftover.current = { index: activeChunkIndex, ms: Math.max(0, left - (Date.now() - started)) };
     };
-  }, [phase, paused, activeChunkIndex, msPerMatra, chunks, nextChunk]);
+  }, [autoRunning, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
   const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {

@@ -76,7 +76,7 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Active | 1 | none | none |
 | Inactive | 0.35 | none | none |
 | Inactive, hovered | 0.6 | none | none |
-| Next line while learning (Smart, waiting or measuring) | 0.6 | none | none |
+| Next line while learning (Learn, waiting or measuring) | 0.6 | none | none |
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
 The instruction label ("Vakya / Procedure") is an uppercase teal label above the text. It has no fill.
@@ -103,7 +103,7 @@ The reader is a page, not a set of cards.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
-- The learning indicator sits between the title and the icons. While learning it shows seconds above a hollow ring and the `n/6` count. Once engaged it shows only a countdown ring to the next line, which restarts on every line. It is hidden in plain mode, but keeps its space.
+- The learning indicator sits between the title and the icons. While learning it shows seconds above a hollow ring and the `n/6` count. In Manual and once learned it shows only the countdown ring, which restarts on every line. It is hidden in Off, but keeps its space.
 - The title is never clipped. A long word that does not fit wraps by character, and the header grows to fit it.
 
 ## 5c. Line Kinds
@@ -120,71 +120,92 @@ Only the first phrase of a split line carries the label.
 
 ## 5b. Cadence
 
-Cadence has one state machine. It lives in `src/services/cadenceMachine.ts` as a pure `transition(state, event)` function. The store in `src/stores/useCadenceStore.ts` is the only place a phase changes, and it applies transitions through `send`. Components read the phase; they never set it.
+Cadence lives in a drop panel opened by the cadence icon in the header. The panel holds three things: the mode, the pace slider, and Next or Tap with Share and Reset. Only one drop panel is open at a time.
+
+The cadence state machine lives in `src/services/cadenceMachine.ts` as a pure `transition(state, event)` function. The store in `src/stores/useCadenceStore.ts` is the only place a phase changes, through `send`. Components read the phase and never set it.
+
+### Modes
+
+There is one pace, in milliseconds per mātrā. Every mode uses it.
+
+| Mode | What it does | Pace slider | Next or Tap | Countdown ring |
+| :--- | :--- | :--- | :--- | :--- |
+| **Off** | No auto-advance. You move the lines. | Pale and disabled | Next | Hidden |
+| **Manual** (default) | Lines advance on their own at the set pace. | Live, sets the pace | Next. Restarts the countdown | Shown, with pause |
+| **Learn** | Taps teach the pace. After six lines, lines advance at the learned pace. | Live afterwards, adjusts the learned pace | Tap while learning, then Next | Seconds and count while learning; ring once learned |
 
 ### States
 
-| Phase | Meaning | Smart icon | Header LED | Seconds | Tap / Next | Tempo slider | Reader |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `plain` | Smart is off. You move the lines. | off | hidden (space kept) | hidden | "Next", enabled | plain | normal scroll |
-| `waiting` | Smart is on. No tap yet this run, or a reload happened mid-run. | on, glow pulses | ring pulses | `0 s` | "Tap", pulses | learning glow pulses | scroll locked, next line 60% |
-| `measuring` | Taps are being counted. The clock runs from the first tap. | on, glow pulses | ring steady | ticking | "Tap", steady | learning glow pulses | scroll locked, next line 60% |
-| `engaged` | Six lines learned. The app advances lines at the learned pace. | on, glow steady | countdown ring, no numbers, restarts each line | frozen | "Next", disabled | glow steady | normal scroll, lines advance on their own |
+| Phase | Mode | Meaning | Header | Next / Tap | Reader |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `off` | Off | No auto-advance | Hidden (space kept) | "Next" | Normal scroll |
+| `manual` | Manual | Auto-advance at the set pace | Countdown ring, with pause | "Next" | Normal scroll, lines advance |
+| `waiting` | Learn | No tap yet this run, or a reload happened mid-run | `0 s`, `0/6`, pulsing ring | "Tap", pulses | Scroll locked, next line 60% |
+| `measuring` | Learn | Taps are counted. The clock runs from the first tap | Seconds ticking, `n/6` | "Tap" | Scroll locked, next line 60% |
+| `engaged` | Learn | Six lines learned, lines advance at the learned pace | Countdown ring, with pause | "Next" | Normal scroll, lines advance |
 
-`LEARN_LINES` is 6. Every tap while learning counts as one learned line. The seconds clock starts on the first tap, not when Smart turns on.
+`LEARN_LINES` is 6. Every tap while learning counts as one learned line. The seconds clock starts on the first tap, not when Learn is chosen. Pause is a flag inside `manual` and `engaged`. It is not saved.
 
 ### Events
 
 | Event | Source | Effect |
 | :--- | :--- | :--- |
-| `smartOn` | Smart icon | `plain` to `waiting`, count to 0 |
-| `smartOff` | Smart icon | any phase to `plain`, count to 0 |
-| `tap` | Tap button, Space, or clicking the active line or the next line | `waiting` or `measuring` to `measuring`; the sixth tap moves to `engaged` |
-| `reset` | Clear recorded taps | `waiting`, `measuring` or `engaged` to `waiting`, count to 0; no-op when `plain` |
-| `hostOn` / `hostOff` | Room sync from the host | `engaged` on or off; a follower's Smart icon is disabled |
+| `setMode` | The mode control | Off, Manual, or a fresh Learn run. Setting the current mode changes nothing |
+| `tap` | Tap, Space, or clicking the active or next line | Learning only: counts a learned line; the sixth moves to `engaged` |
+| `reset` | Clear recorded taps | Learning phases and `engaged` go back to `waiting` at zero. No-op in `off` and `manual` |
+| `togglePause` | Tapping the ring | Pauses or resumes in `manual` and `engaged` |
+| `hostOn` / `hostOff` | Room sync from the host | `engaged` on or off. A follower's mode control is disabled |
 
 ### Transitions
 
 ```mermaid
 stateDiagram-v2
-  [*] --> plain
-  plain --> waiting: smartOn
+  [*] --> manual
+  manual --> off: setMode off
+  off --> manual: setMode manual
+  manual --> waiting: setMode learn
+  off --> waiting: setMode learn
   waiting --> measuring: tap (1st)
   measuring --> measuring: tap (2nd to 5th)
   measuring --> engaged: tap (6th)
   waiting --> waiting: reset
   measuring --> waiting: reset
   engaged --> waiting: reset
-  waiting --> plain: smartOff
-  measuring --> plain: smartOff
-  engaged --> plain: smartOff
-  plain --> engaged: hostOn
-  engaged --> plain: hostOff
+  waiting --> off: setMode off
+  measuring --> manual: setMode manual
+  engaged --> manual: setMode manual
+  engaged --> off: setMode off
+  off --> engaged: hostOn
+  engaged --> off: hostOff
 ```
 
-Taps in `engaged` and `plain` are ignored. A reload moves `measuring` back to `waiting` with the count kept, and the clock restarts at the next tap.
+Taps in `off`, `manual` and `engaged` are ignored. A reload turns `measuring` back into `waiting` with the count kept, and the clock restarts at the next tap.
+
+### Auto-advance
+
+A line advances on its own in `manual` and `engaged` unless paused. The timer is the line's mātrā weight times the pace. Next, or a click on a line, restarts the countdown for the new line. The pace slider changes the pace at once, so the countdown is never stale.
 
 ### Tap target
 
-- Clicking the active line or the next line counts as a tap while learning. Clicking a line further away resets learning to `waiting` with the count at zero, then jumps to that line. Outside learning, it just jumps.
-- While learning, the page does not scroll and text cannot be selected. The next line is drawn at 60% opacity, and the rest stay at 35%, so the tap target is visible.
-- Space and the Tap button do the same as tapping the active line.
+- While learning, clicking the active line or the next line counts as a tap. Clicking a line further away resets learning to `waiting` at zero, then jumps to it. Outside learning, a click jumps.
+- While learning, the page does not scroll and text cannot be selected. The next line is drawn at 60% opacity so the tap target is visible.
+- Space does the same as Next, or as a tap while learning.
 
 ### Highlights
 
-Smart controls use the flame glow on the glyph or value, as with any active control. Waiting and measuring pulse that glow; engaged holds it steady. The tempo slider takes the same highlight in both learning phases to show that it is being learned. Dragging the slider while Smart is on nudges the learned pace.
+Learn uses the flame glow on its label. It pulses while waiting and measuring, and holds steady once engaged. The pace slider takes the same highlight while learning. Manual has no highlight: it is the plain setting.
 
-**Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its mātrā weight times the pace.
+### Countdown
 
-**Pause.** Tapping the ring pauses auto progress. The ring freezes and a yellow pause mark appears inside it. The ring is yellow, with a faint full track behind the moving arc. Tapping again resumes with the time that was left. Pause is for the engaged phase only, and it is not saved: a reload starts unpaused. Jumping to another line while paused restarts that line at full time when you resume.
+The header ring is yellow. A faint full ring shows behind the moving arc. It empties over the time left on the current line, then restarts for the next. Tapping it pauses. A yellow pause mark appears inside, and tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume.
 
-**Only chant is timed.** A line's time counts Devanagari letters, marks, swara and dandas. Anything else adds nothing: Latin text, brackets, pipes, and verse numbers such as `॥ २ ॥` or `|| 12 ||`. A numbered end keeps one danda, so the line still pauses at its end. The Vedic sign `ꣳ` is pronounced on its own and takes one mātrā.
+### Pace
 
-**Pace.** One slider in milliseconds per mātrā, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
+One slider, in milliseconds per mātrā, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.
 
-**Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
+**Disabled.** A disabled control is drawn at 30% opacity and does not respond. The pace slider is disabled in Off. The mode control is disabled for a room follower, whose host controls cadence.
 
-Every choice in this panel (Smart, learned lines, pace) is persisted.
+**Persistence.** The mode, the learned line count and the pace are saved. Pause and the learning clock are not. Older saves migrate: a saved `plain` becomes Off, and any other saved state becomes Manual or Learn.
 
 ## 5d. Zen
 
