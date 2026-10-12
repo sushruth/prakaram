@@ -25,7 +25,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
 * Parayanam normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
   $$\hat{m}_k = \frac{\Delta t_k}{W_k} \implies \text{BPM}_k = \frac{60000}{\hat{m}_k}$$
-* **Variance & Confidence:** Using Welford's running variance over a 5-chunk window, the engine calculates the Coefficient of Variation ($CV = \frac{\sigma}{\bar{m}}$). If $CV \le 0.12$ over 3–5 chunks, the practitioner has established a steady cadence. The Steadiness readout shows the score in Learn mode. Auto mode does not wait for a confidence threshold; it advances at the current tempo.
+* **Variance & Confidence:** Using Welford's running variance over a 5-chunk window, the engine calculates the Coefficient of Variation ($CV = \frac{\sigma}{\bar{m}}$). If $CV \le 0.12$ over 3–5 chunks, the practitioner has established a steady cadence. Smart mode does not wait for this score. It learns from the first four lines you advance (`LEARN_LINES`), then advances at the learned tempo.
 * **Tempo Scales:** Three classical Vedic layas are provided as presets:
   1. **Dhyāna (ध्यान / Vilambita Laya)**: $40 - 52\text{ BPM}$ (Slow, meditative, deliberate)
   2. **Abhyāsa (अभ्यास / Madhya Laya)**: $60 - 75\text{ BPM}$ (Daily adhyayana study speed)

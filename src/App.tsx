@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'preact/hooks';
 import { Header } from './components/Header';
 import { ZenMantraReader } from './components/ZenMantraReader';
-import { CadenceControlBar } from './components/CadenceControlBar';
+import { CadencePanel } from './components/CadencePanel';
 import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { ChantingRoomModal } from './components/ChantingRoomModal';
 import { SettingsSheet } from './components/SettingsSheet';
@@ -10,7 +10,7 @@ import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 
-type DropKind = 'settings' | 'details';
+type DropKind = 'settings' | 'details' | 'cadence';
 
 export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
@@ -52,15 +52,17 @@ export function App() {
         onOpenRoom={() => setIsRoomOpen(true)}
         onOpenSettings={() => toggle('settings')}
         onOpenDetails={() => toggle('details')}
+        onOpenCadence={() => toggle('cadence')}
         settingsOpen={drop === 'settings'}
         detailsOpen={drop === 'details'}
+        cadenceOpen={drop === 'cadence'}
       />
 
       <SettingsSheet isOpen={drop === 'settings'} onClose={closeDrop} />
       <PrakaraDetails isOpen={drop === 'details'} onClose={closeDrop} />
+      <CadencePanel isOpen={drop === 'cadence'} onClose={closeDrop} />
 
       <ZenMantraReader />
-      <CadenceControlBar />
 
       <PrakaraBuilderModal isOpen={isPrakaraOpen} onClose={() => setIsPrakaraOpen(false)} />
       <ChantingRoomModal isOpen={isRoomOpen} onClose={() => setIsRoomOpen(false)} />

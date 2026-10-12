@@ -32,6 +32,12 @@
     color: var(--text-primary);
   }
 
+  .btn-primary:disabled,
+  .icon-btn:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   .btn-primary:active {
     transform: scale(0.97);
     filter: var(--flame);

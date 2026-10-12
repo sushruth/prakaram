@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
-import { useCadenceStore } from '../stores/useCadenceStore';
+import { selectPhase, useCadenceStore } from '../stores/useCadenceStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
@@ -26,7 +26,7 @@ export function ZenMantraReader() {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
 
-  const mode = useCadenceStore((s) => s.mode);
+  const phase = useCadenceStore(selectPhase);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
   const prakaras = usePrakaraStore((s) => s.prakaras);
@@ -56,9 +56,9 @@ export function ZenMantraReader() {
 
   useEffect(() => {
     if (isInRoom && isHost) {
-      chantingRoom.broadcastChunkChange(activeChunkIndex, msPerMatra, mode === 'auto', activePrakara.id);
+      chantingRoom.broadcastChunkChange(activeChunkIndex, msPerMatra, phase === 'engaged', activePrakara.id);
     }
-  }, [activeChunkIndex, msPerMatra, mode, isInRoom, isHost, activePrakara.id]);
+  }, [activeChunkIndex, msPerMatra, phase, isInRoom, isHost, activePrakara.id]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -84,13 +84,13 @@ export function ZenMantraReader() {
   }, [chunks, nextChunk, prevChunk, toggleZenMode]);
 
   useEffect(() => {
-    if (mode !== 'auto') return;
+    if (phase !== 'engaged') return;
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
     const timer = setTimeout(() => nextChunk(chunks.length), chunkMatras(current.sanskrit) * msPerMatra);
     return () => clearTimeout(timer);
-  }, [mode, activeChunkIndex, msPerMatra, chunks, nextChunk]);
+  }, [phase, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
   const handleChunkClick = (index: number) => {
     if (index === activeChunkIndex) advanceChunk(chunks);

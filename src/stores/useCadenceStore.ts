@@ -2,49 +2,51 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { LAYA_PRESETS, LayaType } from '../types/cadence';
 import { CadenceLearningEngine, TEMPO } from '../services/cadenceEngine';
-import { clampNumber, oneOf } from './persistence';
+import { boolOr, clampNumber, oneOf } from './persistence';
 
-export type CadenceMode = 'off' | 'learn' | 'auto';
-export const CADENCE_MODES: readonly CadenceMode[] = ['off', 'learn', 'auto'];
+export const LEARN_LINES = 4;
 
-const LAYA_IDS = Object.keys(LAYA_PRESETS) as LayaType[];
+export type CadencePhase = 'plain' | 'learning' | 'engaged';
 
 interface CadenceState {
-  mode: CadenceMode;
+  smart: boolean;
+  learnedLines: number;
   laya: LayaType;
   bpm: number;
   msPerMatra: number;
-  confidenceScore: number;
   engine: CadenceLearningEngine;
-  setMode: (mode: CadenceMode) => void;
+  setSmart: (smart: boolean, learnedLines?: number) => void;
   setBpm: (bpm: number, laya?: LayaType) => void;
   setLayaPreset: (laya: LayaType) => void;
   registerTap: (chunkId: string, chunkSanskrit: string) => void;
   resetCadence: () => void;
 }
 
+const LAYA_IDS = Object.keys(LAYA_PRESETS) as LayaType[];
+
+export const selectPhase = (s: Pick<CadenceState, 'smart' | 'learnedLines'>): CadencePhase =>
+  !s.smart ? 'plain' : s.learnedLines < LEARN_LINES ? 'learning' : 'engaged';
+
 const engine = new CadenceLearningEngine(TEMPO.fallback);
 
 const snapshot = () => {
   const m = engine.getMetrics();
-  return {
-    bpm: m.currentBpm,
-    laya: m.activeLaya,
-    msPerMatra: m.msPerMatra,
-    confidenceScore: m.confidenceScore,
-  };
+  return { bpm: m.currentBpm, laya: m.activeLaya, msPerMatra: m.msPerMatra };
 };
 
 export const useCadenceStore = create<CadenceState>()(
   persist(
     (set) => ({
-      mode: 'off',
+      smart: false,
+      learnedLines: 0,
       laya: 'abhyasa',
       bpm: TEMPO.fallback,
       msPerMatra: engine.getMsPerMatra(),
-      confidenceScore: 0,
       engine,
-      setMode: (mode) => set({ mode }),
+      setSmart: (smart, learnedLines = 0) => {
+        if (smart) engine.resetSession();
+        set({ smart, learnedLines: smart ? learnedLines : 0, ...snapshot() });
+      },
       setBpm: (bpm, laya = 'custom') => {
         engine.setBpm(clampNumber(bpm, TEMPO.min, TEMPO.max, TEMPO.fallback), laya);
         set(snapshot());
@@ -55,22 +57,24 @@ export const useCadenceStore = create<CadenceState>()(
       },
       registerTap: (chunkId, chunkSanskrit) => {
         engine.registerTap(chunkId, chunkSanskrit);
-        set(snapshot());
+        set((s) => ({ ...snapshot(), learnedLines: Math.min(LEARN_LINES, s.learnedLines + 1) }));
       },
       resetCadence: () => {
         engine.resetSession();
-        set(snapshot());
+        set({ learnedLines: 0, ...snapshot() });
       },
     }),
     {
       name: 'parayanam-cadence',
-      version: 1,
-      partialize: ({ mode, laya, bpm }) => ({ mode, laya, bpm }),
+      version: 2,
+      partialize: ({ smart, learnedLines, laya, bpm }) => ({ smart, learnedLines, laya, bpm }),
       merge: (persisted, current) => {
-        const p = (persisted ?? {}) as Partial<CadenceState>;
+        const p = (persisted ?? {}) as Record<string, unknown>;
+        const legacySmart = p.mode === 'learn' || p.mode === 'auto';
         return {
           ...current,
-          mode: oneOf(p.mode, CADENCE_MODES, current.mode),
+          smart: boolOr(p.smart, legacySmart),
+          learnedLines: clampNumber(p.learnedLines, 0, LEARN_LINES, 0),
           laya: oneOf(p.laya, LAYA_IDS, current.laya),
           bpm: clampNumber(p.bpm, TEMPO.min, TEMPO.max, current.bpm),
         };

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { clampNumber } from './persistence';
+import { boolOr, clampNumber } from './persistence';
 
 interface MantraState {
   prakaraId: string | null;
@@ -38,7 +38,7 @@ export const useMantraStore = create<MantraState>()(
     {
       name: 'parayanam-progress',
       version: 1,
-      partialize: ({ prakaraId, positions }) => ({ prakaraId, positions }),
+      partialize: ({ prakaraId, positions, zenMode }) => ({ prakaraId, positions, zenMode }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as { prakaraId?: unknown; positions?: unknown };
         const raw = p.positions && typeof p.positions === 'object' ? (p.positions as Record<string, unknown>) : {};
@@ -48,6 +48,7 @@ export const useMantraStore = create<MantraState>()(
         const prakaraId = typeof p.prakaraId === 'string' ? p.prakaraId : null;
         return {
           ...current,
+          zenMode: boolOr((p as { zenMode?: unknown }).zenMode, current.zenMode),
           prakaraId,
           positions,
           activeChunkIndex: prakaraId ? (positions[prakaraId] ?? 0) : 0,

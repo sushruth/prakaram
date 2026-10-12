@@ -18,7 +18,7 @@
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
 * **Single-Chunk Focus:** Highlights one line at a time. Other lines fade to half transparency.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights.
-* **Three Cadence Modes:** **Off** (tap or Space moves on, nothing recorded), **Learn** (each tap is measured to learn your pace, lines do not advance by themselves, a *Steadiness* readout shows consistency), **Auto** (lines advance on their own at the current tempo).
+* **Smart or Plain:** one icon in the cadence panel. **Plain** moves on with Tap, Next or Space and learns nothing. **Smart** learns your pace from the first four lines you advance, then advances the lines itself at the learned tempo.
 * **Tempo:** one labelled slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range.
 * **Laya Scales:**
   - **Dhyāna (ध्यान / Vilambita Laya):** 48 BPM (Meditative, deliberate)

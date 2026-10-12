@@ -1,9 +1,33 @@
 @layer components {
-  .cadence-mode,
+  .cadence-status {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .cadence-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .cadence-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
   .tempo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+  }
+
+  .tempo input {
+    flex: 1;
+    min-width: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
   }
 
   .bar-label {
@@ -11,16 +35,34 @@
     color: var(--text-muted);
   }
 
-  .tempo input {
-    width: 90px;
-    accent-color: var(--accent);
-    cursor: pointer;
-  }
-
   .tempo-value {
     min-width: 4.5rem;
     font-size: 0.8rem;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
+  }
+
+  .cadence-status .icon-btn[data-phase="learning"] svg {
+    animation: learn-pulse 1.6s ease-in-out infinite;
+  }
+
+  .tempo[data-phase="engaged"] input,
+  .tempo[data-phase="engaged"] .tempo-value {
+    filter: var(--flame);
+  }
+
+  .tempo[data-phase="learning"] input,
+  .tempo[data-phase="learning"] .tempo-value {
+    animation: learn-pulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes learn-pulse {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 1px color-mix(in srgb, var(--flame-core) 35%, transparent));
+    }
+    50% {
+      filter: var(--flame);
+    }
   }
 }

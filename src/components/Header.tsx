@@ -11,11 +11,22 @@ interface HeaderProps {
   onOpenRoom: () => void;
   onOpenSettings: () => void;
   onOpenDetails: () => void;
+  onOpenCadence: () => void;
   settingsOpen: boolean;
   detailsOpen: boolean;
+  cadenceOpen: boolean;
 }
 
-export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen, detailsOpen }: HeaderProps) {
+export function Header({
+  onOpenPrakara,
+  onOpenRoom,
+  onOpenSettings,
+  onOpenDetails,
+  onOpenCadence,
+  settingsOpen,
+  detailsOpen,
+  cadenceOpen,
+}: HeaderProps) {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
   const script = useSettingsStore((s) => s.script);
@@ -46,6 +57,16 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, onOpenDetail
           title="Settings"
         >
           <Icon name="gear" size={20} />
+        </button>
+
+        <button
+          className="icon-btn"
+          onClick={onOpenCadence}
+          aria-label="Cadence"
+          aria-expanded={cadenceOpen}
+          title="Cadence"
+        >
+          <Icon name="hand-tap" size={20} />
         </button>
 
         <button className="icon-btn" onClick={onOpenPrakara} aria-label="Prakara sequences" title="Prakara sequences">

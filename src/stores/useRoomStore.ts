@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { chantingRoom } from '../services/webrtcRoom';
 import { SyncMessage } from '../types/cadence';
 import { useMantraStore } from './useMantraStore';
-import { useCadenceStore } from './useCadenceStore';
+import { LEARN_LINES, selectPhase, useCadenceStore } from './useCadenceStore';
 
 interface RoomState {
   isInRoom: boolean;
@@ -35,10 +35,11 @@ export const useRoomStore = create<RoomState>((set) => ({
             const bpm = Math.round(60000 / msg.msPerMatra);
             useCadenceStore.getState().setBpm(bpm);
           }
+          const cadence = useCadenceStore.getState();
           if (msg.autoProgress) {
-            useCadenceStore.getState().setMode('auto');
-          } else if (useCadenceStore.getState().mode === 'auto') {
-            useCadenceStore.getState().setMode('off');
+            if (selectPhase(cadence) !== 'engaged') cadence.setSmart(true, LEARN_LINES);
+          } else if (cadence.smart && selectPhase(cadence) === 'engaged') {
+            cadence.setSmart(false);
           }
         }
       },

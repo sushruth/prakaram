@@ -95,7 +95,7 @@ The reader is a page, not a set of cards.
 - The header is one vertically centred row: brand, prakara title, and icons.
 - The prakara title is the centre of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
-- Settings and details use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
+- Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
 
 ## 5c. Line Kinds
 
@@ -111,13 +111,19 @@ Only the first phrase of a split line carries the label.
 
 ## 5b. Cadence
 
-The control bar has three labelled cadence modes. The mode is always visible; nothing is hidden behind an icon.
+Cadence lives in a drop panel opened by the cadence icon in the header, like settings. The bottom bar is gone. Only one panel is open at a time.
 
-- **Off:** Tap or Space moves to the next line. Nothing is recorded.
-- **Learn:** each tap is measured to learn your pace. Lines do not advance by themselves. A "Steadiness" readout shows how consistent your taps are.
-- **Auto:** lines advance by themselves at the current tempo. Tempo is in matras per minute, so a long line takes longer than a short one.
+- **Smart** (icon, on or off): one icon, always visible. Off is **Plain**: you move the lines with Tap, Next or Space, and nothing is learned.
+- **Learning** (Smart on, first `LEARN_LINES` = 4 lines): each advance is a tap that teaches your pace. The status line counts "Learning your pace: 2 of 4 lines". Lines do not advance by themselves.
+- **Engaged** (Smart, after learning): lines advance by themselves at the current tempo. Tap and Next are disabled. Arrow keys still move between lines.
+- Tempo is one slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range. Presets (Dhyāna, Abhyāsa, Pārāyaṇa) set it directly.
+- Turning Smart off removes every highlight.
 
-Tempo is one slider, labelled Tempo, from 36 to 130. Learned tempo is clamped to the same range. Presets (Dhyāna, Abhyāsa, Pārāyaṇa) set the tempo directly.
+**Highlights.** Smart controls use the flame glow on the glyph or the value, as with any active control. The learning phase pulses that glow; the engaged phase holds it steady. The tempo slider takes the same highlight in both smart phases, to show the app is driving it. Dragging the slider while Smart is on nudges the learned pace.
+
+**Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
+
+Every choice in this panel (Smart, learned lines, preset, tempo) is persisted.
 
 ## 6. Translations
 
@@ -128,9 +134,9 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header is one row, vertically centred: brand on the left, four borderless icon buttons on the right (settings, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
+- Header is one row, vertically centred: brand on the left, five borderless icon buttons on the right (settings, cadence, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
-- The control bar wraps onto rows. Nothing is hidden off-screen.
+- Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
 - Touch targets stay at 38 px minimum.
 
 ---
@@ -146,6 +152,7 @@ Text first. The app is words on paper, and controls are words too.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
 - **The glow belongs to the glyph, never the box.** Icon buttons have no fill, tint, hover box or border in any state. The flame filter is applied to the icon's `svg`, so only the drawn shape glows. Never put `filter` on a button or a container.
 - **Pressed state is a small scale-down and the flame glow on the icon.** No background change on press.
+- **Disabled is the palest version.** A disabled control drops to 30% opacity and takes no input. It keeps its shape and words.
 - **Surfaces are fills, not frames.** A panel is an opaque `--bg-base` surface with no border and no shadow. Content behind a flyout sits under the half-strength `--scrim`.
 - **Separation is space**, not lines. Use spacing and type scale before adding any rule.
 

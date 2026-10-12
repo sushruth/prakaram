@@ -1,20 +1,19 @@
 import { advanceChunk } from '../../services/advance';
 import { usePrakaraStore } from '../../stores/usePrakaraStore';
-import { useCadenceStore } from '../../stores/useCadenceStore';
-import { Icon } from '../Icon';
+import { selectPhase, useCadenceStore } from '../../stores/useCadenceStore';
 
 export function AdvanceButton() {
-  const mode = useCadenceStore((s) => s.mode);
-  const learning = mode === 'learn';
+  const phase = useCadenceStore(selectPhase);
+  const label = phase === 'learning' ? 'Tap' : 'Next';
 
   return (
     <button
       className="btn-primary"
+      disabled={phase === 'engaged'}
       onClick={() => advanceChunk(usePrakaraStore.getState().getFlattenedChunks())}
-      title={learning ? 'Tap or press Space to record your pace' : 'Press Space to move to the next line'}
+      title={phase === 'learning' ? 'Tap or press Space to teach your pace' : 'Press Space to move to the next line'}
     >
-      <Icon name="hand-tap" size={15} />
-      {learning ? 'Tap' : 'Next'}
+      {label}
     </button>
   );
 }

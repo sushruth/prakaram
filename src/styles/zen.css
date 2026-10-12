@@ -6,16 +6,6 @@
     transform: translateY(-20px);
   }
 
-  .zen-active .bottom-bar {
-    opacity: 0.18;
-    transform: translateX(-50%) translateY(4px);
-  }
-
-  .zen-active .bottom-bar:hover {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
   .zen-active .chunk-row:not(.active) {
     opacity: 0.18;
     filter: blur(0.4px);
