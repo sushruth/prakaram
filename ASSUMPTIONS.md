@@ -26,7 +26,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
 * Parayanam normalizes each user tap by dividing the inter-tap interval ($\Delta t_k$) by the theoretical mātrā weight ($W_k$) of that chunk:
   $$\hat{m}_k = \frac{\Delta t_k}{W_k}$$
-  where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 250–3000 ms.
+  where $\hat{m}_k$ is the pace in milliseconds per mātrā, clamped to 400–3000 ms.
 * **Pace on screen:** the slider and the learned value are milliseconds per mātrā. A line takes its weight times the pace.
 * **Variance & Confidence:** The engine still computes a steadiness score (Welford's variance over the last taps). It is not shown and does not gate learning. Learn takes the first six lines the user advances, then advances at the learned pace. The same pace is used by Manual, which is set by the slider.
 

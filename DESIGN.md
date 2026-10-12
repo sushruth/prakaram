@@ -201,7 +201,7 @@ The header ring is yellow. A faint full ring shows behind the moving arc. It emp
 
 ### Pace
 
-One slider, in milliseconds per mātrā, from 250 to 3000, default 833. The scale is logarithmic: equal moves of the slider multiply the pace by the same factor, so the slow and fast ends get as much room as the middle. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.
+One slider, in milliseconds per mātrā, from 400 to 3000, default 833. The scale is logarithmic: equal moves of the slider multiply the pace by the same factor, so the slow and fast ends get as much room as the middle. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.
 
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. The pace slider is disabled in Off. The mode control is disabled for a room follower, whose host controls cadence.
 
