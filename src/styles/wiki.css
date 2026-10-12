@@ -42,6 +42,7 @@
   }
 
   .wiki-titlerow {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -55,6 +56,73 @@
   }
 
   .wiki-article .wiki-follow:hover {
+    color: var(--accent);
+  }
+
+  .wiki-contents {
+    margin: 0.15rem 0 0 auto;
+  }
+
+  .wiki-article .wiki-contents-btn {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .wiki-article .wiki-contents-btn:hover,
+  .wiki-article .wiki-contents-btn[aria-expanded="true"] {
+    color: var(--accent);
+  }
+
+  /* Opaque text surface over the content, like the settings flyout: no border, shadow or tint. */
+  .wiki-contents-list {
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 0.25rem 0 0;
+    padding: 0.5rem 0;
+    list-style: none;
+    background: var(--bg-base);
+    font-size: 0.9rem;
+    animation: wiki-fade 0.15s ease-out;
+  }
+
+  @keyframes wiki-fade {
+    from { opacity: 0; }
+  }
+
+  .wiki-contents-list li {
+    padding: 0.4rem 0;
+  }
+
+  .wiki-article .wiki-contents-jump {
+    color: var(--text-primary);
+  }
+
+  .wiki-contents-n {
+    display: inline-block;
+    min-width: 1.5rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wiki-contents-acts {
+    display: flex;
+    gap: 1rem;
+    margin: 0.15rem 0 0 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .wiki-article .wiki-contents-acts .wiki-link {
+    color: var(--text-muted);
+    font-size: inherit;
+  }
+
+  .wiki-article .wiki-contents-acts .wiki-add:not([data-added]),
+  .wiki-article .wiki-contents-acts .wiki-link:hover {
     color: var(--accent);
   }
 

@@ -3,6 +3,7 @@ import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_FILE } from '../data';
 import { itemNirdesa, listPieces } from './koshah';
 import { parseNirdesa } from './nirdesa';
 import { splitTitle } from './titles';
+import { truncateAksharas } from './aksharas';
 import { transliterateVedic } from './transliteration';
 
 export interface WikiMedia extends MediaDecl {
@@ -212,4 +213,13 @@ export function searchArticles(query: string, docs: MantraDocument[] = CORPUS): 
     .filter((x) => x.score > 0)
     .sort((x, y) => y.score - x.score)
     .map((x) => x.a);
+}
+
+/** The opening words of a section (its pratīka): about 4 words or 28 aksharas of the first line, skipping a line that is only ॐ. */
+export function pratika(lines: string[], maxWords = 4, maxAksharas = 28): string {
+  const line = lines.find((l) => l.trim() && l.trim() !== 'ॐ');
+  if (!line) return '';
+  const words = line.trim().split(/\s+/);
+  const cut = words.length > maxWords ? `${words.slice(0, maxWords).join(' ')}…` : words.join(' ');
+  return truncateAksharas(cut.replace(/…$/, ''), maxAksharas) + (cut.endsWith('…') || truncateAksharas(cut, maxAksharas) !== cut ? '…' : '');
 }

@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { ALL_SUKTAMS } from '../data';
 import { findPiece, pieceChunks } from '../services/koshah';
-import { getArticle, type WikiArticle as Article, type WikiSection } from '../services/wiki';
+import { getArticle, pratika, type WikiArticle as Article, type WikiSection } from '../services/wiki';
 import { lineClass } from '../config/lineClass';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { HOME_HASH, categoryHash, nirdesaHash, routeRangeOk, type Route } from '../services/wikiNav';
@@ -20,6 +20,7 @@ const NEW_ARTICLE_URL = 'https://github.com/sushruth/prakaram/new/main/src/data'
 const STATUS_LABEL = { draft: 'Draft', proofread: 'Proofread', reviewed: 'Reviewed' } as const;
 
 const articleHref = (id: string) => `#/wiki/${encodeURIComponent(id)}`;
+const articleHash = (id: string, n: number) => `${articleHref(id)}/${n}`;
 const sectionDomId = (n: number) => `wiki-s-${n}`;
 const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.line}`;
 const cmp = (a: Pos, b: Pos) => a.section - b.section || a.line - b.line;
@@ -52,6 +53,63 @@ function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
     <button type="button" className="wiki-link wiki-add" onClick={() => pieceIds.forEach(add)}>
       Add to my prakaram
     </button>
+  );
+}
+
+/** Contents: a fade-in text list of a source's sections, to jump to one, follow it or add it, without scrolling the text. */
+const lines = (s: WikiSection) => {
+  const piece = findPiece(ALL_SUKTAMS, s.pieceId);
+  return piece ? pieceChunks(ALL_SUKTAMS, piece).slice(0, 3).map((c) => c.sanskrit) : [];
+};
+
+function Contents({ id, sections, onRun }: { id: string; sections: WikiSection[]; onRun: (pieceId: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const root = useRef<HTMLDivElement>(null);
+  const btn = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    root.current?.querySelector<HTMLElement>('.wiki-contents-jump')?.focus();
+    const key = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      setOpen(false);
+      btn.current?.focus();
+    };
+    const away = (e: Event) => root.current && !root.current.contains(e.target as Node) && setOpen(false);
+    document.addEventListener('keydown', key);
+    document.addEventListener('pointerdown', away);
+    return () => {
+      document.removeEventListener('keydown', key);
+      document.removeEventListener('pointerdown', away);
+    };
+  }, [open]);
+  const jump = (e: MouseEvent, n: number) => {
+    setOpen(false);
+    if (location.hash !== articleHash(id, n)) return; // the route change scrolls
+    e.preventDefault();
+    document.getElementById(sectionDomId(n))?.scrollIntoView({ block: 'start' });
+  };
+  return (
+    <div className="wiki-contents" ref={root}>
+      <button ref={btn} type="button" className="wiki-link wiki-contents-btn" aria-expanded={open} aria-controls="wiki-contents-list" onClick={() => setOpen(!open)}>
+        Contents
+      </button>
+      {open && (
+        <ol id="wiki-contents-list" className="wiki-contents-list">
+          {sections.map((s) => (
+            <li key={s.id}>
+              <a className="wiki-contents-jump" href={articleHash(id, s.number)} onClick={(e) => jump(e, s.number)}>
+                <span className="wiki-contents-n">{s.number}</span> <ArticleTitle title={{ sanskrit: '', english: s.title }} />{' '}
+                <span className="wiki-muted">· <Sanskrit text={pratika(lines(s))} /></span>
+              </a>
+              <span className="wiki-contents-acts">
+                <button type="button" className="wiki-link" onClick={() => { setOpen(false); onRun(s.pieceId); }}>Follow</button>
+                <AddToPrakaram pieceIds={[s.pieceId]} />
+              </span>
+            </li>
+          ))}
+        </ol>
+      )}
+    </div>
   );
 }
 
@@ -199,6 +257,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         <h1 className="wiki-title vedic-text">
           <ArticleTitle title={article.title} />
         </h1>
+        {own && article.sections.length > 1 && <Contents id={article.id} sections={article.sections} onRun={onRun} />}
         <button type="button" className="icon-btn wiki-follow" onClick={followAll} aria-label={followLabel} title={followLabel}>
           <Icon name="play" size={22} />
         </button>
