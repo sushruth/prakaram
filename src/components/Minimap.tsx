@@ -1,11 +1,11 @@
-import { minimap } from '../services/minimap';
+import { minimap, MinimapCell } from '../services/minimap';
 import { MantraChunk } from '../types/mantra';
 
-function Words({ words }: { words: number[] }) {
+function Cells({ cells }: { cells: MinimapCell[] }) {
   return (
-    <span className="minimap-words">
-      {words.map((w, i) => (
-        <span key={i} style={{ flexGrow: w }} />
+    <span className="minimap-cells">
+      {cells.map((c, i) => (
+        <span key={i} className={c.tone ? `swara-${c.tone}` : undefined} data-blank={c.blank} />
       ))}
     </span>
   );
@@ -28,15 +28,15 @@ export function Minimap({ chunks, index, duration, frozen, disabled, onToggle }:
     <button className="minimap" onClick={onToggle} disabled={disabled} aria-pressed={frozen} data-frozen={frozen} aria-label={label} title={label}>
       <span className="minimap-lines" aria-hidden="true">
         {rows.map((row, i) => (
-          <span key={i} className={`minimap-line ${row?.className ?? ''}`} data-now={i === 1} style={{ width: `${row?.widthPct ?? 0}%` }}>
-            {row && <Words words={row.words} />}
+          <span key={i} className={`minimap-line ${row?.className ?? ''}`} data-now={i === 1}>
+            {row && <Cells cells={row.cells} />}
             {i === 1 && row && (
               <span
                 key={index}
                 className="minimap-fill"
                 style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
               >
-                <Words words={row.words} />
+                <Cells cells={row.cells} />
               </span>
             )}
           </span>

@@ -1,25 +1,35 @@
 import { lineClass } from '../config/lineClass';
 import { MantraChunk } from '../types/mantra';
+import { clusters, SwaraTone, toneOf } from './swaraSegments';
+
+/** One box in a row: a syllable (with its swara tone, if any) or a blank for a word gap. */
+export interface MinimapCell {
+  blank?: boolean;
+  tone?: SwaraTone;
+}
 
 export interface MinimapRow {
   /** Colour class shared with the reader's line. */
   className: string;
-  /** Row width as a percentage of the longest of the three lines. */
-  widthPct: number;
-  /** One entry per word: its length, used as the dash's relative width. */
-  words: number[];
+  cells: MinimapCell[];
 }
+
+/** The longest of the three lines is shrunk to at most this many boxes; the others use the same ratio. */
+export const MINIMAP_MAX_CELLS = 16;
 
 /** Take the previous, current and next chunk and return the three rows to draw. A missing chunk is null. */
 export function minimap(chunks: [MantraChunk?, MantraChunk?, MantraChunk?]): (MinimapRow | null)[] {
-  const longest = Math.max(1, ...chunks.map((c) => c?.sanskrit.length ?? 0));
-  return chunks.map((c) =>
-    c
-      ? {
-          className: lineClass(c),
-          widthPct: (100 * c.sanskrit.length) / longest,
-          words: c.sanskrit.split(/\s+/).filter(Boolean).map((w) => w.length),
-        }
-      : null,
-  );
+  const parts = chunks.map((c) => (c ? clusters(c.sanskrit.trim()) : []));
+  const longest = Math.max(1, ...parts.map((p) => p.length));
+  const group = Math.ceil(longest / MINIMAP_MAX_CELLS);
+  return chunks.map((c, i) => {
+    if (!c) return null;
+    const cells: MinimapCell[] = [];
+    for (let at = 0; at < parts[i].length; at += group) {
+      const bucket = parts[i].slice(at, at + group);
+      if (bucket.every((k) => /^\s+$/.test(k))) cells.push({ blank: true });
+      else cells.push({ tone: bucket.map(toneOf).find(Boolean) });
+    }
+    return { className: lineClass(c), cells };
+  });
 }

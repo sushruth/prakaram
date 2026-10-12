@@ -141,7 +141,7 @@
   .minimap {
     position: relative;
     display: block;
-    width: 2.6rem;
+    width: 4.2rem;
     height: 1.9rem;
     padding: 0;
     background: none;
@@ -162,27 +162,30 @@
   .minimap-line {
     position: relative;
     display: block;
-    height: 0.3rem;
+    width: max-content;
+    height: 0.2rem;
   }
 
-  /* A row of word-dashes, left aligned like the text it stands for. */
-  .minimap-words {
+  /* One square per syllable, square-cornered. Swara syllables take the reader's swara colours. */
+  .minimap-cells {
     display: flex;
-    gap: 2px;
+    gap: 1px;
     height: 100%;
   }
 
-  /* Dashes take the line's text colour (mantra, shloka or vakya); the sung part is at full strength. */
-  .minimap-words > span {
-    flex-basis: 0;
-    min-width: 2px;
-    border-radius: 999px;
+  .minimap-cells > span {
+    width: 0.2rem;
+    height: 100%;
     background: currentColor;
-    opacity: 0.35;
+    opacity: 0.4;
   }
 
-  .minimap-line[data-now="true"] .minimap-words > span {
-    opacity: 0.55;
+  .minimap-cells > span[data-blank="true"] {
+    background: none;
+  }
+
+  .minimap-line[data-now="true"] .minimap-cells > span {
+    opacity: 0.6;
   }
 
   .minimap-fill {
@@ -191,7 +194,7 @@
     animation: minimap-sing linear forwards;
   }
 
-  .minimap-fill .minimap-words > span {
+  .minimap-fill .minimap-cells > span {
     opacity: 1;
   }
 
