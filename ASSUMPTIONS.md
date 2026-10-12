@@ -108,5 +108,5 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 * **No Tailwind CSS:** Per explicit design requirements, styling uses pure modern CSS with native `@layer`:
   - `@layer reset, theme, typography, layout, components, zen;`
 * **Responsive & Adaptive:** Fully responsive across mobile smartphones, tablets, and wide desktop displays.
-* **Color:** Three themes (System, Light, Dark). System follows the OS. Light is paper `#f7f7f5` with ink `#161614`; dark is `#121413` with ink `#ecece8`. Both use one teal accent. Swara tones (indigo, rust, ochre) and the shloka and vakya tints are provisional. No saffron, maroon or gold: see `DESIGN.md`.
+* **Color:** Three themes (System, Light, Dark). System follows the OS. Light is paper `#f7f7f5` with ink `#161614`; dark is `#121413` with ink `#ecece8`. Both use one teal accent. Swara tones (a 30% tint of purple for up, blue for down, red for double up) and the shloka and vakya tints are provisional. No saffron, maroon or gold: see `DESIGN.md`.
 * **Borders:** none by default; exceptions are named in `DESIGN.md` §7b.

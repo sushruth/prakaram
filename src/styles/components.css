@@ -270,15 +270,15 @@
     font-style: italic;
   }
 
-  .swara-svarita {
-    color: var(--swara-svarita);
+  .swara-up {
+    color: color-mix(in srgb, var(--swara-up) var(--swara-tint), var(--text-primary));
   }
 
-  .swara-anudatta {
-    color: var(--swara-anudatta);
+  .swara-down {
+    color: color-mix(in srgb, var(--swara-down) var(--swara-tint), var(--text-primary));
   }
 
-  .swara-dirgha {
-    color: var(--swara-dirgha);
+  .swara-double {
+    color: color-mix(in srgb, var(--swara-double) var(--swara-tint), var(--text-primary));
   }
 }

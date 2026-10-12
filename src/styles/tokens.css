@@ -15,9 +15,10 @@
     --accent-glow: rgba(31, 95, 99, 0.12);
     --on-accent: #ffffff;
 
-    --swara-svarita: #4a45b8;
-    --swara-anudatta: #b0582c;
-    --swara-dirgha: #9a7a10;
+    --swara-up: #7c3aed;
+    --swara-down: #2563eb;
+    --swara-double: #dc2626;
+    --swara-tint: 30%;
     --shloka: #3d7a55;
     --vakya: #6e6c85;
     --flame-core: #7cc8ff;
@@ -45,9 +46,9 @@
       --accent-glow: rgba(127, 196, 191, 0.12);
       --on-accent: #0f1110;
 
-      --swara-svarita: #aca6ff;
-      --swara-anudatta: #f0a07a;
-      --swara-dirgha: #e8c66a;
+      --swara-up: #b49cff;
+      --swara-down: #7fb2ff;
+      --swara-double: #ff8a8a;
       --shloka: #92d3aa;
       --vakya: #a7a4bf;
     }
@@ -69,9 +70,9 @@
     --accent-glow: rgba(127, 196, 191, 0.12);
     --on-accent: #0f1110;
 
-    --swara-svarita: #aca6ff;
-    --swara-anudatta: #f0a07a;
-    --swara-dirgha: #e8c66a;
+    --swara-up: #b49cff;
+    --swara-down: #7fb2ff;
+    --swara-double: #ff8a8a;
     --shloka: #92d3aa;
     --vakya: #a7a4bf;
   }

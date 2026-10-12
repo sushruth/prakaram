@@ -4,15 +4,15 @@ import { sourcePieces } from './swaraSegments';
 describe('sourcePieces', () => {
   it('tones each swara syllable and merges plain runs', () => {
     expect(sourcePieces('उ॒तामृ॑त')).toEqual([
-      { text: 'उ॒', tone: 'anudatta' },
+      { text: 'उ॒', tone: 'down' },
       { text: 'ता' },
-      { text: 'मृ॑', tone: 'svarita' },
+      { text: 'मृ॑', tone: 'up' },
       { text: 'त' },
     ]);
   });
 
   it('keeps conjuncts whole and tones dirgha svarita', () => {
-    expect(sourcePieces('क्ष᳚')).toEqual([{ text: 'क्ष᳚', tone: 'dirgha' }]);
+    expect(sourcePieces('क्ष᳚')).toEqual([{ text: 'क्ष᳚', tone: 'double' }]);
   });
 
   it('returns a single plain piece when there are no marks', () => {

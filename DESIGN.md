@@ -38,9 +38,10 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#1f5f63` | Active control, focus, prakara title |
-| `--swara-svarita` | `#4a45b8` | Syllable with svarita (U+0951) |
-| `--swara-anudatta` | `#b0582c` | Syllable with anudatta (U+0952) |
-| `--swara-dirgha` | `#9a7a10` | Syllable with dirgha svarita (U+1CDA) |
+| `--swara-up` | `#7c3aed` (dark `#b49cff`) | Hue for svarita, U+0951 (up). Mixed in at `--swara-tint` (30%) |
+| `--swara-down` | `#2563eb` (dark `#7fb2ff`) | Hue for anudatta, U+0952 (down) |
+| `--swara-double` | `#dc2626` (dark `#ff8a8a`) | Hue for dirgha svarita, U+1CDA (double up) |
+| `--swara-tint` | `30%` | How much hue goes into the swara colour. The rest is the ink colour |
 | `--shloka` | `#3d7a55` | Shloka lines (green tint) |
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
@@ -103,7 +104,7 @@ The reader is a page, not a set of cards.
 
 | Kind | Looks like | Source |
 | :--- | :--- | :--- |
-| Mantra | Primary ink, regular weight. Each syllable carrying a swara mark takes its tone colour: svarita indigo, anudatta rust, dirgha ochre | Sukta line. Colour is per syllable, so conjuncts stay whole |
+| Mantra | Primary ink, regular weight. A swara syllable is the ink colour with a slight tint of its hue: up purple, down blue, double up red | Sukta line. Colour is per syllable, so conjuncts stay whole |
 | Shloka | Green tint `--shloka`, medium weight, small "Shloka" label | Custom verse ending in `॥` |
 | Vakya | Purplish grey `--vakya`, italic, small "Vakya" label | Other procedural text |
 

@@ -1,4 +1,4 @@
-export type SwaraTone = 'svarita' | 'anudatta' | 'dirgha';
+export type SwaraTone = 'up' | 'down' | 'double';
 
 export interface SourcePiece {
   text: string;
@@ -6,9 +6,9 @@ export interface SourcePiece {
 }
 
 const TONE_BY_MARK: Partial<Record<string, SwaraTone>> = {
-  '॑': 'svarita',
-  '॒': 'anudatta',
-  '᳚': 'dirgha',
+  '॑': 'up',
+  '॒': 'down',
+  '᳚': 'double',
 };
 
 const COMBINING = /[ऀ-ःऺ-ॏ॑-ॗॢॣ᳐-᳿]/;
