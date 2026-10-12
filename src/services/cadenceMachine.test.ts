@@ -8,12 +8,14 @@ const tapN = (s: LearningState, n: number) => {
   return cur;
 };
 const learn = (): LearningState => transition(INITIAL_LEARNING, { type: 'setMode', mode: 'learn' });
+const manual = transition(INITIAL_LEARNING, { type: 'setMode', mode: 'manual' });
 const off = transition(INITIAL_LEARNING, { type: 'setMode', mode: 'off' });
 
 describe('cadence modes', () => {
-  it('starts in manual, auto-advancing at the set pace', () => {
-    expect(INITIAL_LEARNING.phase).toBe('manual');
-    expect(isAutoRunning(INITIAL_LEARNING)).toBe(true);
+  it('starts with Auto off; manual auto-advances at the set pace', () => {
+    expect(INITIAL_LEARNING.phase).toBe('off');
+    expect(isAutoRunning(INITIAL_LEARNING)).toBe(false);
+    expect(isAutoRunning(manual)).toBe(true);
   });
 
   it('off does not auto-advance and ignores taps and pause', () => {
@@ -44,7 +46,7 @@ describe('cadence modes', () => {
   });
 
   it('pause works in manual and engaged, and clears when the mode changes', () => {
-    const paused = transition(INITIAL_LEARNING, { type: 'togglePause' });
+    const paused = transition(manual, { type: 'togglePause' });
     expect(paused.paused).toBe(true);
     expect(isAutoRunning(paused)).toBe(false);
     expect(transition(paused, { type: 'togglePause' }).paused).toBe(false);
@@ -66,12 +68,12 @@ describe('cadence modes', () => {
   it('setting the mode you are already in changes nothing', () => {
     const measuring = tapN(learn(), 2);
     expect(transition(measuring, { type: 'setMode', mode: 'learn' })).toBe(measuring);
-    expect(transition(INITIAL_LEARNING, { type: 'setMode', mode: 'manual' })).toBe(INITIAL_LEARNING);
+    expect(transition(manual, { type: 'setMode', mode: 'manual' })).toBe(manual);
   });
 
   it('reset restarts learning, and does nothing in off or manual', () => {
     expect(transition(tapN(learn(), 2), { type: 'reset' })).toEqual(learn());
-    expect(transition(INITIAL_LEARNING, { type: 'reset' })).toBe(INITIAL_LEARNING);
+    expect(transition(manual, { type: 'reset' })).toBe(manual);
     expect(transition(off, { type: 'reset' })).toBe(off);
   });
 
