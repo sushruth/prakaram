@@ -279,4 +279,5 @@ bun run build
 * Proofread Rudram Namakam and Chamakam against a printed edition, then set `metadata.status` to `proofread`. The status stays `draft` until the permission above is settled.
 * Bundle size: the JS is 294.10 kB against the 220 KB target (and the build is 1.3 s against 1 s). Trim or raise the target in `AGENTS.md` §4.
 * Wiki parts are whole sections only. Line-range parts (`docId/n` plus a line span) are not supported.
+* Big task, not started: fill the four Vedas as primary sources ourselves, from the original Sanskrit (public-domain printed editions and manuscripts), so the library does not depend on licensed typed editions. Needs the address scheme and the work/edition split first (decided, not built). See `AGENTS.md` §1b.
 * Idea, not built: keep the texts in a separate content repository, with each layer (text, swara marks, translation) stating its own licence. Today the texts live in `src/data` and changes come by pull request.
