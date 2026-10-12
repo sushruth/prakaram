@@ -201,7 +201,7 @@ The header ring is yellow. A faint full ring shows behind the moving arc. It emp
 
 ### Hold and away
 
-- **Hold.** Pressing and holding the active line for 250 ms pauses auto-advance. The yellow pause mark shows while held, and releasing resumes with the time that was left. A shorter press is a tap, and it advances as before. Hold does not change the learned pace by itself: the tap interval already contains the time it was held.
+- **Hold.** Touching the active line pauses auto-advance at once. The yellow pause mark shows while held, and releasing resumes with the time that was left. In Manual and once learned, the touch does not advance the line. In Learn, a tap on the active line still counts as a learning tap. Hold does not change the learned pace by itself: the tap interval already contains the time it was held.
 - **Away.** When the tab is hidden or the window loses focus, auto-advance pauses and resumes on return. This is the "Pause when away" setting, on by default.
 - Holding and away are not saved.
 

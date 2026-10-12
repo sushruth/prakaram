@@ -11,8 +11,6 @@ import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
 import { useFrozen } from '../hooks/useFrozen';
 
-// A press this long on the highlighted line pauses; a shorter one is a tap.
-const HOLD_MS = 250;
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
 
@@ -34,8 +32,7 @@ export function ZenMantraReader() {
   const frozenRef = useRef(frozen);
   frozenRef.current = frozen;
   const setHolding = useMantraStore((s) => s.setHolding);
-  const holdTimer = useRef<number | undefined>(undefined);
-  const held = useRef(false);
+  const pressed = useRef(false);
   const suppressClick = useRef(false);
   const leftover = useRef<{ index: number; ms: number } | null>(null);
   const resetLearning = useCadenceStore((s) => s.resetLearning);
@@ -153,26 +150,20 @@ export function ZenMantraReader() {
               onClick={() => handleChunkClick(idx)}
               onPointerDown={() => {
                 if (!isActive) return;
-                suppressClick.current = false;
-                holdTimer.current = window.setTimeout(() => {
-                  held.current = true;
-                  suppressClick.current = true;
-                  setHolding(true);
-                }, HOLD_MS);
+                // Touching the current line pauses at once. In auto modes the touch does not advance; in Learn it still counts as a tap.
+                pressed.current = true;
+                suppressClick.current = isAutoRunning(useCadenceStore.getState());
+                setHolding(true);
               }}
               onPointerUp={() => {
-                window.clearTimeout(holdTimer.current);
-                if (held.current) {
-                  held.current = false;
-                  setHolding(false);
-                }
+                if (!pressed.current) return;
+                pressed.current = false;
+                setHolding(false);
               }}
               onPointerLeave={() => {
-                window.clearTimeout(holdTimer.current);
-                if (held.current) {
-                  held.current = false;
-                  setHolding(false);
-                }
+                if (!pressed.current) return;
+                pressed.current = false;
+                setHolding(false);
               }}
             >
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
