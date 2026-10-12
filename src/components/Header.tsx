@@ -75,7 +75,9 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
 }
 
 /** The top bar on every wiki page: logo to the Main page, search with suggestions, and a way back to the player. */
-export function WikiTopBar({ query, onOpenSettings, settingsOpen }: { query: string; onOpenSettings: () => void; settingsOpen: boolean }) {
+export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: { query: string; onOpenSettings: () => void; settingsOpen: boolean; onOpenRoom: () => void }) {
+  const { isInRoom, isHost, peerCount } = useRoomStore();
+  const roomTitle = isInRoom ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Join a live room';
   const script = useSettingsStore((s) => s.script);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
@@ -133,6 +135,13 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen }: { query: str
       <nav className="header-tools" aria-label="Actions">
         <button className="icon-btn" onClick={onOpenSettings} aria-label="Settings" aria-expanded={settingsOpen} title="Settings">
           <Icon name="gear" size={20} />
+        </button>
+        <a className="icon-btn" href={HOME_HASH} aria-label="Koshah main page" title="Koshah">
+          <Icon name="scroll" size={20} />
+        </a>
+        <button className="icon-btn" onClick={onOpenRoom} aria-label={roomTitle} aria-pressed={isInRoom} title={roomTitle}>
+          <Icon name="globe" size={20} />
+          {isInRoom && <span className="icon-dot" />}
         </button>
         <a className="icon-btn" href="#" aria-label="Back to the player" title="Player">
           <Icon name="play" size={20} />
