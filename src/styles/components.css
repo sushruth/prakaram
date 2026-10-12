@@ -326,77 +326,18 @@
 }
 
 @layer components {
-  /* Live flame: the glow flickers on the wrapper and the outline sways from its base. */
+  /* Live flame. FlameMark's random walk sets --flame-glow, --flame-sway and --flame-squash on the svg. */
   .header-flame {
     display: inline-flex;
     flex-shrink: 0;
     color: var(--flame-tip);
-    animation: flame-glow 1.4s ease-in-out infinite;
   }
 
-  .flame-body {
-    transform-box: fill-box;
+  .flame-mark {
+    overflow: visible;
     transform-origin: 50% 100%;
-  }
-
-  .flame-body {
-    animation: flame-sway 2.4s ease-in-out infinite;
-  }
-
-  /* Two halos: a tight warm core and a wider orange bloom. Flares rise fast and fall back slowly, at uneven steps, so it reads as fire. */
-  @keyframes flame-glow {
-    0% {
-      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 55%, transparent))
-        drop-shadow(0 -1px 10px color-mix(in srgb, var(--flame-tip) 40%, transparent));
-    }
-    18% {
-      filter: drop-shadow(0 0 6px color-mix(in srgb, var(--flame-mid) 90%, transparent))
-        drop-shadow(0 -2px 18px color-mix(in srgb, var(--flame-tip) 65%, transparent));
-    }
-    33% {
-      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 60%, transparent))
-        drop-shadow(0 -1px 12px color-mix(in srgb, var(--flame-tip) 42%, transparent));
-    }
-    47% {
-      filter: drop-shadow(0 0 7px color-mix(in srgb, var(--flame-mid) 95%, transparent))
-        drop-shadow(0 -2px 22px color-mix(in srgb, var(--flame-tip) 72%, transparent));
-    }
-    63% {
-      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--flame-mid) 70%, transparent))
-        drop-shadow(0 -1px 13px color-mix(in srgb, var(--flame-tip) 46%, transparent));
-    }
-    80% {
-      filter: drop-shadow(0 0 5px color-mix(in srgb, var(--flame-mid) 80%, transparent))
-        drop-shadow(0 -2px 16px color-mix(in srgb, var(--flame-tip) 56%, transparent));
-    }
-    100% {
-      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 55%, transparent))
-        drop-shadow(0 -1px 10px color-mix(in srgb, var(--flame-tip) 40%, transparent));
-    }
-  }
-
-  @keyframes flame-sway {
-    0%,
-    100% {
-      transform: scale(1, 1) skewX(0deg);
-    }
-    35% {
-      transform: scale(0.985, 1.02) skewX(-1.2deg);
-    }
-    70% {
-      transform: scale(1.01, 0.99) skewX(1deg);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .header-flame,
-    .flame-body,
-    .cadence-modes[data-phase] [data-mode="learn"],
-    .tempo[data-phase] input,
-    .tempo[data-phase] .tempo-value,
-    .btn-primary[data-phase="waiting"],
-    .learn-indicator[data-phase="waiting"] .learn-led {
-      animation: none;
-    }
+    transform: skewX(calc(var(--flame-sway, 0) * 1deg)) scale(var(--flame-squash, 1), calc(2 - var(--flame-squash, 1)));
+    filter: drop-shadow(0 0 calc(3px * var(--flame-glow, 1)) color-mix(in srgb, var(--flame-mid) 70%, transparent))
+      drop-shadow(0 -1px calc(12px * var(--flame-glow, 1)) color-mix(in srgb, var(--flame-tip) 50%, transparent));
   }
 }
