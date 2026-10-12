@@ -17,11 +17,11 @@ describe('cadence tempo range', () => {
 });
 
 describe('logarithmic pace slider', () => {
-  it('maps the ends of the slider to the ends of the pace range', () => {
-    expect(sliderToPace(0)).toBe(TEMPO.min);
-    expect(sliderToPace(PACE_SLIDER_STEPS)).toBe(TEMPO.max);
-    expect(paceToSlider(TEMPO.min)).toBe(0);
-    expect(paceToSlider(TEMPO.max)).toBe(PACE_SLIDER_STEPS);
+  it('moving right is faster: the right end is the shortest pace', () => {
+    expect(sliderToPace(0)).toBe(TEMPO.max);
+    expect(sliderToPace(PACE_SLIDER_STEPS)).toBe(TEMPO.min);
+    expect(paceToSlider(TEMPO.max)).toBe(0);
+    expect(paceToSlider(TEMPO.min)).toBe(PACE_SLIDER_STEPS);
   });
 
   it('gives equal slider moves equal ratios', () => {
