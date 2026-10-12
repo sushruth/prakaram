@@ -37,3 +37,19 @@ describe('Vedic Indic Transliteration', () => {
     expect(iast).toContain('bhūrbhuvaḥ');
   });
 });
+
+describe('Kannada output', () => {
+  const KANNADA = /[ಀ-೿]/;
+  it('Sanskrit verse renders in Kannada script and keeps the swara marks', () => {
+    const out = transliterateVedic('ॐ गणानां त्वा गणपतिं हवामहे', 'kannada');
+    expect(KANNADA.test(out)).toBe(true);
+    expect(out).not.toMatch(/[ऀ-ॿ]/);
+    expect(transliterateVedic('उ॒तामृ॑त', 'kannada')).toContain('॒');
+  });
+
+  it('mixed title keeps the English parenthetical and converts the Sanskrit', () => {
+    const out = transliterateVedic('महापारायणम् (Maha Parayanam)', 'kannada');
+    expect(out).toContain('(Maha Parayanam)');
+    expect(KANNADA.test(out)).toBe(true);
+  });
+});

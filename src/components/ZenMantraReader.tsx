@@ -7,6 +7,7 @@ import { useRoomStore } from '../stores/useRoomStore';
 import { transliterateVedic } from '../services/transliteration';
 import { calculateChunkWeight } from '../services/syllabifier';
 import { chantingRoom } from '../services/webrtcRoom';
+import { Icon } from './Icon';
 
 export function ZenMantraReader() {
   const { targetScript, fontSize, activeChunkIndex, setActiveChunkIndex, nextChunk, prevChunk, wrapLines } = useMantraStore();
@@ -106,7 +107,7 @@ export function ZenMantraReader() {
           onClick={toggleZenMode}
           title="Exit Zen Mode"
         >
-          ✕ Exit Zen Mode
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}><Icon name="x" size={14} />Exit Zen Mode</span>
         </button>
       )}
 

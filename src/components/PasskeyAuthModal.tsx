@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import { PasskeyService, UserProfile } from '../services/passkeyAuth';
+import { Icon } from './Icon';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -102,10 +103,10 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
           <h3 className="title-display" style={{ fontSize: '1.25rem', margin: 0, color: 'var(--accent)' }}>
-            🔑 Passwordless Passkey Access
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}><Icon name="key" size={22} />Passwordless Passkey Access</span>
           </h3>
           <button className="btn-icon" onClick={onClose} style={{ width: '2rem', height: '2rem' }}>
-            ✕
+            <Icon name="x" size={16} />
           </button>
         </div>
 
@@ -113,10 +114,10 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
           <div>
             <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', border: '1px solid var(--border-subtle)', marginBottom: '1.2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <span style={{ fontSize: '1.5rem' }}>🪪</span>
+                <Icon name="identification-card" size={28} />
                 <div>
                   <div style={{ fontWeight: 600 }}>{currentUser.username}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#10b981' }}>✓ Passkey Authenticated (TouchID / FaceID)</div>
+                  <div style={{ fontSize: '0.8rem', color: '#10b981', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name="check" size={14} />Passkey Authenticated (TouchID / FaceID)</div>
                 </div>
               </div>
             </div>
@@ -165,7 +166,7 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
               onClick={isRegistering ? handleRegister : handleLogin}
               style={{ width: '100%', justifyContent: 'center', padding: '0.7rem', marginBottom: '1rem' }}
             >
-              {loading ? 'Authenticating...' : isRegistering ? '✨ Create Account with Passkey' : '🔑 Sign In with Passkey'}
+              {loading ? 'Authenticating...' : isRegistering ? <><Icon name="sparkle" size={16} />Create Account with Passkey</> : <><Icon name="key" size={16} />Sign In with Passkey</>}
             </button>
 
             <div style={{ textAlign: 'center', fontSize: '0.82rem' }}>

@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import { useRoomStore } from '../stores/useRoomStore';
+import { Icon } from './Icon';
 
 interface RoomModalProps {
   isOpen: boolean;
@@ -31,10 +32,10 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
           <h3 className="title-display" style={{ fontSize: '1.25rem', margin: 0, color: 'var(--accent)' }}>
-            🌐 Live Chanting Room (WebRTC)
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}><Icon name="broadcast" size={22} />Live Chanting Room (WebRTC)</span>
           </h3>
           <button className="btn-icon" onClick={onClose} style={{ width: '2rem', height: '2rem' }}>
-            ✕
+            <Icon name="x" size={16} />
           </button>
         </div>
 
@@ -57,7 +58,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
 
             <div style={{ display: 'flex', gap: '0.6rem' }}>
               <button className="btn-primary" onClick={handleCopyInvite} style={{ flex: 1, justifyContent: 'center' }}>
-                {copiedLink ? '✓ Copied Invite Link' : '🔗 Copy Invite Link'}
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}><Icon name={copiedLink ? 'check' : 'link'} size={15} />{copiedLink ? 'Copied Invite Link' : 'Copy Invite Link'}</span>
               </button>
               <button
                 onClick={leaveRoom}

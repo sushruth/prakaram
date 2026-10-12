@@ -1,5 +1,6 @@
 import { useThemeStore } from '../stores/useThemeStore';
 import { useRoomStore } from '../stores/useRoomStore';
+import { Icon } from './Icon';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
@@ -30,7 +31,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           aria-expanded={settingsOpen}
           title="Settings"
         >
-          ⚙
+          <Icon name="gear" size={20} />
         </button>
 
         {/* Prakara Sequence Selector */}
@@ -39,7 +40,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           onClick={onOpenPrakara}
           title="Prakara Sequence Builder"
         >
-          📜
+          <Icon name="scroll" size={20} />
         </button>
 
         {/* WebRTC Live Room */}
@@ -49,7 +50,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           title={isInRoom ? `Live Chanting Room (${isHost ? 'Host' : 'Follower'}, ${peerCount} peers)` : 'Connect to Live Room'}
           style={isInRoom ? { borderColor: 'var(--accent)', background: 'var(--accent-light)', position: 'relative' } : {}}
         >
-          🌐
+          <Icon name="globe" size={20} />
           {isInRoom && (
             <span
               style={{
@@ -71,7 +72,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           onClick={onOpenAuth}
           title="Passkey Authentication"
         >
-          🔑
+          <Icon name="key" size={20} />
         </button>
 
         {/* Zen Mode Button */}
@@ -81,7 +82,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           title="Enter Zen Mode (Focus Chanting)"
           style={{ background: 'var(--accent)', color: 'var(--on-accent)', border: 'none' }}
         >
-          🧘
+          <Icon name="flower-lotus" size={20} />
         </button>
       </div>
     </header>

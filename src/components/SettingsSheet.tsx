@@ -2,6 +2,7 @@ import { useEffect } from 'preact/hooks';
 import { ScriptSelector } from './ScriptSelector';
 import { useThemeStore, AppTheme } from '../stores/useThemeStore';
 import { useMantraStore } from '../stores/useMantraStore';
+import { Icon } from './Icon';
 
 interface SettingsSheetProps {
   isOpen: boolean;
@@ -37,7 +38,7 @@ export function SettingsSheet({ isOpen, onClose }: SettingsSheetProps) {
         <div className="settings-head">
           <span className="settings-title">Settings</span>
           <button className="btn-icon" onClick={onClose} aria-label="Close settings">
-            ✕
+            <Icon name="x" size={16} />
           </button>
         </div>
 

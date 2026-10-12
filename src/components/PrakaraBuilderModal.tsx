@@ -5,6 +5,7 @@ import { transliterateVedic } from '../services/transliteration';
 import { ALL_SUKTAMS } from '../data';
 import { Prakara, PrakaraItem } from '../types/mantra';
 import { encodePrakaraToUrlHash } from '../services/urlCodec';
+import { Icon } from './Icon';
 
 interface PrakaraModalProps {
   isOpen: boolean;
@@ -84,7 +85,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
             {isCreatingNew ? 'Create New Prakara' : 'Prakara Sequence Studio'}
           </h3>
           <button className="btn-icon" onClick={onClose} style={{ width: '2rem', height: '2rem' }}>
-            ✕
+            <Icon name="x" size={16} />
           </button>
         </div>
 
@@ -139,7 +140,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
                         title="Share this Prakara"
                         style={{ width: '2rem', height: '2rem' }}
                       >
-                        🔗
+                        <Icon name="link" size={18} />
                       </button>
                     </div>
                   </div>
@@ -219,7 +220,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
                         onClick={() => handleRemoveItem(idx)}
                         style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer' }}
                       >
-                        ✕
+                        <Icon name="x" size={16} />
                       </button>
                     </div>
                   ))}

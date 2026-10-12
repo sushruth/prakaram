@@ -4,6 +4,7 @@ import { useMantraStore } from '../stores/useMantraStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { LAYA_PRESETS, LayaType } from '../types/cadence';
 import { encodePrakaraToUrlHash } from '../services/urlCodec';
+import { Icon } from './Icon';
 
 export function CadenceControlBar() {
   const {
@@ -96,7 +97,7 @@ export function CadenceControlBar() {
         style={{ padding: '0.4rem 0.85rem', fontSize: '0.82rem', whiteSpace: 'nowrap' }}
         title="Tap or press Spacebar to record chanting rhythm"
       >
-        <span>␣ Tap</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name="hand-tap" size={15} />Tap</span>
       </button>
 
       {/* Confidence Meter */}
@@ -126,7 +127,7 @@ export function CadenceControlBar() {
         }}
         title={canAutoProgress ? 'Cadence recognized! Turn on Auto Progress' : 'Toggle automatic chanting progression'}
       >
-        <span>{isAutoProgress ? '⏸ Auto' : '▶ Auto'}</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name={isAutoProgress ? 'pause' : 'play'} size={14} />Auto</span>
       </button>
 
       {/* Share / Copy Prakara Link */}
@@ -136,7 +137,7 @@ export function CadenceControlBar() {
         style={{ width: '2rem', height: '2rem' }}
         title="Share this Prakara & Cadence via compressed link"
       >
-        {copiedLink ? '✓' : '🔗'}
+        <Icon name={copiedLink ? 'check' : 'link'} size={16} />
       </button>
 
       {/* Reset Session */}
@@ -146,7 +147,7 @@ export function CadenceControlBar() {
         style={{ width: '2rem', height: '2rem', fontSize: '0.75rem' }}
         title="Reset cadence learning session"
       >
-        ↺
+        <Icon name="arrow-counter-clockwise" size={16} />
       </button>
     </div>
   );
