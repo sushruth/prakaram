@@ -35,6 +35,25 @@ export interface SuktaSection {
 
 export type VedaName = 'rigveda' | 'yajurveda' | 'samaveda' | 'atharvaveda' | 'other';
 
+/** One kind of media an article brings. Text, transliteration and translation are derived; declare anything else (audio, commentary, image). */
+export interface MediaDecl {
+  kind: 'text' | 'translation' | 'transliteration' | 'audio' | 'commentary' | 'image';
+  label?: string;
+  language?: string;
+  script?: string;
+  swara?: boolean;
+  source?: string;
+  license?: string;
+  url?: string;
+}
+
+/** A reference to part of a source article: one section (by number), or all of it when `section` is missing. Line ranges are not supported. */
+export interface ComposedPart {
+  article: string;
+  section?: number;
+  note?: string;
+}
+
 export interface MantraDocument {
   id: string;
   title: {
@@ -65,6 +84,12 @@ export interface MantraDocument {
     related?: string[];
     /** When the text is chanted. */
     usage?: string;
+    /** Media this article brings beyond what is derived from its text. */
+    media?: MediaDecl[];
+    /** `source` (default) owns text and its sections are addressable parts. `composition` owns no text and references parts of sources. */
+    kind?: 'source' | 'composition';
+    /** For a composition: the parts of other articles it is made of, in order. */
+    parts?: ComposedPart[];
   };
   sections: SuktaSection[];
 }

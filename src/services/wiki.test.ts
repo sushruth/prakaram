@@ -73,7 +73,11 @@ describe('wiki articles', () => {
   });
 
   it('defaults to the bundled corpus', () => {
-    expect(listArticles().map((a) => a.id)).toEqual(ALL_SUKTAMS.map((d) => d.id));
+    const all = listArticles();
+    expect(all.filter((a) => a.kind === 'source').map((a) => a.id)).toEqual(ALL_SUKTAMS.map((d) => d.id));
+    // Default prakaras show up as compositions, and their sources list them under Used in.
+    expect(getArticle('sri-rudram')?.kind).toBe('composition');
+    expect(getArticle('rudram-namakam')?.usedIn.some((u) => u.id === 'sri-rudram')).toBe(true);
     expect(getArticle('purusha-suktam')?.veda).toBe('rigveda');
   });
 });
@@ -135,5 +139,41 @@ describe('real data', () => {
   it('counts an article under every Veda it carries', () => {
     expect(articlesForName('Rigveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
     expect(articlesForName('Yajurveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
+  });
+});
+
+describe('media and composed articles', () => {
+  const work: MantraDocument = {
+    ...doc('work'),
+    sections: [],
+    metadata: { source: 'Test', kind: 'composition', parts: [{ article: 'rudram', section: 2 }, { article: 'sri' }, { article: 'work' }, { article: 'gone' }] },
+  };
+  const all = [...docs, work];
+
+  it('derives text media with swara detection and merges declared media', () => {
+    const plain = getArticle('sri', docs)!;
+    expect(plain.media[0]).toMatchObject({ kind: 'text', swara: false, count: 1 });
+    const d = doc('sw', { media: [{ kind: 'audio', language: 'Sanskrit' }] });
+    d.sections[0].chunks[0].sanskrit = 'अ॒ग्निम्';
+    d.sections[0].chunks[0].translation = 'Fire';
+    const m = getArticle('sw', [d])!.media;
+    expect(m.map((x) => x.kind)).toEqual(['text', 'transliteration', 'translation', 'audio']);
+    expect(m[0].swara).toBe(true);
+  });
+
+  it('builds a composed article from parts, skipping cycles and missing references', () => {
+    const a = getArticle('work', all)!;
+    expect(a.kind).toBe('composition');
+    expect(a.parts).toEqual(a.sections);
+    expect(getArticle('rudram', all)!.usedIn).toEqual([{ id: 'work', title: 'Hymn work' }]);
+    expect(getArticle('shanti', all)!.usedIn).toEqual([]);
+    expect(getArticle('shanti', all)!.kind).toBe('source');
+    expect(a.sections.map((s) => [s.number, s.pieceId])).toEqual([[1, 'rudram/2'], [2, 'sri']]);
+    expect(a.sections[0].from).toEqual({ id: 'rudram', title: 'Hymn rudram', number: 2 });
+    expect(a.lines).toBe(2);
+  });
+
+  it('finds articles by media kind words', () => {
+    expect(searchArticles('audio', [doc('x', { media: [{ kind: 'audio' }] }), doc('y')]).map((a) => a.id)).toEqual(['x']);
   });
 });

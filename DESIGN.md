@@ -270,6 +270,16 @@ A piece is one thing that can be read or run. Pieces are derived from the docume
 
 Each section heading in an article chants that section's piece. The **Chant this** button chants the whole document. Chanting makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
 
+### Sources and compositions
+
+A **source** article owns text. Its sections are its addressable parts: `docId/n` is one part (line ranges are not supported). A **composition** article (`metadata.kind: "composition"`) owns no text; `metadata.parts` lists `{ article, section?, note? }` references to parts of sources, in order. The default prakaras in `src/data/defaultPrakaras.ts` appear as compositions, derived by `prakaraAsDoc()`: their sukta items become parts, their procedural vakyas are left out.
+
+A composition page shows the referenced text inline, each part headed "from <source> §n" with a link back, then **Brings** (inherited from its parts). **Chant this composition** runs it. A source page has **Parts** (its sections, each with chant and Add to my prakaram) and, after the facts, **Used in**: the compositions that reference any of its parts, computed. Missing ids and cycles are skipped. The main page has Browse by kind (Sources, Compositions).
+
+### Media
+
+An article brings media: text, transliteration, translation, audio, commentary, image. Text (Devanagari, with swara when the lines carry the marks), transliteration (IAST, Telugu, Kannada, Malayalam, Tamil) and English translation (when lines have `translation`) are derived. Anything else is declared in `metadata.media`. A composition inherits the media of its parts. The page lists them under **Brings**, a plain list after the text: kind, language, script, swara, count, source. Search matches the kind words. The player plays text only for now.
+
 ### Article anatomy
 
 An article is a page of text with no boxes, borders, rules or tints. Space and type scale do the separating (§7b). Top to bottom:

@@ -6,7 +6,8 @@ import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
 import { displayTitle } from '../services/titles';
 import { searchArticles } from '../services/wiki';
-import { HOME_HASH, REPO_URL, articleHash, articleLabel, searchHash } from '../services/wikiNav';
+import { useBasketStore } from '../stores/useBasketStore';
+import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, articleLabel, searchHash } from '../services/wikiNav';
 import { FlameMark } from './FlameMark';
 import { Icon } from './Icon';
 
@@ -79,6 +80,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
   const { isInRoom, isHost, peerCount } = useRoomStore();
   const roomTitle = isInRoom ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Join a live room';
   const script = useSettingsStore((s) => s.script);
+  const basketCount = useBasketStore((s) => s.items.length);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
   useEffect(() => setText(query), [query]);
@@ -87,6 +89,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
   const suggestions = term ? searchArticles(term).slice(0, 6) : [];
 
   return (
+    <>
     <header className="app-header wiki-bar">
       <a className="header-flame" href={HOME_HASH} aria-label="Koshah main page" title="Koshah">
         <FlameMark size={24} />
@@ -148,6 +151,12 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
         </a>
       </nav>
     </header>
+    <p className="wiki-basket-row">
+      <a className="wiki-basket" data-count={basketCount} href={COMPOSE_HASH}>
+        My prakaram ({basketCount})
+      </a>
+    </p>
+    </>
   );
 }
 

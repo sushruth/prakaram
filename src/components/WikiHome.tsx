@@ -1,6 +1,6 @@
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
-import { articleHash, articleLabel, categoryHash } from '../services/wikiNav';
+import { COMPOSE_HASH, articleHash, articleLabel, categoryHash } from '../services/wikiNav';
 
 const DAY_MS = 86_400_000;
 
@@ -16,7 +16,8 @@ function tally(articles: WikiArticle[], field: (a: WikiArticle) => string | unde
 
 export function WikiHome() {
   const script = useSettingsStore((s) => s.script);
-  const articles = listArticles();
+  const all = listArticles();
+  const articles = all.filter((a) => a.kind === 'source');
   const categories = listCategories();
   const lines = articles.reduce((n, a) => n + a.lines, 0);
   // Rotates by day (UTC). Same article all day, the next one tomorrow.
@@ -57,6 +58,18 @@ export function WikiHome() {
         </section>
 
         <section className="wiki-block">
+          <h2>Browse by kind</h2>
+          <ul className="wiki-inline">
+            {(['source', 'composition'] as const).map((k) => (
+              <li key={k}>
+                <a href={categoryHash(`${k}s`)}>{k === 'source' ? 'Sources' : 'Compositions'}</a>{' '}
+                <span className="wiki-muted">{all.filter((a) => a.kind === k).length}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="wiki-block">
           <h2>Browse by deity</h2>
           <ul className="wiki-inline">
             {deities.map((d) => (
@@ -91,10 +104,13 @@ export function WikiHome() {
 
         <section className="wiki-block">
           <h2>Compile your own prakaram</h2>
-          <p>Put pieces from the library together into one sequence, and chant it in the player.</p>
-          <a className="wiki-action" href="#compose">
-            Open the composer
+          <p>Add a whole text or a single section from any article, put them in order, and chant them in the player.</p>
+          <a className="wiki-action" href={COMPOSE_HASH}>
+            Start composing
           </a>
+          <p>
+            <a href="#compose">Open the player composer</a>
+          </p>
         </section>
       </div>
     </div>

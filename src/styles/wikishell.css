@@ -214,4 +214,84 @@
       padding-inline: 0.9rem;
     }
   }
+
+  /* Basket link under the bar, plain text; accent when it holds something. */
+  .wiki-basket-row {
+    margin: 0;
+    padding: 0 1rem 0.5rem;
+    text-align: right;
+    font-size: 0.85rem;
+  }
+
+  .wiki-basket {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .wiki-basket:not([data-count="0"]) {
+    color: var(--accent);
+  }
+
+  .wiki-compose-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+  }
+
+  .wiki-compose-item .wiki-compose-what {
+    flex: 1 1 100%;
+  }
+
+  .wiki-page .wiki-compose-item button,
+  .wiki-page .wiki-compose-actions button:not(.btn-primary) {
+    padding: 0.25rem 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .wiki-page .wiki-compose-item button:disabled {
+    color: var(--text-muted);
+    cursor: default;
+  }
+
+  .wiki-page .wiki-compose-actions .btn-primary {
+    border: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .wiki-compose-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .wiki-name {
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 1.5rem 0 0;
+    padding: 0.5rem 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    caret-color: var(--accent);
+    font: inherit;
+    font-size: 1.05rem;
+  }
+
+  .wiki-name::placeholder {
+    color: var(--text-muted);
+  }
+
+  .wiki-steps {
+    margin: 1.5rem 0 0;
+    padding-left: 1.25rem;
+    line-height: 1.6;
+  }
 }

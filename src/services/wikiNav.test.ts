@@ -7,6 +7,7 @@ test('hash routes', () => {
   expect(parseRoute('#compose')).toEqual({ kind: 'player' });
   expect(parseRoute('#/wiki')).toEqual({ kind: 'home' });
   expect(parseRoute('#/wiki/')).toEqual({ kind: 'home' });
+  expect(parseRoute('#/wiki/Special:Compose')).toEqual({ kind: 'compose' });
   expect(parseRoute('#/wiki/Special:Random')).toEqual({ kind: 'random' });
   expect(parseRoute(articleHash('rudram-namakam'))).toEqual({ kind: 'article', id: 'rudram-namakam' });
   expect(parseRoute('#/wiki/rudram-namakam/3')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3 });

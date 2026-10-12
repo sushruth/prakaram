@@ -12,6 +12,7 @@ import { WikiHome } from './components/WikiHome';
 import { WikiArticle } from './components/WikiArticle';
 import { WikiCategory } from './components/WikiCategory';
 import { WikiSearch } from './components/WikiSearch';
+import { WikiCompose } from './components/WikiCompose';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
@@ -160,6 +161,7 @@ export function App() {
             {route.kind === 'article' && <WikiArticle id={route.id} section={route.section} onRun={runPiece} />}
             {route.kind === 'category' && <WikiCategory name={route.name} />}
             {route.kind === 'search' && <WikiSearch q={route.q} />}
+            {route.kind === 'compose' && <WikiCompose />}
           </div>
           <WikiFooter />
         </>

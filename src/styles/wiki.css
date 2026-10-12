@@ -69,7 +69,7 @@
   }
 
   .wiki-lead {
-    margin: 2rem 0;
+    margin: 4rem 0 0;
     font-size: 1.1rem;
     line-height: 1.65;
   }
@@ -84,7 +84,7 @@
     display: grid;
     grid-template-columns: 5.5rem 1fr;
     gap: 0.6rem 1rem;
-    margin: 1.25rem 0 0;
+    margin: 0;
   }
 
   .wiki-infobox dt {
@@ -114,8 +114,33 @@
     color: var(--accent);
   }
 
+  .wiki-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .wiki-add {
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+
+  .wiki-add[data-added] {
+    color: var(--text-muted);
+  }
+
+  .wiki-article .wiki-section-actions .wiki-add {
+    color: var(--accent);
+  }
+
+  .wiki-article .wiki-section-actions .wiki-add[data-added] {
+    color: var(--text-muted);
+  }
+
   .wiki-toc {
-    margin: 0 0 3rem;
+    margin: 1.5rem 0 0;
     font-size: 0.95rem;
   }
 
@@ -136,8 +161,10 @@
     list-style: none;
   }
 
-  .wiki-toc li {
-    margin: 0.5rem 0;
+  .wiki-toc ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
   }
 
   .wiki-section {
@@ -153,14 +180,14 @@
   }
 
   .wiki-section-actions {
-    margin-left: 0.5rem;
     font-family: 'Geist', system-ui, sans-serif;
     font-size: 0.75rem;
-    white-space: nowrap;
+    display: block;
+    margin: 0.35rem 0 0;
   }
 
   .wiki-article .wiki-section-actions :is(a, button) {
-    margin-left: 0.75rem;
+    margin: 0 1rem 0 0;
     color: var(--text-muted);
   }
 
@@ -201,22 +228,41 @@
     font-size: 0.85rem;
   }
 
-  @media (min-width: 52rem) {
-    .wiki-article {
-      max-width: 62rem;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 15rem;
-      column-gap: 4rem;
-    }
+  .wiki-brings {
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+  }
 
-    .wiki-article > * {
-      grid-column: 1;
-    }
+  .wiki-brings h2 {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
 
-    .wiki-article > .wiki-infobox {
-      grid-column: 2;
-      grid-row: 2 / span 4;
-      margin-top: 2.5rem;
-    }
+  .wiki-brings ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-brings li {
+    margin: 0.4rem 0;
+    color: var(--text-secondary);
+  }
+
+  .wiki-brings-kind {
+    display: inline-block;
+    min-width: 7rem;
+    color: var(--text-primary);
+    text-transform: capitalize;
+  }
+
+  .wiki-from {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 400;
   }
 }

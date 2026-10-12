@@ -136,6 +136,31 @@ The Koshah wiki is built from the documents in `src/data`. Nothing is stored sep
    - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
 4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
 
+### Declaring media, and compositions
+
+Text, transliteration and translation are derived; do not declare them. Declare only what the text cannot show, in `metadata.media`: `kind` (`audio`, `commentary`, `image`, or an extra `text` or `translation`), and optionally `label`, `language`, `script`, `swara`, `source`, `license`, `url`. Declare only what exists: no audio is declared anywhere yet.
+
+A source (the default) owns its text, and its sections are the parts others can reference as `docId/n`. Something made of parts of sources, such as an extract or a vrata, owns no text: set `metadata.kind` to `composition`, list `metadata.parts`, and leave `sections` empty. Example, referencing parts of a Taittiriya Upanishad-style source:
+
+```json
+{
+  "id": "shanti-extract",
+  "title": { "sanskrit": "", "transliteration": "", "english": "Shanti extract" },
+  "metadata": {
+    "source": "Extract from Taittiriya Upanishad",
+    "kind": "composition",
+    "summary": "The peace invocation and the first anuvaka of the Siksha Valli.",
+    "parts": [
+      { "article": "taittiriya-upanishad", "section": 1, "note": "Shanti patha" },
+      { "article": "taittiriya-upanishad", "section": 2 }
+    ]
+  },
+  "sections": []
+}
+```
+
+Register it in `ALL_SUKTAMS` like any document (or add a default prakara, which is derived into a composition for you). Referenced ids must exist; cycles and missing ids are skipped silently. The source's page then lists it under Used in.
+
 ### Editing an existing article
 
 1. Open the article's **Edit** tab, or its **[edit]** link on a section. Both open `src/data/<file>.json` on GitHub.

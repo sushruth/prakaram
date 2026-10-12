@@ -10,7 +10,8 @@ export type Route =
   | { kind: 'article'; id: string; section?: number }
   | { kind: 'category'; name: string }
   | { kind: 'search'; q: string }
-  | { kind: 'random' };
+  | { kind: 'random' }
+  | { kind: 'compose' };
 
 const dec = (s: string) => {
   try {
@@ -30,6 +31,7 @@ export function parseRoute(hash: string): Route {
   const params = new URLSearchParams(qi < 0 ? '' : rest.slice(qi + 1));
   if (path === '') return { kind: 'home' };
   if (path === 'Special:Search') return { kind: 'search', q: params.get('q') ?? '' };
+  if (path === 'Special:Compose') return { kind: 'compose' };
   if (path === 'Special:Random') return { kind: 'random' };
   if (path.startsWith('Category:')) return { kind: 'category', name: dec(path.slice('Category:'.length)) };
   const [id, section] = path.split('/');
@@ -42,6 +44,8 @@ export function parseRoute(hash: string): Route {
 /** Ids and section numbers are encoded, so a `/` inside an id (a koshah piece id) cannot read as a section. */
 export const articleHash = (id: string, section?: string | number) =>
   `#/wiki/${encodeURIComponent(id)}${section === undefined ? '' : `/${section}`}`;
+
+export const COMPOSE_HASH = '#/wiki/Special:Compose';
 
 export const categoryHash = (name: string) => `#/wiki/Category:${encodeURIComponent(name)}`;
 
