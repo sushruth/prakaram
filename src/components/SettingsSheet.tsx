@@ -16,7 +16,7 @@ export function SettingsSheet({ isOpen, onClose }: SettingsSheetProps) {
           <Control />
         </div>
       ))}
-      <a className="settings-source" href="https://github.com/sushruth/parayanam" target="_blank" rel="noopener noreferrer">
+      <a className="settings-source" href="https://github.com/sushruth/prakaram" target="_blank" rel="noopener noreferrer">
         Source on GitHub
       </a>
     </DropPanel>

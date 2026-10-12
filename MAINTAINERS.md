@@ -49,13 +49,13 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 }
 ```
 
-1. In Cloudflare: **Workers & Pages → Create → Import a repository**, select `sushruth/parayanam`.
+1. In Cloudflare: **Workers & Pages → Create → Import a repository**, select `sushruth/prakaram`.
 2. Build command: `bun install --frozen-lockfile && bun run build`
 3. Deploy command: `bunx wrangler deploy`. Build cache is enabled on the Workers project.
-4. Production branch: `master`. Each push to it builds and deploys.
+4. Production branch: `main`. Each push to it builds and deploys.
 5. No environment variables are needed for the frontend.
 
-Before every push to `master`, check that CI passed (see §5).
+Before every push to `main`, check that CI passed (see §5).
 
 ### B. Backend Deployment (Cloudflare Workers + D1)
 
@@ -129,14 +129,9 @@ bunx tsc --noEmit
 
 ## 7. Handoff
 
-**Branches.** Push to `master`. It is the Cloudflare production branch, so every push there builds and deploys. The session branch `ccr-568c382f-f687m0` is kept at the same commit.
+**Branches.** Push to `main`. It is the Cloudflare production branch (it was `master` before the rename), so every push there builds and deploys.
 
-**Repo rename checklist.** The repo is `sushruth/parayanam` for now; the app is served at `prakaram.sushruth.dev`. After renaming the repo on GitHub:
-
-1. `src/components/SettingsSheet.tsx`: the "Source on GitHub" link.
-2. `ASSUMPTIONS.md` (line 5) and §2A step 1 above: the repository references.
-3. Cloudflare: if the Git link to the Workers project breaks, reconnect it to the renamed repo.
-4. Check that `prakaram.sushruth.dev` still routes to the `prakaram` Worker.
+**Repo.** The repo is `sushruth/prakaram` (renamed from `parayanam`; GitHub redirects the old URL). The app is served at `prakaram.sushruth.dev`. The production branch is `main`, which replaced `master`. Points still to verify on the Cloudflare side: the Git link to the Workers project, and that `prakaram.sushruth.dev` routes to the `prakaram` Worker.
 
 **Checks before a push** (the same ones CI runs):
 

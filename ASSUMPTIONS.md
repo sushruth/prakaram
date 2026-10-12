@@ -2,7 +2,7 @@
 
 **Project:** Prakaram (Vedic Mantra Companion & Prakara Chanting Engine)  
 **Author:** Pair programming with Antigravity AI  
-**Repository:** `sushruth/parayanam` (Private)  
+**Repository:** `sushruth/prakaram` (Private)  
 **Date:** October 2026  
 
 ---
