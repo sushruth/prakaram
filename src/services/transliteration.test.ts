@@ -11,8 +11,8 @@ describe('Vedic Indic Transliteration', () => {
   it('transliterates correctly into Telugu with Vedic swaras intact', () => {
     const telugu = transliterateVedic(gayatri, 'telugu');
     expect(telugu).toContain('ఓం');
-    expect(telugu).toContain('\u0951'); // Svarita
-    expect(telugu).toContain('\u0952'); // Anudatta
+    expect(telugu).toContain('\u0951');
+    expect(telugu).toContain('\u0952');
     expect(telugu).toContain('భూర్భువః॒');
   });
 

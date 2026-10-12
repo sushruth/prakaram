@@ -1,6 +1,5 @@
 import { MantraChunk } from '../types/mantra';
 
-// Split after each danda (।) or double danda (॥), keeping the mark with the phrase before it.
 export function splitAtDanda(text: string): string[] {
   return text
     .split(/(?<=[।॥])\s*/)
@@ -13,7 +12,6 @@ function median(values: number[]): number {
   return sorted[sorted.length >> 1] ?? 0;
 }
 
-// Break a phrase longer than 1.5× target at the word boundary nearest the target.
 export function splitLong(text: string, target: number): string[] {
   if (text.length <= target * 1.5) return [text];
 
@@ -25,9 +23,6 @@ export function splitLong(text: string, target: number): string[] {
   return [text.slice(0, cut).trim(), ...splitLong(text.slice(cut).trim(), target)].filter(Boolean);
 }
 
-// Reading mode: split every verse into danda phrases, then break any long phrase
-// near the median phrase length. Pieces keep the verse's chunkNumber so the
-// reader can tell where a verse starts.
 export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
   const phrases = chunks.map((c) => splitAtDanda(c.sanskrit));
   const target = median(phrases.flat().map((p) => p.length));

@@ -4,7 +4,7 @@ export interface LayaPreset {
   name: LayaType;
   label: string;
   sanskrit: string;
-  bpm: number; // Beats / Matras per minute
+  bpm: number;
   description: string;
 }
 

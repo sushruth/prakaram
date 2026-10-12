@@ -30,7 +30,6 @@ export const useRoomStore = create<RoomState>((set) => ({
       },
       onSyncMessage: (msg: SyncMessage) => {
         if (!asHost) {
-          // Follower updates active chunk to mirror host in real time
           useMantraStore.getState().setActiveChunkIndex(msg.chunkIndex);
           if (msg.msPerMatra) {
             const bpm = Math.round(60000 / msg.msPerMatra);

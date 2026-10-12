@@ -23,8 +23,7 @@
 }
 
 @layer theme {
-  /* Light tokens are the base. With no explicit choice ("system"), the OS
-     setting picks the dark tokens below. An explicit choice always wins. */
+  
   :root, :root[data-theme="light"] {
     --bg-base: #f7f7f5;
     --bg-card: #eeeeeb;
@@ -182,7 +181,7 @@
 }
 
 @layer components {
-  /* Buttons & Controls */
+  
   .btn-icon {
     background: transparent;
     border: 1px solid var(--border-subtle);
@@ -222,7 +221,6 @@
     box-shadow: 0 4px 14px var(--accent-glow);
   }
 
-  /* Chunk Display Card */
   .chunk-row {
     position: relative;
     padding: 0.2rem 0;
@@ -232,9 +230,7 @@
     transition: opacity 0.35s ease;
   }
 
-
-
-  /* Active line: fully opaque, no container. Others recede. */
+  
   .chunk-row.active {
     opacity: 1;
   }
@@ -260,7 +256,6 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Confidence Meter Bar */
   .confidence-pill {
     display: flex;
     align-items: center;
@@ -284,7 +279,6 @@
     transition: width 0.3s ease;
   }
 
-  /* Modal Windows */
   .modal-overlay {
     position: fixed;
     inset: 0;
@@ -311,7 +305,7 @@
 }
 
 @layer components {
-  /* Settings: flyout on wide screens, bottom sheet on phones */
+  
   .settings-scrim {
     position: fixed;
     inset: 0;
@@ -446,7 +440,7 @@
 }
 
 @layer zen {
-  /* Ultra-minimal Zen Mode */
+  
   .zen-active .app-header {
     opacity: 0;
     pointer-events: none;
@@ -504,8 +498,7 @@
     gap: 0.65rem;
   }
 
-
-  /* Phones: header and control bar scroll sideways instead of clipping */
+  
   @media (max-width: 640px) {
     .app-header {
       flex-wrap: wrap;

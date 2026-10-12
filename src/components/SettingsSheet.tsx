@@ -15,7 +15,6 @@ const THEMES: { id: AppTheme; label: string }[] = [
   { id: 'dark', label: 'Dark' },
 ];
 
-// Bottom sheet on phones, flyout on wider screens (see .settings-sheet in theme.css).
 export function SettingsSheet({ isOpen, onClose }: SettingsSheetProps) {
   const { theme, setTheme } = useThemeStore();
   const { fontSize, setFontSize, wrapLines, toggleWrapLines, splitLines, toggleSplitLines } = useMantraStore();

@@ -1,4 +1,4 @@
--- D1 SQLite schema for Parayanam WebAuthn & Cloud Sync
+
 
 CREATE TABLE IF NOT EXISTS users (
     id TEXT PRIMARY KEY,
@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TABLE IF NOT EXISTS credentials (
-    id TEXT PRIMARY KEY,                       -- Base64URL credential ID
-    user_id TEXT NOT NULL,                     -- Foreign key to users
-    public_key TEXT NOT NULL,                  -- Base64URL encoded public key
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    public_key TEXT NOT NULL,
     counter INTEGER NOT NULL DEFAULT 0,
     device_type TEXT,
     backed_up INTEGER NOT NULL DEFAULT 0,
@@ -28,13 +28,13 @@ CREATE TABLE IF NOT EXISTS challenges (
     challenge TEXT NOT NULL,
     user_id TEXT,
     username TEXT,
-    type TEXT NOT NULL,                        -- 'register' | 'login'
+    type TEXT NOT NULL,
     expires_at INTEGER NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS idx_challenges_expires ON challenges(expires_at);
 
--- Saved user Prakaras (optional cloud backup)
+
 CREATE TABLE IF NOT EXISTS user_prakaras (
     id TEXT PRIMARY KEY,
     user_id TEXT NOT NULL,

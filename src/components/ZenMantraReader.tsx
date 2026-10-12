@@ -20,7 +20,6 @@ export function ZenMantraReader() {
   const chunks = getFlattenedChunks();
   const activePrakara = getActivePrakara();
 
-  // Scroll active chunk into center
   useEffect(() => {
     if (activeChunkRef.current) {
       activeChunkRef.current.scrollIntoView({
@@ -30,17 +29,14 @@ export function ZenMantraReader() {
     }
   }, [activeChunkIndex]);
 
-  // Broadcast chunk change if host in live WebRTC room
   useEffect(() => {
     if (isInRoom && isHost) {
       chantingRoom.broadcastChunkChange(activeChunkIndex, msPerMatra, isAutoProgress, activePrakara.id);
     }
   }, [activeChunkIndex, msPerMatra, isAutoProgress, isInRoom, isHost, activePrakara.id]);
 
-  // Handle user tap / click on chunk to advance
   const handleChunkClick = (index: number) => {
     if (index === activeChunkIndex) {
-      // Tap active chunk: record cadence and advance
       const currentChunk = chunks[activeChunkIndex];
       if (currentChunk) {
         registerTap(currentChunk.id, currentChunk.sanskrit);
@@ -51,10 +47,8 @@ export function ZenMantraReader() {
     }
   };
 
-  // Keyboard navigation: Spacebar / Arrow keys / Z for Zen mode
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore typing in inputs
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return;
       }
@@ -82,7 +76,6 @@ export function ZenMantraReader() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeChunkIndex, chunks, nextChunk, prevChunk, registerTap, toggleZenMode]);
 
-  // Auto-progress timer
   useEffect(() => {
     if (!isAutoProgress) return;
 
@@ -111,7 +104,6 @@ export function ZenMantraReader() {
         </button>
       )}
 
-      {/* Prakara Title Header */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h2 className="title-display" style={{ fontSize: '1.4rem', color: 'var(--accent)', marginBottom: '0.4rem' }}>
           {transliterateVedic(activePrakara.title, targetScript)}
@@ -121,7 +113,6 @@ export function ZenMantraReader() {
         </p>
       </div>
 
-      {/* Chunks List */}
       <div className="chunks-container">
         {chunks.map((chunk, idx) => {
           const isActive = idx === activeChunkIndex;

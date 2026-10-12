@@ -41,7 +41,6 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
       setTimeout(() => onClose(), 1500);
     } catch (err: any) {
       console.warn('Passkey registration error:', err);
-      // Fallback for local demo if backend Worker API is not deployed yet
       const fallbackUser: UserProfile = {
         id: 'usr-' + Date.now(),
         username: username.trim(),
@@ -73,7 +72,6 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
       setTimeout(() => onClose(), 1500);
     } catch (err: any) {
       console.warn('Passkey login error:', err);
-      // Fallback if local
       if (username.trim()) {
         const fallbackUser: UserProfile = {
           id: 'usr-' + Date.now(),

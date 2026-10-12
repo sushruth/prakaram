@@ -188,7 +188,6 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
               />
             </div>
 
-            {/* Current Sequence List */}
             <div style={{ marginBottom: '1.2rem' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.4rem' }}>
                 Sequence Order ({selectedItems.length} items)
@@ -228,7 +227,6 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
               )}
             </div>
 
-            {/* Add Suktam Section */}
             <div style={{ marginBottom: '1.2rem' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.4rem' }}>
                 + Add Suktam to Sequence
@@ -253,7 +251,6 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
               </div>
             </div>
 
-            {/* Add Custom Vakya Section */}
             <div style={{ marginBottom: '1.5rem', padding: '0.85rem', background: 'var(--bg-card)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.4rem' }}>
                 + Insert Custom Vakya / Sankalpam / Procedure

@@ -22,11 +22,7 @@ export class PasskeyService {
     return (await browserSupportsWebAuthnAutofill()) ?? false;
   }
 
-  /**
-   * Register a new passkey account without passwords.
-   */
   public static async register(username: string): Promise<UserProfile> {
-    // 1. Get options from server
     const optRes = await fetch(`${API_BASE}/register/options`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -40,10 +36,8 @@ export class PasskeyService {
 
     const { challengeId, options } = await optRes.json();
 
-    // 2. Trigger browser passkey dialog
     const regResponse = await startRegistration({ optionsJSON: options });
 
-    // 3. Verify attestation on server
     const verifyRes = await fetch(`${API_BASE}/register/verify`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -59,9 +53,6 @@ export class PasskeyService {
     return data.user;
   }
 
-  /**
-   * Login using Passkey (TouchID / FaceID / Windows Hello / YubiKey)
-   */
   public static async login(username?: string): Promise<UserProfile> {
     const optRes = await fetch(`${API_BASE}/login/options`, {
       method: 'POST',
@@ -76,7 +67,6 @@ export class PasskeyService {
 
     const { challengeId, options } = await optRes.json();
 
-    // Trigger browser biometric prompt
     const authResponse = await startAuthentication({ optionsJSON: options });
 
     const verifyRes = await fetch(`${API_BASE}/login/verify`, {

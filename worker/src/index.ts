@@ -1,7 +1,3 @@
-/**
- * Parayanam Cloudflare Worker API
- * Provides low-friction, zero-password WebAuthn Passkeys and Cloud Prakara Sync
- */
 
 export interface Env {
   DB: any;
@@ -15,7 +11,6 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    // CORS headers
     const corsHeaders = {
       'Access-Control-Allow-Origin': env.EXPECTED_ORIGIN || '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
@@ -27,14 +22,12 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // Health check
     if (url.pathname === '/api/health') {
       return new Response(JSON.stringify({ status: 'ok', time: Date.now() }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
-    // Passkey Registration Options
     if (url.pathname === '/api/auth/register/options' && request.method === 'POST') {
       try {
         const { username } = await request.json() as { username?: string };
@@ -49,7 +42,6 @@ export default {
         const challenge = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(32))));
         const userId = crypto.randomUUID();
 
-        // Passkey options payload
         const options = {
           challenge,
           rp: { name: env.RP_NAME || 'Parayanam', id: env.RP_ID || url.hostname },
@@ -59,8 +51,8 @@ export default {
             displayName: username,
           },
           pubKeyCredParams: [
-            { alg: -7, type: 'public-key' },  // ES256
-            { alg: -257, type: 'public-key' } // RS256
+            { alg: -7, type: 'public-key' },
+            { alg: -257, type: 'public-key' }
           ],
           authenticatorSelection: {
             residentKey: 'required',
@@ -78,7 +70,6 @@ export default {
       }
     }
 
-    // Passkey Login Options (Conditional UI discoverable credentials)
     if (url.pathname === '/api/auth/login/options' && request.method === 'POST') {
       try {
         const challengeId = crypto.randomUUID();
@@ -99,7 +90,6 @@ export default {
       }
     }
 
-    // Passkey Verification (simulated edge token issuer)
     if ((url.pathname === '/api/auth/register/verify' || url.pathname === '/api/auth/login/verify') && request.method === 'POST') {
       try {
         const body = await request.json() as { challengeId: string; response: any };

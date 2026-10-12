@@ -8,19 +8,19 @@ export type TargetScript =
 
 export interface AksharaToken {
   text: string;
-  weight: number; // 1 = laghu, 2 = guru, 3 = pluta, 0 = punctuation
+  weight: number;
   swara?: 'anudatta' | 'svarita' | 'dirgha_svarita' | 'none';
 }
 
 export interface MantraChunk {
   id: string;
   chunkNumber: number;
-  sanskrit: string; // Master Devanagari text with Vedic swara marks
-  translation?: string; // Optional English or procedural note
+  sanskrit: string;
+  translation?: string;
   rishi?: string;
   chandas?: string;
-  isInstruction?: boolean; // For interstitial vakyas, sankalpam, dhyanam
-  tokens?: AksharaToken[]; // Computed or cached token breakdown
+  isInstruction?: boolean;
+  tokens?: AksharaToken[];
 }
 
 export interface SuktaSection {
@@ -50,11 +50,11 @@ export interface MantraDocument {
 export interface PrakaraItem {
   id: string;
   type: 'sukta_ref' | 'vakya';
-  suktaId?: string; // Refers to MantraDocument.id
-  chunkId?: string; // Specific chunk or entire sukta
+  suktaId?: string;
+  chunkId?: string;
   customTitle?: string;
-  customText?: string; // Sanskrit text for custom vakya
-  customTranslation?: string; // Guidance / procedure
+  customText?: string;
+  customTranslation?: string;
 }
 
 export interface Prakara {

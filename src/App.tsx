@@ -21,15 +21,12 @@ export function App() {
   const { addPrakara } = usePrakaraStore();
   const { setBpm } = useCadenceStore();
 
-  // Set initial theme attribute
   useEffect(() => {
     applyThemeAttribute(theme);
   }, [theme]);
 
-  // Handle URL hash sharing (#p=...) and room links (?room=...)
   useEffect(() => {
     const handleUrlState = async () => {
-      // 1. Check for compressed Prakara hash
       const hash = window.location.hash;
       if (hash && hash.startsWith('#p=')) {
         const decoded = await decodePrakaraFromUrlHash(hash);
@@ -41,7 +38,6 @@ export function App() {
         }
       }
 
-      // 2. Check for WebRTC room query
       const params = new URLSearchParams(window.location.search);
       const roomParam = params.get('room');
       if (roomParam) {

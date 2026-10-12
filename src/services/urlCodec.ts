@@ -1,16 +1,11 @@
 import { Prakara } from '../types/mantra';
 
-/**
- * Encodes a Prakara or Cadence preset into a compact, compressed Base64URL string
- * using native browser CompressionStream (RFC 1951 Deflate).
- */
 export async function encodePrakaraToUrlHash(prakara: Prakara): Promise<string> {
   const json = JSON.stringify(prakara);
   const stream = new Blob([json]).stream().pipeThrough(new CompressionStream('deflate-raw'));
   const response = new Response(stream);
   const buffer = await response.arrayBuffer();
 
-  // Convert binary buffer to Base64URL
   const bytes = new Uint8Array(buffer);
   let binary = '';
   for (let i = 0; i < bytes.byteLength; i++) {
@@ -22,13 +17,9 @@ export async function encodePrakaraToUrlHash(prakara: Prakara): Promise<string> 
     .replace(/=+$/, '');
 }
 
-/**
- * Decodes a compressed Base64URL string back into a Prakara object.
- */
 export async function decodePrakaraFromUrlHash(encodedHash: string): Promise<Prakara | null> {
   try {
     let clean = encodedHash.replace(/^#p=/, '').replace(/^#/, '');
-    // Restore base64 padding
     clean = clean.replace(/-/g, '+').replace(/_/g, '/');
     while (clean.length % 4) {
       clean += '=';

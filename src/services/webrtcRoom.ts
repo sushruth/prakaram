@@ -1,4 +1,3 @@
-// @ts-ignore - Trystero torrent strategy
 import { joinRoom } from 'trystero/torrent';
 import { SyncMessage } from '../types/cadence';
 
@@ -58,7 +57,6 @@ export class ChantingRoomService {
       try {
         this.room.leave();
       } catch (e) {
-        // ignore
       }
       this.room = null;
       this.sendSync = null;

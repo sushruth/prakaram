@@ -20,10 +20,8 @@ describe('CadenceLearningEngine (Option A)', () => {
     const testSanskrit = 'ॐ स॒हस्र॑शीर्षा॒ पुरु॑षः ।';
     let t = 10000;
 
-    // Simulate steady chanting at ~800ms per matra
     engine.registerTap('c1', testSanskrit, t);
 
-    // 5 steady chunks spaced by 12 matras * 800ms = 9600ms
     for (let i = 1; i <= 5; i++) {
       t += 9600;
       engine.registerTap(`c${i + 1}`, testSanskrit, t);

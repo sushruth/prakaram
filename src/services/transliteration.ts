@@ -1,6 +1,5 @@
 import { TargetScript } from '../types/mantra';
 
-// Brahmic script base codepoints
 const SCRIPT_BASES: Record<string, number> = {
   telugu: 0x0c00,
   kannada: 0x0c80,
@@ -16,7 +15,6 @@ const OM_MAP: Record<TargetScript, string> = {
   iast: 'oṃ',
 };
 
-// Devanagari -> Tamil mappings
 const TAMIL_MAP: Record<string, string> = {
   'अ': 'அ', 'आ': 'ஆ', 'इ': 'இ', 'ई': 'ஈ', 'உ': 'உ', 'ऊ': 'ஊ',
   'ऋ': 'ரு', 'ॠ': 'ரூ', 'ए': 'ஏ', 'ऐ': 'ஐ', 'ओ': 'ஓ', 'औ': 'ஔ',
@@ -38,7 +36,6 @@ const TAMIL_CONS: Record<string, [string, number]> = {
 
 const SUBSCRIPTS = ['', '', '₂', '₃', '₄'];
 
-// IAST Mappings
 const IAST_VOWELS: Record<string, string> = {
   'अ': 'a', 'आ': 'ā', 'इ': 'i', 'ई': 'ī', 'उ': 'u', 'ऊ': 'ū',
   'ऋ': 'ṛ', 'ॠ': 'ṝ', 'ऌ': 'ḷ', 'ॡ': 'ḹ',
@@ -60,21 +57,15 @@ const IAST_CONS: Record<string, string> = {
   'ळ': 'ḷ', 'ऴ': 'ḻ',
 };
 const IAST_SWARAS: Record<string, string> = {
-  '\u0951': '\u0301', // Svarita -> combining acute
-  '\u0952': '\u0331', // Anudātta -> combining macron below
-  '\u1cda': '\u030b', // Dīrgha Svarita -> combining double acute
+  '\u0951': '\u0301',
+  '\u0952': '\u0331',
+  '\u1cda': '\u030b',
 };
 
-/**
- * High-performance, zero-dependency Vedic Indic transliteration engine.
- * Converts canonical Devanagari text with Vedic swara marks into target Indic scripts
- * while preserving accents, danda pauses, and proper glyph clustering.
- */
 export function transliterateVedic(src: string, target: TargetScript): string {
   if (!src) return '';
   if (target === 'devanagari') return src;
 
-  // 1. South Indic Scripts (Telugu, Kannada, Malayalam) via Brahmic relative offsets
   if (target === 'telugu' || target === 'kannada' || target === 'malayalam') {
     const base = SCRIPT_BASES[target];
     let out = '';
@@ -84,7 +75,6 @@ export function transliterateVedic(src: string, target: TargetScript): string {
       if (c === 0x0950) {
         out += OM_MAP[target];
       } else if (c === 0x0951 || c === 0x0952 || c === 0x1cda || c === 0x0964 || c === 0x0965) {
-        // Accents and Dandam stay identical
         out += src[i];
       } else if ((c >= 0x0901 && c <= 0x094d) || (c >= 0x0960 && c <= 0x0963)) {
         out += String.fromCharCode(base + (c - 0x0900));
@@ -95,7 +85,6 @@ export function transliterateVedic(src: string, target: TargetScript): string {
     return out;
   }
 
-  // 2. Tamil Script with Subscripted Numerals (Ramakrishna Math convention)
   if (target === 'tamil') {
     let out = '';
     let i = 0;
@@ -130,7 +119,6 @@ export function transliterateVedic(src: string, target: TargetScript): string {
             break;
           }
         }
-        // Canonical cluster order: base + (matra/virama) + swara + subscript digit
         out += (virama || matra) + swaras + num;
         continue;
       }
@@ -145,7 +133,6 @@ export function transliterateVedic(src: string, target: TargetScript): string {
     return out;
   }
 
-  // 3. IAST Roman Transliteration with Vedic Accents
   if (target === 'iast') {
     let out = '';
     let i = 0;
@@ -188,7 +175,6 @@ export function transliterateVedic(src: string, target: TargetScript): string {
             break;
           }
         }
-        // Attach accent to vowel nucleus (matra or inherent 'a')
         if (hasVirama) {
           out += c + swaraStr;
         } else if (matraStr) {

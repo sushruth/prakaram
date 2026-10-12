@@ -19,7 +19,6 @@ describe('Prakara URL Codec', () => {
     const hash = await encodePrakaraToUrlHash(testPrakara);
     expect(typeof hash).toBe('string');
     expect(hash.length).toBeGreaterThan(10);
-    // Base64URL characters only
     expect(hash).toMatch(/^[A-Za-z0-9_-]+$/);
 
     const decoded = await decodePrakaraFromUrlHash(hash);

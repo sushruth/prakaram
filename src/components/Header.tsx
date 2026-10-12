@@ -34,7 +34,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           <Icon name="gear" size={20} />
         </button>
 
-        {/* Prakara Sequence Selector */}
         <button
           className="btn-icon"
           onClick={onOpenPrakara}
@@ -43,7 +42,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           <Icon name="scroll" size={20} />
         </button>
 
-        {/* WebRTC Live Room */}
         <button
           className="btn-icon"
           onClick={onOpenRoom}
@@ -66,7 +64,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           )}
         </button>
 
-        {/* WebAuthn Passkey Button */}
         <button
           className="btn-icon"
           onClick={onOpenAuth}
@@ -75,7 +72,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, 
           <Icon name="key" size={20} />
         </button>
 
-        {/* Zen Mode Button */}
         <button
           className="btn-icon"
           onClick={toggleZenMode}

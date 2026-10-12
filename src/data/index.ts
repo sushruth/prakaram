@@ -19,9 +19,6 @@ export const SUKTA_MAP = new Map<string, MantraDocument>(
   ALL_SUKTAMS.map((s) => [s.id, s])
 );
 
-/**
- * Pre-compiled traditional Vedic Prakaras
- */
 export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'maha-parayanam',

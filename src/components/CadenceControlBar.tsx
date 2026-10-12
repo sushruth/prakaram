@@ -46,7 +46,6 @@ export function CadenceControlBar() {
 
   return (
     <div className="bottom-bar">
-      {/* Laya & BPM Preset Selector */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
         {(['dhyana', 'abhyasa', 'parayana'] as LayaType[]).map((key) => {
           const preset = LAYA_PRESETS[key];
@@ -74,7 +73,6 @@ export function CadenceControlBar() {
         })}
       </div>
 
-      {/* BPM Slider */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: '130px' }}>
         <input
           type="range"
@@ -90,7 +88,6 @@ export function CadenceControlBar() {
         </span>
       </div>
 
-      {/* Tap Cadence Button */}
       <button
         className="btn-primary"
         onClick={handleTap}
@@ -100,7 +97,6 @@ export function CadenceControlBar() {
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name="hand-tap" size={15} />Tap</span>
       </button>
 
-      {/* Confidence Meter */}
       <div className="confidence-pill" title={`Cadence confidence: ${confidenceScore}%. Based on your rhythm consistency.`}>
         <div className="confidence-track">
           <div className="confidence-fill" style={{ width: `${confidenceScore}%` }} />
@@ -108,7 +104,6 @@ export function CadenceControlBar() {
         <span style={{ fontSize: '0.75rem' }}>{confidenceScore}%</span>
       </div>
 
-      {/* Auto-Progress Toggle */}
       <button
         onClick={toggleAutoProgress}
         style={{
@@ -130,7 +125,6 @@ export function CadenceControlBar() {
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name={isAutoProgress ? 'pause' : 'play'} size={14} />Auto</span>
       </button>
 
-      {/* Share / Copy Prakara Link */}
       <button
         className="btn-icon"
         onClick={handleShare}
@@ -140,7 +134,6 @@ export function CadenceControlBar() {
         <Icon name={copiedLink ? 'check' : 'link'} size={16} />
       </button>
 
-      {/* Reset Session */}
       <button
         className="btn-icon"
         onClick={resetCadence}
