@@ -113,7 +113,7 @@ export function ZenMantraReader() {
       {/* Prakara Title Header */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h2 className="title-display" style={{ fontSize: '1.4rem', color: 'var(--accent)', marginBottom: '0.4rem' }}>
-          {activePrakara.title}
+          {transliterateVedic(activePrakara.title, targetScript)}
         </h2>
         <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
           {activePrakara.description}

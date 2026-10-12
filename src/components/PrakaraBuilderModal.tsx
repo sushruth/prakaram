@@ -1,5 +1,7 @@
 import { useState } from 'preact/hooks';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
+import { useMantraStore } from '../stores/useMantraStore';
+import { transliterateVedic } from '../services/transliteration';
 import { ALL_SUKTAMS } from '../data';
 import { Prakara, PrakaraItem } from '../types/mantra';
 import { encodePrakaraToUrlHash } from '../services/urlCodec';
@@ -13,6 +15,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
   if (!isOpen) return null;
 
   const { prakaras, activePrakaraId, selectPrakara, addPrakara } = usePrakaraStore();
+  const { targetScript } = useMantraStore();
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newDesc, setNewDesc] = useState('');
@@ -120,7 +123,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
                   >
                     <div>
                       <div style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text-primary)' }}>
-                        {p.title}
+                        {transliterateVedic(p.title, targetScript)}
                       </div>
                       <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         {p.description} ({p.items.length} sections)
@@ -210,7 +213,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
                       }}
                     >
                       <span>
-                        <strong>{idx + 1}.</strong> {item.customTitle}
+                        <strong>{idx + 1}.</strong> {transliterateVedic(item.customTitle ?? '', targetScript)}
                       </span>
                       <button
                         onClick={() => handleRemoveItem(idx)}
@@ -243,7 +246,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
                       cursor: 'pointer',
                     }}
                   >
-                    + {s.title.sanskrit}
+                    + {transliterateVedic(s.title.sanskrit, targetScript)}
                   </button>
                 ))}
               </div>
