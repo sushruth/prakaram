@@ -61,7 +61,7 @@ export function PasskeySignInForm({
           id="username-input"
           type="text"
           autoComplete="username webauthn"
-          placeholder={isRegistering ? 'e.g. sushruth' : 'Tap for Passkey or enter username'}
+          placeholder={isRegistering ? 'e.g. your name' : 'Tap for Passkey or enter username'}
           value={username}
           onChange={(e) => onUsernameChange((e.target as HTMLInputElement).value)}
           style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: 'var(--bg-card)' }}

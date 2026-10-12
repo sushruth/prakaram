@@ -72,7 +72,7 @@
 
 ### 6. Modern Layered CSS (No Tailwind)
 * Native `@layer` cascade, split by concern under `src/styles/`. Rules and borders are governed by `DESIGN.md`.
-* Three themes: **System** (default, follows the OS), **Light**, and **Dark**. Light and dark are near-monochrome with one teal accent. Swara colours and the green back-to-line arrow are the only other hues.
+* Three themes: **System** (default, follows the OS), **Light**, and **Dark**. Light and dark are near-monochrome with one slate-blue accent. The flame, the switch spectrum (yellow, orange, pale blue), the swara colours and the green back-to-line arrow are the only other hues.
 
 ---
 

@@ -8,7 +8,7 @@
 
 Prakaram is a chanting tool, not a temple. It should feel like a printed page on good paper, with the text doing all the work.
 
-**We do not use:** saffron, maroon, temple gold, lotus or om ornaments, mandala backgrounds, gradients, ambient glows (the flame glow is only for active controls), drop shadows on text, card borders around verses, or the serif-and-gold "devotional" look that most sites in this space share.
+**We do not use:** saffron, maroon, temple gold, lotus or om ornaments, mandala backgrounds, gradients and glows outside the exceptions in §7b (the flame, switch fills and active words), drop shadows on text, card borders around verses, or the serif-and-gold "devotional" look that most sites in this space share.
 
 **We do use:** one ink color, one accent tint, generous space, opacity as the only hierarchy for lines, and type that is sharp at small sizes.
 
@@ -20,7 +20,7 @@ Prakaram is a chanting tool, not a temple. It should feel like a printed page on
 2. **Opacity is the hierarchy, with one exception.** Lines recede by opacity: the neighbours of the active line at 60%, the rest at 35%. The active line is also set in semibold (600). Do not use size, colour or boxes to mark the current line.
 3. **One accent.** Slate blue ink (`#2f5f7a`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
-5. **No decoration.** No gradients, no glows, no blur except zen-mode dimming, no emoji in primary chrome.
+5. **No decoration.** No gradients or glows outside the §7b exceptions, no blur except zen-mode dimming, no emoji in primary chrome.
 6. **Motion is opacity only.** Transitions are 300–350 ms opacity fades. No scale, no slide.
 
 ---
@@ -38,7 +38,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#2f5f7a` (dark `#9ccbe8`) | Active control, focus, prakara title |
-| `--spectrum` | orange, yellow, pale blue | Fill of an on switch |
+| `--spectrum` | pale gold, soft orange, pale blue | Fill of an on switch |
 | `--spectrum-ink` | deeper gold, orange, blue (dark: pale) | Active segment and primary text buttons (gradient text) |
 | `--swara-up` | `#6d28d9` (dark `#c084fc`) | Svarita, U+0951 (up): purple |
 | `--swara-down` | `#1d4ed8` (dark `#60a5fa`) | Anudatta, U+0952 (down): blue |
@@ -271,6 +271,6 @@ Text first. The app is words on paper, and controls are words too.
 - [ ] Does the active line still have no container?
 - [ ] Are inactive lines still semi-transparent, and the active one fully opaque?
 - [ ] Is there still only one accent hue?
-- [ ] Are there no gradients, glows, or ornaments?
+- [ ] Are gradients and glows limited to the §7b exceptions, with no ornaments?
 - [ ] Do Indic lines still render in sans-serif?
 - [ ] Does it pass at 390 px wide with no horizontal page scroll?

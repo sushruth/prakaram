@@ -93,6 +93,10 @@ Target benchmarks:
 
 ---
 
+Handoff, the repo-rename checklist and open items are in `MAINTAINERS.md` §7. Read it before starting a new session.
+
+---
+
 ## 5. Adding New Suktams to the Corpus
 
 When adding a new Suktam from *Saswara Veda Mantrah*:

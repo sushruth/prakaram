@@ -51,7 +51,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 
 1. In Cloudflare: **Workers & Pages → Create → Import a repository**, select `sushruth/parayanam`.
 2. Build command: `bun install --frozen-lockfile && bun run build`
-3. Deploy command: `npx wrangler deploy`
+3. Deploy command: `bunx wrangler deploy`. Build cache is enabled on the Workers project.
 4. Production branch: `master`. Each push to it builds and deploys.
 5. No environment variables are needed for the frontend.
 
@@ -115,7 +115,7 @@ bunx tsc --noEmit
 
 ## 5. Continuous Integration
 
-`.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. Deploys are not part of CI; Cloudflare's Git integration deploys `master`.
+`.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. The Bun package cache (`~/.bun/install/cache`) is restored from `actions/cache`, keyed on `bun.lock`. Deploys are not part of CI; Cloudflare's Git integration deploys `master`, and its build only needs install and build (the typecheck and tests run in CI).
 
 ---
 
@@ -124,3 +124,43 @@ bunx tsc --noEmit
 * Passkey accounts are hidden, and the Worker verify endpoints fail closed (`501`). Implement WebAuthn verification with `@simplewebauthn/server` before exposing accounts.
 * `worker/wrangler.jsonc` still has a placeholder D1 `database_id`, and it commits a `JWT_SECRET`. Move the secret to `wrangler secret put` before deploying the Worker.
 * Phosphor icons are vendored from `@phosphor-icons/core`. Re-check the licence text in `THIRD_PARTY_NOTICES.md` when adding icons.
+
+---
+
+## 7. Handoff
+
+**Branches.** Push to `master`. It is the Cloudflare production branch, so every push there builds and deploys. The session branch `ccr-568c382f-f687m0` is kept at the same commit.
+
+**Repo rename checklist.** The repo is `sushruth/parayanam` for now; the app is served at `prakaram.sushruth.dev`. After renaming the repo on GitHub:
+
+1. `src/components/SettingsSheet.tsx`: the "Source on GitHub" link.
+2. `ASSUMPTIONS.md` (line 5) and §2A step 1 above: the repository references.
+3. Cloudflare: if the Git link to the Workers project breaks, reconnect it to the renamed repo.
+4. Check that `prakaram.sushruth.dev` still routes to the `prakaram` Worker.
+
+**Checks before a push** (the same ones CI runs):
+
+```bash
+bun install --frozen-lockfile
+bunx tsc --noEmit
+bun test
+bun run build
+```
+
+**Measured times** (local, bun 1.4.2, fresh clone): install 3.4 s cold, 0.24 s warm; `tsc` 2.9 s; `bun test` 0.1 s; build 1.6 s; `wrangler deploy --dry-run` 2.0 s warm, 4.4 s cold. CI's check job took about 15 s before the Bun package cache was added. The real Cloudflare upload and queue time were not measured.
+
+**Shipped recently:** installable PWA (manifest, icons, production-only service worker); the Phosphor flame outline with its gradient, with a random-walk flicker and sway (off under reduced motion); a taller cadence strip and flyouts that fade out below their panels; pause and the current line's remaining time persist across reloads; slate-blue accent with a yellow-first spectrum on switches and active words; the Prakaram rename; a GitHub link in settings.
+
+**Open items** (from the UI review; none is in progress):
+
+* Modals use inline styles, rounded cards, pills and a blur overlay, against DESIGN §7b. Restyle them, or name them as an exception in DESIGN.
+* Muted text is about 3.2–3.7:1 against the background. Darken `--text-muted` toward 4.5:1.
+* Strip tap targets are about 25 px (mode words) and 17 px (readout). Pad them to 40 px.
+* `user-select: none` on `html, body` blocks text selection outside learning. Removing it conflicts with press-and-hold to pause on touch.
+* Flyout top padding is fixed, so a two-line title can overlap the head. Measure the chrome instead.
+* No safe-area handling (`env(safe-area-inset-*)`), and the back-to-line arrow sits over verse text.
+* Desktop cadence strip is not aligned to the 960 px reading column.
+* The script selector's style differs from the other controls.
+* `PasskeyAuthModal.tsx` is unmounted and calls hooks after an early return. Delete it or fix it.
+* The back-to-line arrow is green, the only green in the UI. Confirm or change it.
+* Known gaps in §6 still apply: the passkey verify endpoints are not implemented, and the Worker config has a placeholder D1 ID and a committed `JWT_SECRET`.
