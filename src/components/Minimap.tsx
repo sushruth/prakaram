@@ -1,13 +1,11 @@
-import { lineClass } from '../config/lineClass';
+import { minimap } from '../services/minimap';
 import { MantraChunk } from '../types/mantra';
 
-// Each row is a real line drawn as its words: width follows the line's length, gaps fall between words.
-function Words({ chunk }: { chunk: MantraChunk }) {
-  const words = chunk.sanskrit.split(/\s+/).filter(Boolean);
+function Words({ words }: { words: number[] }) {
   return (
     <span className="minimap-words">
       {words.map((w, i) => (
-        <span key={i} style={{ flexGrow: w.length }} />
+        <span key={i} style={{ flexGrow: w }} />
       ))}
     </span>
   );
@@ -24,22 +22,21 @@ interface MinimapProps {
 
 /** Previous, current and next line in miniature. The current line fills as you sing along; tapping pauses. */
 export function Minimap({ chunks, index, duration, frozen, disabled, onToggle }: MinimapProps) {
-  const rows = [chunks[index - 1], chunks[index], chunks[index + 1]];
-  const longest = Math.max(1, ...rows.map((c) => c?.sanskrit.length ?? 0));
+  const rows = minimap([chunks[index - 1], chunks[index], chunks[index + 1]]);
   const label = frozen ? 'Resume auto progress' : 'Pause auto progress';
   return (
     <button className="minimap" onClick={onToggle} disabled={disabled} aria-pressed={frozen} data-frozen={frozen} aria-label={label} title={label}>
       <span className="minimap-lines" aria-hidden="true">
-        {rows.map((c, i) => (
-          <span key={i} className={`minimap-line ${c ? lineClass(c) : ''}`} data-now={i === 1} style={{ width: `${c ? (100 * c.sanskrit.length) / longest : 0}%` }}>
-            {c && <Words chunk={c} />}
-            {i === 1 && c && (
+        {rows.map((row, i) => (
+          <span key={i} className={`minimap-line ${row?.className ?? ''}`} data-now={i === 1} style={{ width: `${row?.widthPct ?? 0}%` }}>
+            {row && <Words words={row.words} />}
+            {i === 1 && row && (
               <span
                 key={index}
                 className="minimap-fill"
                 style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
               >
-                <Words chunk={c} />
+                <Words words={row.words} />
               </span>
             )}
           </span>
