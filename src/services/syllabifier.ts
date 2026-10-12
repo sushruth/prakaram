@@ -94,7 +94,7 @@ function tokenizeWord(word: string): AksharaToken[] {
       } else if (c === 'ि' || c === 'ु' || c === 'ृ' || c === 'ॢ') {
         syllableText += c;
         i++;
-      } else if (c === 'ं' || c === 'ः' || c === 'ꣳ') {
+      } else if (c === 'ं' || c === 'ः') {
         isGuru = true;
         syllableText += c;
         i++;

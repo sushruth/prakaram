@@ -26,7 +26,7 @@ describe('only chant is timed', () => {
     expect(calculateChunkWeight('[ॐ] नमः (शिवाय)')).toBe(calculateChunkWeight('ॐ नमः शिवाय'));
   });
 
-  it('keeps the Vedic sign ꣳ inside its syllable', () => {
-    expect(calculateChunkWeight('नमꣳ')).toBe(calculateChunkWeight('नमं'));
+  it('times the Vedic sign ꣳ as a syllable of its own, one matra', () => {
+    expect(calculateChunkWeight('नमꣳ')).toBe(calculateChunkWeight('नम') + 1);
   });
 });
