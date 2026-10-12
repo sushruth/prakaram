@@ -1,6 +1,14 @@
 import { create } from 'zustand';
 
-export type AppTheme = 'sandhya' | 'dark' | 'light';
+export type AppTheme = 'system' | 'light' | 'dark';
+
+const THEME_IDS: AppTheme[] = ['system', 'light', 'dark'];
+
+// 'system' removes the attribute so the OS preference decides in CSS.
+export function applyThemeAttribute(theme: AppTheme) {
+  if (theme === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', theme);
+}
 
 interface ThemeState {
   theme: AppTheme;
@@ -9,7 +17,9 @@ interface ThemeState {
   toggleZenMode: () => void;
 }
 
-const SAVED_THEME = (localStorage.getItem('parayanam_theme') as AppTheme) || 'sandhya';
+const SAVED = localStorage.getItem('parayanam_theme') as AppTheme | null;
+// Older saved choices (e.g. 'sandhya') fall back to 'system'.
+const SAVED_THEME: AppTheme = SAVED && THEME_IDS.includes(SAVED) ? SAVED : 'system';
 
 export const useThemeStore = create<ThemeState>((set) => ({
   theme: SAVED_THEME,
@@ -17,7 +27,7 @@ export const useThemeStore = create<ThemeState>((set) => ({
 
   setTheme: (theme) => {
     localStorage.setItem('parayanam_theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
+    applyThemeAttribute(theme);
     set({ theme });
   },
 

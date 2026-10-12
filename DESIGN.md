@@ -27,11 +27,11 @@ Parayanam is a chanting tool, not a temple. It should feel like a printed page o
 
 ## 3. Color Tokens
 
-Defined on `:root` and `[data-theme="sandhya"]` (default) and `[data-theme="light"]` in `src/styles/theme.css`.
+Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"]` in `src/styles/theme.css`. Theme choice is **System** (default; follows the OS), **Light**, or **Dark**. System removes the `data-theme` attribute so `prefers-color-scheme` decides.
 
 | Token | Value | Use |
 | :--- | :--- | :--- |
-| `--bg-base` | `#f7f7f5` | Page paper (default theme) |
+| `--bg-base` | `#f7f7f5` | Page paper (light) |
 | `--bg-card` | `#eeeeeb` | Pressed or hovered neutral |
 | `--border-subtle` | `#e4e4e0` | Hairlines only |
 | `--text-primary` | `#161614` | Active line, headings |
@@ -41,7 +41,7 @@ Defined on `:root` and `[data-theme="sandhya"]` (default) and `[data-theme="ligh
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
-Dark theme uses the same rules on a near-black paper (`#121413`), with the accent lifted to `#7fc4bf` for contrast. Text on accent fills uses `--on-accent` (white in light, near-black in dark), never a hardcoded white.
+Dark uses the same rules on a near-black paper (`#121413`), with the accent lifted to `#7fc4bf` for contrast. Text on accent fills uses `--on-accent` (white in light, near-black in dark), never a hardcoded white.
 
 Do not add new hues. If a new state needs color, derive it from `--accent` at lower opacity.
 

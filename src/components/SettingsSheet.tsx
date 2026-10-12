@@ -10,9 +10,9 @@ interface SettingsSheetProps {
 }
 
 const THEMES: { id: AppTheme; label: string }[] = [
-  { id: 'sandhya', label: 'Sandhya' },
-  { id: 'dark', label: 'Dark' },
+  { id: 'system', label: 'System' },
   { id: 'light', label: 'Light' },
+  { id: 'dark', label: 'Dark' },
 ];
 
 // Bottom sheet on phones, flyout on wider screens (see .settings-sheet in theme.css).

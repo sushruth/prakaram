@@ -8,7 +8,7 @@ import { PasskeyAuthModal } from './components/PasskeyAuthModal';
 import { SettingsSheet } from './components/SettingsSheet';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useCadenceStore } from './stores/useCadenceStore';
-import { useThemeStore } from './stores/useThemeStore';
+import { useThemeStore, applyThemeAttribute } from './stores/useThemeStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 
 export function App() {
@@ -23,7 +23,7 @@ export function App() {
 
   // Set initial theme attribute
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    applyThemeAttribute(theme);
   }, [theme]);
 
   // Handle URL hash sharing (#p=...) and room links (?room=...)
