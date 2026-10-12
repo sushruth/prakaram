@@ -1,24 +1,17 @@
-import { ScriptSelector } from './ScriptSelector';
-import { useThemeStore, AppTheme } from '../stores/useThemeStore';
+import { useThemeStore } from '../stores/useThemeStore';
 import { useRoomStore } from '../stores/useRoomStore';
-import { useMantraStore } from '../stores/useMantraStore';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
   onOpenRoom: () => void;
   onOpenAuth: () => void;
+  onOpenSettings: () => void;
+  settingsOpen: boolean;
 }
 
-export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
-  const { theme, setTheme, zenMode, toggleZenMode } = useThemeStore();
+export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth, onOpenSettings, settingsOpen }: HeaderProps) {
+  const { zenMode, toggleZenMode } = useThemeStore();
   const { isInRoom, isHost, peerCount } = useRoomStore();
-  const { fontSize, setFontSize, wrapLines, toggleWrapLines, splitLines, toggleSplitLines } = useMantraStore();
-
-  const cycleTheme = () => {
-    const themes: AppTheme[] = ['sandhya', 'dark', 'light'];
-    const nextIdx = (themes.indexOf(theme) + 1) % themes.length;
-    setTheme(themes[nextIdx]);
-  };
 
   return (
     <header className="app-header">
@@ -30,47 +23,15 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
       </div>
 
       <div className="header-tools">
-        <ScriptSelector />
-
-        {/* Font size adjustment */}
-        <div className="font-size-pill">
-          <button
-            className="btn-icon"
-            style={{ width: '1.6rem', height: '1.6rem', border: 'none', fontSize: '0.8rem' }}
-            onClick={() => setFontSize(fontSize - 2)}
-            title="Decrease font size"
-          >
-            A-
-          </button>
-          <button
-            className="btn-icon"
-            style={{ width: '1.6rem', height: '1.6rem', border: 'none', fontSize: '0.9rem' }}
-            onClick={() => setFontSize(fontSize + 2)}
-            title="Increase font size"
-          >
-            A+
-          </button>
-        </div>
-
-        {/* Reading options */}
-        <div className="font-size-pill">
-          <button
-            className="btn-icon view-toggle"
-            aria-pressed={wrapLines}
-            onClick={toggleWrapLines}
-            title={wrapLines ? 'Wrap long lines (on)' : 'Wrap long lines (off)'}
-          >
-            Wrap
-          </button>
-          <button
-            className="btn-icon view-toggle"
-            aria-pressed={splitLines}
-            onClick={toggleSplitLines}
-            title={splitLines ? 'Split at danda and long phrases (on)' : 'Split at danda and long phrases (off)'}
-          >
-            Split
-          </button>
-        </div>
+        <button
+          className="btn-icon"
+          onClick={onOpenSettings}
+          aria-label="Settings"
+          aria-expanded={settingsOpen}
+          title="Settings"
+        >
+          ⚙
+        </button>
 
         {/* Prakara Sequence Selector */}
         <button
@@ -102,15 +63,6 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
               }}
             />
           )}
-        </button>
-
-        {/* Theme Cycler */}
-        <button
-          className="btn-icon"
-          onClick={cycleTheme}
-          title={`Theme: ${theme}`}
-        >
-          {theme === 'sandhya' ? '🌅' : theme === 'dark' ? '🌙' : '☀️'}
         </button>
 
         {/* WebAuthn Passkey Button */}

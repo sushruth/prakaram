@@ -5,6 +5,7 @@ import { CadenceControlBar } from './components/CadenceControlBar';
 import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { ChantingRoomModal } from './components/ChantingRoomModal';
 import { PasskeyAuthModal } from './components/PasskeyAuthModal';
+import { SettingsSheet } from './components/SettingsSheet';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useCadenceStore } from './stores/useCadenceStore';
 import { useThemeStore } from './stores/useThemeStore';
@@ -14,6 +15,7 @@ export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
   const [isRoomOpen, setIsRoomOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const { theme } = useThemeStore();
   const { addPrakara } = usePrakaraStore();
@@ -56,7 +58,11 @@ export function App() {
         onOpenPrakara={() => setIsPrakaraOpen(true)}
         onOpenRoom={() => setIsRoomOpen(true)}
         onOpenAuth={() => setIsAuthOpen(true)}
+        onOpenSettings={() => setIsSettingsOpen((o) => !o)}
+        settingsOpen={isSettingsOpen}
       />
+
+      <SettingsSheet isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} />
 
       <ZenMantraReader />
 

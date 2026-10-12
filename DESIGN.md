@@ -93,7 +93,8 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header wraps; the icon row scrolls sideways rather than clipping.
+- Header is one row of actions: settings, prakara, room, passkey, zen.
+- Settings (script, text size, wrap, split, theme) live in one sheet: a bottom sheet on phones, a flyout under the gear on wider screens. Do not add settings to the header.
 - The control bar wraps onto rows. Nothing is hidden off-screen.
 - Touch targets stay at 38 px minimum.
 

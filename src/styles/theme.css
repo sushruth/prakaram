@@ -227,19 +227,7 @@
     transition: opacity 0.35s ease;
   }
 
-  .view-toggle {
-    width: auto;
-    height: 1.6rem;
-    padding: 0 0.5rem;
-    border: none;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
 
-  .view-toggle[aria-pressed="true"] {
-    background: var(--accent-light);
-    color: var(--accent);
-  }
 
   /* Active line: fully opaque, no container. Others recede. */
   .chunk-row.active {
@@ -317,6 +305,141 @@
   }
 }
 
+@layer components {
+  /* Settings: flyout on wide screens, bottom sheet on phones */
+  .settings-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    background: transparent;
+  }
+
+  .settings-sheet {
+    position: fixed;
+    top: 4.25rem;
+    right: 1rem;
+    width: 300px;
+    z-index: 80;
+    background: var(--bg-base);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    box-shadow: var(--shadow-floating);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .settings-head,
+  .settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .settings-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .settings-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .stepper .btn-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .stepper-value {
+    min-width: 2.2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .switch {
+    position: relative;
+    width: 2.5rem;
+    height: 1.4rem;
+    padding: 0;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .switch[aria-checked="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .switch[aria-checked="true"]::after {
+    transform: translateX(1.1rem);
+    background: var(--on-accent);
+  }
+
+  .segmented {
+    display: flex;
+    padding: 2px;
+    border-radius: 999px;
+    background: var(--bg-card);
+  }
+
+  .segment {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    cursor: pointer;
+  }
+
+  .segment[aria-checked="true"] {
+    background: var(--bg-base);
+    color: var(--accent);
+  }
+  @media (max-width: 640px) {
+      .settings-scrim {
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .settings-sheet {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        border-radius: 18px 18px 0 0;
+        padding: 1.1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+      }
+  }
+
+}
+
 @layer zen {
   /* Ultra-minimal Zen Mode */
   .zen-active .app-header {
@@ -376,14 +499,6 @@
     gap: 0.65rem;
   }
 
-  .font-size-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 0.1rem 0.3rem;
-  }
 
   /* Phones: header and control bar scroll sideways instead of clipping */
   @media (max-width: 640px) {
@@ -405,10 +520,6 @@
 
     .header-tools > * {
       flex-shrink: 0;
-    }
-
-    .script-picker select {
-      max-width: 11rem;
     }
 
     .main-content {
