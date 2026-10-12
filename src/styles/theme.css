@@ -24,27 +24,27 @@
 
 @layer theme {
   :root, [data-theme="sandhya"] {
-    --bg-base: #f8f6ff;
-    --bg-card: #efeafc;
-    --bg-overlay: rgba(248, 246, 255, 0.92);
-    --border-subtle: #e2dcf5;
-    --border-focus: #b9a8f0;
+    --bg-base: #f7f7f5;
+    --bg-card: #eeeeeb;
+    --bg-overlay: rgba(247, 247, 245, 0.92);
+    --border-subtle: #e4e4e0;
+    --border-focus: #1f5f63;
 
-    --text-primary: #2e2a48;
-    --text-secondary: #5f5a7d;
-    --text-muted: #8f89ad;
+    --text-primary: #161614;
+    --text-secondary: #55554f;
+    --text-muted: #8c8c85;
 
-    --accent: #6b5bd2;
-    --accent-light: #ece8ff;
-    --accent-gold: #f7c9a9;
-    --accent-glow: rgba(107, 91, 210, 0.16);
+    --accent: #1f5f63;
+    --accent-light: #e6efef;
+    --accent-gold: #a9cbc8;
+    --accent-glow: rgba(31, 95, 99, 0.12);
 
-    --highlight-bg: #e3f7ef;
-    --highlight-border: #7fcaa9;
-    --highlight-glow: rgba(127, 202, 169, 0.4);
+    --highlight-bg: transparent;
+    --highlight-border: transparent;
+    --highlight-glow: transparent;
 
-    --shadow-soft: 0 4px 20px rgba(92, 78, 160, 0.08);
-    --shadow-floating: 0 12px 32px rgba(92, 78, 160, 0.14);
+    --shadow-soft: none;
+    --shadow-floating: 0 8px 24px rgba(22, 22, 20, 0.06);
   }
 
   [data-theme="dark"] {
@@ -72,33 +72,34 @@
   }
 
   [data-theme="light"] {
-    --bg-base: #fdfcff;
-    --bg-card: #f5f3ff;
-    --bg-overlay: rgba(253, 252, 255, 0.95);
-    --border-subtle: #e9e5f7;
-    --border-focus: #c4b5fd;
+    --bg-base: #ffffff;
+    --bg-card: #f4f4f2;
+    --bg-overlay: rgba(255, 255, 255, 0.95);
+    --border-subtle: #ebebe8;
+    --border-focus: #1f5f63;
 
-    --text-primary: #2e2a48;
-    --text-secondary: #5f5a7d;
-    --text-muted: #8f89ad;
+    --text-primary: #161614;
+    --text-secondary: #55554f;
+    --text-muted: #8c8c85;
 
-    --accent: #7c6ad8;
-    --accent-light: #f1edff;
-    --accent-gold: #fbd5bf;
-    --accent-glow: rgba(124, 106, 216, 0.15);
+    --accent: #1f5f63;
+    --accent-light: #e6efef;
+    --accent-gold: #a9cbc8;
+    --accent-glow: rgba(31, 95, 99, 0.1);
 
-    --highlight-bg: #e8fbf3;
-    --highlight-border: #86d3b0;
-    --highlight-glow: rgba(134, 211, 176, 0.3);
+    --highlight-bg: transparent;
+    --highlight-border: transparent;
+    --highlight-glow: transparent;
 
-    --shadow-soft: 0 4px 20px rgba(92, 78, 160, 0.06);
-    --shadow-floating: 0 12px 30px rgba(92, 78, 160, 0.1);
+    --shadow-soft: none;
+    --shadow-floating: 0 8px 24px rgba(22, 22, 20, 0.06);
   }
 }
 
 @layer typography {
   body {
     font-family: 'Geist', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     color: var(--text-primary);
     background-color: var(--bg-base);
     transition: background-color 0.4s ease, color 0.4s ease;
@@ -106,7 +107,7 @@
 
   .vedic-text {
     font-family: 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Geist', system-ui, sans-serif;
-    font-feature-settings: "kern" 1, "mark" 1, "mkmk" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "mark" 1, "mkmk" 1;
     line-height: 2.2;
     text-rendering: optimizeLegibility;
   }
@@ -217,26 +218,22 @@
     position: relative;
     padding: 1.2rem 1.5rem;
     margin-bottom: 1.2rem;
-    border-radius: 12px;
-    border: 1px solid transparent;
+    border-radius: 0;
     cursor: pointer;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.35s ease;
   }
 
+  /* Active line: fully opaque, no container. Others recede. */
   .chunk-row.active {
-    background: var(--highlight-bg);
-    border-color: var(--highlight-border);
-    box-shadow: 0 0 24px var(--highlight-glow);
-    transform: scale(1.015);
+    opacity: 1;
   }
 
   .chunk-row:not(.active) {
-    opacity: 0.65;
+    opacity: 0.35;
   }
 
   .chunk-row:not(.active):hover {
-    opacity: 0.9;
-    background: var(--bg-card);
+    opacity: 0.6;
   }
 
   .instruction-badge {
@@ -246,8 +243,9 @@
     letter-spacing: 0.08em;
     padding: 0.15rem 0.6rem;
     border-radius: 6px;
-    background: var(--accent-gold);
-    color: var(--text-primary);
+    background: transparent;
+    color: var(--accent);
+    padding-left: 0;
     margin-bottom: 0.5rem;
   }
 
@@ -327,7 +325,7 @@
   .zen-active .chunk-row.active {
     opacity: 1;
     filter: none;
-    transform: scale(1.025);
+    transform: none;
   }
 
   .zen-exit-hint {

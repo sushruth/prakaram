@@ -84,7 +84,7 @@ export function CadenceControlBar() {
           style={{ width: '80px', accentColor: 'var(--accent)', cursor: 'pointer' }}
           title={`Tempo: ${bpm} mātrās/min`}
         />
-        <span style={{ fontSize: '0.8rem', fontWeight: 600, minWidth: '46px', color: 'var(--text-primary)' }}>
+        <span style={{ fontSize: '0.8rem', fontWeight: 600, minWidth: '46px', color: 'var(--text-primary)', fontVariantNumeric: 'tabular-nums' }}>
           {bpm} <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>BPM</span>
         </span>
       </div>
@@ -93,7 +93,7 @@ export function CadenceControlBar() {
       <button
         className="btn-primary"
         onClick={handleTap}
-        style={{ padding: '0.4rem 0.85rem', fontSize: '0.82rem' }}
+        style={{ padding: '0.4rem 0.85rem', fontSize: '0.82rem', whiteSpace: 'nowrap' }}
         title="Tap or press Spacebar to record chanting rhythm"
       >
         <span>␣ Tap</span>
