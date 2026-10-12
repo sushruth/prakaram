@@ -145,9 +145,6 @@
     -webkit-user-select: none;
   }
 
-  .cadence-learning .chunk-row.is-next {
-    opacity: 0.6;
-  }
 }
 
 @layer components {

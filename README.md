@@ -16,7 +16,7 @@
 ## ✨ Key Capabilities
 
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
-* **Single-Chunk Focus:** Highlights one line at a time. Other lines fade. At least one line is always highlighted.
+* **Three-Line Focus:** The active line is bold and fully opaque, its neighbours are at 60%, and the rest fade. At least one line is always highlighted.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.
 * **Three modes:** **Off** (you move the lines), **Manual** (lines advance at the set pace; the default), and **Learn** (six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider).
 * **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 50 to 3000 on a logarithmic scale (833 by default). Learned pace is clamped to the same range.

@@ -137,7 +137,7 @@ export function ZenMantraReader() {
             <div
               key={`${chunk.id}-${idx}`}
               ref={isActive ? activeChunkRef : null}
-              className={`chunk-row ${isActive ? 'active' : ''} ${learning && idx === activeChunkIndex + 1 ? 'is-next' : ''}`}
+              className={`chunk-row ${isActive ? 'active' : ''} ${Math.abs(idx - activeChunkIndex) === 1 ? 'is-near' : ''}`}
               onClick={() => handleChunkClick(idx)}
             >
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (

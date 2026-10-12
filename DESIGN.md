@@ -16,8 +16,8 @@ Parayanam is a chanting tool, not a temple. It should feel like a printed page o
 
 ## 2. Principles
 
-1. **One line is the focus.** The active chunk is fully opaque. Every other chunk is semi-transparent. No box, no background, no border, no scale, no glow around the active line.
-2. **Opacity is the hierarchy.** Do not use size, weight, color, or boxes to mark the current line. Lines recede by opacity only.
+1. **Three lines are the focus.** The active chunk is bold and fully opaque. The line before and after it are at 60%. Every other chunk is at 35%. No box, no background, no border, no scale, no glow around the active line.
+2. **Opacity is the hierarchy, with one exception.** Lines recede by opacity: the neighbours of the active line at 60%, the rest at 35%. The active line is also set in semibold (600). Do not use size, colour or boxes to mark the current line.
 3. **One accent.** Teal ink (`#1f5f63`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
 5. **No decoration.** No gradients, no glows, no blur except zen-mode dimming, no emoji in primary chrome.
@@ -76,7 +76,7 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Active | 1 | none | none |
 | Inactive | 0.35 | none | none |
 | Inactive, hovered | 0.6 | none | none |
-| Next line while learning (Learn, waiting or measuring) | 0.6 | none | none |
+| Neighbour of the active line (line before or after) | 0.6, active line set in semibold (600) | none | none |
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
 The instruction label ("Vakya / Procedure") is an uppercase teal label above the text. It has no fill.
@@ -188,7 +188,7 @@ A line advances on its own in `manual` and `engaged` unless paused. The timer is
 ### Tap target
 
 - While learning, clicking the active line or the next line counts as a tap. Clicking a line further away resets learning to `waiting` at zero, then jumps to it. Outside learning, a click jumps.
-- While learning, the page does not scroll and text cannot be selected. The next line is drawn at 60% opacity so the tap target is visible.
+- While learning, the page does not scroll and text cannot be selected. The line before and after the active one are drawn at 60% opacity, so the next line reads as the tap target.
 - Space does the same as Next, or as a tap while learning.
 
 ### Highlights

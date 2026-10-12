@@ -8,9 +8,6 @@ const VERSE_NUMBER = /[।॥|]*\s*[0-9०-९]+\s*[।॥|]*/g;
 // Only Devanagari chant (letters, marks, swara, dandas) is timed. Latin text, brackets and pipes are not.
 const NOT_CHANT = /[^\u0900-\u0965\u0970-\u097F\u1CD0-\u1CFF\uA8E0-\uA8FF\s]/g;
 
-// A vowel letter, a vowel sign, the ꣳ sign, or a consonant not closed by virama.
-const HAS_NUCLEUS = /[\u0904-\u0914\u093E-\u094C\u0962\u0963\uA8F3\u0950]|ॐ|[\u0915-\u0939](?!\u094D)/;
-
 const ANUDATTA = '\u0952';
 const SVARITA = '\u0951';
 const DIRGHA_SVARITA = '\u1CDA';
@@ -37,8 +34,7 @@ export function syllabifyVedic(text: string): AksharaToken[] {
     }
 
     const wordTokens = tokenizeWord(word);
-    // A token with no vowel sound (a bare final consonant, avagraha, chandrabindu) takes no time.
-    tokens.push(...wordTokens.map((t) => (HAS_NUCLEUS.test(t.text) ? t : { ...t, weight: 0 })));
+    tokens.push(...wordTokens);
   }
 
   for (let i = 0; i < tokens.length - 1; i++) {
