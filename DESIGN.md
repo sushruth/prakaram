@@ -38,9 +38,9 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#1f5f63` | Active control, focus, prakara title |
-| `--swara-up` | `#7c3aed` (dark `#b49cff`) | Svarita, U+0951 (up): purple |
-| `--swara-down` | `#2563eb` (dark `#7fb2ff`) | Anudatta, U+0952 (down): blue |
-| `--swara-double` | `#dc2626` (dark `#ff8a8a`) | Dirgha svarita, U+1CDA (double up): red |
+| `--swara-up` | `#6d28d9` (dark `#c084fc`) | Svarita, U+0951 (up): purple |
+| `--swara-down` | `#1d4ed8` (dark `#60a5fa`) | Anudatta, U+0952 (down): blue |
+| `--swara-double` | `#b91c1c` (dark `#f05252`) | Dirgha svarita, U+1CDA (double up): red |
 | `--shloka` | `#3d7a55` | Shloka lines (green tint) |
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
