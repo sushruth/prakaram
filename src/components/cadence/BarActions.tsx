@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import { encodePrakaraToUrlHash } from '../../services/urlCodec';
 import { usePrakaraStore } from '../../stores/usePrakaraStore';
-import { useCadenceStore } from '../../stores/useCadenceStore';
+import { isLearning, useCadenceStore } from '../../stores/useCadenceStore';
 import { Icon } from '../Icon';
 
 export function ShareButton() {
@@ -26,8 +26,10 @@ export function ShareButton() {
 
 export function ResetButton() {
   const resetLearning = useCadenceStore((s) => s.resetLearning);
+  const phase = useCadenceStore((s) => s.phase);
+  const live = isLearning(phase) || phase === 'engaged';
   return (
-    <button className="icon-btn" onClick={resetLearning} title="Clear recorded taps" aria-label="Clear recorded taps">
+    <button className="icon-btn" onClick={resetLearning} disabled={!live} title="Clear recorded taps" aria-label="Clear recorded taps">
       <Icon name="arrow-counter-clockwise" size={16} />
     </button>
   );

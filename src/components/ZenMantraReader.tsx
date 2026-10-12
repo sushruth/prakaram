@@ -128,7 +128,9 @@ export function ZenMantraReader() {
     return 'line-mantra';
   };
 
-  const renderText = (sanskrit: string) => {
+  const renderText = (raw: string) => {
+    // Non-breaking spaces keep a danda with the word before it and with its verse number.
+    const sanskrit = raw.replace(/ ([।॥])/g, '\u00a0$1').replace(/([।॥]) (\d)/g, '$1\u00a0$2');
     if (!hasSwara(sanskrit)) return transliterateVedic(sanskrit, script);
     return sourcePieces(sanskrit).map((piece, i) =>
       piece.tone ? (

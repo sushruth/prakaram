@@ -1,5 +1,11 @@
 @layer components {
-  
+  input,
+  textarea,
+  select {
+    background: var(--bg-card);
+    color: var(--text-primary);
+  }
+
   .btn-icon {
     background: transparent;
     width: 2.4rem;
@@ -153,7 +159,7 @@
     color: var(--accent);
   }
 
-  .icon-btn:focus-visible {
+  :is(button, input, select, textarea, [role="radio"], [role="switch"]):focus-visible {
     outline: 1px solid var(--accent);
     outline-offset: 3px;
   }
@@ -377,7 +383,12 @@
   @media (prefers-reduced-motion: reduce) {
     .header-flame,
     .flame-body,
-    .flame-core {
+    .flame-core,
+    .cadence-modes[data-phase] [data-mode="learn"],
+    .tempo[data-phase] input,
+    .tempo[data-phase] .tempo-value,
+    .btn-primary[data-phase="waiting"],
+    .learn-indicator[data-phase="waiting"] .learn-led {
       animation: none;
     }
   }

@@ -42,7 +42,7 @@ export function CadenceStrip({ onOpenPanel, panelOpen }: CadenceStripProps) {
   const readout = isLearning(phase)
     ? phase === 'waiting'
       ? 'Tap the next line'
-      : `Learning ${learnedLines}/${LEARN_LINES}`
+      : 'Learning'
     : frozen
       ? 'Paused'
       : phase === 'engaged'
