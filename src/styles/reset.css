@@ -5,10 +5,12 @@
     padding: 0;
   }
 
-  html, body {
-    height: 100%;
-    width: 100%;
+  html {
     overflow-x: hidden;
+  }
+
+  html, body {
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     user-select: none;

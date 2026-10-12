@@ -14,18 +14,20 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, settingsOpen
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
   const { isInRoom, isHost, peerCount } = useRoomStore();
 
+  const roomTitle = isInRoom
+    ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)`
+    : 'Join a live room';
+
   return (
     <header className="app-header">
       <div className="header-brand">
-        <h1 className="title-display" style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0, color: 'var(--accent)' }}>
-          पारायणम्
-        </h1>
+        <h1 className="brand-title title-display">पारायणम्</h1>
         <span className="brand-sub">Parayanam</span>
       </div>
 
-      <div className="header-tools">
+      <nav className="header-tools" aria-label="Actions">
         <button
-          className="btn-icon"
+          className="icon-btn"
           onClick={onOpenSettings}
           aria-label="Settings"
           aria-expanded={settingsOpen}
@@ -34,45 +36,25 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, settingsOpen
           <Icon name="gear" size={20} />
         </button>
 
-        <button
-          className="btn-icon"
-          onClick={onOpenPrakara}
-          title="Prakara Sequence Builder"
-        >
+        <button className="icon-btn" onClick={onOpenPrakara} aria-label="Prakara sequences" title="Prakara sequences">
           <Icon name="scroll" size={20} />
         </button>
 
-        <button
-          className="btn-icon"
-          onClick={onOpenRoom}
-          title={isInRoom ? `Live Chanting Room (${isHost ? 'Host' : 'Follower'}, ${peerCount} peers)` : 'Connect to Live Room'}
-          style={isInRoom ? { borderColor: 'var(--accent)', background: 'var(--accent-light)', position: 'relative' } : {}}
-        >
+        <button className="icon-btn" onClick={onOpenRoom} aria-label={roomTitle} aria-pressed={isInRoom} title={roomTitle}>
           <Icon name="globe" size={20} />
-          {isInRoom && (
-            <span
-              style={{
-                position: 'absolute',
-                top: '-3px',
-                right: '-3px',
-                width: '9px',
-                height: '9px',
-                background: '#10b981',
-                borderRadius: '50%',
-              }}
-            />
-          )}
+          {isInRoom && <span className="icon-dot" />}
         </button>
 
         <button
-          className="btn-icon"
+          className="icon-btn"
           onClick={toggleZenMode}
-          title="Enter Zen Mode (Focus Chanting)"
-          style={{ background: 'var(--accent)', color: 'var(--on-accent)', border: 'none' }}
+          aria-label="Zen mode"
+          aria-pressed={zenMode}
+          title="Zen mode (Z)"
         >
           <Icon name="flower-lotus" size={20} />
         </button>
-      </div>
+      </nav>
     </header>
   );
 }

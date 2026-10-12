@@ -1,23 +1,11 @@
 @layer layout {
   @media (max-width: 640px) {
     .app-header {
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      padding: 0.6rem 0.75rem;
+      padding: 0 0.6rem 0 0.9rem;
     }
 
-    .header-brand .brand-sub {
+    .brand-sub {
       display: none;
-    }
-
-    .header-tools {
-      width: 100%;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .header-tools > * {
-      flex-shrink: 0;
     }
 
     .main-content {
@@ -32,13 +20,7 @@
       width: auto;
       border-radius: 18px;
       padding: 0.5rem 0.6rem;
-      flex-wrap: wrap;
-      justify-content: center;
       gap: 0.5rem 0.6rem;
-    }
-
-    .zen-active .bottom-bar:hover {
-      transform: none;
     }
 
     .zen-active .bottom-bar {

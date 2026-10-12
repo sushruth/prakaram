@@ -17,12 +17,12 @@ export function SettingsSheet({ isOpen, onClose }: SettingsSheetProps) {
     return () => window.removeEventListener('keydown', onKey);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  const state = isOpen ? 'is-open' : '';
 
   return (
     <>
-      <div className="settings-scrim" onClick={onClose} />
-      <div className="settings-sheet" role="dialog" aria-label="Settings">
+      <div className={`settings-scrim ${state}`} onClick={onClose} />
+      <div className={`settings-sheet ${state}`} role="dialog" aria-label="Settings" aria-hidden={!isOpen}>
         <div className="settings-head">
           <span className="settings-title">Settings</span>
           <button className="btn-icon" onClick={onClose} aria-label="Close settings">
