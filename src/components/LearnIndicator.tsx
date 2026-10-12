@@ -9,6 +9,8 @@ export function LearnIndicator() {
   const learnedLines = useCadenceStore((s) => s.learnedLines);
   const firstTapAt = useCadenceStore((s) => s.firstTapAt);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
+  const paused = useCadenceStore((s) => s.paused);
+  const togglePause = useCadenceStore((s) => s.togglePause);
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
   const chunks = useChunks();
   const seconds = useElapsedSeconds(firstTapAt, phase === 'measuring');
@@ -17,10 +19,30 @@ export function LearnIndicator() {
     const current = chunks[activeChunkIndex];
     const duration = current ? lineMs(current.sanskrit, msPerMatra) : 0;
     return (
-      <div className="learn-indicator" data-phase="engaged" title="Time until the next line">
-        <svg className="learn-ring" viewBox="0 0 20 20" aria-hidden="true">
-          <circle key={activeChunkIndex} cx="10" cy="10" r="8" style={{ animationDuration: `${duration}ms` }} />
-        </svg>
+      <div className="learn-indicator" data-phase="engaged">
+        <button
+          className="learn-ring-btn"
+          onClick={togglePause}
+          aria-pressed={paused}
+          aria-label={paused ? 'Resume auto progress' : 'Pause auto progress'}
+          title={paused ? 'Resume auto progress' : 'Pause auto progress'}
+        >
+          <svg className="learn-ring" viewBox="0 0 20 20" aria-hidden="true">
+            <circle
+              key={activeChunkIndex}
+              cx="10"
+              cy="10"
+              r="8"
+              style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
+            />
+            {paused && (
+              <g className="learn-pause-mark">
+                <rect x="7" y="6.5" width="2" height="7" rx="0.5" />
+                <rect x="11" y="6.5" width="2" height="7" rx="0.5" />
+              </g>
+            )}
+          </svg>
+        </button>
       </div>
     );
   }

@@ -170,3 +170,18 @@
     }
   }
 }
+
+@layer components {
+  .learn-ring-btn {
+    display: inline-flex;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  .learn-pause-mark rect {
+    fill: var(--paused);
+  }
+}

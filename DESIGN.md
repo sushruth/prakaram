@@ -45,6 +45,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
+| `--paused` | `#ca8a04` (dark `#facc15`) | Pause mark inside the countdown ring |
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -173,6 +174,10 @@ Taps in `engaged` and `plain` are ignored. A reload moves `measuring` back to `w
 Smart controls use the flame glow on the glyph or value, as with any active control. Waiting and measuring pulse that glow; engaged holds it steady. The tempo slider takes the same highlight in both learning phases to show that it is being learned. Dragging the slider while Smart is on nudges the learned pace.
 
 **Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its mātrā weight times the pace.
+
+**Pause.** Tapping the ring pauses auto progress. The ring freezes and a yellow pause mark appears inside it. Tapping again resumes with the time that was left. Pause is for the engaged phase only, and it is not saved: a reload starts unpaused. Jumping to another line while paused restarts that line at full time when you resume.
+
+**Verse numbers.** Annotations such as `॥ २ ॥` or `|| 12 ||` are not chanted. They add no mātrās. A numbered end keeps one danda, so the line still pauses at its end.
 
 **Pace.** One slider in milliseconds per mātrā, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
 

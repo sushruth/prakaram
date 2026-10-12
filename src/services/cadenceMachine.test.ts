@@ -7,7 +7,7 @@ const tapN = (s: LearningState, n: number) => {
   for (let i = 0; i < n; i++) cur = tap(cur, 1000 + i * 800);
   return cur;
 };
-const waiting: LearningState = { phase: 'waiting', learnedLines: 0, firstTapAt: null };
+const waiting: LearningState = { phase: 'waiting', learnedLines: 0, firstTapAt: null, paused: false };
 
 describe('cadence phase machine', () => {
   it('starts plain and moves to waiting when Smart turns on', () => {
@@ -17,7 +17,7 @@ describe('cadence phase machine', () => {
 
   it('starts the clock on the first tap, not on smartOn', () => {
     const s = tap(waiting, 5000);
-    expect(s).toEqual({ phase: 'measuring', learnedLines: 1, firstTapAt: 5000 });
+    expect(s).toEqual({ phase: 'measuring', learnedLines: 1, firstTapAt: 5000, paused: false });
   });
 
   it('keeps the first tap time for the whole run', () => {
@@ -56,5 +56,21 @@ describe('cadence phase machine', () => {
     expect(engaged.phase).toBe('engaged');
     expect(transition(engaged, { type: 'hostOff' })).toEqual(INITIAL_LEARNING);
     expect(transition(waiting, { type: 'hostOff' })).toBe(waiting);
+  });
+
+  it('pauses and resumes only while engaged', () => {
+    const engaged = tapN(waiting, LEARN_LINES);
+    const paused = transition(engaged, { type: 'togglePause' });
+    expect(paused.paused).toBe(true);
+    expect(transition(paused, { type: 'togglePause' }).paused).toBe(false);
+    const measuring = tapN(waiting, 2);
+    expect(transition(measuring, { type: 'togglePause' })).toBe(measuring);
+    expect(transition(INITIAL_LEARNING, { type: 'togglePause' })).toBe(INITIAL_LEARNING);
+  });
+
+  it('clears the pause when learning restarts or stops', () => {
+    const paused = transition(tapN(waiting, LEARN_LINES), { type: 'togglePause' });
+    expect(transition(paused, { type: 'reset' }).paused).toBe(false);
+    expect(transition(paused, { type: 'smartOff' }).paused).toBe(false);
   });
 });

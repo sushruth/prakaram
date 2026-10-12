@@ -27,6 +27,7 @@ interface CadenceState extends LearningState {
   resetLearning: () => void;
   followHost: (on: boolean) => void;
   setMsPerMatra: (ms: number) => void;
+  togglePause: () => void;
 }
 
 const engine = new CadenceLearningEngine(TEMPO.fallback);
@@ -54,6 +55,7 @@ export const useCadenceStore = create<CadenceState>()(
         tap: (chunkId, chunkSanskrit) => send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit }),
         resetLearning: () => send({ type: 'reset' }),
         followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
+        togglePause: () => send({ type: 'togglePause' }),
         setMsPerMatra: (ms) => {
           engine.setMsPerMatra(clampNumber(ms, TEMPO.min, TEMPO.max, TEMPO.fallback));
           set(snapshot());

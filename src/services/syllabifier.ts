@@ -3,6 +3,9 @@ import { AksharaToken } from '../types/mantra';
 const GURU_VOWELS = new Set(['आ', 'ई', 'ऊ', 'ऋ', 'ॠ', 'ए', 'ऐ', 'ओ', 'औ']);
 const GURU_MATRAS = new Set(['ा', 'ी', 'ू', 'ॄ', 'े', 'ै', 'ो', 'ौ']);
 
+// Verse-number annotations such as "॥ २ ॥" or "|| 12 ||" are not chanted. Keep one danda from each so the line keeps its pause.
+const VERSE_NUMBER = /[।॥|]*\s*[0-9०-९]+\s*[।॥|]*/g;
+
 const ANUDATTA = '\u0952';
 const SVARITA = '\u0951';
 const DIRGHA_SVARITA = '\u1CDA';
@@ -11,7 +14,8 @@ export function syllabifyVedic(text: string): AksharaToken[] {
   if (!text) return [];
 
   const tokens: AksharaToken[] = [];
-  const words = text.split(/(\s+|[।॥])/);
+  const spoken = text.replace(VERSE_NUMBER, (m) => m.match(/[।॥]+/)?.[0] ?? ' ');
+  const words = spoken.split(/(\s+|[।॥])/);
 
   for (const word of words) {
     if (!word || /^\s+$/.test(word)) {

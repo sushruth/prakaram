@@ -25,6 +25,10 @@ export function ZenMantraReader() {
   const nextChunk = useMantraStore((s) => s.nextChunk);
 
   const phase = useCadenceStore((s) => s.phase);
+  const paused = useCadenceStore((s) => s.paused);
+  const pausedRef = useRef(paused);
+  pausedRef.current = paused;
+  const leftover = useRef<{ index: number; ms: number } | null>(null);
   const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
@@ -78,13 +82,19 @@ export function ZenMantraReader() {
   }, [chunks, nextChunk, prevChunk, toggleZenMode]);
 
   useEffect(() => {
-    if (phase !== 'engaged') return;
+    if (phase !== 'engaged' || paused) return;
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
-    const timer = setTimeout(() => nextChunk(chunks.length), lineMs(current.sanskrit, msPerMatra));
-    return () => clearTimeout(timer);
-  }, [phase, activeChunkIndex, msPerMatra, chunks, nextChunk]);
+    const left = leftover.current?.index === activeChunkIndex ? leftover.current.ms : lineMs(current.sanskrit, msPerMatra);
+    leftover.current = null;
+    const started = Date.now();
+    const timer = setTimeout(() => nextChunk(chunks.length), left);
+    return () => {
+      clearTimeout(timer);
+      if (pausedRef.current) leftover.current = { index: activeChunkIndex, ms: Math.max(0, left - (Date.now() - started)) };
+    };
+  }, [phase, paused, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
   const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {
