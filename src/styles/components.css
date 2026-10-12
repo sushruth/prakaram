@@ -328,7 +328,7 @@
   .header-flame {
     display: inline-flex;
     flex-shrink: 0;
-    animation: flame-glow 1.3s ease-in-out infinite alternate;
+    animation: flame-glow 1.4s ease-in-out infinite;
   }
 
   .flame-body,
@@ -345,14 +345,35 @@
     animation: flame-tongue 0.9s ease-in-out infinite alternate;
   }
 
+  /* Two halos: a tight warm core and a wider orange bloom. Flares rise fast and fall back slowly, at uneven steps, so it reads as fire. */
   @keyframes flame-glow {
-    from {
-      filter: drop-shadow(0 0 2px color-mix(in srgb, var(--flame-mid) 45%, transparent))
-        drop-shadow(0 0 5px color-mix(in srgb, var(--flame-tip) 25%, transparent));
+    0% {
+      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 55%, transparent))
+        drop-shadow(0 -1px 10px color-mix(in srgb, var(--flame-tip) 40%, transparent));
     }
-    to {
-      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--flame-mid) 85%, transparent))
-        drop-shadow(0 0 11px color-mix(in srgb, var(--flame-tip) 50%, transparent));
+    18% {
+      filter: drop-shadow(0 0 6px color-mix(in srgb, var(--flame-mid) 90%, transparent))
+        drop-shadow(0 -2px 18px color-mix(in srgb, var(--flame-tip) 65%, transparent));
+    }
+    33% {
+      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 60%, transparent))
+        drop-shadow(0 -1px 12px color-mix(in srgb, var(--flame-tip) 42%, transparent));
+    }
+    47% {
+      filter: drop-shadow(0 0 7px color-mix(in srgb, var(--flame-mid) 95%, transparent))
+        drop-shadow(0 -2px 22px color-mix(in srgb, var(--flame-tip) 72%, transparent));
+    }
+    63% {
+      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--flame-mid) 70%, transparent))
+        drop-shadow(0 -1px 13px color-mix(in srgb, var(--flame-tip) 46%, transparent));
+    }
+    80% {
+      filter: drop-shadow(0 0 5px color-mix(in srgb, var(--flame-mid) 80%, transparent))
+        drop-shadow(0 -2px 16px color-mix(in srgb, var(--flame-tip) 56%, transparent));
+    }
+    100% {
+      filter: drop-shadow(0 0 3px color-mix(in srgb, var(--flame-mid) 55%, transparent))
+        drop-shadow(0 -1px 10px color-mix(in srgb, var(--flame-tip) 40%, transparent));
     }
   }
 
