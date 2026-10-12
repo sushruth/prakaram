@@ -38,10 +38,10 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
 | `--accent` | `#1f5f63` | Active control, focus, prakara title |
-| `--swara-up` | `#7c3aed` (dark `#b49cff`) | Hue for svarita, U+0951 (up). Mixed in at `--swara-tint` (50%) |
+| `--swara-up` | `#7c3aed` (dark `#b49cff`) | Hue for svarita, U+0951 (up). Mixed in at `--swara-tint` (70% light, 50% dark) |
 | `--swara-down` | `#2563eb` (dark `#7fb2ff`) | Hue for anudatta, U+0952 (down) |
 | `--swara-double` | `#dc2626` (dark `#ff8a8a`) | Hue for dirgha svarita, U+1CDA (double up) |
-| `--swara-tint` | `50%` | How much hue goes into the swara colour. The rest is the ink colour |
+| `--swara-tint` | `70%` light, `50%` dark | How much hue goes into the swara colour. Light is higher because inactive lines are dimmed by opacity, which fades the tint |
 | `--shloka` | `#3d7a55` | Shloka lines (green tint) |
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
