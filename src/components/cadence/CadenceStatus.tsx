@@ -1,20 +1,23 @@
-import { LEARN_LINES, selectPhase, useCadenceStore } from '../../stores/useCadenceStore';
+import { LEARN_LINES, useCadenceStore } from '../../stores/useCadenceStore';
 import { useRoomStore } from '../../stores/useRoomStore';
 import { Icon } from '../Icon';
 
 export function CadenceStatus() {
-  const phase = useCadenceStore(selectPhase);
+  const phase = useCadenceStore((s) => s.phase);
   const learnedLines = useCadenceStore((s) => s.learnedLines);
-  const setSmart = useCadenceStore((s) => s.setSmart);
+  const smartOn = useCadenceStore((s) => s.smartOn);
+  const smartOff = useCadenceStore((s) => s.smartOff);
   const { isInRoom, isHost } = useRoomStore();
   const followingHost = isInRoom && !isHost;
 
   const text =
     phase === 'plain'
       ? 'Plain: you move the lines'
-      : phase === 'learning'
-        ? `Learning your pace: ${learnedLines} of ${LEARN_LINES} lines`
-        : 'Smart: following your pace';
+      : phase === 'waiting'
+        ? 'Waiting for your first tap'
+        : phase === 'measuring'
+          ? `Learning: ${learnedLines} of ${LEARN_LINES} lines`
+          : 'Smart: following your pace';
 
   return (
     <div className="cadence-status">
@@ -23,7 +26,7 @@ export function CadenceStatus() {
         data-phase={phase}
         aria-pressed={phase !== 'plain'}
         disabled={followingHost}
-        onClick={() => setSmart(phase === 'plain')}
+        onClick={() => (phase === 'plain' ? smartOn() : smartOff())}
         aria-label={phase === 'plain' ? 'Turn on Smart cadence' : 'Turn off Smart cadence'}
         title={followingHost ? 'The host controls cadence' : text}
       >

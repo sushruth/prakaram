@@ -7,8 +7,8 @@ import { ChantingRoomModal } from './components/ChantingRoomModal';
 import { SettingsSheet } from './components/SettingsSheet';
 import { PrakaraDetails } from './components/PrakaraDetails';
 import { usePrakaraStore } from './stores/usePrakaraStore';
-import { useCadenceStore } from './stores/useCadenceStore';
 import { useMantraStore } from './stores/useMantraStore';
+import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 
 type DropKind = 'settings' | 'details' | 'cadence';
@@ -29,6 +29,11 @@ export function App() {
     document.documentElement.classList.toggle('zen-active', zenMode);
     if (zenMode) setDrop(null);
   }, [zenMode]);
+
+  const phase = useCadenceStore((s) => s.phase);
+  useEffect(() => {
+    document.documentElement.classList.toggle('cadence-learning', isLearning(phase));
+  }, [phase]);
 
   useEffect(() => {
     const handleUrlState = async () => {

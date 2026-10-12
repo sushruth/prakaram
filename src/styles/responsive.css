@@ -1,11 +1,24 @@
 @layer layout {
   @media (max-width: 640px) {
     .app-header {
-      padding: 0 0.6rem 0 0.9rem;
+      padding: 0 0.5rem 0 0.75rem;
+    }
+
+    .header-title {
+      font-size: 0.95rem;
     }
 
     .main-content {
       padding: 1rem 0.9rem 2rem;
+    }
+
+    .header-tools {
+      gap: 0;
+    }
+
+    .header-tools .icon-btn {
+      width: 2.125rem;
+      height: 2.125rem;
     }
 
     .chunk-row {

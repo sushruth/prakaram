@@ -172,18 +172,16 @@
   .header-title {
     flex: 1;
     min-width: 0;
-    padding: 0;
+    padding: 0.2rem 0;
     background: transparent;
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.6;
     text-align: left;
+    overflow-wrap: anywhere;
     cursor: pointer;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .drop-head {

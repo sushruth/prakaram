@@ -1,26 +1,34 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { CadenceLearningEngine, TEMPO } from '../services/cadenceEngine';
-import { boolOr, clampNumber } from './persistence';
+import {
+  CadenceEvent,
+  CadencePhase,
+  INITIAL_LEARNING,
+  LEARN_LINES,
+  LearningState,
+  isLearning,
+  transition,
+} from '../services/cadenceMachine';
+import { clampNumber, oneOf } from './persistence';
 
-export const LEARN_LINES = 4;
+export { LEARN_LINES, isLearning };
+export type { CadencePhase };
 
-export type CadencePhase = 'plain' | 'learning' | 'engaged';
+const PHASES: readonly CadencePhase[] = ['plain', 'waiting', 'measuring', 'engaged'];
 
-interface CadenceState {
-  smart: boolean;
-  learnedLines: number;
+interface CadenceState extends LearningState {
   bpm: number;
   msPerMatra: number;
   engine: CadenceLearningEngine;
-  setSmart: (smart: boolean, learnedLines?: number) => void;
+  send: (event: CadenceEvent) => void;
+  smartOn: () => void;
+  smartOff: () => void;
+  tap: (chunkId: string, chunkSanskrit: string) => void;
+  resetLearning: () => void;
+  followHost: (on: boolean) => void;
   setBpm: (bpm: number) => void;
-  registerTap: (chunkId: string, chunkSanskrit: string) => void;
-  resetCadence: () => void;
 }
-
-export const selectPhase = (s: Pick<CadenceState, 'smart' | 'learnedLines'>): CadencePhase =>
-  !s.smart ? 'plain' : s.learnedLines < LEARN_LINES ? 'learning' : 'engaged';
 
 const engine = new CadenceLearningEngine(TEMPO.fallback);
 
@@ -31,40 +39,51 @@ const snapshot = () => {
 
 export const useCadenceStore = create<CadenceState>()(
   persist(
-    (set) => ({
-      smart: false,
-      learnedLines: 0,
-      bpm: TEMPO.fallback,
-      msPerMatra: engine.getMsPerMatra(),
-      engine,
-      setSmart: (smart, learnedLines = 0) => {
-        if (smart) engine.resetSession();
-        set({ smart, learnedLines: smart ? learnedLines : 0, ...snapshot() });
-      },
-      setBpm: (bpm) => {
-        engine.setBpm(clampNumber(bpm, TEMPO.min, TEMPO.max, TEMPO.fallback));
-        set(snapshot());
-      },
-      registerTap: (chunkId, chunkSanskrit) => {
-        engine.registerTap(chunkId, chunkSanskrit);
-        set((s) => ({ ...snapshot(), learnedLines: Math.min(LEARN_LINES, s.learnedLines + 1) }));
-      },
-      resetCadence: () => {
-        engine.resetSession();
-        set({ learnedLines: 0, ...snapshot() });
-      },
-    }),
+    (set, get) => {
+      const send = (event: CadenceEvent) => {
+        const before = get();
+        const next = transition(before, event);
+        if (next === before) return;
+        if (event.type === 'smartOn' || event.type === 'smartOff' || event.type === 'reset') engine.resetSession();
+        if (event.type === 'tap') engine.registerTap(event.chunkId, event.chunkSanskrit);
+        set({ ...next, ...snapshot() });
+      };
+      return {
+        ...INITIAL_LEARNING,
+        bpm: TEMPO.fallback,
+        msPerMatra: engine.getMsPerMatra(),
+        engine,
+        send,
+        smartOn: () => send({ type: 'smartOn' }),
+        smartOff: () => send({ type: 'smartOff' }),
+        tap: (chunkId, chunkSanskrit) => send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit }),
+        resetLearning: () => send({ type: 'reset' }),
+        followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
+        setBpm: (bpm) => {
+          engine.setBpm(clampNumber(bpm, TEMPO.min, TEMPO.max, TEMPO.fallback));
+          set(snapshot());
+        },
+      };
+    },
     {
       name: 'parayanam-cadence',
-      version: 2,
-      partialize: ({ smart, learnedLines, bpm }) => ({ smart, learnedLines, bpm }),
+      version: 3,
+      partialize: ({ phase, learnedLines, bpm }) => ({
+        phase: phase === 'measuring' ? 'waiting' : phase,
+        learnedLines,
+        bpm,
+      }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
-        const legacySmart = p.mode === 'learn' || p.mode === 'auto';
+        const learned = clampNumber(p.learnedLines, 0, LEARN_LINES, 0);
+        const legacy: CadencePhase =
+          p.smart === true ? (learned >= LEARN_LINES ? 'engaged' : 'waiting') : 'plain';
+        const phase = oneOf(p.phase, PHASES, legacy);
         return {
           ...current,
-          smart: boolOr(p.smart, legacySmart),
-          learnedLines: clampNumber(p.learnedLines, 0, LEARN_LINES, 0),
+          phase,
+          learnedLines: phase === 'plain' ? 0 : phase === 'engaged' ? LEARN_LINES : learned,
+          firstTapAt: null,
           bpm: clampNumber(p.bpm, TEMPO.min, TEMPO.max, current.bpm),
         };
       },

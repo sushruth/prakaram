@@ -62,6 +62,7 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 * A **shloka** is a custom verse ending in `॥`; a **vakya** is other procedural text. Sukta lines are **mantras**.
 * Titles are shown by Sanskrit akshara count (`src/services/aksharas.ts`), never by UTF-16 length. The header limit is the longest default title.
 * Titles and Sanskrit labels follow the selected script; English text does not change.
+* Cadence phases (`plain`, `waiting`, `measuring`, `engaged`) change only through `transition()` in `src/services/cadenceMachine.ts`, applied by the cadence store. Do not set `phase` by hand. The transition table is in `DESIGN.md` §5b.
 
 ---
 

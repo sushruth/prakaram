@@ -25,9 +25,9 @@ export function ShareButton() {
 }
 
 export function ResetButton() {
-  const resetCadence = useCadenceStore((s) => s.resetCadence);
+  const resetLearning = useCadenceStore((s) => s.resetLearning);
   return (
-    <button className="icon-btn" onClick={resetCadence} title="Clear recorded taps" aria-label="Clear recorded taps">
+    <button className="icon-btn" onClick={resetLearning} title="Clear recorded taps" aria-label="Clear recorded taps">
       <Icon name="arrow-counter-clockwise" size={16} />
     </button>
   );

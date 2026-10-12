@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
-import { selectPhase, useCadenceStore } from '../stores/useCadenceStore';
+import { isLearning, useCadenceStore } from '../stores/useCadenceStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
@@ -24,7 +24,7 @@ export function ZenMantraReader() {
   const prevChunk = useMantraStore((s) => s.prevChunk);
   const nextChunk = useMantraStore((s) => s.nextChunk);
 
-  const phase = useCadenceStore(selectPhase);
+  const phase = useCadenceStore((s) => s.phase);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
   const prakaras = usePrakaraStore((s) => s.prakaras);
@@ -90,8 +90,10 @@ export function ZenMantraReader() {
     return () => clearTimeout(timer);
   }, [phase, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
+  const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {
-    if (index === activeChunkIndex) advanceChunk(chunks);
+    const isNextLine = index === activeChunkIndex + 1;
+    if (index === activeChunkIndex || (learning && isNextLine)) advanceChunk(chunks);
     else setActiveChunkIndex(index);
   };
 
@@ -124,7 +126,7 @@ export function ZenMantraReader() {
             <div
               key={`${chunk.id}-${idx}`}
               ref={isActive ? activeChunkRef : null}
-              className={`chunk-row ${isActive ? 'active' : ''}`}
+              className={`chunk-row ${isActive ? 'active' : ''} ${learning && idx === activeChunkIndex + 1 ? 'is-next' : ''}`}
               onClick={() => handleChunkClick(idx)}
             >
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (

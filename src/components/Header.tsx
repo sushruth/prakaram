@@ -5,6 +5,7 @@ import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
 import { displayTitle } from '../services/titles';
 import { Icon } from './Icon';
+import { LearnIndicator } from './LearnIndicator';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
@@ -47,6 +48,8 @@ export function Header({
           {transliterateVedic(displayTitle(prakara.title), script)}
         </button>
       </div>
+
+      <LearnIndicator />
 
       <nav className="header-tools" aria-label="Actions">
         <button

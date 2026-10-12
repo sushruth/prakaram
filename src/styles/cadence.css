@@ -42,7 +42,8 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .cadence-status .icon-btn[data-phase="learning"] svg {
+  .cadence-status .icon-btn[data-phase="waiting"] svg,
+  .cadence-status .icon-btn[data-phase="measuring"] svg {
     animation: learn-pulse 1.6s ease-in-out infinite;
   }
 
@@ -51,8 +52,10 @@
     filter: var(--flame);
   }
 
-  .tempo[data-phase="learning"] input,
-  .tempo[data-phase="learning"] .tempo-value {
+  .tempo[data-phase="waiting"] input,
+  .tempo[data-phase="waiting"] .tempo-value,
+  .tempo[data-phase="measuring"] input,
+  .tempo[data-phase="measuring"] .tempo-value {
     animation: learn-pulse 1.6s ease-in-out infinite;
   }
 
@@ -64,5 +67,80 @@
     50% {
       filter: var(--flame);
     }
+  }
+
+  .btn-primary[data-phase="waiting"] {
+    animation: led-pulse 1.4s ease-in-out infinite;
+  }
+
+  .learn-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 0.7rem;
+    line-height: 1;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .learn-indicator[data-phase="plain"] {
+    visibility: hidden;
+  }
+
+  .learn-seconds {
+    color: var(--text-secondary);
+  }
+
+  .learn-progress {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .learn-led {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .learn-led circle {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+  }
+
+  .learn-indicator[data-phase="engaged"] .learn-led circle {
+    fill: currentColor;
+  }
+
+  .learn-indicator[data-phase="waiting"] .learn-led {
+    animation: led-pulse 1.4s ease-in-out infinite;
+  }
+
+  @keyframes led-pulse {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer zen {
+  .cadence-learning {
+    overflow: hidden;
+  }
+
+  .cadence-learning .chunks-container {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .cadence-learning .chunk-row.is-next {
+    opacity: 0.6;
   }
 }

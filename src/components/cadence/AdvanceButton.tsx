@@ -1,19 +1,20 @@
 import { advanceChunk } from '../../services/advance';
 import { usePrakaraStore } from '../../stores/usePrakaraStore';
-import { selectPhase, useCadenceStore } from '../../stores/useCadenceStore';
+import { isLearning, useCadenceStore } from '../../stores/useCadenceStore';
 
 export function AdvanceButton() {
-  const phase = useCadenceStore(selectPhase);
-  const label = phase === 'learning' ? 'Tap' : 'Next';
+  const phase = useCadenceStore((s) => s.phase);
+  const learning = isLearning(phase);
 
   return (
     <button
       className="btn-primary"
+      data-phase={phase}
       disabled={phase === 'engaged'}
       onClick={() => advanceChunk(usePrakaraStore.getState().getFlattenedChunks())}
-      title={phase === 'learning' ? 'Tap or press Space to teach your pace' : 'Press Space to move to the next line'}
+      title={learning ? 'Tap the line or press Space to teach your pace' : 'Press Space to move to the next line'}
     >
-      {label}
+      {learning ? 'Tap' : 'Next'}
     </button>
   );
 }
