@@ -10,7 +10,7 @@ describe('CadenceLearningEngine (Option A)', () => {
 
   it('updates BPM and msPerMatra on scale change', () => {
     const engine = new CadenceLearningEngine(72);
-    engine.setBpm(48, 'dhyana');
+    engine.setBpm(48);
     expect(engine.getBpm()).toBe(48);
     expect(engine.getMsPerMatra()).toBe(1250);
   });

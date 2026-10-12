@@ -1,4 +1,4 @@
-import { TapRecord, LayaType, LAYA_PRESETS } from '../types/cadence';
+import { TapRecord } from '../types/cadence';
 import { calculateChunkWeight } from './syllabifier';
 
 export const MIN_CHUNK_MATRAS = 2;
@@ -14,7 +14,6 @@ export interface CadenceMetrics {
   msPerMatra: number;
   confidenceScore: number;
   canAutoProgress: boolean;
-  activeLaya: LayaType;
   historyLength: number;
 }
 
@@ -22,24 +21,15 @@ export class CadenceLearningEngine {
   private history: TapRecord[] = [];
   private lastTapTime: number = 0;
   private currentMsPerMatra: number = 833;
-  private activeLaya: LayaType = 'abhyasa';
   private maxHistory: number = 12;
 
   constructor(initialBpm: number = 72) {
     this.setBpm(initialBpm);
   }
 
-  public setBpm(bpm: number, laya: LayaType = 'custom') {
+  public setBpm(bpm: number) {
     const clampedBpm = Math.max(TEMPO.min, Math.min(TEMPO.max, bpm));
     this.currentMsPerMatra = Math.round(60000 / clampedBpm);
-    this.activeLaya = laya;
-  }
-
-  public setLayaPreset(laya: LayaType) {
-    const preset = LAYA_PRESETS[laya];
-    if (preset) {
-      this.setBpm(preset.bpm, laya);
-    }
   }
 
   public getMsPerMatra(): number {
@@ -115,7 +105,6 @@ export class CadenceLearningEngine {
       msPerMatra: this.currentMsPerMatra,
       confidenceScore: confidence,
       canAutoProgress: canAuto,
-      activeLaya: this.activeLaya,
       historyLength: n
     };
   }

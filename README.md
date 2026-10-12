@@ -20,11 +20,7 @@
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights.
 * **Smart or Plain:** one icon in the cadence panel. **Plain** moves on with Tap, Next or Space and learns nothing. **Smart** learns your pace from the first four lines you advance, then advances the lines itself at the learned tempo.
 * **Tempo:** one labelled slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range.
-* **Laya Scales:**
-  - **Dhyāna (ध्यान / Vilambita Laya):** 48 BPM (Meditative, deliberate)
-  - **Abhyāsa (अभ्यास / Madhya Laya):** 72 BPM (Standard daily study)
-  - **Pārāyaṇa (पारायण / Druta Laya):** 100 BPM (Fluent continuous recital)
-* **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide the header and controls, leaving only the verses.
+* **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide everything except the verses and that icon. Hidden controls keep their space, so nothing shifts.
 * **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured by its tone. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 
 ### 1. Authentic Vedic Corpus (*Saswara Veda Mantrah*)

@@ -79,7 +79,7 @@ export function Header({
         </button>
 
         <button
-          className="icon-btn"
+          className="icon-btn zen-toggle"
           onClick={toggleZenMode}
           aria-label="Zen mode"
           aria-pressed={zenMode}

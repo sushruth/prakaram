@@ -1,9 +1,24 @@
 @layer zen {
-  
+  .app-header,
+  .app-header > *,
+  .header-tools > * {
+    transition: opacity 0.35s ease, visibility 0.35s ease, background-color 0.35s ease;
+  }
+
   .zen-active .app-header {
-    opacity: 0;
+    background: transparent;
+    backdrop-filter: none;
     pointer-events: none;
-    transform: translateY(-20px);
+  }
+
+  .zen-active .app-header > :not(.header-tools),
+  .zen-active .header-tools > :not(.zen-toggle) {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .zen-active .zen-toggle {
+    pointer-events: auto;
   }
 
   .zen-active .chunk-row:not(.active) {
@@ -15,18 +30,5 @@
     opacity: 1;
     filter: none;
     transform: none;
-  }
-
-  .zen-exit-hint {
-    position: fixed;
-    top: 1rem;
-    right: 1.5rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 60;
-  }
-
-  .zen-active:hover .zen-exit-hint {
-    opacity: 0.85;
   }
 }

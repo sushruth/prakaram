@@ -116,14 +116,23 @@ Cadence lives in a drop panel opened by the cadence icon in the header, like set
 - **Smart** (icon, on or off): one icon, always visible. Off is **Plain**: you move the lines with Tap, Next or Space, and nothing is learned.
 - **Learning** (Smart on, first `LEARN_LINES` = 4 lines): each advance is a tap that teaches your pace. The status line counts "Learning your pace: 2 of 4 lines". Lines do not advance by themselves.
 - **Engaged** (Smart, after learning): lines advance by themselves at the current tempo. Tap and Next are disabled. Arrow keys still move between lines.
-- Tempo is one slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range. Presets (Dhyāna, Abhyāsa, Pārāyaṇa) set it directly.
+- Tempo is one slider from 36 to 130 matras per minute. Learned tempo is clamped to the same range. There are no pace presets.
 - Turning Smart off removes every highlight.
 
 **Highlights.** Smart controls use the flame glow on the glyph or the value, as with any active control. The learning phase pulses that glow; the engaged phase holds it steady. The tempo slider takes the same highlight in both smart phases, to show the app is driving it. Dragging the slider while Smart is on nudges the learned pace.
 
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
 
-Every choice in this panel (Smart, learned lines, preset, tempo) is persisted.
+Every choice in this panel (Smart, learned lines, tempo) is persisted.
+
+## 5d. Zen
+
+Zen shows only the content and the zen (lotus) button. Everything else in the header is hidden, not removed:
+
+- Hidden items keep their boxes, so nothing moves. Hiding uses opacity and visibility, never `display` and never a transform.
+- The header fill is dropped in zen, so the lotus floats over the text.
+- Any open drop panel closes when zen turns on.
+- The lotus is the only way to leave zen, along with the Z key. There is no separate exit hint.
 
 ## 6. Translations
 

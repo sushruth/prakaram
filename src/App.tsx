@@ -8,6 +8,7 @@ import { SettingsSheet } from './components/SettingsSheet';
 import { PrakaraDetails } from './components/PrakaraDetails';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useCadenceStore } from './stores/useCadenceStore';
+import { useMantraStore } from './stores/useMantraStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 
 type DropKind = 'settings' | 'details' | 'cadence';
@@ -19,9 +20,15 @@ export function App() {
 
   const { addPrakara } = usePrakaraStore();
   const { setBpm } = useCadenceStore();
+  const zenMode = useMantraStore((s) => s.zenMode);
 
   const toggle = (kind: DropKind) => setDrop((current) => (current === kind ? null : kind));
   const closeDrop = () => setDrop(null);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('zen-active', zenMode);
+    if (zenMode) setDrop(null);
+  }, [zenMode]);
 
   useEffect(() => {
     const handleUrlState = async () => {

@@ -10,7 +10,6 @@ import { sourcePieces } from '../services/swaraSegments';
 import { chunkMatras } from '../services/cadenceEngine';
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
-import { Icon } from './Icon';
 
 export function ZenMantraReader() {
   const script = useSettingsStore((s) => s.script);
@@ -18,13 +17,12 @@ export function ZenMantraReader() {
   const wrapLines = useSettingsStore((s) => s.wrapLines);
   const splitLines = useSettingsStore((s) => s.splitLines);
 
+  const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
   const setActiveChunkIndex = useMantraStore((s) => s.setActiveChunkIndex);
   const openPrakara = useMantraStore((s) => s.openPrakara);
   const prevChunk = useMantraStore((s) => s.prevChunk);
   const nextChunk = useMantraStore((s) => s.nextChunk);
-  const zenMode = useMantraStore((s) => s.zenMode);
-  const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
 
   const phase = useCadenceStore(selectPhase);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
@@ -118,16 +116,7 @@ export function ZenMantraReader() {
   };
 
   return (
-    <div className={`main-content ${zenMode ? 'zen-active' : ''}`}>
-      {zenMode && (
-        <button className="btn-primary zen-exit-hint" onClick={toggleZenMode} title="Exit Zen Mode">
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-            <Icon name="x" size={14} />
-            Exit Zen Mode
-          </span>
-        </button>
-      )}
-
+    <div className="main-content">
       <div className="chunks-container">
         {chunks.map((chunk, idx) => {
           const isActive = idx === activeChunkIndex;
