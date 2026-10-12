@@ -8,7 +8,7 @@ export function splitAtDanda(text: string): string[] {
 }
 
 function median(values: number[]): number {
-  const sorted = [...values].sort((a, b) => a - b);
+  const sorted = values.toSorted((a, b) => a - b);
   return sorted[sorted.length >> 1] ?? 0;
 }
 
@@ -35,4 +35,15 @@ export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
       isInstruction: pi === 0 ? chunk.isInstruction : false,
     }))
   );
+}
+
+export type ChunkTransform = (chunks: MantraChunk[]) => MantraChunk[];
+
+export const READING_TRANSFORMS: Record<'verse' | 'phrase', ChunkTransform[]> = {
+  verse: [],
+  phrase: [splitForReading],
+};
+
+export function applyTransforms(chunks: MantraChunk[], transforms: ChunkTransform[]): MantraChunk[] {
+  return transforms.reduce((acc, t) => t(acc), chunks);
 }

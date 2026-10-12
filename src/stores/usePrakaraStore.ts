@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { Prakara, PrakaraItem, MantraChunk } from '../types/mantra';
 import { DEFAULT_PRAKARAS, SUKTA_MAP } from '../data';
 import { useMantraStore } from './useMantraStore';
-import { splitForReading } from '../services/chunking';
+import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
 
 interface PrakaraState {
   prakaras: Prakara[];
@@ -74,7 +74,8 @@ export const usePrakaraStore = create<PrakaraState>((set, get) => ({
       }
     }
 
-    return useMantraStore.getState().splitLines ? splitForReading(chunks) : chunks;
+    const mode = useMantraStore.getState().splitLines ? 'phrase' : 'verse';
+    return applyTransforms(chunks, READING_TRANSFORMS[mode]);
   },
 
   addPrakara: (newPrakara) => {
