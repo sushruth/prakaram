@@ -21,6 +21,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
+    max-height: calc(100svh - 5rem);
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
   }
 
   .settings-head,
@@ -114,5 +117,27 @@
   .segment[aria-checked="true"] {
     background: var(--bg-base);
     color: var(--accent);
+  }
+}
+
+@layer components {
+  @media (max-width: 640px) {
+    .settings-scrim {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .settings-sheet {
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      max-height: 80svh;
+      max-height: 80dvh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      border-radius: 18px 18px 0 0;
+      padding: 1.1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    }
   }
 }

@@ -21,8 +21,8 @@ Agents modifying or extending this repository must strictly adhere to the follow
 | **UI Framework** | **Preact** (`preact/hooks`) | Keep DOM footprint minimal. Do not bloat virtual DOM or add heavy React wrappers. |
 | **Language** | **TypeScript** (Strict) | All models and functions must have explicit types in `src/types/`. |
 | **State Management** | **Zustand** | Store state in atomic stores (`src/stores/`). Avoid unnecessary re-renders. |
-| **Styling & CSS** | **Pure Modern CSS (`@layer`)** | **STRICT RULE: NO TAILWIND**. All styles belong in `src/styles/theme.css` using `@layer reset, theme, typography, layout, components, zen;`. |
-| **Transliteration** | **Zero-Dependency Brahmic Engine** | Do NOT install heavy WASM libraries like Pyodide Aksharamukha. Keep transliteration in `src/services/transliteration.ts` (>1M ops/sec). |
+| **Styling & CSS** | **Pure Modern CSS (`@layer`)** | **STRICT RULE: NO TAILWIND**. All styles live in `src/styles/`: `index.css` is the entry and imports one file per concern (`layers.css` declares `@layer reset, theme, typography, layout, components, zen;`, then `reset`, `tokens` (theme colours, light/dark), `typography`, `layout`, `components`, `settings`, `zen`, `responsive`). Import order defines the cascade within each layer, so keep it. Add new rules to the matching concern file, inside the right `@layer`. |
+| **Transliteration** | **Zero-Dependency Brahmic Engine** | Do NOT install heavy WASM libraries like Pyodide Aksharamukha. Theme definitions (ids, labels, `data-theme` attribute) live in `src/config/themes.ts`; a new theme also needs its tokens in `src/styles/tokens.css`. Settings rows are descriptors in `src/settings/registry.ts`. Keep transliteration in `src/services/transliteration/` (>1M ops/sec). Each script is one module implementing `ScriptTransliterator`, listed once in `registry.ts`. |
 | **P2P Sync** | **Trystero WebRTC** | Serverless WebRTC via BitTorrent/Nostr public trackers. Zero server costs. |
 | **State Serialization** | **CompressionStream Deflate** | Custom Prakaras & cadences encode into URL fragments (`#p=...`). Never transmit user playlists to backend HTTP endpoints. |
 | **Authentication** | **WebAuthn Passkeys** | **Zero passwords**. Use username + biometric passkeys (TouchID, FaceID, Windows Hello, YubiKey). |
@@ -84,7 +84,7 @@ When adding a new Suktam from *Saswara Veda Mantrah*:
 1. Create a new JSON file in `src/data/<suktamId>.json` matching `MantraDocument` type.
 2. Ensure every chunk includes authentic Devanagari swara marks and an English translation.
 3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`.
-4. Optionally add it as an item in a default Prakara preset in `DEFAULT_PRAKARAS`.
+4. Optionally add it as an item in a default Prakara preset in `src/data/defaultPrakaras.ts`.
 5. Run `bun run build` to verify type safety.
 
 ---
