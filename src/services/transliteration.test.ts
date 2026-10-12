@@ -53,3 +53,12 @@ describe('Kannada output', () => {
     expect(KANNADA.test(out)).toBe(true);
   });
 });
+
+describe('verse numbers', () => {
+  it('leave no Devanagari digits in other scripts', () => {
+    for (const t of ['telugu', 'kannada', 'tamil', 'malayalam', 'iast'] as const) {
+      expect(transliterateVedic('॥ २३ ॥', t)).not.toMatch(/[०-९]/);
+    }
+    expect(transliterateVedic('२३', 'tamil')).toBe('23');
+  });
+});

@@ -1,14 +1,16 @@
 import { useEffect } from 'preact/hooks';
 import { ALL_SUKTAMS } from '../data';
 import { findPiece, pieceChunks } from '../services/koshah';
-import { transliterateVedic } from '../services/transliteration';
 import { getArticle, type WikiArticle as Article, type WikiSection } from '../services/wiki';
 import { lineClass } from '../config/lineClass';
 import { useSettingsStore } from '../stores/useSettingsStore';
+import { HOME_HASH, categoryHash } from '../services/wikiNav';
+import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useBasketStore } from '../stores/useBasketStore';
-import { renderVedic } from './renderVedic';
+import { Icon } from './Icon';
+import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle } from './Sanskrit';
 
 /** Where a reader creates an article that does not exist yet. */
 // ponytail: placeholder until the repository URL is confirmed; set it to the real repo's new-file page.
@@ -44,19 +46,19 @@ function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
 
 /** A Wikipedia-style article about one piece of the corpus: lead, infobox, contents and sections of text. */
 export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
-  const script = useSettingsStore((s) => s.script);
+  const titleText = useTitleText();
   const fontSize = useSettingsStore((s) => s.fontSize);
   const article = getArticle(id);
-  const englishTitle = article?.title.english;
+  const pageTitle = article ? titleText(mixedTitle(article.title)) : '';
 
   useEffect(() => {
-    if (!englishTitle) return;
+    if (!pageTitle) return;
     const previous = document.title;
-    document.title = englishTitle;
+    document.title = pageTitle;
     return () => {
       document.title = previous;
     };
-  }, [englishTitle]);
+  }, [pageTitle]);
 
   useEffect(() => {
     if (section === undefined) return;
@@ -65,12 +67,12 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
     target?.focus({ preventScroll: true });
   }, [id, section]);
 
-  // ponytail: a composed work has no piece of its own, so Chant this saves it as a prakara first.
-  const chantAll = () => {
+  // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
+  const followAll = () => {
     if (!article || article.kind !== 'composition') return onRun(id);
     const store = usePrakaraStore.getState();
     if (store.prakaras.some((p) => p.id === id)) store.selectPrakara(id);
-    else store.addPrakara(basketToPrakara(article.sections.map((x) => ({ pieceId: x.pieceId })), article.title.english));
+    else store.addPrakara(basketToPrakara(article.sections.map((x) => ({ pieceId: x.pieceId })), mixedTitle(article.title)));
     window.location.hash = '';
   };
 
@@ -97,11 +99,11 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
         <h2 id={sectionDomId(s.number)} tabIndex={-1} className="wiki-section-title">
           {s.number}. {s.title}
           {s.from && (
-            <span className="wiki-from"> from <a href={`${articleHref(s.from.id)}/${s.from.number}`}>{s.from.title}</a> §{s.from.number}</span>
+            <span className="wiki-from"> from <a href={`${articleHref(s.from.id)}/${s.from.number}`}><ArticleTitle title={{ sanskrit: s.from.sanskrit, english: s.from.title }} /></a> §{s.from.number}</span>
           )}
           <span className="wiki-section-actions">
             <button type="button" className="wiki-link" onClick={() => onRun(s.pieceId)}>
-              [chant]
+              [follow]
             </button>
             {(article.sections.length > 1 || article.kind === 'composition') && <AddToPrakaram pieceIds={[s.pieceId]} />}
             <a href={article.editUrl}>[edit]</a>
@@ -110,7 +112,7 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
         {piece ? (
           pieceChunks(ALL_SUKTAMS, piece).map((chunk, i) => (
             <p key={`${chunk.id}-${i}`} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }}>
-              {renderVedic(chunk.sanskrit, script)}
+              <Sanskrit text={chunk.sanskrit} />
             </p>
           ))
         ) : (
@@ -120,141 +122,111 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
     );
   };
 
+  const followLabel = article.kind === 'composition' ? 'Follow this composition' : 'Follow';
+  const parent = article.veda ?? (article.kind === 'composition' ? 'Compositions' : 'Sources');
+  const peek = [article.veda, article.deity, `${article.lines} lines`].filter(Boolean).join(' · ');
+  const ref = (r: { id: string; title: string; sanskrit: string }) => (
+    <li key={r.id}>
+      <a href={articleHref(r.id)}>
+        <ArticleTitle title={{ sanskrit: r.sanskrit, english: r.title }} />
+      </a>
+    </li>
+  );
+
   return (
     <main className="wiki-article">
-      <nav aria-label="Article views" className="wiki-tabs">
-        <a href={articleHref(article.id)} aria-current="page">
-          Article
-        </a>
-        <a href={articleHref(article.id)}>Read</a>
-        <a href={article.editUrl}>Edit</a>
-        <a href={article.historyUrl}>View history</a>
+      <nav aria-label="Breadcrumb" className="wiki-crumbs">
+        <a href={HOME_HASH}>Koshah</a> › <a href={categoryHash(parent)}>{parent}</a> › <span aria-current="page"><ArticleTitle title={article.title} /></span>
       </nav>
 
-      <h1 className="wiki-title vedic-text">{article.title.sanskrit ? transliterateVedic(article.title.sanskrit, script) : article.title.english}</h1>
-      <p className="wiki-subtitle">{article.title.sanskrit ? article.title.english : 'Composition'}</p>
-
-      {unconfirmed && (
-        <p className="wiki-notice" role="note">
-          <span className="wiki-notice-word">{STATUS_LABEL[article.status]}.</span> This text has not been proofread / permission pending.
-        </p>
-      )}
-
-      <p className="wiki-actions">
-        <button type="button" className="btn-primary wiki-chant" onClick={chantAll}>
-          {article.kind === 'composition' ? 'Chant this composition' : 'Chant this'}
+      <div className="wiki-titlerow">
+        <h1 className="wiki-title vedic-text">
+          <ArticleTitle title={article.title} />
+        </h1>
+        <button type="button" className="icon-btn wiki-follow" onClick={followAll} aria-label={followLabel} title={followLabel}>
+          <Icon name="play" size={22} />
         </button>
-        <AddToPrakaram pieceIds={article.kind === 'composition' ? article.sections.map((x) => x.pieceId) : [article.id]} />
-      </p>
+      </div>
+      <ArticleSubtitle title={article.title} />
 
-      {article.sections.length > 0 && (
-        <nav aria-labelledby="wiki-contents-title" className="wiki-toc">
-          <h2 id="wiki-contents-title">Parts</h2>
-          <ol>
-            {article.sections.map((s) => (
-              <li key={s.id}>
-                <a href={`${articleHref(article.id)}/${s.number}`}>
-                  {s.number} {s.title}
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
-      )}
+      <details className="wiki-info">
+        <summary>
+          Info <span className="wiki-muted">{peek}</span>
+          {unconfirmed && <span className="wiki-notice-word"> · {STATUS_LABEL[article.status]}</span>}
+        </summary>
 
-      {article.sections.map(renderSection)}
+        {unconfirmed && (
+          <p className="wiki-notice" role="note">
+            <span className="wiki-notice-word">{STATUS_LABEL[article.status]}.</span> This text has not been proofread / permission pending.
+          </p>
+        )}
 
-      <p className="wiki-lead">{article.summary}</p>
+        <p className="wiki-lead">{article.summary}</p>
 
-      <section className="wiki-brings" aria-labelledby="wiki-brings-title">
-        <h2 id="wiki-brings-title">Brings</h2>
-        <ul>
-          {article.media.map((m, i) => (
-            <li key={i}>
-              <span className="wiki-brings-kind">{m.label ?? m.kind}</span>
-              {[
-                m.language,
-                m.script,
-                m.swara === undefined ? undefined : m.swara ? 'with swara' : 'no swara',
-                m.count === undefined ? undefined : `${m.count} lines`,
-                m.source,
-              ]
-                .filter(Boolean)
-                .join(' · ')}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <aside className="wiki-infobox" aria-label="Facts about this text">
-        <dl>
-          {article.veda && (
-            <>
-              <dt>Veda</dt>
-              <dd>{article.veda}</dd>
-            </>
-          )}
-          {article.deity && (
-            <>
-              <dt>Deity</dt>
-              <dd>{article.deity}</dd>
-            </>
-          )}
-          {article.usage && (
-            <>
-              <dt>Usage</dt>
-              <dd>{article.usage}</dd>
-            </>
-          )}
+        <dl className="wiki-facts">
+          {article.veda && (<><dt>Veda</dt><dd>{article.veda}</dd></>)}
+          {article.deity && (<><dt>Deity</dt><dd>{article.deity}</dd></>)}
+          {article.usage && (<><dt>Usage</dt><dd>{article.usage}</dd></>)}
           <dt>Source</dt>
           <dd>{article.source}</dd>
           <dt>Status</dt>
           <dd>
-            <span className="wiki-status" data-status={article.status}>
-              {STATUS_LABEL[article.status]}
-            </span>
+            <span className="wiki-status" data-status={article.status}>{STATUS_LABEL[article.status]}</span>
           </dd>
           <dt>Licence</dt>
           <dd>{article.license ?? 'Not stated'}</dd>
           <dt>Lines</dt>
           <dd>{article.lines}</dd>
         </dl>
-      </aside>
 
-      {article.usedIn.length > 0 && (
-        <section className="wiki-related" aria-labelledby="wiki-used-title">
-          <h2 id="wiki-used-title">Used in</h2>
+        <section className="wiki-brings" aria-labelledby="wiki-brings-title">
+          <h2 id="wiki-brings-title">Brings</h2>
           <ul>
-            {article.usedIn.map((u) => (
-              <li key={u.id}>
-                <a href={articleHref(u.id)}>{u.title}</a>
+            {article.media.map((m, i) => (
+              <li key={i}>
+                <span className="wiki-brings-kind">{m.label ?? m.kind}</span>
+                {[
+                  m.language,
+                  m.script,
+                  m.swara === undefined ? undefined : m.swara ? 'with swara' : 'no swara',
+                  m.count === undefined ? undefined : `${m.count} lines`,
+                  m.source,
+                ]
+                  .filter(Boolean)
+                  .join(' · ')}
               </li>
             ))}
           </ul>
         </section>
-      )}
 
-      {article.related.length > 0 && (
-        <section className="wiki-related" aria-labelledby="wiki-related-title">
-          <h2 id="wiki-related-title">Related articles</h2>
-          <ul>
-            {article.related.map((r) => (
-              <li key={r.id}>
-                <a href={articleHref(r.id)}>{r.title}</a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+        {article.usedIn.length > 0 && (
+          <section className="wiki-related" aria-labelledby="wiki-used-title">
+            <h2 id="wiki-used-title">Used in</h2>
+            <ul>{article.usedIn.map(ref)}</ul>
+          </section>
+        )}
 
-      <footer className="wiki-footer">
-        <span className="wiki-muted">Categories</span>{' '}
-        {article.categories.map((c, i) => (
-          <span key={c}>
-            <a href={`#/wiki/Category:${encodeURIComponent(c)}`}>{c}</a>
-          </span>
-        ))}
-      </footer>
+        {article.related.length > 0 && (
+          <section className="wiki-related" aria-labelledby="wiki-related-title">
+            <h2 id="wiki-related-title">Related articles</h2>
+            <ul>{article.related.map(ref)}</ul>
+          </section>
+        )}
+
+        <p className="wiki-footer">
+          <span className="wiki-muted">Categories</span>{' '}
+          {article.categories.map((c) => (
+            <a key={c} href={categoryHash(c)}>{c}</a>
+          ))}
+        </p>
+        <p className="wiki-footer">
+          <AddToPrakaram pieceIds={article.kind === 'composition' ? article.sections.map((x) => x.pieceId) : [article.id]} />
+          <a href={article.editUrl}>Edit</a>
+          <a href={article.historyUrl}>View history</a>
+        </p>
+      </details>
+
+      {article.sections.map(renderSection)}
     </main>
   );
 }

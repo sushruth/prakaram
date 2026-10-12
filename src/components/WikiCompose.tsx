@@ -4,6 +4,7 @@ import { findPiece } from '../services/koshah';
 import { getArticle } from '../services/wiki';
 import { articleHash } from '../services/wikiNav';
 import { basketToPrakara } from '../services/basket';
+import { ArticleTitle } from './Sanskrit';
 import { useBasketStore } from '../stores/useBasketStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 
@@ -19,10 +20,10 @@ export function WikiCompose() {
   });
   const total = rows.reduce((n, r) => n + r.piece.lines, 0);
 
-  const finish = (chantNow: boolean) => {
+  const finish = (followNow: boolean) => {
     usePrakaraStore.getState().addPrakara(basketToPrakara(items, name));
     clear();
-    if (chantNow) window.location.hash = '';
+    if (followNow) window.location.hash = '';
     else setName('');
   };
 
@@ -34,7 +35,7 @@ export function WikiCompose() {
         <ol className="wiki-steps">
           <li>Open any article.</li>
           <li>Tap Add to my prakaram on a whole text or on one section.</li>
-          <li>Come back here to order and chant them.</li>
+          <li>Come back here to order and follow them.</li>
         </ol>
         <p className="wiki-muted">The player plays the text for now; other media are listed but not played.</p>
         <p>
@@ -54,7 +55,7 @@ export function WikiCompose() {
         {rows.map((r, i) => (
           <li key={r.id} className="wiki-compose-item">
             <span className="wiki-compose-what">
-              <a href={articleHash(r.piece.documentId)}>{r.piece.title.english.split(': ')[0]}</a>
+              <a href={articleHash(r.piece.documentId)}><ArticleTitle title={r.piece.title} /></a>
               {r.piece.sectionId && <span className="wiki-muted"> · {r.piece.title.english.split(': ').slice(1).join(': ')}</span>}
               <span className="wiki-muted"> · {r.piece.lines} lines</span>
               <span className="wiki-muted"> · brings {[...new Set(getArticle(r.piece.documentId)?.media.map((m) => m.kind))].join(', ')}</span>
@@ -74,7 +75,7 @@ export function WikiCompose() {
         onInput={(e) => setName(e.currentTarget.value)}
       />
       <div className="wiki-compose-actions">
-        <button type="button" className="btn-primary" onClick={() => finish(true)}>Chant now</button>
+        <button type="button" className="btn-primary" onClick={() => finish(true)}>Follow now</button>
         <button type="button" onClick={() => finish(false)}>Save to my prakarams</button>
       </div>
     </div>

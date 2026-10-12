@@ -268,13 +268,13 @@ A piece is one thing that can be read or run. Pieces are derived from the docume
 | Whole sukta | `<documentId>`, e.g. `rudram-namakam` | `sukta` | The document title |
 | One section | `<documentId>/<sectionNumber>`, e.g. `rudram-namakam/3` | `anuvaka` | The document title, then the section title in English |
 
-Each section heading in an article chants that section's piece. The **Chant this** button chants the whole document. Chanting makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
+Each section heading in an article follows that section's piece. The play button beside the title follows the whole document. Following makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
 
 ### Sources and compositions
 
 A **source** article owns text. Its sections are its addressable parts: `docId/n` is one part (line ranges are not supported). A **composition** article (`metadata.kind: "composition"`) owns no text; `metadata.parts` lists `{ article, section?, note? }` references to parts of sources, in order. The default prakaras in `src/data/defaultPrakaras.ts` appear as compositions, derived by `prakaraAsDoc()`: their sukta items become parts, their procedural vakyas are left out.
 
-A composition page shows the referenced text inline, each part headed "from <source> §n" with a link back, then **Brings** (inherited from its parts). **Chant this composition** runs it. A source page has **Parts** (its sections, each with chant and Add to my prakaram) and, after the facts, **Used in**: the compositions that reference any of its parts, computed. Missing ids and cycles are skipped. The main page has Browse by kind (Sources, Compositions).
+A composition page shows the referenced text inline, each part headed "from <source> §n" with a link back, then **Brings** (inherited from its parts). The play button beside the title (**Follow this composition**) runs it. A source page lists its sections, each with follow and Add to my prakaram, and, in Info, **Used in**: the compositions that reference any of its parts, computed. Missing ids and cycles are skipped. The main page has Browse by kind (Sources, Compositions).
 
 ### Media
 
@@ -284,15 +284,10 @@ An article brings media: text, transliteration, translation, audio, commentary, 
 
 An article is a page of text with no boxes, borders, rules or tints. Space and type scale do the separating (§7b). Top to bottom:
 
-1. **Tabs.** Spaced words: Article, Read, Edit, View history. The current one is accent. Edit and View history go to GitHub.
-2. **Title.** A large quiet title (1.85rem), the Sanskrit in the chosen script, with the English title below. No rule beneath.
-3. **Notice.** An inline paragraph under the title when the status is `draft` or the licence says "not yet confirmed", led by the status word in accent ("Draft.").
-4. **Lead.** The `summary`, set larger.
-5. **Facts.** A plain definition list: muted label, ink value, with a text **Chant this** button above it. Veda, Deity, Usage, Source, Status, Licence, Lines; a missing optional field is left out; Licence reads "Not stated" when empty. Status is a coloured word (draft muted, proofread and reviewed accent). On wide screens it sits as a right column, still unframed.
-6. **Contents.** A quiet numbered list, each entry linking to `#/wiki/<id>/<n>`.
-7. **Sections.** Heading `n. title` with generous space above, and small muted text links **[chant]** (runs that section) and **[edit]** (opens the document's JSON on GitHub). The verse lines follow, with swara colours as in §5c.
-8. **Related articles.** Spaced words, from `related`.
-9. **Categories.** Spaced words linking to the category pages.
+1. **Breadcrumb.** One muted line of plain links: `Koshah › <Veda, or Sources / Compositions> › <title>`. The title, in the chosen script, is the current page and not a link. It wraps on small screens. There is no tab row.
+2. **Title.** A compact h1 (1.35rem), the Sanskrit in the chosen script, with the English name beneath as one muted line. At the end of the title's first line sits a **Follow** button: the Phosphor regular `play` icon in an `icon-btn` hit area, no fill or box, accent on hover and press. Its label (`aria-label` and `title`) is "Follow", or "Follow this composition". It opens the player on the article.
+3. **Info.** One native `<details>`/`<summary>`, closed by default, no box, border or tint. The summary reads `Info` with a muted peek (`Yajurveda · Rudra · 214 lines`) and a rotating caret; when the status is `draft` or the licence says "not yet confirmed" the accent word `Draft` ends the peek, so the notice is found without opening it. Inside: the notice ("Draft." in accent), the lead `summary`, the facts as a plain definition list (Veda, Deity, Usage, Source, Status, Licence, Lines; Status is a coloured word, Licence reads "Not stated" when empty), **Brings**, **Used in**, **Related articles**, Categories, and the links **Add to my prakaram** (the whole article), Edit and View history (GitHub).
+4. **Sections.** The media. Heading `n. title` with space above, and small muted text links **[follow]** (runs that section), Add to my prakaram and **[edit]**. The verse lines follow, with swara colours as in §5c. A `#/wiki/<id>/<n>` address scrolls to the section heading, which keeps a `scroll-margin-top` clear of the header. There is no Contents or Parts list: the section headings are the structure.
 
 The main page, search and category pages follow the same rule: large welcome line, counts as plain figures, stacked text entries, matches in accent colour (no `<mark>` fill). The wiki search field has no border or underline; it is a caret and muted placeholder, with the focus ring on `:focus-visible` only. Its suggestion list is an opaque `--bg-base` surface with no border or shadow.
 

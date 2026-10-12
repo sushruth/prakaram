@@ -2,12 +2,10 @@ import { useEffect, useState } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
 import { useRoomStore } from '../stores/useRoomStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
-import { useSettingsStore } from '../stores/useSettingsStore';
-import { transliterateVedic } from '../services/transliteration';
-import { displayTitle } from '../services/titles';
 import { searchArticles } from '../services/wiki';
 import { useBasketStore } from '../stores/useBasketStore';
-import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, articleLabel, searchHash } from '../services/wikiNav';
+import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, searchHash } from '../services/wikiNav';
+import { ArticleTitle, SanskritTitle, useTitleText } from './Sanskrit';
 import { FlameMark } from './FlameMark';
 import { Icon } from './Icon';
 
@@ -22,7 +20,7 @@ interface HeaderProps {
 export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen, detailsOpen }: HeaderProps) {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
-  const script = useSettingsStore((s) => s.script);
+  const titleText = useTitleText();
   const prakara = usePrakaraStore((s) => s.getActivePrakara());
   const { isInRoom, isHost, peerCount } = useRoomStore();
 
@@ -36,8 +34,8 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
         <span className="header-flame" aria-hidden="true">
           <FlameMark size={24} />
         </span>
-        <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={prakara.title}>
-          {transliterateVedic(displayTitle(prakara.title), script)}
+        <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={titleText(prakara.title, { full: true })}>
+          <SanskritTitle title={prakara.title} short />
         </button>
       </div>
 
@@ -79,7 +77,6 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
 export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: { query: string; onOpenSettings: () => void; settingsOpen: boolean; onOpenRoom: () => void }) {
   const { isInRoom, isHost, peerCount } = useRoomStore();
   const roomTitle = isInRoom ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Join a live room';
-  const script = useSettingsStore((s) => s.script);
   const basketCount = useBasketStore((s) => s.items.length);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
@@ -126,7 +123,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
             {suggestions.map((a) => (
               <li key={a.id}>
                 <a href={articleHash(a.id)} onClick={() => setOpen(false)}>
-                  <span>{articleLabel(a, script)}</span>
+                  <span><ArticleTitle title={a.title} /></span>
                   <span className="wiki-muted">{a.title.english}</span>
                 </a>
               </li>

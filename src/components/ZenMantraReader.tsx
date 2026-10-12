@@ -11,11 +11,10 @@ import { useGuest } from '../hooks/useGuest';
 
 import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
-import { renderVedic } from './renderVedic';
+import { Sanskrit } from './Sanskrit';
 import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
-  const script = useSettingsStore((s) => s.script);
   const fontSize = useSettingsStore((s) => s.fontSize);
   const wrapLines = useSettingsStore((s) => s.wrapLines);
 
@@ -166,7 +165,7 @@ export function ZenMantraReader() {
                   overflowX: wrapLines ? 'visible' : 'auto',
                 }}
               >
-                {renderVedic(chunk.sanskrit, script)}
+                <Sanskrit text={chunk.sanskrit} />
               </div>
             </div>
           );

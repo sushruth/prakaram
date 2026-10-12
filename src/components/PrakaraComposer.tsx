@@ -1,13 +1,12 @@
 import { PrakaraItem } from '../types/mantra';
 import { ALL_SUKTAMS } from '../data';
-import { transliterateVedic } from '../services/transliteration';
+import { ArticleTitle, SanskritTitle } from './Sanskrit';
 import { Icon } from './Icon';
 
 const labelStyle = { display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.25rem' } as const;
 const inputStyle = { width: '100%', padding: '0.55rem', borderRadius: '8px', background: 'var(--bg-card)' } as const;
 
 interface PrakaraComposerProps {
-  script: Parameters<typeof transliterateVedic>[1];
   title: string;
   onTitleChange: (v: string) => void;
   author: string;
@@ -27,7 +26,7 @@ interface PrakaraComposerProps {
 }
 
 export function PrakaraComposer(props: PrakaraComposerProps) {
-  const { script, items } = props;
+  const { items } = props;
   const canSave = !!props.title.trim() && items.length > 0;
 
   return (
@@ -90,7 +89,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
                 }}
               >
                 <span>
-                  <strong>{idx + 1}.</strong> {transliterateVedic(item.customTitle ?? '', script)}
+                  <strong>{idx + 1}.</strong> <SanskritTitle title={item.customTitle ?? ''} full />
                 </span>
                 <button
                   onClick={() => props.onRemoveItem(idx)}
@@ -122,7 +121,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
                 cursor: 'pointer',
               }}
             >
-              + {transliterateVedic(s.title.sanskrit, script)}
+              + <ArticleTitle title={s.title} />
             </button>
           ))}
         </div>

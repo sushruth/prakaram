@@ -1,3 +1,4 @@
+import { mixedTitle } from './titles';
 import { MantraChunk, MantraDocument, Prakara } from '../types/mantra';
 
 /** One browsable item in the Koshah: a whole sukta, or one of its sections (an anuvaka). Derived, never stored. */
@@ -69,7 +70,7 @@ export function pieceAsPrakara(piece: KoshahPiece): Prakara {
   if (cached) return cached;
   const prakara: Prakara = {
     id: PIECE_PREFIX + piece.id,
-    title: `${piece.title.sanskrit} (${piece.title.english})`,
+    title: mixedTitle(piece.title),
     description: piece.source,
     author: piece.source,
     createdTimestamp: 0,

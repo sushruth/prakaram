@@ -1,6 +1,6 @@
-import { useSettingsStore } from '../stores/useSettingsStore';
+import { ArticleTitle } from './Sanskrit';
 import { searchArticles } from '../services/wiki';
-import { REPO_URL, articleHash, articleLabel } from '../services/wikiNav';
+import { REPO_URL, articleHash } from '../services/wikiNav';
 
 /** A window of the text around the first match, with the match in <mark>. A match only in the title shows the start. */
 function Snippet({ text, term }: { text: string; term: string }) {
@@ -20,7 +20,6 @@ function Snippet({ text, term }: { text: string; term: string }) {
 }
 
 export function WikiSearch({ q }: { q: string }) {
-  const script = useSettingsStore((s) => s.script);
   const term = q.trim();
   const results = term ? searchArticles(term) : [];
 
@@ -42,7 +41,7 @@ export function WikiSearch({ q }: { q: string }) {
         {results.map((a) => (
           <li key={a.id}>
             <a className="wiki-result-title" href={articleHash(a.id)}>
-              {articleLabel(a, script)}
+              <ArticleTitle title={a.title} />
             </a>
             {a.title.english && <span className="wiki-muted"> {a.title.english}</span>}
             <p>

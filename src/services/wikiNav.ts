@@ -1,5 +1,3 @@
-import type { WikiArticle } from './wiki';
-import { transliterateVedic } from './transliteration';
 
 export const HOME_HASH = '#/wiki';
 export const REPO_URL = 'https://github.com/sushruth/prakaram';
@@ -50,13 +48,6 @@ export const COMPOSE_HASH = '#/wiki/Special:Compose';
 export const categoryHash = (name: string) => `#/wiki/Category:${encodeURIComponent(name)}`;
 
 export const searchHash = (q: string) => `#/wiki/Special:Search?q=${encodeURIComponent(q)}`;
-
-type Script = Parameters<typeof transliterateVedic>[1];
-
-/** The page title: the Sanskrit in the chosen script, or the English when there is no Sanskrit. */
-export function articleLabel(a: WikiArticle, script: Script): string {
-  return a.title.sanskrit ? transliterateVedic(a.title.sanskrit, script) : a.title.english;
-}
 
 /** Old `#k=<docId>/<n>` links (the `/` may be `%2F`) become the wiki address of that document or section. */
 export function legacyHash(hash: string): string | undefined {

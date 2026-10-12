@@ -51,7 +51,7 @@ describe('wiki articles', () => {
   });
 
   it('keeps related ids that exist and resolves them to English titles', () => {
-    expect(getArticle('rudram', docs)!.related).toEqual([{ id: 'sri', title: 'Hymn sri' }]);
+    expect(getArticle('rudram', docs)!.related).toEqual([expect.objectContaining({ id: 'sri', title: 'Hymn sri' })]);
   });
 
   it('returns undefined for an unknown id', () => {
@@ -165,11 +165,11 @@ describe('media and composed articles', () => {
     const a = getArticle('work', all)!;
     expect(a.kind).toBe('composition');
     expect(a.parts).toEqual(a.sections);
-    expect(getArticle('rudram', all)!.usedIn).toEqual([{ id: 'work', title: 'Hymn work' }]);
+    expect(getArticle('rudram', all)!.usedIn).toEqual([expect.objectContaining({ id: 'work', title: 'Hymn work' })]);
     expect(getArticle('shanti', all)!.usedIn).toEqual([]);
     expect(getArticle('shanti', all)!.kind).toBe('source');
     expect(a.sections.map((s) => [s.number, s.pieceId])).toEqual([[1, 'rudram/2'], [2, 'sri']]);
-    expect(a.sections[0].from).toEqual({ id: 'rudram', title: 'Hymn rudram', number: 2 });
+    expect(a.sections[0].from).toMatchObject({ id: 'rudram', title: 'Hymn rudram', number: 2 });
     expect(a.lines).toBe(2);
   });
 

@@ -1,6 +1,8 @@
 import { MantraDocument, MediaDecl, Prakara, SuktaSection } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_FILE } from '../data';
 import { listPieces } from './koshah';
+import { splitTitle } from './titles';
+import { transliterateVedic } from './transliteration';
 
 export interface WikiMedia extends MediaDecl {
   /** Lines, for derived text and translation. */
@@ -15,7 +17,14 @@ export interface WikiSection {
   /** `${docId}/${n}` for a section of a multi-section document, or the document id when it has one section. */
   pieceId: string;
   /** Set when the section comes from another article (a composed work). */
-  from?: { id: string; title: string; number: number };
+  from?: { id: string; title: string; sanskrit: string; number: number };
+}
+
+/** A link to another article: its Sanskrit and English titles; the view picks the script. */
+export interface ArticleRef {
+  id: string;
+  title: string;
+  sanskrit: string;
 }
 
 export interface WikiArticle {
@@ -29,14 +38,14 @@ export interface WikiArticle {
   status: 'draft' | 'proofread' | 'reviewed';
   license?: string;
   categories: string[];
-  related: { id: string; title: string }[];
+  related: ArticleRef[];
   sections: WikiSection[];
   media: WikiMedia[];
   kind: 'source' | 'composition';
   /** Resolved parts of a composition, in order (the same entries as `sections`); empty for a source. */
   parts: WikiSection[];
   /** Compositions that reference any part of this source. */
-  usedIn: { id: string; title: string }[];
+  usedIn: ArticleRef[];
   lines: number;
   sourceUrl: string;
   editUrl: string;
@@ -83,6 +92,7 @@ function deriveMedia(parts: Part[], declared: MediaDecl[]): WikiMedia[] {
 
 /** A default prakara as a composition article: its sukta items become parts. Procedural vakyas have text of their own and are left out. */
 export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument {
+  const title = splitTitle(p.title);
   const parts = p.items.flatMap((i) => {
     if (i.type !== 'sukta_ref' || !i.suktaId) return [];
     const sec = i.sectionId ? docs.find((d) => d.id === i.suktaId)?.sections.find((x) => x.id === i.sectionId) : undefined;
@@ -90,7 +100,7 @@ export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument
   });
   return {
     id: p.id,
-    title: { sanskrit: '', transliteration: '', english: p.title },
+    title: { ...title, transliteration: transliterateVedic(title.sanskrit, 'iast') },
     metadata: { source: p.author ?? 'Composition', kind: 'composition', parts, summary: p.description, categories: ['Compositions'] },
     sections: [],
   };
@@ -112,7 +122,7 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
     title: p.section.title,
     lines: p.section.chunks.length,
     pieceId: p.pieceId,
-    ...(composed ? { from: { id: p.doc.id, title: p.doc.title.english, number: p.section.sectionNumber } } : {}),
+    ...(composed ? { from: { id: p.doc.id, title: p.doc.title.english, sanskrit: p.doc.title.sanskrit, number: p.section.sectionNumber } } : {}),
   }));
   // A composition is only as reviewed as its least reviewed part.
   const rank = ['draft', 'proofread', 'reviewed'] as const;
@@ -130,7 +140,7 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
     categories: doc.metadata.categories ?? [],
     related: (doc.metadata.related ?? []).flatMap((id) => {
       const other = docs.find((d) => d.id === id);
-      return other ? [{ id, title: other.title.english }] : [];
+      return other ? [{ id, title: other.title.english, sanskrit: other.title.sanskrit }] : [];
     }),
     sections,
     media: deriveMedia(parts, doc.metadata.media ?? []),
@@ -140,7 +150,7 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
       ? []
       : docs
           .filter((c) => c.metadata.kind === 'composition' && resolveParts(c, docs).some((p) => p.doc.id === doc.id))
-          .map((c) => ({ id: c.id, title: c.title.english })),
+          .map((c) => ({ id: c.id, title: c.title.english, sanskrit: c.title.sanskrit })),
     lines: composed ? parts.reduce((n, p) => n + p.section.chunks.length, 0) : whole.lines,
     sourceUrl: `${REPO_URL}/blob/${BRANCH}/${path}`,
     editUrl: `${REPO_URL}/edit/${BRANCH}/${path}`,

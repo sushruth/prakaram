@@ -1,6 +1,6 @@
-import { useSettingsStore } from '../stores/useSettingsStore';
+import { ArticleTitle } from './Sanskrit';
 import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
-import { COMPOSE_HASH, articleHash, articleLabel, categoryHash } from '../services/wikiNav';
+import { COMPOSE_HASH, articleHash, categoryHash } from '../services/wikiNav';
 
 const DAY_MS = 86_400_000;
 
@@ -15,7 +15,6 @@ function tally(articles: WikiArticle[], field: (a: WikiArticle) => string | unde
 }
 
 export function WikiHome() {
-  const script = useSettingsStore((s) => s.script);
   const all = listArticles();
   const articles = all.filter((a) => a.kind === 'source');
   const categories = listCategories();
@@ -40,7 +39,7 @@ export function WikiHome() {
           <section className="wiki-block wiki-featured">
             <h2>Featured article</h2>
             <a className="wiki-result-title" href={articleHash(featured.id)}>
-              {articleLabel(featured, script)}
+              <ArticleTitle title={featured.title} />
             </a>
             <p>{featured.summary}</p>
           </section>
@@ -96,7 +95,7 @@ export function WikiHome() {
           <ul className="wiki-list">
             {recent.map((a) => (
               <li key={a.id}>
-                <a href={articleHash(a.id)}>{articleLabel(a, script)}</a>
+                <a href={articleHash(a.id)}><ArticleTitle title={a.title} /></a>
               </li>
             ))}
           </ul>
@@ -104,7 +103,7 @@ export function WikiHome() {
 
         <section className="wiki-block">
           <h2>Compile your own prakaram</h2>
-          <p>Add a whole text or a single section from any article, put them in order, and chant them in the player.</p>
+          <p>Add a whole text or a single section from any article, put them in order, and follow them in the player.</p>
           <a className="wiki-action" href={COMPOSE_HASH}>
             Start composing
           </a>
