@@ -129,9 +129,13 @@ bunx tsc --noEmit
 
 ## 7. Handoff
 
-**Branches.** Push to `main`. It is the Cloudflare production branch (it was `master` before the rename), so every push there builds and deploys.
+**Branches.** Push to `main`. It is the Cloudflare production branch, so every push there builds and deploys.
 
-**Repo.** The repo is `sushruth/prakaram` (renamed from `parayanam`; GitHub redirects the old URL). The app is served at `prakaram.sushruth.dev`. The production branch is `main`, which replaced `master`. Points still to verify on the Cloudflare side: the Git link to the Workers project, and that `prakaram.sushruth.dev` routes to the `prakaram` Worker.
+**Repo.** The repo is `sushruth/prakaram` (renamed from `parayanam`; the old URL redirects). The app is served at `prakaram.sushruth.dev`. The production branch is `main`, which replaced `master`.
+
+**Git access in a new session.** Attach the repo first (`add_repo` for `sushruth/prakaram`), then clone it shallow. A clone of the old name works through the redirect, but attach the new name so the session's repo scope matches. Before pushing from a shallow clone, run `git fetch origin main` so the push sends a thin pack.
+
+**Still to verify on the Cloudflare side:** the Git link to the Workers project (it should build `main`), and that `prakaram.sushruth.dev` routes to the `prakaram` Worker. Neither could be checked from the sandbox.
 
 **Checks before a push** (the same ones CI runs):
 
