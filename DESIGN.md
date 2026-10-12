@@ -44,6 +44,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--shloka` | `#3d7a55` | Shloka lines (green tint) |
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
+| `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -77,6 +78,10 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
 The instruction label ("Vakya / Procedure") is an uppercase teal label above the text. It has no fill.
+
+**Rule: one line is always highlighted.** The reader never shows zero active lines. Every render, screenshot and capture must include the highlighted line on screen. If it has scrolled away, scroll back to it before capturing.
+
+**Back to line.** When the highlighted line is entirely off screen, a button appears at the bottom right. It points up or down, toward the line. Tapping it scrolls the line to the centre. It is a green arrow with a green glow (`--locate`, `--locate-glow`) and no fill or border. It is hidden in zen and keeps its opacity transition, so nothing shifts.
 
 ---
 
@@ -201,7 +206,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 Text first. The app is words on paper, and controls are words too.
 
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
-- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), and the switch track in settings. Add any new exception here first.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
 - **Groups are rows of words.** Mode and option choices (Off / Learn / Auto, Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.

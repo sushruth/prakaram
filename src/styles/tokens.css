@@ -15,6 +15,9 @@
     --accent-glow: rgba(31, 95, 99, 0.12);
     --on-accent: #ffffff;
 
+    --locate: #16a34a;
+    --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
+      drop-shadow(0 0 7px color-mix(in srgb, var(--locate) 55%, transparent));
     --swara-up: #6d28d9;
     --swara-down: #1d4ed8;
     --swara-double: #b91c1c;
@@ -45,7 +48,13 @@
       --accent-glow: rgba(127, 196, 191, 0.12);
       --on-accent: #0f1110;
 
-      --swara-up: #c084fc;
+      --locate: #4ade80;
+      --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
+        drop-shadow(0 0 7px color-mix(in srgb, var(--locate) 55%, transparent));
+      --locate: #4ade80;
+    --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
+      drop-shadow(0 0 7px color-mix(in srgb, var(--locate) 55%, transparent));
+    --swara-up: #c084fc;
       --swara-down: #60a5fa;
       --swara-double: #f05252;
       --shloka: #92d3aa;

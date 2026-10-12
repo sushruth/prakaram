@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'preact/hooks';
 import { Header } from './components/Header';
 import { ZenMantraReader } from './components/ZenMantraReader';
+import { LocateLine } from './components/LocateLine';
 import { CadencePanel } from './components/CadencePanel';
 import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { ChantingRoomModal } from './components/ChantingRoomModal';
@@ -75,6 +76,7 @@ export function App() {
       <CadencePanel isOpen={drop === 'cadence'} onClose={closeDrop} />
 
       <ZenMantraReader />
+      <LocateLine />
 
       <PrakaraBuilderModal isOpen={isPrakaraOpen} onClose={() => setIsPrakaraOpen(false)} />
       <ChantingRoomModal isOpen={isRoomOpen} onClose={() => setIsRoomOpen(false)} />
