@@ -101,7 +101,7 @@ The reader is a page, not a set of cards.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
-- The learning indicator sits between the title and the icons: seconds above a hollow ring and the `n/6` count. It is hidden in plain mode, but keeps its space.
+- The learning indicator sits between the title and the icons. While learning it shows seconds above a hollow ring and the `n/6` count. Once engaged it shows only a countdown ring to the next line, which restarts on every line. It is hidden in plain mode, but keeps its space.
 - The title is never clipped. A long word that does not fit wraps by character, and the header grows to fit it.
 
 ## 5c. Line Kinds
@@ -174,9 +174,13 @@ Smart controls use the flame glow on the glyph or value, as with any active cont
 
 **Countdown.** Once engaged, the header ring empties over the time left on the current line, then refills for the next line. The line's time is its matra weight times the pace.
 
+**Countdown.** Once engaged, the header ring empties over the time left on the current line, then restarts for the next. A line's time is its matra weight times the pace.
+
+**Pace.** One slider in milliseconds per matra, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
+
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. Used for Tap or Next while engaged, and the Smart icon when a room follower's host controls cadence.
 
-Every choice in this panel (Smart, learned lines, tempo) is persisted.
+Every choice in this panel (Smart, learned lines, pace) is persisted.
 
 ## 5d. Zen
 
