@@ -107,7 +107,7 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenAuth }: HeaderProps) {
           className="btn-icon"
           onClick={toggleZenMode}
           title="Enter Zen Mode (Focus Chanting)"
-          style={{ background: 'var(--accent)', color: '#fff', border: 'none' }}
+          style={{ background: 'var(--accent)', color: 'var(--on-accent)', border: 'none' }}
         >
           🧘
         </button>

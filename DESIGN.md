@@ -41,7 +41,9 @@ Defined on `:root` and `[data-theme="sandhya"]` (default) and `[data-theme="ligh
 | `--accent-light` | `#e6efef` | Selected-state tint |
 | `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
 
-Dark theme keeps its own tokens and is not part of this direction yet. Do not add new hues. If a new state needs color, derive it from `--accent` at lower opacity.
+Dark theme uses the same rules on a near-black paper (`#121413`), with the accent lifted to `#7fc4bf` for contrast. Text on accent fills uses `--on-accent` (white in light, near-black in dark), never a hardcoded white.
+
+Do not add new hues. If a new state needs color, derive it from `--accent` at lower opacity.
 
 ---
 

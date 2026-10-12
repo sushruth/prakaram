@@ -56,7 +56,7 @@ export function CadenceControlBar() {
               onClick={() => setLayaPreset(key)}
               style={{
                 background: isSelected ? 'var(--accent)' : 'var(--bg-card)',
-                color: isSelected ? '#fff' : 'var(--text-secondary)',
+                color: isSelected ? 'var(--on-accent)' : 'var(--text-secondary)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: '9999px',
                 padding: '0.25rem 0.65rem',
@@ -112,7 +112,7 @@ export function CadenceControlBar() {
         onClick={toggleAutoProgress}
         style={{
           background: isAutoProgress ? '#10b981' : canAutoProgress ? 'var(--accent-gold)' : 'var(--bg-card)',
-          color: isAutoProgress || canAutoProgress ? '#fff' : 'var(--text-secondary)',
+          color: isAutoProgress || canAutoProgress ? 'var(--on-accent)' : 'var(--text-secondary)',
           border: '1px solid var(--border-subtle)',
           borderRadius: '9999px',
           padding: '0.35rem 0.75rem',
