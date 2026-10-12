@@ -76,6 +76,7 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Active | 1 | none | none |
 | Inactive | 0.35 | none | none |
 | Inactive, hovered | 0.6 | none | none |
+| Next line while learning (Smart, waiting or measuring) | 0.6 | none | none |
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
 The instruction label ("Vakya / Procedure") is an uppercase teal label above the text. It has no fill.
@@ -96,7 +97,7 @@ The reader is a page, not a set of cards.
 - **Split** (off by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
 - The instruction label appears on the first phrase of an instruction only.
 
-## 5a. Header, Title and Flyouts
+## 5e. Header, Title and Flyouts
 
 - The header is one vertically centred row: a flame mark, the prakara title, and icons. There is no site name in the header.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
@@ -206,7 +207,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 - Header is one row, vertically centred: flame and prakara title on the left, five borderless icon buttons on the right (settings, cadence, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
-- Touch targets stay at 38 px minimum.
+- Touch targets are 40 px on desktop and 34 px on phones, where the header row is tight at 360 px. Keep the phone size for icon buttons only; do not shrink text targets.
 
 ---
 

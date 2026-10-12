@@ -16,14 +16,16 @@
 ## ✨ Key Capabilities
 
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
-* **Single-Chunk Focus:** Highlights one line at a time. Other lines fade to half transparency.
-* **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights.
-* **Smart or Plain:** one icon in the cadence panel. **Plain** moves on with Tap, Next or Space and learns nothing. **Smart** learns your pace from the first six lines you tap through, then advances the lines itself at the learned tempo.
+* **Single-Chunk Focus:** Highlights one line at a time. Other lines fade. At least one line is always highlighted.
+* **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.
+* **Smart or Plain:** one icon in the cadence panel. **Plain** moves on with Tap, Next or Space and learns nothing. **Smart** waits for your first tap, measures six lines you tap through while the header shows seconds and the count, then advances the lines itself at the learned pace. Learning is one run; a reload resumes it from the count.
 * **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 250 to 3000 (833 by default). Learned pace is clamped to the same range.
-* **Pause:** tap the countdown ring to pause auto progress, and tap again to resume.
+* **Countdown ring:** once engaged, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
+* **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.
+* **Header:** a flame mark and the prakara title on the left (tap the title for details), then the learning indicator and five icons: settings, cadence, prakara sequences, live room, and zen.
 * **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide everything except the verses and that icon. Hidden controls keep their space, so nothing shifts.
-* **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured: up is purple, down is blue, double up is red. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
+* **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured: up (svarita) purple, down (anudatta) blue, double up (dirgha svarita) red. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 
 ### 1. Authentic Vedic Corpus (*Saswara Veda Mantrah*)
 * Editorial benchmark: *Saswara Veda Mantrah* by Sri Ramakrishna Math.
@@ -61,7 +63,7 @@
 
 ### 6. Modern Layered CSS (No Tailwind)
 * Native `@layer` cascade, split by concern under `src/styles/`. Rules and borders are governed by `DESIGN.md`.
-* Three themes: **System** (default, follows the OS), **Light**, and **Dark**. Light and dark are near-monochrome with one teal accent and a swara indigo.
+* Three themes: **System** (default, follows the OS), **Light**, and **Dark**. Light and dark are near-monochrome with one teal accent. Swara colours and the green back-to-line arrow are the only other hues.
 
 ---
 
@@ -103,16 +105,19 @@ bunx wrangler dev
 ├── THIRD_PARTY_NOTICES.md # Vendored third-party assets
 ├── wrangler.jsonc         # Workers static-assets config (serves dist/)
 ├── src/
-│   ├── App.tsx            # Shell: header, reader, cadence bar, drop panels, modals
-│   ├── components/        # Header, ZenMantraReader, DropPanel, SettingsSheet,
-│   │                      # PrakaraDetails, PrakaraBuilderModal, cadence/ controls
+│   ├── App.tsx            # Shell: header, reader, drop panels, modals, back-to-line
+│   ├── components/        # Header, ZenMantraReader, LearnIndicator, LocateLine,
+│   │                      # DropPanel, SettingsSheet, CadencePanel, PrakaraDetails,
+│   │                      # PrakaraBuilderModal, cadence/ controls
 │   ├── config/themes.ts   # Theme ids, labels, data-theme attribute
 │   ├── data/              # Sukta JSON corpus and default prakaras
+│   ├── hooks/useChunks.ts # Shared chunk list for reader and indicator
 │   ├── icons/phosphor.ts  # Vendored Phosphor icon paths (MIT)
-│   ├── services/          # Transliteration registry, cadence engine, chunking,
-│   │                      # aksharas, titles, swara, URL codec, WebRTC room
+│   ├── services/          # Transliteration registry, cadence engine and state
+│   │                      # machine, syllabifier, chunking, aksharas, titles, swara
+│   │                      # tones, URL codec, WebRTC room
 │   ├── settings/          # Settings registry and controls
-│   ├── stores/            # zustand stores; persisted settings, cadence, prakaras
+│   ├── stores/            # zustand stores; persisted settings, cadence, prakaras, progress
 │   ├── styles/            # index.css entry; one file per concern and @layer
 │   └── types/             # Shared TypeScript types
 ├── worker/

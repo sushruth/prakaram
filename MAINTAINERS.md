@@ -8,15 +8,19 @@
 
 ```
 [ User Browser / PWA ]
-  ├── Preact UI: header, reader, cadence bar, drop panels (settings, prakara details), modals
+  ├── Preact UI: header (flame, title, learning ring, icons), reader, back-to-line,
+  │     drop panels (settings, prakara details, cadence), modals
   ├── zustand stores
   │     ├── persisted: useSettingsStore (parayanam-settings)
   │     │             useCadenceStore  (parayanam-cadence)
   │     │             usePrakaraStore  (parayanam-prakaras)
-  │     └── in memory: useMantraStore (active line, zen), useRoomStore
+  │     │             useMantraStore   (parayanam-progress: line per prakara, zen)
+  │     └── in memory: useRoomStore, cadence pause and learning clock
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
-  ├── Cadence engine (Smart learning from taps; pace 250-3000 ms per mātrā)
+  ├── Cadence phase machine (services/cadenceMachine.ts, pure transition function)
+  ├── Cadence engine (pace 250-3000 ms per mātrā, learned from taps)
+  ├── Syllabifier (mātrā weights; only chant counts, verse numbers ignored)
   ├── URL codec (CompressionStream deflate -> #p=...)
   └── Trystero WebRTC (serverless DataChannels)
             │
@@ -27,7 +31,7 @@
   └── POST /api/auth/*/verify  -> 501 until WebAuthn verification is implemented
 ```
 
-Stored preference keys (zustand persist) hold only validated values. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
+Stored preference keys (zustand persist) hold only validated values. Cadence phases change only through `transition()` in `services/cadenceMachine.ts`. A corrupt or unknown value falls back to its default on load. The old `parayanam_*` keys are no longer read, except the custom prakara list, which is migrated once.
 
 ---
 
@@ -119,4 +123,4 @@ bunx tsc --noEmit
 
 * Passkey accounts are hidden, and the Worker verify endpoints fail closed (`501`). Implement WebAuthn verification with `@simplewebauthn/server` before exposing accounts.
 * `worker/wrangler.jsonc` still has a placeholder D1 `database_id`, and it commits a `JWT_SECRET`. Move the secret to `wrangler secret put` before deploying the Worker.
-* `THIRD_PARTY_NOTICES.md` lacks the Phosphor copyright line. Add it from the upstream licence before distribution.
+* Phosphor icons are vendored from `@phosphor-icons/core`. Re-check the licence text in `THIRD_PARTY_NOTICES.md` when adding icons.
