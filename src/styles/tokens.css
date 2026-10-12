@@ -9,13 +9,13 @@
     --text-secondary: #55554f;
     --text-muted: #8c8c85;
 
-    --accent: #c2410c;
-    --accent-light: #fbeee6;
-    --accent-gold: #fdba74;
-    --accent-glow: rgba(234, 88, 12, 0.14);
+    --accent: #2f5f7a;
+    --accent-light: #e8f0f6;
+    --accent-gold: #a9cbe0;
+    --accent-glow: rgba(47, 95, 122, 0.12);
     --on-accent: #ffffff;
-    --spectrum: linear-gradient(100deg, #ff8a3d 0%, #ffd34d 50%, #a8dcff 100%);
-    --spectrum-ink: linear-gradient(100deg, #d4500f 0%, #c79400 50%, #2f80c9 100%);
+    --spectrum: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
+    --spectrum-ink: linear-gradient(100deg, #b5652e 0%, #a88a2e 50%, #2f7fb8 100%);
 
     --locate: #16a34a;
     --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
@@ -45,12 +45,12 @@
       --text-secondary: #a3a39c;
       --text-muted: #6f6f69;
 
-      --accent: #ff9a4d;
-      --accent-light: #2b1d14;
-      --accent-gold: #7c3f1c;
-      --accent-glow: rgba(255, 154, 77, 0.14);
+      --accent: #9ccbe8;
+      --accent-light: #17222b;
+      --accent-gold: #2a4256;
+      --accent-glow: rgba(156, 203, 232, 0.14);
       --on-accent: #ffffff;
-      --spectrum-ink: linear-gradient(100deg, #ff9a4d 0%, #ffe066 50%, #bfe6ff 100%);
+      --spectrum-ink: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
 
       --locate: #4ade80;
       --locate-glow: drop-shadow(0 0 2px color-mix(in srgb, var(--locate) 85%, transparent))
@@ -77,12 +77,12 @@
     --text-secondary: #a3a39c;
     --text-muted: #6f6f69;
 
-    --accent: #ff9a4d;
-    --accent-light: #2b1d14;
-    --accent-gold: #7c3f1c;
-    --accent-glow: rgba(255, 154, 77, 0.14);
+    --accent: #9ccbe8;
+    --accent-light: #17222b;
+    --accent-gold: #2a4256;
+    --accent-glow: rgba(156, 203, 232, 0.14);
     --on-accent: #ffffff;
-    --spectrum-ink: linear-gradient(100deg, #ff9a4d 0%, #ffe066 50%, #bfe6ff 100%);
+    --spectrum-ink: linear-gradient(100deg, #f5a262 0%, #f4d878 50%, #b7dcf2 100%);
 
     --countdown: #facc15;
     --swara-up: #c084fc;
