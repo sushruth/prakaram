@@ -40,3 +40,16 @@
     pointer-events: none;
   }
 }
+
+@layer zen {
+  .zen-active .chrome {
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .zen-active .cadence-strip {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

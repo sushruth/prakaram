@@ -99,7 +99,7 @@ The reader is a page, not a set of cards.
 
 ## 5e. Header, Title and Flyouts
 
-- The header is one vertically centred row: a flame mark, the prakara title, and icons. There is no site name in the header.
+- The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, prakara sequences, live room, zen). The cadence strip sits directly under it, and the header and strip are one sticky block. There is no site name in the header.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
@@ -120,7 +120,7 @@ Only the first phrase of a split line carries the label.
 
 ## 5b. Cadence
 
-Cadence lives in a drop panel opened by the cadence icon in the header. The panel holds three things: the mode, the pace slider, and Next or Tap with Share and Reset. Only one drop panel is open at a time.
+Cadence has a strip under the header, always visible, and a pace panel. The strip holds the mode as three words (`Off · Manual · Learn`), a readout, and the countdown ring or learning count. In Off the strip is one word, `Auto`, which turns auto-advance back on. Tapping the readout opens the pace panel, which holds the pace slider, Next or Tap, Share and Reset. Only one drop panel is open at a time. The strip hides in zen, and keeps its space.
 
 The cadence state machine lives in `src/services/cadenceMachine.ts` as a pure `transition(state, event)` function. The store in `src/stores/useCadenceStore.ts` is the only place a phase changes, through `send`. Components read the phase and never set it.
 

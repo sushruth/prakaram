@@ -1,15 +1,4 @@
 @layer components {
-  .cadence-status {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  .cadence-text {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-  }
-
   .cadence-actions {
     display: flex;
     align-items: center;
@@ -193,5 +182,62 @@
 
   .learn-pause-mark rect {
     fill: var(--countdown);
+  }
+}
+
+@layer components {
+  .cadence-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    height: var(--strip-h);
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  .cadence-modes {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .cadence-readout {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+
+  .cadence-readout:disabled {
+    cursor: default;
+  }
+
+  .cadence-auto {
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .cadence-auto:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .cadence-strip .learn-indicator {
+    flex-direction: row;
+    gap: 0.4rem;
+    flex-shrink: 0;
   }
 }

@@ -27,7 +27,7 @@
 * **Countdown ring:** in Manual, and once Learn has finished, a yellow ring in the header empties over the time left on the current line, then restarts for the next line. Tap it to pause; a yellow pause mark appears inside, and tapping again resumes with the time that was left.
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
 * **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.
-* **Header:** a flame mark and the prakara title on the left (tap the title for details), then the learning indicator and five icons: settings, cadence, prakara sequences, live room, and zen.
+* **Header:** a flame mark and the prakara title on the left (tap the title for details), then four icons: settings, prakara sequences, live room, and zen. Under them, a cadence strip shows the mode (Off, Manual, Learn), a readout, and the countdown ring. Tap the readout for the pace.
 * **Ultra-Minimal Zen Mode:** Press `Z` or the 🧘 icon to hide everything except the verses and that icon. Hidden controls keep their space, so nothing shifts.
 * **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured: up (svarita) purple, down (anudatta) blue, double up (dirgha svarita) red. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 

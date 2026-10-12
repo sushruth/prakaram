@@ -1,6 +1,7 @@
 @layer layout {
   :root {
     --header-h: 3.5rem;
+    --strip-h: 1.75rem;
   }
 
   #app {
@@ -17,11 +18,14 @@
     justify-content: space-between;
     gap: 0.5rem;
     padding: 0 0.75rem 0 1rem;
-    background: var(--bg-overlay);
-    backdrop-filter: blur(12px);
+  }
+
+  .chrome {
     position: sticky;
     top: 0;
     z-index: 40;
+    background: var(--bg-overlay);
+    backdrop-filter: blur(12px);
   }
 
   .header-start {

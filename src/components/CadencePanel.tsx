@@ -1,5 +1,4 @@
 import { DropPanel, DropHead } from './DropPanel';
-import { CadenceStatus } from './cadence/CadenceStatus';
 import { TempoControl } from './cadence/TempoControl';
 import { AdvanceButton } from './cadence/AdvanceButton';
 import { ResetButton, ShareButton } from './cadence/BarActions';
@@ -11,9 +10,8 @@ interface CadencePanelProps {
 
 export function CadencePanel({ isOpen, onClose }: CadencePanelProps) {
   return (
-    <DropPanel label="Cadence" isOpen={isOpen} onClose={onClose}>
-      <DropHead title="Cadence" onClose={onClose} />
-      <CadenceStatus />
+    <DropPanel label="Pace" isOpen={isOpen} onClose={onClose}>
+      <DropHead title="Pace" onClose={onClose} />
       <TempoControl />
       <div className="cadence-actions">
         <AdvanceButton />

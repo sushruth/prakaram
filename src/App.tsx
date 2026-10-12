@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'preact/hooks';
 import { Header } from './components/Header';
+import { CadenceStrip } from './components/CadenceStrip';
 import { ZenMantraReader } from './components/ZenMantraReader';
 import { LocateLine } from './components/LocateLine';
 import { CadencePanel } from './components/CadencePanel';
@@ -78,16 +79,17 @@ export function App() {
 
   return (
     <>
-      <Header
-        onOpenPrakara={() => setIsPrakaraOpen(true)}
-        onOpenRoom={() => setIsRoomOpen(true)}
-        onOpenSettings={() => toggle('settings')}
-        onOpenDetails={() => toggle('details')}
-        onOpenCadence={() => toggle('cadence')}
-        settingsOpen={drop === 'settings'}
-        detailsOpen={drop === 'details'}
-        cadenceOpen={drop === 'cadence'}
-      />
+      <div className="chrome">
+        <Header
+          onOpenPrakara={() => setIsPrakaraOpen(true)}
+          onOpenRoom={() => setIsRoomOpen(true)}
+          onOpenSettings={() => toggle('settings')}
+          onOpenDetails={() => toggle('details')}
+          settingsOpen={drop === 'settings'}
+          detailsOpen={drop === 'details'}
+        />
+        <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />
+      </div>
 
       <SettingsSheet isOpen={drop === 'settings'} onClose={closeDrop} />
       <PrakaraDetails isOpen={drop === 'details'} onClose={closeDrop} />

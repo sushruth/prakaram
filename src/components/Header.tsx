@@ -5,17 +5,14 @@ import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
 import { displayTitle } from '../services/titles';
 import { Icon } from './Icon';
-import { LearnIndicator } from './LearnIndicator';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
   onOpenRoom: () => void;
   onOpenSettings: () => void;
   onOpenDetails: () => void;
-  onOpenCadence: () => void;
   settingsOpen: boolean;
   detailsOpen: boolean;
-  cadenceOpen: boolean;
 }
 
 export function Header({
@@ -23,10 +20,8 @@ export function Header({
   onOpenRoom,
   onOpenSettings,
   onOpenDetails,
-  onOpenCadence,
   settingsOpen,
   detailsOpen,
-  cadenceOpen,
 }: HeaderProps) {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
@@ -49,8 +44,6 @@ export function Header({
         </button>
       </div>
 
-      <LearnIndicator />
-
       <nav className="header-tools" aria-label="Actions">
         <button
           className="icon-btn"
@@ -62,15 +55,6 @@ export function Header({
           <Icon name="gear" size={20} />
         </button>
 
-        <button
-          className="icon-btn"
-          onClick={onOpenCadence}
-          aria-label="Cadence"
-          aria-expanded={cadenceOpen}
-          title="Cadence"
-        >
-          <Icon name="hand-tap" size={20} />
-        </button>
 
         <button className="icon-btn" onClick={onOpenPrakara} aria-label="Prakara sequences" title="Prakara sequences">
           <Icon name="scroll" size={20} />
