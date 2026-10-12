@@ -23,7 +23,7 @@ export function DropPanel({ label, isOpen, onClose, children }: DropPanelProps) 
     <>
       <div className={`drop-scrim ${state}`} onClick={onClose} />
       <section className={`drop-panel ${state}`} role="dialog" aria-label={label} aria-hidden={!isOpen}>
-        {children}
+        <div className="drop-body">{children}</div>
       </section>
     </>
   );
