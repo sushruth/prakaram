@@ -23,8 +23,10 @@
   }
 
   .btn-primary {
-    background: none;
-    color: var(--accent);
+    background: var(--spectrum-ink);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     padding: 0.25rem 0;
     font-weight: 600;
     cursor: pointer;
@@ -35,7 +37,7 @@
   }
 
   .btn-primary:hover {
-    color: var(--text-primary);
+    filter: brightness(1.12);
   }
 
   .btn-primary:disabled,

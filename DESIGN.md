@@ -18,7 +18,7 @@ Parayanam is a chanting tool, not a temple. It should feel like a printed page o
 
 1. **Three lines are the focus.** The active chunk is bold and fully opaque. The line before and after it are at 60%. Every other chunk is at 35%. No box, no background, no border, no scale, no glow around the active line.
 2. **Opacity is the hierarchy, with one exception.** Lines recede by opacity: the neighbours of the active line at 60%, the rest at 35%. The active line is also set in semibold (600). Do not use size, colour or boxes to mark the current line.
-3. **One accent.** Teal ink (`#1f5f63`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
+3. **One accent.** Warm orange ink (`#c2410c`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
 5. **No decoration.** No gradients, no glows, no blur except zen-mode dimming, no emoji in primary chrome.
 6. **Motion is opacity only.** Transitions are 300–350 ms opacity fades. No scale, no slide.
@@ -37,7 +37,9 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--text-primary` | `#161614` | Active line, headings |
 | `--text-secondary` | `#55554f` | Controls, inactive text |
 | `--text-muted` | `#8c8c85` | Captions, subtitles |
-| `--accent` | `#1f5f63` | Active control, focus, prakara title |
+| `--accent` | `#c2410c` (dark `#ff9a4d`) | Active control, focus, prakara title |
+| `--spectrum` | orange, yellow, pale blue | Fill of an on switch |
+| `--spectrum-ink` | deeper orange, gold, blue (dark: brighter) | Active segment and primary text buttons (gradient text) |
 | `--swara-up` | `#6d28d9` (dark `#c084fc`) | Svarita, U+0951 (up): purple |
 | `--swara-down` | `#1d4ed8` (dark `#60a5fa`) | Anudatta, U+0952 (down): blue |
 | `--swara-double` | `#b91c1c` (dark `#f05252`) | Dirgha svarita, U+1CDA (double up): red |
@@ -46,10 +48,10 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
 | `--countdown` | `#ca8a04` (dark `#facc15`) | Countdown ring arc, its faint full track, and the pause mark inside it |
-| `--accent-light` | `#e6efef` | Selected-state tint |
-| `--accent-gold` | `#a9cbc8` | Pulse hint for auto-progress (a tint, not gold) |
+| `--accent-light` | `#fbeee6` | Selected-state tint |
+| `--accent-gold` | `#fdba74` | Pulse hint for auto-progress (a tint, not gold) |
 
-Dark uses the same rules on a near-black paper (`#121413`), with the accent lifted to `#7fc4bf` for contrast. Text on accent fills uses `--on-accent` (white in light, near-black in dark), never a hardcoded white.
+Dark uses the same rules on a near-black paper (`#121413`), with the accent lifted to `#ff9a4d` for contrast. Text on accent fills uses `--on-accent` (white in light, near-black in dark), never a hardcoded white.
 
 Do not add new hues. If a new state needs color, derive it from `--accent` at lower opacity.
 
@@ -79,7 +81,7 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Neighbour of the active line (line before or after) | 0.6, active line set in semibold (600) | none | none |
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
-The instruction label ("Vakya / Procedure") is an uppercase teal label above the text. It has no fill.
+The instruction label ("Vakya / Procedure") is an uppercase accent label above the text. It has no fill.
 
 **Rule: one line is always highlighted.** The reader never shows zero active lines. Every render, screenshot and capture must include the highlighted line on screen. If it has scrolled away, scroll back to it before capturing.
 
@@ -245,6 +247,8 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ---
 
 ## 7b. Surfaces, Borders and Buttons
+
+Exceptions: the switch is the one rounded control (a pill track with a round knob). Its on-state, and the active segment and primary text buttons, use the orange-yellow-blue spectrum (`--spectrum`, `--spectrum-ink`).
 
 Text first. The app is words on paper, and controls are words too.
 
