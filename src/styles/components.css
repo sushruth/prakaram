@@ -2,8 +2,6 @@
   
   .btn-icon {
     background: transparent;
-    border: 1px solid var(--border-subtle);
-    border-radius: 9999px;
     width: 2.4rem;
     height: 2.4rem;
     display: inline-flex;
@@ -16,15 +14,12 @@
 
   .btn-icon:hover {
     background: var(--bg-card);
-    border-color: var(--border-focus);
     color: var(--text-primary);
   }
 
   .btn-primary {
     background: var(--accent);
     color: var(--on-accent);
-    border: none;
-    border-radius: 9999px;
     padding: 0.55rem 1.25rem;
     font-weight: 500;
     cursor: pointer;
@@ -36,14 +31,12 @@
 
   .btn-primary:hover {
     filter: brightness(1.1);
-    box-shadow: 0 4px 14px var(--accent-glow);
   }
 
   .chunk-row {
     position: relative;
     padding: 0.2rem 0;
     margin-bottom: 0.45rem;
-    border-radius: 0;
     cursor: pointer;
     transition: opacity 0.35s ease;
   }
@@ -61,18 +54,6 @@
     opacity: 0.6;
   }
 
-  .instruction-badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.15rem 0.6rem;
-    border-radius: 6px;
-    background: transparent;
-    color: var(--accent);
-    padding-left: 0;
-    margin-bottom: 0.5rem;
-  }
 
   .confidence-pill {
     display: flex;
@@ -86,8 +67,7 @@
   .confidence-track {
     width: 60px;
     height: 6px;
-    background: var(--border-subtle);
-    border-radius: 999px;
+    background: var(--bg-card);
     overflow: hidden;
   }
 
@@ -111,14 +91,11 @@
 
   .modal-content {
     background: var(--bg-base);
-    border: 1px solid var(--border-subtle);
-    border-radius: 16px;
     max-width: 580px;
     width: 100%;
     max-height: 85vh;
     overflow-y: auto;
     padding: 1.8rem;
-    box-shadow: var(--shadow-floating);
   }
 
   .icon-btn {
@@ -128,8 +105,6 @@
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    border: 0;
-    border-radius: 12px;
     background: transparent;
     color: var(--text-secondary);
     cursor: pointer;
@@ -164,7 +139,158 @@
     right: 7px;
     width: 7px;
     height: 7px;
+    background: var(--accent);
+  }
+
+  .icon-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s ease, filter 0.35s ease, transform 0.12s ease;
+  }
+
+  .icon-btn:hover {
+    color: var(--text-primary);
+  }
+
+  .icon-btn:active {
+    transform: scale(0.92);
+    color: var(--accent);
+    filter: var(--flame);
+  }
+
+  .icon-btn[aria-pressed="true"],
+  .icon-btn[aria-expanded="true"] {
+    color: var(--accent);
+    filter: var(--flame);
+  }
+
+  .icon-btn:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .icon-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: var(--accent);
+  }
+
+  .header-title {
+    flex: 1;
+    min-width: 0;
+    padding: 0 0.25rem;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .drop-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .drop-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .details-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .details-title {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    color: var(--accent);
+  }
+
+  .details-english,
+  .details-desc,
+  .details-meta dt {
+    color: var(--text-muted);
+  }
+
+  .details-english {
+    font-size: 0.9rem;
+  }
+
+  .details-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .details-meta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .details-meta dd {
+    color: var(--text-primary);
+  }
+
+  .details-toc-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .details-toc {
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .kind-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .line-mantra {
+    color: var(--text-primary);
+  }
+
+  .line-swara {
+    color: var(--swara);
+  }
+
+  .line-shloka {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .line-vakya {
+    color: var(--text-secondary);
+    font-style: italic;
   }
 }

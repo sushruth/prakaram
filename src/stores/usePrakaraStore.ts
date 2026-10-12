@@ -55,7 +55,7 @@ export const usePrakaraStore = create<PrakaraState>()(
             const sukta = SUKTA_MAP.get(item.suktaId);
             for (const section of sukta?.sections ?? []) {
               for (const ch of section.chunks) {
-                chunks.push({ ...ch, chunkNumber: chunkCounter++ });
+                chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
               }
             }
           } else if (item.type === 'vakya') {
@@ -64,7 +64,8 @@ export const usePrakaraStore = create<PrakaraState>()(
               chunkNumber: chunkCounter++,
               sanskrit: item.customText || '',
               translation: item.customTranslation || item.customTitle || 'Procedural Vakya',
-              isInstruction: true,
+              kind: item.customText?.includes('॥') ? 'shloka' : 'vakya',
+              isLead: true,
             });
           }
         }

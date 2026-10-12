@@ -32,7 +32,7 @@ export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
       ...chunk,
       id: `${chunk.id}-${pi}`,
       sanskrit: piece,
-      isInstruction: pi === 0 ? chunk.isInstruction : false,
+      isLead: pi === 0 && (chunk.isLead ?? true),
     }))
   );
 }

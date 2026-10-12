@@ -4,6 +4,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'maha-parayanam',
     title: 'महापारायणम् (Maha Parayanam)',
+    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
     description: 'Complete sacred sequence: Ganapati -> Purusha -> Sri -> Durga -> Narayana',
     preferredBpm: 72,
     createdTimestamp: Date.now(),
@@ -64,6 +65,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'purusha-sri-combo',
     title: 'पुरुष-श्री सूक्तम् (Purusha & Sri Suktam Combo)',
+    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
     description: 'Traditional Purusha and Sri Sukta combination for abhishekam and archana',
     preferredBpm: 68,
     createdTimestamp: Date.now(),
@@ -92,6 +94,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'shanti-patha',
     title: 'शान्ति पाठः (Shanti Patha & Meditation)',
+    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
     description: 'Meditative peace chants for dhyana and daily start of study',
     preferredBpm: 50,
     createdTimestamp: Date.now(),

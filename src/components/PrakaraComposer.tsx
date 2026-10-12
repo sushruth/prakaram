@@ -4,12 +4,14 @@ import { transliterateVedic } from '../services/transliteration';
 import { Icon } from './Icon';
 
 const labelStyle = { display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.25rem' } as const;
-const inputStyle = { width: '100%', padding: '0.55rem', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-card)' } as const;
+const inputStyle = { width: '100%', padding: '0.55rem', borderRadius: '8px', background: 'var(--bg-card)' } as const;
 
 interface PrakaraComposerProps {
   script: Parameters<typeof transliterateVedic>[1];
   title: string;
   onTitleChange: (v: string) => void;
+  author: string;
+  onAuthorChange: (v: string) => void;
   description: string;
   onDescriptionChange: (v: string) => void;
   items: PrakaraItem[];
@@ -42,6 +44,17 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
+        <label style={labelStyle}>Your name (optional)</label>
+        <input
+          type="text"
+          placeholder="Shown as the creator"
+          value={props.author}
+          onChange={(e) => props.onAuthorChange((e.target as HTMLInputElement).value)}
+          style={inputStyle}
+        />
+      </div>
+
+      <div style={{ marginBottom: '1rem' }}>
         <label style={labelStyle}>Description</label>
         <input
           type="text"
@@ -68,7 +81,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
                 style={{
                   padding: '0.45rem 0.75rem',
                   background: 'var(--bg-card)',
-                  border: '1px solid var(--border-subtle)',
+                  
                   borderRadius: '6px',
                   display: 'flex',
                   justifyContent: 'space-between',
@@ -103,7 +116,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
               style={{
                 padding: '0.35rem 0.7rem',
                 borderRadius: '999px',
-                border: '1px solid var(--border-subtle)',
+                
                 background: 'var(--bg-card)',
                 fontSize: '0.78rem',
                 cursor: 'pointer',
@@ -115,7 +128,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
         </div>
       </div>
 
-      <div style={{ marginBottom: '1.5rem', padding: '0.85rem', background: 'var(--bg-card)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+      <div style={{ marginBottom: '1.5rem', padding: '0.85rem', background: 'var(--bg-card)', borderRadius: '8px', }}>
         <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.4rem' }}>
           + Insert Custom Vakya / Sankalpam / Procedure
         </label>
@@ -124,14 +137,14 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
           placeholder="Vakya Title (e.g. Sankalpam / Dhyanam)"
           value={props.vakyaTitle}
           onChange={(e) => props.onVakyaTitleChange((e.target as HTMLInputElement).value)}
-          style={{ width: '100%', padding: '0.45rem', borderRadius: '6px', border: '1px solid var(--border-subtle)', marginBottom: '0.4rem', fontSize: '0.82rem' }}
+          style={{ width: '100%', padding: '0.45rem', borderRadius: '6px', marginBottom: '0.4rem', fontSize: '0.82rem' }}
         />
         <textarea
           placeholder="Sanskrit Vakya or instruction text..."
           value={props.vakyaText}
           onChange={(e) => props.onVakyaTextChange((e.target as HTMLTextAreaElement).value)}
           rows={2}
-          style={{ width: '100%', padding: '0.45rem', borderRadius: '6px', border: '1px solid var(--border-subtle)', fontSize: '0.82rem', marginBottom: '0.4rem' }}
+          style={{ width: '100%', padding: '0.45rem', borderRadius: '6px', fontSize: '0.82rem', marginBottom: '0.4rem' }}
         />
         <button className="btn-primary" onClick={props.onAddVakya} style={{ padding: '0.35rem 0.8rem', fontSize: '0.78rem' }}>
           + Add Vakya to Sequence
@@ -149,7 +162,7 @@ export function PrakaraComposer(props: PrakaraComposerProps) {
         </button>
         <button
           onClick={props.onCancel}
-          style={{ padding: '0.55rem 1rem', border: '1px solid var(--border-subtle)', borderRadius: '999px', background: 'var(--bg-card)', cursor: 'pointer' }}
+          style={{ padding: '0.55rem 1rem', borderRadius: '999px', background: 'var(--bg-card)', cursor: 'pointer' }}
         >
           Cancel
         </button>

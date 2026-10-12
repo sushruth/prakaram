@@ -21,6 +21,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newDesc, setNewDesc] = useState('');
+  const [newAuthor, setNewAuthor] = useState('');
   const [selectedItems, setSelectedItems] = useState<PrakaraItem[]>([]);
   const [customVakyaText, setCustomVakyaText] = useState('');
   const [customVakyaTitle, setCustomVakyaTitle] = useState('');
@@ -61,6 +62,7 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
       id: 'custom-prakara-' + Date.now(),
       title: newTitle.trim(),
       description: newDesc.trim() || 'Custom Vedic Sequence',
+      author: newAuthor.trim() || undefined,
       preferredBpm: 72,
       createdTimestamp: Date.now(),
       items: selectedItems,
@@ -109,6 +111,8 @@ export function PrakaraBuilderModal({ isOpen, onClose }: PrakaraModalProps) {
           script={targetScript}
           title={newTitle}
           onTitleChange={setNewTitle}
+          author={newAuthor}
+          onAuthorChange={setNewAuthor}
           description={newDesc}
           onDescriptionChange={setNewDesc}
           items={selectedItems}

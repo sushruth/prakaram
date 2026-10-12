@@ -41,7 +41,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
 
         {isInRoom ? (
           <div>
-            <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', border: '1px solid var(--border-subtle)', marginBottom: '1.2rem' }}>
+            <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', marginBottom: '1.2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
                 <span style={{ width: '10px', height: '10px', background: '#10b981', borderRadius: '50%' }} />
                 <strong style={{ fontSize: '0.95rem' }}>Connected to Room: {roomCode}</strong>
@@ -62,7 +62,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
               </button>
               <button
                 onClick={leaveRoom}
-                style={{ padding: '0.55rem 1rem', border: '1px solid #ef4444', color: '#ef4444', borderRadius: '999px', background: 'transparent', cursor: 'pointer' }}
+                style={{ padding: '0.55rem 1rem', color: '#ef4444', borderRadius: '999px', background: 'transparent', cursor: 'pointer' }}
               >
                 Disconnect
               </button>
@@ -83,7 +83,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
                 placeholder="e.g. satsang-108"
                 value={inputCode}
                 onChange={(e) => setInputCode((e.target as HTMLInputElement).value)}
-                style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-card)' }}
+                style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: 'var(--bg-card)' }}
               />
             </div>
 
@@ -99,8 +99,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
                     flex: 1,
                     padding: '0.6rem',
                     borderRadius: '8px',
-                    border: role === 'host' ? '2px solid var(--accent)' : '1px solid var(--border-subtle)',
-                    background: role === 'host' ? 'var(--highlight-bg)' : 'var(--bg-card)',
+                                        background: role === 'host' ? 'var(--accent-light)' : 'var(--bg-card)',
                     fontWeight: 600,
                     fontSize: '0.85rem',
                     cursor: 'pointer',
@@ -115,8 +114,7 @@ export function ChantingRoomModal({ isOpen, onClose }: RoomModalProps) {
                     flex: 1,
                     padding: '0.6rem',
                     borderRadius: '8px',
-                    border: role === 'follower' ? '2px solid var(--accent)' : '1px solid var(--border-subtle)',
-                    background: role === 'follower' ? 'var(--highlight-bg)' : 'var(--bg-card)',
+                                        background: role === 'follower' ? 'var(--accent-light)' : 'var(--bg-card)',
                     fontWeight: 600,
                     fontSize: '0.85rem',
                     cursor: 'pointer',

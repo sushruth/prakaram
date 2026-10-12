@@ -17,7 +17,6 @@
     justify-content: space-between;
     gap: 0.5rem;
     padding: 0 0.75rem 0 1rem;
-    border-bottom: 1px solid var(--border-subtle);
     background: var(--bg-overlay);
     backdrop-filter: blur(12px);
     position: sticky;
@@ -64,10 +63,7 @@
     width: min(96%, 980px);
     background: var(--bg-overlay);
     backdrop-filter: blur(16px);
-    border: 1px solid var(--border-subtle);
-    border-radius: 18px;
     padding: 0.65rem 1rem;
-    box-shadow: var(--shadow-floating);
     display: flex;
     flex-wrap: wrap;
     align-items: center;

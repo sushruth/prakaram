@@ -16,8 +16,15 @@
     user-select: none;
   }
 
-  button, input, select {
+  button, input, select, textarea {
     font: inherit;
     color: inherit;
+    border: 0;
+    outline-offset: 2px;
+  }
+
+  button {
+    background: none;
+    cursor: pointer;
   }
 }

@@ -4,7 +4,7 @@ import type { UserProfile } from '../services/passkeyAuth';
 export function PasskeySignedIn({ user, onLogout }: { user: UserProfile; onLogout: () => void }) {
   return (
     <div>
-      <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', border: '1px solid var(--border-subtle)', marginBottom: '1.2rem' }}>
+      <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', marginBottom: '1.2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <Icon name="identification-card" size={28} />
           <div>
@@ -20,7 +20,7 @@ export function PasskeySignedIn({ user, onLogout }: { user: UserProfile; onLogou
 
       <button
         onClick={onLogout}
-        style={{ width: '100%', padding: '0.6rem', border: '1px solid var(--border-subtle)', borderRadius: '999px', background: 'var(--bg-card)', cursor: 'pointer' }}
+        style={{ width: '100%', padding: '0.6rem', borderRadius: '999px', background: 'var(--bg-card)', cursor: 'pointer' }}
       >
         Sign Out
       </button>
@@ -64,7 +64,7 @@ export function PasskeySignInForm({
           placeholder={isRegistering ? 'e.g. sushruth' : 'Tap for Passkey or enter username'}
           value={username}
           onChange={(e) => onUsernameChange((e.target as HTMLInputElement).value)}
-          style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-card)' }}
+          style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: 'var(--bg-card)' }}
         />
       </div>
 

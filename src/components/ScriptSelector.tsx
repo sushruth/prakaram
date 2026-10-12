@@ -13,7 +13,7 @@ export function ScriptSelector() {
         onChange={(e) => setScript((e.target as HTMLSelectElement).value as TargetScript)}
         style={{
           background: 'var(--bg-card)',
-          border: '1px solid var(--border-subtle)',
+          
           borderRadius: '8px',
           padding: '0.35rem 0.65rem',
           fontSize: '0.85rem',

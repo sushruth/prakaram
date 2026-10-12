@@ -28,8 +28,7 @@ export function PrakaraList({ prakaras, activePrakaraId, script, onSelect, onSha
               style={{
                 padding: '0.85rem 1.1rem',
                 borderRadius: '10px',
-                border: isSelected ? '2px solid var(--accent)' : '1px solid var(--border-subtle)',
-                background: isSelected ? 'var(--highlight-bg)' : 'var(--bg-card)',
+                                background: isSelected ? 'var(--accent-light)' : 'var(--bg-card)',
                 cursor: 'pointer',
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -46,7 +45,7 @@ export function PrakaraList({ prakaras, activePrakaraId, script, onSelect, onSha
               </div>
               <div style={{ display: 'flex', gap: '0.4rem' }}>
                 <button
-                  className="btn-icon"
+                  className="icon-btn"
                   onClick={(e) => {
                     e.stopPropagation();
                     onShare(p);

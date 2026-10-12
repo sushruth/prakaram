@@ -18,7 +18,7 @@ export function ShareButton() {
   };
 
   return (
-    <button className="btn-icon" onClick={handleShare} title="Copy a link to this prakara and tempo" aria-label="Copy link">
+    <button className="icon-btn" onClick={handleShare} title="Copy a link to this prakara and tempo" aria-label="Copy link">
       <Icon name={copied ? 'check' : 'link'} size={16} />
     </button>
   );
@@ -27,7 +27,7 @@ export function ShareButton() {
 export function ResetButton() {
   const resetCadence = useCadenceStore((s) => s.resetCadence);
   return (
-    <button className="btn-icon" onClick={resetCadence} title="Clear recorded taps" aria-label="Clear recorded taps">
+    <button className="icon-btn" onClick={resetCadence} title="Clear recorded taps" aria-label="Clear recorded taps">
       <Icon name="arrow-counter-clockwise" size={16} />
     </button>
   );

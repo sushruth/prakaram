@@ -12,6 +12,8 @@ export interface AksharaToken {
   swara?: 'anudatta' | 'svarita' | 'dirgha_svarita' | 'none';
 }
 
+export type ChunkKind = 'mantra' | 'shloka' | 'vakya';
+
 export interface MantraChunk {
   id: string;
   chunkNumber: number;
@@ -19,7 +21,8 @@ export interface MantraChunk {
   translation?: string;
   rishi?: string;
   chandas?: string;
-  isInstruction?: boolean;
+  kind?: ChunkKind;
+  isLead?: boolean;
   tokens?: AksharaToken[];
 }
 
@@ -61,6 +64,7 @@ export interface Prakara {
   id: string;
   title: string;
   description: string;
+  author?: string;
   preferredBpm?: number;
   items: PrakaraItem[];
   createdTimestamp: number;

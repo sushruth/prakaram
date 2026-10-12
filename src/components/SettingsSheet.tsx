@@ -1,5 +1,4 @@
-import { useEffect } from 'preact/hooks';
-import { Icon } from './Icon';
+import { DropPanel, DropHead } from './DropPanel';
 import { SETTINGS } from '../settings/registry';
 
 interface SettingsSheetProps {
@@ -8,35 +7,15 @@ interface SettingsSheetProps {
 }
 
 export function SettingsSheet({ isOpen, onClose }: SettingsSheetProps) {
-  useEffect(() => {
-    if (!isOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [isOpen, onClose]);
-
-  const state = isOpen ? 'is-open' : '';
-
   return (
-    <>
-      <div className={`settings-scrim ${state}`} onClick={onClose} />
-      <div className={`settings-sheet ${state}`} role="dialog" aria-label="Settings" aria-hidden={!isOpen}>
-        <div className="settings-head">
-          <span className="settings-title">Settings</span>
-          <button className="btn-icon" onClick={onClose} aria-label="Close settings">
-            <Icon name="x" size={16} />
-          </button>
+    <DropPanel label="Settings" isOpen={isOpen} onClose={onClose}>
+      <DropHead title="Settings" onClose={onClose} />
+      {SETTINGS.map(({ id, label, Control }) => (
+        <div className="settings-row" key={id}>
+          <span className="settings-label">{label}</span>
+          <Control />
         </div>
-
-        {SETTINGS.map(({ id, label, Control }) => (
-          <div className="settings-row" key={id}>
-            <span className="settings-label">{label}</span>
-            <Control />
-          </div>
-        ))}
-      </div>
-    </>
+      ))}
+    </DropPanel>
   );
 }

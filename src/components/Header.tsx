@@ -1,17 +1,25 @@
 import { useMantraStore } from '../stores/useMantraStore';
 import { useRoomStore } from '../stores/useRoomStore';
+import { usePrakaraStore } from '../stores/usePrakaraStore';
+import { useSettingsStore } from '../stores/useSettingsStore';
+import { transliterateVedic } from '../services/transliteration';
+import { displayTitle } from '../services/titles';
 import { Icon } from './Icon';
 
 interface HeaderProps {
   onOpenPrakara: () => void;
   onOpenRoom: () => void;
   onOpenSettings: () => void;
+  onOpenDetails: () => void;
   settingsOpen: boolean;
+  detailsOpen: boolean;
 }
 
-export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, settingsOpen }: HeaderProps) {
+export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen, detailsOpen }: HeaderProps) {
   const zenMode = useMantraStore((s) => s.zenMode);
   const toggleZenMode = useMantraStore((s) => s.toggleZenMode);
+  const script = useSettingsStore((s) => s.script);
+  const prakara = usePrakaraStore((s) => s.getActivePrakara());
   const { isInRoom, isHost, peerCount } = useRoomStore();
 
   const roomTitle = isInRoom
@@ -21,9 +29,13 @@ export function Header({ onOpenPrakara, onOpenRoom, onOpenSettings, settingsOpen
   return (
     <header className="app-header">
       <div className="header-brand">
-        <h1 className="brand-title title-display">पारायणम्</h1>
+        <span className="brand-title title-display">{transliterateVedic('पारायणम्', script)}</span>
         <span className="brand-sub">Parayanam</span>
       </div>
+
+      <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={prakara.title}>
+        {transliterateVedic(displayTitle(prakara.title), script)}
+      </button>
 
       <nav className="header-tools" aria-label="Actions">
         <button

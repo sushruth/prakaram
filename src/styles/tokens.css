@@ -1,11 +1,9 @@
 @layer theme {
-  
   :root, :root[data-theme="light"] {
     --bg-base: #f7f7f5;
     --bg-card: #eeeeeb;
-    --bg-overlay: rgba(247, 247, 245, 0.92);
-    --border-subtle: #e4e4e0;
-    --border-focus: #1f5f63;
+    --bg-overlay: rgba(247, 247, 245, 0.94);
+    --scrim: rgba(247, 247, 245, 0.5);
 
     --text-primary: #161614;
     --text-secondary: #55554f;
@@ -17,22 +15,21 @@
     --accent-glow: rgba(31, 95, 99, 0.12);
     --on-accent: #ffffff;
 
-    --highlight-bg: transparent;
-    --highlight-border: transparent;
-    --highlight-glow: transparent;
-
-    --shadow-soft: none;
-    --shadow-floating: 0 8px 24px rgba(22, 22, 20, 0.06);
+    --swara: #4a45b8;
+    --flame-core: #7cc8ff;
+    --flame-mid: #ffd976;
+    --flame-tip: #ff9a5c;
+    --flame: drop-shadow(0 0 1.5px color-mix(in srgb, var(--flame-core) 75%, transparent))
+      drop-shadow(0 0 4px color-mix(in srgb, var(--flame-mid) 45%, transparent))
+      drop-shadow(0 0 9px color-mix(in srgb, var(--flame-tip) 28%, transparent));
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-
       --bg-base: #121413;
       --bg-card: #1b1d1c;
-      --bg-overlay: rgba(18, 20, 19, 0.92);
-      --border-subtle: #2a2d2c;
-      --border-focus: #7fc4bf;
+      --bg-overlay: rgba(18, 20, 19, 0.94);
+      --scrim: rgba(18, 20, 19, 0.55);
 
       --text-primary: #ecece8;
       --text-secondary: #a3a39c;
@@ -44,22 +41,15 @@
       --accent-glow: rgba(127, 196, 191, 0.12);
       --on-accent: #0f1110;
 
-      --highlight-bg: transparent;
-      --highlight-border: transparent;
-      --highlight-glow: transparent;
-
-      --shadow-soft: none;
-      --shadow-floating: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --swara: #aca6ff;
     }
   }
 
   :root[data-theme="dark"] {
-
     --bg-base: #121413;
     --bg-card: #1b1d1c;
-    --bg-overlay: rgba(18, 20, 19, 0.92);
-    --border-subtle: #2a2d2c;
-    --border-focus: #7fc4bf;
+    --bg-overlay: rgba(18, 20, 19, 0.94);
+    --scrim: rgba(18, 20, 19, 0.55);
 
     --text-primary: #ecece8;
     --text-secondary: #a3a39c;
@@ -71,11 +61,6 @@
     --accent-glow: rgba(127, 196, 191, 0.12);
     --on-accent: #0f1110;
 
-    --highlight-bg: transparent;
-    --highlight-border: transparent;
-    --highlight-glow: transparent;
-
-    --shadow-soft: none;
-    --shadow-floating: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --swara: #aca6ff;
   }
 }

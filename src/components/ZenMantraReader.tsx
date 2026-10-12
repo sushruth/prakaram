@@ -5,6 +5,7 @@ import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
 import { transliterateVedic } from '../services/transliteration';
+import { hasSwara } from '../services/swara';
 import { chunkMatras } from '../services/cadenceEngine';
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
@@ -86,6 +87,13 @@ export function ZenMantraReader() {
     else setActiveChunkIndex(index);
   };
 
+  const kindLabel = (kind: string) => (kind === 'shloka' ? 'Shloka' : 'Vakya');
+  const lineClass = (chunk: { kind?: string; sanskrit: string }) => {
+    if (chunk.kind === 'shloka') return 'line-shloka';
+    if (chunk.kind === 'vakya') return 'line-vakya';
+    return hasSwara(chunk.sanskrit) ? 'line-swara' : 'line-mantra';
+  };
+
   return (
     <div className={`main-content ${zenMode ? 'zen-active' : ''}`}>
       {zenMode && (
@@ -97,13 +105,6 @@ export function ZenMantraReader() {
         </button>
       )}
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 className="title-display" style={{ fontSize: '1.4rem', color: 'var(--accent)', marginBottom: '0.4rem' }}>
-          {transliterateVedic(activePrakara.title, script)}
-        </h2>
-        <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>{activePrakara.description}</p>
-      </div>
-
       <div className="chunks-container">
         {chunks.map((chunk, idx) => {
           const isActive = idx === activeChunkIndex;
@@ -114,13 +115,13 @@ export function ZenMantraReader() {
               className={`chunk-row ${isActive ? 'active' : ''}`}
               onClick={() => handleChunkClick(idx)}
             >
-              {chunk.isInstruction && <span className="instruction-badge">Vakya / Procedure</span>}
+              {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
+                <span className="kind-label">{kindLabel(chunk.kind)}</span>
+              )}
               <div
-                className="vedic-text"
+                className={`vedic-text ${lineClass(chunk)}`}
                 style={{
                   fontSize: `${fontSize}px`,
-                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
-                  fontWeight: isActive ? 600 : 400,
                   whiteSpace: wrapLines ? 'normal' : 'nowrap',
                   overflowX: wrapLines ? 'visible' : 'auto',
                 }}
