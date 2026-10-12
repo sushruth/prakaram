@@ -22,7 +22,7 @@
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
 * **Three-Line Focus:** The active line is bold and fully opaque, its neighbours are at 60%, and the rest fade. At least one line is always highlighted.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.
-* **Three modes:** **Off** (you move the lines), **Manual** (lines advance at the set pace; the default), and **Learn** (six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider).
+* **Auto and Learn:** with **Auto** off you move the lines. With Auto on, lines advance at the set pace (the default), and **Learn** is an option of Auto: six taps teach your pace, then lines advance at the learned pace, which you can still adjust with the slider. A small minimap of the previous, current and next line fills as you sing along; tap it to pause.
 * **Pace:** one labelled slider in milliseconds per mātrā (one mora), from 50 to 3000 on a logarithmic scale (833 by default). Learned pace is clamped to the same range.
 * **Shared sessions:** guests follow the host's lines and timing and have no local cadence controls. Leave the room to control your own.
 * **Learning from every line:** while Learn is on, each line's active time teaches the pace, including lines moved on by the timer or Next. Holding a line counts as slower reading; the ring pause does not.

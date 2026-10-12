@@ -41,6 +41,7 @@ export function CadenceStrip({ onOpenPanel, panelOpen }: CadenceStripProps) {
             className="segment"
             role="switch"
             aria-checked={learn}
+            data-phase={phase}
             disabled={guest}
             onClick={() => setMode(learn ? 'manual' : 'learn')}
             title="Learn your pace from taps"

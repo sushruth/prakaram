@@ -47,7 +47,7 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
-| `--countdown` | `#ca8a04` (dark `#facc15`) | Countdown ring arc, its faint full track, and the pause mark inside it |
+| `--countdown` | `#ca8a04` (dark `#facc15`) | The sing-along fill of the minimap's current line |
 | `--accent-light` | `#e8f0f6` | Selected-state tint |
 | `--accent-gold` | `#a9cbe0` | Pulse hint for auto-progress (a tint, not gold) |
 
@@ -106,7 +106,7 @@ The reader is a page, not a set of cards.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
-- The learning indicator sits between the title and the icons. While learning it shows seconds above a hollow ring and the `n/6` count. In Manual and once learned it shows only the countdown ring, which restarts on every line. It is hidden in Off, but keeps its space.
+- The right end of the cadence strip holds the progress indicator. While learning it shows seconds and the `n/6` count. In Auto with a fixed or learned pace it shows the minimap (§5b Minimap). It is hidden in Off, but keeps its space.
 - The title is never clipped. A long word that does not fit wraps by character, and the header grows to fit it.
 
 ## 5c. Line Kinds
@@ -123,7 +123,7 @@ Only the first phrase of a split line carries the label.
 
 ## 5b. Cadence
 
-Cadence has a strip under the header, always visible, and a pace panel. The strip holds the mode as three words (`Off · Manual · Learn`), a readout, and the countdown ring or learning count. In Off the strip is one word, `Auto`, which turns auto-advance back on. Tapping the readout opens the pace panel, which holds the pace slider, Next or Tap, Share and Reset. Only one drop panel is open at a time. The strip hides in zen, and keeps its space.
+Cadence has a strip under the header, always visible, and a pace panel. The strip holds an **Auto** switch, a **Learn** toggle that appears only while Auto is on, a readout, and the progress indicator. Learn is a phase of Auto, not a separate mode: Auto on with Learn off is Manual, Auto on with Learn on is Learn. With Auto off the strip is just the switch. Tapping the readout opens the pace panel, which holds the pace slider, Next or Tap, Share and Reset. Only one drop panel is open at a time. The strip hides in zen, and keeps its space.
 
 The cadence state machine lives in `src/services/cadenceMachine.ts` as a pure `transition(state, event)` function. The store in `src/stores/useCadenceStore.ts` is the only place a phase changes, through `send`. Components read the phase and never set it.
 
@@ -131,21 +131,21 @@ The cadence state machine lives in `src/services/cadenceMachine.ts` as a pure `t
 
 There is one pace, in milliseconds per mātrā. Every mode uses it.
 
-| Mode | What it does | Pace slider | Next or Tap | Countdown ring |
+| Mode | What it does | Pace slider | Next or Tap | Progress indicator |
 | :--- | :--- | :--- | :--- | :--- |
 | **Off** | No auto-advance. You move the lines. | Pale and disabled | Next | Hidden |
-| **Manual** (default) | Lines advance on their own at the set pace. | Live, sets the pace | Next. Restarts the countdown | Shown, with pause |
-| **Learn** | Taps teach the pace. After six lines, lines advance at the learned pace. | Live afterwards, adjusts the learned pace | Tap while learning, then Next | Seconds and count while learning; ring once learned |
+| **Manual** (default) | Lines advance on their own at the set pace. | Live, sets the pace | Next. Restarts the countdown | Minimap, with pause |
+| **Learn** | Taps teach the pace. After six lines, lines advance at the learned pace. | Live afterwards, adjusts the learned pace | Tap while learning, then Next | Seconds and count while learning; minimap once learned |
 
 ### States
 
 | Phase | Mode | Meaning | Header | Next / Tap | Reader |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `off` | Off | No auto-advance | Hidden (space kept) | "Next" | Normal scroll |
-| `manual` | Manual | Auto-advance at the set pace | Countdown ring, with pause | "Next" | Normal scroll, lines advance |
-| `waiting` | Learn | No tap yet this run, or a reload happened mid-run | `0 s`, `0/6`, pulsing ring | "Tap", pulses | Scroll locked, next line 60% |
+| `manual` | Manual | Auto-advance at the set pace | Minimap, with pause | "Next" | Normal scroll, lines advance |
+| `waiting` | Learn | No tap yet this run, or a reload happened mid-run | `0 s`, `0/6`, pulsing dot | "Tap", pulses | Scroll locked, next line 60% |
 | `measuring` | Learn | Taps are counted. The clock runs from the first tap | Seconds ticking, `n/6` | "Tap" | Scroll locked, next line 60% |
-| `engaged` | Learn | Six lines learned, lines advance at the learned pace | Countdown ring, with pause | "Next" | Normal scroll, lines advance |
+| `engaged` | Learn | Six lines learned, lines advance at the learned pace | Minimap, with pause | "Next" | Normal scroll, lines advance |
 
 `LEARN_LINES` is 6. Every tap while learning counts as one learned line. The seconds clock starts on the first tap, not when Learn is chosen. Pause is a flag inside `manual` and `engaged`. It is not saved.
 
@@ -153,10 +153,10 @@ There is one pace, in milliseconds per mātrā. Every mode uses it.
 
 | Event | Source | Effect |
 | :--- | :--- | :--- |
-| `setMode` | The mode control | Off, Manual, or a fresh Learn run. Setting the current mode changes nothing |
+| `setMode` | The Auto switch and Learn toggle | Off, Manual, or a fresh Learn run. Setting the current mode changes nothing |
 | `tap` | Tap, Space, or clicking the active or next line | Learning only: counts a learned line; the sixth moves to `engaged` |
 | `reset` | Clear recorded taps | Learning phases and `engaged` go back to `waiting` at zero. No-op in `off` and `manual` |
-| `togglePause` | Tapping the ring | Pauses or resumes in `manual` and `engaged` |
+| `togglePause` | Tapping the minimap | Pauses or resumes in `manual` and `engaged` |
 | `hostOn` / `hostOff` | Room sync from the host | `engaged` on or off. A follower's mode control is disabled |
 
 ### Transitions
@@ -196,28 +196,30 @@ A line advances on its own in `manual` and `engaged` unless paused. The timer is
 
 ### Highlights
 
-Learn uses the flame glow on its label. It pulses while waiting and measuring, and holds steady once engaged. The pace slider takes the same highlight while learning. Manual has no highlight: it is the plain setting.
+Learn uses the flame glow on its label when on. It pulses while waiting and measuring, and holds steady once engaged. The pace slider takes the same highlight while learning. Manual has no highlight: it is the plain setting.
 
-### Countdown
+### Minimap
 
-The header ring is yellow. A faint full ring shows behind the moving arc. It empties over the time left on the current line, then restarts for the next. Tapping it pauses. A yellow pause mark appears inside, and tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume.
+The minimap is a picture of the three lines the reader highlights: the previous line on top, the current line in the middle, the next line at the bottom. Each row is drawn as its own words, one dash per word, left aligned like the text. Row width follows the line's length against the longest of the three, so a long line draws long and a short one short. At the first or last line the missing neighbour is an empty row. The rows change whenever the active line changes.
+
+The current line fills with `--countdown` yellow, word by word from the left, over the time that line has. It restarts for the next line. Tapping the minimap pauses: the rows shrink to 70% and fade, and a pause mark appears over them. The mark is `--text-primary` with a `--bg-base` outline, so it reads on light and dark. Tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume. The minimap is 2.6 × 1.9 rem and the strip keeps its height.
 
 ### Hold and away
 
 - **Hold** (touch the active line). Pauses auto-advance at once, and releasing resumes with the time that was left. It is a relearn signal: the time held stays in the line's reading time, so a long hold teaches the learner that the line is slower. In Manual and once learned, the touch does not advance the line. In Learn, a tap on the active line still counts as a learning tap.
-- **Pause** (the ring). A deliberate pause, to come back to later. It stops the line clock, so the time paused adds nothing to learning.
+- **Pause** (the minimap). A deliberate pause, to come back to later. It stops the line clock, so the time paused adds nothing to learning.
 - **Away.** When the tab is hidden or the window loses focus, auto-advance and the line clock stop, and resume on return. This is the "Pause when away" setting, on by default.
 
-**Learning samples.** While Learn is active (learning, or learned), each line's active time is a sample: the time it was on screen, excluding ring pauses and away time, including holds. Every advance of one line gives a sample: a learning tap, a timer advance, Next, or a click on the next line. A jump of more than one line gives none. Guests give none.
+**Learning samples.** While Learn is active (learning, or learned), each line's active time is a sample: the time it was on screen, excluding pauses and away time, including holds. Every advance of one line gives a sample: a learning tap, a timer advance, Next, or a click on the next line. A jump of more than one line gives none. Guests give none.
 - Holding and away are not saved.
 
-**Shared sessions.** A host's lines and timing are followed by guests. A guest has no local cadence control: taps, Next, arrow and Space keys, line clicks, the pause ring, the pace slider and the mode control are disabled, and away-pause does not apply. A guest can leave the room to use the app alone.
+**Shared sessions.** A host's lines and timing are followed by guests. A guest has no local cadence control: taps, Next, arrow and Space keys, line clicks, the minimap, the pace slider, the Auto switch and the Learn toggle are disabled, and away-pause does not apply. A guest can leave the room to use the app alone.
 
 ### Pace
 
 One slider, in milliseconds per mātrā, from 50 to 3000, default 833. The scale is logarithmic: equal moves of the slider multiply the pace by the same factor, so the slow and fast ends get as much room as the middle. Moving right is faster (a shorter pace), so the left end is the slowest. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.
 
-**Disabled.** A disabled control is drawn at 30% opacity and does not respond. The pace slider is disabled in Off. The mode control is disabled for a room follower, whose host controls cadence.
+**Disabled.** A disabled control is drawn at 30% opacity and does not respond. The pace slider is disabled in Off. The Auto switch and Learn toggle are disabled for a room follower, whose host controls cadence.
 
 **Persistence.** The mode, the learned line count and the pace are saved. Pause and the learning clock are not. There are no users yet, so saved state is not migrated; a change to the saved shape may reset it.
 
@@ -253,9 +255,9 @@ Exceptions: the switch is the one rounded control (a pill track with a round kno
 Text first. The app is words on paper, and controls are words too.
 
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
-- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
-- **Groups are rows of words.** Mode and option choices (Off / Learn / Auto, Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
+- **Groups are rows of words.** Mode and option choices (Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
 - **The glow belongs to the glyph, never the box.** Icon buttons have no fill, tint, hover box or border in any state. The flame filter is applied to the icon's `svg`, so only the drawn shape glows. Never put `filter` on a button or a container.
 - **Pressed state is a small scale-down and the flame glow on the icon.** No background change on press.

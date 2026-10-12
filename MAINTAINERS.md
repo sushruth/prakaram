@@ -8,7 +8,7 @@
 
 ```
 [ User Browser / PWA ]
-  ├── Preact UI: header (flame, title, learning ring, icons), reader, back-to-line,
+  ├── Preact UI: header (flame, title, progress strip, icons), reader, back-to-line,
   │     drop panels (settings, prakara details, cadence), modals
   ├── zustand stores
   │     ├── persisted: useSettingsStore (prakaram-settings)

@@ -5,6 +5,7 @@ import { useChunks } from '../hooks/useChunks';
 import { useElapsedSeconds } from './cadence/useElapsedSeconds';
 import { useFrozen } from '../hooks/useFrozen';
 import { useGuest } from '../hooks/useGuest';
+import { Minimap } from './Minimap';
 
 export function LearnIndicator() {
   const phase = useCadenceStore((s) => s.phase);
@@ -19,38 +20,17 @@ export function LearnIndicator() {
   const seconds = useElapsedSeconds(firstTapAt, phase === 'measuring');
 
   if (phase === 'manual' || phase === 'engaged') {
-    const rows = [-1, 0, 1].map((d) => chunks[activeChunkIndex + d]);
-    const longest = Math.max(1, ...rows.map((c) => c?.sanskrit.length ?? 0));
-    const duration = rows[1] ? lineMs(rows[1].sanskrit, msPerMatra) : 0;
+    const current = chunks[activeChunkIndex];
     return (
       <div className="learn-indicator" data-phase={phase}>
-        <button
-          className="minimap"
-          onClick={togglePause}
+        <Minimap
+          chunks={chunks}
+          index={activeChunkIndex}
+          duration={current ? lineMs(current.sanskrit, msPerMatra) : 0}
+          frozen={frozen}
           disabled={guest}
-          aria-pressed={frozen}
-          data-frozen={frozen}
-          aria-label={frozen ? 'Resume auto progress' : 'Pause auto progress'}
-          title={frozen ? 'Resume auto progress' : 'Pause auto progress'}
-        >
-          <span className="minimap-lines" aria-hidden="true">
-            {rows.map((c, i) => (
-              <span key={i} className="minimap-line" data-now={i === 1} data-empty={!c} style={{ width: `${c ? 35 + (65 * c.sanskrit.length) / longest : 50}%` }}>
-                {i === 1 && (
-                  <span
-                    key={activeChunkIndex}
-                    className="minimap-fill"
-                    style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
-                  />
-                )}
-              </span>
-            ))}
-          </span>
-          <svg className="minimap-pause" viewBox="0 0 20 20" aria-hidden="true">
-            <rect x="5.5" y="4" width="3.4" height="12" rx="0.8" />
-            <rect x="11.1" y="4" width="3.4" height="12" rx="0.8" />
-          </svg>
-        </button>
+          onToggle={togglePause}
+        />
       </div>
     );
   }

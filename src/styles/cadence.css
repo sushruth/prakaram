@@ -31,6 +31,11 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .cadence-modes [data-phase="waiting"],
+  .cadence-modes [data-phase="measuring"] {
+    animation: learn-pulse 1.6s ease-in-out infinite;
+  }
+
   .tempo[data-off="true"] {
     opacity: 0.3;
   }
@@ -157,31 +162,44 @@
   .minimap-line {
     position: relative;
     display: block;
-    height: 0.32rem;
+    height: 0.3rem;
+  }
+
+  /* A row of word-dashes, left aligned like the text it stands for. */
+  .minimap-words {
+    display: flex;
+    gap: 2px;
+    height: 100%;
+  }
+
+  .minimap-words > span {
+    flex-basis: 0;
+    min-width: 2px;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--text-muted) 40%, transparent);
-    overflow: hidden;
-    transition: width 0.3s ease;
+    background: color-mix(in srgb, var(--text-muted) 45%, transparent);
   }
 
-  .minimap-line[data-empty="true"] {
-    opacity: 0.35;
+  .minimap-line[data-now="true"] .minimap-words > span {
+    background: color-mix(in srgb, var(--text-muted) 60%, transparent);
   }
 
+  /* The fill is the same words in the accent colour, revealed left to right. */
   .minimap-fill {
     position: absolute;
     inset: 0;
-    background: var(--countdown);
-    transform-origin: left;
     animation: minimap-sing linear forwards;
+  }
+
+  .minimap-fill .minimap-words > span {
+    background: var(--countdown);
   }
 
   @keyframes minimap-sing {
     from {
-      transform: scaleX(0);
+      clip-path: inset(0 100% 0 0);
     }
     to {
-      transform: scaleX(1);
+      clip-path: inset(0 0 0 0);
     }
   }
 
@@ -277,19 +295,7 @@
     cursor: default;
   }
 
-  .cadence-auto {
-    padding: 0;
-    background: none;
-    border: 0;
-    color: var(--accent);
-    font-weight: 600;
-    cursor: pointer;
-  }
 
-  .cadence-auto:disabled {
-    opacity: 0.3;
-    cursor: default;
-  }
 
   .cadence-strip .learn-indicator {
     flex-direction: row;
