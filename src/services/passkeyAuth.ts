@@ -13,6 +13,19 @@ export interface UserProfile {
 
 const API_BASE = '/api/auth';
 
+async function postJson<T>(path: string, body: unknown, fallbackError: string): Promise<T> {
+  const res = await fetch(`${API_BASE}${path}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error || fallbackError);
+  }
+  return res.json();
+}
+
 export class PasskeyService {
   public static isSupported(): boolean {
     return browserSupportsWebAuthn();
@@ -23,64 +36,36 @@ export class PasskeyService {
   }
 
   public static async register(username: string): Promise<UserProfile> {
-    const optRes = await fetch(`${API_BASE}/register/options`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username }),
-    });
-
-    if (!optRes.ok) {
-      const err = await optRes.json();
-      throw new Error(err.error || 'Failed to start passkey registration');
-    }
-
-    const { challengeId, options } = await optRes.json();
+    const { challengeId, options } = await postJson<any>(
+      '/register/options',
+      { username },
+      'Failed to start passkey registration',
+    );
 
     const regResponse = await startRegistration({ optionsJSON: options });
 
-    const verifyRes = await fetch(`${API_BASE}/register/verify`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ challengeId, response: regResponse }),
-    });
-
-    if (!verifyRes.ok) {
-      const err = await verifyRes.json();
-      throw new Error(err.error || 'Failed to verify passkey');
-    }
-
-    const data = await verifyRes.json();
+    const data = await postJson<any>(
+      '/register/verify',
+      { challengeId, response: regResponse },
+      'Failed to verify passkey',
+    );
     return data.user;
   }
 
   public static async login(username?: string): Promise<UserProfile> {
-    const optRes = await fetch(`${API_BASE}/login/options`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username }),
-    });
-
-    if (!optRes.ok) {
-      const err = await optRes.json();
-      throw new Error(err.error || 'Failed to start passkey login');
-    }
-
-    const { challengeId, options } = await optRes.json();
+    const { challengeId, options } = await postJson<any>(
+      '/login/options',
+      { username },
+      'Failed to start passkey login',
+    );
 
     const authResponse = await startAuthentication({ optionsJSON: options });
 
-    const verifyRes = await fetch(`${API_BASE}/login/verify`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ challengeId, response: authResponse }),
-    });
-
-    if (!verifyRes.ok) {
-      const err = await verifyRes.json();
-      throw new Error(err.error || 'Passkey authentication failed');
-    }
-
-    const data = await verifyRes.json();
+    const data = await postJson<any>(
+      '/login/verify',
+      { challengeId, response: authResponse },
+      'Passkey authentication failed',
+    );
     return data.user;
   }
 }

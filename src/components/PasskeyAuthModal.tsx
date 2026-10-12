@@ -1,6 +1,8 @@
 import { useState } from 'preact/hooks';
 import { PasskeyService, UserProfile } from '../services/passkeyAuth';
 import { Icon } from './Icon';
+import { ModalFrame } from './ModalFrame';
+import { PasskeySignedIn, PasskeySignInForm } from './PasskeyViews';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -97,91 +99,26 @@ export function PasskeyAuthModal({ isOpen, onClose }: AuthModalProps) {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
-          <h3 className="title-display" style={{ fontSize: '1.25rem', margin: 0, color: 'var(--accent)' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}><Icon name="key" size={22} />Passwordless Passkey Access</span>
-          </h3>
-          <button className="btn-icon" onClick={onClose} style={{ width: '2rem', height: '2rem' }}>
-            <Icon name="x" size={16} />
-          </button>
-        </div>
-
-        {currentUser ? (
-          <div>
-            <div style={{ padding: '1rem', background: 'var(--bg-card)', borderRadius: '10px', border: '1px solid var(--border-subtle)', marginBottom: '1.2rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Icon name="identification-card" size={28} />
-                <div>
-                  <div style={{ fontWeight: 600 }}>{currentUser.username}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#10b981', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}><Icon name="check" size={14} />Passkey Authenticated (TouchID / FaceID)</div>
-                </div>
-              </div>
-            </div>
-
-            <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginBottom: '1.2rem' }}>
-              Your customized Prakaras, learned cadence scales, and recitation preferences are securely synchronized with your device.
-            </p>
-
-            <button
-              onClick={handleLogout}
-              style={{ width: '100%', padding: '0.6rem', border: '1px solid var(--border-subtle)', borderRadius: '999px', background: 'var(--bg-card)', cursor: 'pointer' }}
-            >
-              Sign Out
-            </button>
-          </div>
-        ) : (
-          <div>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1.2rem', lineHeight: 1.5 }}>
-              Zero passwords. Zero SMS codes. Simply enter your username and touch your device fingerprint sensor or scan FaceID / Windows Hello.
-            </p>
-
-            <div style={{ marginBottom: '1rem' }}>
-              <label htmlFor="username-input" style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.35rem' }}>
-                Username
-              </label>
-              <input
-                id="username-input"
-                type="text"
-                autoComplete="username webauthn"
-                placeholder={isRegistering ? 'e.g. sushruth' : 'Tap for Passkey or enter username'}
-                value={username}
-                onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
-                style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', border: '1px solid var(--border-subtle)', background: 'var(--bg-card)' }}
-              />
-            </div>
-
-            {message && (
-              <div style={{ fontSize: '0.82rem', color: 'var(--accent)', marginBottom: '1rem', textAlign: 'center' }}>
-                {message}
-              </div>
-            )}
-
-            <button
-              className="btn-primary"
-              disabled={loading}
-              onClick={isRegistering ? handleRegister : handleLogin}
-              style={{ width: '100%', justifyContent: 'center', padding: '0.7rem', marginBottom: '1rem' }}
-            >
-              {loading ? 'Authenticating...' : isRegistering ? <><Icon name="sparkle" size={16} />Create Account with Passkey</> : <><Icon name="key" size={16} />Sign In with Passkey</>}
-            </button>
-
-            <div style={{ textAlign: 'center', fontSize: '0.82rem' }}>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsRegistering(!isRegistering);
-                  setMessage(null);
-                }}
-                style={{ background: 'none', border: 'none', color: 'var(--accent-gold)', textDecoration: 'underline', cursor: 'pointer' }}
-              >
-                {isRegistering ? 'Already registered? Sign In with Passkey' : 'New here? Create account with Passkey'}
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
+    <ModalFrame
+      title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}><Icon name="key" size={22} />Passwordless Passkey Access</span>}
+      onClose={onClose}
+    >
+      {currentUser ? (
+        <PasskeySignedIn user={currentUser} onLogout={handleLogout} />
+      ) : (
+        <PasskeySignInForm
+          username={username}
+          onUsernameChange={setUsername}
+          isRegistering={isRegistering}
+          onToggleRegistering={() => {
+            setIsRegistering(!isRegistering);
+            setMessage(null);
+          }}
+          loading={loading}
+          message={message}
+          onSubmit={isRegistering ? handleRegister : handleLogin}
+        />
+      )}
+    </ModalFrame>
   );
 }
