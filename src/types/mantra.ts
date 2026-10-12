@@ -33,6 +33,8 @@ export interface SuktaSection {
   chunks: MantraChunk[];
 }
 
+export type VedaName = 'rigveda' | 'yajurveda' | 'samaveda' | 'atharvaveda' | 'other';
+
 export interface MantraDocument {
   id: string;
   title: {
@@ -41,7 +43,10 @@ export interface MantraDocument {
     english: string;
   };
   metadata: {
-    veda: string;
+    /** The Veda the text belongs to. */
+    veda?: VedaName;
+    /** Free-text description of the Veda, branch and references. */
+    vedaNote?: string;
     source: string;
     rishi?: string;
     devata?: string;
@@ -50,6 +55,16 @@ export interface MantraDocument {
     status?: 'draft' | 'proofread' | 'reviewed';
     /** Licence or permission note for this text. */
     license?: string;
+    /** The deity addressed, in plain English. */
+    deity?: string;
+    /** Category names for the wiki, e.g. 'Suktas', 'Rudram', 'Devi'. */
+    categories?: string[];
+    /** Two or three sentences in plain English, like the lead of a Wikipedia article. */
+    summary?: string;
+    /** Ids of related documents. */
+    related?: string[];
+    /** When the text is chanted. */
+    usage?: string;
   };
   sections: SuktaSection[];
 }

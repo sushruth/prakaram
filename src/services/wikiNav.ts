@@ -1,0 +1,55 @@
+import type { WikiArticle } from './wiki';
+import { transliterateVedic } from './transliteration';
+
+export const HOME_HASH = '#/wiki';
+export const REPO_URL = 'https://github.com/sushruth/prakaram';
+
+export type Route =
+  | { kind: 'player' }
+  | { kind: 'home' }
+  | { kind: 'article'; id: string; section?: number }
+  | { kind: 'category'; name: string }
+  | { kind: 'search'; q: string }
+  | { kind: 'random' };
+
+const dec = (s: string) => {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+};
+
+/** Maps a location hash to a wiki page. Anything outside `#/wiki` is the player. */
+export function parseRoute(hash: string): Route {
+  const m = hash.match(/^#\/wiki(?:\/(.*))?$/);
+  if (!m) return { kind: 'player' };
+  const rest = m[1] ?? '';
+  const qi = rest.indexOf('?');
+  const path = qi < 0 ? rest : rest.slice(0, qi);
+  const params = new URLSearchParams(qi < 0 ? '' : rest.slice(qi + 1));
+  if (path === '') return { kind: 'home' };
+  if (path === 'Special:Search') return { kind: 'search', q: params.get('q') ?? '' };
+  if (path === 'Special:Random') return { kind: 'random' };
+  if (path.startsWith('Category:')) return { kind: 'category', name: dec(path.slice('Category:'.length)) };
+  const [id, section] = path.split('/');
+  const n = Number(section);
+  return section !== undefined && Number.isInteger(n) && n > 0
+    ? { kind: 'article', id: dec(id), section: n }
+    : { kind: 'article', id: dec(id) };
+}
+
+/** Ids and section numbers are encoded, so a `/` inside an id (a koshah piece id) cannot read as a section. */
+export const articleHash = (id: string, section?: string | number) =>
+  `#/wiki/${encodeURIComponent(id)}${section === undefined ? '' : `/${section}`}`;
+
+export const categoryHash = (name: string) => `#/wiki/Category:${encodeURIComponent(name)}`;
+
+export const searchHash = (q: string) => `#/wiki/Special:Search?q=${encodeURIComponent(q)}`;
+
+type Script = Parameters<typeof transliterateVedic>[1];
+
+/** The page title: the Sanskrit in the chosen script, or the English when there is no Sanskrit. */
+export function articleLabel(a: WikiArticle, script: Script): string {
+  return a.title.sanskrit ? transliterateVedic(a.title.sanskrit, script) : a.title.english;
+}

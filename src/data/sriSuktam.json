@@ -6,11 +6,24 @@
     "english": "Hymn to Goddess Lakshmi"
   },
   "metadata": {
-    "veda": "Rigveda Parishishta / Taittiriya Shakha",
+    "veda": "rigveda",
+    "vedaNote": "Rigveda Parishishta / Taittiriya Shakha",
     "source": "Saswara Veda Mantrah (Ramakrishna Math)",
     "rishi": "Ananda, Kardama, Chiklita, Shrita Rishis",
     "devata": "Sri Mahalakshmi",
-    "chandas": "Anushtubh & Trishtubh"
+    "chandas": "Anushtubh & Trishtubh",
+    "deity": "Sri Mahalakshmi",
+    "categories": [
+      "Suktas",
+      "Devi",
+      "Rigveda"
+    ],
+    "summary": "A hymn to Sri, the goddess of prosperity and fortune, also known as Lakshmi. It is traditionally treated as an appendix (khila) to the Rigveda, and it is widely chanted in the worship of Lakshmi.",
+    "related": [
+      "purusha-suktam",
+      "durga-suktam"
+    ],
+    "usage": "Chanted in the worship of Lakshmi and on occasions that ask for prosperity."
   },
   "sections": [
     {

@@ -6,11 +6,24 @@
     "english": "Invocation to Lord Ganapati"
   },
   "metadata": {
-    "veda": "Rigveda Samhita 2.23.1 & Atharvaveda",
+    "veda": "rigveda",
+    "vedaNote": "Rigveda Samhita 2.23.1 & Atharvaveda",
     "source": "Saswara Veda Mantrah (Ramakrishna Math)",
     "rishi": "Gritsamada Shaunaka",
     "devata": "Brihaspati / Ganapati",
-    "chandas": "Jagati (48 syllables)"
+    "chandas": "Jagati (48 syllables)",
+    "deity": "Ganapati (Brihaspati)",
+    "categories": [
+      "Ganapati",
+      "Prarthana",
+      "Rigveda"
+    ],
+    "summary": "An invocation to Ganapati, taken from Rigveda 2.23.1 (\"Gananam tva ganapatim havamahe\"), which calls on the lord of the groups of beings. It is a short prayer addressed to the deity who is invoked before other rites begin.",
+    "related": [
+      "shanti-mantras",
+      "sri-suktam"
+    ],
+    "usage": "Chanted at the start of a ritual or recitation, to invoke Ganapati."
   },
   "sections": [
     {

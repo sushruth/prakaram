@@ -1,0 +1,16 @@
+import { expect, test } from 'bun:test';
+import { articleHash, categoryHash, parseRoute, searchHash } from './wikiNav';
+
+test('hash routes', () => {
+  expect(parseRoute('')).toEqual({ kind: 'player' });
+  expect(parseRoute('#')).toEqual({ kind: 'player' });
+  expect(parseRoute('#compose')).toEqual({ kind: 'player' });
+  expect(parseRoute('#/wiki')).toEqual({ kind: 'home' });
+  expect(parseRoute('#/wiki/')).toEqual({ kind: 'home' });
+  expect(parseRoute('#/wiki/Special:Random')).toEqual({ kind: 'random' });
+  expect(parseRoute(articleHash('rudram-namakam'))).toEqual({ kind: 'article', id: 'rudram-namakam' });
+  expect(parseRoute('#/wiki/rudram-namakam/3')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3 });
+  expect(parseRoute(articleHash('rudram-namakam/3'))).toEqual({ kind: 'article', id: 'rudram-namakam/3' });
+  expect(parseRoute(categoryHash('Rig Veda'))).toEqual({ kind: 'category', name: 'Rig Veda' });
+  expect(parseRoute(searchHash('śrī sūkta'))).toEqual({ kind: 'search', q: 'śrī sūkta' });
+});

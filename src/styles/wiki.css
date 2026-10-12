@@ -1,0 +1,222 @@
+@layer components {
+  .wiki-article {
+    box-sizing: border-box;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .wiki-article a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .wiki-article a:hover {
+    text-decoration: underline;
+  }
+
+  .wiki-article :is(a, button):focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .wiki-article h2:focus {
+    outline: none;
+  }
+
+  /* Tabs: a row of words, the current one in ink. */
+  .wiki-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .wiki-tabs [aria-current="page"] {
+    color: var(--text-primary);
+  }
+
+  .wiki-tab-disabled {
+    color: var(--text-muted);
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .wiki-title {
+    margin: 1rem 0 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--text-muted);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.85rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .wiki-subtitle {
+    margin: 0.35rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .wiki-notice {
+    margin: 1rem 0 0;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--text-muted);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+
+  /* Infobox: floats right beside the lead on wide screens, stacks on phones. */
+  .wiki-infobox {
+    box-sizing: border-box;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border: 1px solid var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .wiki-infobox-title {
+    margin: 0;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+
+  .wiki-infobox dl {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 0.4rem 0.75rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .wiki-infobox dt {
+    color: var(--text-muted);
+  }
+
+  .wiki-infobox dd {
+    margin: 0;
+  }
+
+  .wiki-chant {
+    display: block;
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 0.5rem 0 0;
+    padding: 0.5rem;
+    border: 0;
+    background: var(--accent-light);
+    color: var(--accent);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .wiki-status {
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .wiki-status[data-status="proofread"] {
+    color: var(--accent);
+  }
+
+  .wiki-status[data-status="reviewed"] {
+    color: var(--shloka);
+  }
+
+  .wiki-lead {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+
+  .wiki-toc {
+    display: inline-block;
+    min-width: 14rem;
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .wiki-toc h2 {
+    margin: 0 0 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .wiki-toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-toc li {
+    margin: 0.15rem 0;
+  }
+
+  .wiki-section-title {
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--bg-card);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+  }
+
+  .wiki-section-actions {
+    margin-left: 0.5rem;
+    font-family: 'Geist', system-ui, sans-serif;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .wiki-link {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  .wiki-section-actions .wiki-link,
+  .wiki-section-actions a {
+    margin-left: 0.4rem;
+  }
+
+  .wiki-line {
+    margin: 0 0 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  .wiki-muted {
+    color: var(--text-muted);
+  }
+
+  .wiki-related ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .wiki-footer {
+    margin-top: 2.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--bg-card);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 40rem) {
+    .wiki-infobox {
+      float: right;
+      width: 17rem;
+      margin: 0.25rem 0 1rem 1.25rem;
+    }
+
+    .wiki-toc {
+      display: block;
+      min-width: 0;
+      max-width: 22rem;
+    }
+  }
+}

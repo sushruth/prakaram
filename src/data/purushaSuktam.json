@@ -6,11 +6,25 @@
     "english": "Hymn of the Cosmic Being"
   },
   "metadata": {
-    "veda": "Krishna Yajurveda (Taittiriya Aranyaka 3.12) & Rigveda (10.90)",
+    "veda": "rigveda",
+    "vedaNote": "Krishna Yajurveda (Taittiriya Aranyaka 3.12) & Rigveda (10.90)",
     "source": "Saswara Veda Mantrah (Ramakrishna Math)",
     "rishi": "Narayana Rishi",
     "devata": "Viraat Purusha (Parabrahman)",
-    "chandas": "Anushtubh & Trishtubh"
+    "chandas": "Anushtubh & Trishtubh",
+    "deity": "Viraat Purusha (Parabrahman)",
+    "categories": [
+      "Suktas",
+      "Rigveda",
+      "Yajurveda",
+      "Vishnu"
+    ],
+    "summary": "The Purusha Sukta describes the cosmic being, Purusha, from whose sacrifice the world and its beings arise. It appears in the Rigveda (10.90) and in the Krishna Yajurveda (Taittiriya Aranyaka 3.12), and is one of the central hymns of Vedic worship.",
+    "related": [
+      "narayana-suktam",
+      "sri-suktam"
+    ],
+    "usage": "Chanted in Vedic ritual and in temple and household worship."
   },
   "sections": [
     {

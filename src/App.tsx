@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'preact/hooks';
-import { Header } from './components/Header';
+import { Header, WikiTopBar, WikiFooter } from './components/Header';
 import { CadenceStrip } from './components/CadenceStrip';
 import { ZenMantraReader } from './components/ZenMantraReader';
 import { LocateLine } from './components/LocateLine';
@@ -8,33 +8,58 @@ import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { ChantingRoomModal } from './components/ChantingRoomModal';
 import { SettingsSheet } from './components/SettingsSheet';
 import { PrakaraDetails } from './components/PrakaraDetails';
-import { KoshahPanel } from './components/KoshahPanel';
-import { PieceView } from './components/PieceView';
+import { WikiHome } from './components/WikiHome';
+import { WikiArticle } from './components/WikiArticle';
+import { WikiCategory } from './components/WikiCategory';
+import { WikiSearch } from './components/WikiSearch';
 import { usePrakaraStore } from './stores/usePrakaraStore';
 import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 import { initLineClock } from './services/lineClock';
+import { listArticles } from './services/wiki';
+import { HOME_HASH, type Route, articleHash, parseRoute } from './services/wikiNav';
 
-type DropKind = 'settings' | 'details' | 'cadence' | 'koshah';
+type DropKind = 'settings' | 'details' | 'cadence';
 
-/** The piece id in a `#k=<id>` address, or null. */
-const pieceFromHash = () => {
-  const m = window.location.hash.match(/^#k=(.+)$/);
-  return m ? decodeURIComponent(m[1]) : null;
+/** The route for the current hash. Old `#k=<id>` links are moved to the wiki address of their piece. */
+const readRoute = (): Route => {
+  const legacy = window.location.hash.match(/^#k=(.+)$/);
+  if (legacy) {
+    const to = articleHash(decodeURIComponent(legacy[1]));
+    window.location.replace(to);
+    return parseRoute(to);
+  }
+  return parseRoute(window.location.hash);
 };
 
 export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
   const [isRoomOpen, setIsRoomOpen] = useState(false);
   const [drop, setDrop] = useState<DropKind | null>(null);
-  const [pieceId, setPieceId] = useState<string | null>(pieceFromHash);
+  const [route, setRoute] = useState<Route>(readRoute);
 
   useEffect(() => {
-    const onHash = () => setPieceId(pieceFromHash());
+    const onHash = () => {
+      // `#compose` (linked from the wiki) opens the composer in the player, then drops the hash.
+      if (window.location.hash === '#compose') {
+        setIsPrakaraOpen(true);
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      setRoute(readRoute());
+      setDrop(null);
+    };
+    onHash();
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
+
+  useEffect(() => {
+    if (route.kind !== 'random') return;
+    const all = listArticles();
+    const pick = all[Math.floor(Math.random() * all.length)];
+    window.location.replace(pick ? articleHash(pick.id) : HOME_HASH);
+  }, [route]);
 
   const { addPrakara } = usePrakaraStore();
   const { setMsPerMatra } = useCadenceStore();
@@ -92,39 +117,50 @@ export function App() {
     handleUrlState();
   }, [addPrakara, setMsPerMatra]);
 
+  const playing = route.kind === 'player';
+  // Running a piece makes it the active prakara, then leaves the wiki for the player.
+  const runPiece = (pieceId: string) => {
+    usePrakaraStore.getState().runPiece(pieceId);
+    window.location.hash = '';
+  };
+
   return (
     <>
       <div className="chrome">
-        <Header
-          onOpenKoshah={() => toggle('koshah')}
-          koshahOpen={drop === 'koshah'}
-          onOpenRoom={() => setIsRoomOpen(true)}
-          onOpenSettings={() => toggle('settings')}
-          onOpenDetails={() => toggle('details')}
-          settingsOpen={drop === 'settings'}
-          detailsOpen={drop === 'details'}
-        />
-        {!pieceId && <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />}
+        {playing ? (
+          <>
+            <Header
+              onOpenRoom={() => setIsRoomOpen(true)}
+              onOpenSettings={() => toggle('settings')}
+              onOpenDetails={() => toggle('details')}
+              settingsOpen={drop === 'settings'}
+              detailsOpen={drop === 'details'}
+            />
+            <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />
+          </>
+        ) : (
+          <WikiTopBar query={route.kind === 'search' ? route.q : ''} />
+        )}
       </div>
 
       <SettingsSheet isOpen={drop === 'settings'} onClose={closeDrop} />
       <PrakaraDetails isOpen={drop === 'details'} onClose={closeDrop} />
-      <KoshahPanel
-        isOpen={drop === 'koshah'}
-        onClose={closeDrop}
-        onCompose={() => {
-          closeDrop();
-          setIsPrakaraOpen(true);
-        }}
-      />
       <CadencePanel isOpen={drop === 'cadence'} onClose={closeDrop} />
 
-      {pieceId ? (
-        <PieceView pieceId={pieceId} onClose={() => (window.location.hash = '')} />
-      ) : (
+      {playing ? (
         <>
           <ZenMantraReader />
           <LocateLine />
+        </>
+      ) : (
+        <>
+          <div className="wiki-main">
+            {route.kind === 'home' && <WikiHome />}
+            {route.kind === 'article' && <WikiArticle id={route.id} section={route.section} onRun={runPiece} />}
+            {route.kind === 'category' && <WikiCategory name={route.name} />}
+            {route.kind === 'search' && <WikiSearch q={route.q} />}
+          </div>
+          <WikiFooter />
         </>
       )}
 

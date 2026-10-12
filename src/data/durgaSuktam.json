@@ -6,11 +6,24 @@
     "english": "Hymn to Goddess Durga (Agni-Durga)"
   },
   "metadata": {
-    "veda": "Krishna Yajurveda (Taittiriya Aranyaka / Mahanarayana Upanishad 2)",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda (Taittiriya Aranyaka / Mahanarayana Upanishad 2)",
     "source": "Saswara Veda Mantrah (Ramakrishna Math)",
     "rishi": "Prajaapati / Vedic Rishis",
     "devata": "Agni-Durga",
-    "chandas": "Trishtubh & Anushtubh"
+    "chandas": "Trishtubh & Anushtubh",
+    "deity": "Agni-Durga",
+    "categories": [
+      "Suktas",
+      "Devi",
+      "Yajurveda"
+    ],
+    "summary": "A hymn in which Agni, the fire, is addressed in his form as Durga, and the fire is asked to carry the chanter across difficulty. It comes from the Krishna Yajurveda, in the Taittiriya Aranyaka and the Mahanarayana Upanishad.",
+    "related": [
+      "sri-suktam",
+      "shanti-mantras"
+    ],
+    "usage": "Chanted in the worship of Devi, for protection and to overcome difficulty."
   },
   "sections": [
     {

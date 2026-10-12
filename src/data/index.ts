@@ -23,3 +23,15 @@ export const ALL_SUKTAMS: MantraDocument[] = [
 export const SUKTA_MAP = new Map<string, MantraDocument>(
   ALL_SUKTAMS.map((s) => [s.id, s])
 );
+
+/** The JSON file each document lives in, relative to src/data. Used for the wiki's source and edit links. */
+export const SUKTA_FILE: Record<string, string> = {
+  'shanti-mantras': 'shantiMantras.json',
+  'ganapati-prarthana': 'ganapatiPrarthana.json',
+  'purusha-suktam': 'purushaSuktam.json',
+  'sri-suktam': 'sriSuktam.json',
+  'durga-suktam': 'durgaSuktam.json',
+  'narayana-suktam': 'narayanaSuktam.json',
+  'rudram-namakam': 'rudramNamakam.json',
+  'rudram-chamakam': 'rudramChamakam.json',
+};

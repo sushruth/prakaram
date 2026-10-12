@@ -237,7 +237,22 @@ Zen shows only the content and the zen (lotus) button. Everything else in the he
 
 ## 5f. Koshah
 
-The Koshah is the library: every piece of text the app holds, with search, a reading page and a way to run each piece. It opens as a drop panel from the header scroll icon, like settings and cadence. Only one drop panel is open at a time.
+The Koshah is the library: every piece of text the app holds, presented as a wiki. Its pages replace the player while the address is a `#/wiki` route. The header's Koshah icon opens the main page, and the search box in the wiki bar searches it. Old `#k=<pieceId>` links are redirected to the article address.
+
+### Routes
+
+| Address | Page |
+| :--- | :--- |
+| `#/wiki` | Main page: featured article, recent articles, counts by Veda and deity |
+| `#/wiki/<id>` | Article for one document, e.g. `#/wiki/rudram-namakam` |
+| `#/wiki/<id>/<n>` | The same article, scrolled to section `n` |
+| `#/wiki/Category:<name>` | Articles in one category |
+| `#/wiki/Special:Search?q=<text>` | Search results |
+| `#/wiki/Special:Random` | A random article. The route is parsed, but `App.tsx` does not render it yet |
+
+Ids, category names and search text are URL-encoded. Anything outside `#/wiki` is the player. `#compose` opens the prakara composer in the player.
+
+`parseRoute()` and the address builders (`articleHash()`, `categoryHash()`, `searchHash()`) live in `src/services/wikiNav.ts`. Article and category data come from `src/services/wiki.ts`, derived from `src/data` on each render.
 
 ### Pieces
 
@@ -253,26 +268,50 @@ A piece is one thing that can be read or run. Pieces are derived from the docume
 | Whole sukta | `<documentId>`, e.g. `rudram-namakam` | `sukta` | The document title |
 | One section | `<documentId>/<sectionNumber>`, e.g. `rudram-namakam/3` | `anuvaka` | The document title, then the section title in English |
 
-The id is stable and is used in addresses (`#k=`).
+Each section heading in an article chants that section's piece. The **Chant this** button chants the whole document. Chanting makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
 
-### The panel
+### Article anatomy
 
-- **Search** matches the Sanskrit, transliterated and English titles, and the source, ignoring case. While searching, matching prakaras and pieces are listed, anuvakas included.
-- **Prakarams** lists the default and saved prakaras. Tapping one makes it the active prakara and closes the panel. A "Compile new prakara" action opens the composer.
-- **Pieces** lists each sukta. A sukta with sections has a toggle that shows its anuvakas below it.
-- Each piece shows its line count and status, with two actions: **Read** and **Run**.
+An article is a Wikipedia-style page, top to bottom:
 
-### Read and Run
+1. **Tabs.** Article, Talk (greyed out), Read, Edit and View history. Edit and View history go to GitHub.
+2. **Title.** The Sanskrit in the chosen script, with the English title below.
+3. **Notice.** A note under the title when the status is `draft` or the licence says "not yet confirmed".
+4. **Infobox.** The Sanskrit title, a **Chant this** button, then Veda, Deity, Usage, Source, Status, Licence and Lines. A missing optional field is left out. Licence reads "Not stated" when empty.
+5. **Lead.** The `summary`.
+6. **Contents.** One entry per section, each linking to `#/wiki/<id>/<n>`.
+7. **Sections.** Each has a heading `n. title`, with **[chant]** (runs that section) and **[edit]** (opens the document's JSON on GitHub). The verse lines follow, with swara colours as in §5c.
+8. **Related articles.** From `related`.
+9. **Categories.** A footer of links to the category pages.
 
-- **Read** opens the piece page at `#k=<pieceId>`, described below.
-- **Run** makes `piece:<pieceId>` the active prakara, so the player runs that piece alone. A section piece runs only its section. Nothing is added to the saved prakaras.
+The text shown is the text the player runs. A missing article id shows "This article does not exist yet" and a link to create it on GitHub.
 
-### The piece page
+### Editing
 
-- Opened by `#k=<pieceId>`. It replaces the player while the address is set. Its back button clears the address and returns to the player. An unknown id shows "This piece does not exist."
-- Shows the title, the English subtitle, the source, the status, the licence, the line count and the text, with swara colours as in §5c.
-- A whole sukta with sections is read section by section, each with a heading. An anuvaka shows only its own lines.
-- **Run in the player** runs the piece and returns to the player.
+The wiki has no editor. Every article is a file in git, so changes are made the same way as code:
+
+- **Edit** and **[edit]** open the document's file, `src/data/<file>.json`, in GitHub's editor.
+- **View history** opens the file's commit list on GitHub.
+- A change is a commit on a branch and a pull request into `main`. The wiki updates when the change is deployed. The steps are in MAINTAINERS.md §4a.
+
+### Metadata
+
+Each document's `metadata` feeds the wiki. The type is `MantraDocument` in `src/types/mantra.ts`.
+
+| Field | Use |
+| :--- | :--- |
+| `veda` | `rigveda`, `yajurveda`, `samaveda`, `atharvaveda` or `other`. Infobox Veda, and the Veda counts on the main page |
+| `vedaNote` | Branch and reference, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; the wiki does not show it yet |
+| `deity` | The deity in plain English. Infobox Deity, the deity counts on the main page, and search |
+| `categories` | Category names, e.g. `Suktas`, `Rudram`, `Devi`. Category pages, the footer and search |
+| `summary` | Two or three sentences, like a Wikipedia lead. The lead, and search |
+| `related` | Ids of other documents. Related articles, in the order given |
+| `usage` | When the text is chanted. Infobox Usage |
+| `source` | Where the text comes from. Infobox Source |
+| `status` | See Status below |
+| `license` | Licence or permission note. Infobox Licence |
+
+Search ranks a title match first (3), then a category or deity match (2), then a summary match (1). It ignores case and Latin diacritics, so "Sri" finds "Śrī". Ties keep document order.
 
 ### Status
 
@@ -286,10 +325,10 @@ Status is set per document in `metadata.status`. A missing status is `draft`.
 
 ### Source and licence
 
-- Every document gives `metadata.source`, and every piece shows it.
-- Every document gives `metadata.license` where it is known, and every piece shows it. A piece with no licence note shows "Not stated".
-- Text with unconfirmed permission stays `draft`, even when it has been proofread.
-- Pieces come only from the corpus in `src/data`.
+- Every document gives `metadata.source`, and every article shows it.
+- Every document gives `metadata.license` where it is known, and every article shows it. An article with no licence note shows "Not stated".
+- Text with unconfirmed permission stays `draft`, even when it has been proofread. The notice under the title says so.
+- Articles come only from the corpus in `src/data`.
 
 ## 6. Translations
 
@@ -314,7 +353,7 @@ Exceptions: the switch is the one rounded control (a pill track with a round kno
 Text first. The app is words on paper, and controls are words too.
 
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
-- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. The wiki pages (§5f) add a Wikipedia-style look: a thin rule under article titles, a bordered infobox and notice banner, and a faint tint on the chant link. They live in `src/styles/wiki.css` and apply only on `#/wiki` routes. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
 - **Groups are rows of words.** Mode and option choices (Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.

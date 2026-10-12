@@ -6,11 +6,24 @@
     "english": "Hymn to Rudra (Namakam)"
   },
   "metadata": {
-    "veda": "Krishna Yajurveda, Taittiriya Samhita 4.5",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita 4.5",
     "source": "Vignanam (vignanam.org), supplied by the maintainer. Reuse permission not yet confirmed.",
     "devata": "Rudra",
     "status": "draft",
-    "license": "Text permission from Vignanam not yet confirmed"
+    "license": "Text permission from Vignanam not yet confirmed",
+    "deity": "Rudra (Shiva)",
+    "categories": [
+      "Rudram",
+      "Shiva",
+      "Yajurveda"
+    ],
+    "summary": "The Namakam is the first part of the Sri Rudram. It is a litany of the names and epithets of Rudra, each followed by a salutation (\"namah\"), and it comes from the Taittiriya Samhita of the Krishna Yajurveda (4.5).",
+    "related": [
+      "rudram-chamakam",
+      "shanti-mantras"
+    ],
+    "usage": "Chanted in the worship of Rudra and Shiva, usually as the first part of the Sri Rudram."
   },
   "sections": [
     {

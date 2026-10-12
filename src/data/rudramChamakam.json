@@ -6,11 +6,25 @@
     "english": "Prayer of fulfilment (Chamakam)"
   },
   "metadata": {
-    "veda": "Krishna Yajurveda, Taittiriya Samhita 4.7",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita 4.7",
     "source": "Vignanam (vignanam.org), supplied by the maintainer. Reuse permission not yet confirmed.",
     "devata": "Rudra",
     "status": "draft",
-    "license": "Text permission from Vignanam not yet confirmed"
+    "license": "Text permission from Vignanam not yet confirmed",
+    "deity": "Rudra (Shiva)",
+    "categories": [
+      "Rudram",
+      "Shiva",
+      "Yajurveda",
+      "Prarthana"
+    ],
+    "summary": "The Chamakam is the second part of the Sri Rudram. It follows the Namakam and makes a series of requests to Rudra, each phrased as \"may I have\". It comes from the Taittiriya Samhita of the Krishna Yajurveda (4.7).",
+    "related": [
+      "rudram-namakam",
+      "shanti-mantras"
+    ],
+    "usage": "Chanted after the Namakam, as the second part of the Sri Rudram."
   },
   "sections": [
     {

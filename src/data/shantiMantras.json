@@ -6,11 +6,24 @@
     "english": "Vedic Peace Invocations"
   },
   "metadata": {
-    "veda": "Krishna Yajurveda & Taittiriya Upanishad",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda & Taittiriya Upanishad",
     "source": "Saswara Veda Mantrah (Ramakrishna Math)",
     "rishi": "Vedic Rishis",
     "devata": "Parabrahman & Devas",
-    "chandas": "Anushtubh & Trishtubh"
+    "chandas": "Anushtubh & Trishtubh",
+    "deity": "Parabrahman and the devas",
+    "categories": [
+      "Shanti mantras",
+      "Yajurveda",
+      "Prarthana"
+    ],
+    "summary": "A set of peace invocations (shanti mantras) from the Krishna Yajurveda and the Taittiriya Upanishad, asking for calm and for freedom from obstacles. It opens with a prayer to Mitra and Varuna, and includes \"Sahana Vavatu\", a prayer that teacher and student be protected and nourished together.",
+    "related": [
+      "ganapati-prarthana",
+      "rudram-namakam"
+    ],
+    "usage": "Chanted as a peace invocation at the start of recitation, study or ritual."
   },
   "sections": [
     {

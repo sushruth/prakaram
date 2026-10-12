@@ -45,7 +45,8 @@
   - **श्री सूक्तम् (Sri Suktam):** Complete 16 Riks with Vedic accents
   - **दुर्गा सूक्तम् (Durga Suktam):** Complete hymn to Agni-Durga
   - **नारायण सूक्तम् (Narayana Suktam):** Complete hymn to Cosmic Narayana
-* **Koshah and Sri Rudram:** the Koshah library lists every sukta and each anuvaka, with search, a reading page and Run for any piece; the Sri Rudram prakaram (Namakam and Chamakam) is included, but its text is from Vignanam and its reuse permission is not yet confirmed, so it stays a draft until that is settled.
+* **Koshah wiki:** the library is a wiki at `#/wiki`. Every sukta has an article with a lead, infobox, contents, sections of text, categories, related articles and search. Each section can be chanted, and each article links to its JSON file on GitHub for editing and history. The Sri Rudram prakaram (Namakam and Chamakam) is included, but its text is from Vignanam and its reuse permission is not yet confirmed, so it stays a draft until that is settled.
+* **Wiki addresses:** `#/wiki/<id>` for an article, `#/wiki/<id>/<n>` for one section, `#/wiki/Category:<name>` for a category, and `#/wiki/Special:Search?q=` for search.
 
 ### 2. Multi-Script Indic Engine
 * Client-side, zero-dependency, ultra-fast (>1,000,000 mantras/sec) Brahmic transliteration.

@@ -113,22 +113,62 @@ bunx tsc --noEmit
 
 ---
 
-## 4a. Adding Content to the Koshah
+## 4a. Adding or Editing an Article in the Koshah
 
-The Koshah is built from the documents in `src/data`. Nothing is stored separately: a new document adds its pieces (DESIGN.md §5f).
+The Koshah wiki is built from the documents in `src/data`. Nothing is stored separately: each document gives one article, and each of its sections gives a section of that article (DESIGN.md §5f).
+
+### Adding a document
 
 1. Write the document as `src/data/<id>.json`. Its shape is `MantraDocument` in `src/types/mantra.ts`: `id`, `title` (`sanskrit`, `transliteration`, `english`), `metadata`, and `sections`. Each section has `id`, `title`, `sectionNumber` and `chunks`.
 2. Fill in `metadata`:
-   - `source`: where the text comes from. Every piece shows it.
+   - `source`: where the text comes from. Infobox Source.
    - `status`: `draft` until the text is proofread against a printed edition, then `proofread`. Use `reviewed` only after a second check. A missing status counts as `draft`.
-   - `license`: the licence or permission note. Every piece shows it. If permission is not confirmed, say so here and keep `status` at `draft`.
-3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`. Without this the document has no pieces.
+   - `license`: the licence or permission note. Infobox Licence. If permission is not confirmed, say so here and keep `status` at `draft`.
+   - `veda`: `rigveda`, `yajurveda`, `samaveda`, `atharvaveda` or `other`. Optional, but the Veda counts on the main page need it.
+   - `vedaNote`: branch and reference, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; not shown yet.
+   - `deity`: the deity in plain English.
+   - `categories`: names such as `Suktas`, `Rudram` or `Devi`. Each name gets a category page.
+   - `summary`: two or three plain English sentences, like the lead of a Wikipedia article.
+   - `related`: ids of other documents, shown as Related articles.
+   - `usage`: when the text is chanted.
+3. Register the file in two places in `src/data/index.ts`:
+   - Add the document to `ALL_SUKTAMS`. Without this the document has no article.
+   - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
 4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
-5. Check:
+
+### Editing an existing article
+
+1. Open the article's **Edit** tab, or its **[edit]** link on a section. Both open `src/data/<file>.json` on GitHub.
+2. Change the text, or the metadata fields above. Keep `id` and section ids stable: piece ids and `#/wiki/<id>/<n>` addresses depend on them.
+3. Check the status and licence fields after every text change. Do not raise `status` without a check against a printed edition.
+
+### Opening a pull request
+
+The edit links on GitHub propose a branch and a pull request. Otherwise, work on a branch locally:
+
+```bash
+git checkout -b article/<id>
+git add src/data/<file>.json src/data/index.ts
+git commit -m "Koshah: <what changed>"
+git push -u origin article/<id>
+gh pr create --fill
+```
+
+Before opening the PR, run the checks:
 
 ```bash
 bunx tsc --noEmit && bun test && bun run build
 ```
+
+Once merged, the wiki updates on the next deployment (section 2.A).
+
+### Licence caution: Vignanam text
+
+`src/data/rudramNamakam.json` and `src/data/rudramChamakam.json` (Sri Rudram, Namakam and Chamakam) are converted from Vignanam's Kannada-script text. **Permission to reuse that text has not been confirmed** (THIRD_PARTY_NOTICES.md).
+
+- Keep both documents at `status: "draft"` and keep the "not yet confirmed" licence note. The wiki shows a notice under their titles while either holds.
+- Do not promote the status, remove the note, or copy the text into another document until permission is confirmed in writing.
+- To clear it, either get written permission from Vignanam and update THIRD_PARTY_NOTICES.md, or replace the text with one from a source with a stated open licence.
 
 ### Converting Kannada-script text
 
