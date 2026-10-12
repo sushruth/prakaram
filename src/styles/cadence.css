@@ -31,11 +31,6 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .cadence-modes[data-phase="waiting"] [data-mode="learn"],
-  .cadence-modes[data-phase="measuring"] [data-mode="learn"] {
-    animation: learn-pulse 1.6s ease-in-out infinite;
-  }
-
   .tempo[data-off="true"] {
     opacity: 0.3;
   }
@@ -137,51 +132,87 @@
 }
 
 @layer components {
-  .learn-ring {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .learn-ring-track {
-    fill: none;
-    stroke: var(--countdown);
-    stroke-width: 2;
-    opacity: 0.25;
-  }
-
-  .learn-ring-arc {
-    fill: none;
-    stroke: var(--countdown);
-    stroke-width: 2;
-    stroke-dasharray: 50.27;
-    stroke-dashoffset: 0;
-    transform: rotate(-90deg);
-    transform-origin: 10px 10px;
-    animation-name: ring-drain;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes ring-drain {
-    to {
-      stroke-dashoffset: 50.27;
-    }
-  }
-
-}
-
-@layer components {
-  .learn-ring-btn {
-    display: inline-flex;
+  /* Three-line minimap: previous, current and next line. The current line fills as you sing along. */
+  .minimap {
+    position: relative;
+    display: block;
+    width: 2.6rem;
+    height: 1.9rem;
     padding: 0;
     background: none;
     border: 0;
-    color: var(--accent);
+    color: var(--text-primary);
     cursor: pointer;
   }
 
-  .learn-pause-mark rect {
-    fill: var(--countdown);
+  .minimap-lines {
+    position: absolute;
+    inset: 0.2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .minimap-line {
+    position: relative;
+    display: block;
+    height: 0.32rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--text-muted) 40%, transparent);
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+
+  .minimap-line[data-empty="true"] {
+    opacity: 0.35;
+  }
+
+  .minimap-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--countdown);
+    transform-origin: left;
+    animation: minimap-sing linear forwards;
+  }
+
+  @keyframes minimap-sing {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .minimap[data-frozen="true"] .minimap-lines {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+
+  .minimap-pause {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  /* Filled with the text colour and outlined in the background colour, so it reads on light and dark. */
+  .minimap-pause rect {
+    fill: var(--text-primary);
+    stroke: var(--bg-base);
+    stroke-width: 1.4;
+    paint-order: stroke;
+  }
+
+  .minimap[data-frozen="true"] .minimap-pause {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -198,8 +229,33 @@
 
   .cadence-modes {
     display: flex;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.9rem;
     flex-shrink: 0;
+  }
+
+  .cadence-auto-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+
+  .cadence-auto-toggle .switch {
+    width: 2rem;
+    height: 1.15rem;
+  }
+
+  .cadence-auto-toggle .switch::after {
+    top: 0.15rem;
+    left: 0.15rem;
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+
+  .cadence-auto-toggle .switch[aria-checked="true"]::after {
+    transform: translateX(0.85rem);
   }
 
   .cadence-readout {

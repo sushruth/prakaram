@@ -19,34 +19,36 @@ export function LearnIndicator() {
   const seconds = useElapsedSeconds(firstTapAt, phase === 'measuring');
 
   if (phase === 'manual' || phase === 'engaged') {
-    const current = chunks[activeChunkIndex];
-    const duration = current ? lineMs(current.sanskrit, msPerMatra) : 0;
+    const rows = [-1, 0, 1].map((d) => chunks[activeChunkIndex + d]);
+    const longest = Math.max(1, ...rows.map((c) => c?.sanskrit.length ?? 0));
+    const duration = rows[1] ? lineMs(rows[1].sanskrit, msPerMatra) : 0;
     return (
       <div className="learn-indicator" data-phase={phase}>
         <button
-          className="learn-ring-btn"
+          className="minimap"
           onClick={togglePause}
           disabled={guest}
           aria-pressed={frozen}
+          data-frozen={frozen}
           aria-label={frozen ? 'Resume auto progress' : 'Pause auto progress'}
           title={frozen ? 'Resume auto progress' : 'Pause auto progress'}
         >
-          <svg className="learn-ring" viewBox="0 0 20 20" aria-hidden="true">
-            <circle className="learn-ring-track" cx="10" cy="10" r="8" />
-            <circle
-              key={`arc-${activeChunkIndex}`}
-              className="learn-ring-arc"
-              cx="10"
-              cy="10"
-              r="8"
-              style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
-            />
-            {frozen && (
-              <g className="learn-pause-mark">
-                <rect x="7" y="6.5" width="2" height="7" rx="0.5" />
-                <rect x="11" y="6.5" width="2" height="7" rx="0.5" />
-              </g>
-            )}
+          <span className="minimap-lines" aria-hidden="true">
+            {rows.map((c, i) => (
+              <span key={i} className="minimap-line" data-now={i === 1} data-empty={!c} style={{ width: `${c ? 35 + (65 * c.sanskrit.length) / longest : 50}%` }}>
+                {i === 1 && (
+                  <span
+                    key={activeChunkIndex}
+                    className="minimap-fill"
+                    style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
+                  />
+                )}
+              </span>
+            ))}
+          </span>
+          <svg className="minimap-pause" viewBox="0 0 20 20" aria-hidden="true">
+            <rect x="5.5" y="4" width="3.4" height="12" rx="0.8" />
+            <rect x="11.1" y="4" width="3.4" height="12" rx="0.8" />
           </svg>
         </button>
       </div>
