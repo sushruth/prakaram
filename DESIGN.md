@@ -92,8 +92,8 @@ The reader is a page, not a set of cards.
 
 ## 5a. Header, Title and Flyouts
 
-- The header is one vertically centred row: brand, prakara title, and icons.
-- The prakara title is the centre of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
+- The header is one vertically centred row: a flame mark, the prakara title, and icons. There is no site name in the header.
+- The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
 
@@ -143,7 +143,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header is one row, vertically centred: brand on the left, five borderless icon buttons on the right (settings, cadence, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
+- Header is one row, vertically centred: flame and prakara title on the left, five borderless icon buttons on the right (settings, cadence, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
 - Touch targets stay at 38 px minimum.

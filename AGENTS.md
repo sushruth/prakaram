@@ -61,7 +61,7 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 * A line is **swara** if its Devanagari source contains U+0951, U+0952 or U+1CDA (`src/services/swara.ts`). Detect swara on the source, never on transliterated output.
 * A **shloka** is a custom verse ending in `॥`; a **vakya** is other procedural text. Sukta lines are **mantras**.
 * Titles are shown by Sanskrit akshara count (`src/services/aksharas.ts`), never by UTF-16 length. The header limit is the longest default title.
-* Brand, titles and Sanskrit labels follow the selected script; English text does not change.
+* Titles and Sanskrit labels follow the selected script; English text does not change.
 
 ---
 

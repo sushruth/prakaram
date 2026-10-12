@@ -39,14 +39,14 @@ export function Header({
 
   return (
     <header className="app-header">
-      <div className="header-brand">
-        <span className="brand-title title-display">{transliterateVedic('पारायणम्', script)}</span>
-        <span className="brand-sub">Parayanam</span>
+      <div className="header-start">
+        <span className="header-flame" aria-hidden="true">
+          <Icon name="flame" size={22} />
+        </span>
+        <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={prakara.title}>
+          {transliterateVedic(displayTitle(prakara.title), script)}
+        </button>
       </div>
-
-      <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={prakara.title}>
-        {transliterateVedic(displayTitle(prakara.title), script)}
-      </button>
 
       <nav className="header-tools" aria-label="Actions">
         <button
