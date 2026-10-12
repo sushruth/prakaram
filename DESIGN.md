@@ -27,7 +27,7 @@ Prakaram is a chanting tool, not a temple. It should feel like a printed page on
 
 ## 3. Color Tokens
 
-Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"]` in `src/styles/theme.css`. Theme choice is **System** (default; follows the OS), **Light**, or **Dark**. System removes the `data-theme` attribute so `prefers-color-scheme` decides.
+Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"]` in `src/styles/tokens.css`. Theme choice is **System** (default; follows the OS), **Light**, or **Dark**. System removes the `data-theme` attribute so `prefers-color-scheme` decides.
 
 | Token | Value | Use |
 | :--- | :--- | :--- |
@@ -101,7 +101,7 @@ The reader is a page, not a set of cards.
 ## 5e. Header, Title and Flyouts
 
 - The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, Koshah, live room, zen). The cadence strip sits directly under it (36px), and the header and strip are one sticky block. Lines scrolling under the block fade out over 20px in the page colour (`.chrome::after`), so they follow the theme. There is no site name in the header.
-- The flame mark is Phosphor's flame outline with an amber-to-red gradient (the same everywhere); the favicon and PWA icons add a static glow. On screen its glow, sway and squash follow a random walk (`src/components/FlameMark.tsx`): each channel eases toward random targets at random intervals, so it never settles into a loop (off under reduced motion). The favicon and PWA icons are static, with a fixed glow. The sources are `src/components/FlameMark.tsx` and `public/favicon.svg`; `public/icons/*.png` are rendered from the SVG.
+- The flame mark is Phosphor's flame outline with an amber-to-red gradient (the same everywhere); the favicon and PWA icons add a static glow. On screen its glow, sway and squash follow a random walk (`src/components/FlameMark.tsx`): each channel eases toward random targets at random intervals, so it never settles into a loop (off under reduced motion). The favicon and PWA icons are static, with a fixed glow. The sources are `src/components/FlameMark.tsx` and `public/favicon.svg`; `public/icons/*.png` are rendered from the SVG. `public/icons/icon-monochrome-512.png` is the manifest's monochrome icon (`purpose: monochrome`), for Android themed icons.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
 - Settings, details and cadence use the same drop panel. Only one is open at a time. Both are opaque, with no border or shadow, and the content behind them sits under `--scrim`.
@@ -132,8 +132,8 @@ There is one pace, in milliseconds per mātrā. Every mode uses it.
 
 | Mode | What it does | Pace slider | Next or Tap | Progress indicator |
 | :--- | :--- | :--- | :--- | :--- |
-| **Off** | No auto-advance. You move the lines. | Pale and disabled | Next | Hidden |
-| **Manual** (default) | Lines advance on their own at the set pace. | Live, sets the pace | Next. Restarts the countdown | Minimap, with pause |
+| **Off** (default) | No auto-advance. You move the lines. | Pale and disabled | Next | Hidden |
+| **Manual** | Lines advance on their own at the set pace. | Live, sets the pace | Next. Restarts the countdown | Minimap, with pause |
 | **Learn** | Taps teach the pace. After six lines, lines advance at the learned pace. | Live afterwards, adjusts the learned pace | Tap while learning, then Next | Seconds and count while learning; minimap once learned |
 
 ### States
@@ -162,7 +162,7 @@ There is one pace, in milliseconds per mātrā. Every mode uses it.
 
 ```mermaid
 stateDiagram-v2
-  [*] --> manual
+  [*] --> off
   manual --> off: setMode off
   off --> manual: setMode manual
   manual --> waiting: setMode learn
@@ -224,6 +224,8 @@ One slider, in milliseconds per mātrā, from 50 to 3000, default 833. The scale
 
 **Disabled.** A disabled control is drawn at 30% opacity and does not respond. The pace slider is disabled in Off. The Auto switch and Learn toggle are disabled for a room follower, whose host controls cadence.
 
+**Default.** Auto is off on a first run (`INITIAL_LEARNING` is `off`). Saved settings are kept as they were.
+
 **Persistence.** The mode, the learned line count and the pace are saved. Pause and the learning clock are not. There are no users yet, so saved state is not migrated; a change to the saved shape may reset it.
 
 ## 5d. Zen
@@ -237,7 +239,7 @@ Zen shows only the content and the zen (lotus) button. Everything else in the he
 
 ## 5f. Koshah
 
-The Koshah is the library: every piece of text the app holds, presented as a wiki. Its pages replace the player while the address is a `#/wiki` route. The header's Koshah icon opens the main page, and the search box in the wiki bar searches it. Old `#k=<pieceId>` links are redirected to the article address.
+The Koshah is the library: every piece of text the app holds, presented as a wiki. Its pages replace the player while the address is a `#/wiki` route. The player header's Koshah icon opens the main page. Wiki pages have the player's header, tokens and gutters: `WikiTopBar` (`src/components/Header.tsx`) holds the flame (to the main page), the search box with suggestions, then settings, Koshah, live room and player icons, with a **My prakaram (n)** link under it. Settings open the same drop panel as in the player. Old `#k=<id>` and `#k=<id>/<n>` links are redirected to the article address.
 
 ### Routes
 
@@ -248,11 +250,12 @@ The Koshah is the library: every piece of text the app holds, presented as a wik
 | `#/wiki/<id>/<n>` | The same article, scrolled to section `n` |
 | `#/wiki/Category:<name>` | Articles in one category |
 | `#/wiki/Special:Search?q=<text>` | Search results |
-| `#/wiki/Special:Random` | A random article; the app redirects to it. |
+| `#/wiki/Special:Random` | A random article; the app redirects to it (reached by address only, no link) |
+| `#/wiki/Special:Compose` | My prakaram: the basket, ordered and named (see My prakaram) |
 
 Ids, category names and search text are URL-encoded. Anything outside `#/wiki` is the player. `#compose` opens the prakara composer in the player.
 
-`parseRoute()` and the address builders (`articleHash()`, `categoryHash()`, `searchHash()`) live in `src/services/wikiNav.ts`. Article and category data come from `src/services/wiki.ts`, derived from `src/data` on each render.
+`parseRoute()` and the address builders (`articleHash()`, `categoryHash()`, `searchHash()`, `COMPOSE_HASH`) and `legacyHash()` live in `src/services/wikiNav.ts`. Article and category data come from `src/services/wiki.ts`, derived from `src/data` on each render.
 
 ### Pieces
 
@@ -268,17 +271,17 @@ A piece is one thing that can be read or run. Pieces are derived from the docume
 | Whole sukta | `<documentId>`, e.g. `rudram-namakam` | `sukta` | The document title |
 | One section | `<documentId>/<sectionNumber>`, e.g. `rudram-namakam/3` | `anuvaka` | The document title, then the section title in English |
 
-Each section heading in an article follows that section's piece. The play button beside the title follows the whole document. Following makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
+Each section heading in an article follows that section's piece (its sectionId is kept). The play button beside the title follows the whole document. Following makes the piece the active prakara, then leaves the wiki for the player. Nothing is added to the saved prakaras.
 
 ### Sources and compositions
 
 A **source** article owns text. Its sections are its addressable parts: `docId/n` is one part (line ranges are not supported). A **composition** article (`metadata.kind: "composition"`) owns no text; `metadata.parts` lists `{ article, section?, note? }` references to parts of sources, in order. The default prakaras in `src/data/defaultPrakaras.ts` appear as compositions, derived by `prakaraAsDoc()`: their sukta items become parts, their procedural vakyas are left out.
 
-A composition page shows the referenced text inline, each part headed "from <source> §n" with a link back, then **Brings** (inherited from its parts). The play button beside the title (**Follow this composition**) runs it. A source page lists its sections, each with follow and Add to my prakaram, and, in Info, **Used in**: the compositions that reference any of its parts, computed. Missing ids and cycles are skipped. The main page has Browse by kind (Sources, Compositions).
+A composition page shows the referenced text inline, each part headed "from <source> §n" with a link back, then **Brings** (inherited from its parts). The play button beside the title (**Follow this composition**) runs it. A source page lists its sections, each with [follow] and, when the article has more than one section, Add to my prakaram, and, in Info, **Used in**: the compositions that reference any of its parts, computed. Missing ids and cycles are skipped. The main page has Browse by kind (Sources, Compositions).
 
 ### Media
 
-An article brings media: text, transliteration, translation, audio, commentary, image. Text (Devanagari, with swara when the lines carry the marks), transliteration (IAST, Telugu, Kannada, Malayalam, Tamil) and English translation (when lines have `translation`) are derived. Anything else is declared in `metadata.media`. A composition inherits the media of its parts. The page lists them under **Brings**, a plain list after the text: kind, language, script, swara, count, source. Search matches the kind words. The player plays text only for now.
+An article brings media: text, transliteration, translation, audio, commentary, image. Text (Devanagari, with swara when the lines carry the marks), transliteration (IAST, Telugu, Kannada, Malayalam, Tamil) and English translation (when lines have `translation`) are derived. Anything else is declared in `metadata.media`. A composition inherits the media of its parts. The page lists them under **Brings**, a plain list after the text: kind, language, script, swara, count, source. Search matches the kind words. The player plays text only for now: other media are listed, not played.
 
 ### Article anatomy
 
@@ -292,6 +295,10 @@ An article is a page of text with no boxes, borders, rules or tints. Space and t
 The main page, search and category pages follow the same rule: large welcome line, counts as plain figures, stacked text entries, matches in accent colour (no `<mark>` fill). The wiki search field has no border or underline; it is a caret and muted placeholder, with the focus ring on `:focus-visible` only. Its suggestion list is an opaque `--bg-base` surface with no border or shadow.
 
 The text shown is the text the player runs. A missing article id shows "This article does not exist yet" and a link to create it on GitHub.
+
+### My prakaram
+
+Add to my prakaram (on an article, or on a section) puts a piece in the basket, `useBasketStore` (`src/stores/useBasketStore.ts`, persisted as `prakaram-basket`; ids that no longer exist are dropped on load). The toggle then reads "Added ✓ · remove". `#/wiki/Special:Compose` lists the basket with each piece's line count and media, lets you move a piece up or down or remove it, name the result, and then **Follow now** (saves it as a prakara and opens the player) or **Save to my prakarams** (saves it and stays). `basketToPrakara()` in `src/services/basket.ts` builds the prakara: one `sukta_ref` per piece, and a section piece keeps its `sectionId`, so it runs that section only. An empty basket shows three steps. Limits: whole texts and sections only (no line ranges), the player plays text only, and Follow on a composition saves it as a new prakara each time. Reordering is by up and down buttons, not drag.
 
 ### Editing
 
@@ -307,18 +314,21 @@ Each document's `metadata` feeds the wiki. The type is `MantraDocument` in `src/
 
 | Field | Use |
 | :--- | :--- |
-| `veda` | `rigveda`, `yajurveda`, `samaveda`, `atharvaveda` or `other`. Infobox Veda, and the Veda counts on the main page |
-| `vedaNote` | Branch and reference, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; the wiki does not show it yet |
-| `deity` | The deity in plain English. Infobox Deity, the deity counts on the main page, and search |
+| `veda` | `rigveda`, `yajurveda`, `samaveda`, `atharvaveda` or `other`. Info Veda, and the Veda counts on the main page |
+| `vedaNote` | The older free-text Veda note, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; the wiki does not show it, and `veda` is what it uses |
+| `deity` | The deity in plain English. Info Deity, the deity counts on the main page, and search |
 | `categories` | Category names, e.g. `Suktas`, `Rudram`, `Devi`. Category pages, the footer and search |
 | `summary` | Two or three sentences, like a Wikipedia lead. The lead, and search |
 | `related` | Ids of other documents. Related articles, in the order given |
-| `usage` | When the text is chanted. Infobox Usage |
-| `source` | Where the text comes from. Infobox Source |
+| `usage` | When the text is chanted. Info Usage |
+| `kind` | `source` (default) or `composition` |
+| `parts` | For a composition: `{ article, section?, note? }` references, in order |
+| `media` | Declared media beyond the derived ones: `kind`, `label`, `language`, `script`, `swara`, `source`, `license`, `url` |
+| `source` | Where the text comes from. Info Source |
 | `status` | See Status below |
-| `license` | Licence or permission note. Infobox Licence |
+| `license` | Licence or permission note. Info Licence |
 
-Search ranks a title match first (3), then a category or deity match (2), then a summary match (1). It ignores case and Latin diacritics, so "Sri" finds "Śrī". Ties keep document order.
+Search ranks a title match first (3), then a category or deity match (2), then a summary match (1), then a section title or source match (0.5). Media kind words count as a category match. It ignores case and Latin diacritics, so "Sri" finds "Śrī". Ties keep document order.
 
 ### Status
 
@@ -362,13 +372,14 @@ Text first. The app is words on paper, and controls are words too.
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
 - **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
-- **Groups are rows of words.** Mode and option choices (Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
+- **Groups are rows of words.** Option choices (System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
 - **The glow belongs to the glyph, never the box.** Icon buttons have no fill, tint, hover box or border in any state. The flame filter is applied to the icon's `svg`, so only the drawn shape glows. Never put `filter` on a button or a container.
 - **Pressed state is a small scale-down and the flame glow on the icon.** No background change on press.
 - **Disabled is the palest version.** A disabled control drops to 30% opacity and takes no input. It keeps its shape and words.
 - **Surfaces are fills, not frames.** A panel is an opaque `--bg-base` surface with no border and no shadow. Content behind a flyout sits under the half-strength `--scrim`.
 - **Separation is space**, not lines. Use spacing and type scale before adding any rule.
+- **The wiki obeys the same rules.** Articles, the main page, search, My prakaram and the wiki bar use text, space and type scale only (§5f).
 
 ## 8. Checklist for a Design Change
 

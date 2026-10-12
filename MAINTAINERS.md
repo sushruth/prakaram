@@ -8,15 +8,20 @@
 
 ```
 [ User Browser / PWA ]
-  ├── Preact UI: header (flame, title, progress strip, icons), reader, back-to-line,
-  │     drop panels (settings, prakara details, cadence, Koshah), piece page, modals
+  ├── Preact UI: player (header, cadence strip, reader, back-to-line) or Koshah wiki,
+  │     chosen by the hash route (#/wiki...); drop panels (settings, prakara details,
+  │     cadence); modals. Wiki pages: WikiHome, WikiArticle, WikiCategory, WikiSearch,
+  │     WikiCompose, under WikiTopBar. All Sanskrit goes through components/Sanskrit.tsx
   ├── zustand stores
   │     ├── persisted: useSettingsStore (prakaram-settings)
   │     │             useCadenceStore  (prakaram-cadence: mode, learned lines, pace)
   │     │             usePrakaraStore  (prakaram-prakaras)
   │     │             useMantraStore   (prakaram-progress: line per prakara, zen)
+  │             useBasketStore   (prakaram-basket: My prakaram pieces)
   │     └── in memory: useRoomStore, cadence pause and learning clock
   ├── Transliteration registry (Devanagari, Telugu, Kannada, Tamil, Malayalam, IAST)
+  ├── Wiki (services/wiki.ts articles and search, wikiNav.ts routes, koshah.ts pieces,
+  │     basket.ts), derived from src/data on each render
   ├── Chunking (danda phrase split, median-length breaks), aksharas, swara detection
   ├── Cadence mode machine (services/cadenceMachine.ts: Off, Manual, Learn; pure transition function)
   ├── Cadence engine (pace 50-3000 ms per mātrā, learned from taps)
@@ -45,6 +50,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 {
   "name": "prakaram",
   "compatibility_date": "2026-01-01",
+  "previews": {},
   "assets": { "directory": "./dist", "not_found_handling": "single-page-application" }
 }
 ```
@@ -54,6 +60,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 3. Deploy command: `bunx wrangler deploy`. Build cache is enabled on the Workers project.
 4. Production branch: `main`. Each push to it builds and deploys.
 5. No environment variables are needed for the frontend.
+6. **PR previews.** The empty `"previews": {}` block in `wrangler.jsonc` makes Cloudflare build a preview for each branch and pull request. The preview URL is `https://<branch>-prakaram.sushruth-sastry.workers.dev`, and the Cloudflare bot comments it on the PR. Production is `main` only.
 
 Before every push to `main`, check that CI passed (see §5).
 
@@ -115,22 +122,23 @@ bunx tsc --noEmit
 
 ## 4a. Adding or Editing an Article in the Koshah
 
-The Koshah wiki is built from the documents in `src/data`. Nothing is stored separately: each document gives one article, and each of its sections gives a section of that article (DESIGN.md §5f).
+The Koshah wiki is built from the documents in `src/data`. Nothing is stored separately: each document gives one article, and each of its sections gives a section of that article (DESIGN.md §5f). The built-in prakaras in `src/data/defaultPrakaras.ts` are derived as composition articles, so they need no document.
 
 ### Adding a document
 
 1. Write the document as `src/data/<id>.json`. Its shape is `MantraDocument` in `src/types/mantra.ts`: `id`, `title` (`sanskrit`, `transliteration`, `english`), `metadata`, and `sections`. Each section has `id`, `title`, `sectionNumber` and `chunks`.
 2. Fill in `metadata`:
-   - `source`: where the text comes from. Infobox Source.
+   - `source`: where the text comes from. Info Source.
    - `status`: `draft` until the text is proofread against a printed edition, then `proofread`. Use `reviewed` only after a second check. A missing status counts as `draft`.
-   - `license`: the licence or permission note. Infobox Licence. If permission is not confirmed, say so here and keep `status` at `draft`.
+   - `license`: the licence or permission note. Info Licence. If permission is not confirmed, say so here and keep `status` at `draft`.
    - `veda`: `rigveda`, `yajurveda`, `samaveda`, `atharvaveda` or `other`. Optional, but the Veda counts on the main page need it.
-   - `vedaNote`: branch and reference, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; not shown yet.
+   - `vedaNote`: the older free-text note, e.g. "Krishna Yajurveda, Taittiriya Samhita 4.5". Kept in the data; the wiki does not show it. Use `veda` for the wiki.
    - `deity`: the deity in plain English.
    - `categories`: names such as `Suktas`, `Rudram` or `Devi`. Each name gets a category page.
    - `summary`: two or three plain English sentences, like the lead of a Wikipedia article.
    - `related`: ids of other documents, shown as Related articles.
    - `usage`: when the text is chanted.
+   - `kind`, `parts`, `media`: see Declaring media, and compositions.
 3. Register the file in two places in `src/data/index.ts`:
    - Add the document to `ALL_SUKTAMS`. Without this the document has no article.
    - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
@@ -159,12 +167,12 @@ A source (the default) owns its text, and its sections are the parts others can 
 }
 ```
 
-Register it in `ALL_SUKTAMS` like any document (or add a default prakara, which is derived into a composition for you). Referenced ids must exist; cycles and missing ids are skipped silently. The source's page then lists it under Used in.
+Register it in `ALL_SUKTAMS` and `SUKTA_FILE` like any document (or add a default prakara, which is derived into a composition for you). Referenced ids must exist; cycles and missing ids are skipped silently. The source's page then lists it under Used in.
 
 ### Editing an existing article
 
-1. Open the article's **Edit** tab, or its **[edit]** link on a section. Both open `src/data/<file>.json` on GitHub.
-2. Change the text, or the metadata fields above. Keep `id` and section ids stable: piece ids and `#/wiki/<id>/<n>` addresses depend on them.
+1. Open the article's **Edit** link (in Info), or the **[edit]** link on a section. Both open `src/data/<file>.json` on GitHub.
+2. Change the text, or the metadata fields above. Keep `id` and section ids stable: piece ids, saved My prakaram baskets (ids that no longer exist are dropped) and `#/wiki/<id>/<n>` addresses depend on them.
 3. Check the status and licence fields after every text change. Do not raise `status` without a check against a printed edition.
 
 ### Opening a pull request
@@ -213,7 +221,7 @@ bun scripts/kannadaToDocument.ts <in.txt> <out.json> <id> <idPrefix>
 
 ## 5. Continuous Integration
 
-`.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. The Bun package cache (`~/.bun/install/cache`) is restored from `actions/cache`, keyed on `bun.lock`. Deploys are not part of CI; Cloudflare's Git integration deploys `master`, and its build only needs install and build (the typecheck and tests run in CI).
+`.github/workflows/ci.yml` runs on every push and pull request: install with `--frozen-lockfile`, `tsc --noEmit`, `bun test`, and `bun run build`. The Bun package cache (`~/.bun/install/cache`) is restored from `actions/cache`, keyed on `bun.lock`. Deploys are not part of CI; Cloudflare's Git integration deploys `main` (branches and PRs get previews, §2.A), and its build only needs install and build (the typecheck and tests run in CI).
 
 ---
 
@@ -227,7 +235,7 @@ bun scripts/kannadaToDocument.ts <in.txt> <out.json> <id> <idPrefix>
 
 ## 7. Handoff
 
-**Branches.** Push to `main`. It is the Cloudflare production branch, so every push there builds and deploys.
+**Branches.** `main` is the Cloudflare production branch, so every push there builds and deploys. Work on a branch and open a PR: CI runs, and Cloudflare builds a preview of the branch (§2.A item 6).
 
 **Repo.** The repo is `sushruth/prakaram` (renamed from `parayanam`; the old URL redirects). The app is served at `prakaram.sushruth.dev`. The production branch is `main`, which replaced `master`.
 
@@ -235,7 +243,9 @@ bun scripts/kannadaToDocument.ts <in.txt> <out.json> <id> <idPrefix>
 
 **Worker name.** The Worker is `prakaram`. It was recreated after the old `parayanam` Worker was deleted, so the Workers Builds connection and the `prakaram.sushruth.dev` domain binding must be set up again on the new Worker. The root `wrangler.jsonc` name must match the Worker's name, or deploys go to a different Worker.
 
-**Still to verify on the Cloudflare side:** the Git link to the Workers project (it should build `main`), and that `prakaram.sushruth.dev` routes to the `prakaram` Worker. Neither could be checked from the sandbox.
+**Verified:** PR preview builds work with the `"previews": {}` block (branch preview URL and the Cloudflare bot's PR comment).
+
+**Still to verify on the Cloudflare side:** the production deploy of `main` with the `previews` block, after this PR merges; and that `prakaram.sushruth.dev` routes to the `prakaram` Worker. Neither could be checked from the sandbox.
 
 **Checks before a push** (the same ones CI runs):
 
@@ -248,7 +258,9 @@ bun run build
 
 **Measured times** (local, bun 1.4.2, fresh clone): install 3.4 s cold, 0.24 s warm; `tsc` 2.9 s; `bun test` 0.1 s; build 1.6 s; `wrangler deploy --dry-run` 2.0 s warm, 4.4 s cold. CI's check job took about 15 s before the Bun package cache was added. The real Cloudflare upload and queue time were not measured.
 
-**Shipped recently:** installable PWA (manifest, icons, production-only service worker); the Phosphor flame outline with its gradient, with a random-walk flicker and sway (off under reduced motion); a taller cadence strip and flyouts that fade out below their panels; pause and the current line's remaining time persist across reloads; slate-blue accent with a yellow-first spectrum on switches and active words; the Prakaram rename; a GitHub link in settings.
+**Current numbers** (last run, bun 1.4.2): 112 tests pass in 16 files (about 45 ms). `bun run build` takes about 1.3 s and gives a JS bundle of 294.10 kB (88.94 kB gzipped) and CSS of 23.98 kB (5.65 kB gzipped). The JS is above the 220 KB target in `AGENTS.md` §4 (`origin/main` was 273.50 kB, also above it).
+
+**Shipped recently:** the Koshah wiki (git-backed articles at hash routes, sources and compositions, per-article media, Used in backlinks, Follow wording, My prakaram basket and Special:Compose, the player's header on wiki pages, one Sanskrit renderer with a guard test); Auto (cadence) off by default; a monochrome PWA icon for Android themed icons; PR previews; installable PWA (manifest, icons, production-only service worker); the Phosphor flame outline with its gradient, with a random-walk flicker and sway (off under reduced motion); a taller cadence strip and flyouts that fade out below their panels; pause and the current line's remaining time persist across reloads; slate-blue accent with a yellow-first spectrum on switches and active words; the Prakaram rename; a GitHub link in settings.
 
 **Open items** (from the UI review; none is in progress):
 
@@ -265,4 +277,6 @@ bun run build
 * Known gaps in §6 still apply: the passkey verify endpoints are not implemented, and the Worker config has a placeholder D1 ID and a committed `JWT_SECRET`.
 * Confirm permission to reuse the Vignanam text of the Sri Rudram (Namakam and Chamakam), in writing, or replace it with text under a stated open licence. Until then both documents stay `draft` (see `THIRD_PARTY_NOTICES.md`).
 * Proofread Rudram Namakam and Chamakam against a printed edition, then set `metadata.status` to `proofread`. The status stays `draft` until the permission above is settled.
-* Idea, not built: a wiki-style Koshah. The texts would live in a separate content repository, each layer (text, swara marks, translation) would state its own licence, and contributions would come by pull request.
+* Bundle size: the JS is 294.10 kB against the 220 KB target (and the build is 1.3 s against 1 s). Trim or raise the target in `AGENTS.md` §4.
+* Wiki parts are whole sections only. Line-range parts (`docId/n` plus a line span) are not supported.
+* Idea, not built: keep the texts in a separate content repository, with each layer (text, swara marks, translation) stating its own licence. Today the texts live in `src/data` and changes come by pull request.
