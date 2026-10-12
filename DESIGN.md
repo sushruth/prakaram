@@ -177,7 +177,7 @@ Smart controls use the flame glow on the glyph or value, as with any active cont
 
 **Pause.** Tapping the ring pauses auto progress. The ring freezes and a yellow pause mark appears inside it. Tapping again resumes with the time that was left. Pause is for the engaged phase only, and it is not saved: a reload starts unpaused. Jumping to another line while paused restarts that line at full time when you resume.
 
-**Verse numbers.** Annotations such as `॥ २ ॥` or `|| 12 ||` are not chanted. They add no mātrās. A numbered end keeps one danda, so the line still pauses at its end.
+**Only chant is timed.** A line's time counts Devanagari letters, marks, swara and dandas. Anything else adds nothing: Latin text, brackets, pipes, and verse numbers such as `॥ २ ॥` or `|| 12 ||`. A numbered end keeps one danda, so the line still pauses at its end. The Vedic sign `ꣳ` belongs to the syllable before it, like anusvara.
 
 **Pace.** One slider in milliseconds per mātrā, from 250 to 3000 in steps of 10, default 833. Longer lines take longer. Learned pace is clamped to the same range. There are no presets.
 

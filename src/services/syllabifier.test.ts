@@ -16,3 +16,17 @@ describe('chunk weight ignores verse-number annotations', () => {
     expect(calculateChunkWeight('ॐ नमः ॥')).toBeGreaterThan(calculateChunkWeight('ॐ नमः'));
   });
 });
+
+describe('only chant is timed', () => {
+  it('ignores Latin text inside a chant line', () => {
+    expect(calculateChunkWeight('पsourceरा॒यणम्')).toBe(calculateChunkWeight('परा॒यणम्'));
+  });
+
+  it('ignores brackets and stray Latin letters', () => {
+    expect(calculateChunkWeight('[ॐ] नमः (शिवाय)')).toBe(calculateChunkWeight('ॐ नमः शिवाय'));
+  });
+
+  it('keeps the Vedic sign ꣳ inside its syllable', () => {
+    expect(calculateChunkWeight('नमꣳ')).toBe(calculateChunkWeight('नमं'));
+  });
+});

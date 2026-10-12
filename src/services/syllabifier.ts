@@ -5,6 +5,8 @@ const GURU_MATRAS = new Set(['ा', 'ी', 'ू', 'ॄ', 'े', 'ै', 'ो', '�
 
 // Verse-number annotations such as "॥ २ ॥" or "|| 12 ||" are not chanted. Keep one danda from each so the line keeps its pause.
 const VERSE_NUMBER = /[।॥|]*\s*[0-9०-९]+\s*[।॥|]*/g;
+// Only Devanagari chant (letters, marks, swara, dandas) is timed. Latin text, brackets and pipes are not.
+const NOT_CHANT = /[^\u0900-\u0965\u0970-\u097F\u1CD0-\u1CFF\uA8E0-\uA8FF\s]/g;
 
 const ANUDATTA = '\u0952';
 const SVARITA = '\u0951';
@@ -14,7 +16,7 @@ export function syllabifyVedic(text: string): AksharaToken[] {
   if (!text) return [];
 
   const tokens: AksharaToken[] = [];
-  const spoken = text.replace(VERSE_NUMBER, (m) => m.match(/[।॥]+/)?.[0] ?? ' ');
+  const spoken = text.replace(VERSE_NUMBER, (m) => m.match(/[।॥]+/)?.[0] ?? ' ').replace(NOT_CHANT, ' ');
   const words = spoken.split(/(\s+|[।॥])/);
 
   for (const word of words) {
@@ -92,7 +94,7 @@ function tokenizeWord(word: string): AksharaToken[] {
       } else if (c === 'ि' || c === 'ु' || c === 'ृ' || c === 'ॢ') {
         syllableText += c;
         i++;
-      } else if (c === 'ं' || c === 'ः') {
+      } else if (c === 'ं' || c === 'ः' || c === 'ꣳ') {
         isGuru = true;
         syllableText += c;
         i++;
