@@ -140,7 +140,7 @@ export function App() {
             <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />
           </>
         ) : (
-          <WikiTopBar query={route.kind === 'search' ? route.q : ''} />
+          <WikiTopBar query={route.kind === 'search' ? route.q : ''} onOpenSettings={() => toggle('settings')} settingsOpen={drop === 'settings'} />
         )}
       </div>
 

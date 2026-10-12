@@ -110,8 +110,8 @@ export function WikiArticle({ id, section, onRun }: WikiArticleProps) {
       )}
 
       <aside className="wiki-infobox" aria-label="Facts about this text">
-        <button type="button" className="wiki-chant" onClick={() => onRun(article.id)}>
-          ▶ Chant this
+        <button type="button" className="btn-primary wiki-chant" onClick={() => onRun(article.id)}>
+          Chant this
         </button>
         <dl>
           {article.veda && (

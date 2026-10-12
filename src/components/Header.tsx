@@ -75,7 +75,7 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
 }
 
 /** The top bar on every wiki page: logo to the Main page, search with suggestions, and a way back to the player. */
-export function WikiTopBar({ query }: { query: string }) {
+export function WikiTopBar({ query, onOpenSettings, settingsOpen }: { query: string; onOpenSettings: () => void; settingsOpen: boolean }) {
   const script = useSettingsStore((s) => s.script);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
@@ -85,10 +85,9 @@ export function WikiTopBar({ query }: { query: string }) {
   const suggestions = term ? searchArticles(term).slice(0, 6) : [];
 
   return (
-    <header className="wiki-bar">
-      <a className="wiki-logo" href={HOME_HASH} aria-label="Koshah main page">
-        <FlameMark size={22} />
-        <span>Koshah</span>
+    <header className="app-header wiki-bar">
+      <a className="header-flame" href={HOME_HASH} aria-label="Koshah main page" title="Koshah">
+        <FlameMark size={24} />
       </a>
 
       <form
@@ -131,9 +130,14 @@ export function WikiTopBar({ query }: { query: string }) {
         )}
       </form>
 
-      <a className="wiki-player" href="#">
-        Player
-      </a>
+      <nav className="header-tools" aria-label="Actions">
+        <button className="icon-btn" onClick={onOpenSettings} aria-label="Settings" aria-expanded={settingsOpen} title="Settings">
+          <Icon name="gear" size={20} />
+        </button>
+        <a className="icon-btn" href="#" aria-label="Back to the player" title="Player">
+          <Icon name="play" size={20} />
+        </a>
+      </nav>
     </header>
   );
 }

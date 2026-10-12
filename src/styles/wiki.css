@@ -4,7 +4,7 @@
     box-sizing: border-box;
     max-width: 44rem;
     margin: 0 auto;
-    padding: 1.5rem 1.25rem 3rem;
+    padding: 0 0 3rem;
     overflow-wrap: anywhere;
   }
 
@@ -17,9 +17,9 @@
     text-decoration: underline;
   }
 
-  .wiki-article :is(a, button):focus-visible {
+  .wiki-article a:focus-visible {
     outline: 1px solid var(--accent);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 
   .wiki-article h2:focus {
@@ -43,11 +43,11 @@
   }
 
   .wiki-article .wiki-title {
-    margin: 2.5rem 0 0;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.85rem;
-    font-weight: 400;
-    line-height: 1.25;
+    margin: 2rem 0 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
   }
 
   .wiki-subtitle {
@@ -102,13 +102,7 @@
     min-height: 2.5rem;
     margin: 0;
     padding: 0;
-    border: 0;
-    background: none;
-    color: var(--accent);
-    font: inherit;
     font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
   }
 
   .wiki-status {
@@ -153,9 +147,9 @@
   .wiki-section-title {
     scroll-margin-top: calc(var(--header-h) + var(--fade-h));
     margin: 0 0 1.25rem;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.35rem;
-    font-weight: 400;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   .wiki-section-actions {
@@ -179,7 +173,8 @@
   }
 
   .wiki-line {
-    margin: 0 0 1rem;
+    padding: 0.2rem 0;
+    margin: 0 0 0.45rem;
     overflow-wrap: anywhere;
   }
 
