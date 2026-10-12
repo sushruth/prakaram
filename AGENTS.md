@@ -53,6 +53,7 @@ A chunk is a **line** (a pada group), not a traditional mantra, so the finest ho
 | Ordered steps | **Krama** (क्रम) | sequence |
 | One step | **Aṅga** (अङ्ग) | a limb of the rite |
 | Address of a source, section, line or range | **Nirdeśa** (निर्देश) | citation |
+| A line of the text (the unit a range is made of) | **Pāda** (पाद) | a foot or quarter of a verse; one displayed line |
 | Variant or personal reading | **Pāṭhāntara** (पाठान्तर) | another reading |
 | What an article brings | **Sāmagrī** (सामग्री) | the materials |
 | Translation | **Anuvāda** (अनुवाद) | |
