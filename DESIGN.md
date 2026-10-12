@@ -123,7 +123,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header is one row, vertically centred: brand on the left, four borderless icon buttons on the right (settings, prakara, room, zen). Active icons show a tint.
+- Header is one row, vertically centred: brand on the left, four borderless icon buttons on the right (settings, prakara, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - The control bar wraps onto rows. Nothing is hidden off-screen.
 - Touch targets stay at 38 px minimum.
@@ -139,7 +139,8 @@ Text first. The app is words on paper, and controls are words too.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
 - **Groups are rows of words.** Mode and option choices (Off / Learn / Auto, Dhyāna / Abhyāsa / Pārāyaṇa, System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
-- **Pressed state is a small scale-down and the flame glow.** No background change on press.
+- **The glow belongs to the glyph, never the box.** Icon buttons have no fill, tint, hover box or border in any state. The flame filter is applied to the icon's `svg`, so only the drawn shape glows. Never put `filter` on a button or a container.
+- **Pressed state is a small scale-down and the flame glow on the icon.** No background change on press.
 - **Surfaces are fills, not frames.** A panel is an opaque `--bg-base` surface with no border and no shadow. Content behind a flyout sits under the half-strength `--scrim`.
 - **Separation is space**, not lines. Use spacing and type scale before adding any rule.
 
@@ -147,6 +148,7 @@ Text first. The app is words on paper, and controls are words too.
 
 - [ ] Are there no borders, outlines or pills (except the listed exceptions)?
 - [ ] Is every button text, with the active state shown by accent colour and glow?
+- [ ] Does the glow sit on the icon glyph (not on a button box), with no fill on any icon-button state?
 - [ ] Does the active line still have no container?
 - [ ] Are inactive lines still semi-transparent, and the active one fully opaque?
 - [ ] Is there still only one accent hue?
