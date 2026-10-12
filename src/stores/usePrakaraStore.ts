@@ -20,23 +20,11 @@ const isDefault = (p: Prakara) => DEFAULT_PRAKARAS.some((d) => d.id === p.id);
 const isPrakara = (v: unknown): v is Prakara =>
   typeof v === 'object' && v !== null && typeof (v as Prakara).id === 'string' && Array.isArray((v as Prakara).items);
 
-const LEGACY_KEY = 'parayanam_custom_prakaras';
-
-function legacyCustomPrakaras(): Prakara[] {
-  try {
-    const raw = localStorage.getItem(LEGACY_KEY);
-    const parsed: unknown = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed.filter(isPrakara) : [];
-  } catch {
-    return [];
-  }
-}
-
 export const usePrakaraStore = create<PrakaraState>()(
   persist(
     (set, get) => ({
       prakaras: DEFAULT_PRAKARAS,
-      activePrakaraId: 'maha-parayanam',
+      activePrakaraId: 'maha-prakaram',
 
       selectPrakara: (id) => set({ activePrakaraId: id }),
 
@@ -96,7 +84,7 @@ export const usePrakaraStore = create<PrakaraState>()(
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as { customPrakaras?: unknown; activePrakaraId?: unknown };
         const stored = Array.isArray(p.customPrakaras) ? p.customPrakaras.filter(isPrakara) : null;
-        const custom = stored ?? legacyCustomPrakaras();
+        const custom = stored ?? [];
         return {
           ...current,
           prakaras: [...DEFAULT_PRAKARAS, ...custom.filter((c) => !isDefault(c))],

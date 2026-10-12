@@ -2,7 +2,7 @@ import { Prakara } from '../types/mantra';
 
 export const DEFAULT_PRAKARAS: Prakara[] = [
   {
-    id: 'maha-parayanam',
+    id: 'maha-prakaram',
     title: 'महापारायणम् (Maha Parayanam)',
     author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
     description: 'Complete sacred sequence: Ganapati -> Purusha -> Sri -> Durga -> Narayana',
