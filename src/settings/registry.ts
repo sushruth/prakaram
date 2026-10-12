@@ -1,6 +1,6 @@
 import type { ComponentType } from 'preact';
 import { ScriptSelector } from '../components/ScriptSelector';
-import { FontSizeStepper, SplitSwitch, ThemeSegmented, WrapSwitch } from './controls';
+import { FontSizeStepper, PauseAwaySwitch, SplitSwitch, ThemeSegmented, WrapSwitch } from './controls';
 
 export interface SettingDescriptor {
   id: string;
@@ -13,5 +13,6 @@ export const SETTINGS: readonly SettingDescriptor[] = [
   { id: 'fontSize', label: 'Text size', Control: FontSizeStepper },
   { id: 'wrap', label: 'Wrap long lines', Control: WrapSwitch },
   { id: 'split', label: 'Split into phrases', Control: SplitSwitch },
+  { id: 'pauseAway', label: 'Pause when away', Control: PauseAwaySwitch },
   { id: 'theme', label: 'Theme', Control: ThemeSegmented },
 ];

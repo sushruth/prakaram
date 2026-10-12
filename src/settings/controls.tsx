@@ -27,6 +27,12 @@ export function WrapSwitch() {
   return <Switch checked={checked} onToggle={onToggle} />;
 }
 
+export function PauseAwaySwitch() {
+  const checked = useSettingsStore((s) => s.pauseWhenAway);
+  const onToggle = useSettingsStore((s) => s.togglePauseWhenAway);
+  return <Switch checked={checked} onToggle={onToggle} />;
+}
+
 export function SplitSwitch() {
   const checked = useSettingsStore((s) => s.splitLines);
   const onToggle = useSettingsStore((s) => s.toggleSplitLines);

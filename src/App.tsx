@@ -22,6 +22,21 @@ export function App() {
   const { addPrakara } = usePrakaraStore();
   const { setMsPerMatra } = useCadenceStore();
   const zenMode = useMantraStore((s) => s.zenMode);
+  const setAway = useMantraStore((s) => s.setAway);
+
+  useEffect(() => {
+    const onVisibility = () => setAway(document.hidden);
+    const onBlur = () => setAway(true);
+    const onFocus = () => setAway(document.hidden);
+    document.addEventListener('visibilitychange', onVisibility);
+    window.addEventListener('blur', onBlur);
+    window.addEventListener('focus', onFocus);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility);
+      window.removeEventListener('blur', onBlur);
+      window.removeEventListener('focus', onFocus);
+    };
+  }, [setAway]);
 
   const toggle = (kind: DropKind) => setDrop((current) => (current === kind ? null : kind));
   const closeDrop = () => setDrop(null);

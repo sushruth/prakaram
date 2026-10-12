@@ -14,11 +14,13 @@ export interface SettingsState {
   fontSize: number;
   wrapLines: boolean;
   splitLines: boolean;
+  pauseWhenAway: boolean;
   setTheme: (theme: AppTheme) => void;
   setScript: (script: TargetScript) => void;
   setFontSize: (size: number) => void;
   toggleWrapLines: () => void;
   toggleSplitLines: () => void;
+  togglePauseWhenAway: () => void;
 }
 
 const THEME_IDS = THEMES.map((t) => t.id);
@@ -32,11 +34,13 @@ export const useSettingsStore = create<SettingsState>()(
       fontSize: FONT_SIZE.fallback,
       wrapLines: true,
       splitLines: false,
+      pauseWhenAway: true,
       setTheme: (theme) => set({ theme }),
       setScript: (script) => set({ script }),
       setFontSize: (size) => set({ fontSize: clampNumber(size, FONT_SIZE.min, FONT_SIZE.max, FONT_SIZE.fallback) }),
       toggleWrapLines: () => set((s) => ({ wrapLines: !s.wrapLines })),
       toggleSplitLines: () => set((s) => ({ splitLines: !s.splitLines })),
+      togglePauseWhenAway: () => set((s) => ({ pauseWhenAway: !s.pauseWhenAway })),
     }),
     {
       name: 'parayanam-settings',
@@ -50,6 +54,7 @@ export const useSettingsStore = create<SettingsState>()(
           fontSize: clampNumber(p.fontSize, FONT_SIZE.min, FONT_SIZE.max, current.fontSize),
           wrapLines: boolOr(p.wrapLines, current.wrapLines),
           splitLines: boolOr(p.splitLines, current.splitLines),
+          pauseWhenAway: boolOr(p.pauseWhenAway, current.pauseWhenAway),
         };
       },
     },

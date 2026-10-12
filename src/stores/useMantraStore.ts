@@ -7,6 +7,10 @@ interface MantraState {
   activeChunkIndex: number;
   positions: Record<string, number>;
   zenMode: boolean;
+  holding: boolean;
+  away: boolean;
+  setHolding: (holding: boolean) => void;
+  setAway: (away: boolean) => void;
   openPrakara: (id: string) => void;
   setActiveChunkIndex: (index: number) => void;
   nextChunk: (count: number) => void;
@@ -28,6 +32,10 @@ export const useMantraStore = create<MantraState>()(
       activeChunkIndex: 0,
       positions: {},
       zenMode: false,
+      holding: false,
+      away: false,
+      setHolding: (holding) => set({ holding }),
+      setAway: (away) => set({ away }),
       openPrakara: (id) =>
         set((s) => (s.prakaraId === id ? {} : { prakaraId: id, activeChunkIndex: s.positions[id] ?? 0 })),
       setActiveChunkIndex: (index) => set((s) => at(s, clampNumber(index, 0, MAX_INDEX, 0))),

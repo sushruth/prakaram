@@ -9,6 +9,10 @@ import { hasSwara } from '../services/swara';
 import { sourcePieces } from '../services/swaraSegments';
 import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
+import { useFrozen } from '../hooks/useFrozen';
+
+// A press this long on the highlighted line pauses; a shorter one is a tap.
+const HOLD_MS = 250;
 import { advanceChunk } from '../services/advance';
 import { chantingRoom } from '../services/webrtcRoom';
 
@@ -25,10 +29,14 @@ export function ZenMantraReader() {
   const nextChunk = useMantraStore((s) => s.nextChunk);
 
   const phase = useCadenceStore((s) => s.phase);
-  const paused = useCadenceStore((s) => s.paused);
   const autoRunning = useCadenceStore(isAutoRunning);
-  const pausedRef = useRef(paused);
-  pausedRef.current = paused;
+  const frozen = useFrozen();
+  const frozenRef = useRef(frozen);
+  frozenRef.current = frozen;
+  const setHolding = useMantraStore((s) => s.setHolding);
+  const holdTimer = useRef<number | undefined>(undefined);
+  const held = useRef(false);
+  const suppressClick = useRef(false);
   const leftover = useRef<{ index: number; ms: number } | null>(null);
   const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
@@ -83,7 +91,7 @@ export function ZenMantraReader() {
   }, [chunks, nextChunk, prevChunk, toggleZenMode]);
 
   useEffect(() => {
-    if (!autoRunning) return;
+    if (!autoRunning || frozen) return;
     const current = chunks[activeChunkIndex];
     if (!current) return;
 
@@ -93,12 +101,16 @@ export function ZenMantraReader() {
     const timer = setTimeout(() => nextChunk(chunks.length), left);
     return () => {
       clearTimeout(timer);
-      if (pausedRef.current) leftover.current = { index: activeChunkIndex, ms: Math.max(0, left - (Date.now() - started)) };
+      if (frozenRef.current) leftover.current = { index: activeChunkIndex, ms: Math.max(0, left - (Date.now() - started)) };
     };
-  }, [autoRunning, activeChunkIndex, msPerMatra, chunks, nextChunk]);
+  }, [autoRunning, frozen, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
   const learning = isLearning(phase);
   const handleChunkClick = (index: number) => {
+    if (suppressClick.current) {
+      suppressClick.current = false;
+      return;
+    }
     const isNextLine = index === activeChunkIndex + 1;
     if (index === activeChunkIndex || (learning && isNextLine)) {
       advanceChunk(chunks);
@@ -139,6 +151,29 @@ export function ZenMantraReader() {
               ref={isActive ? activeChunkRef : null}
               className={`chunk-row ${isActive ? 'active' : ''} ${Math.abs(idx - activeChunkIndex) === 1 ? 'is-near' : ''}`}
               onClick={() => handleChunkClick(idx)}
+              onPointerDown={() => {
+                if (!isActive) return;
+                suppressClick.current = false;
+                holdTimer.current = window.setTimeout(() => {
+                  held.current = true;
+                  suppressClick.current = true;
+                  setHolding(true);
+                }, HOLD_MS);
+              }}
+              onPointerUp={() => {
+                window.clearTimeout(holdTimer.current);
+                if (held.current) {
+                  held.current = false;
+                  setHolding(false);
+                }
+              }}
+              onPointerLeave={() => {
+                window.clearTimeout(holdTimer.current);
+                if (held.current) {
+                  held.current = false;
+                  setHolding(false);
+                }
+              }}
             >
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
                 <span className="kind-label">{kindLabel(chunk.kind)}</span>

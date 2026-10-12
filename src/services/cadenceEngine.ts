@@ -6,6 +6,9 @@ export const MIN_CHUNK_MATRAS = 2;
 // Milliseconds per matra. Lower is faster.
 export const TEMPO = { min: 50, max: 3000, fallback: 833, step: 10 } as const;
 
+// Each new tap keeps this share of the older evidence, so recent taps weigh more than an average would give them.
+export const RECENCY = 0.7;
+
 // Learned pace may go below the slider's range, down to a physical floor, so a fast reader is not reported at the slider minimum.
 export const PACE_FLOOR = 50;
 
@@ -93,8 +96,8 @@ export class CadenceLearningEngine {
       this.history.shift();
     }
 
-    this.sumIntervalWeight += intervalMs * matraWeight;
-    this.sumWeightSquared += matraWeight * matraWeight;
+    this.sumIntervalWeight = RECENCY * this.sumIntervalWeight + intervalMs * matraWeight;
+    this.sumWeightSquared = RECENCY * this.sumWeightSquared + matraWeight * matraWeight;
     const learned = this.sumIntervalWeight / this.sumWeightSquared;
     this.currentMsPerMatra = Math.round(Math.max(PACE_FLOOR, Math.min(TEMPO.max, learned)));
 

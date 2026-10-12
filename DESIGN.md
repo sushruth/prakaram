@@ -199,6 +199,12 @@ Learn uses the flame glow on its label. It pulses while waiting and measuring, a
 
 The header ring is yellow. A faint full ring shows behind the moving arc. It empties over the time left on the current line, then restarts for the next. Tapping it pauses. A yellow pause mark appears inside, and tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume.
 
+### Hold and away
+
+- **Hold.** Pressing and holding the active line for 250 ms pauses auto-advance. The yellow pause mark shows while held, and releasing resumes with the time that was left. A shorter press is a tap, and it advances as before. Hold does not change the learned pace by itself: the tap interval already contains the time it was held.
+- **Away.** When the tab is hidden or the window loses focus, auto-advance pauses and resumes on return. This is the "Pause when away" setting, on by default.
+- Holding and away are not saved.
+
 ### Pace
 
 One slider, in milliseconds per mātrā, from 50 to 3000, default 833. The scale is logarithmic: equal moves of the slider multiply the pace by the same factor, so the slow and fast ends get as much room as the middle. Moving right is faster (a shorter pace), so the left end is the slowest. Longer lines take longer. Learning writes the learned pace into the same value, so the slider always shows the pace in use. There are no presets.

@@ -3,13 +3,14 @@ import { useMantraStore } from '../stores/useMantraStore';
 import { lineMs } from '../services/cadenceEngine';
 import { useChunks } from '../hooks/useChunks';
 import { useElapsedSeconds } from './cadence/useElapsedSeconds';
+import { useFrozen } from '../hooks/useFrozen';
 
 export function LearnIndicator() {
   const phase = useCadenceStore((s) => s.phase);
   const learnedLines = useCadenceStore((s) => s.learnedLines);
   const firstTapAt = useCadenceStore((s) => s.firstTapAt);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
-  const paused = useCadenceStore((s) => s.paused);
+  const frozen = useFrozen();
   const togglePause = useCadenceStore((s) => s.togglePause);
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
   const chunks = useChunks();
@@ -23,9 +24,9 @@ export function LearnIndicator() {
         <button
           className="learn-ring-btn"
           onClick={togglePause}
-          aria-pressed={paused}
-          aria-label={paused ? 'Resume auto progress' : 'Pause auto progress'}
-          title={paused ? 'Resume auto progress' : 'Pause auto progress'}
+          aria-pressed={frozen}
+          aria-label={frozen ? 'Resume auto progress' : 'Pause auto progress'}
+          title={frozen ? 'Resume auto progress' : 'Pause auto progress'}
         >
           <svg className="learn-ring" viewBox="0 0 20 20" aria-hidden="true">
             <circle className="learn-ring-track" cx="10" cy="10" r="8" />
@@ -35,9 +36,9 @@ export function LearnIndicator() {
               cx="10"
               cy="10"
               r="8"
-              style={{ animationDuration: `${duration}ms`, animationPlayState: paused ? 'paused' : 'running' }}
+              style={{ animationDuration: `${duration}ms`, animationPlayState: frozen ? 'paused' : 'running' }}
             />
-            {paused && (
+            {frozen && (
               <g className="learn-pause-mark">
                 <rect x="7" y="6.5" width="2" height="7" rx="0.5" />
                 <rect x="11" y="6.5" width="2" height="7" rx="0.5" />
