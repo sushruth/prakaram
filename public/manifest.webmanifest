@@ -2,9 +2,11 @@
   "name": "Prakaram • Vedic Mantra Companion",
   "short_name": "Prakaram",
   "description": "Chant Vedic texts line by line, with a cadence that learns your pace.",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone"],
   "background_color": "#f7f7f5",
   "theme_color": "#f7f7f5",
   "icons": [
