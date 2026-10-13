@@ -1,4 +1,5 @@
 import { ArticleTitle } from './Sanskrit';
+import { Term } from './Term';
 import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
 import { COMPOSE_HASH, articleHash, categoryHash } from '../services/wikiNav';
 
@@ -28,10 +29,10 @@ export function WikiHome() {
 
   return (
     <div className="wiki-page">
-      <h1 className="wiki-welcome">Koshah, the free, open library of Vedic chants with swara.</h1>
+      <h1 className="wiki-welcome"><Term id="koshah">Koshah</Term>, the free, open library of Vedic chants with swara.</h1>
       <p className="wiki-figures">
         <span><b>{articles.length}</b> <span className="wiki-muted">articles</span></span>
-        <span><b>{lines}</b> <span className="wiki-muted">padas</span></span>
+        <span><b>{lines}</b> <span className="wiki-muted"><Term id="pada">padas</Term></span></span>
       </p>
 
       <div className="wiki-grid">
@@ -102,7 +103,7 @@ export function WikiHome() {
         </section>
 
         <section className="wiki-block">
-          <h2>Compile your own prakaram</h2>
+          <h2>Compile your own <Term id="prakaram">prakaram</Term></h2>
           <p>Add a whole text or a single section from any article, put them in order, and follow them in the player.</p>
           <a className="wiki-action" href={COMPOSE_HASH}>
             Start composing

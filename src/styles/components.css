@@ -319,3 +319,61 @@
       drop-shadow(0 -1px calc(12px * var(--flame-glow, 1)) color-mix(in srgb, var(--flame-tip) 50%, transparent));
   }
 }
+
+/* Glossary term (components/Term.tsx): a quiet muted dot after the word, no line or box. DESIGN.md §7b. */
+@layer components {
+  .term {
+    all: unset;
+    cursor: help;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .term::after {
+    content: "\00b7";
+    margin-left: 0.12em;
+    color: var(--text-muted);
+  }
+
+  .term:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .term-tip {
+    position: fixed;
+    z-index: 60;
+    display: block;
+    width: max-content;
+    max-width: min(18rem, calc(100vw - 16px));
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    border: 0;
+    box-shadow: none;
+    font: 400 0.875rem/1.4 var(--font-ui, inherit);
+    text-align: left;
+    pointer-events: none;
+    animation: term-fade 120ms ease-out;
+  }
+
+  .term-gloss,
+  .term-note {
+    display: block;
+  }
+
+  .term-note {
+    margin-top: 0.15rem;
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+  }
+
+  @keyframes term-fade {
+    from { opacity: 0; }
+  }
+}

@@ -1,0 +1,310 @@
+[
+ {
+  "id": "koshah",
+  "sa": "कोश",
+  "iast": "Kośa",
+  "gloss": "treasury",
+  "note": "The library: this whole collection of texts."
+ },
+ {
+  "id": "mula",
+  "sa": "मूल",
+  "iast": "Mūla",
+  "gloss": "root text",
+  "note": "A source text, as established from the original."
+ },
+ {
+  "id": "prakaram",
+  "sa": "प्रकारम्",
+  "iast": "Prakāram",
+  "gloss": "arrangement",
+  "note": "A composition: an ordered list of parts of sources (a vrata, a pūjā, a parāyaṇam or your own)."
+ },
+ {
+  "id": "kriya",
+  "sa": "क्रिया",
+  "iast": "Kriyā",
+  "gloss": "a step",
+  "note": "One step of a prakaram."
+ },
+ {
+  "id": "padya",
+  "sa": "पद्य",
+  "iast": "Padya",
+  "gloss": "verse or stanza",
+  "note": "The grouping above the pāda, taken from the verse numbers the text prints."
+ },
+ {
+  "id": "pada",
+  "sa": "पाद",
+  "iast": "Pāda",
+  "gloss": "a line",
+  "note": "One displayed line of the text; the unit a range is made of."
+ },
+ {
+  "id": "anuvaka",
+  "sa": "अनुवाक",
+  "iast": "Anuvāka",
+  "gloss": "section",
+  "note": "A division of a prapāṭhaka."
+ },
+ {
+  "id": "prapathaka",
+  "sa": "प्रपाठक",
+  "iast": "Prapāṭhaka",
+  "gloss": "lesson",
+  "note": "A division of a kāṇḍa."
+ },
+ {
+  "id": "kanda",
+  "sa": "काण्ड",
+  "iast": "Kāṇḍa",
+  "gloss": "major division",
+  "note": "The largest division of a text such as the Taittirīya Saṃhitā."
+ },
+ {
+  "id": "sukta",
+  "sa": "सूक्त",
+  "iast": "Sūkta",
+  "gloss": "hymn",
+  "note": "A hymn of the Veda."
+ },
+ {
+  "id": "rk",
+  "sa": "ऋक्",
+  "iast": "Ṛk",
+  "gloss": "verse",
+  "note": "A verse of the Ṛgveda."
+ },
+ {
+  "id": "yajus",
+  "sa": "यजुः",
+  "iast": "Yajus",
+  "gloss": "sacrificial formula",
+  "note": "The kind of mantra of the Yajurveda."
+ },
+ {
+  "id": "saman",
+  "sa": "साम",
+  "iast": "Sāman",
+  "gloss": "chant",
+  "note": "A melody sung from a verse; the Sāmaveda."
+ },
+ {
+  "id": "pratika",
+  "sa": "प्रतीक",
+  "iast": "Pratīka",
+  "gloss": "opening words",
+  "note": "The first words of a text, used to name it."
+ },
+ {
+  "id": "swara",
+  "sa": "स्वर",
+  "iast": "Svara",
+  "gloss": "pitch accent",
+  "note": "The accent marks that give each syllable its pitch in Vedic chanting."
+ },
+ {
+  "id": "svarita",
+  "sa": "स्वरित",
+  "iast": "Svarita",
+  "gloss": "high accent",
+  "note": "Marked ॑ in the text."
+ },
+ {
+  "id": "anudatta",
+  "sa": "अनुदात्त",
+  "iast": "Anudātta",
+  "gloss": "low accent",
+  "note": "Marked ॒ in the text."
+ },
+ {
+  "id": "sankalpa",
+  "sa": "सङ्कल्प",
+  "iast": "Saṅkalpa",
+  "gloss": "resolve",
+  "note": "The statement of intent made before a rite."
+ },
+ {
+  "id": "karishye",
+  "sa": "करिष्ये",
+  "iast": "Kariṣye",
+  "gloss": "I will do",
+  "note": "The closing word of a sankalpa line: the kriyā's name, then kariṣye."
+ },
+ {
+  "id": "parayanam",
+  "sa": "पारायणम्",
+  "iast": "Pārāyaṇam",
+  "gloss": "reading through",
+  "note": "Reciting a text from beginning to end."
+ },
+ {
+  "id": "vrata",
+  "sa": "व्रत",
+  "iast": "Vrata",
+  "gloss": "vow or observance",
+  "note": "A rite kept as a vow."
+ },
+ {
+  "id": "upakarma",
+  "sa": "उपाकर्म",
+  "iast": "Upākarma",
+  "gloss": "beginning of Veda study",
+  "note": "The annual rite that renews it."
+ },
+ {
+  "id": "puja",
+  "sa": "पूजा",
+  "iast": "Pūjā",
+  "gloss": "worship",
+  "note": "Ritual worship."
+ },
+ {
+  "id": "veda",
+  "sa": "वेद",
+  "iast": "Veda",
+  "gloss": "knowledge",
+  "note": "The oldest body of chanted texts."
+ },
+ {
+  "id": "rigveda",
+  "sa": "ऋग्वेद",
+  "iast": "Ṛgveda",
+  "gloss": "Veda of verses",
+  "note": "The Veda of ṛk verses."
+ },
+ {
+  "id": "yajurveda",
+  "sa": "यजुर्वेद",
+  "iast": "Yajurveda",
+  "gloss": "Veda of sacrificial formulas",
+  "note": "The Veda of yajus formulas."
+ },
+ {
+  "id": "samaveda",
+  "sa": "सामवेद",
+  "iast": "Sāmaveda",
+  "gloss": "Veda of chants",
+  "note": "The Veda of sāman melodies."
+ },
+ {
+  "id": "atharvaveda",
+  "sa": "अथर्ववेद",
+  "iast": "Atharvaveda",
+  "gloss": "Veda of the Atharvans",
+  "note": "The fourth Veda."
+ },
+ {
+  "id": "samhita",
+  "sa": "संहिता",
+  "iast": "Saṃhitā",
+  "gloss": "collection",
+  "note": "The mantra portion of a Veda."
+ },
+ {
+  "id": "shakha",
+  "sa": "शाखा",
+  "iast": "Śākhā",
+  "gloss": "branch",
+  "note": "A recension of a Veda, with its own wording and accents."
+ },
+ {
+  "id": "pathantara",
+  "sa": "पाठान्तर",
+  "iast": "Pāṭhāntara",
+  "gloss": "another reading",
+  "note": "A variant reading of a text."
+ },
+ {
+  "id": "nirdesha",
+  "sa": "निर्देश",
+  "iast": "Nirdeśa",
+  "gloss": "address",
+  "note": "Points to a source, a section, a pāda, a padya or a range of them."
+ },
+ {
+  "id": "bhashya",
+  "sa": "भाष्य",
+  "iast": "Bhāṣya",
+  "gloss": "commentary",
+  "note": "A commentary on a text."
+ },
+ {
+  "id": "anuvada",
+  "sa": "अनुवाद",
+  "iast": "Anuvāda",
+  "gloss": "translation",
+  "note": "A translation of a text."
+ },
+ {
+  "id": "dhvani",
+  "sa": "ध्वनि",
+  "iast": "Dhvani",
+  "gloss": "sound",
+  "note": "Audio recordings."
+ },
+ {
+  "id": "samagri",
+  "sa": "सामग्री",
+  "iast": "Sāmagrī",
+  "gloss": "materials",
+  "note": "What an article brings: text, transliteration, translation, audio and more."
+ },
+ {
+  "id": "matra",
+  "sa": "मात्रा",
+  "iast": "Mātrā",
+  "gloss": "unit of time",
+  "note": "One short syllable's length; the pace is set per mātrā."
+ },
+ {
+  "id": "ashtaka",
+  "sa": "अष्टक",
+  "iast": "Aṣṭaka",
+  "gloss": "eighth part",
+  "note": "A division of the Ṛgveda."
+ },
+ {
+  "id": "adhyaya",
+  "sa": "अध्याय",
+  "iast": "Adhyāya",
+  "gloss": "chapter",
+  "note": "A division of a text."
+ },
+ {
+  "id": "varga",
+  "sa": "वर्ग",
+  "iast": "Varga",
+  "gloss": "group",
+  "note": "A division of a text."
+ },
+ {
+  "id": "mandala",
+  "sa": "मण्डल",
+  "iast": "Maṇḍala",
+  "gloss": "circle",
+  "note": "A book of the Ṛgveda."
+ },
+ {
+  "id": "prashna",
+  "sa": "प्रश्न",
+  "iast": "Praśna",
+  "gloss": "question",
+  "note": "A division of a text."
+ },
+ {
+  "id": "khanda",
+  "sa": "खण्ड",
+  "iast": "Khaṇḍa",
+  "gloss": "part",
+  "note": "A division of a text."
+ },
+ {
+  "id": "valli",
+  "sa": "वल्ली",
+  "iast": "Vallī",
+  "gloss": "creeper",
+  "note": "A division of some Upaniṣads."
+ }
+]
