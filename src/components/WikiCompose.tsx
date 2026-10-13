@@ -9,7 +9,7 @@ import { Term } from './Term';
 import { useBasketStore } from '../stores/useBasketStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 
-/** '§3 padas 3–9', '§3 padyas 2–4', '§3 pada 2 – §4 pada 5', or the section's title for a whole section. */
+/** '§3 padas 3–9', '§3 ṛks 2–4', '§3 pada 2 – §4 pada 5', or the section's title for a whole section. */
 const part = ({ nirdesa, sections }: Extract<ReturnType<typeof resolveNirdesa>, { ok: true }>) =>
   nirdesa.pada === undefined && !nirdesa.padya ? sections[0].title : partWords(nirdesa);
 
@@ -41,7 +41,7 @@ export function WikiCompose() {
         <p>Nothing here yet. Composing takes three steps; each text you add becomes a <Term id="kriya">kriyā</Term> (a step of the prakaram).</p>
         <ol className="wiki-steps">
           <li>Open any article.</li>
-          <li>Tap Add to my prakaram on a whole text, a section, a <Term id="padya">padya</Term> or some <Term id="pada">padas</Term>.</li>
+          <li>Tap Add to my prakaram on a whole text, a section, a <Term id="padya">ṛk</Term> or some <Term id="pada">padas</Term>.</li>
           <li>Come back here to order and follow them.</li>
         </ol>
         <p className="wiki-muted">The player plays the text for now; other media are listed but not played.</p>

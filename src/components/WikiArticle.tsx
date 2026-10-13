@@ -242,7 +242,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
                   </button>
                 )}
                 {endOf && (
-                  <button type="button" className="wiki-pn" data-in={picked(pos) ? '' : undefined} aria-label={`Padya ${endOf.number}`} onClick={() => tap(pos)}>
+                  <button type="button" className="wiki-pn" data-in={picked(pos) ? '' : undefined} aria-label={`Ṛk ${endOf.number}`} onClick={() => tap(pos)}>
                     {endOf.number}
                   </button>
                 )}

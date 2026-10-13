@@ -115,22 +115,22 @@ const dash = '–';
 const crossSection = (n: Nirdesa) => (n.padya ? !!n.padya.to && n.padya.to.section !== n.section : !!n.to && n.to.section !== n.section);
 
 /**
- * Words for the part inside a section: 'pada 3', 'padas 3–9', 'padya 2', 'padyas 2–4', 'padya 2 pada 4', or '' for a whole
+ * Words for the part inside a section: 'pada 3', 'padas 3–9', 'ṛk 2', 'ṛks 2–4', 'ṛk 2 pada 4', or '' for a whole
  * source or section. Across sections it carries the section marks: '§3 pada 2 – §4 pada 5'.
  */
 export function rangeWords(n: Nirdesa): string {
   if (n.padya) {
     const p = n.padya;
-    if (p.to) return p.to.section === n.section ? `padyas ${p.n}${dash}${p.to.n}` : `§${n.section} padya ${p.n} ${dash} §${p.to.section} padya ${p.to.n}`;
-    if (p.pada === undefined) return `padya ${p.n}`;
-    return `padya ${p.n} ${p.toPada ? `padas ${p.pada}${dash}${p.toPada}` : `pada ${p.pada}`}`;
+    if (p.to) return p.to.section === n.section ? `ṛks ${p.n}${dash}${p.to.n}` : `§${n.section} ṛk ${p.n} ${dash} §${p.to.section} ṛk ${p.to.n}`;
+    if (p.pada === undefined) return `ṛk ${p.n}`;
+    return `ṛk ${p.n} ${p.toPada ? `padas ${p.pada}${dash}${p.toPada}` : `pada ${p.pada}`}`;
   }
   if (n.pada === undefined) return '';
   if (!n.to) return `pada ${n.pada}`;
   return n.to.section === n.section ? `padas ${n.pada}${dash}${n.to.pada}` : `§${n.section} pada ${n.pada} ${dash} §${n.to.section} pada ${n.to.pada}`;
 }
 
-/** The part of a source in words: '§3', '§3 pada 2', '§3 padas 2–9', '§3 padyas 2–4'; '' for a whole source. */
+/** The part of a source in words: '§3', '§3 pada 2', '§3 padas 2–9', '§3 ṛks 2–4'; '' for a whole source. */
 export function partWords(n: Nirdesa): string {
   if (n.section === undefined) return '';
   if (crossSection(n)) return rangeWords(n);

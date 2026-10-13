@@ -24,7 +24,7 @@ const span = (a: number, b: number, noun: string) => (a === b ? word(a, noun) : 
 
 /**
  * Citation in words, e.g. 'Taittirīya Saṃhitā · caturtha-kāṇḍa · pañcama-prapāṭhaka · prathama-anuvāka' (in the given script).
- * The section is the anuvāka; a padya or pada address adds 'dvitīya-padya' / 'caturtha-pāda'. A source without `place` gives just its title.
+ * The section is the anuvāka; a padya or pada address adds 'dvitīya-ṛk' / 'caturtha-pāda'. A source without `place` gives just its title.
  */
 export function citeInWords(doc: MantraDocument, address: string, script: TargetScript): string {
   const place = doc.metadata.place;
@@ -43,7 +43,7 @@ export function citeInWords(doc: MantraDocument, address: string, script: Target
     if (endSection === n.section) {
       if (n.padya) {
         const p = n.padya;
-        parts.push(span(p.n, p.to?.n ?? p.n, 'पद्य'));
+        parts.push(span(p.n, p.to?.n ?? p.n, 'ऋक्'));
         if (p.pada !== undefined) parts.push(span(p.pada, p.toPada ?? p.pada, 'पाद'));
       } else if (n.pada !== undefined) parts.push(span(n.pada, n.to?.pada ?? n.pada, 'पाद'));
     }

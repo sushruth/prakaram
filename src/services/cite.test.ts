@@ -25,9 +25,9 @@ describe('citeInWords', () => {
   it('appends padya and pada words', () => {
     expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.2-9', 'iast')).toEndWith('tṛtīya-anuvāka · dvitīya–navama-pāda');
     expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.4', 'iast')).toEndWith('tṛtīya-anuvāka · caturtha-pāda');
-    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2', 'iast')).toEndWith('tṛtīya-anuvāka · dvitīya-padya');
-    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2-p5', 'iast')).toEndWith('dvitīya–pañcama-padya');
-    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2.4', 'iast')).toEndWith('dvitīya-padya · caturtha-pāda');
+    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2', 'iast')).toEndWith('tṛtīya-anuvāka · dvitīya-ṛk');
+    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2-p5', 'iast')).toEndWith('dvitīya–pañcama-ṛk');
+    expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/3.p2.4', 'iast')).toEndWith('dvitīya-ṛk · caturtha-pāda');
     expect(citeInWords(doc('rudram-namakam'), 'rudram-namakam/2.1-4.1', 'iast')).toEndWith('dvitīya–caturtha-anuvāka');
   });
   it('gives just the title when the source has no place', () => {

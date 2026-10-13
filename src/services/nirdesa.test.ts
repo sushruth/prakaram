@@ -42,10 +42,10 @@ describe('grammar', () => {
     expect(normaliseNirdesa('ns/3.p2-p2')).toBe('ns/3.p2');
     expect(normaliseNirdesa('ns/3.p2.4-4')).toBe('ns/3.p2.4');
     for (const a of ['ns/3.p', 'ns/3.p0', 'ns/3.p2-', 'ns/3.p2-5', 'ns/3.2-p5', 'ns/3.p2.0', 'ns/3.p2-p5-p6', 'ns/3.P2', 'ns/p2']) expect(parseNirdesa(a)).toBeNull();
-    expect(partWords(parseNirdesa('ns/3.p2-p4')!)).toBe('§3 padyas 2–4');
-    expect(partWords(parseNirdesa('ns/3.p2')!)).toBe('§3 padya 2');
-    expect(partWords(parseNirdesa('ns/3.p2.4-6')!)).toBe('§3 padya 2 padas 4–6');
-    expect(partWords(parseNirdesa('ns/3.p2-4.p1')!)).toBe('§3 padya 2 – §4 padya 1');
+    expect(partWords(parseNirdesa('ns/3.p2-p4')!)).toBe('§3 ṛks 2–4');
+    expect(partWords(parseNirdesa('ns/3.p2')!)).toBe('§3 ṛk 2');
+    expect(partWords(parseNirdesa('ns/3.p2.4-6')!)).toBe('§3 ṛk 2 padas 4–6');
+    expect(partWords(parseNirdesa('ns/3.p2-4.p1')!)).toBe('§3 ṛk 2 – §4 ṛk 1');
   });
 
   it('builds a range from two positions in either order', () => {
@@ -100,7 +100,7 @@ describe('resolve', () => {
     const kr = resolveNirdesa('sri-suktam/1.p3.1-2');
     expect(kr.ok && kr.chunks).toEqual(sec.chunks.slice(at(3).from - 1, at(3).to));
     const same = resolveNirdesa('sri-suktam/1.p2-p4');
-    expect(same.ok && same.label.text).toBe('§1 padyas 2–4');
+    expect(same.ok && same.label.text).toBe('§1 ṛks 2–4');
   });
 
   it('reports padya errors with typed errors', () => {
