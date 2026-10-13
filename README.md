@@ -20,6 +20,9 @@
 
 ## ✨ Key Capabilities
 
+### Glossary tooltips
+* **Sanskrit terms explain themselves:** hover (desktop), focus or tap (touch) on a term such as padya, pāda or kriyā shows its English meaning above it. One CC0 glossary, `src/data/glossary.json`; the word follows the selected script.
+
 ### 0. Zen-Mode Vedic Companion & Cadence Learning (Option A)
 * **Three-Line Focus:** The active line is bold and fully opaque, its neighbours are at 60%, and the rest fade. At least one line is always highlighted.
 * **Chandaḥ-śāstra Prosody Engine:** Normalizes tempo by calculating exact *Laghu* (1 mātrā), *Guru* (2 mātrās), *Pluta* (3 mātrās), and Daṇḍa pause weights. Only chant is timed: Latin text, brackets and verse numbers such as `॥ २ ॥` add nothing.

@@ -5,6 +5,7 @@ import { getArticle } from '../services/wiki';
 import { articleHash } from '../services/wikiNav';
 import { basketToPrakara } from '../services/basket';
 import { ArticleTitle, useCiteInWords } from './Sanskrit';
+import { Term } from './Term';
 import { useBasketStore } from '../stores/useBasketStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 
@@ -37,10 +38,10 @@ export function WikiCompose() {
     return (
       <div className="wiki-page">
         <h1>My prakaram</h1>
-        <p>Nothing here yet. Composing takes three steps; each text you add becomes a kriyā (a step of the prakaram).</p>
+        <p>Nothing here yet. Composing takes three steps; each text you add becomes a <Term id="kriya">kriyā</Term> (a step of the prakaram).</p>
         <ol className="wiki-steps">
           <li>Open any article.</li>
-          <li>Tap Add to my prakaram on a whole text, a section, a padya or some padas.</li>
+          <li>Tap Add to my prakaram on a whole text, a section, a <Term id="padya">padya</Term> or some <Term id="pada">padas</Term>.</li>
           <li>Come back here to order and follow them.</li>
         </ol>
         <p className="wiki-muted">The player plays the text for now; other media are listed but not played.</p>
@@ -55,7 +56,7 @@ export function WikiCompose() {
     <div className="wiki-page">
       <h1>My prakaram</h1>
       <p className="wiki-muted">
-        {rows.length} {rows.length === 1 ? 'kriyā (a step)' : 'kriyās (steps)'}, {total} padas
+        {rows.length} <Term id="kriya">{rows.length === 1 ? 'kriyā' : 'kriyās'}</Term>, {total} padas
       </p>
       <ol className="wiki-list" style={{ margin: '1.5rem 0 0', paddingLeft: 0, listStyle: 'none' }}>
         {rows.map((r, i) => (
@@ -65,7 +66,7 @@ export function WikiCompose() {
               {r.r.nirdesa.section !== undefined && <span className="wiki-muted"> · {part(r.r)}</span>}
               <span className="wiki-muted"> · {r.r.chunks.length} padas</span>
               <span className="wiki-compose-cite wiki-muted">{cite(r.r.document, r.id)}</span>
-              <span className="wiki-muted"> · brings {[...new Set(getArticle(r.r.document.id)?.media.map((m) => m.kind))].join(', ')}</span>
+              <span className="wiki-muted"> · <Term id="samagri">brings</Term> {[...new Set(getArticle(r.r.document.id)?.media.map((m) => m.kind))].join(', ')}</span>
             </span>
             {r.r.nirdesa.pada === undefined && !r.r.nirdesa.padya && (
               <span className="wiki-compose-kriya">

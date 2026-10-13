@@ -5,7 +5,7 @@ import { parseNirdesa } from './nirdesa';
 // Citation in words: the way older texts cite, in the work's own division names with Sanskrit ordinals.
 // Built in Devanagari and passed through the one transliterator, so it follows the selected script.
 
-const ORDINALS = [
+export const ORDINALS = [
   '', 'प्रथम', 'द्वितीय', 'तृतीय', 'चतुर्थ', 'पञ्चम', 'षष्ठ', 'सप्तम', 'अष्टम', 'नवम', 'दशम',
   'एकादश', 'द्वादश', 'त्रयोदश', 'चतुर्दश', 'पञ्चदश', 'षोडश', 'सप्तदश', 'अष्टादश', 'एकोनविंश', 'विंश',
   'एकविंश', 'द्वाविंश', 'त्रयोविंश', 'चतुर्विंश', 'पञ्चविंश', 'षड्विंश', 'सप्तविंश', 'अष्टाविंश', 'एकोनत्रिंश', 'त्रिंश',
@@ -14,7 +14,7 @@ const ORDINALS = [
 /** Sanskrit ordinal word in Devanagari (1 प्रथम … 30 त्रिंश); beyond that the numeral with a suffix ('31-तम'). */
 export const ordinal = (n: number): string => ORDINALS[n] ?? `${n}-तम`;
 
-const DIVISION: Record<DivisionKind, string> = {
+export const DIVISION: Record<DivisionKind, string> = {
   'kāṇḍa': 'काण्ड', 'prapāṭhaka': 'प्रपाठक', 'aṣṭaka': 'अष्टक', 'adhyāya': 'अध्याय', 'varga': 'वर्ग', 'anuvāka': 'अनुवाक',
   'maṇḍala': 'मण्डल', 'sūkta': 'सूक्त', 'praśna': 'प्रश्न', 'khaṇḍa': 'खण्ड', 'valli': 'वल्ली',
 };

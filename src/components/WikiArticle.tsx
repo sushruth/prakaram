@@ -12,6 +12,7 @@ import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useBasketStore } from '../stores/useBasketStore';
 import { Icon } from './Icon';
+import { Term } from './Term';
 import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle, useCiteInWords } from './Sanskrit';
 import type { MantraDocument } from '../types/mantra';
 
@@ -311,10 +312,10 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         <p className="wiki-lead">{article.summary}</p>
 
         <dl className="wiki-facts">
-          {article.veda && (<><dt>Veda</dt><dd>{article.veda}</dd></>)}
+          {article.veda && (<><dt><Term id="veda">Veda</Term></dt><dd>{article.veda}</dd></>)}
           {article.deity && (<><dt>Deity</dt><dd>{article.deity}</dd></>)}
           {article.usage && (<><dt>Usage</dt><dd>{article.usage}</dd></>)}
-          {doc?.metadata.place && own && (<><dt>Place</dt><dd>{cite(doc, id)}</dd></>)}
+          {doc?.metadata.place && own && (<><dt><Term id="nirdesha">Place</Term></dt><dd>{cite(doc, id)}</dd></>)}
           <dt>Source</dt>
           <dd>{article.source}</dd>
           <dt>Status</dt>
@@ -323,12 +324,12 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
           </dd>
           <dt>Licence</dt>
           <dd>{article.license ?? 'Not stated'}</dd>
-          <dt>Padas</dt>
+          <dt><Term id="pada">Padas</Term></dt>
           <dd>{article.lines}</dd>
         </dl>
 
         <section className="wiki-brings" aria-labelledby="wiki-brings-title">
-          <h2 id="wiki-brings-title">Brings</h2>
+          <h2 id="wiki-brings-title"><Term id="samagri">Brings</Term></h2>
           <ul>
             {article.media.map((m, i) => (
               <li key={i}>

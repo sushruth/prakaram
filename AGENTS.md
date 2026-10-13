@@ -65,6 +65,8 @@ A chunk is a **pada** (पाद, one displayed line), not a traditional mantra,
 | Audio recording | **Dhvani** (ध्वनि) | |
 | The library | **Koshah** (कोश) | treasury |
 
+**Glossary.** `src/data/glossary.json` is the single source of Sanskrit terms and their English glosses (id, `sa`, `iast`, `gloss`, `note`); the ordinals come from `cite.ts`. Show a term in the UI with `<Term id="padya" />` (or `<Term id="samagri">Brings</Term>` to keep an English label), never in mantra text, `document.title` or aria-labels. When the UI introduces a new jargon word, add it to the glossary; `glossaryGuard.test.ts` fails on an unknown id or an incomplete entry.
+
 The traditional divisions keep their own names in citations (kāṇḍa, prapāṭhaka, anuvāka, ...). In the UI, show the Sanskrit term with its English gloss on first use. Code identifiers move to these names when the refactor lands; until then they keep the current English ones (`source`, `composition`, `parts`, `media`, `chunk`, `section`). The pada unit is already `pada` in code; stored data and keys are unchanged (`sukta_ref`, `nirdesa`, `prakaram-basket`, `#p=`).
 
 ---
