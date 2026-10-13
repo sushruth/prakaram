@@ -1,9 +1,8 @@
 import { useState } from 'preact/hooks';
 import { DropPanel, DropHead } from './DropPanel';
 import { Icon } from './Icon';
-import { Sanskrit } from './Sanskrit';
 import { useRoomStore } from '../stores/useRoomStore';
-import { describeRoom, generateRoomName } from '../services/roomName';
+import { generateRoomName } from '../services/roomName';
 import { roomLink } from '../services/roomLink';
 
 /** Clipboard API, with a textarea fallback for pages where it is unavailable. */
@@ -26,17 +25,17 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
-/** A room name: the two Sanskrit terms in the selected script, the code muted, the transliteration beneath. */
-function RoomName({ id }: { id: string }) {
-  const r = describeRoom(id);
-  if (!r) return <p className="room-name">{id}</p>;
+/** The room id in a monospace code fill with the copy icon inside it, on one line. */
+function RoomId({ id, onCopy, busy }: { id: string; onCopy: () => void; busy: boolean }) {
   return (
-    <>
-      <p className="room-name">
-        <Sanskrit text={r.a.sa} />-<Sanskrit text={r.b.sa} /> <span className="room-code">{r.code}</span>
-      </p>
-      <p className="room-sub">{r.a.en}-{r.b.en}</p>
-    </>
+    <span className="room-id">
+      <code>{id}</code>
+      <button className="room-copy" onClick={onCopy} disabled={busy} aria-busy={busy} aria-label={busy ? 'Creating the room' : 'Copy link'} title={busy ? 'Creating…' : 'Copy link'}>
+        <span className={busy ? 'room-creating' : undefined}>
+          <Icon name={busy ? 'circle-notch' : 'copy'} size={18} />
+        </span>
+      </button>
+    </span>
   );
 }
 
@@ -68,8 +67,6 @@ export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
       <DropHead title="Parāyaṇam" onClose={onClose} />
       <p className="room-sub">Group recitation. Anyone with the name can join.</p>
 
-      <RoomName id={id} />
-      <p className="room-id-row"><code className="room-id">{id}</code></p>
 
       {isInRoom ? (
         <>
@@ -77,9 +74,7 @@ export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
             {who} {peerCount === 0 ? 'No one else is here yet.' : `${peerCount} ${peerCount === 1 ? 'person' : 'people'} with you.`}
           </p>
           <div className="room-actions">
-            <button className="icon-btn" onClick={copyLink} aria-label="Copy link" title="Copy link">
-              <Icon name="copy" size={20} />
-            </button>
+            <RoomId id={id} onCopy={copyLink} busy={false} />
             <button className="text-btn text-btn-muted" onClick={leave}>
               Leave
             </button>
@@ -88,13 +83,9 @@ export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
       ) : (
         <>
           <div className="room-actions">
+            <RoomId id={id} onCopy={copyLink} busy={creating} />
             <button className="icon-btn" onClick={() => setName(generateRoomName())} disabled={creating} aria-label="Another name" title="Another name">
               <Icon name="arrows-clockwise" size={20} />
-            </button>
-            <button className="icon-btn" onClick={copyLink} disabled={creating} aria-busy={creating} aria-label={creating ? 'Creating the room' : 'Copy link'} title={creating ? 'Creating…' : 'Copy link'}>
-              <span className={creating ? 'room-creating' : undefined}>
-                <Icon name={creating ? 'circle-notch' : 'copy'} size={20} />
-              </span>
             </button>
           </div>
         </>

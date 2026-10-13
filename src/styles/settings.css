@@ -195,19 +195,42 @@
     font-weight: 400;
   }
 
-  /* The room id: monospace, an inline code fill (the owner's named exception to the no-fills rule; no border). */
-  .room-id-row {
-    margin: 0;
-  }
-
+  /* The room id: monospace in an inline code fill with the copy icon inside it (the owner's named exception; no border). */
   .room-id {
-    padding: 0.15rem 0.45rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    padding: 0.2rem 0.3rem 0.2rem 0.6rem;
     border-radius: 0.3rem;
     background: color-mix(in srgb, var(--text-primary) 8%, transparent);
+  }
+
+  .room-id code {
+    min-width: 0;
     color: var(--text-primary);
     font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     overflow-wrap: anywhere;
+  }
+
+  .room-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    min-height: 2rem;
+    background: none;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .room-copy:hover:not(:disabled) {
+    color: var(--accent);
+  }
+
+  .room-copy:disabled {
+    cursor: default;
   }
 
   .room-actions {
