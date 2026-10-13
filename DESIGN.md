@@ -376,7 +376,7 @@ Exceptions: the switch is the one rounded control (a pill track with a round kno
 Text first. The app is words on paper, and controls are words too.
 
 - **No borders by default.** No element gets a border, outline ring or hairline divider unless this document names it as an exception.
-- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. Add any new exception here first.
+- **Exceptions, explicit only:** keyboard focus ring (`:focus-visible`, 1 px accent), the switch track in settings and in the cadence strip, and the back-to-line arrow, which is a green glyph with a green glow and no border. One owner-approved exception to the no-fills rule: a technical identifier, such as the parāyaṇam room id, may sit in a monospace inline code fill (a faint tint, no border). It is a western convention the owner accepts for technical strings only, never for Sanskrit text or labels. Add any new exception here first.
 - **Buttons are text.** A text button is accent-coloured words with no fill. Secondary text buttons are muted. Only icon buttons use a shape, and that shape is only the hit area.
 - **Groups are rows of words.** Option choices (System / Light / Dark) are text separated by space, not pills.
 - **Active state is colour and glow.** The chosen word or icon takes the accent colour and the flame glow (`--flame`). No background tint, no outline.
