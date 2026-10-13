@@ -51,29 +51,54 @@
     filter: var(--flame);
   }
 
+  /* Layout never changes with the active line: the focus shows through opacity, a transform on the row (neighbours drift
+     outward) and a transform on the text (the current line is scaled). They all share one curve and time. */
   .chunk-row {
     position: relative;
     padding: 0.2rem 0;
-    margin-bottom: 0.45rem;
+    margin-bottom: 1.1rem;
     cursor: pointer;
-    transition: opacity 0.35s ease;
+    opacity: 0.35;
+    transition: opacity var(--focus-dur) var(--focus-ease), transform var(--focus-dur) var(--focus-ease), filter var(--focus-dur) var(--focus-ease);
   }
 
-  
   .chunk-row.active {
     opacity: 1;
-  }
-
-  .chunk-row:not(.active) {
-    opacity: 0.35;
   }
 
   .chunk-row.is-near {
     opacity: 0.6;
   }
 
+  /* More air between the three lines, less below the group. */
+  .chunk-row.is-near:has(+ .active) {
+    transform: translateY(-0.4rem);
+  }
+
+  .chunk-row.active + .chunk-row {
+    transform: translateY(0.6rem);
+  }
+
+  /* Every line wraps at the width the scaled current line fills, so the wrap does not change when the line does. */
+  .chunk-row .vedic-text {
+    max-width: calc(100% / var(--focus-scale));
+    transform-origin: left center;
+    transition: transform var(--focus-dur) var(--focus-ease), color var(--focus-dur) var(--focus-ease);
+  }
+
   .chunk-row.active .vedic-text {
-    font-weight: 600;
+    transform: scale(var(--focus-scale));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chunk-row,
+    .chunk-row .vedic-text {
+      transition-duration: 0.01s;
+    }
+
+    .chunk-row.active .vedic-text {
+      transform: none;
+    }
   }
 
   .chunk-row:not(.active):hover {
