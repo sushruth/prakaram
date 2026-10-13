@@ -130,7 +130,14 @@ function isConjunctStart(tokenText: string): boolean {
   return tokenText.includes('्');
 }
 
+// Every pada (and so every padya, which ends on a pada) rests one mātrā at its end. A printed danda or double danda
+// already is that rest and is longer, so it replaces the rest instead of adding to it: pauses never stack.
+export const END_REST = 1;
+
 export function calculateChunkWeight(text: string): number {
   const tokens = syllabifyVedic(text);
-  return tokens.reduce((sum, t) => sum + t.weight, 0);
+  const sum = tokens.reduce((total, t) => total + t.weight, 0);
+  const last = tokens[tokens.length - 1];
+  const endsOnPause = last !== undefined && (last.text === '।' || last.text === '॥');
+  return endsOnPause ? sum : sum + END_REST;
 }

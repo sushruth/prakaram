@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { calculateChunkWeight } from './syllabifier';
+import { calculateChunkWeight, END_REST, syllabifyVedic } from './syllabifier';
 
 describe('chunk weight ignores verse-number annotations', () => {
   it('weighs a line with a numbered end mark the same as without it', () => {
@@ -28,5 +28,18 @@ describe('only chant is timed', () => {
 
   it('times the Vedic sign ꣳ as a syllable of its own, one matra', () => {
     expect(calculateChunkWeight('नमꣳ')).toBe(calculateChunkWeight('नम') + 1);
+  });
+});
+
+describe('end rest', () => {
+  const total = (t: string) => syllabifyVedic(t).reduce((n, x) => n + x.weight, 0);
+
+  it('a pada with no danda rests one matra at its end', () => {
+    expect(calculateChunkWeight('नम॒स्ते रु॒द्र')).toBe(total('नम॒स्ते रु॒द्र') + END_REST);
+  });
+
+  it('a printed danda or double danda is the rest and replaces it, so pauses never stack', () => {
+    expect(calculateChunkWeight('नम॒स्ते रु॒द्र ।')).toBe(total('नम॒स्ते रु॒द्र ।'));
+    expect(calculateChunkWeight('नम॒स्ते रु॒द्र ॥ १ ॥')).toBe(total('नम॒स्ते रु॒द्र ॥ १ ॥'));
   });
 });
