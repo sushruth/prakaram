@@ -7,7 +7,7 @@ import { formatNirdesa, parseNirdesa, resolveNirdesa, type Pos } from './nirdesa
 export type Route =
   | { kind: 'player' }
   | { kind: 'home' }
-  | { kind: 'article'; id: string; section?: number; /** Lines to mark, from `<s>.<a>-<b>` or `<s>.<l>`. */ range?: { from: Pos; to: Pos } }
+  | { kind: 'article'; id: string; section?: number; /** Padas to mark, from `<s>.<a>-<b>`, `<s>.<l>` or a padya address (`<s>.p<n>`, resolved to its padas). */ range?: { from: Pos; to: Pos } }
   | { kind: 'category'; name: string }
   | { kind: 'search'; q: string }
   | { kind: 'random' }
@@ -37,8 +37,13 @@ export function parseRoute(hash: string): Route {
   const [id, section] = path.split('/');
   const n = Number(section);
   const addr = section !== undefined ? parseNirdesa(`x/${section}`) : null;
-  if (addr?.line !== undefined) {
-    const from = { section: addr.section!, line: addr.line };
+  if (addr?.padya) {
+    // A padya address links to its padas; one that does not resolve still marks its section, with no range.
+    const r = resolveNirdesa(`${dec(id)}/${section}`);
+    return r.ok ? { kind: 'article', id: dec(id), section: addr.section, range: { from: r.first, to: r.last } } : { kind: 'article', id: dec(id), section: addr.section };
+  }
+  if (addr?.pada !== undefined) {
+    const from = { section: addr.section!, pada: addr.pada };
     return { kind: 'article', id: dec(id), section: addr.section, range: { from, to: addr.to ?? from } };
   }
   return section !== undefined && Number.isInteger(n) && n > 0
@@ -50,7 +55,7 @@ export function parseRoute(hash: string): Route {
 export const articleHash = (id: string, section?: string | number) =>
   `#/wiki/${encodeURIComponent(id)}${section === undefined ? '' : `/${section}`}`;
 
-/** The wiki address of a nirdeśa: `#/wiki/<source>` or `#/wiki/<source>/<s>[.<a>[-<b>]]`. */
+/** The wiki address of a nirdeśa: `#/wiki/<source>` or `#/wiki/<source>/<s>[.<a>[-<b>]]` or a padya step `<s>.p<n>`. */
 export const nirdesaHash = (addr: string) => {
   const i = addr.indexOf('/');
   return i < 0 ? articleHash(addr) : `#/wiki/${encodeURIComponent(addr.slice(0, i))}/${addr.slice(i + 1)}`;
@@ -72,4 +77,4 @@ export function legacyHash(hash: string): string | undefined {
 
 /** True when a linked range resolves in the corpus (sections and lines exist, not reversed); no range is fine. */
 export const routeRangeOk = (id: string, range?: { from: Pos; to: Pos }) =>
-  !range || resolveNirdesa(formatNirdesa({ source: id, ...range.from, ...(range.to.section !== range.from.section || range.to.line !== range.from.line ? { to: range.to } : {}) })).ok;
+  !range || resolveNirdesa(formatNirdesa({ source: id, ...range.from, ...(range.to.section !== range.from.section || range.to.pada !== range.from.pada ? { to: range.to } : {}) })).ok;

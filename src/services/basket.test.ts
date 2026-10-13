@@ -42,5 +42,14 @@ test('basket titles tell sections and ranges of one source apart', () => {
   const doc = multi.title.english;
   const sec = multi.sections.find((s) => s.sectionNumber === 3)!;
   const t = basketToPrakara([multi.id, `${multi.id}/3`, `${multi.id}/3.3-9`, `${multi.id}/3.2`], 'x').items.map((i) => i.customTitle);
-  expect(t).toEqual([doc, `${doc}: ${sec.title}`, `${doc}: §3 lines 3–9`, `${doc}: §3 line 2`]);
+  expect(t).toEqual([doc, `${doc}: ${sec.title}`, `${doc}: §3 padas 3–9`, `${doc}: §3 pada 2`]);
+});
+
+test('a kriyā name becomes its sankalpa on a whole source or section, and is migrated tolerantly', () => {
+  const a = `${multi.id}/2`;
+  const [one, two] = basketToPrakara([a, `${multi.id}/3.2`], 'x', 1, { [a]: ' kalaśārādhanaṁ ', [`${multi.id}/3.2`]: 'ignored' }).items;
+  expect([one.kriyaName, one.sankalpa]).toEqual(['kalaśārādhanaṁ', 'kalaśārādhanaṁ kariṣye']);
+  expect(two.kriyaName).toBeUndefined();
+  expect(migrateStoredBasket({ items: [a], names: { [a]: 'x', gone: 'y', [multi.id]: 'z' } })).toEqual({ items: [a], names: { [a]: 'x' } });
+  expect(migrateStoredBasket({ items: [a] }).names).toEqual({});
 });

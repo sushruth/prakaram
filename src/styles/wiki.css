@@ -352,11 +352,12 @@
   }
 }
 
-/* Line numbers (nirdeśa lines): quiet muted numerals in a gutter; picked lines take the accent, no box or tint. */
+/* Pada numbers (nirdeśa padas): quiet muted numerals in a gutter; where a padya level exists the padya number sits in a second gutter column at the padya's last pada. Picked padas take the accent, no box or tint. */
 @layer components {
   .wiki-line[data-numbered] {
+    --gutter: 1.75rem;
     display: grid;
-    grid-template-columns: 1.75rem minmax(0, 1fr);
+    grid-template-columns: var(--gutter) minmax(0, 1fr);
     align-items: baseline;
     scroll-margin-top: calc(var(--header-h) + var(--fade-h));
   }
@@ -373,6 +374,32 @@
     cursor: pointer;
   }
 
+  .wiki-line[data-padya] {
+    --gutter: 3.25rem;
+    grid-template-columns: 1.5rem 1.75rem minmax(0, 1fr);
+  }
+
+  .wiki-pn {
+    grid-column: 2;
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    font: 600 0.8rem/1 'Geist', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .wiki-pn[data-in] {
+    color: var(--accent);
+  }
+
+  .wiki-line[data-padya] > span {
+    grid-column: 3;
+  }
+
   .wiki-ln[data-in] {
     color: var(--accent);
     font-weight: 600;
@@ -384,6 +411,29 @@
     gap: 0.25rem 0.75rem;
     margin: 0 0 0.75rem 1.75rem;
     font: 0.75rem/1.5 'Geist', system-ui, sans-serif;
+  }
+
+  .wiki-line[data-padya] + .wiki-range {
+    margin-left: 3.25rem;
+  }
+
+  .wiki-range-cite {
+    flex: 1 1 100%;
+  }
+
+  .wiki-article .wiki-range .wiki-refine[aria-pressed="true"] {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .wiki-article .wiki-cite {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+  }
+
+  .wiki-contents-list li.wiki-contents-cite {
+    padding: 0.1rem 0 0.4rem;
+    font-size: 0.8rem;
   }
 
   .wiki-article .wiki-range .wiki-link {

@@ -5,13 +5,15 @@ import { getArticle, pratika, type WikiArticle as Article, type WikiSection } fr
 import { lineClass } from '../config/lineClass';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { HOME_HASH, categoryHash, nirdesaHash, routeRangeOk, type Route } from '../services/wikiNav';
-import { type Pos, parseNirdesa, rangeNirdesa, rangeWords } from '../services/nirdesa';
+import { type Pos, parseNirdesa, rangeWords, selectionNirdesa } from '../services/nirdesa';
+import { padyas } from '../services/padya';
 import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useBasketStore } from '../stores/useBasketStore';
 import { Icon } from './Icon';
-import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle } from './Sanskrit';
+import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle, useCiteInWords } from './Sanskrit';
+import type { MantraDocument } from '../types/mantra';
 
 /** Where a reader creates an article that does not exist yet. */
 // ponytail: placeholder until the repository URL is confirmed; set it to the real repo's new-file page.
@@ -22,10 +24,10 @@ const STATUS_LABEL = { draft: 'Draft', proofread: 'Proofread', reviewed: 'Review
 const articleHref = (id: string) => `#/wiki/${encodeURIComponent(id)}`;
 const articleHash = (id: string, n: number) => `${articleHref(id)}/${n}`;
 const sectionDomId = (n: number) => `wiki-s-${n}`;
-const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.line}`;
-const cmp = (a: Pos, b: Pos) => a.section - b.section || a.line - b.line;
+const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.pada}`;
+const cmp = (a: Pos, b: Pos) => a.section - b.section || a.pada - b.pada;
 
-/** A selection of lines: the tapped start, and the end once a second number is tapped. */
+/** A selection of padas: the tapped start, and the end once a second number is tapped. Where padyas exist it covers whole padyas unless refined to padas. */
 interface Sel {
   a: Pos;
   b?: Pos;
@@ -35,7 +37,7 @@ interface WikiArticleProps {
   id: string;
   /** Section number to bring into view, from the `#/wiki/<id>/<n>` address. */
   section?: number;
-  /** Lines to mark and scroll to, from `#/wiki/<id>/<s>.<from>-<to>`. */
+  /** Padas to mark and scroll to, from `#/wiki/<id>/<s>.<from>-<to>`. */
   range?: Extract<Route, { kind: 'article' }>['range'];
   /** Play a nirdeśa in the player: an article id, a section's piece id or a range. */
   onRun: (pieceId: string) => void;
@@ -62,8 +64,9 @@ const lines = (s: WikiSection) => {
   return piece ? pieceChunks(ALL_SUKTAMS, piece).slice(0, 3).map((c) => c.sanskrit) : [];
 };
 
-function Contents({ id, sections, onRun }: { id: string; sections: WikiSection[]; onRun: (pieceId: string) => void }) {
+function Contents({ id, doc, sections, onRun }: { id: string; doc?: MantraDocument; sections: WikiSection[]; onRun: (pieceId: string) => void }) {
   const [open, setOpen] = useState(false);
+  const cite = useCiteInWords();
   const root = useRef<HTMLDivElement>(null);
   const btn = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -95,6 +98,7 @@ function Contents({ id, sections, onRun }: { id: string; sections: WikiSection[]
       </button>
       {open && (
         <ol id="wiki-contents-list" className="wiki-contents-list">
+          {doc?.metadata.place && <li className="wiki-contents-cite wiki-muted">{cite(doc, id)}</li>}
           {sections.map((s) => (
             <li key={s.id}>
               <a className="wiki-contents-jump" href={articleHash(id, s.number)} onClick={(e) => jump(e, s.number)}>
@@ -115,12 +119,20 @@ function Contents({ id, sections, onRun }: { id: string; sections: WikiSection[]
 
 /** A Wikipedia-style article about one piece of the corpus: lead, infobox, contents and sections of text. */
 export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
-  // The lines picked by tapping the numbers: a start, then optionally an end. A deep link starts with its range.
+  // The padas picked by tapping the numbers: a start, then optionally an end. A deep link starts with its range.
   // A linked range is used only when its full address resolves (in range, not reversed); otherwise nothing is selected.
   const rangeOk = routeRangeOk(id, range);
+  const doc = ALL_SUKTAMS.find((d) => d.id === id);
   const fromRoute = (): Sel | undefined => (range && rangeOk ? { a: range.from, ...(cmp(range.from, range.to) ? { b: range.to } : {}) } : undefined);
+  // A linked range that does not line up with whole padyas starts refined to padas.
+  const refinedRoute = () => {
+    const r = range && rangeOk && doc ? selectionNirdesa(doc, range.from, range.to) : undefined;
+    return !!r && (cmp(r.lo, range!.from) !== 0 || cmp(r.hi, range!.to) !== 0);
+  };
   const [sel, setSel] = useState<Sel | undefined>(fromRoute);
+  const [byPada, setByPada] = useState(refinedRoute);
   const [copied, setCopied] = useState(false);
+  const cite = useCiteInWords();
   const titleText = useTitleText();
   const fontSize = useSettingsStore((s) => s.fontSize);
   const article = getArticle(id);
@@ -137,15 +149,16 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
 
   useEffect(() => {
     setSel(fromRoute());
+    setByPada(refinedRoute());
     setCopied(false);
-  }, [id, range?.from.section, range?.from.line, range?.to.section, range?.to.line, rangeOk]);
+  }, [id, range?.from.section, range?.from.pada, range?.to.section, range?.to.pada, rangeOk]);
 
   useEffect(() => {
     if (section === undefined) return;
     const target = document.getElementById(range && rangeOk ? lineDomId(range.from) : sectionDomId(section));
     target?.scrollIntoView({ block: 'start' });
     target?.focus({ preventScroll: true });
-  }, [id, section, range?.from.line, range?.to.line]);
+  }, [id, section, range?.from.pada, range?.to.pada]);
 
   // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
   const followAll = () => {
@@ -173,12 +186,19 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   const unconfirmed = article.status === 'draft' || /not yet confirmed/i.test(article.license ?? '');
 
   const own = article.kind === 'source';
-  const [lo, hi] = sel ? (sel.b && cmp(sel.b, sel.a) < 0 ? [sel.b, sel.a] : [sel.a, sel.b ?? sel.a]) : [undefined, undefined];
+  const snap = sel && doc && own ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a) : undefined;
+  const span = sel && doc && own ? (byPada ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a, true) : snap) : undefined;
+  const [lo, hi] = [span?.lo, span?.hi];
   const picked = (p: Pos) => !!lo && !!hi && cmp(p, lo) >= 0 && cmp(p, hi) <= 0;
-  const addr = lo && hi ? rangeNirdesa(article.id, lo, hi) : '';
+  const addr = span?.addr ?? '';
   const tap = (p: Pos) => {
     setCopied(false);
-    setSel((cur) => (!cur || cur.b ? { a: p } : cmp(cur.a, p) === 0 ? undefined : { a: cur.a, b: p }));
+    const at = (x: Pos) => (doc ? selectionNirdesa(doc, x, x, byPada).lo : x);
+    setSel((cur) => (!cur || cur.b ? { a: p } : cmp(at(cur.a), at(p)) === 0 ? undefined : { a: cur.a, b: p }));
+  };
+  const refine = () => {
+    if (!byPada && span) setSel(cmp(span.lo, span.hi) ? { a: span.lo, b: span.hi } : { a: span.lo });
+    setByPada(!byPada);
   };
   const copyLink = async () => {
     try {
@@ -192,6 +212,8 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
 
   const renderSection = (s: WikiSection) => {
     const piece = findPiece(ALL_SUKTAMS, s.pieceId);
+    const sec = own ? doc?.sections.find((x) => x.sectionNumber === s.number) : undefined;
+    const groups = sec ? padyas(sec) : null;
     return (
       <section key={s.id} className="wiki-section">
         <h2 id={sectionDomId(s.number)} tabIndex={-1} className="wiki-section-title">
@@ -209,21 +231,29 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         </h2>
         {piece ? (
           pieceChunks(ALL_SUKTAMS, piece).flatMap((chunk, i) => {
-            const pos = { section: s.number, line: i + 1 };
+            const pos = { section: s.number, pada: i + 1 };
+            const endOf = groups?.find((g) => g.to === pos.pada);
             return [
-              <p key={`${chunk.id}-${i}`} id={lineDomId(pos)} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }} data-numbered={own ? '' : undefined}>
+              <p key={`${chunk.id}-${i}`} id={lineDomId(pos)} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }} data-numbered={own ? '' : undefined} data-padya={groups ? '' : undefined}>
                 {own && (
-                  <button type="button" className="wiki-ln" data-in={picked(pos) ? '' : undefined} aria-label={`Line ${pos.line}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
-                    {pos.line}
+                  <button type="button" className="wiki-ln" data-in={picked(pos) ? '' : undefined} aria-label={`Pada ${pos.pada}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
+                    {pos.pada}
+                  </button>
+                )}
+                {endOf && (
+                  <button type="button" className="wiki-pn" data-in={picked(pos) ? '' : undefined} aria-label={`Padya ${endOf.number}`} onClick={() => tap(pos)}>
+                    {endOf.number}
                   </button>
                 )}
                 <span><Sanskrit text={chunk.sanskrit} /></span>
               </p>,
               ...(own && hi && cmp(pos, hi) === 0 ? [
                 <p key="range" className="wiki-range">
+                  {doc && <span className="wiki-range-cite wiki-muted">{cite(doc, addr)}</span>}
                   <button type="button" className="wiki-link wiki-range-follow" onClick={() => onRun(addr)}>Follow {words}</button>
                   <AddToPrakaram pieceIds={[addr]} />
                   <button type="button" className="wiki-link" onClick={copyLink}>{copied ? 'Copied' : 'Copy link'}</button>
+                  {snap?.padya && <button type="button" className="wiki-link wiki-refine" aria-pressed={byPada} onClick={refine}>padas</button>}
                   <button type="button" className="wiki-link" onClick={() => setSel(undefined)}>clear</button>
                 </p>,
               ] : []),
@@ -238,7 +268,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
 
   const followLabel = article.kind === 'composition' ? 'Follow this composition' : 'Follow';
   const parent = article.veda ?? (article.kind === 'composition' ? 'Compositions' : 'Sources');
-  const peek = [article.veda, article.deity, `${article.lines} lines`].filter(Boolean).join(' · ');
+  const peek = [article.veda, article.deity, `${article.lines} padas`].filter(Boolean).join(' · ');
   const ref = (r: { id: string; title: string; sanskrit: string }) => (
     <li key={r.id}>
       <a href={articleHref(r.id)}>
@@ -257,12 +287,13 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         <h1 className="wiki-title vedic-text">
           <ArticleTitle title={article.title} />
         </h1>
-        {own && article.sections.length > 1 && <Contents id={article.id} sections={article.sections} onRun={onRun} />}
+        {own && article.sections.length > 1 && <Contents id={article.id} doc={doc} sections={article.sections} onRun={onRun} />}
         <button type="button" className="icon-btn wiki-follow" onClick={followAll} aria-label={followLabel} title={followLabel}>
           <Icon name="play" size={22} />
         </button>
       </div>
       <ArticleSubtitle title={article.title} />
+      {doc?.metadata.place && own && <p className="wiki-cite wiki-muted">{cite(doc, section === undefined ? id : `${id}/${section}`)}</p>}
       {!rangeOk && <p className="wiki-muted" role="note">That range is not in this text.</p>}
 
       <details className="wiki-info">
@@ -283,6 +314,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
           {article.veda && (<><dt>Veda</dt><dd>{article.veda}</dd></>)}
           {article.deity && (<><dt>Deity</dt><dd>{article.deity}</dd></>)}
           {article.usage && (<><dt>Usage</dt><dd>{article.usage}</dd></>)}
+          {doc?.metadata.place && own && (<><dt>Place</dt><dd>{cite(doc, id)}</dd></>)}
           <dt>Source</dt>
           <dd>{article.source}</dd>
           <dt>Status</dt>
@@ -291,7 +323,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
           </dd>
           <dt>Licence</dt>
           <dd>{article.license ?? 'Not stated'}</dd>
-          <dt>Lines</dt>
+          <dt>Padas</dt>
           <dd>{article.lines}</dd>
         </dl>
 
@@ -305,7 +337,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
                   m.language,
                   m.script,
                   m.swara === undefined ? undefined : m.swara ? 'with swara' : 'no swara',
-                  m.count === undefined ? undefined : `${m.count} lines`,
+                  m.count === undefined ? undefined : `${m.count} padas`,
                   m.source,
                 ]
                   .filter(Boolean)

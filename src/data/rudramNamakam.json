@@ -7,8 +7,14 @@
   },
   "metadata": {
     "veda": "yajurveda",
-    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita 4.5",
-    "cite": "TS 4.5",
+    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita (fourth kāṇḍa, fifth prapāṭhaka)",
+    "place": {
+      "work": { "sanskrit": "तैत्तिरीय संहिता", "english": "Taittirīya Saṃhitā" },
+      "divisions": [
+        { "kind": "kāṇḍa", "n": 4 },
+        { "kind": "prapāṭhaka", "n": 5 }
+      ]
+    },
     "source": "Vignanam (vignanam.org), supplied by the maintainer. Reuse permission not yet confirmed.",
     "devata": "Rudra",
     "status": "draft",
@@ -19,7 +25,7 @@
       "Shiva",
       "Yajurveda"
     ],
-    "summary": "The Namakam is the first part of the Sri Rudram. It is a litany of the names and epithets of Rudra, each followed by a salutation (\"namah\"), and it comes from the Taittiriya Samhita of the Krishna Yajurveda (4.5).",
+    "summary": "The Namakam is the first part of the Sri Rudram. It is a litany of the names and epithets of Rudra, each followed by a salutation (\"namah\"), and it comes from the Taittiriya Samhita of the Krishna Yajurveda (fourth kāṇḍa, fifth prapāṭhaka).",
     "related": [
       "rudram-chamakam",
       "shanti-mantras"

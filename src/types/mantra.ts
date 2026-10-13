@@ -54,6 +54,14 @@ export interface ComposedPart {
   note?: string;
 }
 
+/** A division of a work, by its own name: kāṇḍa, prapāṭhaka, aṣṭaka, adhyāya, varga, anuvāka, ... The section of a source is its anuvāka. */
+export type DivisionKind = 'kāṇḍa' | 'prapāṭhaka' | 'aṣṭaka' | 'adhyāya' | 'varga' | 'anuvāka' | 'maṇḍala' | 'sūkta' | 'praśna' | 'khaṇḍa' | 'valli';
+
+export interface Place {
+  work: { sanskrit: string; english: string };
+  divisions: { kind: DivisionKind; n: number }[];
+}
+
 export interface MantraDocument {
   id: string;
   title: {
@@ -67,8 +75,8 @@ export interface MantraDocument {
     /** Free-text description of the Veda, branch and references. */
     vedaNote?: string;
     source: string;
-    /** Optional traditional citation of the whole text, e.g. 'TS 4.5'. Shown before our own section.line numbers (nirdeśa), which are not traditional mantra numbers. */
-    cite?: string;
+    /** Where the source sits in its work, in the work's own division names (see MAINTAINERS §4a). Filled only where certain. Shown in words by `citeInWords`. */
+    place?: Place;
     rishi?: string;
     devata?: string;
     chandas?: string;
@@ -100,7 +108,7 @@ export interface PrakaraItem {
   id: string;
   type: 'sukta_ref' | 'vakya';
   suktaId?: string;
-  /** Nirdeśa of the part this step follows (`<source>/<s>` or `<source>/<s>.<a>-<b>`). Omitted means the whole sukta. */
+  /** Nirdeśa of the part this kriyā follows (`<source>/<s>`, `<source>/<s>.<a>-<b>` or a padya step `<source>/<s>.p<n>`). Omitted means the whole sukta. */
   nirdesa?: string;
   /** Old way to take one section (a section id). Read for backward compatibility and rewritten to `nirdesa` when loaded. */
   sectionId?: string;
@@ -108,6 +116,10 @@ export interface PrakaraItem {
   customTitle?: string;
   customText?: string;
   customTranslation?: string;
+  /** Optional name of the kriyā in Sanskrit (e.g. 'kalaśārādhanaṁ'), typed by the user. */
+  kriyaName?: string;
+  /** Generated from `kriyaName`: '<kriyaName> kariṣye'. */
+  sankalpa?: string;
 }
 
 export interface Prakara {

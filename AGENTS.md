@@ -29,17 +29,18 @@ Everything in the Koshah belongs to the public. We admit only text, translation,
 ### Canonical text, readings and the model going forward (decided, not built)
 
 * Each source has **one canonical text** (`mūla`), established by us from the original Sanskrit and kept in git (git history is its version history). Recensions (`śākhā`) are separate sources: Taittiriya, Kāṇva and Mādhyandina differ in wording and accents.
-* A **reading** (`pāṭhāntara`) is a named patch on a source: the mantra address, the position, and the replacement or skip, anchored to the source revision it was made against (marked stale if the source moves). A prakaram step can carry readings. A personal reading stays in the user's prakaram and never alters the source. A reading can be published as a named variant, attributed and not owned, and a widely used variant or a real correction can be promoted into the source by pull request.
-* Order of work: (1) the address scheme (`nirdeśa`) with ranges (built, at line level; see below), (2) steps that carry readings in the data model, (3) the editing UI for readings, (4) the contents page per source, (5) audio with per-line timings, (6) songs and shlokas.
+* A **reading** (`pāṭhāntara`) is a named patch on a source: the mantra address, the position, and the replacement or skip, anchored to the source revision it was made against (marked stale if the source moves). A prakaram kriyā can carry readings. A personal reading stays in the user's prakaram and never alters the source. A reading can be published as a named variant, attributed and not owned, and a widely used variant or a real correction can be promoted into the source by pull request.
+* Order of work: (1) the address scheme (`nirdeśa`) with ranges (built, at pada level, with a padya step; see below), (2) kriyās that carry readings in the data model, (3) the editing UI for readings, (4) the contents page per source, (5) audio with per-line timings, (6) songs and shlokas.
 
 ### Nirdeśa (the address scheme, built)
 
-A chunk is a **line** (a pada group), not a traditional mantra, so the finest honest address is section plus line. Never invent mantra numbers. `src/services/nirdesa.ts` (pure) owns the grammar:
+A chunk is a **pada** (पाद, one displayed line), not a traditional mantra, and the word "mantra" is overloaded, so the grouping above the pada is a **padya** (पद्य, verse or stanza). The finest honest address is section plus pada. Never invent mantra or padya numbers: a padya exists only where the text itself prints its numerals. `src/services/nirdesa.ts` (pure) owns the grammar:
 
-* `<source>` | `<source>/<s>` | `<source>/<s>.<l>` | `<source>/<s>.<from>-<to>` | `<source>/<s1>.<l1>-<s2>.<l2>`. `s` is the section's `sectionNumber`, `l` the 1-based line inside that section; `from <= to`, and `s.3-3` normalises to `s.3`. A piece id (`docId`, `docId/n`) is already a nirdeśa.
-* `resolveNirdesa(addr)` returns the document, the sections, the actual `MantraChunk[]` slice and label parts, or a typed error (`syntax`, `unknown-source`, `unknown-section`, `line-out-of-range`, `reversed-range`). `lineOf` and `nirdesaOfChunk` give a chunk's address by position, never by parsing the chunk id.
-* `metadata.cite` is an optional traditional prefix (`TS 4.5`), filled only when verified; it shows before our numbering (`TS 4.5 §3.2-§3.9`), and `§s.l` is never claimed to be the traditional mantra number.
-* A prakara step carries `PrakaraItem.nirdesa`; the old `sectionId` is read for compatibility and rewritten to `nirdesa` on load (`normalizePrakara` in `koshah.ts`, used by the prakara store and the `#p=` decoder). The My prakaram basket is a list of nirdeśa strings (old `{ pieceId }` baskets migrate).
+* `<source>` | `<source>/<s>` | `<source>/<s>.<l>` | `<source>/<s>.<from>-<to>` | `<source>/<s1>.<l1>-<s2>.<l2>`. `s` is the section's `sectionNumber`, `l` the 1-based pada inside that section; `from <= to`, and `s.3-3` normalises to `s.3`. A piece id (`docId`, `docId/n`) is already a nirdeśa.
+* **Padya step** (only in sections that have a padya level): `<source>/<s>.p<n>` (padya `n`, the number printed at its end), `<s>.p<n>-p<m>`, `<s1>.p<n>-<s2>.p<m>`, `<s>.p<n>.<k>` (the k-th pada inside padya n) and `<s>.p<n>.<a>-<b>`. It always resolves to whole padas, and every older address stays valid. `padyas(section)` (`src/services/padya.ts`) derives the level from the printed numerals (`॥ १ ॥`, `॥ 1 ॥`, any script's digits) at the end of a pada: a numeral ends a padya only when the section has two or more of them (Sri, Purusha, Durga, Narayana). One trailing numeral (the Namakam or Chamakam anuvāka number) is the anuvāka number, not a padya number, and a source with none (Shanti, Ganapati) has no padya level. A numeral not greater than the one before it is not a boundary; gaps stay as printed; padas after the last numeral belong to no padya.
+* `resolveNirdesa(addr)` returns the document, the sections, the actual `MantraChunk[]` slice and label parts, or a typed error (`syntax`, `unknown-source`, `unknown-section`, `pada-out-of-range`, `no-padya-level`, `padya-not-found`, `reversed-range`). `padaOf` and `nirdesaOfChunk` give a chunk's address by position, never by parsing the chunk id. `selectionNirdesa` builds the address of a selection, snapping to whole padyas unless refined to padas.
+* **Citation in words, not dotted or abbreviated.** `metadata.cite` ('TS 4.5') is gone and nothing displays a dotted number or an abbreviation as a citation. Display the way older texts cite, in the work's own division names with Sanskrit ordinals: `Taittirīya Saṃhitā · caturtha-kāṇḍa · pañcama-prapāṭhaka · prathama-anuvāka`, then `dvitīya-padya` or `caturtha-pāda` for a padya or pada. `citeInWords(source, address, script)` (`src/services/cite.ts`) builds it from the optional `metadata.place` (`work` and `divisions`, filled only where certain; the section is the anuvāka), through the single Sanskrit renderer (components use `useCiteInWords` from `Sanskrit.tsx`). A source without `place` shows just its title. Our `§s` numbers appear only as plain words ('§3 padas 3–9', '§3 padyas 2–4'), never as a traditional number.
+* A prakara kriyā carries `PrakaraItem.nirdesa`; the old `sectionId` is read for compatibility and rewritten to `nirdesa` on load (`normalizePrakara` in `koshah.ts`, used by the prakara store and the `#p=` decoder). The My prakaram basket is a list of nirdeśa strings (old `{ pieceId }` baskets migrate).
 * Numbering is stable once published (`MAINTAINERS.md` §4a). `nirdesa.test.ts` checks the corpus: unique ids, sections numbered 1..n, no empty section.
 
 ### Naming (Sanskrit terms, with English glosses in the UI)
@@ -51,9 +52,12 @@ A chunk is a **line** (a pada group), not a traditional mantra, so the finest ho
 | Composition (vrata, upakarma, puja, parayana) | **Prakāra / Prakaram** (प्रकारम्) | arrangement |
 | Rite or procedure around a composition | **Vidhi** (विधि) | the prescribed procedure |
 | Ordered steps | **Krama** (क्रम) | sequence |
-| One step | **Aṅga** (अङ्ग) | a limb of the rite |
-| Address of a source, section, line or range | **Nirdeśa** (निर्देश) | citation |
-| A line of the text (the unit a range is made of) | **Pāda** (पाद) | a foot or quarter of a verse; one displayed line |
+| One step of a prakaram (UI wording) | **Kriyā** (क्रिया) | a step; say "kriyā, a step" on first use, plural kriyās |
+| One element of the rite, in the older sense | **Aṅga** (अङ्ग) | a limb of the rite |
+| Address of a source, section, pada, padya or range | **Nirdeśa** (निर्देश) | address |
+| A verse or stanza (the grouping above the pada) | **Padya** (पद्य) | derived from printed numerals; UI plural "padyas". Not called "mantra" (overloaded) |
+| One displayed line of the text (the unit a range is made of) | **Pāda** (पाद) | pada; UI plural "padas" |
+| A kriyā's own name and sankalpa line | `kriyaName`, `sankalpa` | optional free text typed by the user ('kalaśārādhanaṁ'); the line shown and saved is `<kriyaName> kariṣye`. No Sanskrit declension is attempted |
 | Variant or personal reading | **Pāṭhāntara** (पाठान्तर) | another reading |
 | What an article brings | **Sāmagrī** (सामग्री) | the materials |
 | Translation | **Anuvāda** (अनुवाद) | |
@@ -61,7 +65,7 @@ A chunk is a **line** (a pada group), not a traditional mantra, so the finest ho
 | Audio recording | **Dhvani** (ध्वनि) | |
 | The library | **Koshah** (कोश) | treasury |
 
-The traditional divisions keep their own names in addresses and breadcrumbs (kāṇḍa, prapāṭhaka, anuvāka, mantra). In the UI, show the Sanskrit term with its English gloss on first use. Code identifiers move to these names when the refactor lands; until then they keep the current English ones (`source`, `composition`, `parts`, `media`).
+The traditional divisions keep their own names in citations (kāṇḍa, prapāṭhaka, anuvāka, ...). In the UI, show the Sanskrit term with its English gloss on first use. Code identifiers move to these names when the refactor lands; until then they keep the current English ones (`source`, `composition`, `parts`, `media`, `chunk`, `section`). The pada unit is already `pada` in code; stored data and keys are unchanged (`sukta_ref`, `nirdesa`, `prakaram-basket`, `#p=`).
 
 ---
 
@@ -124,11 +128,11 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 
 ### E. Koshah Wiki
 
-* The wiki is derived from `src/data` on each render (`src/services/wiki.ts`); nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/<id>/<s>.<from>-<to>` (a nirdeśa), `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
-* A **source** owns text and its sections are the addressable parts (`docId/n`); a nirdeśa also addresses lines and ranges of lines. A **composition** (`metadata.kind: 'composition'`, `metadata.parts`) owns no text and references parts. The default prakaras are derived as compositions. Do not copy text into a composition.
+* The wiki is derived from `src/data` on each render (`src/services/wiki.ts`); nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/<id>/<s>.<from>-<to>` or `#/wiki/<id>/<s>.p<n>` (a nirdeśa), `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
+* A **source** owns text and its sections are the addressable parts (`docId/n`); a nirdeśa also addresses padas, padyas and ranges of them. A **composition** (`metadata.kind: 'composition'`, `metadata.parts`) owns no text and references parts. The default prakaras are derived as compositions. Do not copy text into a composition.
 * Media are declared per article: text, transliteration and translation are derived; declare only audio, commentary, images or extras in `metadata.media`. The player plays text only.
-* The action word is **Follow** (the cadence follows the reader), not "Chant". Each source line has a quiet number (its section-relative line); tapping two numbers selects a range with Follow, Add to my prakaram, Copy link and clear. The article's own play button is the Phosphor `play` icon.
-* **My prakaram** is `useBasketStore` (`prakaram-basket`, persisted, validated on load). Items are nirdeśa strings (a section or a line range keeps its address into the prakara step). Following a composition saves it as a prakara first, so it re-saves each time.
+* The action word is **Follow** (the cadence follows the reader), not "Chant". Each pada has a quiet number (section-relative); where a padya level exists the padya number sits beside the padya's last pada. Tapping two numbers selects a range that snaps to whole padyas, with a `padas` toggle in the range row to refine to padas; the row reads `Follow padyas 3–5` / `Follow padas 3–9`, Add to my prakaram, Copy link and clear. The article's own play button is the Phosphor `play` icon.
+* **My prakaram** is `useBasketStore` (`prakaram-basket`, persisted, validated on load). Items are nirdeśa strings (a section, padya or pada range keeps its address into the prakara kriyā), with optional kriyā names by address (`names`). Following a composition saves it as a prakara first, so it re-saves each time.
 * Wiki pages use the player's header (`WikiTopBar`), tokens and gutters, and obey `DESIGN.md` §7b. Layout and anatomy are in `DESIGN.md` §5f.
 
 ---

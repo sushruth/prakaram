@@ -4,6 +4,8 @@
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
 import { displayTitle, splitTitle } from '../services/titles';
+import { citeInWords } from '../services/cite';
+import type { MantraDocument } from '../types/mantra';
 import { renderVedic } from './renderVedic';
 
 export const useScript = () => useSettingsStore((s) => s.script);
@@ -12,6 +14,12 @@ export const useScript = () => useSettingsStore((s) => s.script);
 export function useSanskritText(): (text: string) => string {
   const script = useScript();
   return (text) => transliterateVedic(text, script);
+}
+
+/** Citation in words (see services/cite.ts) as plain text in the selected script; follows a script change. */
+export function useCiteInWords(): (doc: MantraDocument, address: string) => string {
+  const script = useScript();
+  return (doc, address) => citeInWords(doc, address, script);
 }
 
 /** Title string ("Sanskrit (English)") as plain text in the selected script, for attributes. */

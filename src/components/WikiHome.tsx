@@ -31,7 +31,7 @@ export function WikiHome() {
       <h1 className="wiki-welcome">Koshah, the free, open library of Vedic chants with swara.</h1>
       <p className="wiki-figures">
         <span><b>{articles.length}</b> <span className="wiki-muted">articles</span></span>
-        <span><b>{lines}</b> <span className="wiki-muted">lines</span></span>
+        <span><b>{lines}</b> <span className="wiki-muted">padas</span></span>
       </p>
 
       <div className="wiki-grid">

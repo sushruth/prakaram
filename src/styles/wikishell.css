@@ -243,6 +243,30 @@
     flex: 1 1 100%;
   }
 
+  .wiki-compose-cite,
+  .wiki-compose-kriya {
+    display: block;
+    flex: 1 1 100%;
+    font-size: 0.85rem;
+  }
+
+  .wiki-kriya {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0 0;
+    padding: 0.25rem 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    caret-color: var(--accent);
+    font: inherit;
+    font-size: 0.9rem;
+  }
+
+  .wiki-kriya::placeholder {
+    color: var(--text-muted);
+  }
+
   .wiki-page .wiki-compose-item button,
   .wiki-page .wiki-compose-actions button:not(.btn-primary) {
     padding: 0.25rem 0;

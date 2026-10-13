@@ -25,11 +25,11 @@ test('legacy #k= links', () => {
 });
 
 test('line and range addresses', () => {
-  const from = { section: 3, line: 2 };
-  expect(parseRoute('#/wiki/rudram-namakam/3.2-3.9')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3, range: { from, to: { section: 3, line: 9 } } });
-  expect(parseRoute('#/wiki/rudram-namakam/3.2-9')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3, range: { from, to: { section: 3, line: 9 } } });
+  const from = { section: 3, pada: 2 };
+  expect(parseRoute('#/wiki/rudram-namakam/3.2-3.9')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3, range: { from, to: { section: 3, pada: 9 } } });
+  expect(parseRoute('#/wiki/rudram-namakam/3.2-9')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3, range: { from, to: { section: 3, pada: 9 } } });
   expect(parseRoute('#/wiki/rudram-namakam/3.2')).toEqual({ kind: 'article', id: 'rudram-namakam', section: 3, range: { from, to: from } });
-  expect((parseRoute('#/wiki/rudram-namakam/3.2-4.1') as { range: { to: unknown } }).range.to).toEqual({ section: 4, line: 1 });
+  expect((parseRoute('#/wiki/rudram-namakam/3.2-4.1') as { range: { to: unknown } }).range.to).toEqual({ section: 4, pada: 1 });
   expect(parseRoute('#/wiki/rudram-namakam/x.2')).toEqual({ kind: 'article', id: 'rudram-namakam' });
   expect(nirdesaHash('rudram-namakam/3.2-9')).toBe('#/wiki/rudram-namakam/3.2-9');
   expect(nirdesaHash('rudram-namakam')).toBe('#/wiki/rudram-namakam');

@@ -7,8 +7,14 @@
   },
   "metadata": {
     "veda": "yajurveda",
-    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita 4.7",
-    "cite": "TS 4.7",
+    "vedaNote": "Krishna Yajurveda, Taittiriya Samhita (fourth kāṇḍa, seventh prapāṭhaka)",
+    "place": {
+      "work": { "sanskrit": "तैत्तिरीय संहिता", "english": "Taittirīya Saṃhitā" },
+      "divisions": [
+        { "kind": "kāṇḍa", "n": 4 },
+        { "kind": "prapāṭhaka", "n": 7 }
+      ]
+    },
     "source": "Vignanam (vignanam.org), supplied by the maintainer. Reuse permission not yet confirmed.",
     "devata": "Rudra",
     "status": "draft",
@@ -20,7 +26,7 @@
       "Yajurveda",
       "Prarthana"
     ],
-    "summary": "The Chamakam is the second part of the Sri Rudram. It follows the Namakam and makes a series of requests to Rudra, each phrased as \"may I have\". It comes from the Taittiriya Samhita of the Krishna Yajurveda (4.7).",
+    "summary": "The Chamakam is the second part of the Sri Rudram. It follows the Namakam and makes a series of requests to Rudra, each phrased as \"may I have\". It comes from the Taittiriya Samhita of the Krishna Yajurveda (fourth kāṇḍa, seventh prapāṭhaka).",
     "related": [
       "rudram-namakam",
       "shanti-mantras"
