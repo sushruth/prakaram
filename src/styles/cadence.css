@@ -167,7 +167,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform var(--focus-dur) var(--focus-ease);
   }
 
   /* A chunk, which may wrap onto several screen lines just as it does on the page. */
@@ -175,7 +175,13 @@
     display: flex;
     flex-direction: column;
     gap: 0.03rem;
-    transition: opacity 0.45s ease;
+    transform-origin: left center;
+    transform: scale(calc(1 / var(--focus-scale)));
+    transition: opacity var(--focus-dur) var(--focus-ease), transform var(--focus-dur) var(--focus-ease);
+  }
+
+  .minimap-row[data-now="true"] {
+    transform: none;
   }
 
   .minimap-row[data-far="true"] {
@@ -199,7 +205,7 @@
     height: 100%;
     background: currentColor;
     opacity: 0.18;
-    transition: opacity 0.45s ease;
+    transition: opacity var(--focus-dur) var(--focus-ease);
   }
 
   .minimap-cells > span[data-blank="true"] {
@@ -334,5 +340,19 @@
     flex-direction: row;
     gap: 0.4rem;
     flex-shrink: 0;
+  }
+}
+
+@layer components {
+  @media (prefers-reduced-motion: reduce) {
+    .minimap-track,
+    .minimap-row,
+    .minimap-cells > span {
+      transition-duration: 0.01s;
+    }
+
+    .minimap-row {
+      transform: none;
+    }
   }
 }

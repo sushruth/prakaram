@@ -16,12 +16,12 @@ Prakaram is a chanting tool, not a temple. It should feel like a printed page on
 
 ## 2. Principles
 
-1. **Three lines are the focus.** The active chunk is bold and fully opaque. The line before and after it are at 60%. Every other chunk is at 35%. No box, no background, no border, no scale, no glow around the active line.
-2. **Opacity is the hierarchy, with one exception.** Lines recede by opacity: the neighbours of the active line at 60%, the rest at 35%. The active line is also set in semibold (600). Do not use size, colour or boxes to mark the current line.
+1. **Three lines are the focus.** The active chunk is fully opaque and scaled up 8% (not bold). The line before and after it are at 60%. Every other chunk is at 35%. No box, no background, no border, no glow around the active line.
+2. **Opacity is the hierarchy, with one exception.** Lines recede by opacity: the neighbours of the active line at 60%, the rest at 35%. The active line is also scaled to 1.08 (`--focus-scale`), at normal weight. Do not use boxes or extra colour to mark the current line.
 3. **One accent.** Slate blue ink (`#2f5f7a`) is used for active controls, focus, and the prakara title. Colour is reserved for the line-kind and swara tokens in §3 and §5c. Mantra text is plain ink.
 4. **Tints, not fills.** Surfaces are paper neutrals. Where a fill is needed (a pressed pill), use a tint at most one step off the paper.
 5. **No decoration.** No gradients or glows outside the §7b exceptions, no blur except zen-mode dimming, no emoji in primary chrome.
-6. **Motion is opacity only.** Transitions are 300–350 ms opacity fades. No scale, no slide.
+6. **Motion is one shared curve.** Scale, opacity, colour and the neighbours' drift all use `--focus-dur` (0.45 s) and `--focus-ease` (`cubic-bezier(0.16, 1, 0.3, 1)`), the same as the minimap and the page scroll, so a line change feels like scrolling. Other fades stay 300–350 ms. Layout never changes with the active line (scale and drift are transforms; every line wraps at the width the scaled line fills), so the page does not jump. Under `prefers-reduced-motion` the transitions are near-instant and the scale is dropped.
 
 ---
 
@@ -74,10 +74,10 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 
 | State | Opacity | Container | Transform |
 | :--- | :--- | :--- | :--- |
-| Active | 1 | none | none |
+| Active | 1 | none | text scaled 1.08 from the left edge, normal weight |
 | Inactive | 0.35 | none | none |
 | Inactive, hovered | 0.6 | none | none |
-| Neighbour of the active line (line before or after) | 0.6, active line set in semibold (600) | none | none |
+| Neighbour of the active line (line before or after) | 0.6 | none | drifts outward (0.4 rem up for the line before, 0.6 rem down for the line after), so there is more air between the three and less below the group |
 | Zen, inactive | 0.18 + 0.4 px blur | none | none |
 
 The instruction label ("Vakya / Procedure") is an uppercase accent label above the text. It has no fill.
@@ -203,7 +203,7 @@ The minimap is a picture of the three lines the reader highlights: the previous 
 
 A line that wraps on the page wraps in the minimap too. The reader's wrapped lines are measured from the page (`measureLines()` in `src/services/lineBreaks.ts` counts the characters on each screen line, re-measured when the active line, font size, script or window width changes), and `minimap()` splits each line's syllables across those screen lines in proportion. Screen lines of one chunk sit close together (0.03 rem); chunks are further apart (0.1 rem).
 
-Each screen line is a run of thin boxes (0.16 rem wide, 0.14 rem tall), one per syllable, with a half-width blank where there is a word gap. Boxes touch with no spacing, so a line reads as one continuous strip. The corners are square, not rounded. The longest screen line of the three is shrunk to at most 20 boxes, and every other line uses the same ratio (several syllables share a box on long lines). Lines are left aligned. At the first or last line the missing neighbour is empty. When the active line changes the rows scroll: the minimap holds two chunks before and two after the current one, slides them up so the new current row is centred (0.45 s, the same ease-out as the page), fades the old previous row out and the new next row in, and the top and bottom edges fade. Rows keep their DOM node, so nothing redraws.
+Each screen line is a run of thin boxes (0.16 rem wide, 0.14 rem tall), one per syllable, with a half-width blank where there is a word gap. Boxes touch with no spacing, so a line reads as one continuous strip. The corners are square, not rounded. The longest screen line of the three is shrunk to at most 20 boxes, and every other line uses the same ratio (several syllables share a box on long lines). Lines are left aligned. At the first or last line the missing neighbour is empty. When the active line changes the rows scroll: the minimap holds two chunks before and two after the current one, slides them up so the new current row is centred (0.45 s, the same ease-out as the page), fades the old previous row out and the new next row in, and the top and bottom edges fade. Rows also scale in step with the page: the current row is full size and the others 1/1.08 of it, on the same `--focus-dur` and `--focus-ease`, so rows scale, fade and slide together (instant under reduced motion). Rows keep their DOM node, so nothing redraws.
 
 Boxes take the colour of the line's text: `--text-primary` for mantra, `--shloka` for shloka, `--vakya` for vakya (the same classes the reader uses). A box that holds a swara mark takes `--swara-up`, `--swara-down` or `--swara-double`, as the reader does. Neighbours are very faint (18%). The current line is drawn once, and a CSS mask (an animated `--sung` percentage) sweeps left to right over the time that line has, along the first screen line and then the next: boxes already sung are full strength, the pending rest 22%. It restarts for the next line. Tapping the minimap pauses: the rows shrink to 70% and fade, and a pause mark appears over them. The mark is `--text-primary` with a `--bg-base` outline, so it reads on light and dark. Tapping again resumes with the time that was left. Jumping to another line while paused restarts that line at full time when you resume. The minimap is 3.2 × 1.9 rem and the strip keeps its height.
 

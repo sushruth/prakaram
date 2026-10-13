@@ -1,4 +1,11 @@
 @layer theme {
+  /* One curve and time for the focus lines and the minimap, so scale, colour and opacity move together. */
+  :root {
+    --focus-dur: 0.45s;
+    --focus-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --focus-scale: 1.08;
+  }
+
   :root, :root[data-theme="light"] {
     --bg-base: #f7f7f5;
     --bg-card: #eeeeeb;
