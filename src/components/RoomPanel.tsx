@@ -4,7 +4,7 @@ import { Icon } from './Icon';
 import { Sanskrit } from './Sanskrit';
 import { useRoomStore } from '../stores/useRoomStore';
 import { describeRoom, generateRoomName } from '../services/roomName';
-import { parseRoomInput, roomLink } from '../services/roomLink';
+import { roomLink } from '../services/roomLink';
 
 /** Clipboard API, with a textarea fallback for pages where it is unavailable. */
 async function copyText(text: string): Promise<boolean> {
@@ -41,10 +41,9 @@ function RoomName({ id }: { id: string }) {
 }
 
 export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const { isInRoom, roomCode, isHost, peerCount, creating, createRoom, joinRoom, leaveRoom } = useRoomStore();
+  const { isInRoom, roomCode, isHost, peerCount, creating, createRoom, leaveRoom } = useRoomStore();
   const [name, setName] = useState(() => generateRoomName());
   const [copied, setCopied] = useState(false);
-  const [text, setText] = useState('');
 
   const id = isInRoom ? roomCode : name.id;
   const link = () => roomLink(window.location.href, id);
@@ -54,14 +53,6 @@ export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
     const ok = await copyText(link());
     if (!isInRoom) await createRoom(id);
     setCopied(ok);
-  };
-
-  const join = (e: Event) => {
-    e.preventDefault();
-    const joined = parseRoomInput(text);
-    if (!joined) return;
-    joinRoom(joined, false);
-    setText('');
   };
 
   const leave = () => {
@@ -78,51 +69,34 @@ export function RoomPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
       <p className="room-sub">Group recitation. Anyone with the name can join.</p>
 
       <RoomName id={id} />
+      <p className="room-id-row"><code className="room-id">{id}</code></p>
 
       {isInRoom ? (
         <>
           <p className="room-sub" role="status">
             {who} {peerCount === 0 ? 'No one else is here yet.' : `${peerCount} ${peerCount === 1 ? 'person' : 'people'} with you.`}
           </p>
-          <button className="text-btn" onClick={copyLink}>
-            Copy link
-          </button>
-          <button className="text-btn text-btn-muted" onClick={leave}>
-            Leave
-          </button>
+          <div className="room-actions">
+            <button className="icon-btn" onClick={copyLink} aria-label="Copy link" title="Copy link">
+              <Icon name="copy" size={20} />
+            </button>
+            <button className="text-btn text-btn-muted" onClick={leave}>
+              Leave
+            </button>
+          </div>
         </>
       ) : (
         <>
-          <button className="text-btn text-btn-muted" onClick={() => setName(generateRoomName())} disabled={creating}>
-            another name
-          </button>
-          <button className="text-btn" onClick={copyLink} disabled={creating} aria-busy={creating}>
-            {creating ? (
-              <span className="room-creating">
-                <Icon name="circle-notch" size={16} />
-                <span>Creating…</span>
+          <div className="room-actions">
+            <button className="icon-btn" onClick={() => setName(generateRoomName())} disabled={creating} aria-label="Another name" title="Another name">
+              <Icon name="arrows-clockwise" size={20} />
+            </button>
+            <button className="icon-btn" onClick={copyLink} disabled={creating} aria-busy={creating} aria-label={creating ? 'Creating the room' : 'Copy link'} title={creating ? 'Creating…' : 'Copy link'}>
+              <span className={creating ? 'room-creating' : undefined}>
+                <Icon name={creating ? 'circle-notch' : 'copy'} size={20} />
               </span>
-            ) : (
-              'Copy link'
-            )}
-          </button>
-          <form className="room-join" onSubmit={join}>
-            <input
-              type="text"
-              placeholder="Have a link or name? Join"
-              aria-label="Join with a link or name"
-              value={text}
-              onInput={(e) => setText(e.currentTarget.value)}
-              autocapitalize="off"
-              autocomplete="off"
-              spellcheck={false}
-            />
-            {parseRoomInput(text) && (
-              <button type="submit" className="text-btn">
-                Join
-              </button>
-            )}
-          </form>
+            </button>
+          </div>
         </>
       )}
     </DropPanel>
