@@ -7,8 +7,15 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48.png" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#121413" media="(prefers-color-scheme: dark)" />
+    <!-- One theme-color, kept in step with the chosen theme (src/services/theme.ts), so the installed app's status bar matches. This script sets it before first paint. -->
+    <meta name="theme-color" content="#f7f7f5" />
+    <script>
+      try {
+        var t = (JSON.parse(localStorage.getItem('prakaram-settings') || '{}').state || {}).theme;
+        var dark = t === 'dark' || (t !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#121413' : '#f7f7f5');
+      } catch (e) {}
+    </script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Prakaram • Vedic Mantra Companion</title>
