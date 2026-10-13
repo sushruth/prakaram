@@ -5,7 +5,9 @@ import { ZenMantraReader } from './components/ZenMantraReader';
 import { LocateLine } from './components/LocateLine';
 import { CadencePanel } from './components/CadencePanel';
 import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
-import { ChantingRoomModal } from './components/ChantingRoomModal';
+import { RoomPanel } from './components/RoomPanel';
+import { roomFromHash } from './services/roomLink';
+import { useRoomStore } from './stores/useRoomStore';
 import { SettingsSheet } from './components/SettingsSheet';
 import { PrakaraDetails } from './components/PrakaraDetails';
 import { WikiHome } from './components/WikiHome';
@@ -21,7 +23,7 @@ import { initLineClock } from './services/lineClock';
 import { listArticles } from './services/wiki';
 import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute } from './services/wikiNav';
 
-type DropKind = 'settings' | 'details' | 'cadence';
+type DropKind = 'settings' | 'details' | 'cadence' | 'room';
 
 /** The route for the current hash. Old `#k=<id>` links are moved to the wiki address of their piece. */
 const readRoute = (): Route => {
@@ -35,7 +37,6 @@ const readRoute = (): Route => {
 
 export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
-  const [isRoomOpen, setIsRoomOpen] = useState(false);
   const [drop, setDrop] = useState<DropKind | null>(null);
   const [route, setRoute] = useState<Route>(readRoute);
 
@@ -50,6 +51,14 @@ export function App() {
       if (next.kind !== 'article' || next.section === undefined) window.scrollTo(0, 0);
       setRoute(next);
       setDrop(null);
+      // A shared parāyaṇam link (#room=<id>) joins the room as a follower, then drops the hash.
+      const room = roomFromHash(window.location.hash);
+      if (room) {
+        const r = useRoomStore.getState();
+        if (!r.creating && !(r.isInRoom && r.roomCode === room)) r.joinRoom(room, false);
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+        setDrop('room');
+      }
     };
     onHash();
     window.addEventListener('hashchange', onHash);
@@ -109,11 +118,6 @@ export function App() {
           }
         }
       }
-
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('room')) {
-        setIsRoomOpen(true);
-      }
     };
 
     handleUrlState();
@@ -132,7 +136,7 @@ export function App() {
         {playing ? (
           <>
             <Header
-              onOpenRoom={() => setIsRoomOpen(true)}
+              onOpenRoom={() => toggle('room')}
               onOpenSettings={() => toggle('settings')}
               onOpenDetails={() => toggle('details')}
               settingsOpen={drop === 'settings'}
@@ -141,7 +145,7 @@ export function App() {
             <CadenceStrip onOpenPanel={() => toggle('cadence')} panelOpen={drop === 'cadence'} />
           </>
         ) : (
-          <WikiTopBar query={route.kind === 'search' ? route.q : ''} onOpenSettings={() => toggle('settings')} settingsOpen={drop === 'settings'} onOpenRoom={() => setIsRoomOpen(true)} />
+          <WikiTopBar query={route.kind === 'search' ? route.q : ''} onOpenSettings={() => toggle('settings')} settingsOpen={drop === 'settings'} onOpenRoom={() => toggle('room')} />
         )}
       </div>
 
@@ -168,7 +172,7 @@ export function App() {
       )}
 
       <PrakaraBuilderModal isOpen={isPrakaraOpen} onClose={() => setIsPrakaraOpen(false)} />
-      <ChantingRoomModal isOpen={isRoomOpen} onClose={() => setIsRoomOpen(false)} />
+      <RoomPanel isOpen={drop === 'room'} onClose={closeDrop} />
     </>
   );
 }

@@ -33,7 +33,7 @@
 * **Back to line:** when the highlighted line scrolls off screen, a green arrow appears at the bottom right and jumps back to it.
 * **Reading position is kept:** each prakara remembers its line, and the prakara you were on is restored after a refresh.
 * **Install:** Prakaram is an installable PWA (manifest and icons in `public/`, including a monochrome icon for Android themed icons). A production build registers `public/sw.js`, which keeps the app shell available offline after one visit.
-* **Header:** a flame mark and the prakara title on the left (tap the title for details), then four icons: settings, Koshah, live room, and zen. Under them, a cadence strip shows the mode (Off, Manual, Learn), a readout, and the countdown ring. Tap the readout for the pace.
+* **Header:** a flame mark and the prakara title on the left (tap the title for details), then four icons: settings, Koshah, parāyaṇam room (the group icon), and zen. Under them, a cadence strip shows the mode (Off, Manual, Learn), a readout, and the countdown ring. Tap the readout for the pace.
 * **Ultra-Minimal Zen Mode:** Press `Z` or the lotus icon to hide everything except the verses and that icon. Hidden controls keep their space, so nothing shifts.
 * **Line Kinds:** Mantras are plain ink, with each swara-marked syllable coloured: up (svarita) purple, down (anudatta) blue, double up (dirgha svarita) red. Shlokas are green-tinted and medium weight; vakyas (procedure) are purplish grey and italic.
 
@@ -68,8 +68,8 @@
 * Insert custom or crowd-sourced vakyas, sankalpams, and procedural instructions in between.
 * Save customized Prakaras locally or share instantly.
 
-### 4. P2P WebRTC Live Chanting Room & Link Sharing
-* **Live Satsang Rooms:** Host chants while followers' screens synchronize active chunks and cadence in real-time with $<100\text{ ms}$ latency via serverless WebRTC (Trystero).
+### 4. P2P WebRTC Parāyaṇam (group recitation) & Link Sharing
+* **Parāyaṇam rooms:** a casual, live group recitation, not a prakaram's rite. The app names it for you from Sanskrit terms (for example Bhū-Kṛttikā), the host presses Copy link, and the room is created. Followers open the link (`#room=<id>`) or paste a link or name. The host's lines and cadence synchronize on followers' screens via serverless WebRTC (Trystero).
 * **Zero-Server Link Sharing:** Custom Prakaras and cadence configurations compress into native URL fragments (`#p=...`) using `CompressionStream('deflate-raw')`. URL fragments are never sent to servers (100% client-side privacy).
 
 ### 5. Accounts (Hidden) & Cloudflare Worker
