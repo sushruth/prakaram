@@ -1,4 +1,4 @@
-import { joinRoom } from 'trystero/torrent';
+import { getRelaySockets, joinRoom } from 'trystero/torrent';
 import { SyncMessage } from '../types/cadence';
 
 export interface RoomPeerCallbacks {
@@ -35,6 +35,15 @@ export class ChantingRoomService {
     this.room.onPeerLeave((peerId: string) => {
       callbacks.onPeerLeave?.(peerId);
     });
+  }
+
+  /** Resolves when a tracker connection is open (the room can be found), or after `timeoutMs` (offline: the host just waits). */
+  public async ready(timeoutMs = 4000): Promise<void> {
+    const end = Date.now() + timeoutMs;
+    while (Date.now() < end) {
+      if (Object.values(getRelaySockets()).some((s) => s.readyState === 1)) return;
+      await new Promise((r) => setTimeout(r, 100));
+    }
   }
 
   public broadcastChunkChange(chunkIndex: number, msPerMatra: number, autoProgress: boolean, prakaraId?: string) {

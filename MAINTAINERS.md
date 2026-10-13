@@ -105,6 +105,7 @@ If you wish to enable the optional cloud sync and passkey auth backend:
 
 * **Signaling Strategy:** By default, `src/services/webrtcRoom.ts` uses `trystero/torrent`, which connects via public WebTorrent trackers (`wss://tracker.openwebtorrent.com`, `wss://tracker.btorrent.xyz`).
 * **Alternative Nostr Strategy:** If desired, you can switch to `trystero/nostr` by changing the import in `webrtcRoom.ts` to connect via public Nostr relays (`wss://relay.damus.io`, `wss://nos.lol`).
+* **Parāyaṇam names and links:** the naming lists (lokas, nakṣatras, māsas, ṛtus, grahas, diśās, nadīs, vāsaras) and the pairing rules live in `src/services/roomName.ts`; an id is `<a>-<b>-<code>` with a 3-character code so two strangers who roll the same words do not meet. The link is `<app>#room=<id>` (`src/services/roomLink.ts`). The room name is not private: anyone who has it can join, and a typed name is accepted too.
 * **No Server Costs:** Neither strategy requires maintaining an active signaling server.
 
 ---

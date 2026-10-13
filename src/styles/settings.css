@@ -176,4 +176,98 @@
     color: transparent;
     filter: var(--flame);
   }
+  /* The parāyaṇam flyout: plain text, a text button, a borderless field. */
+  .room-name {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .room-code,
+  .room-sub {
+    color: var(--text-muted);
+  }
+
+  .room-code {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .room-sub {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .text-btn {
+    align-self: flex-start;
+    padding: 0.35rem 0;
+    background: none;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .text-btn-muted {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+
+  .text-btn:hover:not(:disabled) {
+    color: var(--text-primary);
+  }
+
+  .text-btn:disabled {
+    cursor: default;
+  }
+
+  .room-creating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .room-creating svg {
+    animation: room-spin 0.9s linear infinite;
+  }
+
+  @keyframes room-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Reduced motion: the words say it is working, the icon stays still. */
+  @media (prefers-reduced-motion: reduce) {
+    .room-creating svg {
+      animation: none;
+    }
+  }
+
+  .room-join {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .room-join input {
+    flex: 1;
+    min-width: 0;
+    min-height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    caret-color: var(--accent);
+    font: inherit;
+    font-size: 0.9rem;
+  }
+
+  .room-join input::placeholder {
+    color: var(--text-muted);
+  }
 }

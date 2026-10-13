@@ -26,8 +26,8 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
   const { isInRoom, isHost, peerCount } = useRoomStore();
 
   const roomTitle = isInRoom
-    ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)`
-    : 'Join a live room';
+    ? `Parāyaṇam room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)`
+    : 'Parāyaṇam room';
 
   return (
     <header className="app-header">
@@ -56,7 +56,7 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
         </a>
 
         <button className="icon-btn" onClick={onOpenRoom} aria-label={roomTitle} aria-pressed={isInRoom} title={roomTitle}>
-          <Icon name="globe" size={20} />
+          <Icon name="users-three" size={20} />
           {isInRoom && <span className="icon-dot" />}
         </button>
 
@@ -77,7 +77,7 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
 /** The top bar on every wiki page: logo to the Main page, search with suggestions, and a way back to the player. */
 export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: { query: string; onOpenSettings: () => void; settingsOpen: boolean; onOpenRoom: () => void }) {
   const { isInRoom, isHost, peerCount } = useRoomStore();
-  const roomTitle = isInRoom ? `Live room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Join a live room';
+  const roomTitle = isInRoom ? `Parāyaṇam room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Parāyaṇam room';
   const basketCount = useBasketStore((s) => s.items.length);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
@@ -141,7 +141,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
           <Icon name="scroll" size={20} />
         </a>
         <button className="icon-btn" onClick={onOpenRoom} aria-label={roomTitle} aria-pressed={isInRoom} title={roomTitle}>
-          <Icon name="globe" size={20} />
+          <Icon name="users-three" size={20} />
           {isInRoom && <span className="icon-dot" />}
         </button>
         <a className="icon-btn" href="#" aria-label="Back to the player" title="Player">

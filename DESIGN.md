@@ -100,7 +100,7 @@ The reader is a page, not a set of cards.
 
 ## 5e. Header, Title and Flyouts
 
-- The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, Koshah, live room, zen). The cadence strip sits directly under it (36px), and the header and strip are one sticky block. Lines scrolling under the block fade out over 20px in the page colour (`.chrome::after`), so they follow the theme. There is no site name in the header.
+- The header is one vertically centred row: a flame mark, the prakara title, and four icons (settings, Koshah, parāyaṇam room, zen). The cadence strip sits directly under it (36px), and the header and strip are one sticky block. Lines scrolling under the block fade out over 20px in the page colour (`.chrome::after`), so they follow the theme. There is no site name in the header.
 - The flame mark is Phosphor's flame outline with an amber-to-red gradient (the same everywhere); the favicon and PWA icons add a static glow. On screen its glow, sway and squash follow a random walk (`src/components/FlameMark.tsx`): each channel eases toward random targets at random intervals, so it never settles into a loop (off under reduced motion). The favicon and PWA icons are static, with a fixed glow. The sources are `src/components/FlameMark.tsx` and `public/favicon.svg`; `public/icons/*.png` are rendered from the SVG. `public/icons/icon-monochrome-512.png` is the manifest's monochrome icon (`purpose: monochrome`), for Android themed icons.
 - The prakara title sits beside the flame at the left of the header. It wraps to two lines and is limited to the akshara count of the longest default title, so it never widens the header. Tapping it opens the details flyout.
 - The details flyout shows the Sanskrit title with its English note, the creator, the line count, the description, and the contents.
@@ -216,6 +216,8 @@ Boxes take the colour of the line's text: `--text-primary` for mantra, `--shloka
 **Learning samples.** While Learn is active (learning, or learned), each line's active time is a sample: the time it was on screen, excluding pauses and away time, including holds. Every advance of one line gives a sample: a learning tap, a timer advance, Next, or a click on the next line. A jump of more than one line gives none. Guests give none.
 - Holding and away are not saved.
 
+**Parāyaṇam room (flyout and icon).** The room icon is Phosphor `users-three` (outline), on both the player header and the wiki bar, with the accent dot while in a room; its label is "Parāyaṇam room" plus host or follower and peers when in one. It opens a drop panel like settings, with no borders or boxes. Not in a room: the generated name large in the selected script, the code and transliteration muted, a muted `another name` button, a primary text button `Copy link` (it creates the room and copies `#room=<id>`; while creating it shows a rotating Phosphor `circle-notch` and the words "Creating…", the icon still under reduced motion), then "Copied. You are the host.", and a borderless "Have a link or name? Join" field. In a room: the name, host or follower and the peer count in words, `Copy link` and `Leave`. Title "Parāyaṇam" with the gloss "group recitation".
+
 **Shared sessions.** A host's lines and timing are followed by guests. A guest has no local cadence control: taps, Next, arrow and Space keys, line clicks, the minimap, the pace slider, the Auto switch and the Learn toggle are disabled, and away-pause does not apply. A guest can leave the room to use the app alone.
 
 ### Pace
@@ -239,7 +241,7 @@ Zen shows only the content and the zen (lotus) button. Everything else in the he
 
 ## 5f. Koshah
 
-The Koshah is the library: every piece of text the app holds, presented as a wiki. Its pages replace the player while the address is a `#/wiki` route. The player header's Koshah icon opens the main page. Wiki pages have the player's header, tokens and gutters: `WikiTopBar` (`src/components/Header.tsx`) holds the flame (to the main page), the search box with suggestions, then settings, Koshah, live room and player icons, with a **My prakaram (n)** link under it. Settings open the same drop panel as in the player. Old `#k=<id>` and `#k=<id>/<n>` links are redirected to the article address.
+The Koshah is the library: every piece of text the app holds, presented as a wiki. Its pages replace the player while the address is a `#/wiki` route. The player header's Koshah icon opens the main page. Wiki pages have the player's header, tokens and gutters: `WikiTopBar` (`src/components/Header.tsx`) holds the flame (to the main page), the search box with suggestions, then settings, Koshah, parāyaṇam room and player icons, with a **My prakaram (n)** link under it. Settings open the same drop panel as in the player. Old `#k=<id>` and `#k=<id>/<n>` links are redirected to the article address.
 
 ### Routes
 
@@ -358,7 +360,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 ## 7. Mobile
 
 - Page gutter is 16 px.
-- Header is one row, vertically centred: flame and prakara title on the left, four borderless icon buttons on the right (settings, Koshah, room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
+- Header is one row, vertically centred: flame and prakara title on the left, four borderless icon buttons on the right (settings, Koshah, parāyaṇam room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
 - Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
 - Touch targets are 40 px on every screen. Icon buttons keep 40 px on phones too (the header row fits at 412 px). Do not shrink text targets.
