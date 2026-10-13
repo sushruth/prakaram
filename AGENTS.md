@@ -114,6 +114,7 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 * **Guru (दीर्घ / संयोगे परे)** = $2\text{ mātrās}$ (long vowel or short vowel followed by conjunct/anusvara/visarga)
 * **Pluta (प्लुत)** = $3\text{ mātrās}$
 * **Daṇḍa Caesura (`|`)** = $2.0\text{ mātrās}$ pause; **Double Daṇḍa (`||`)** = $3.5\text{ mātrās}$ pause.
+* **Half letters are beats of their own:** a consonant with a virama (the first member of a conjunct, or a word-final one) is half a mātrā bare, one mātrā with a swara (svarita or anudātta) and two (a dvimātra) with the double svarita. A full letter with the double svarita is also a dvimātra. The short syllable before a half letter is still long by position. These are `syllabifyVedic` tokens in `src/services/syllabifier.ts`, and the learned pace uses the same totals.
 * **End rest:** every pada, and so every padya (it ends on a pada), rests $1\text{ mātrā}$ at its end (`END_REST` in `src/services/syllabifier.ts`). A printed daṇḍa or double daṇḍa already is that rest and is longer, so it replaces the rest: pauses never stack. A pada's total is its syllables plus this rest, and the learned pace uses the same total.
 
 ---

@@ -41,7 +41,7 @@ export function syllabifyVedic(text: string): AksharaToken[] {
     const curr = tokens[i];
     const next = tokens[i + 1];
 
-    if (curr.weight === 1 && next && isConjunctStart(next.text)) {
+    if (curr.weight === 1 && !curr.text.includes('्') && next && isConjunctStart(next.text)) {
       curr.weight = 2;
     }
   }
@@ -63,22 +63,26 @@ function tokenizeWord(word: string): AksharaToken[] {
       continue;
     }
 
-    let syllableText = '';
+    // Half letters (a consonant with a virama) are beats of their own: half a mātrā bare, one with a swara, two with the
+    // double svarita. The syllable that follows is then just its own consonant and vowel.
+    while (i + 1 < len && word[i] >= 'क' && word[i] <= 'ह' && word[i + 1] === '्') {
+      let halfText = word[i] + word[i + 1];
+      i += 2;
+      let halfSwara: 'anudatta' | 'svarita' | 'dirgha_svarita' | 'none' = 'none';
+      while (i < len && (word[i] === ANUDATTA || word[i] === SVARITA || word[i] === DIRGHA_SVARITA)) {
+        halfSwara = word[i] === ANUDATTA ? 'anudatta' : word[i] === SVARITA ? 'svarita' : 'dirgha_svarita';
+        halfText += word[i];
+        i++;
+      }
+      result.push({ text: halfText, weight: halfSwara === 'none' ? 0.5 : halfSwara === 'dirgha_svarita' ? 2 : 1, swara: halfSwara });
+    }
+    if (i >= len) continue;
+    char = word[i];
+
+    let syllableText = char;
+    i++;
     let isGuru = false;
     let swara: 'anudatta' | 'svarita' | 'dirgha_svarita' | 'none' = 'none';
-
-    while (i < len) {
-      const c = word[i];
-      syllableText += c;
-      i++;
-
-      if (c >= 'क' && c <= 'ह' && i < len && word[i] === '्') {
-        syllableText += word[i];
-        i++;
-        continue;
-      }
-      break;
-    }
 
     if (GURU_VOWELS.has(char)) {
       isGuru = true;

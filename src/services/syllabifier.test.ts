@@ -52,3 +52,19 @@ describe('double svarita', () => {
     }
   });
 });
+
+describe('half letters are beats of their own', () => {
+  const w = (t: string) => syllabifyVedic(t).map((x) => x.weight);
+
+  it('half a matra bare, one with a swara, two with the double svarita', () => {
+    expect(w('अर्म')).toEqual([2, 0.5, 1]); // अ is promoted: a short vowel before a conjunct is long by position
+    expect(w('अर्॑म')).toEqual([2, 1, 1]);
+    expect(w('अर्॒म')).toEqual([2, 1, 1]);
+    expect(w('अर्᳚म')).toEqual([2, 2, 1]);
+  });
+
+  it('a word-final half letter counts too, and a swara-carrying half letter is not promoted by position', () => {
+    expect(w('सम्')).toEqual([2, 0.5]); // the closed syllable is long by position
+    expect(w('अत्॑स्य')).toEqual([2, 1, 0.5, 1]);
+  });
+});
