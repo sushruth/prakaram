@@ -12,6 +12,7 @@ import { useGuest } from '../hooks/useGuest';
 import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
 import { Sanskrit } from './Sanskrit';
+import { Term } from './Term';
 import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
@@ -154,6 +155,10 @@ export function ZenMantraReader() {
                 setHolding(false);
               }}
             >
+              {chunk.section !== undefined && (
+                <h2 className="chunk-heading" onClick={(e) => e.stopPropagation()}><Term id="anuvaka" /> {chunk.section}</h2>
+              )}
+              {chunk.padya !== undefined && <span className="chunk-padya" onClick={(e) => e.stopPropagation()}><Term id="padya" /> {chunk.padya}</span>}
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
                 <span className="kind-label">{kindLabel(chunk.kind)}</span>
               )}

@@ -23,6 +23,10 @@ export interface MantraChunk {
   chandas?: string;
   kind?: ChunkKind;
   isLead?: boolean;
+  /** Player only: the section (anuvāka) this pada opens, in a source with several sections. */
+  section?: number;
+  /** Player only: the padya this pada opens, where the section has a padya level. */
+  padya?: number;
   tokens?: AksharaToken[];
 }
 

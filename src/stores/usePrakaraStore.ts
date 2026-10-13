@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware';
 import { Prakara, MantraChunk } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS } from '../data';
 import { PIECE_PREFIX, findPiece, itemNirdesa, nirdesaAsPrakara, normalizePrakara, pieceAsPrakara } from '../services/koshah';
+import { padyas } from '../services/padya';
 import { resolveNirdesa } from '../services/nirdesa';
 import { useSettingsStore } from './useSettingsStore';
 import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
@@ -51,8 +52,19 @@ export const usePrakaraStore = create<PrakaraState>()(
         for (const item of prakara.items) {
           if (item.type === 'sukta_ref' && item.suktaId) {
             const r = resolveNirdesa(itemNirdesa(item) ?? item.suktaId);
-            for (const ch of r.ok && r.document.id === item.suktaId ? r.chunks : []) {
-              chunks.push({ ...ch, chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
+            if (!r.ok || r.document.id !== item.suktaId) continue;
+            const doc = r.document;
+            const opens = new Map<string, { section?: number; padya?: number }>();
+            for (const sec of doc.sections) {
+              const inRange = sec.chunks.find((c) => r.chunks.some((x) => x.id === c.id));
+              if (inRange && doc.sections.length > 1) opens.set(inRange.id, { section: sec.sectionNumber });
+              for (const g of padyas(sec) ?? []) {
+                const c = sec.chunks[g.from - 1];
+                if (r.chunks.some((x) => x.id === c.id)) opens.set(c.id, { ...opens.get(c.id), padya: g.number });
+              }
+            }
+            for (const ch of r.chunks) {
+              chunks.push({ ...ch, ...opens.get(ch.id), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
             }
           } else if (item.type === 'vakya') {
             chunks.push({

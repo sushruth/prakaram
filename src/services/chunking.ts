@@ -33,6 +33,8 @@ export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
       id: `${chunk.id}-${pi}`,
       sanskrit: piece,
       isLead: pi === 0 && (chunk.isLead ?? true),
+      section: pi === 0 ? chunk.section : undefined,
+      padya: pi === 0 ? chunk.padya : undefined,
     }))
   );
 }
