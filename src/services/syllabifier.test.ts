@@ -43,3 +43,12 @@ describe('end rest', () => {
     expect(calculateChunkWeight('नम॒स्ते रु॒द्र ॥ १ ॥')).toBe(total('नम॒स्ते रु॒द्र ॥ १ ॥'));
   });
 });
+
+describe('double svarita', () => {
+  it('a full letter carrying the double svarita is one dvimatra, short vowel or not', () => {
+    for (const w of ['क᳚', 'कि᳚', 'कु᳚', 'का᳚']) {
+      const [t] = syllabifyVedic(w);
+      expect(t.weight).toBe(2);
+    }
+  });
+});
