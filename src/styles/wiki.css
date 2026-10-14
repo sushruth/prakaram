@@ -217,16 +217,27 @@
     list-style: none;
   }
 
-  .wiki-section {
-    margin-top: 2rem;
-  }
-
+  /* Windowed rows carry their vertical space as padding, never margin: `offsetHeight` then includes it,
+     so the virtual spacers keep the document height (and the scrollbar and deep links) honest. */
   .wiki-section-title {
     scroll-margin-top: calc(var(--header-h) + var(--fade-h));
-    margin: 0 0 1.25rem;
+    margin: 0;
+    /* 1.35rem + the previous row's 0.65rem bottom padding = the old 2rem section gap. */
+    padding: 1.35rem 0 1.25rem;
     font-size: 1.15rem;
     font-weight: 600;
     letter-spacing: -0.01em;
+  }
+
+  /* The first heading follows the info block (no bottom margin), so it keeps the full 2rem gap. */
+  .wiki-sections > .wiki-section-title:first-child {
+    padding-top: 2rem;
+  }
+
+  /* The window's spacers: empty blocks that reserve the height of unmounted rows. */
+  .wiki-spacer {
+    margin: 0;
+    padding: 0;
   }
 
   .wiki-section-actions {
@@ -250,8 +261,8 @@
   }
 
   .wiki-line {
-    padding: 0.2rem 0;
-    margin: 0 0 0.45rem;
+    padding: 0.2rem 0 0.65rem;
+    margin: 0;
     overflow-wrap: anywhere;
   }
 
@@ -409,12 +420,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 0.75rem;
-    margin: 0 0 0.75rem 1.75rem;
+    margin: 0;
+    padding: 0 0 0.75rem 1.75rem;
     font: 0.75rem/1.5 'Geist', system-ui, sans-serif;
   }
 
   .wiki-line[data-padya] + .wiki-range {
-    margin-left: 3.25rem;
+    padding-left: 3.25rem;
   }
 
   .wiki-range-cite {

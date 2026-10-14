@@ -22,10 +22,13 @@
     --accent-glow: rgba(47, 95, 122, 0.12);
     --on-accent: #ffffff;
     /* Base opacity of the flame's halo (the soft glow behind the header logo). */
-    --flame-halo-alpha: 0.13;
+    --flame-halo-alpha: 0.06;
     /* The flame's reflection on the viewport edges (the room light, see layout.css). On light it is
        a faint warm tint, not additive: an additive warm on a near-white page would only clip to white. */
-    --flame-room-alpha: 0.18;
+    --flame-room-alpha: 0.03;
+    /* The specular bevel on the top/left edges, on its own opacity (the bloom is diffuse light, this
+       is the frame's edge catch). */
+    --flame-room-edge-alpha: 0.06;
     --flame-room-blend: normal;
     --spectrum: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
     --spectrum-ink: linear-gradient(100deg, #a88a2e 0%, #b5652e 50%, #2f7fb8 100%);
@@ -62,9 +65,10 @@
       --accent-gold: #2a4256;
       --accent-glow: rgba(156, 203, 232, 0.14);
       --on-accent: #ffffff;
-      --flame-halo-alpha: 0.11;
+      --flame-halo-alpha: 0.05;
       /* Additive on dark, so the edge highlight reads as a reflection on the surface. */
-      --flame-room-alpha: 0.55;
+      --flame-room-alpha: 0.1;
+      --flame-room-edge-alpha: 0.2;
       --flame-room-blend: plus-lighter;
       --spectrum-ink: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
 
@@ -97,9 +101,10 @@
     --accent-gold: #2a4256;
     --accent-glow: rgba(156, 203, 232, 0.14);
     --on-accent: #ffffff;
-    --flame-halo-alpha: 0.11;
+    --flame-halo-alpha: 0.05;
     /* Additive on dark, so the edge highlight reads as a reflection on the surface. */
-    --flame-room-alpha: 0.55;
+    --flame-room-alpha: 0.1;
+    --flame-room-edge-alpha: 0.2;
     --flame-room-blend: plus-lighter;
     --spectrum-ink: linear-gradient(100deg, #f4d878 0%, #f5a262 50%, #b7dcf2 100%);
 

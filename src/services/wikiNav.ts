@@ -69,6 +69,10 @@ export const categoryHash = (name: string) => `#/wiki/Category:${encodeURICompon
 
 export const searchHash = (q: string) => `#/wiki/Special:Search?q=${encodeURIComponent(q)}`;
 
+/** DOM ids for a section heading and a pada line; deep links and in-page jumps target these. */
+export const sectionDomId = (n: number) => `wiki-s-${n}`;
+export const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.pada}`;
+
 /** Old `#k=<docId>/<n>` links (the `/` may be `%2F`) become the wiki address of that document or section. */
 export function legacyHash(hash: string): string | undefined {
   const m = hash.match(/^#k=(.+)$/);

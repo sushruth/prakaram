@@ -27,6 +27,7 @@
 
   /* Chrome, controls and transient panels do not belong on paper. */
   .flame-room-light,
+  .flame-room-edge,
   .chrome,
   .cadence-strip,
   .locate-line,
@@ -74,9 +75,9 @@
     color: var(--swara-double);
   }
 
-  /* Keep a verse together and its heading with it. */
+  /* Keep a pada and a verse together, and each heading with what follows. */
   .chunk-row,
-  .wiki-section {
+  .wiki-line {
     break-inside: avoid;
   }
 

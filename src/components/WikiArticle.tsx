@@ -1,33 +1,27 @@
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { useEffect, useMemo, useState } from 'preact/hooks';
 import { ALL_SUKTAMS } from '../data';
-import { findPiece, pieceChunks } from '../services/koshah';
-import { getArticle, pratika, type WikiArticle as Article, type WikiSection } from '../services/wiki';
-import { lineClass } from '../config/lineClass';
+import { getArticle } from '../services/wiki';
+import { buildRows, type WikiRow } from '../services/wikiRows';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { HOME_HASH, categoryHash, nirdesaHash, routeRangeOk, type Route } from '../services/wikiNav';
 import { type Pos, parseNirdesa, rangeWords, selectionNirdesa } from '../services/nirdesa';
-import { padyas } from '../services/padya';
 import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
-import { useBasketStore } from '../stores/useBasketStore';
 import { useRecentStore } from '../stores/useRecentStore';
 import { Icon } from './Icon';
-import { Term } from './Term';
+import { ArticleTitle, useTitleText, ArticleSubtitle, useCiteInWords } from './Sanskrit';
 import { SourceList } from './SourceList';
-import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle, useCiteInWords } from './Sanskrit';
-import type { MantraDocument } from '../types/mantra';
+import { Contents } from './WikiContents';
+import { WikiInfo } from './WikiInfo';
+import { WikiHeadingRow, WikiLineRow, WikiRangeRow } from './WikiRows';
+import { useArticleWindow } from '../hooks/useArticleWindow';
 
 /** Where a reader creates an article that does not exist yet. */
 // ponytail: placeholder until the repository URL is confirmed; set it to the real repo's new-file page.
 const NEW_ARTICLE_URL = 'https://github.com/sushruth/prakaram/new/main/src/data';
 
-const STATUS_LABEL = { draft: 'Draft', proofread: 'Proofread', reviewed: 'Reviewed' } as const;
-
-const articleHref = (id: string) => `#/wiki/${encodeURIComponent(id)}`;
-const articleHash = (id: string, n: number) => `${articleHref(id)}/${n}`;
-const sectionDomId = (n: number) => `wiki-s-${n}`;
-const lineDomId = (p: Pos) => `wiki-l-${p.section}-${p.pada}`;
 const cmp = (a: Pos, b: Pos) => a.section - b.section || a.pada - b.pada;
 
 /** A selection of padas: the tapped start, and the end once a second number is tapped. Where padyas exist it covers whole padyas unless refined to padas. */
@@ -44,80 +38,6 @@ interface WikiArticleProps {
   range?: Extract<Route, { kind: 'article' }>['range'];
   /** Play a nirdeśa in the player: an article id, a section's piece id or a range. */
   onRun: (pieceId: string) => void;
-}
-
-/** Text toggle: adds a piece to the basket, then reads "Added ✓ · remove". */
-function AddToPrakaram({ pieceIds }: { pieceIds: string[] }) {
-  const added = useBasketStore((s) => pieceIds.length > 0 && pieceIds.every((p) => s.items.includes(p)));
-  const { add, remove } = useBasketStore.getState();
-  return added ? (
-    <button type="button" className="wiki-link wiki-add" data-added onClick={() => pieceIds.forEach(remove)}>
-      Added ✓ · remove
-    </button>
-  ) : (
-    <button type="button" className="wiki-link wiki-add" onClick={() => pieceIds.forEach(add)}>
-      Add to my prakaram
-    </button>
-  );
-}
-
-/** Contents: a fade-in text list of a source's sections, to jump to one, follow it or add it, without scrolling the text. */
-const lines = (s: WikiSection) => {
-  const piece = findPiece(ALL_SUKTAMS, s.pieceId);
-  return piece ? pieceChunks(ALL_SUKTAMS, piece).slice(0, 3).map((c) => c.sanskrit) : [];
-};
-
-function Contents({ id, doc, sections, onRun }: { id: string; doc?: MantraDocument; sections: WikiSection[]; onRun: (pieceId: string) => void }) {
-  const [open, setOpen] = useState(false);
-  const cite = useCiteInWords();
-  const root = useRef<HTMLDivElement>(null);
-  const btn = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
-    if (!open) return;
-    root.current?.querySelector<HTMLElement>('.wiki-contents-jump')?.focus();
-    const key = (e: KeyboardEvent) => {
-      if (e.key !== 'Escape') return;
-      setOpen(false);
-      btn.current?.focus();
-    };
-    const away = (e: Event) => root.current && !root.current.contains(e.target as Node) && setOpen(false);
-    document.addEventListener('keydown', key);
-    document.addEventListener('pointerdown', away);
-    return () => {
-      document.removeEventListener('keydown', key);
-      document.removeEventListener('pointerdown', away);
-    };
-  }, [open]);
-  const jump = (e: MouseEvent, n: number) => {
-    setOpen(false);
-    if (location.hash !== articleHash(id, n)) return; // the route change scrolls
-    e.preventDefault();
-    document.getElementById(sectionDomId(n))?.scrollIntoView({ block: 'start' });
-  };
-  return (
-    <div className="wiki-contents" ref={root}>
-      <button ref={btn} type="button" className="wiki-link wiki-contents-btn" aria-expanded={open} aria-controls="wiki-contents-list" onClick={() => setOpen(!open)}>
-        Contents
-      </button>
-      {open && (
-        <ol id="wiki-contents-list" className="wiki-contents-list">
-          {doc?.metadata.place && <li className="wiki-contents-cite wiki-muted">{cite(doc, id)}</li>}
-          {sections.map((s) => (
-            <li key={s.id}>
-              <a className="wiki-contents-jump" href={articleHash(id, s.number)} onClick={(e) => jump(e, s.number)}>
-                <span className="wiki-contents-n">{s.number}</span> <ArticleTitle title={{ sanskrit: '', english: s.title }} />{' '}
-                <span className="wiki-muted">· <Sanskrit text={pratika(lines(s))} /></span>
-              </a>
-              <span className="wiki-contents-acts">
-                <button type="button" className="wiki-link" onClick={() => { setOpen(false); onRun(s.pieceId); }}>Follow</button>
-                <AddToPrakaram pieceIds={[s.pieceId]} />
-              </span>
-            </li>
-          ))}
-        </ol>
-      )}
-    </div>
-  );
 }
 
 /** A Wikipedia-style article about one piece of the corpus: lead, infobox, contents and sections of text. */
@@ -138,7 +58,8 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   const cite = useCiteInWords();
   const titleText = useTitleText();
   const fontSize = useSettingsStore((s) => s.fontSize);
-  const article = getArticle(id);
+  // The corpus is loaded before the article renders (App gates on the loader), so the article is stable across a scroll.
+  const article = useMemo(() => getArticle(id), [id]);
   const pageTitle = article ? titleText(mixedTitle(article.title)) : '';
 
   useEffect(() => {
@@ -156,28 +77,19 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
     setCopied(false);
   }, [id, range?.from.section, range?.from.pada, range?.to.section, range?.to.pada, rangeOk]);
 
-  useEffect(() => {
-    if (section === undefined) return;
-    const target = document.getElementById(range && rangeOk ? lineDomId(range.from) : sectionDomId(section));
-    target?.scrollIntoView({ block: 'start' });
-    target?.focus({ preventScroll: true });
-  }, [id, section, range?.from.pada, range?.to.pada]);
-
   // Remember the article the reader opened. Category, search and compose pages render other components, so
   // only real articles reach here; an unknown id is not recorded (getArticle returns undefined).
   const recordRecent = useRecentStore((s) => s.record);
   useEffect(() => {
-    if (getArticle(id)) recordRecent(id);
-  }, [id, recordRecent]);
+    if (article) recordRecent(id);
+  }, [id, article, recordRecent]);
 
-  // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
-  const followAll = () => {
-    if (!article || article.kind !== 'composition') return onRun(id);
-    const store = usePrakaraStore.getState();
-    if (store.prakaras.some((p) => p.id === id)) store.selectPrakara(id);
-    else store.addPrakara(basketToPrakara(article.sections.map((x) => x.pieceId), mixedTitle(article.title)));
-    window.location.hash = '';
-  };
+  const own = article?.kind === 'source';
+  const snap = sel && doc && own ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a) : undefined;
+  const span = sel && doc && own ? (byPada ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a, true) : snap) : undefined;
+  const hi = span?.hi;
+  const rows = useMemo(() => (article ? buildRows(article, doc, own, hi) : []), [article, doc, own, hi?.section, hi?.pada, byPada]);
+  const { listRef, start, end, top, bottom, measure, printing } = useArticleWindow({ rows, fontSize, id, section, from: range && rangeOk ? range.from : undefined });
 
   if (!article) {
     return (
@@ -194,11 +106,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   }
 
   const unconfirmed = article.status === 'draft' || /not yet confirmed/i.test(article.license ?? '');
-
-  const own = article.kind === 'source';
-  const snap = sel && doc && own ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a) : undefined;
-  const span = sel && doc && own ? (byPada ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a, true) : snap) : undefined;
-  const [lo, hi] = [span?.lo, span?.hi];
+  const lo = span?.lo;
   const picked = (p: Pos) => !!lo && !!hi && cmp(p, lo) >= 0 && cmp(p, hi) <= 0;
   const addr = span?.addr ?? '';
   const tap = (p: Pos) => {
@@ -220,72 +128,33 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   };
   const words = addr ? rangeWords(parseNirdesa(addr)!) : '';
 
-  const renderSection = (s: WikiSection) => {
-    const piece = findPiece(ALL_SUKTAMS, s.pieceId);
-    const sec = own ? doc?.sections.find((x) => x.sectionNumber === s.number) : undefined;
-    const groups = sec ? padyas(sec) : null;
-    return (
-      <section key={s.id} className="wiki-section">
-        <h2 id={sectionDomId(s.number)} tabIndex={-1} className="wiki-section-title">
-          {s.number}. {s.title}
-          {s.from && (
-            <span className="wiki-from"> from <a href={`${articleHref(s.from.id)}/${s.from.number}`}><ArticleTitle title={{ sanskrit: s.from.sanskrit, english: s.from.title }} /></a> §{s.from.number}</span>
-          )}
-          <span className="wiki-section-actions">
-            <button type="button" className="wiki-link" onClick={() => onRun(s.pieceId)}>
-              [follow]
-            </button>
-            {(article.sections.length > 1 || article.kind === 'composition') && <AddToPrakaram pieceIds={[s.pieceId]} />}
-            <a href={article.editUrl}>[edit]</a>
-          </span>
-        </h2>
-        {piece ? (
-          pieceChunks(ALL_SUKTAMS, piece).flatMap((chunk, i) => {
-            const pos = { section: s.number, pada: i + 1 };
-            const endOf = groups?.find((g) => g.to === pos.pada);
-            return [
-              <p key={`${chunk.id}-${i}`} id={lineDomId(pos)} className={`wiki-line vedic-text ${lineClass(chunk)}`} style={{ fontSize: `${fontSize}px` }} data-numbered={own ? '' : undefined} data-padya={groups ? '' : undefined}>
-                {own && (
-                  <button type="button" className="wiki-ln" data-in={picked(pos) ? '' : undefined} aria-label={`Pada ${pos.pada}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
-                    {pos.pada}
-                  </button>
-                )}
-                {endOf && (
-                  <button type="button" className="wiki-pn" data-in={picked(pos) ? '' : undefined} aria-label={`Ṛk ${endOf.number}`} onClick={() => tap(pos)}>
-                    {endOf.number}
-                  </button>
-                )}
-                <span><Sanskrit text={chunk.sanskrit} /></span>
-              </p>,
-              ...(own && hi && cmp(pos, hi) === 0 ? [
-                <p key="range" className="wiki-range">
-                  {doc && <span className="wiki-range-cite wiki-muted">{cite(doc, addr)}</span>}
-                  <button type="button" className="wiki-link wiki-range-follow" onClick={() => onRun(addr)}>Follow {words}</button>
-                  <AddToPrakaram pieceIds={[addr]} />
-                  <button type="button" className="wiki-link" onClick={copyLink}>{copied ? 'Copied' : 'Copy link'}</button>
-                  {snap?.padya && <button type="button" className="wiki-link wiki-refine" aria-pressed={byPada} onClick={refine}>padas</button>}
-                  <button type="button" className="wiki-link" onClick={() => setSel(undefined)}>clear</button>
-                </p>,
-              ] : []),
-            ];
-          })
-        ) : (
-          <p className="wiki-muted">The text of this section is not available.</p>
-        )}
-      </section>
-    );
+  // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
+  const followAll = () => {
+    if (article.kind !== 'composition') return onRun(id);
+    const store = usePrakaraStore.getState();
+    if (store.prakaras.some((p) => p.id === id)) store.selectPrakara(id);
+    else store.addPrakara(basketToPrakara(article.sections.map((x) => x.pieceId), mixedTitle(article.title)));
+    window.location.hash = '';
+  };
+
+  const citeText = doc && addr ? cite(doc, addr) : undefined;
+  const mounted = start <= end ? rows.slice(start, end + 1).map((row, i) => ({ row, index: start + i })) : [];
+  const renderRow = (row: WikiRow, index: number) => {
+    const rowRef = measure(index);
+    switch (row.type) {
+      case 'heading':
+        return <WikiHeadingRow row={row} sectionCount={article.sections.length} composition={article.kind === 'composition'} editUrl={article.editUrl} onRun={onRun} rowRef={rowRef} />;
+      case 'line':
+        return <WikiLineRow row={row} fontSize={fontSize} picked={picked} tap={tap} rowRef={rowRef} />;
+      case 'range':
+        return <WikiRangeRow citeText={citeText} addr={addr} words={words} onRun={onRun} copied={copied} onCopy={copyLink} showRefine={!!snap?.padya} byPada={byPada} onRefine={refine} onClear={() => setSel(undefined)} rowRef={rowRef} />;
+      case 'missing':
+        return <p className="wiki-muted" ref={rowRef}>The text of this section is not available.</p>;
+    }
   };
 
   const followLabel = article.kind === 'composition' ? 'Follow this composition' : 'Follow';
   const parent = article.veda ?? (article.kind === 'composition' ? 'Compositions' : 'Sources');
-  const peek = [article.veda, article.deity, `${article.lines} padas`].filter(Boolean).join(' · ');
-  const ref = (r: { id: string; title: string; sanskrit: string }) => (
-    <li key={r.id}>
-      <a href={articleHref(r.id)}>
-        <ArticleTitle title={{ sanskrit: r.sanskrit, english: r.title }} />
-      </a>
-    </li>
-  );
 
   return (
     <main className="wiki-article">
@@ -313,81 +182,16 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         </section>
       )}
 
-      <details className="wiki-info">
-        <summary>
-          Info <span className="wiki-muted">{peek}</span>
-          {unconfirmed && <span className="wiki-notice-word"> · {STATUS_LABEL[article.status]}</span>}
-        </summary>
+      <WikiInfo article={article} doc={doc} own={own} id={id} unconfirmed={unconfirmed} />
 
-        {unconfirmed && (
-          <p className="wiki-notice" role="note">
-            <span className="wiki-notice-word">{STATUS_LABEL[article.status]}.</span> This text has not been proofread / permission pending.
-          </p>
-        )}
-
-        <p className="wiki-lead">{article.summary}</p>
-
-        <dl className="wiki-facts">
-          {article.veda && (<><dt><Term id="veda">Veda</Term></dt><dd>{article.veda}</dd></>)}
-          {article.deity && (<><dt>Deity</dt><dd>{article.deity}</dd></>)}
-          {article.usage && (<><dt>Usage</dt><dd>{article.usage}</dd></>)}
-          {doc?.metadata.place && own && (<><dt><Term id="nirdesha">Place</Term></dt><dd>{cite(doc, id)}</dd></>)}
-          <dt>Status</dt>
-          <dd>
-            <span className="wiki-status" data-status={article.status}>{STATUS_LABEL[article.status]}</span>
-          </dd>
-          <dt><Term id="pada">Padas</Term></dt>
-          <dd>{article.lines}</dd>
-        </dl>
-
-        <section className="wiki-brings" aria-labelledby="wiki-brings-title">
-          <h2 id="wiki-brings-title"><Term id="samagri">Brings</Term></h2>
-          <ul>
-            {article.media.map((m, i) => (
-              <li key={i}>
-                <span className="wiki-brings-kind">{m.label ?? m.kind}</span>
-                {[
-                  m.language,
-                  m.script,
-                  m.swara === undefined ? undefined : m.swara ? 'with swara' : 'no swara',
-                  m.count === undefined ? undefined : `${m.count} padas`,
-                  m.source,
-                ]
-                  .filter(Boolean)
-                  .join(' · ')}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {article.usedIn.length > 0 && (
-          <section className="wiki-related" aria-labelledby="wiki-used-title">
-            <h2 id="wiki-used-title">Used in</h2>
-            <ul>{article.usedIn.map(ref)}</ul>
-          </section>
-        )}
-
-        {article.related.length > 0 && (
-          <section className="wiki-related" aria-labelledby="wiki-related-title">
-            <h2 id="wiki-related-title">Related articles</h2>
-            <ul>{article.related.map(ref)}</ul>
-          </section>
-        )}
-
-        <p className="wiki-footer">
-          <span className="wiki-muted">Categories</span>{' '}
-          {article.categories.map((c) => (
-            <a key={c} href={categoryHash(c)}>{c}</a>
-          ))}
-        </p>
-        <p className="wiki-footer">
-          <AddToPrakaram pieceIds={article.kind === 'composition' ? article.sections.map((x) => x.pieceId) : [article.id]} />
-          <a href={article.editUrl}>Edit</a>
-          <a href={article.historyUrl}>View history</a>
-        </p>
-      </details>
-
-      {article.sections.map(renderSection)}
+      {/* Only the section list is windowed: the chrome above stays mounted, the rows below move with the page scroll. */}
+      <div className="wiki-sections" ref={listRef}>
+        {!printing && top > 0 && <div className="wiki-spacer" style={{ height: `${top}px` }} aria-hidden="true" />}
+        {mounted.map(({ row, index }) => (
+          <Fragment key={row.key}>{renderRow(row, index)}</Fragment>
+        ))}
+        {!printing && bottom > 0 && <div className="wiki-spacer" style={{ height: `${bottom}px` }} aria-hidden="true" />}
+      </div>
     </main>
   );
 }

@@ -256,8 +256,10 @@ export function App() {
 
   return (
     <>
-      {/* The flame's light on the room's frame: a fixed overlay behind the content (see layout.css). */}
+      {/* The flame's light on the room's frame: a fixed overlay behind the content (see layout.css).
+          Two elements so the diffuse bloom and the specular bevel carry their own opacity. */}
       <div className="flame-room-light" aria-hidden="true" />
+      <div className="flame-room-edge" aria-hidden="true" />
       <div className="chrome">
         {playing ? (
           <>

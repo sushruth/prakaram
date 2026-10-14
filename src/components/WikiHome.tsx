@@ -23,13 +23,25 @@ function tally(articles: WikiArticle[], field: (a: WikiArticle) => string | unde
 /** A label for an id the home links to: a loaded article's English title, else the live source's label, else the id. */
 const labelFor = (id: string) => getArticle(id)?.title.english ?? liveSourceLabel(id) ?? id;
 
-/** A plain text list of links to articles. */
+/**
+ * The title a home pick shows: a live source's own Devanagari title (so it renders in the selected
+ * script before the source is fetched), else the loaded article's title, else the plain label.
+ */
+function pickTitle(p: HomePick) {
+  const live = LIVE_SOURCES.find((s) => s.id === p.id);
+  if (live) return { sanskrit: live.sanskrit, english: p.label };
+  return getArticle(p.id)?.title ?? { sanskrit: '', english: p.label };
+}
+
+/** A plain list of links to articles, titled in the selected script like the rest of the home. */
 function PickList({ picks }: { picks: HomePick[] }) {
   return (
     <ul className="wiki-list">
       {picks.map((p) => (
         <li key={p.id}>
-          <a href={articleHash(p.id)}>{p.label}</a>
+          <a href={articleHash(p.id)}>
+            <ArticleTitle title={pickTitle(p)} />
+          </a>
         </li>
       ))}
     </ul>
@@ -54,7 +66,7 @@ export function WikiHome() {
 
   return (
     <div className="wiki-page">
-      <h1 className="wiki-welcome"><Term id="koshah">Koshah</Term>, the free, open library of Vedic chants with swara.</h1>
+      <h1 className="wiki-welcome"><Term id="koshah" />, the free, open library of Vedic chants with swara.</h1>
       <p className="wiki-figures">
         <span><b>{LIVE_SOURCES.length}</b> <span className="wiki-muted">live sources</span></span>
         <span><b>{DEFAULT_PRAKARAS.length}</b> <span className="wiki-muted">compositions</span></span>

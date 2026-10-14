@@ -12,24 +12,29 @@
     position: relative;
   }
 
-  /* The flame as a light source in the room (DESIGN.md §7b): a narrow specular highlight on the
-     viewport's top and left edges, like light catching the bevel of a metal frame. It is a fixed
-     overlay at the shell level — the header's backdrop-filter would reposition a fixed child, so it
-     cannot live there. It must sit ABOVE the header's background (`.chrome`, z-index 40) or the top
-     edge and the top of the left edge are painted over, and BELOW the panels (45+), so it is z-index 41. */
-  .flame-room-light {
+  /* The flame as a light source in the room (DESIGN.md §7b): a diffuse bloom where its light lands,
+     and a narrow specular highlight on the viewport's top and left edges, like light catching the
+     bevel of a metal frame. Two fixed overlays at the shell level — the header's backdrop-filter
+     would reposition a fixed child, so they cannot live there. Both must sit ABOVE the header's
+     background (`.chrome`, z-index 40) or the top edge and the top of the left edge are painted
+     over, and BELOW the panels (45+), so they are z-index 41. */
+  .flame-room-light,
+  .flame-room-edge {
     position: fixed;
     inset: 0;
     z-index: 41;
     pointer-events: none;
     mix-blend-mode: var(--flame-room-blend, normal);
-    /* Flickers and swells with the flame: the header flame writes --flame-glow/--flame-burst to :root.
-       Under prefers-reduced-motion those vars are unset, so the highlight holds still. */
+    /* Flicker and swell with the flame: the header flame writes --flame-glow/--flame-burst to :root.
+       Under prefers-reduced-motion those vars are unset, so both hold still. */
     opacity: calc(var(--flame-room-alpha, 0) * var(--flame-glow, 1) * (1 + 0.6 * var(--flame-burst, 0)));
-    /* A small bloom where the flame's own light lands. Centred on the flame itself (1rem header
-       padding + half the 1.5rem icon = 1.75rem, in both axes), not on the viewport corner, so the
-       light reads as coming from the flame. Every stop fades to the same hue at zero alpha, never to
-       `transparent` (black): with plus-lighter a black tail paints a dark ring around the bloom. */
+  }
+
+  /* The diffuse bloom. Centred on the flame itself (1rem header padding + half the 1.5rem icon =
+     1.75rem, in both axes), not on the viewport corner, so the light reads as coming from the flame.
+     Every stop fades to the same hue at zero alpha, never to `transparent` (black): with plus-lighter
+     a black tail paints a dark ring around the bloom. */
+  .flame-room-light {
     background: radial-gradient(
       10rem 10rem at 1.75rem 1.75rem,
       color-mix(in srgb, var(--flame-mid) 45%, transparent) 0%,
@@ -37,9 +42,14 @@
     );
   }
 
+  /* The specular bevel, on its own opacity so it can read brighter than the bloom behind it. */
+  .flame-room-edge {
+    opacity: calc(var(--flame-room-edge-alpha, 0) * var(--flame-glow, 1) * (1 + 0.6 * var(--flame-burst, 0)));
+  }
+
   /* The top edge catch: a ~1px core in a 2px band. It runs 3.5rem (2 x 1.75rem) so its centre lands
      on the flame's centre, and fades out toward the page rather than running along the whole top. */
-  .flame-room-light::before {
+  .flame-room-edge::before {
     content: "";
     position: absolute;
     inset: 0 auto auto 0;
@@ -55,7 +65,7 @@
   }
 
   /* The left edge catch: the same core, band and centring, only down the side. */
-  .flame-room-light::after {
+  .flame-room-edge::after {
     content: "";
     position: absolute;
     inset: 0 auto auto 0;

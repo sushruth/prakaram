@@ -11,7 +11,10 @@
     pointer-events: none;
   }
 
-  .zen-active .app-header > :not(.header-tools),
+  /* Zen strips the header back to the text, but the flame stays: it is the room's light source, and
+     its glow would otherwise flicker over a header with nothing on it. The title beside it still goes. */
+  .zen-active .app-header > :not(.header-tools):not(.header-start):not(.header-flame),
+  .zen-active .header-start > :not(.header-flame),
   .zen-active .header-tools > :not(.zen-toggle) {
     opacity: 0;
     visibility: hidden;
