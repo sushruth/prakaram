@@ -21,11 +21,11 @@ licence, and exactly what we must do.
 | # | Upstream | Licence (verified, with the URL it was verified from) | Is our processed file an adaptation / derivative / produced work? | What we must do |
 |---|----------|--------------------------------------------------------|------------------------------------------------------------------|-----------------|
 | 1 | **DharmicData** `bhavykhatri/DharmicData`, commit `96b3bafd…`, Ṛgveda maṇḍalas 1–10 | **ODbL 1.0 — verified.** `LICENSE.txt` is the ODbL text [1]; README: "This dataset is made available under the Open Database License (ODbL)" [2] | **Derivative Database** (we Extract/Re-utilise a substantial part of the Contents into a new schema). Conservative reading; the Produced-Work reading is arguable — see §3 | Licence the `sources/rigveda-*.json` files under **ODbL 1.0**; carry the §4.3 notice with hyperlinks; keep notices intact; publish the alteration method (the parser) — see §2.1, §3 |
-| 2 | **Wikisource** `sa.wikisource.org`, `तैत्तिरीयसंहिता-१-४`, revid 417990 | **CC BY-SA 4.0 — verified.** Wiki `rightsinfo`: "Creative Commons Attribution-Share Alike 4.0" [3]; Wikimedia ToU §7 licenses text under CC BY-SA 4.0 [4] | **Adapted Material** (restructured into sections/chunks + added metadata = more than a "technical modification necessary", so not exempted by CC BY-SA §2(a)(4) [5]) | Licence `sources/taittiriya-samhita-4.json` under **CC BY-SA 4.0**; carry full §3(a) attribution + §3(b) ShareAlike — see §2.2 |
-| 3 | **taittiriya.com** `aranyaka/prapathaka_<p>`, prapāṭhakas 1–10 | **No licence stated — verified by absence.** Homepage footer [6], `/about` [7] and `/aranyaka/prapathaka_1` [8] contain no licence, copyright or terms statement | **All rights reserved by default.** No licence = no permission to redistribute | **Not compliant today.** Options in §5.1: seek written permission, replace from a public-domain edition, or remove. Recommend written permission + keep `draft` |
+| 2 | ~~Wikisource `तैत्तिरीयसंहिता-१-४`, revid 417990~~ — **retired 2026-10-14**; `taittiriya-samhita-4` now comes from taittiriya.com (row 3) | n/a (no file is CC BY-SA any more) | n/a | Nothing; see §2.2 |
+| 3 | **taittiriya.com** `aranyaka/prapathaka_<p>` (prapāṭhakas 1–10) and `samhita/kanda_4_prashna_<p>` (prashnas 1–7) | **No licence stated — verified by absence.** Homepage footer [6], `/about` [7] and `/aranyaka/prapathaka_1` [8] contain no licence, copyright or terms statement; `/about` says only that the edition is "free for anyone to read, recite and learn from" and credits reviewers by name | **All rights reserved by default.** No licence = no permission to redistribute | **Not compliant today.** Options in §5.1: seek written permission, replace from a public-domain edition, or remove. Recommend written permission + keep `draft` |
 | 4 | **sanskritdocuments.org** `doc_veda/s-sukta-accent.html` (Śrī Sūkta) | **Restrictive terms — verified.** FAQ §"Can we copy contents…" [9]; site search page: "meant to be used for personal study and research. They are not to be copied or reposted … without permission" [10] | **Not permitted** as a public-repo redistribution | **Not compliant today.** Options in §5.2: replace with a PD-sourced Śrī Sūkta, or seek written permission, or remove |
-| 5 | **Bundled `src/data` docs** — `shantiMantras`, `ganapatiPrarthana`, `purushaSuktam`, `sriSuktam`, `durgaSuktam`, `narayanaSuktam` | **No licence field at all** in metadata; `metadata.source` = "Saswara Veda Mantrah (Ramakrishna Math)". No public rights statement found for that edition | **Unclear / all rights reserved by default.** A recent printed edition is presumptively in copyright; a faithful transcription of a PD text may or may not attract new rights (lawyer question) | **Not compliant today.** Options in §5.3; keep `draft`; do not add a `license` field that implies permission we do not have |
-| 5b | **Bundled `src/data` docs** — `rudramNamakam`, `rudramChamakam` (Vignanam) | **Permission being sought** — self-reported in `metadata.license`, `THIRD_PARTY_NOTICES.md`, `MAINTAINERS.md` §7 [11] | Same as above; Vignanam's typed edition may carry rights | Keep `status: draft`; conclude the Vignanam discussion in writing before promoting; `scripts/vignanamToDocument.ts` must not import new Vignanam text meanwhile |
+| 5 | ~~Bundled `src/data` docs~~ — removed in commit `09862c6` (every text is now a live source) | n/a | n/a | n/a |
+| 5b | ~~Bundled Rudram docs (Vignanam)~~ — removed in commit `09862c6`; the Rudram is now a range of `taittiriya-samhita-4` | n/a | n/a | n/a |
 
 Notes on the table:
 - The licence **strings already in `manifest.json`** are close to correct for 1 and 2; the exact replacement
@@ -81,45 +81,12 @@ licence **or its URI** with the Database/Derivative Database, "including both in
 relevant documentation" — the URI in each `provenance.license` plus `sources/LICENSE-ODbL.txt` satisfies
 this.
 
-### 2.2 Wikisource (Taittirīya Saṃhitā, kāṇḍa 4)
+### 2.2 Wikisource — retired
 
-**`metadata.provenance.license`** (replaces the current CC BY-SA string):
-
-```
-CC BY-SA 4.0 — Adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource, revid 417990
-(Wikisource contributors), used and licensed under CC BY-SA 4.0.
-Licence text: https://creativecommons.org/licenses/by-sa/4.0/
-```
-
-**`metadata.provenance.attribution`**:
-
-```
-Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource contributors,
-"तैत्तिरीयसंहिता-१-४" revid 417990, CC BY-SA 4.0
-```
-
-**`THIRD_PARTY_NOTICES.md` entry.** Must satisfy CC BY-SA §3(a): keep the creator identification, a
-copyright notice, a notice referring to the licence, a notice referring to the disclaimer of warranties, a
-URI/hyperlink to the material, **indicate that we modified it**, and state the licence with a link to its
-text [5]. Wikimedia ToU §7.4 accepts attribution "through hyperlink (where possible) or URL to the page …
-you are reusing" [4]. Recommended entry:
-
-```
-### Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)
-
-`sources/taittiriya-samhita-4.json` is adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource
-(https://sa.wikisource.org/w/index.php?title=तैत्तिरीयसंहिता-१-४&oldid=417990), by Wikisource
-contributors, retrieved 2026-10-14, and modified for this project (restructured into sections
-and padas, metadata added, script normalised to NFC). The original is licensed under CC BY-SA
-4.0; this adapted file is distributed under CC BY-SA 4.0.
-Licence text: https://creativecommons.org/licenses/by-sa/4.0/
-This material is provided without warranties of any kind; see §5 of the licence.
-```
-
-**Per-file/directory licence.** Add `sources/LICENSE-CC-BY-SA-4.0.txt` (the licence text) and list
-`taittiriya-samhita-4.json` as CC BY-SA 4.0 in `sources/README.md`. CC BY-SA §3(b) requires the Adapter's
-License to be "a Creative Commons license with the same License Elements" — i.e. CC BY-SA 4.0 (or later, or
-a BY-SA-compatible licence) [5].
+Until 2026-10-14 `taittiriya-samhita-4` was adapted from Sanskrit Wikisource (`तैत्तिरीयसंहिता-१-४`, revid 417990,
+CC BY-SA 4.0). It now comes from taittiriya.com, so no vendored file is CC BY-SA and no ShareAlike obligation
+applies. The old strings, notice and `sources/LICENSE-CC-BY-SA-4.0.txt` are no longer referenced; the licence
+file can be deleted. The text is in git history if the analysis is ever needed again.
 
 ### 2.3 Unconfirmed sources — keep the current "permission not yet confirmed" strings
 
@@ -128,6 +95,8 @@ Until permission is granted, **do not** put a CC/ODbL licence string on these fi
 ```
 taittiriya-aranyaka-*  license: "Text from taittiriya.com; permission not yet confirmed."
                        attribution: "Taittirīya Āraṇyaka, prapāṭhaka N — taittiriya.com"
+taittiriya-samhita-4   license: "Text from taittiriya.com; permission not yet confirmed."
+                       attribution: "Taittirīya Saṃhitā, kāṇḍa 4 — taittiriya.com"
 rigveda-khila-sri      license: "Text from sanskritdocuments.org; permission not yet confirmed."
                        attribution: "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org"
 ```
@@ -197,7 +166,10 @@ in `MAINTAINERS.md` §7 — at which point the ODbL obligation disappears with t
 
 ---
 
-## 4. CC BY-SA 4.0 specifics (Wikisource / `sources/taittiriya-samhita-4.json`)
+## 4. CC BY-SA 4.0 specifics (retired)
+
+> **Retired 2026-10-14.** `taittiriya-samhita-4` moved from Wikisource (CC BY-SA 4.0) to taittiriya.com, so no file
+> is CC BY-SA now. Kept as the analysis to reuse if a ShareAlike source is ever vendored again.
 
 **Is our file an adaptation or a collection?** CC BY-SA 4.0 does not use "Collection"; it uses *Adapted
 Material* = "material … derived from or based upon the Licensed Material and in which the Licensed Material
@@ -418,14 +390,12 @@ published online in a form I could verify.)*
 
 ## 7. What a maintainer must do — checklist
 
-1. [ ] **Add `sources/LICENSE-ODbL.txt`** (ODbL 1.0 text) and **`sources/LICENSE-CC-BY-SA-4.0.txt`**
-   (CC BY-SA 4.0 text).
+1. [x] **Add `sources/LICENSE-ODbL.txt`** (ODbL 1.0 text). `sources/LICENSE-CC-BY-SA-4.0.txt` is no longer needed.
 2. [ ] **Update `sources/README.md`** with a "Licences of files in this directory" table (ODbL for
-   `rigveda-*`; CC BY-SA 4.0 for `taittiriya-samhita-4.json`; "unconfirmed" for the rest).
-3. [ ] **Update `metadata.provenance.license`/`attribution`** for the Rigveda and Wikisource generators
+   `rigveda-*`; "unconfirmed" for the rest, including `taittiriya-samhita-4`).
+3. [ ] **Update `metadata.provenance.license`/`attribution`** for the Rigveda generator
    (`scripts/sources/generators/`) to the exact strings in §2, then run `bun run sources:refresh`.
-4. [ ] **Update `THIRD_PARTY_NOTICES.md`** with the ODbL notice (§2.1) and the CC BY-SA attribution +
-   modification + warranty-disclaimer notice (§2.2).
+4. [ ] **Update `THIRD_PARTY_NOTICES.md`** with the ODbL notice (§2.1).
 5. [ ] **Keep all unconfirmed files `status: "draft"`** and keep their "permission not yet confirmed"
    strings.
 6. [ ] **Send the permission requests** (§6.1–§6.4) and record the outcomes in `THIRD_PARTY_NOTICES.md`.

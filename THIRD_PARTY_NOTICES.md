@@ -37,7 +37,7 @@ SOFTWARE.
 The app's live sources are compiled into `sources/` by `bun run sources:refresh` and served to the app from
 jsDelivr at the commit `SOURCES_PIN` points at (`src/services/vendored.ts`). Parsing lives in `scripts/sources/`;
 there is no proxy. Every processed file carries `metadata.provenance` and stays `status: "draft"` until proofread.
-Four upstreams feed the 22 files.
+Three upstreams feed the 22 files.
 
 ### Ṛgveda — DharmicData (ODbL 1.0)
 
@@ -54,25 +54,14 @@ re-serialise into a MantraDocument) is the "alteration method" required by ODbL 
 `scripts/sources/parsers/rigveda.ts` and `scripts/sources/generators/`. The text stays at
 `status: "draft"` until it is proofread against a printed edition.
 
-### Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)
+### Taittirīya Saṃhitā (kāṇḍa 4) and Āraṇyaka — taittiriya.com
 
-`sources/taittiriya-samhita-4/index.json` (with its part files) is adapted from
-"तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource
-(https://sa.wikisource.org/w/index.php?title=तैत्तिरीयसंहिता-१-४&oldid=417990), by Wikisource
-contributors, retrieved 2026-10-14, and modified for this project (restructured into sections and padas,
-metadata added, script normalised to NFC). The original is licensed under CC BY-SA 4.0; this adapted
-file is distributed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/
-This material is provided without warranties of any kind; see §5 of the licence. The licence notice is
-at `sources/LICENSE-CC-BY-SA-4.0.txt`. The text stays at `status: "draft"` until it is proofread against
-a printed edition.
-
-### Taittirīya Āraṇyaka — taittiriya.com
-
-`sources/taittiriya-aranyaka-1.json` … `taittiriya-aranyaka-10.json` are compiled from the prapāṭhaka pages at
-`taittiriya.com/aranyaka/prapathaka_<p>`. **Permission to reuse this text has not been confirmed**; the files stay
+`sources/taittiriya-samhita-4/` is compiled from the prashna pages at `taittiriya.com/samhita/kanda_4_prashna_<p>`, and
+`sources/taittiriya-aranyaka-1/` … `-10/` from the prapāṭhaka pages at `taittiriya.com/aranyaka/prapathaka_<p>`. **Permission to reuse this text has not been confirmed**; the files stay
 `status: "draft"`.
 
-- Source: https://taittiriya.com/aranyaka/
+- Edited by Sridhar Iyer; the primary basis is the edition by Mullaivasal Sri Krishnamurthy Sastrigal (Madras Sanskrit College), per taittiriya.com/about.
+- Source: https://taittiriya.com/ (Saṃhitā: `/samhita/`, Āraṇyaka: `/aranyaka/`)
 - Licence: text from taittiriya.com; permission not yet confirmed.
 
 ### Śrī Sūkta (Ṛgveda Khila) — sanskritdocuments.org
@@ -80,5 +69,6 @@ a printed edition.
 `sources/rigveda-khila-sri.json` is compiled from the accented page `sanskritdocuments.org/doc_veda/s-sukta-accent.html`.
 **Permission to reuse this text has not been confirmed**; the file stays `status: "draft"`.
 
+- Encoded by Avinash Sathaye and Anant Upadhyayula, as named on the page.
 - Source: https://sanskritdocuments.org/doc_veda/s-sukta-accent.html
 - Licence: text from sanskritdocuments.org; permission not yet confirmed.

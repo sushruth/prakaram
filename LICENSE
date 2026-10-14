@@ -17,8 +17,7 @@ vendored source under `sources/` carries its own upstream licence, recorded per 
 | Files | Licence |
 | :-- | :-- |
 | `sources/rigveda-*.json` | **ODbL 1.0** — a Derivative Database from DharmicData. Licence text in [`sources/LICENSE-ODbL.txt`](sources/LICENSE-ODbL.txt). |
-| `sources/taittiriya-samhita-4.json` | **CC BY-SA 4.0** — adapted from Sanskrit Wikisource. |
-| `sources/taittiriya-aranyaka-*.json` | Permission not yet confirmed (taittiriya.com). |
+| `sources/taittiriya-samhita-4.json`, `sources/taittiriya-aranyaka-*.json` | Permission not yet confirmed (taittiriya.com). |
 | `sources/rigveda-khila-sri.json` | Permission not yet confirmed (sanskritdocuments.org). |
 
 If you reuse the source text, comply with **that** source's licence, not this one. The code

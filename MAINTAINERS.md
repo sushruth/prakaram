@@ -117,7 +117,7 @@ If you wish to enable the optional cloud sync and passkey auth backend:
 ```bash
 bun run dev
 bun run build
-bun run sources:refresh   # regenerate sources/*.json + manifest.json from the four upstreams
+bun run sources:refresh   # regenerate sources/*.json + manifest.json from the three upstreams
 bun test
 bunx tsc --noEmit
 ```
@@ -148,12 +148,12 @@ The Koshah wiki is built from the documents in `src/data`. Nothing is stored sep
 
 ### Vendored sources (`sources/`)
 
-Some sources are not hand-written into `src/data`: they are compiled from an upstream into `sources/` and fetched by the app on demand (`sources/README.md`). Four upstreams feed the 22 files:
+Some sources are not hand-written into `src/data`: they are compiled from an upstream into `sources/` and fetched by the app on demand (`sources/README.md`). Three upstreams feed the 22 files:
 
 | docIds | upstream | licence |
 | :-- | :-- | :-- |
 | `rigveda-1` … `rigveda-10` | DharmicData `Rigveda/rigveda_mandala_<m>.json`, pinned commit `96b3bafd…` | ODbL |
-| `taittiriya-samhita-4` | Wikisource `तैत्तिरीयसंहिता-१-४`, revid 417990 | CC BY-SA 4.0 |
+| `taittiriya-samhita-4` | taittiriya.com `samhita/kanda_4_prashna_<p>` (p = 1…7) | permission not yet confirmed |
 | `taittiriya-aranyaka-1` … `-10` | taittiriya.com `aranyaka/prapathaka_<p>` | permission not yet confirmed |
 | `rigveda-khila-sri` | sanskritdocuments.org `s-sukta-accent.html` | permission not yet confirmed |
 
@@ -324,5 +324,5 @@ Next, by front:
 * Naming (decided and built): the unit is a **Pada** and the grouping above it a **Ṛk** (ऋक्) in the UI (code, the `p<n>` address step and `padya.ts` keep "padya") (the word "mantra" is overloaded); a step of a prakaram is a **Kriyā**. In code the nirdeśa layer says `pada`, but the identifiers `chunk`, `section`, `sukta_ref`, `suktaId` and `PrakaraItem` still say the old words internally, and stored data and persisted keys are unchanged. Rename them when the refactor lands.
 * Dropped by the owner: the player scale rail (anuvaka and pāda numbers, ticks, one line along the media) and line numbers in the player. Do not build them. The rest of that task is done: more space around the three highlighted lines, an unbolded scaled-up centre line, one shared scale/colour/opacity easing, and the minimap following it (DESIGN.md §2, §5b).
 * The installed app's status bar follows the theme: one `<meta name="theme-color">` is set before first paint by an inline script in `index.html` and kept in step by `syncThemeColor()` in `src/services/theme.ts` (also on OS theme changes under System). The manifest has no `theme_color` (a static one pinned the installed app's bottom navigation bar to one colour; without it reports say Chrome leaves the bar to the phone's light or dark theme, unverified) and a dark `background_color` (`#121413`). On Android the installed app's bottom bar and launch splash take `background_color` and cannot follow the theme: tried light (bar stuck bright in dark mode), none (white splash, bar stuck white) and dark (bar stays dark in light mode). Dark is the least bad; revisit when `color_scheme_dark` ships. If the bottom bar is wrong again, test a `theme_color` equal to the dark or light background and compare. The status bar still follows the theme through the meta tag. Reinstall to refresh the manifest. The manifest also sets `id: "/"` and `display_override: ["standalone"]`. If an installed app shows Chrome's address-style banner (shield, title, URL) it is running as a browser shortcut or has left its scope, not as a standalone app: uninstall and reinstall with **Install app**, not **Add to Home screen**. The page passes Chrome's installability check (checked with CDP `getInstallabilityErrors`).
-* Sourcing, built (2026-10-14): the live sources are compiled into `sources/` by `bun run sources:refresh` and served from jsDelivr at `SOURCES_PIN` (dev serves them from the repo root; no proxy). Four upstreams: DharmicData (ODbL), Wikisource (CC BY-SA 4.0), taittiriya.com (permission unconfirmed) and sanskritdocuments.org (permission unconfirmed); all 22 files stay `draft`. Parsing lives in `scripts/sources/` and is not in the JS bundle. The admission rule in AGENTS.md §1b is still open: these attributed open-licence texts stay `draft` until the owner decides.
+* Sourcing, built (2026-10-14): the live sources are compiled into `sources/` by `bun run sources:refresh` and served from jsDelivr at `SOURCES_PIN` (dev serves them from the repo root; no proxy). Three upstreams: DharmicData (ODbL), taittiriya.com (permission unconfirmed) and sanskritdocuments.org (permission unconfirmed); all 22 files stay `draft`. Parsing lives in `scripts/sources/` and is not in the JS bundle. The admission rule in AGENTS.md §1b is still open: these attributed open-licence texts stay `draft` until the owner decides.
 * Idea, not built: keep the texts in a separate content repository, with each layer (text, swara marks, translation) stating its own licence. Today the texts live in `src/data` and changes come by pull request.
