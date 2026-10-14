@@ -3,10 +3,9 @@ import { Glob } from 'bun';
 import { readFileSync } from 'node:fs';
 
 // Sanskrit/Vedic text is rendered only through components/Sanskrit.tsx so it always follows the selected script.
-const ALLOWED = ['Sanskrit.tsx', 'renderVedic.tsx'];
+const ALLOWED = ['Sanskrit.tsx'];
 const BAD: [string, RegExp][] = [
   ['imports transliterateVedic', /\btransliterateVedic\b/],
-  ['imports renderVedic', /from ['"]\.\/renderVedic['"]/],
   ['reads title.sanskrit', /\btitle\.sanskrit\b/],
   ['uses articleLabel', /\barticleLabel\b/],
 ];

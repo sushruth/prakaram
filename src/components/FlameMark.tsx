@@ -109,16 +109,28 @@ export function FlameMark({ size = 22, ambient = false }: { size?: number; ambie
           <stop offset="0.55" stopColor="#ff7a1f" />
           <stop offset="1" stopColor="#e0331a" />
         </linearGradient>
-        {/* The room-light halo, anchored to the glyph's own centre (128,128) so it is concentric by
-            construction; colours come from CSS so the theme still drives it. */}
-        <radialGradient id="flame-halo">
-          <stop className="flame-halo-from" offset="0" />
-          <stop className="flame-halo-mid" offset="0.45" />
-          <stop className="flame-halo-to" offset="0.76" />
-        </radialGradient>
+        {/* The room-light glow is a solid blob, not a radial gradient, so its outline can move like
+            flame light: turbulence displaces the disc into soft lobes and a blur dissolves them. */}
+        <filter id="flame-halo-warp" x="-40%" y="-40%" width="180%" height="180%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" seed="7" result="noise" />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="30"
+            xChannelSelector="R"
+            yChannelSelector="G"
+            result="warped"
+          />
+          <feGaussianBlur in="warped" stdDeviation="20" />
+        </filter>
       </defs>
-      {/* Only the flame that lights the room (the header logo) carries the halo. */}
-      {ambient && <circle className="flame-halo" cx="128" cy="128" r="512" fill="url(#flame-halo)" />}
+      {/* Only the flame that lights the room (the header logo) carries the glow. A solid disc (filled
+          from CSS) about twice the icon across, warped into a soft lobe and turned slowly by CSS. */}
+      {ambient && (
+        <g className="flame-halo-dance">
+          <circle className="flame-halo" cx="128" cy="128" r="224" filter="url(#flame-halo-warp)" />
+        </g>
+      )}
       <path className="flame-body" fill="url(#flame-body)" d={OUTLINE} />
     </svg>
   );

@@ -213,6 +213,20 @@
     background: none;
   }
 
+  /* Swara cells colour through currentColor. The reader text no longer uses these classes (it colours
+     through ::highlight); they stay scoped to the minimap's own cells. */
+  .minimap-cells .swara-up {
+    color: var(--swara-up);
+  }
+
+  .minimap-cells .swara-down {
+    color: var(--swara-down);
+  }
+
+  .minimap-cells .swara-double {
+    color: var(--swara-double);
+  }
+
   /*
    * The current chunk is drawn once. --sung runs 0 to 100% across the whole chunk; each screen line
    * turns that into its own position, so the sweep goes along line one, then line two.

@@ -61,6 +61,19 @@
     white-space: normal !important;
   }
 
+  /* Swara colours are painted through the Custom Highlight API; keep them on paper. */
+  ::highlight(swara-up) {
+    color: var(--swara-up);
+  }
+
+  ::highlight(swara-down) {
+    color: var(--swara-down);
+  }
+
+  ::highlight(swara-double) {
+    color: var(--swara-double);
+  }
+
   /* Keep a verse together and its heading with it. */
   .chunk-row,
   .wiki-section {

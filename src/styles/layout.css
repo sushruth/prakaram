@@ -28,11 +28,12 @@
     opacity: calc(var(--flame-room-alpha, 0) * var(--flame-glow, 1) * (1 + 0.6 * var(--flame-burst, 0)));
     /* A small bloom where the flame's own light lands. Centred on the flame itself (1rem header
        padding + half the 1.5rem icon = 1.75rem, in both axes), not on the viewport corner, so the
-       light reads as coming from the flame. */
+       light reads as coming from the flame. Every stop fades to the same hue at zero alpha, never to
+       `transparent` (black): with plus-lighter a black tail paints a dark ring around the bloom. */
     background: radial-gradient(
       10rem 10rem at 1.75rem 1.75rem,
       color-mix(in srgb, var(--flame-mid) 45%, transparent) 0%,
-      transparent 62%
+      color-mix(in srgb, var(--flame-mid) 0%, transparent) 62%
     );
   }
 
@@ -47,7 +48,7 @@
     background: linear-gradient(
       to right,
       color-mix(in srgb, var(--flame-mid) 70%, transparent) 0%,
-      transparent 100%
+      color-mix(in srgb, var(--flame-mid) 0%, transparent) 100%
     );
     -webkit-mask-image: linear-gradient(to bottom, #000 0 1px, transparent 2px);
     mask-image: linear-gradient(to bottom, #000 0 1px, transparent 2px);
@@ -63,7 +64,7 @@
     background: linear-gradient(
       to bottom,
       color-mix(in srgb, var(--flame-tip) 65%, transparent) 0%,
-      transparent 100%
+      color-mix(in srgb, var(--flame-tip) 0%, transparent) 100%
     );
     -webkit-mask-image: linear-gradient(to right, #000 0 1px, transparent 2px);
     mask-image: linear-gradient(to right, #000 0 1px, transparent 2px);

@@ -1,12 +1,14 @@
 // The one place Sanskrit/Vedic text becomes visible. Components never call the transliterator or
-// renderVedic themselves: they use <Sanskrit>, <SanskritTitle>, <ArticleTitle> or useSanskritText(),
+// vedicText themselves: they use <Sanskrit>, <SanskritTitle>, <ArticleTitle> or useSanskritText(),
 // all of which read the selected script from the settings store, so a script change re-renders everywhere.
+import { useMemo, useRef } from 'preact/hooks';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
+import { vedicText } from '../services/swaraRanges';
 import { displayTitle, splitTitle } from '../services/titles';
 import { citeInWords } from '../services/cite';
 import type { MantraDocument } from '../types/mantra';
-import { renderVedic } from './renderVedic';
+import { useSwaraHighlight } from './useSwaraHighlight';
 
 export const useScript = () => useSettingsStore((s) => s.script);
 
@@ -32,9 +34,13 @@ export function useTitleText(): (title: string, opts?: { short?: boolean; full?:
   };
 }
 
-/** Devanagari source text in the selected script, swara syllables coloured. */
+/** Devanagari source text in the selected script, swara syllables coloured through the CSS Custom Highlight API. */
 export function Sanskrit({ text }: { text: string }) {
-  return <>{renderVedic(text, useScript())}</>;
+  const script = useScript();
+  const { text: line, ranges } = useMemo(() => vedicText(text, script), [text, script]);
+  const ref = useRef<HTMLSpanElement>(null);
+  useSwaraHighlight(ref, ranges);
+  return <span className="vedic" ref={ref}>{line}</span>;
 }
 
 /**

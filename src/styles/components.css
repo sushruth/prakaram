@@ -308,15 +308,16 @@
     font-style: italic;
   }
 
-  .swara-up {
+  /* Swara syllables are coloured through the CSS Custom Highlight API, not per-syllable spans. */
+  ::highlight(swara-up) {
     color: var(--swara-up);
   }
 
-  .swara-down {
+  ::highlight(swara-down) {
     color: var(--swara-down);
   }
 
-  .swara-double {
+  ::highlight(swara-double) {
     color: var(--swara-double);
   }
 }
@@ -358,28 +359,38 @@
     color: var(--flame-tip);
   }
 
-  /* The room-light halo, drawn inside the glyph's own SVG (FlameMark) so it is concentric with the
-     flame by construction and inherits the icon's transform. It dances with the same random walk. */
+  /* The room-light glow, drawn inside the glyph's own SVG (FlameMark) so it is concentric with the
+     flame by construction. A solid disc warped by a turbulence filter into a soft, uneven lobe; the
+     random walk moves it and the slow turn below reshapes it, so it dances like flame light. */
   .flame-halo {
+    fill: var(--flame-mid);
     transform-box: fill-box;
     transform-origin: center;
-    opacity: calc(var(--flame-halo-alpha, 0.18) * var(--flame-glow, 1) * (1 + 0.5 * var(--flame-burst, 0)));
+    /* The walk can push this well past its base, so it is capped: the glow may swell but never
+       washes out the corner. */
+    opacity: min(0.3, calc(var(--flame-halo-alpha, 0.18) * var(--flame-glow, 1) * (1 + 0.5 * var(--flame-burst, 0))));
     transform: translate(calc(var(--flame-sway, 0) * 6px), calc(var(--flame-sway, 0) * -4px))
       scale(calc(1 + 0.1 * var(--flame-glow, 1) + 0.08 * var(--flame-burst, 0)));
   }
 
-  /* The halo's gradient stops (theme-aware); the <radialGradient> itself is in FlameMark. */
-  .flame-halo-from {
-    stop-color: var(--flame-mid);
-    stop-opacity: 0.65;
+  /* A slow turn so the warped outline never settles into a still shape. */
+  .flame-halo-dance {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: flame-halo-dance 19s ease-in-out infinite alternate;
   }
-  .flame-halo-mid {
-    stop-color: var(--flame-tip);
-    stop-opacity: 0.3;
+  @keyframes flame-halo-dance {
+    from {
+      transform: rotate(-9deg) scale(0.95);
+    }
+    to {
+      transform: rotate(9deg) scale(1.06);
+    }
   }
-  .flame-halo-to {
-    stop-color: var(--flame-tip);
-    stop-opacity: 0;
+  @media (prefers-reduced-motion: reduce) {
+    .flame-halo-dance {
+      animation: none;
+    }
   }
 
   .flame-mark {
