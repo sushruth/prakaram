@@ -20,6 +20,13 @@ export const ALL_SUKTAMS: MantraDocument[] = [
   rudramChamakam as MantraDocument,
 ];
 
+/** Adds a document loaded at runtime (a live-referenced source). Idempotent. */
+export function registerDocument(doc: MantraDocument): void {
+  if (ALL_SUKTAMS.some((d) => d.id === doc.id)) return;
+  ALL_SUKTAMS.push(doc);
+  SUKTA_MAP.set(doc.id, doc);
+}
+
 export const SUKTA_MAP = new Map<string, MantraDocument>(
   ALL_SUKTAMS.map((s) => [s.id, s])
 );

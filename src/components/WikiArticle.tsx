@@ -13,6 +13,7 @@ import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useBasketStore } from '../stores/useBasketStore';
 import { Icon } from './Icon';
 import { Term } from './Term';
+import { SourceList } from './SourceList';
 import { ArticleTitle, Sanskrit, useTitleText, ArticleSubtitle, useCiteInWords } from './Sanskrit';
 import type { MantraDocument } from '../types/mantra';
 
@@ -297,6 +298,13 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
       {doc?.metadata.place && own && <p className="wiki-cite wiki-muted">{cite(doc, section === undefined ? id : `${id}/${section}`)}</p>}
       {!rangeOk && <p className="wiki-muted" role="note">That range is not in this text.</p>}
 
+      {article.sources.length > 0 && (
+        <section className="wiki-sources" aria-labelledby="wiki-sources-title">
+          <h2 id="wiki-sources-title" className="wiki-sources-title">Sources</h2>
+          <SourceList sources={article.sources} />
+        </section>
+      )}
+
       <details className="wiki-info">
         <summary>
           Info <span className="wiki-muted">{peek}</span>
@@ -316,14 +324,10 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
           {article.deity && (<><dt>Deity</dt><dd>{article.deity}</dd></>)}
           {article.usage && (<><dt>Usage</dt><dd>{article.usage}</dd></>)}
           {doc?.metadata.place && own && (<><dt><Term id="nirdesha">Place</Term></dt><dd>{cite(doc, id)}</dd></>)}
-          <dt>Source</dt>
-          <dd>{article.source}</dd>
           <dt>Status</dt>
           <dd>
             <span className="wiki-status" data-status={article.status}>{STATUS_LABEL[article.status]}</span>
           </dd>
-          <dt>Licence</dt>
-          <dd>{article.license ?? 'Not stated'}</dd>
           <dt><Term id="pada">Padas</Term></dt>
           <dd>{article.lines}</dd>
         </dl>

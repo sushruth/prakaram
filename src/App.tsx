@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'preact/hooks';
+import { useState, useEffect, useRef } from 'preact/hooks';
 import { Header, WikiTopBar, WikiFooter } from './components/Header';
 import { CadenceStrip } from './components/CadenceStrip';
 import { ZenMantraReader } from './components/ZenMantraReader';
@@ -20,7 +20,10 @@ import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 import { initLineClock } from './services/lineClock';
-import { listArticles } from './services/wiki';
+import { listArticles, requiredSourceIds } from './services/wiki';
+import { adapterFor, ensureDocument, ensureDocuments } from './services/sourceAdapter';
+import { SUKTA_MAP } from './data';
+import { liveSourceLabel } from './data/liveSources';
 import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute } from './services/wikiNav';
 
 type DropKind = 'settings' | 'details' | 'cadence' | 'room';
@@ -35,10 +38,28 @@ const readRoute = (): Route => {
   return parseRoute(window.location.hash);
 };
 
+/** Shown while a live source is fetched on demand, or when its edition cannot be reached. */
+function LiveSourceNotice({ id, status }: { id: string; status: 'loading' | 'failed' }) {
+  const label = liveSourceLabel(id) ?? id;
+  return (
+    <main className="wiki-article">
+      <h1 className="wiki-title">{label}</h1>
+      <p className="wiki-muted" role="status">
+        {status === 'loading' ? `Loading ${label}…` : 'This source could not be loaded.'}
+      </p>
+    </main>
+  );
+}
+
 export function App() {
   const [isPrakaraOpen, setIsPrakaraOpen] = useState(false);
   const [drop, setDrop] = useState<DropKind | null>(null);
   const [route, setRoute] = useState<Route>(readRoute);
+  // A live source is not in the corpus until asked for; while a load is pending or fails, show a quiet note.
+  const [live, setLive] = useState<{ id: string; status: 'loading' | 'failed' } | null>(null);
+  // Live sources whose load already failed this session, so a composition does not retry in a loop.
+  const failedSources = useRef(new Set<string>());
+  const playing = route.kind === 'player';
 
   useEffect(() => {
     const onHash = () => {
@@ -71,6 +92,72 @@ export function App() {
     const pick = all[Math.floor(Math.random() * all.length)];
     window.location.replace(pick ? articleHash(pick.id) : HOME_HASH);
   }, [route]);
+
+  // Load a live source the route asks for, then re-render once it is registered. No live source loads at boot.
+  useEffect(() => {
+    if (route.kind !== 'article') {
+      setLive(null);
+      return;
+    }
+    // A direct source route shows the quiet notice and reloads its deep link once registered.
+    if (adapterFor(route.id) && !SUKTA_MAP.has(route.id)) {
+      let cancelled = false;
+      setLive({ id: route.id, status: 'loading' });
+      void ensureDocument(route.id).then((doc) => {
+        if (cancelled) return;
+        if (!doc) {
+          setLive({ id: route.id, status: 'failed' });
+          return;
+        }
+        setLive(null);
+        // Re-read the route: a padya deep link was resolved before the source was loaded, so its range was dropped.
+        setRoute(readRoute());
+      });
+      return () => {
+        cancelled = true;
+      };
+    }
+    // A composition loads the live sources its parts reference, quietly in place, then re-renders.
+    const needed = requiredSourceIds(route.id).filter((id) => adapterFor(id) && !SUKTA_MAP.has(id) && !failedSources.current.has(id));
+    if (needed.length === 0) {
+      setLive(null);
+      return;
+    }
+    let cancelled = false;
+    void ensureDocuments(needed).then((docs) => {
+      if (cancelled) return;
+      docs.forEach((doc, i) => {
+        if (!doc) failedSources.current.add(needed[i]);
+      });
+      if (docs.some((d) => d)) setRoute(readRoute());
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [route]);
+
+  // The active prakara (the default maha-prakaram included) may reference live sources; load them when it opens.
+  const activePrakaraId = usePrakaraStore((s) => s.activePrakaraId);
+  useEffect(() => {
+    if (!playing) return;
+    const items = usePrakaraStore.getState().getActivePrakara().items;
+    const needed = [...new Set(items.flatMap((i) => (i.type === 'sukta_ref' && i.suktaId ? [i.suktaId] : [])))].filter(
+      (id) => adapterFor(id) && !SUKTA_MAP.has(id) && !failedSources.current.has(id),
+    );
+    if (needed.length === 0) return;
+    let cancelled = false;
+    void ensureDocuments(needed).then((docs) => {
+      if (cancelled) return;
+      docs.forEach((doc, i) => {
+        if (!doc) failedSources.current.add(needed[i]);
+      });
+      // Re-render the reader, whose lines only now resolve against the registered sources.
+      if (docs.some((d) => d)) usePrakaraStore.getState().bumpDocuments();
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [playing, activePrakaraId]);
 
   const { addPrakara } = usePrakaraStore();
   const { setMsPerMatra } = useCadenceStore();
@@ -123,7 +210,6 @@ export function App() {
     handleUrlState();
   }, [addPrakara, setMsPerMatra]);
 
-  const playing = route.kind === 'player';
   // Running a piece makes it the active prakara, then leaves the wiki for the player.
   const runPiece = (pieceId: string) => {
     usePrakaraStore.getState().runPiece(pieceId);
@@ -162,7 +248,12 @@ export function App() {
         <>
           <div className="wiki-main">
             {route.kind === 'home' && <WikiHome />}
-            {route.kind === 'article' && <WikiArticle id={route.id} section={route.section} range={route.range} onRun={runPiece} />}
+            {route.kind === 'article' &&
+              (live?.id === route.id ? (
+                <LiveSourceNotice id={route.id} status={live.status} />
+              ) : (
+                <WikiArticle id={route.id} section={route.section} range={route.range} onRun={runPiece} />
+              ))}
             {route.kind === 'category' && <WikiCategory name={route.name} />}
             {route.kind === 'search' && <WikiSearch q={route.q} />}
             {route.kind === 'compose' && <WikiCompose />}

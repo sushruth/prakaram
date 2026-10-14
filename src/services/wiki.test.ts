@@ -156,8 +156,9 @@ describe('media and composed articles', () => {
     const d = doc('sw', { media: [{ kind: 'audio', language: 'Sanskrit' }] });
     d.sections[0].chunks[0].sanskrit = 'अ॒ग्निम्';
     d.sections[0].chunks[0].translation = 'Fire';
+    // A bundled translation is not advertised: translation is a gated experiment (src/config/features.ts).
     const m = getArticle('sw', [d])!.media;
-    expect(m.map((x) => x.kind)).toEqual(['text', 'transliteration', 'translation', 'audio']);
+    expect(m.map((x) => x.kind)).toEqual(['text', 'transliteration', 'audio']);
     expect(m[0].swara).toBe(true);
   });
 
@@ -171,6 +172,13 @@ describe('media and composed articles', () => {
     expect(a.sections.map((s) => [s.number, s.pieceId])).toEqual([[1, 'rudram/2'], [2, 'sri']]);
     expect(a.sections[0].from).toMatchObject({ id: 'rudram', title: 'Hymn rudram', number: 2 });
     expect(a.lines).toBe(2);
+  });
+
+  it('cites every distinct source of a composition, in first-use order', () => {
+    expect(getArticle('work', all)!.sources.map((s) => s.id)).toEqual(['rudram', 'sri']);
+    expect(getArticle('work', all)!.sources[0].doc.id).toBe('rudram');
+    // A source article cites just itself.
+    expect(getArticle('rudram', all)!.sources.map((s) => s.id)).toEqual(['rudram']);
   });
 
   it('finds articles by media kind words', () => {

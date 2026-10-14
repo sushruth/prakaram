@@ -1,0 +1,6792 @@
+{
+  "id": "taittiriya-aranyaka-1",
+  "title": {
+    "sanskrit": "तैत्तिरीय आरण्यक",
+    "transliteration": "Taittirīya Āraṇyaka",
+    "english": "Taittirīya Āraṇyaka, Prapāṭhaka 1"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 1.",
+    "place": {
+      "work": {
+        "sanskrit": "तैत्तिरीय आरण्यक",
+        "english": "Taittirīya Āraṇyaka"
+      },
+      "divisions": [
+        {
+          "kind": "prapāṭhaka",
+          "n": 1
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 1)",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Aranyakas"
+    ],
+    "summary": "The Taittirīya Āraṇyaka of the Krishna Yajurveda, prapāṭhaka 1, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/aranyaka/prapathaka_1",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_1",
+      "upstreamRef": "2026-10-14",
+      "retrievedAt": "2026-10-14",
+      "parser": "aranyaka@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 1 — taittiriya.com",
+      "sha256": "fd78b533edf834ed6c596848f0eeb1eb0cc06bc6b5a088bbc6d5dd5c3c132c63"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-aranyaka-1-1",
+      "title": "Prapāṭhaka 1 · Anuvāka 1",
+      "sectionNumber": 1,
+      "chunks": [
+        {
+          "id": "ta-1-1-1",
+          "chunkNumber": 1,
+          "sanskrit": "भ॒द्रङ्कर्णे॑भिः शृणु॒याम॑ देवाः।",
+          "section": 1
+        },
+        {
+          "id": "ta-1-1-2",
+          "chunkNumber": 2,
+          "sanskrit": "भ॒द्रं प॑श्येमा॒ख्षभि॒र् यज॑त्राः।"
+        },
+        {
+          "id": "ta-1-1-3",
+          "chunkNumber": 3,
+          "sanskrit": "स्थि॒रैरङ्गै᳚स्तुष्टु॒वाꣳ स॑स्त॒नूभिः॑।"
+        },
+        {
+          "id": "ta-1-1-4",
+          "chunkNumber": 4,
+          "sanskrit": "व्यशे॑म दे॒वहि॑त॒य्ँयदायुः॑।"
+        },
+        {
+          "id": "ta-1-1-5",
+          "chunkNumber": 5,
+          "sanskrit": "स्व॒स्ति न॒ इन्द्रो॑ वृ॒द्धश्र॑वाः।"
+        },
+        {
+          "id": "ta-1-1-6",
+          "chunkNumber": 6,
+          "sanskrit": "स्व॒स्ति नः॑ पू॒षा वि॒श्ववे॑दाः।"
+        },
+        {
+          "id": "ta-1-1-7",
+          "chunkNumber": 7,
+          "sanskrit": "स्व॒स्ति न॒स्तार्ख्ष्यो॒ अरि॑ष्टनेमिः।"
+        },
+        {
+          "id": "ta-1-1-8",
+          "chunkNumber": 8,
+          "sanskrit": "स्व॒स्ति नो॒ बृह॒स्पति॑र्दधातु।"
+        },
+        {
+          "id": "ta-1-1-9",
+          "chunkNumber": 9,
+          "sanskrit": "आप॑मापाम॒पस्सर्वाः᳚।"
+        },
+        {
+          "id": "ta-1-1-10",
+          "chunkNumber": 10,
+          "sanskrit": "अ॒स्माद॒स्मादि॒तोऽमुतः॑ अ॒ग्निर्वा॒युश्च॒ सूर्य॑श्च।"
+        },
+        {
+          "id": "ta-1-1-11",
+          "chunkNumber": 11,
+          "sanskrit": "स॒ह स॑ञ्चस्क॒रर्द्धि॑या।"
+        },
+        {
+          "id": "ta-1-1-12",
+          "chunkNumber": 12,
+          "sanskrit": "वा॒य्वश्वा॑ रश्मि॒पत॑यः।"
+        },
+        {
+          "id": "ta-1-1-13",
+          "chunkNumber": 13,
+          "sanskrit": "मरी᳚च्यात्मानो॒ अद्रु॑हः।"
+        },
+        {
+          "id": "ta-1-1-14",
+          "chunkNumber": 14,
+          "sanskrit": "दे॒वीर् भु॑वन॒ सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-1-15",
+          "chunkNumber": 15,
+          "sanskrit": "पु॒त्र॒व॒त्त्वाय॑ मे सुत।"
+        },
+        {
+          "id": "ta-1-1-16",
+          "chunkNumber": 16,
+          "sanskrit": "महानाम्नीर्म॑हामा॒नाः।"
+        },
+        {
+          "id": "ta-1-1-17",
+          "chunkNumber": 17,
+          "sanskrit": "म॒ह॒सो म॑हस॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-1-18",
+          "chunkNumber": 18,
+          "sanskrit": "दे॒वीः प॑र्जन्य॒ सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-1-19",
+          "chunkNumber": 19,
+          "sanskrit": "पु॒त्र॒व॒त्त्वाय॑ मे सुत अ॒पाश्न्यु॑ष्णिम॒पा रख्षः॑।"
+        },
+        {
+          "id": "ta-1-1-20",
+          "chunkNumber": 20,
+          "sanskrit": "अ॒पाश्न्यु॑ष्णिम॒पा रघ᳚म्।"
+        },
+        {
+          "id": "ta-1-1-21",
+          "chunkNumber": 21,
+          "sanskrit": "अपा᳚घ्रा॒मप॑ चा॒वर्ति᳚म्।"
+        },
+        {
+          "id": "ta-1-1-22",
+          "chunkNumber": 22,
+          "sanskrit": "अप॑ दे॒वीरि॒तो हि॑त।"
+        },
+        {
+          "id": "ta-1-1-23",
+          "chunkNumber": 23,
+          "sanskrit": "वज्रं॑ दे॒वीरजी॑ताꣴश्च।"
+        },
+        {
+          "id": "ta-1-1-24",
+          "chunkNumber": 24,
+          "sanskrit": "भुव॑नन्देव॒सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-1-25",
+          "chunkNumber": 25,
+          "sanskrit": "आ॒दि॒त्यानदि॑तिन्दे॒वीम्।"
+        },
+        {
+          "id": "ta-1-1-26",
+          "chunkNumber": 26,
+          "sanskrit": "योनि॑नोद्र्ध्वमु॒दीष॑त।"
+        },
+        {
+          "id": "ta-1-1-27",
+          "chunkNumber": 27,
+          "sanskrit": "शि॒वा न॒श्शन्त॑मा भवन्तु।"
+        },
+        {
+          "id": "ta-1-1-28",
+          "chunkNumber": 28,
+          "sanskrit": "दि॒व्या आप॒ ओष॑धयः।"
+        },
+        {
+          "id": "ta-1-1-29",
+          "chunkNumber": 29,
+          "sanskrit": "सु॒मृ॒डी॒का सर॑स्वति।"
+        },
+        {
+          "id": "ta-1-1-30",
+          "chunkNumber": 30,
+          "sanskrit": "मा ते॒ व्यो॑म स॒न्दृशि॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-2",
+      "title": "Prapāṭhaka 1 · Anuvāka 2",
+      "sectionNumber": 2,
+      "chunks": [
+        {
+          "id": "ta-1-2-1",
+          "chunkNumber": 1,
+          "sanskrit": "स्मृतिः॑ प्र॒त्यख्ष॑मैति॒ह्य᳚म्।",
+          "section": 2
+        },
+        {
+          "id": "ta-1-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "अनु॑मानश्चतुष्ट॒यम्।"
+        },
+        {
+          "id": "ta-1-2-3",
+          "chunkNumber": 3,
+          "sanskrit": "ए॒तैरादि॑त्यमण्डलम्।"
+        },
+        {
+          "id": "ta-1-2-4",
+          "chunkNumber": 4,
+          "sanskrit": "सर्वै॑–रेव॒ विधा᳚स्यते।"
+        },
+        {
+          "id": "ta-1-2-5",
+          "chunkNumber": 5,
+          "sanskrit": "सूर्यो॒ मरी॑चि॒माद॑त्ते।"
+        },
+        {
+          "id": "ta-1-2-6",
+          "chunkNumber": 6,
+          "sanskrit": "सर्वस्मा᳚द्भुव॑नाद॒धि।"
+        },
+        {
+          "id": "ta-1-2-7",
+          "chunkNumber": 7,
+          "sanskrit": "तस्याः पाकवि॑शेषे॒ण।"
+        },
+        {
+          "id": "ta-1-2-8",
+          "chunkNumber": 8,
+          "sanskrit": "स्मृ॒तङ्का॑लवि॒शेष॑णम्।"
+        },
+        {
+          "id": "ta-1-2-9",
+          "chunkNumber": 9,
+          "sanskrit": "न॒दीव॒ प्रभ॑वात्का॒चित्।"
+        },
+        {
+          "id": "ta-1-2-10",
+          "chunkNumber": 10,
+          "sanskrit": "अ॒ख्षय्या᳚थ्स्यन्द॒ते य॑था तान्नद्योऽभिस॑माय॒न्ति।"
+        },
+        {
+          "id": "ta-1-2-11",
+          "chunkNumber": 11,
+          "sanskrit": "सो॒रुस्सती॑ न नि॒वर्त॑–ते॥"
+        },
+        {
+          "id": "ta-1-2-12",
+          "chunkNumber": 12,
+          "sanskrit": "ए॒वन्ना॒ना स॑मुत्था॒नाः।"
+        },
+        {
+          "id": "ta-1-2-13",
+          "chunkNumber": 13,
+          "sanskrit": "का॒लास्स॑म्वँथ्स॒रꣴ श्रि॑ताः।"
+        },
+        {
+          "id": "ta-1-2-14",
+          "chunkNumber": 14,
+          "sanskrit": "अणुशश्च म॑हश॒श्च।"
+        },
+        {
+          "id": "ta-1-2-15",
+          "chunkNumber": 15,
+          "sanskrit": "सर्वे॑ समव॒यन्त्रि॑ तम्॥"
+        },
+        {
+          "id": "ta-1-2-16",
+          "chunkNumber": 16,
+          "sanskrit": "स तै᳚स्स॒र्वैस्स॑मावि॒ष्टः।"
+        },
+        {
+          "id": "ta-1-2-17",
+          "chunkNumber": 17,
+          "sanskrit": "ऊ॒रुस्स॑न्न नि॒वर्त॑ते।"
+        },
+        {
+          "id": "ta-1-2-18",
+          "chunkNumber": 18,
+          "sanskrit": "अधिसम्वँथ्स॑रव्ँवि॒द्यात्।"
+        },
+        {
+          "id": "ta-1-2-19",
+          "chunkNumber": 19,
+          "sanskrit": "तदेव॑ लख्ष॒णे अणुभिश्च म॑हद्भि॒श्च।"
+        },
+        {
+          "id": "ta-1-2-20",
+          "chunkNumber": 20,
+          "sanskrit": "स॒मारू॑ढः प्र॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-2-21",
+          "chunkNumber": 21,
+          "sanskrit": "सम्वँथ्सरः प्र॑त्यख्षे॒ण।"
+        },
+        {
+          "id": "ta-1-2-22",
+          "chunkNumber": 22,
+          "sanskrit": "ना॒धिस॑त्त्वः प्र॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-2-23",
+          "chunkNumber": 23,
+          "sanskrit": "प॒टरो॑ विक्लि॑धः पि॒ङ्गः।"
+        },
+        {
+          "id": "ta-1-2-24",
+          "chunkNumber": 24,
+          "sanskrit": "ए॒तद् व॑रुण॒ लख्ष॑णम्।"
+        },
+        {
+          "id": "ta-1-2-25",
+          "chunkNumber": 25,
+          "sanskrit": "यत्रैत॑दुप॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-2-26",
+          "chunkNumber": 26,
+          "sanskrit": "स॒हस्र॑न्तत्र॒ नीय॑ते।"
+        },
+        {
+          "id": "ta-1-2-27",
+          "chunkNumber": 27,
+          "sanskrit": "एकꣳ हि शिरो ना॑ना मु॒खे।"
+        },
+        {
+          "id": "ta-1-2-28",
+          "chunkNumber": 28,
+          "sanskrit": "कृ॒थ्स्नं त॑दृतु॒ लख्ष॑णम् उभयतः सप्ते᳚न्द्रिया॒णि।"
+        },
+        {
+          "id": "ta-1-2-29",
+          "chunkNumber": 29,
+          "sanskrit": "ज॒ल्पितं॑ त्वेव॒ दिह्य॑ते॥"
+        },
+        {
+          "id": "ta-1-2-30",
+          "chunkNumber": 30,
+          "sanskrit": "शुक्लकृष्णे सम्वँ॑थ्सर॒स्य।"
+        },
+        {
+          "id": "ta-1-2-31",
+          "chunkNumber": 31,
+          "sanskrit": "दख्षिण वाम॑योः पा॒र्श्वयोः।"
+        },
+        {
+          "id": "ta-1-2-32",
+          "chunkNumber": 32,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-2-33",
+          "chunkNumber": 33,
+          "sanskrit": "शु॒क्रं ते॑ अ॒न्यद्य॑ज॒तं ते॑ अ॒न्यत्।"
+        },
+        {
+          "id": "ta-1-2-34",
+          "chunkNumber": 34,
+          "sanskrit": "विषु॑रूपे॒ अह॑नी॒ द्यौरि॑वासि।"
+        },
+        {
+          "id": "ta-1-2-35",
+          "chunkNumber": 35,
+          "sanskrit": "विश्वा॒ हि मा॒या अव॑सि स्वधावः।"
+        },
+        {
+          "id": "ta-1-2-36",
+          "chunkNumber": 36,
+          "sanskrit": "भ॒द्रा ते॑ पूषन्नि॒ह रा॒तिर॒स्त्विति॑।"
+        },
+        {
+          "id": "ta-1-2-37",
+          "chunkNumber": 37,
+          "sanskrit": "नात्र॒ भुव॑नं।"
+        },
+        {
+          "id": "ta-1-2-38",
+          "chunkNumber": 38,
+          "sanskrit": "न पू॒षा।"
+        },
+        {
+          "id": "ta-1-2-39",
+          "chunkNumber": 39,
+          "sanskrit": "न प॒शवः॑।"
+        },
+        {
+          "id": "ta-1-2-40",
+          "chunkNumber": 40,
+          "sanskrit": "नादित्यः सम्वँथ्सर एव प्रत्यख्षेण प्रियत॑मव्ँवि॒द्यात्।"
+        },
+        {
+          "id": "ta-1-2-41",
+          "chunkNumber": 41,
+          "sanskrit": "एतद्वै सम्वँथ्सरस्य प्रियत॑मꣳ रू॒पम्।"
+        },
+        {
+          "id": "ta-1-2-42",
+          "chunkNumber": 42,
+          "sanskrit": "योऽस्य महानर्थ उत्पथ्स्यमा॑नो भ॒वति।"
+        },
+        {
+          "id": "ta-1-2-43",
+          "chunkNumber": 43,
+          "sanskrit": "इदं पुण्यं कु॑रुष्वे॒ति।"
+        },
+        {
+          "id": "ta-1-2-44",
+          "chunkNumber": 44,
+          "sanskrit": "तमाहर॑णं द॒द्यात्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-3",
+      "title": "Prapāṭhaka 1 · Anuvāka 3",
+      "sectionNumber": 3,
+      "chunks": [
+        {
+          "id": "ta-1-3-1",
+          "chunkNumber": 1,
+          "sanskrit": "सा॒क॒ञ्जाना॑ꣳ स॒प्तथ॑माहुरेक॒जम्।",
+          "section": 3
+        },
+        {
+          "id": "ta-1-3-2",
+          "chunkNumber": 2,
+          "sanskrit": "षडु॑द्य॒मा ऋष॑यो देव॒जा इति॑।"
+        },
+        {
+          "id": "ta-1-3-3",
+          "chunkNumber": 3,
+          "sanskrit": "तेषा॑मि॒ष्टानि॒ विहि॑तानि धाम॒शः।"
+        },
+        {
+          "id": "ta-1-3-4",
+          "chunkNumber": 4,
+          "sanskrit": "स्था॒त्रे रे॑जन्ते॒ विकृ॑तानि रूप॒शः।"
+        },
+        {
+          "id": "ta-1-3-5",
+          "chunkNumber": 5,
+          "sanskrit": "कोनु॑ मर्या॒ अमि॑थितः।"
+        },
+        {
+          "id": "ta-1-3-6",
+          "chunkNumber": 6,
+          "sanskrit": "सखा॒ सखा॑यमब्रवीत्।"
+        },
+        {
+          "id": "ta-1-3-7",
+          "chunkNumber": 7,
+          "sanskrit": "जहा॑को अ॒स्मदी॑षते।"
+        },
+        {
+          "id": "ta-1-3-8",
+          "chunkNumber": 8,
+          "sanskrit": "यस्ति॒त्याज॑ सखि॒विद॒ꣳ॒ सखा॑यम्।"
+        },
+        {
+          "id": "ta-1-3-9",
+          "chunkNumber": 9,
+          "sanskrit": "न तस्य॑ वा॒च्यपि॑ भा॒गो अ॑स्ति।"
+        },
+        {
+          "id": "ta-1-3-10",
+          "chunkNumber": 10,
+          "sanskrit": "यदी॑ꣳ शृ॒णोत्य॒लक॑ꣳ शृणोति न हि प्र॒वेद॑ सुकृ॒तस्य॒ पन्था॒मिति॑।"
+        },
+        {
+          "id": "ta-1-3-11",
+          "chunkNumber": 11,
+          "sanskrit": "ऋ॒तुरृ॑तुना नु॒द्यमा॑नः।"
+        },
+        {
+          "id": "ta-1-3-12",
+          "chunkNumber": 12,
+          "sanskrit": "विन॑नादा॒भिधा॑वः।"
+        },
+        {
+          "id": "ta-1-3-13",
+          "chunkNumber": 13,
+          "sanskrit": "षष्टिश्च त्रिꣳश॑का व॒ल्गाः।"
+        },
+        {
+          "id": "ta-1-3-14",
+          "chunkNumber": 14,
+          "sanskrit": "शु॒क्लकृ॑ष्णौ च॒ षाष्टि॑कौ।"
+        },
+        {
+          "id": "ta-1-3-15",
+          "chunkNumber": 15,
+          "sanskrit": "सा॒रा॒ग॒व॒स्त्रैर्ज॒रद॑ख्षः।"
+        },
+        {
+          "id": "ta-1-3-16",
+          "chunkNumber": 16,
+          "sanskrit": "व॒स॒न्तो वसु॑भिस्स॒ह।"
+        },
+        {
+          "id": "ta-1-3-17",
+          "chunkNumber": 17,
+          "sanskrit": "स॒म्वँ॒थ्स॒रस्य॑ सवि॒तुः।"
+        },
+        {
+          "id": "ta-1-3-18",
+          "chunkNumber": 18,
+          "sanskrit": "प्रै॒ष॒कृत् प्र॑थ॒मस्स्मृ॑तः।"
+        },
+        {
+          "id": "ta-1-3-19",
+          "chunkNumber": 19,
+          "sanskrit": "अ॒मूना॒दय॑तेत्य॒न्यान् अ॒मूꣴश्च॑ परि॒रख्ष॑तः।"
+        },
+        {
+          "id": "ta-1-3-20",
+          "chunkNumber": 20,
+          "sanskrit": "ए॒ता वा॒चः प्र॑युज्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-3-21",
+          "chunkNumber": 21,
+          "sanskrit": "यत्रै त॑दुप॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-3-22",
+          "chunkNumber": 22,
+          "sanskrit": "ए॒तदे॒व वि॑जानी॒यात्।"
+        },
+        {
+          "id": "ta-1-3-23",
+          "chunkNumber": 23,
+          "sanskrit": "प्र॒माणं॑ काल॒पर्य॑ये।"
+        },
+        {
+          "id": "ta-1-3-24",
+          "chunkNumber": 24,
+          "sanskrit": "वि॒शे॒ष॒णं तु॑ वख्ष्या॒मः।"
+        },
+        {
+          "id": "ta-1-3-25",
+          "chunkNumber": 25,
+          "sanskrit": "ऋ॒तूनां᳚ तन्नि॒बोध॑त।"
+        },
+        {
+          "id": "ta-1-3-26",
+          "chunkNumber": 26,
+          "sanskrit": "शुक्लवासा॑ रुद्र॒गणः।"
+        },
+        {
+          "id": "ta-1-3-27",
+          "chunkNumber": 27,
+          "sanskrit": "ग्री॒ष्मेणा॑वर्त॒ते स॑ह।"
+        },
+        {
+          "id": "ta-1-3-28",
+          "chunkNumber": 28,
+          "sanskrit": "नि॒जह॑न् पृथि॑वीꣳ स॒र्वाम् ज्यो॒तिषा᳚ऽप्रति॒ख्येन॑ सः।"
+        },
+        {
+          "id": "ta-1-3-29",
+          "chunkNumber": 29,
+          "sanskrit": "वि॒श्व॒रू॒पाणि॑ वासा॒ꣳ॒सि।"
+        },
+        {
+          "id": "ta-1-3-30",
+          "chunkNumber": 30,
+          "sanskrit": "आ॒दि॒त्यानां᳚ नि॒बोध॑त।"
+        },
+        {
+          "id": "ta-1-3-31",
+          "chunkNumber": 31,
+          "sanskrit": "सम्वँथ्सरीण॑ङ्कर्म॒फलम्।"
+        },
+        {
+          "id": "ta-1-3-32",
+          "chunkNumber": 32,
+          "sanskrit": "वर्षाभिर् द॑दता॒ꣳ॒ सह।"
+        },
+        {
+          "id": "ta-1-3-33",
+          "chunkNumber": 33,
+          "sanskrit": "अदुःखो॑ दुःख च॑ख्षुरि॒व।"
+        },
+        {
+          "id": "ta-1-3-34",
+          "chunkNumber": 34,
+          "sanskrit": "तद्मा॑ पीत इव॒ दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-3-35",
+          "chunkNumber": 35,
+          "sanskrit": "शीतेना᳚ व्यथ॑यन्नि॒व।"
+        },
+        {
+          "id": "ta-1-3-36",
+          "chunkNumber": 36,
+          "sanskrit": "रु॒रुद॑ख्ष इव॒ दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-3-37",
+          "chunkNumber": 37,
+          "sanskrit": "ह्लादयते᳚ ज्वल॑तश्चै॒व।"
+        },
+        {
+          "id": "ta-1-3-38",
+          "chunkNumber": 38,
+          "sanskrit": "शा॒म्यत॑श्चास्य॒ चख्षु॑षी।"
+        },
+        {
+          "id": "ta-1-3-39",
+          "chunkNumber": 39,
+          "sanskrit": "यावै प्रजा भ्र॑ꣴश्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-3-40",
+          "chunkNumber": 40,
+          "sanskrit": "सम्वँथ्सरात्ता भ्र॑ꣴश्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-3-41",
+          "chunkNumber": 41,
+          "sanskrit": "याः॒ प्रति॑तिष्ठ॒न्ति।"
+        },
+        {
+          "id": "ta-1-3-42",
+          "chunkNumber": 42,
+          "sanskrit": "संवँथ्सरे ताः प्रति॑तिष्ठ॒न्ति।"
+        },
+        {
+          "id": "ta-1-3-43",
+          "chunkNumber": 43,
+          "sanskrit": "व॒र्॒षाभ्य॑ इत्य॒र्थः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-4",
+      "title": "Prapāṭhaka 1 · Anuvāka 4",
+      "sectionNumber": 4,
+      "chunks": [
+        {
+          "id": "ta-1-4-1",
+          "chunkNumber": 1,
+          "sanskrit": "अख्षि॑दुः॒खोत्थि॑तस्यै॒व।",
+          "section": 4
+        },
+        {
+          "id": "ta-1-4-2",
+          "chunkNumber": 2,
+          "sanskrit": "वि॒प्रस॑न्ने क॒नीनि॑के।"
+        },
+        {
+          "id": "ta-1-4-3",
+          "chunkNumber": 3,
+          "sanskrit": "आङ्क्ते चाद्ग॑णं ना॒स्ति।"
+        },
+        {
+          "id": "ta-1-4-4",
+          "chunkNumber": 4,
+          "sanskrit": "ऋ॒भूणां᳚ तन्नि॒बोध॑त।"
+        },
+        {
+          "id": "ta-1-4-5",
+          "chunkNumber": 5,
+          "sanskrit": "क॒न॒का॒भानि॑ वासा॒ꣳ॒सि।"
+        },
+        {
+          "id": "ta-1-4-6",
+          "chunkNumber": 6,
+          "sanskrit": "अ॒हता॑नि नि॒बोध॑त।"
+        },
+        {
+          "id": "ta-1-4-7",
+          "chunkNumber": 7,
+          "sanskrit": "अन्नमश्र्नीत॑ मृज्मी॒त।"
+        },
+        {
+          "id": "ta-1-4-8",
+          "chunkNumber": 8,
+          "sanskrit": "अ॒हव्ँवो॑ जीव॒नप्र॑दः।"
+        },
+        {
+          "id": "ta-1-4-9",
+          "chunkNumber": 9,
+          "sanskrit": "ए॒ता वा॒चः प्र॑युज्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-4-10",
+          "chunkNumber": 10,
+          "sanskrit": "श॒रद्य॑त्रोप॒ दृश्य॑ते अभिधून्वन्तोऽभिघ्न॑न्त इ॒व।"
+        },
+        {
+          "id": "ta-1-4-11",
+          "chunkNumber": 11,
+          "sanskrit": "वा॒तव॑न्तो म॒रुद्ग॑णाः।"
+        },
+        {
+          "id": "ta-1-4-12",
+          "chunkNumber": 12,
+          "sanskrit": "अमुतो जेतुमिषुमु॑खमि॒व।"
+        },
+        {
+          "id": "ta-1-4-13",
+          "chunkNumber": 13,
+          "sanskrit": "सन्नद्धास्सह द॑दृशे॒ ह।"
+        },
+        {
+          "id": "ta-1-4-14",
+          "chunkNumber": 14,
+          "sanskrit": "अपद्ध्वस्तैर्वस्तिव॑र्णैरि॒व।"
+        },
+        {
+          "id": "ta-1-4-15",
+          "chunkNumber": 15,
+          "sanskrit": "वि॒शि॒खासः॑ कप॒र्दिनः।"
+        },
+        {
+          "id": "ta-1-4-16",
+          "chunkNumber": 16,
+          "sanskrit": "अक्रुद्धस्य योथ्स्य॑मान॒स्य।"
+        },
+        {
+          "id": "ta-1-4-17",
+          "chunkNumber": 17,
+          "sanskrit": "क्रु॒द्धस्ये॑व॒ लोहि॑नी।"
+        },
+        {
+          "id": "ta-1-4-18",
+          "chunkNumber": 18,
+          "sanskrit": "हेमतश्चख्षु॑षी वि॒द्यात्।"
+        },
+        {
+          "id": "ta-1-4-19",
+          "chunkNumber": 19,
+          "sanskrit": "अ॒ख्ष्णयोः᳚ ख्षिप॒णोरि॑व दुर्भिख्षं देव॑लोके॒षु।"
+        },
+        {
+          "id": "ta-1-4-20",
+          "chunkNumber": 20,
+          "sanskrit": "म॒नूना॑मुद॒कङ्गृ॑हे।"
+        },
+        {
+          "id": "ta-1-4-21",
+          "chunkNumber": 21,
+          "sanskrit": "ए॒ता वा॒चः प्र॑वद॒न्तीः।"
+        },
+        {
+          "id": "ta-1-4-22",
+          "chunkNumber": 22,
+          "sanskrit": "वै॒द्युतो॑ यान्ति॒ शैशि॑रीः।"
+        },
+        {
+          "id": "ta-1-4-23",
+          "chunkNumber": 23,
+          "sanskrit": "ता अ॒ग्निः पव॑माना॒ अन्वै᳚ख्षत।"
+        },
+        {
+          "id": "ta-1-4-24",
+          "chunkNumber": 24,
+          "sanskrit": "इ॒ह जी॑वि॒कामप॑रिपश्यन्न्।"
+        },
+        {
+          "id": "ta-1-4-25",
+          "chunkNumber": 25,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-4-26",
+          "chunkNumber": 26,
+          "sanskrit": "इ॒हेह व॑स्स्वत॒पसः।"
+        },
+        {
+          "id": "ta-1-4-27",
+          "chunkNumber": 27,
+          "sanskrit": "मरु॑त॒स्सूर्य॑त्वचः।"
+        },
+        {
+          "id": "ta-1-4-28",
+          "chunkNumber": 28,
+          "sanskrit": "शर्म॑ स॒प्रथा॒ आवृ॑णे"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-5",
+      "title": "Prapāṭhaka 1 · Anuvāka 5",
+      "sectionNumber": 5,
+      "chunks": [
+        {
+          "id": "ta-1-5-1",
+          "chunkNumber": 1,
+          "sanskrit": "अति॑ ता॒म्राणि॑ वासा॒ꣳ॒सि।",
+          "section": 5
+        },
+        {
+          "id": "ta-1-5-2",
+          "chunkNumber": 2,
+          "sanskrit": "अ॒ष्टिव॑ज्रि श॒तघ्नि॑ च।"
+        },
+        {
+          "id": "ta-1-5-3",
+          "chunkNumber": 3,
+          "sanskrit": "विश्वे देवा विप्र॑हर॒न्ति।"
+        },
+        {
+          "id": "ta-1-5-4",
+          "chunkNumber": 4,
+          "sanskrit": "अ॒ग्निजि॑ह्वा अ॒सश्च॑त।"
+        },
+        {
+          "id": "ta-1-5-5",
+          "chunkNumber": 5,
+          "sanskrit": "नैव देवो॑ न म॒र्त्यः।"
+        },
+        {
+          "id": "ta-1-5-6",
+          "chunkNumber": 6,
+          "sanskrit": "न राजा व॑रुणो॒ विभुः।"
+        },
+        {
+          "id": "ta-1-5-7",
+          "chunkNumber": 7,
+          "sanskrit": "नाग्निर्नेन्द्रो न प॑वमा॒नः।"
+        },
+        {
+          "id": "ta-1-5-8",
+          "chunkNumber": 8,
+          "sanskrit": "मा॒तृक्क॑च्च न॒ विद्य॑ते।"
+        },
+        {
+          "id": "ta-1-5-9",
+          "chunkNumber": 9,
+          "sanskrit": "दि॒व्यस्यैका॒ धनु॑रार्त्निः।"
+        },
+        {
+          "id": "ta-1-5-10",
+          "chunkNumber": 10,
+          "sanskrit": "पृ॒थि॒व्यामप॑रा श्रि॒ता तस्येन्द्रो वम्रि॑रूपे॒ण।"
+        },
+        {
+          "id": "ta-1-5-11",
+          "chunkNumber": 11,
+          "sanskrit": "ध॒नुर्ज्या॑मछि॒नथ्स्व॑यम्॥"
+        },
+        {
+          "id": "ta-1-5-12",
+          "chunkNumber": 12,
+          "sanskrit": "तदि॑न्द्र॒धनु॑रित्य॒ज्यम्।"
+        },
+        {
+          "id": "ta-1-5-13",
+          "chunkNumber": 13,
+          "sanskrit": "अ॒भ्रव॑र्णेषु॒ चख्ष॑ते।"
+        },
+        {
+          "id": "ta-1-5-14",
+          "chunkNumber": 14,
+          "sanskrit": "एतदेव शम्योँर्बार्ह॑स्पत्य॒स्य।"
+        },
+        {
+          "id": "ta-1-5-15",
+          "chunkNumber": 15,
+          "sanskrit": "ए॒तद् रु॑द्रस्य॒ धनुः।"
+        },
+        {
+          "id": "ta-1-5-16",
+          "chunkNumber": 16,
+          "sanskrit": "रु॒द्रस्य॑ त्वेव॒ धनु॑रार्त्निः।"
+        },
+        {
+          "id": "ta-1-5-17",
+          "chunkNumber": 17,
+          "sanskrit": "शिर॒ उत्पि॑पेष।"
+        },
+        {
+          "id": "ta-1-5-18",
+          "chunkNumber": 18,
+          "sanskrit": "स प्र॑व॒र्ग्यो॑ऽभवत्।"
+        },
+        {
+          "id": "ta-1-5-19",
+          "chunkNumber": 19,
+          "sanskrit": "तस्मा॒द् यस्सप्र॑व॒र्ग्येण॑ य॒ज्ञेन॒ यज॑ते।"
+        },
+        {
+          "id": "ta-1-5-20",
+          "chunkNumber": 20,
+          "sanskrit": "रु॒द्रस्य॒ स शिरः॒ प्रति॑दधाति।"
+        },
+        {
+          "id": "ta-1-5-21",
+          "chunkNumber": 21,
+          "sanskrit": "नैन॑ꣳ रु॒द्र आरु॑को भवति।"
+        },
+        {
+          "id": "ta-1-5-22",
+          "chunkNumber": 22,
+          "sanskrit": "य ए॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-6",
+      "title": "Prapāṭhaka 1 · Anuvāka 6",
+      "sectionNumber": 6,
+      "chunks": [
+        {
+          "id": "ta-1-6-1",
+          "chunkNumber": 1,
+          "sanskrit": "अ॒त्यू॒र्ध्वा॒ख्षोऽति॑रश्चात्।",
+          "section": 6
+        },
+        {
+          "id": "ta-1-6-2",
+          "chunkNumber": 2,
+          "sanskrit": "शिशि॑रः प्र॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-6-3",
+          "chunkNumber": 3,
+          "sanskrit": "नैव रूपन्न॑ वासा॒ꣳ॒सि।"
+        },
+        {
+          "id": "ta-1-6-4",
+          "chunkNumber": 4,
+          "sanskrit": "न चख्षुः॑ प्रति॒दृश्य॑ते।"
+        },
+        {
+          "id": "ta-1-6-5",
+          "chunkNumber": 5,
+          "sanskrit": "अ॒न्योन्य॒न्तु न॑ हिꣴस्रा॒तः।"
+        },
+        {
+          "id": "ta-1-6-6",
+          "chunkNumber": 6,
+          "sanskrit": "स॒तस्त॑द्देव॒लख्ष॑णम्।"
+        },
+        {
+          "id": "ta-1-6-7",
+          "chunkNumber": 7,
+          "sanskrit": "लोहितोऽख्ष्णि शा॑रशी॒र्ष्णिः।"
+        },
+        {
+          "id": "ta-1-6-8",
+          "chunkNumber": 8,
+          "sanskrit": "सू॒र्यस्यो॑दय॒नं प्र॑ति॥"
+        },
+        {
+          "id": "ta-1-6-9",
+          "chunkNumber": 9,
+          "sanskrit": "त्वं करोषि॑ न्यञ्ज॒लिकाम्।"
+        },
+        {
+          "id": "ta-1-6-10",
+          "chunkNumber": 10,
+          "sanskrit": "त्वं॒ करो॑षि नि॒जानु॑काम् निजानुकामे᳚ न्यञ्ज॒लिका।"
+        },
+        {
+          "id": "ta-1-6-11",
+          "chunkNumber": 11,
+          "sanskrit": "अमी वाचमुपास॑तामि॒ति।"
+        },
+        {
+          "id": "ta-1-6-12",
+          "chunkNumber": 12,
+          "sanskrit": "तस्मै सर्व ऋतवो॑ नम॒न्ते।"
+        },
+        {
+          "id": "ta-1-6-13",
+          "chunkNumber": 13,
+          "sanskrit": "मर्यादा करत्वात्प्र॑पुरो॒धाम्।"
+        },
+        {
+          "id": "ta-1-6-14",
+          "chunkNumber": 14,
+          "sanskrit": "ब्राह्मण॑ आप्नो॒ति।"
+        },
+        {
+          "id": "ta-1-6-15",
+          "chunkNumber": 15,
+          "sanskrit": "य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-6-16",
+          "chunkNumber": 16,
+          "sanskrit": "स खलु सम्वँथ्सर एतैस्सेनानी॑भिस्स॒ह।"
+        },
+        {
+          "id": "ta-1-6-17",
+          "chunkNumber": 17,
+          "sanskrit": "इन्द्राय सर्वान्कामान॑भिव॒हति।"
+        },
+        {
+          "id": "ta-1-6-18",
+          "chunkNumber": 18,
+          "sanskrit": "स द्र॒फ्सः।"
+        },
+        {
+          "id": "ta-1-6-19",
+          "chunkNumber": 19,
+          "sanskrit": "तस्यै॒षा भव॑ति अव॑ द्र॒फ्सो अ॑ꣳश॒मती॑मतिष्ठत्।"
+        },
+        {
+          "id": "ta-1-6-20",
+          "chunkNumber": 20,
+          "sanskrit": "इ॒या॒नः कृ॒ष्णो द॒शभि॑स्स॒हस्रैः᳚।"
+        },
+        {
+          "id": "ta-1-6-21",
+          "chunkNumber": 21,
+          "sanskrit": "आव॒र्तमिन्द्रः॒ शच्या॒ धम॑न्तम्।"
+        },
+        {
+          "id": "ta-1-6-22",
+          "chunkNumber": 22,
+          "sanskrit": "उपस्नुहि तन्नृमणामथ॑द्रामि॒ति॥"
+        },
+        {
+          "id": "ta-1-6-23",
+          "chunkNumber": 23,
+          "sanskrit": "एतयैवेन्द्रस्सलावृ॑क्या स॒ह।"
+        },
+        {
+          "id": "ta-1-6-24",
+          "chunkNumber": 24,
+          "sanskrit": "असुरान् प॑रिवृ॒श्चति।"
+        },
+        {
+          "id": "ta-1-6-25",
+          "chunkNumber": 25,
+          "sanskrit": "पृथि॑व्य॒ꣳ॒ शुम॑ती।"
+        },
+        {
+          "id": "ta-1-6-26",
+          "chunkNumber": 26,
+          "sanskrit": "ताम॒न्वव॑स्थितस्सम्वँथ्स॒रो दि॒वञ्च॑।"
+        },
+        {
+          "id": "ta-1-6-27",
+          "chunkNumber": 27,
+          "sanskrit": "नैवव्ँविदुषाऽऽचार्या᳚न्तेवा॒सिनौ।"
+        },
+        {
+          "id": "ta-1-6-28",
+          "chunkNumber": 28,
+          "sanskrit": "अन्योन्यस्मै᳚ द्रुह्या॒ताम्।"
+        },
+        {
+          "id": "ta-1-6-29",
+          "chunkNumber": 29,
+          "sanskrit": "यो द्रु॒ह्यति।"
+        },
+        {
+          "id": "ta-1-6-30",
+          "chunkNumber": 30,
+          "sanskrit": "भ्रश्यते स्व॑र्गाल्लो॒कात्।"
+        },
+        {
+          "id": "ta-1-6-31",
+          "chunkNumber": 31,
+          "sanskrit": "इत्यृतुम॑ण्डला॒नि।"
+        },
+        {
+          "id": "ta-1-6-32",
+          "chunkNumber": 32,
+          "sanskrit": "सूर्य मण्डला᳚न्याख्या॒यिकाः।"
+        },
+        {
+          "id": "ta-1-6-33",
+          "chunkNumber": 33,
+          "sanskrit": "अत ऊद्र्ध्वꣳस॑निर्व॒चनाः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-7",
+      "title": "Prapāṭhaka 1 · Anuvāka 7",
+      "sectionNumber": 7,
+      "chunks": [
+        {
+          "id": "ta-1-7-1",
+          "chunkNumber": 1,
+          "sanskrit": "आरोगो भ्राजः पटरः॑ पत॒ङ्गः।",
+          "section": 7
+        },
+        {
+          "id": "ta-1-7-2",
+          "chunkNumber": 2,
+          "sanskrit": "स्वर्णरो ज्योतिषीमा॑न्विभा॒सः।"
+        },
+        {
+          "id": "ta-1-7-3",
+          "chunkNumber": 3,
+          "sanskrit": "ते अस्मै सर्वे दिवमा॑तप॒न्ति।"
+        },
+        {
+          "id": "ta-1-7-4",
+          "chunkNumber": 4,
+          "sanskrit": "ऊर्जं दुहाना अनपस्फुर॑न्त इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-5",
+          "chunkNumber": 5,
+          "sanskrit": "कश्य॑पोऽष्ट॒मः।"
+        },
+        {
+          "id": "ta-1-7-6",
+          "chunkNumber": 6,
+          "sanskrit": "स महामेरुन्न॑ जहा॒ति।"
+        },
+        {
+          "id": "ta-1-7-7",
+          "chunkNumber": 7,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-7-8",
+          "chunkNumber": 8,
+          "sanskrit": "यत्ते॒ शिल्प॑ङ्कश्यप रोच॒नाव॑त्।"
+        },
+        {
+          "id": "ta-1-7-9",
+          "chunkNumber": 9,
+          "sanskrit": "इ॒न्द्रि॒याव॑त्पुष्क॒लञ्चि॒त्रभा॑नु।"
+        },
+        {
+          "id": "ta-1-7-10",
+          "chunkNumber": 10,
+          "sanskrit": "यस्मि॒न्थ्सूर्या॒ अर्पि॑तास्स॒प्त सा॒कम् तस्मिन्राजानमधिविश्रये॑ममि॒ति।"
+        },
+        {
+          "id": "ta-1-7-11",
+          "chunkNumber": 11,
+          "sanskrit": "ते अस्मै सर्वे कश्यपाज्ज्योति॑र्लभ॒न्ते।"
+        },
+        {
+          "id": "ta-1-7-12",
+          "chunkNumber": 12,
+          "sanskrit": "तान्थ्सोमः कश्यपादधि॑निर्द्ध॒मति।"
+        },
+        {
+          "id": "ta-1-7-13",
+          "chunkNumber": 13,
+          "sanskrit": "भ्रस्ता कर्म कृ॑दिवै॒वम्।"
+        },
+        {
+          "id": "ta-1-7-14",
+          "chunkNumber": 14,
+          "sanskrit": "प्राणो जीवानीन्द्रिय॑जीवा॒नि।"
+        },
+        {
+          "id": "ta-1-7-15",
+          "chunkNumber": 15,
+          "sanskrit": "सप्त शीर्ष॑ण्याः प्रा॒णाः।"
+        },
+        {
+          "id": "ta-1-7-16",
+          "chunkNumber": 16,
+          "sanskrit": "सूर्या इ॑त्याचा॒र्याः।"
+        },
+        {
+          "id": "ta-1-7-17",
+          "chunkNumber": 17,
+          "sanskrit": "अपश्यमहमेतान्थ्सप्त सू᳚र्यानि॒ति।"
+        },
+        {
+          "id": "ta-1-7-18",
+          "chunkNumber": 18,
+          "sanskrit": "पञ्चकर्णो॑ वाथ्स्या॒यनः।"
+        },
+        {
+          "id": "ta-1-7-19",
+          "chunkNumber": 19,
+          "sanskrit": "सप्तकर्ण॑श्च प्ला॒ख्षिः आनुश्रविक एव नौ कश्य॑प इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-20",
+          "chunkNumber": 20,
+          "sanskrit": "उभौ॑ वेद॒यिते।"
+        },
+        {
+          "id": "ta-1-7-21",
+          "chunkNumber": 21,
+          "sanskrit": "न हि शेकुमिव महामे॑रुङ्ग॒न्तुम्।"
+        },
+        {
+          "id": "ta-1-7-22",
+          "chunkNumber": 22,
+          "sanskrit": "अपश्यमहमेतथ्सूर्यमण्डलम्परिव॑र्तमा॒नम्।"
+        },
+        {
+          "id": "ta-1-7-23",
+          "chunkNumber": 23,
+          "sanskrit": "गा॒र्ग्यः प्रा॑णत्रा॒तः।"
+        },
+        {
+          "id": "ta-1-7-24",
+          "chunkNumber": 24,
+          "sanskrit": "गच्छन्त म॑हामे॒रुम्।"
+        },
+        {
+          "id": "ta-1-7-25",
+          "chunkNumber": 25,
+          "sanskrit": "एक॑ञ्चाज॒हतम्।"
+        },
+        {
+          "id": "ta-1-7-26",
+          "chunkNumber": 26,
+          "sanskrit": "भ्राजपटरपत॑ङ्गा नि॒हने।"
+        },
+        {
+          "id": "ta-1-7-27",
+          "chunkNumber": 27,
+          "sanskrit": "तिष्ठन्ना॑तप॒न्ति।"
+        },
+        {
+          "id": "ta-1-7-28",
+          "chunkNumber": 28,
+          "sanskrit": "तस्मा॑दि॒ह तप्त्रि॑तपाः अ॒मुत्रे॒तरे।"
+        },
+        {
+          "id": "ta-1-7-29",
+          "chunkNumber": 29,
+          "sanskrit": "तस्मा॑दि॒हा तप्त्रि॑तपाः।"
+        },
+        {
+          "id": "ta-1-7-30",
+          "chunkNumber": 30,
+          "sanskrit": "तेषा॑मेषा॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-7-31",
+          "chunkNumber": 31,
+          "sanskrit": "स॒प्त सूर्या॒ दिव॒मनु॒ प्रवि॑ष्टाः।"
+        },
+        {
+          "id": "ta-1-7-32",
+          "chunkNumber": 32,
+          "sanskrit": "तान॒न्वेति॑ प॒थिभि॑र्दख्षि॒णावान्॑।"
+        },
+        {
+          "id": "ta-1-7-33",
+          "chunkNumber": 33,
+          "sanskrit": "ते अस्मै सर्वे घृतमा॑तप॒न्ति।"
+        },
+        {
+          "id": "ta-1-7-34",
+          "chunkNumber": 34,
+          "sanskrit": "ऊर्जं दुहाना अनपस्फुर॑न्त इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-35",
+          "chunkNumber": 35,
+          "sanskrit": "सप्तर्त्विजस्सूर्या इ॑त्याचा॒र्याः।"
+        },
+        {
+          "id": "ta-1-7-36",
+          "chunkNumber": 36,
+          "sanskrit": "तेषा॑मेषा॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-7-37",
+          "chunkNumber": 37,
+          "sanskrit": "स॒प्त दिशो॒ नाना॑ सूर्याः स॒प्त होता॑र ऋ॒त्विजः॑।"
+        },
+        {
+          "id": "ta-1-7-38",
+          "chunkNumber": 38,
+          "sanskrit": "देवा आदित्या॑ ये स॒प्त।"
+        },
+        {
+          "id": "ta-1-7-39",
+          "chunkNumber": 39,
+          "sanskrit": "तेभिः सोमाभी रख्ष॑ण इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-40",
+          "chunkNumber": 40,
+          "sanskrit": "तद॑प्याम्ना॒यः।"
+        },
+        {
+          "id": "ta-1-7-41",
+          "chunkNumber": 41,
+          "sanskrit": "दिग्भ्राज ऋतू᳚न् करो॒ति।"
+        },
+        {
+          "id": "ta-1-7-42",
+          "chunkNumber": 42,
+          "sanskrit": "एत॑यैवा॒वृता ऽऽसहस्रसूर्यताया इति वै॑शम्पा॒यनः।"
+        },
+        {
+          "id": "ta-1-7-43",
+          "chunkNumber": 43,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-7-44",
+          "chunkNumber": 44,
+          "sanskrit": "यद्द्याव॑ इन्द्र ते श॒तꣳ श॒तं भूमीः᳚।"
+        },
+        {
+          "id": "ta-1-7-45",
+          "chunkNumber": 45,
+          "sanskrit": "उ॒त स्युः।"
+        },
+        {
+          "id": "ta-1-7-46",
+          "chunkNumber": 46,
+          "sanskrit": "न त्वा॑ वज्रिन्थ्स॒हस्र॒ꣳ॒ सूर्याः᳚ अनु न जातमष्ट रोद॑सी इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-47",
+          "chunkNumber": 47,
+          "sanskrit": "नाना लिङ्गत्वादृतूनां नाना॑ सूर्य॒त्वम्।"
+        },
+        {
+          "id": "ta-1-7-48",
+          "chunkNumber": 48,
+          "sanskrit": "अष्टौ तु व्यवसि॑ता इ॒ति।"
+        },
+        {
+          "id": "ta-1-7-49",
+          "chunkNumber": 49,
+          "sanskrit": "सूर्यमण्डलान्यष्टा॑त ऊ॒द्र्ध्वम्।"
+        },
+        {
+          "id": "ta-1-7-50",
+          "chunkNumber": 50,
+          "sanskrit": "तेषा॑मेषा॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-7-51",
+          "chunkNumber": 51,
+          "sanskrit": "चि॒त्रं दे॒वाना॒मुद॑गा॒दनी॑कम्।"
+        },
+        {
+          "id": "ta-1-7-52",
+          "chunkNumber": 52,
+          "sanskrit": "चख्षु॑र् मि॒त्रस्य॒ वरु॑णस्या॒ग्नेः।"
+        },
+        {
+          "id": "ta-1-7-53",
+          "chunkNumber": 53,
+          "sanskrit": "आऽप्रा॒ द्यावा॑ पृथि॒वी अ॒न्तरि॑ख्षम्।"
+        },
+        {
+          "id": "ta-1-7-54",
+          "chunkNumber": 54,
+          "sanskrit": "सूर्य आत्मा जगतस्तस्थु॑षश्चे॒ति"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-8",
+      "title": "Prapāṭhaka 1 · Anuvāka 8",
+      "sectionNumber": 8,
+      "chunks": [
+        {
+          "id": "ta-1-8-1",
+          "chunkNumber": 1,
+          "sanskrit": "क्वेदमभ्रं॑ निवि॒शते।",
+          "section": 8
+        },
+        {
+          "id": "ta-1-8-2",
+          "chunkNumber": 2,
+          "sanskrit": "क्वाय॑ꣳ सम्वँथ्स॒रो मि॑थः।"
+        },
+        {
+          "id": "ta-1-8-3",
+          "chunkNumber": 3,
+          "sanskrit": "क्वाहः क्वेयन् दे॑व रा॒त्री।"
+        },
+        {
+          "id": "ta-1-8-4",
+          "chunkNumber": 4,
+          "sanskrit": "क्व मासा ऋ॑तवः॒ श्रिताः।"
+        },
+        {
+          "id": "ta-1-8-5",
+          "chunkNumber": 5,
+          "sanskrit": "अर्द्धमासा॑ मुहू॒र्ताः।"
+        },
+        {
+          "id": "ta-1-8-6",
+          "chunkNumber": 6,
+          "sanskrit": "निमेषास्त्रु॑टिभि॒स्सह।"
+        },
+        {
+          "id": "ta-1-8-7",
+          "chunkNumber": 7,
+          "sanskrit": "क्वेमा आपो नि॑विश॒न्ते।"
+        },
+        {
+          "id": "ta-1-8-8",
+          "chunkNumber": 8,
+          "sanskrit": "य॒दीतो॑ यान्ति॒ संप्र॑ति।"
+        },
+        {
+          "id": "ta-1-8-9",
+          "chunkNumber": 9,
+          "sanskrit": "काला अफ्सु नि॑विश॒न्ते।"
+        },
+        {
+          "id": "ta-1-8-10",
+          "chunkNumber": 10,
+          "sanskrit": "आ॒पः सूर्ये॑ स॒माहि॑ताः अभ्रा᳚ण्य॒पः प्र॑पद्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-8-11",
+          "chunkNumber": 11,
+          "sanskrit": "वि॒द्युथ्सूर्ये॑ स॒माहि॑ता।"
+        },
+        {
+          "id": "ta-1-8-12",
+          "chunkNumber": 12,
+          "sanskrit": "अनवर्णे इ॑मे भू॒मी।"
+        },
+        {
+          "id": "ta-1-8-13",
+          "chunkNumber": 13,
+          "sanskrit": "इ॒यञ्चा॑सौ च॒ रोद॑सी।"
+        },
+        {
+          "id": "ta-1-8-14",
+          "chunkNumber": 14,
+          "sanskrit": "किꣴ स्विदत्रान्त॑रा भू॒तम्।"
+        },
+        {
+          "id": "ta-1-8-15",
+          "chunkNumber": 15,
+          "sanskrit": "ये॒नेमे वि॑धृते॒ उभे।"
+        },
+        {
+          "id": "ta-1-8-16",
+          "chunkNumber": 16,
+          "sanskrit": "वि॒ष्णुना॑ विधृ॑ते भू॒मी।"
+        },
+        {
+          "id": "ta-1-8-17",
+          "chunkNumber": 17,
+          "sanskrit": "इ॒ति व॑थ्सस्य॒ वेद॑ना।"
+        },
+        {
+          "id": "ta-1-8-18",
+          "chunkNumber": 18,
+          "sanskrit": "इरा॑वती धेनु॒मती॒ हि भू॒तम्।"
+        },
+        {
+          "id": "ta-1-8-19",
+          "chunkNumber": 19,
+          "sanskrit": "सू॒य॒व॒सिनी॒ मनु॑षे दश॒स्ये᳚ व्य॑ष्टभ्ना॒द्रोद॑सी॒ विष्ण॑वे॒ते।"
+        },
+        {
+          "id": "ta-1-8-20",
+          "chunkNumber": 20,
+          "sanskrit": "दा॒धर्थ॑ पृथि॒वीम॒भितो॑ म॒यूखैः᳚।"
+        },
+        {
+          "id": "ta-1-8-21",
+          "chunkNumber": 21,
+          "sanskrit": "किन्तद्विष्णो र्ब॑लमा॒हुः।"
+        },
+        {
+          "id": "ta-1-8-22",
+          "chunkNumber": 22,
+          "sanskrit": "का॒ दीप्तिः॑ किं प॒राय॑णम्।"
+        },
+        {
+          "id": "ta-1-8-23",
+          "chunkNumber": 23,
+          "sanskrit": "एको॑ य॒द्धार॑य द्दे॒वः।"
+        },
+        {
+          "id": "ta-1-8-24",
+          "chunkNumber": 24,
+          "sanskrit": "रे॒जती॑ रोद॒सी उ॑भे।"
+        },
+        {
+          "id": "ta-1-8-25",
+          "chunkNumber": 25,
+          "sanskrit": "वाताद्विष्णोर् ब॑ल मा॒हुः।"
+        },
+        {
+          "id": "ta-1-8-26",
+          "chunkNumber": 26,
+          "sanskrit": "अ॒ख्षरा᳚द्दीप्ति॒ रुच्य॑ते।"
+        },
+        {
+          "id": "ta-1-8-27",
+          "chunkNumber": 27,
+          "sanskrit": "त्रि॒पदा॒द्धार॑यद्दे॒वः।"
+        },
+        {
+          "id": "ta-1-8-28",
+          "chunkNumber": 28,
+          "sanskrit": "यद्विष्णो॑रेक॒मुत्त॑मम् अ॒ग्नयो॑ वाय॑वश्चै॒व।"
+        },
+        {
+          "id": "ta-1-8-29",
+          "chunkNumber": 29,
+          "sanskrit": "ए॒तद॑स्य प॒राय॑णम्।"
+        },
+        {
+          "id": "ta-1-8-30",
+          "chunkNumber": 30,
+          "sanskrit": "पृच्छामि त्वा प॑रं मृ॒त्युम्।"
+        },
+        {
+          "id": "ta-1-8-31",
+          "chunkNumber": 31,
+          "sanskrit": "अ॒वमं॑ मद्ध्य॒मञ्च॑तुम्।"
+        },
+        {
+          "id": "ta-1-8-32",
+          "chunkNumber": 32,
+          "sanskrit": "लो॒कञ्च॒ पुण्य॑पापा॒नाम्।"
+        },
+        {
+          "id": "ta-1-8-33",
+          "chunkNumber": 33,
+          "sanskrit": "ए॒तत्पृ॑च्छामि॒ संप्र॑ति।"
+        },
+        {
+          "id": "ta-1-8-34",
+          "chunkNumber": 34,
+          "sanskrit": "अ॒मुमा॑हुः प॑रं मृ॒त्युम्।"
+        },
+        {
+          "id": "ta-1-8-35",
+          "chunkNumber": 35,
+          "sanskrit": "प॒वमा॑नन्तु॒ मद्ध्य॑मम्।"
+        },
+        {
+          "id": "ta-1-8-36",
+          "chunkNumber": 36,
+          "sanskrit": "अ॒ग्निरे॒वाव॑मो मृ॒त्युः।"
+        },
+        {
+          "id": "ta-1-8-37",
+          "chunkNumber": 37,
+          "sanskrit": "च॒न्द्रमा᳚श्चतु॒रुच्य॑ते अ॒ना॒भो॒गाः प॑रं मृ॒त्युम्।"
+        },
+        {
+          "id": "ta-1-8-38",
+          "chunkNumber": 38,
+          "sanskrit": "पा॒पाः स॑म्यँन्ति॒ सर्व॑दा।"
+        },
+        {
+          "id": "ta-1-8-39",
+          "chunkNumber": 39,
+          "sanskrit": "आभोगास्त्वेव॑ सम्यँ॒न्ति।"
+        },
+        {
+          "id": "ta-1-8-40",
+          "chunkNumber": 40,
+          "sanskrit": "य॒त्र पु॑ण्यकृ॒तो ज॑नाः।"
+        },
+        {
+          "id": "ta-1-8-41",
+          "chunkNumber": 41,
+          "sanskrit": "ततो॑ म॒द्ध्यम॑माय॒न्ति।"
+        },
+        {
+          "id": "ta-1-8-42",
+          "chunkNumber": 42,
+          "sanskrit": "च॒तुम॑ग्निञ्च॒ संप्र॑ति।"
+        },
+        {
+          "id": "ta-1-8-43",
+          "chunkNumber": 43,
+          "sanskrit": "पृच्छामि त्वा॑ पाप॒कृतः।"
+        },
+        {
+          "id": "ta-1-8-44",
+          "chunkNumber": 44,
+          "sanskrit": "य॒त्र या॑तय॒ते य॑मः।"
+        },
+        {
+          "id": "ta-1-8-45",
+          "chunkNumber": 45,
+          "sanskrit": "त्वन्नस्तद्ब्रह्म॑न् प्रब्रू॒हि।"
+        },
+        {
+          "id": "ta-1-8-46",
+          "chunkNumber": 46,
+          "sanskrit": "य॒दि वे᳚त्थाऽस॒तो गृ॑हान् क॒श्यपा॑दुदि॑तास्सू॒र्याः।"
+        },
+        {
+          "id": "ta-1-8-47",
+          "chunkNumber": 47,
+          "sanskrit": "पा॒पान्नि॑र्घ्नन्ति॒ सर्व॑दा।"
+        },
+        {
+          "id": "ta-1-8-48",
+          "chunkNumber": 48,
+          "sanskrit": "रोदस्योरन्त॑र् देशे॒षु।"
+        },
+        {
+          "id": "ta-1-8-49",
+          "chunkNumber": 49,
+          "sanskrit": "तत्र न्यस्यन्ते॑ वास॒वैः।"
+        },
+        {
+          "id": "ta-1-8-50",
+          "chunkNumber": 50,
+          "sanskrit": "तेऽशरीराः प्र॑पद्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-8-51",
+          "chunkNumber": 51,
+          "sanskrit": "य॒थाऽपु॑ण्यस्य॒ कर्म॑णः।"
+        },
+        {
+          "id": "ta-1-8-52",
+          "chunkNumber": 52,
+          "sanskrit": "अपा᳚ण्य॒पाद॑ केशा॒सः।"
+        },
+        {
+          "id": "ta-1-8-53",
+          "chunkNumber": 53,
+          "sanskrit": "त॒त्र ते॑ऽयोनि॒जा ज॑नाः।"
+        },
+        {
+          "id": "ta-1-8-54",
+          "chunkNumber": 54,
+          "sanskrit": "मृत्वा पुनर्मृत्युमा॑पद्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-8-55",
+          "chunkNumber": 55,
+          "sanskrit": "अ॒द्यमा॑नास्स्व॒कर्म॑भिः आशातिकाः क्रिम॑य इ॒व।"
+        },
+        {
+          "id": "ta-1-8-56",
+          "chunkNumber": 56,
+          "sanskrit": "ततः पूयन्ते॑ वास॒वैः।"
+        },
+        {
+          "id": "ta-1-8-57",
+          "chunkNumber": 57,
+          "sanskrit": "अपै॑तम्मृ॒त्युञ्ज॑यति।"
+        },
+        {
+          "id": "ta-1-8-58",
+          "chunkNumber": 58,
+          "sanskrit": "य ए॒वव्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-8-59",
+          "chunkNumber": 59,
+          "sanskrit": "स खल्वैव॑व्ँविद्ब्रा॒ह्मणः।"
+        },
+        {
+          "id": "ta-1-8-60",
+          "chunkNumber": 60,
+          "sanskrit": "दी॒र्घश्रु॑त्तमो॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-8-61",
+          "chunkNumber": 61,
+          "sanskrit": "कश्य॑प॒स्याति॑थिः॒ सिद्धग॑मनः॒ सिद्धाग॑मनः।"
+        },
+        {
+          "id": "ta-1-8-62",
+          "chunkNumber": 62,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-8-63",
+          "chunkNumber": 63,
+          "sanskrit": "आयस्मिन्᳚थ्स॒प्त वा॑स॒वाः।"
+        },
+        {
+          "id": "ta-1-8-64",
+          "chunkNumber": 64,
+          "sanskrit": "रोह॑न्ति पू॒र्व्या॑ रुहः॑ ऋषि॑र्ह दीर्घ॒श्रुत्त॑मः।"
+        },
+        {
+          "id": "ta-1-8-65",
+          "chunkNumber": 65,
+          "sanskrit": "इन्द्रस्य घर्मो अति॑थिरि॒ति।"
+        },
+        {
+          "id": "ta-1-8-66",
+          "chunkNumber": 66,
+          "sanskrit": "कश्यपः पश्य॑को भ॒वति।"
+        },
+        {
+          "id": "ta-1-8-67",
+          "chunkNumber": 67,
+          "sanskrit": "यथ्सर्वं परिपश्यती॑ति सौ॒ख्ष्म्यात्।"
+        },
+        {
+          "id": "ta-1-8-68",
+          "chunkNumber": 68,
+          "sanskrit": "अथाग्ने॑रष्टपु॑रुष॒स्य।"
+        },
+        {
+          "id": "ta-1-8-69",
+          "chunkNumber": 69,
+          "sanskrit": "तस्यै॒षा भव॑ति।"
+        },
+        {
+          "id": "ta-1-8-70",
+          "chunkNumber": 70,
+          "sanskrit": "अग्ने॒ नय॑ सु॒पथा॑ रा॒ये अ॒स्मान्।"
+        },
+        {
+          "id": "ta-1-8-71",
+          "chunkNumber": 71,
+          "sanskrit": "विश्वा॑नि देव व॒युना॑नि वि॒द्वान्।"
+        },
+        {
+          "id": "ta-1-8-72",
+          "chunkNumber": 72,
+          "sanskrit": "यु॒यो॒द्ध्य॑स्मज्जु॑हुरा॒णमेनः॑।"
+        },
+        {
+          "id": "ta-1-8-73",
+          "chunkNumber": 73,
+          "sanskrit": "भूयिष्ठान्ते नम उक्तिं वि॑धेमे॒ति"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-9",
+      "title": "Prapāṭhaka 1 · Anuvāka 9",
+      "sectionNumber": 9,
+      "chunks": [
+        {
+          "id": "ta-1-9-1",
+          "chunkNumber": 1,
+          "sanskrit": "अग्निश्च जात॑वेदा॒श्च।",
+          "section": 9
+        },
+        {
+          "id": "ta-1-9-2",
+          "chunkNumber": 2,
+          "sanskrit": "सहोजा अ॑जिरा॒प्रभुः।"
+        },
+        {
+          "id": "ta-1-9-3",
+          "chunkNumber": 3,
+          "sanskrit": "वैश्वानरो न॑र्यापा॒श्च।"
+        },
+        {
+          "id": "ta-1-9-4",
+          "chunkNumber": 4,
+          "sanskrit": "प॒ङ्क्तिरा॑धाश्च॒ सप्त॑मः।"
+        },
+        {
+          "id": "ta-1-9-5",
+          "chunkNumber": 5,
+          "sanskrit": "विसर्पे वाष्ट॑मोऽग्नी॒नाम्।"
+        },
+        {
+          "id": "ta-1-9-6",
+          "chunkNumber": 6,
+          "sanskrit": "एतेऽष्टौ वसवः ख्षि॑ता इ॒ति।"
+        },
+        {
+          "id": "ta-1-9-7",
+          "chunkNumber": 7,
+          "sanskrit": "यथर्त्वेवाग्नेरर्चिर्वर्ण॑ विशे॒षाः।"
+        },
+        {
+          "id": "ta-1-9-8",
+          "chunkNumber": 8,
+          "sanskrit": "नीलार्चिश्च पीतका᳚र्चिश्चे॒ति।"
+        },
+        {
+          "id": "ta-1-9-9",
+          "chunkNumber": 9,
+          "sanskrit": "अथ वायोरेकादशपुरुषस्यैकादश॑स्त्रीक॒स्य।"
+        },
+        {
+          "id": "ta-1-9-10",
+          "chunkNumber": 10,
+          "sanskrit": "प्रभ्राजमाना व्य॑वदा॒ताः याश्च वासु॑कि वै॒द्युताः।"
+        },
+        {
+          "id": "ta-1-9-11",
+          "chunkNumber": 11,
+          "sanskrit": "रजताः परु॑षाः श्या॒माः।"
+        },
+        {
+          "id": "ta-1-9-12",
+          "chunkNumber": 12,
+          "sanskrit": "कपिला अ॑तिलो॒हिताः।"
+        },
+        {
+          "id": "ta-1-9-13",
+          "chunkNumber": 13,
+          "sanskrit": "ऊद्र्ध्वा अवप॑तन्ता॒श्च।"
+        },
+        {
+          "id": "ta-1-9-14",
+          "chunkNumber": 14,
+          "sanskrit": "वैद्युत इ॑त्येका॒दश।"
+        },
+        {
+          "id": "ta-1-9-15",
+          "chunkNumber": 15,
+          "sanskrit": "नैनव्ँवैद्युतो॑ हिन॒स्ति।"
+        },
+        {
+          "id": "ta-1-9-16",
+          "chunkNumber": 16,
+          "sanskrit": "य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-9-17",
+          "chunkNumber": 17,
+          "sanskrit": "स होवाच व्यासः पा॑राश॒र्यः।"
+        },
+        {
+          "id": "ta-1-9-18",
+          "chunkNumber": 18,
+          "sanskrit": "विद्युद्वधमेवाहं मृत्युमै᳚च्छमि॒ति।"
+        },
+        {
+          "id": "ta-1-9-19",
+          "chunkNumber": 19,
+          "sanskrit": "न त्वका॑मꣳ ह॒न्ति य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-9-20",
+          "chunkNumber": 20,
+          "sanskrit": "अथ ग॑न्धर्व॒गणाः।"
+        },
+        {
+          "id": "ta-1-9-21",
+          "chunkNumber": 21,
+          "sanskrit": "स्वान॒ भ्राट्।"
+        },
+        {
+          "id": "ta-1-9-22",
+          "chunkNumber": 22,
+          "sanskrit": "अङ्घा॑रि॒र् बंभा॑रिः।"
+        },
+        {
+          "id": "ta-1-9-23",
+          "chunkNumber": 23,
+          "sanskrit": "हस्तः॒ सुह॑स्तः।"
+        },
+        {
+          "id": "ta-1-9-24",
+          "chunkNumber": 24,
+          "sanskrit": "कृशा॑नुर् वि॒श्वाव॑सुः।"
+        },
+        {
+          "id": "ta-1-9-25",
+          "chunkNumber": 25,
+          "sanskrit": "मूद्र्धन्वान्थ्सू᳚र्यव॒र्चाः।"
+        },
+        {
+          "id": "ta-1-9-26",
+          "chunkNumber": 26,
+          "sanskrit": "कृतिरित्येकादश ग॑न्धर्व॒गणाः।"
+        },
+        {
+          "id": "ta-1-9-27",
+          "chunkNumber": 27,
+          "sanskrit": "देवाश्च म॑हादे॒वाः।"
+        },
+        {
+          "id": "ta-1-9-28",
+          "chunkNumber": 28,
+          "sanskrit": "रश्मयश्च देवा॑ गर॒गिरः नैनङ्गरो॑ हिन॒स्ति।"
+        },
+        {
+          "id": "ta-1-9-29",
+          "chunkNumber": 29,
+          "sanskrit": "य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-9-30",
+          "chunkNumber": 30,
+          "sanskrit": "गौ॒री मि॑माय सलि॒लानि॒ तख्ष॑ती।"
+        },
+        {
+          "id": "ta-1-9-31",
+          "chunkNumber": 31,
+          "sanskrit": "एक॑पदी द्वि॒पदी॒ सा चतु॑ष्पदी।"
+        },
+        {
+          "id": "ta-1-9-32",
+          "chunkNumber": 32,
+          "sanskrit": "अ॒ष्टाप॑दी॒ नव॑पदी बभू॒वुषी᳚।"
+        },
+        {
+          "id": "ta-1-9-33",
+          "chunkNumber": 33,
+          "sanskrit": "सहस्राख्षरा परमे व्यो॑मन्नि॒ति।"
+        },
+        {
+          "id": "ta-1-9-34",
+          "chunkNumber": 34,
+          "sanskrit": "वाचो॑ विशे॒षणम्।"
+        },
+        {
+          "id": "ta-1-9-35",
+          "chunkNumber": 35,
+          "sanskrit": "अथ निगद॑व्याख्या॒ताः।"
+        },
+        {
+          "id": "ta-1-9-36",
+          "chunkNumber": 36,
+          "sanskrit": "ताननुक्र॑मिष्या॒मः।"
+        },
+        {
+          "id": "ta-1-9-37",
+          "chunkNumber": 37,
+          "sanskrit": "व॒राहव॑स्स्वत॒पसः वि॒द्युन् म॑हसो॒ धूप॑यः।"
+        },
+        {
+          "id": "ta-1-9-38",
+          "chunkNumber": 38,
+          "sanskrit": "श्वापयो गृहमेधा᳚श्चेत्ये॒ते।"
+        },
+        {
+          "id": "ta-1-9-39",
+          "chunkNumber": 39,
+          "sanskrit": "ये॒ चेमेऽशि॑मिवि॒द्विषः।"
+        },
+        {
+          "id": "ta-1-9-40",
+          "chunkNumber": 40,
+          "sanskrit": "पर्जन्याः सप्त पृथिवीमभिव॑र्ष॒न्ति।"
+        },
+        {
+          "id": "ta-1-9-41",
+          "chunkNumber": 41,
+          "sanskrit": "वृष्टि॑भिरि॒ति।"
+        },
+        {
+          "id": "ta-1-9-42",
+          "chunkNumber": 42,
+          "sanskrit": "एतयैव विभक्ति वि॑परी॒ताः।"
+        },
+        {
+          "id": "ta-1-9-43",
+          "chunkNumber": 43,
+          "sanskrit": "स॒प्तभि॒र्वातै॑ रुदी॒रिताः।"
+        },
+        {
+          "id": "ta-1-9-44",
+          "chunkNumber": 44,
+          "sanskrit": "अमूल्ँलोकानभिव॑र्ष॒न्ति।"
+        },
+        {
+          "id": "ta-1-9-45",
+          "chunkNumber": 45,
+          "sanskrit": "तेषा॑मेषा॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-9-46",
+          "chunkNumber": 46,
+          "sanskrit": "स॒मा॒नमे॒तदुद॑कम् उ॒च्चैत्य॑व॒ चाह॑भिः।"
+        },
+        {
+          "id": "ta-1-9-47",
+          "chunkNumber": 47,
+          "sanskrit": "भूमिं॑ प॒र्जन्या॒ जिन्व॑न्ति।"
+        },
+        {
+          "id": "ta-1-9-48",
+          "chunkNumber": 48,
+          "sanskrit": "दिवं जिन्वन्त्यग्न॑य इ॒ति।"
+        },
+        {
+          "id": "ta-1-9-49",
+          "chunkNumber": 49,
+          "sanskrit": "यदख्ष॑रं भू॒तकृ॑तम्।"
+        },
+        {
+          "id": "ta-1-9-50",
+          "chunkNumber": 50,
+          "sanskrit": "विश्वे॑ देवा उ॒पास॑ते।"
+        },
+        {
+          "id": "ta-1-9-51",
+          "chunkNumber": 51,
+          "sanskrit": "म॒हर्षि॑मस्य गो॒प्तार᳚म्।"
+        },
+        {
+          "id": "ta-1-9-52",
+          "chunkNumber": 52,
+          "sanskrit": "ज॒मद॑ग्नि॒मकु॑र्वत।"
+        },
+        {
+          "id": "ta-1-9-53",
+          "chunkNumber": 53,
+          "sanskrit": "ज॒मद॑ग्नि॒राप्या॑यते।"
+        },
+        {
+          "id": "ta-1-9-54",
+          "chunkNumber": 54,
+          "sanskrit": "छन्दो॑भिश्चतुरुत्त॒रैः।"
+        },
+        {
+          "id": "ta-1-9-55",
+          "chunkNumber": 55,
+          "sanskrit": "राज्ञः॒ सोम॑स्य तृ॒प्तासः॑ ब्रह्म॑णा वी॒र्या॑वता।"
+        },
+        {
+          "id": "ta-1-9-56",
+          "chunkNumber": 56,
+          "sanskrit": "शि॒वा नः॑ प्र॒दिशो॒ दिशः॑॥"
+        },
+        {
+          "id": "ta-1-9-57",
+          "chunkNumber": 57,
+          "sanskrit": "तच्छ॒य्योँरा वृ॑णीमहे।"
+        },
+        {
+          "id": "ta-1-9-58",
+          "chunkNumber": 58,
+          "sanskrit": "गा॒तुय्ँय॒ज्ञाय॑।"
+        },
+        {
+          "id": "ta-1-9-59",
+          "chunkNumber": 59,
+          "sanskrit": "गा॒तुय्ँय॒ज्ञप॑तये।"
+        },
+        {
+          "id": "ta-1-9-60",
+          "chunkNumber": 60,
+          "sanskrit": "दैवी᳚ स्व॒स्तिर॑स्तु नः।"
+        },
+        {
+          "id": "ta-1-9-61",
+          "chunkNumber": 61,
+          "sanskrit": "स्व॒स्तिर् मानु॑षेभ्यः।"
+        },
+        {
+          "id": "ta-1-9-62",
+          "chunkNumber": 62,
+          "sanskrit": "ऊ॒द्र्ध्वञ्जि॑गातु भेष॒जम्।"
+        },
+        {
+          "id": "ta-1-9-63",
+          "chunkNumber": 63,
+          "sanskrit": "शन्नो॑ अस्तु द्वि॒पदे᳚।"
+        },
+        {
+          "id": "ta-1-9-64",
+          "chunkNumber": 64,
+          "sanskrit": "शञ्चतु॑ष्पदे॥"
+        },
+        {
+          "id": "ta-1-9-65",
+          "chunkNumber": 65,
+          "sanskrit": "सोमपा(३) असोमपा(३) इति निगद॑व्याख्या॒ताः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-10",
+      "title": "Prapāṭhaka 1 · Anuvāka 10",
+      "sectionNumber": 10,
+      "chunks": [
+        {
+          "id": "ta-1-10-1",
+          "chunkNumber": 1,
+          "sanskrit": "स॒ह॒स्र॒वृदि॑यं भू॒मिः।",
+          "section": 10
+        },
+        {
+          "id": "ta-1-10-2",
+          "chunkNumber": 2,
+          "sanskrit": "प॒रव्ँव्यो॑म स॒हस्र॑वृत्।"
+        },
+        {
+          "id": "ta-1-10-3",
+          "chunkNumber": 3,
+          "sanskrit": "अ॒श्विना॑ भुज्यू॑ नास॒त्या।"
+        },
+        {
+          "id": "ta-1-10-4",
+          "chunkNumber": 4,
+          "sanskrit": "वि॒श्वस्य॑ जग॒तस्प॑ती।"
+        },
+        {
+          "id": "ta-1-10-5",
+          "chunkNumber": 5,
+          "sanskrit": "जाया भूमिः प॑तिर्व्यो॒म।"
+        },
+        {
+          "id": "ta-1-10-6",
+          "chunkNumber": 6,
+          "sanskrit": "मि॒थुन॑न्ता अ॒तुर्य॑थुः।"
+        },
+        {
+          "id": "ta-1-10-7",
+          "chunkNumber": 7,
+          "sanskrit": "पुत्रो बृहस्प॑ती रु॒द्रः।"
+        },
+        {
+          "id": "ta-1-10-8",
+          "chunkNumber": 8,
+          "sanskrit": "स॒रमा॑ इति॑ स्त्रीपु॒मम्।"
+        },
+        {
+          "id": "ta-1-10-9",
+          "chunkNumber": 9,
+          "sanskrit": "शु॒क्रव्ँवा॑म॒न्यद्य॑ज॒तव्ँवा॑म॒न्यत्।"
+        },
+        {
+          "id": "ta-1-10-10",
+          "chunkNumber": 10,
+          "sanskrit": "विषु॑रूपे॒ अह॑नी॒ द्यौरि॑व स्थः विश्वा॒ हि मा॒या अव॑थस्स्वधावन्तौ।"
+        },
+        {
+          "id": "ta-1-10-11",
+          "chunkNumber": 11,
+          "sanskrit": "भ॒द्रा वां᳚ पूषणावि॒ह रा॒तिर॑स्तु।"
+        },
+        {
+          "id": "ta-1-10-12",
+          "chunkNumber": 12,
+          "sanskrit": "वासा᳚त्यौ चि॒त्रौ जग॑तो नि॒धानौ᳚।"
+        },
+        {
+          "id": "ta-1-10-13",
+          "chunkNumber": 13,
+          "sanskrit": "द्यावा॑भूमी च॒रथः॑ स॒ꣳ॒ सखा॑यौ।"
+        },
+        {
+          "id": "ta-1-10-14",
+          "chunkNumber": 14,
+          "sanskrit": "ताव॒श्विना॑ रा॒सभा᳚श्वा॒ हव॑म्मे।"
+        },
+        {
+          "id": "ta-1-10-15",
+          "chunkNumber": 15,
+          "sanskrit": "शु॒भ॒स्प॒ती॒ आ॒गत॑ꣳ सू॒र्यया॑ स॒ह।"
+        },
+        {
+          "id": "ta-1-10-16",
+          "chunkNumber": 16,
+          "sanskrit": "त्युग्रो॑ ह भु॒ज्युम॑श्विनोद मे॒घे।"
+        },
+        {
+          "id": "ta-1-10-17",
+          "chunkNumber": 17,
+          "sanskrit": "र॒यिन्न कश्चि॑न् ममृ॒वा(२) अँवा॑हाः।"
+        },
+        {
+          "id": "ta-1-10-18",
+          "chunkNumber": 18,
+          "sanskrit": "तमू॑हथुर्नौ॒भिरा᳚त्म॒न्वती॑भिः।"
+        },
+        {
+          "id": "ta-1-10-19",
+          "chunkNumber": 19,
+          "sanskrit": "अ॒न्त॒रि॒ख्ष॒ प्रुड्भि॒रपो॑दकाभिः ति॒स्रः ख्षप॒स्त्रिरहा॑ ऽति॒व्रज॑द्भिः।"
+        },
+        {
+          "id": "ta-1-10-20",
+          "chunkNumber": 20,
+          "sanskrit": "नास॑त्या भु॒ज्युमू॑हथुः पत॒ङ्गैः।"
+        },
+        {
+          "id": "ta-1-10-21",
+          "chunkNumber": 21,
+          "sanskrit": "स॒मु॒द्रस्य॒ धन्व॑न्ना॒र्द्रस्य॑ पा॒रे।"
+        },
+        {
+          "id": "ta-1-10-22",
+          "chunkNumber": 22,
+          "sanskrit": "त्रि॒भी रथैः᳚ श॒तप॑द्भिः॒ षड॑श्वैः।"
+        },
+        {
+          "id": "ta-1-10-23",
+          "chunkNumber": 23,
+          "sanskrit": "स॒वि॒तार॒व्ँवित॑न्वन्तम्।"
+        },
+        {
+          "id": "ta-1-10-24",
+          "chunkNumber": 24,
+          "sanskrit": "अनु॑बद्ध्नाति शांब॒रः।"
+        },
+        {
+          "id": "ta-1-10-25",
+          "chunkNumber": 25,
+          "sanskrit": "आपपूर्षंब॑रश्चै॒व।"
+        },
+        {
+          "id": "ta-1-10-26",
+          "chunkNumber": 26,
+          "sanskrit": "स॒विता॑ऽरेप॒सो॑ऽभवत्।"
+        },
+        {
+          "id": "ta-1-10-27",
+          "chunkNumber": 27,
+          "sanskrit": "त्यꣳ सुतृप्तव्ँवि॑दित्वै॒व।"
+        },
+        {
+          "id": "ta-1-10-28",
+          "chunkNumber": 28,
+          "sanskrit": "ब॒हुसो॑म गि॒रव्ँव॑शी अन्वेति तुग्रो व॑क्रिया॒न्तम्।"
+        },
+        {
+          "id": "ta-1-10-29",
+          "chunkNumber": 29,
+          "sanskrit": "आयसूयान्थ् सोम॑तृफ्सु॒षु॥"
+        },
+        {
+          "id": "ta-1-10-30",
+          "chunkNumber": 30,
+          "sanskrit": "स सङ्ग्रामस्तमो᳚द्योऽत्यो॒तः।"
+        },
+        {
+          "id": "ta-1-10-31",
+          "chunkNumber": 31,
+          "sanskrit": "वाचो गाः पि॑पाति॒ तत्।"
+        },
+        {
+          "id": "ta-1-10-32",
+          "chunkNumber": 32,
+          "sanskrit": "स तद्गोभिः स्तवा᳚ऽत्येत्य॒न्ये।"
+        },
+        {
+          "id": "ta-1-10-33",
+          "chunkNumber": 33,
+          "sanskrit": "र॒ख्षसा॑ऽनन्वि॒ताश्च॑ ये।"
+        },
+        {
+          "id": "ta-1-10-34",
+          "chunkNumber": 34,
+          "sanskrit": "अ॒न्वेति॒ परि॑वृत्त्या॒ऽस्तः।"
+        },
+        {
+          "id": "ta-1-10-35",
+          "chunkNumber": 35,
+          "sanskrit": "ए॒वमे॒तौ स्थो॑ अश्विना।"
+        },
+        {
+          "id": "ta-1-10-36",
+          "chunkNumber": 36,
+          "sanskrit": "ते ए॒ते द्युः॑ पृथि॒व्योः।"
+        },
+        {
+          "id": "ta-1-10-37",
+          "chunkNumber": 37,
+          "sanskrit": "अह॑रह॒र्गर्भ॑न्दधाथे तयो॑ रे॒तौ व॒थ्सा व॑होरा॒त्रे।"
+        },
+        {
+          "id": "ta-1-10-38",
+          "chunkNumber": 38,
+          "sanskrit": "पृ॒थि॒व्या अहः॑।"
+        },
+        {
+          "id": "ta-1-10-39",
+          "chunkNumber": 39,
+          "sanskrit": "दि॒वो रात्रिः॑।"
+        },
+        {
+          "id": "ta-1-10-40",
+          "chunkNumber": 40,
+          "sanskrit": "ता अवि॑सृष्टौ।"
+        },
+        {
+          "id": "ta-1-10-41",
+          "chunkNumber": 41,
+          "sanskrit": "दंप॑ती ए॒व भ॑वतः।"
+        },
+        {
+          "id": "ta-1-10-42",
+          "chunkNumber": 42,
+          "sanskrit": "तयो॑ रे॒तौ व॒थ्सौ।"
+        },
+        {
+          "id": "ta-1-10-43",
+          "chunkNumber": 43,
+          "sanskrit": "अ॒ग्निश्चा॑दि॒त्यश्च॑।"
+        },
+        {
+          "id": "ta-1-10-44",
+          "chunkNumber": 44,
+          "sanskrit": "रा॒त्रेर्व॒थ्सः।"
+        },
+        {
+          "id": "ta-1-10-45",
+          "chunkNumber": 45,
+          "sanskrit": "श्वे॒त आ॑दि॒त्यः।"
+        },
+        {
+          "id": "ta-1-10-46",
+          "chunkNumber": 46,
+          "sanskrit": "अह्नो॒ऽग्निः ता॒म्रो अ॑रु॒णः।"
+        },
+        {
+          "id": "ta-1-10-47",
+          "chunkNumber": 47,
+          "sanskrit": "ता अवि॑सृष्टौ।"
+        },
+        {
+          "id": "ta-1-10-48",
+          "chunkNumber": 48,
+          "sanskrit": "दम्प॑ती ए॒व भ॑वतः।"
+        },
+        {
+          "id": "ta-1-10-49",
+          "chunkNumber": 49,
+          "sanskrit": "तयो॑ रे॒तौ व॒थ्सौ।"
+        },
+        {
+          "id": "ta-1-10-50",
+          "chunkNumber": 50,
+          "sanskrit": "वृ॒त्रश्च॑ वैद्यु॒तश्च॑।"
+        },
+        {
+          "id": "ta-1-10-51",
+          "chunkNumber": 51,
+          "sanskrit": "अ॒ग्नेर्वृ॒त्रः।"
+        },
+        {
+          "id": "ta-1-10-52",
+          "chunkNumber": 52,
+          "sanskrit": "वै॒द्युत॑ आदि॒त्यस्य॑।"
+        },
+        {
+          "id": "ta-1-10-53",
+          "chunkNumber": 53,
+          "sanskrit": "ता अवि॑सृष्टौ।"
+        },
+        {
+          "id": "ta-1-10-54",
+          "chunkNumber": 54,
+          "sanskrit": "दम्प॑ती ए॒व भ॑वतः।"
+        },
+        {
+          "id": "ta-1-10-55",
+          "chunkNumber": 55,
+          "sanskrit": "तयो॑ रे॒तौ व॒थ्सौ उ॒ष्मा च॑ नीहा॒रश्च॑।"
+        },
+        {
+          "id": "ta-1-10-56",
+          "chunkNumber": 56,
+          "sanskrit": "वृ॒त्रस्यो॒ष्मा।"
+        },
+        {
+          "id": "ta-1-10-57",
+          "chunkNumber": 57,
+          "sanskrit": "वै॒द्यु॒तस्य॑ नीहा॒रः।"
+        },
+        {
+          "id": "ta-1-10-58",
+          "chunkNumber": 58,
+          "sanskrit": "तौ तावे॒व प्रति॑पद्येते।"
+        },
+        {
+          "id": "ta-1-10-59",
+          "chunkNumber": 59,
+          "sanskrit": "सेयꣳ रात्री॑ ग॒र्भिणी॑ पु॒त्रेण॒ सम्वँ॑सति।"
+        },
+        {
+          "id": "ta-1-10-60",
+          "chunkNumber": 60,
+          "sanskrit": "तस्या॒ वा ए॒तदु॒ल्बणम्᳚।"
+        },
+        {
+          "id": "ta-1-10-61",
+          "chunkNumber": 61,
+          "sanskrit": "यद्रात्रौ॑ र॒श्मयः॑।"
+        },
+        {
+          "id": "ta-1-10-62",
+          "chunkNumber": 62,
+          "sanskrit": "यथा॒ गोर्ग॒र्भिण्या॑ उ॒ल्बणम्᳚।"
+        },
+        {
+          "id": "ta-1-10-63",
+          "chunkNumber": 63,
+          "sanskrit": "ए॒वमे॒तस्या॑ उ॒ल्बणम्᳚॥"
+        },
+        {
+          "id": "ta-1-10-64",
+          "chunkNumber": 64,
+          "sanskrit": "प्रजयिष्णुः प्रजया च पशुभि॑श्च भ॒वति।"
+        },
+        {
+          "id": "ta-1-10-65",
+          "chunkNumber": 65,
+          "sanskrit": "य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-10-66",
+          "chunkNumber": 66,
+          "sanskrit": "एतमुद्यन्तमपिय॑न्तञ्चे॒ति।"
+        },
+        {
+          "id": "ta-1-10-67",
+          "chunkNumber": 67,
+          "sanskrit": "आदित्यः पुण्य॑स्य व॒थ्सः।"
+        },
+        {
+          "id": "ta-1-10-68",
+          "chunkNumber": 68,
+          "sanskrit": "अथ पवि॑त्राङ्गि॒रसः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-11",
+      "title": "Prapāṭhaka 1 · Anuvāka 11",
+      "sectionNumber": 11,
+      "chunks": [
+        {
+          "id": "ta-1-11-1",
+          "chunkNumber": 1,
+          "sanskrit": "प॒वित्र॑वन्तः॒ परि॒वाज॒मास॑ते।",
+          "section": 11
+        },
+        {
+          "id": "ta-1-11-2",
+          "chunkNumber": 2,
+          "sanskrit": "पि॒तैषां᳚ प्र॒त्नो अ॒भिर॑ख्षति व्र॒तम्।"
+        },
+        {
+          "id": "ta-1-11-3",
+          "chunkNumber": 3,
+          "sanskrit": "म॒हस्स॑मु॒द्रव्ँवरु॑ण स्ति॒रोद॑धे।"
+        },
+        {
+          "id": "ta-1-11-4",
+          "chunkNumber": 4,
+          "sanskrit": "धीरा॑ इच्छेकु॒र्द्धरु॑णेष्वा॒रभं᳚।"
+        },
+        {
+          "id": "ta-1-11-5",
+          "chunkNumber": 5,
+          "sanskrit": "प॒वित्रं॑ ते॒ वित॑तं॒ ब्रह्म॑ण॒स्पते᳚।"
+        },
+        {
+          "id": "ta-1-11-6",
+          "chunkNumber": 6,
+          "sanskrit": "प्रभु॒र्गात्रा॑णि॒ पर्ये॑षि वि॒श्वतः॑।"
+        },
+        {
+          "id": "ta-1-11-7",
+          "chunkNumber": 7,
+          "sanskrit": "अत॑प्ततनू॒र् न तदा॒मो अ॑श्नुते।"
+        },
+        {
+          "id": "ta-1-11-8",
+          "chunkNumber": 8,
+          "sanskrit": "श्रृ॒तास॒ इद्वह॑न्त॒स्तथ्समा॑शत।"
+        },
+        {
+          "id": "ta-1-11-9",
+          "chunkNumber": 9,
+          "sanskrit": "ब्र॒ह्मा दे॒वानां᳚§1।"
+        },
+        {
+          "id": "ta-1-11-10",
+          "chunkNumber": 10,
+          "sanskrit": "अस॑तः स॒द्ये तत॑ख्षुः ऋष॑यः स॒प्तात्रि॑श्च॒ यत्।"
+        },
+        {
+          "id": "ta-1-11-11",
+          "chunkNumber": 11,
+          "sanskrit": "सर्वेऽत्रयो अ॑गस्त्य॒श्च।"
+        },
+        {
+          "id": "ta-1-11-12",
+          "chunkNumber": 12,
+          "sanskrit": "नख्ष॑त्रैः॒ शङ्कृ॑तो ऽवसन्न्।"
+        },
+        {
+          "id": "ta-1-11-13",
+          "chunkNumber": 13,
+          "sanskrit": "अथ॑ सवितुः॒ श्यावाश्व॒स्या ऽवर्त्ति॑कामस्य।"
+        },
+        {
+          "id": "ta-1-11-14",
+          "chunkNumber": 14,
+          "sanskrit": "अ॒मी य ऋख्षा॒ निहि॑ता स उ॒च्चा।"
+        },
+        {
+          "id": "ta-1-11-15",
+          "chunkNumber": 15,
+          "sanskrit": "नक्तं॒ ददृ॑श्रे॒ कुह॑चि॒द्दिवे॑युः।"
+        },
+        {
+          "id": "ta-1-11-16",
+          "chunkNumber": 16,
+          "sanskrit": "अद॑ब्धानि॒ वरु॑णस्य व्र॒तानि॑।"
+        },
+        {
+          "id": "ta-1-11-17",
+          "chunkNumber": 17,
+          "sanskrit": "वि॒चा॒कश॑च्च॒न्द्रमा॒ नख्ष॑त्रमेति।"
+        },
+        {
+          "id": "ta-1-11-18",
+          "chunkNumber": 18,
+          "sanskrit": "तथ्स॑वि॒तुर् वरे᳚ण्यम्।"
+        },
+        {
+          "id": "ta-1-11-19",
+          "chunkNumber": 19,
+          "sanskrit": "भर्गो॑ दे॒वस्य॑ धीमहि धियो॒ यो नः॑ प्रचो॒दया᳚त्।"
+        },
+        {
+          "id": "ta-1-11-20",
+          "chunkNumber": 20,
+          "sanskrit": "तथ्स॑वि॒तुर् वृ॑णीमहे।"
+        },
+        {
+          "id": "ta-1-11-21",
+          "chunkNumber": 21,
+          "sanskrit": "व॒यन्दे॒वस्य॒ भोज॑नम्।"
+        },
+        {
+          "id": "ta-1-11-22",
+          "chunkNumber": 22,
+          "sanskrit": "श्रेष्ठ॑ꣳ सर्व॒धात॑मम्।"
+        },
+        {
+          "id": "ta-1-11-23",
+          "chunkNumber": 23,
+          "sanskrit": "तुरंम्भग॑स्य धीमहि।"
+        },
+        {
+          "id": "ta-1-11-24",
+          "chunkNumber": 24,
+          "sanskrit": "अपा॑गूहत सविता॒ तृभी॑न्।"
+        },
+        {
+          "id": "ta-1-11-25",
+          "chunkNumber": 25,
+          "sanskrit": "सर्वा᳚न् दि॒वो अन्ध॑सः।"
+        },
+        {
+          "id": "ta-1-11-26",
+          "chunkNumber": 26,
+          "sanskrit": "नक्त॑तान्य॑भवन् दृ॒शे।"
+        },
+        {
+          "id": "ta-1-11-27",
+          "chunkNumber": 27,
+          "sanskrit": "अस्थ्य॒स्थ्ना संभ॑विष्यामः।"
+        },
+        {
+          "id": "ta-1-11-28",
+          "chunkNumber": 28,
+          "sanskrit": "नाम॒ नामै॒व ना॒म मे᳚ नपुꣳस॑कं॒ पुमा॒ꣴ॒स्त्र्य॑स्मि।"
+        },
+        {
+          "id": "ta-1-11-29",
+          "chunkNumber": 29,
+          "sanskrit": "स्थाव॑रोऽस्म्यथ॒ जङ्ग॑मः।"
+        },
+        {
+          "id": "ta-1-11-30",
+          "chunkNumber": 30,
+          "sanskrit": "य॒जेऽयख्षि॒ यष्टा॒हे च॑।"
+        },
+        {
+          "id": "ta-1-11-31",
+          "chunkNumber": 31,
+          "sanskrit": "मया॑ भू॒तान्य॑यख्षत।"
+        },
+        {
+          "id": "ta-1-11-32",
+          "chunkNumber": 32,
+          "sanskrit": "प॒शवो॑ मम॑ भूता॒नि।"
+        },
+        {
+          "id": "ta-1-11-33",
+          "chunkNumber": 33,
+          "sanskrit": "अनूबन्ध्यो ऽस्म्य॑हव्ँवि॒भुः।"
+        },
+        {
+          "id": "ta-1-11-34",
+          "chunkNumber": 34,
+          "sanskrit": "स्त्रियः॑ स॒तीः।"
+        },
+        {
+          "id": "ta-1-11-35",
+          "chunkNumber": 35,
+          "sanskrit": "ता उ॑ मे पु॒ꣳ॒स आ॑हुः।"
+        },
+        {
+          "id": "ta-1-11-36",
+          "chunkNumber": 36,
+          "sanskrit": "पश्य॑दख्ष॒ण्वान्नविचे॑तद॒न्धः।"
+        },
+        {
+          "id": "ta-1-11-37",
+          "chunkNumber": 37,
+          "sanskrit": "क॒विर्यः पु॒त्रः स इ॒मा चि॑केत यस्ता वि॑जा॒नाथ् स॑वि॒तुः पि॒ताऽस॑त्॥"
+        },
+        {
+          "id": "ta-1-11-38",
+          "chunkNumber": 38,
+          "sanskrit": "अ॒न्धो मणिम॑विन्दत्।"
+        },
+        {
+          "id": "ta-1-11-39",
+          "chunkNumber": 39,
+          "sanskrit": "तम॑नङ्गुलि॒राव॑यत्।"
+        },
+        {
+          "id": "ta-1-11-40",
+          "chunkNumber": 40,
+          "sanskrit": "अ॒ग्री॒वः प्रत्य॑मुञ्चत्।"
+        },
+        {
+          "id": "ta-1-11-41",
+          "chunkNumber": 41,
+          "sanskrit": "तमजि॑ह्व अ॒सश्च॑त।"
+        },
+        {
+          "id": "ta-1-11-42",
+          "chunkNumber": 42,
+          "sanskrit": "ऊद्र्ध्वमूलम॑वाक्छा॒खम्।"
+        },
+        {
+          "id": "ta-1-11-43",
+          "chunkNumber": 43,
+          "sanskrit": "वृ॒ख्षय्ँया॑ वेद॒ संप्र॑ति।"
+        },
+        {
+          "id": "ta-1-11-44",
+          "chunkNumber": 44,
+          "sanskrit": "न स जातु जनः॑ श्रद्द॒द्ध्यात्।"
+        },
+        {
+          "id": "ta-1-11-45",
+          "chunkNumber": 45,
+          "sanskrit": "मृ॒त्युर्मा॑ मार॒यादि॑तिः॥"
+        },
+        {
+          "id": "ta-1-11-46",
+          "chunkNumber": 46,
+          "sanskrit": "हसितꣳ रुदि॑तङ्गी॒तम् वीणा॑ पण व॒लासि॑तम्।"
+        },
+        {
+          "id": "ta-1-11-47",
+          "chunkNumber": 47,
+          "sanskrit": "मृ॒तञ्जी॒वञ्च॑ यत्कि॒ञ्चित्।"
+        },
+        {
+          "id": "ta-1-11-48",
+          "chunkNumber": 48,
+          "sanskrit": "अ॒ङ्गानि॑ स्नेव॒ विद्धि॑ तत्॥"
+        },
+        {
+          "id": "ta-1-11-49",
+          "chunkNumber": 49,
+          "sanskrit": "अतृ॑ष्य॒ꣴ॒स्तृष्य॑ ध्यायत्।"
+        },
+        {
+          "id": "ta-1-11-50",
+          "chunkNumber": 50,
+          "sanskrit": "अ॒स्माज्जा॒ता मे॑ मिथू॒ चर॑न्न्।"
+        },
+        {
+          "id": "ta-1-11-51",
+          "chunkNumber": 51,
+          "sanskrit": "पुत्रो निर्ऋत्या॑ वैदे॒हः।"
+        },
+        {
+          "id": "ta-1-11-52",
+          "chunkNumber": 52,
+          "sanskrit": "अ॒चेता॑ यश्च॒ चेत॑नः॥"
+        },
+        {
+          "id": "ta-1-11-53",
+          "chunkNumber": 53,
+          "sanskrit": "स॒ तं मणिम॑विन्दत्।"
+        },
+        {
+          "id": "ta-1-11-54",
+          "chunkNumber": 54,
+          "sanskrit": "सो॑ऽनङ्गुलि॒राव॑यत्।"
+        },
+        {
+          "id": "ta-1-11-55",
+          "chunkNumber": 55,
+          "sanskrit": "सो॒ऽग्री॒वः प्रत्य॑मुन्चत् सोऽजि॑ह्वो अ॒सश्च॑त॥"
+        },
+        {
+          "id": "ta-1-11-56",
+          "chunkNumber": 56,
+          "sanskrit": "नैतमृषिव्ँविदित्वा नग॑रं प्र॒विशेत्।"
+        },
+        {
+          "id": "ta-1-11-57",
+          "chunkNumber": 57,
+          "sanskrit": "य॑दि प्र॒विशेत्।"
+        },
+        {
+          "id": "ta-1-11-58",
+          "chunkNumber": 58,
+          "sanskrit": "मि॒थौ चरि॑त्वा प्र॒विशेत्।"
+        },
+        {
+          "id": "ta-1-11-59",
+          "chunkNumber": 59,
+          "sanskrit": "तथ्संभव॑स्य व्र॒तम्॥"
+        },
+        {
+          "id": "ta-1-11-60",
+          "chunkNumber": 60,
+          "sanskrit": "आ॒ तम॑ग्ने र॒थन्ति॑ष्ठ।"
+        },
+        {
+          "id": "ta-1-11-61",
+          "chunkNumber": 61,
+          "sanskrit": "एका᳚श्वमेक॒ योज॑नम्।"
+        },
+        {
+          "id": "ta-1-11-62",
+          "chunkNumber": 62,
+          "sanskrit": "एकचक्र॑मेक॒धुरम्।"
+        },
+        {
+          "id": "ta-1-11-63",
+          "chunkNumber": 63,
+          "sanskrit": "वा॒त ध्रा॑जि ग॒तिव्ँवि॑भो॥"
+        },
+        {
+          "id": "ta-1-11-64",
+          "chunkNumber": 64,
+          "sanskrit": "न॒ रि॒ष्यति॑ न व्य॒थते ना॒स्याख्षो॑ यातु॒ सज्ज॑ति।"
+        },
+        {
+          "id": "ta-1-11-65",
+          "chunkNumber": 65,
+          "sanskrit": "यच्छ्वेता᳚न् रोहि॑ताꣴश्चा॒ग्नेः।"
+        },
+        {
+          "id": "ta-1-11-66",
+          "chunkNumber": 66,
+          "sanskrit": "र॒थे यु॑क्त्वाऽधि॒तिष्ठ॑ति॥"
+        },
+        {
+          "id": "ta-1-11-67",
+          "chunkNumber": 67,
+          "sanskrit": "एकया च दशभिश्च॑ स्वभू॒ते।"
+        },
+        {
+          "id": "ta-1-11-68",
+          "chunkNumber": 68,
+          "sanskrit": "द्वाभ्या मिष्टये वि॑ꣳशत्या॒ च।"
+        },
+        {
+          "id": "ta-1-11-69",
+          "chunkNumber": 69,
+          "sanskrit": "तिसृभिश्च वहसे त्रि॑ꣳशता॒ च।"
+        },
+        {
+          "id": "ta-1-11-70",
+          "chunkNumber": 70,
+          "sanskrit": "नियुद्भिर्वायविह ता॑ विमु॒ञ्च"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-12",
+      "title": "Prapāṭhaka 1 · Anuvāka 12",
+      "sectionNumber": 12,
+      "chunks": [
+        {
+          "id": "ta-1-12-1",
+          "chunkNumber": 1,
+          "sanskrit": "आत॑नुष्व॒ प्रत॑नुष्व।",
+          "section": 12
+        },
+        {
+          "id": "ta-1-12-2",
+          "chunkNumber": 2,
+          "sanskrit": "उ॒द्धमाध॑म॒ सन्ध॑म।"
+        },
+        {
+          "id": "ta-1-12-3",
+          "chunkNumber": 3,
+          "sanskrit": "आदित्ये चन्द्र॑वर्णा॒नाम्।"
+        },
+        {
+          "id": "ta-1-12-4",
+          "chunkNumber": 4,
+          "sanskrit": "गर्भ॒ मा धे॑हि॒ यः पुमा॑न्॥"
+        },
+        {
+          "id": "ta-1-12-5",
+          "chunkNumber": 5,
+          "sanskrit": "इ॒तः सि॒क्तꣳ सूर्य॑गतम्।"
+        },
+        {
+          "id": "ta-1-12-6",
+          "chunkNumber": 6,
+          "sanskrit": "च॒न्द्रम॑से॒ रस॑ङ्कृधि।"
+        },
+        {
+          "id": "ta-1-12-7",
+          "chunkNumber": 7,
+          "sanskrit": "वारादं जन॑याग्रे॒ऽग्निम्।"
+        },
+        {
+          "id": "ta-1-12-8",
+          "chunkNumber": 8,
+          "sanskrit": "य एको॑ रुद्र॒ उच्य॑ते॥"
+        },
+        {
+          "id": "ta-1-12-9",
+          "chunkNumber": 9,
+          "sanskrit": "अ॒सं॒ ख्या॒ताः स॑हस्रा॒णि।"
+        },
+        {
+          "id": "ta-1-12-10",
+          "chunkNumber": 10,
+          "sanskrit": "स्म॒र्यते॑ न च॒ दृश्य॑ते ए॒वमे॒तन्नि॑बोधत॥"
+        },
+        {
+          "id": "ta-1-12-11",
+          "chunkNumber": 11,
+          "sanskrit": "आ म॒न्द्रैरि॑न्द्र॒ हरि॑भिः।"
+        },
+        {
+          "id": "ta-1-12-12",
+          "chunkNumber": 12,
+          "sanskrit": "या॒ हि म॒यूर॑रोमभिः।"
+        },
+        {
+          "id": "ta-1-12-13",
+          "chunkNumber": 13,
+          "sanskrit": "मात्वा केचिन्निये मुरि॑न्न पा॒शिनः।"
+        },
+        {
+          "id": "ta-1-12-14",
+          "chunkNumber": 14,
+          "sanskrit": "द॒ध॒न्वेव॒ ता इ॑हि॥"
+        },
+        {
+          "id": "ta-1-12-15",
+          "chunkNumber": 15,
+          "sanskrit": "मा म॒न्द्रैरि॑न्द्र॒ हरि॑भिः।"
+        },
+        {
+          "id": "ta-1-12-16",
+          "chunkNumber": 16,
+          "sanskrit": "या॒मि म॒यूर॑ रोमभिः।"
+        },
+        {
+          "id": "ta-1-12-17",
+          "chunkNumber": 17,
+          "sanskrit": "मा मा केचिन्निये मुरि॑न्न पा॒शिनः।"
+        },
+        {
+          "id": "ta-1-12-18",
+          "chunkNumber": 18,
+          "sanskrit": "नि॒ध॒न्वेव॒ ता(२) इँ॑मि॥"
+        },
+        {
+          "id": "ta-1-12-19",
+          "chunkNumber": 19,
+          "sanskrit": "अणुभिश्च म॑हद्भि॒श्च नि॒घृष्वै॑ रस॒मायु॑तैः।"
+        },
+        {
+          "id": "ta-1-12-20",
+          "chunkNumber": 20,
+          "sanskrit": "कालैर्हरित्व॑माप॒न्नैः।"
+        },
+        {
+          "id": "ta-1-12-21",
+          "chunkNumber": 21,
+          "sanskrit": "इन्द्राया॑हि स॒हस्र॑ युक्॥"
+        },
+        {
+          "id": "ta-1-12-22",
+          "chunkNumber": 22,
+          "sanskrit": "अ॒ग्निर् वि॒भ्राष्टि॑ वसनः।"
+        },
+        {
+          "id": "ta-1-12-23",
+          "chunkNumber": 23,
+          "sanskrit": "वा॒युः श्वेत॑सिकद्रु॒कः।"
+        },
+        {
+          "id": "ta-1-12-24",
+          "chunkNumber": 24,
+          "sanskrit": "स॒व्ँव॒थ्स॒रो वि॑षू॒ वर्णैः᳚।"
+        },
+        {
+          "id": "ta-1-12-25",
+          "chunkNumber": 25,
+          "sanskrit": "नित्या॒स्ते ऽनुच॑रास्त॒व॥"
+        },
+        {
+          "id": "ta-1-12-26",
+          "chunkNumber": 26,
+          "sanskrit": "सुब्रह्मण्योꣳ सुब्रह्मण्योꣳ सु॑ब्रह्म॒ण्योम्।"
+        },
+        {
+          "id": "ta-1-12-27",
+          "chunkNumber": 27,
+          "sanskrit": "इन्द्रागच्छ हरिव आगच्छ मे॑धाति॒थेः।"
+        },
+        {
+          "id": "ta-1-12-28",
+          "chunkNumber": 28,
+          "sanskrit": "मेष वृषणश्व॑स्य मे॒ने गौरावस्कन्दिन्नहल्या॑यै जा॒र।"
+        },
+        {
+          "id": "ta-1-12-29",
+          "chunkNumber": 29,
+          "sanskrit": "कौशिकब्राह्मण गौतम॑ब्रुवा॒ण॥"
+        },
+        {
+          "id": "ta-1-12-30",
+          "chunkNumber": 30,
+          "sanskrit": "अ॒रु॒णाश्वा॑ इ॒हाग॑ताः।"
+        },
+        {
+          "id": "ta-1-12-31",
+          "chunkNumber": 31,
+          "sanskrit": "वस॑वः पृथिवि॒ ख्षितः॑।"
+        },
+        {
+          "id": "ta-1-12-32",
+          "chunkNumber": 32,
+          "sanskrit": "अ॒ष्टौ दि॒ग्वास॑सो॒ ऽग्नयः॑।"
+        },
+        {
+          "id": "ta-1-12-33",
+          "chunkNumber": 33,
+          "sanskrit": "अग्निश्च जातवेदा᳚श्चेत्ये॒ते॥"
+        },
+        {
+          "id": "ta-1-12-34",
+          "chunkNumber": 34,
+          "sanskrit": "ताम्राश्वा᳚स्ताम्र॒रथाः।"
+        },
+        {
+          "id": "ta-1-12-35",
+          "chunkNumber": 35,
+          "sanskrit": "ताम्रवर्णा᳚ स्तथा॒ऽसिताः।"
+        },
+        {
+          "id": "ta-1-12-36",
+          "chunkNumber": 36,
+          "sanskrit": "दण्डहस्ताः᳚ खाद॒ग्दतः।"
+        },
+        {
+          "id": "ta-1-12-37",
+          "chunkNumber": 37,
+          "sanskrit": "इतो रुद्राः᳚ परा॒ङ्गताः उक्तꣴ स्थानं प्रमाणञ्च॑ पुर॒ इत॥"
+        },
+        {
+          "id": "ta-1-12-38",
+          "chunkNumber": 38,
+          "sanskrit": "बृह॒स्पति॑श्च सवि॒ता च॑।"
+        },
+        {
+          "id": "ta-1-12-39",
+          "chunkNumber": 39,
+          "sanskrit": "वि॒श्वरू॑पैरि॒हाग॑ताम्।"
+        },
+        {
+          "id": "ta-1-12-40",
+          "chunkNumber": 40,
+          "sanskrit": "रथे॑नोदक॒वर्त्म॑ना।"
+        },
+        {
+          "id": "ta-1-12-41",
+          "chunkNumber": 41,
+          "sanskrit": "अ॒फ्सुषा॑ इति॒ तद्द्व॑योः॥"
+        },
+        {
+          "id": "ta-1-12-42",
+          "chunkNumber": 42,
+          "sanskrit": "उक्तो वेषो॑ वासा॒ꣳ॒सि च।"
+        },
+        {
+          "id": "ta-1-12-43",
+          "chunkNumber": 43,
+          "sanskrit": "कालावयवानामितः॑ प्रती॒ज्या।"
+        },
+        {
+          "id": "ta-1-12-44",
+          "chunkNumber": 44,
+          "sanskrit": "वासात्या॑ इत्य॒श्विनोः।"
+        },
+        {
+          "id": "ta-1-12-45",
+          "chunkNumber": 45,
+          "sanskrit": "कोऽन्तरिख्षे शब्दङ्क॑रोती॒ति।"
+        },
+        {
+          "id": "ta-1-12-46",
+          "chunkNumber": 46,
+          "sanskrit": "वासिष्ठो रौहिणो मीमा॑ꣳसां च॒क्रे।"
+        },
+        {
+          "id": "ta-1-12-47",
+          "chunkNumber": 47,
+          "sanskrit": "तस्यै॒षा भव॑ति॥"
+        },
+        {
+          "id": "ta-1-12-48",
+          "chunkNumber": 48,
+          "sanskrit": "वा॒श्रेव॑ वि॒द्यु§2 दिति॑॥"
+        },
+        {
+          "id": "ta-1-12-49",
+          "chunkNumber": 49,
+          "sanskrit": "ब्रह्म॑ण उ॒दर॑णमसि।"
+        },
+        {
+          "id": "ta-1-12-50",
+          "chunkNumber": 50,
+          "sanskrit": "ब्रह्म॑ण उदी॒रण॑मसि।"
+        },
+        {
+          "id": "ta-1-12-51",
+          "chunkNumber": 51,
+          "sanskrit": "ब्रह्म॑ण आ॒स्तर॑णमसि।"
+        },
+        {
+          "id": "ta-1-12-52",
+          "chunkNumber": 52,
+          "sanskrit": "ब्रह्म॑ण उप॒स्तर॑णमसि"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-13",
+      "title": "Prapāṭhaka 1 · Anuvāka 13",
+      "sectionNumber": 13,
+      "chunks": [
+        {
+          "id": "ta-1-13-1",
+          "chunkNumber": 1,
+          "sanskrit": "अ॒ष्टयो॑नीम॒ष्टपु॑त्राम्।",
+          "section": 13
+        },
+        {
+          "id": "ta-1-13-2",
+          "chunkNumber": 2,
+          "sanskrit": "अ॒ष्टप॑त्नीमि॒मां मही᳚म्।"
+        },
+        {
+          "id": "ta-1-13-3",
+          "chunkNumber": 3,
+          "sanskrit": "अ॒हव्ँवेद॒ न मे॑ मृत्युः।"
+        },
+        {
+          "id": "ta-1-13-4",
+          "chunkNumber": 4,
+          "sanskrit": "न चामृ॑त्युर॒घाह॑रत्॥"
+        },
+        {
+          "id": "ta-1-13-5",
+          "chunkNumber": 5,
+          "sanskrit": "अ॒ष्टयो᳚न्य॒ष्ट पु॑त्रम्।"
+        },
+        {
+          "id": "ta-1-13-6",
+          "chunkNumber": 6,
+          "sanskrit": "अ॒ष्टप॑दि॒दम॒न्तरि॑ख्षम्।"
+        },
+        {
+          "id": "ta-1-13-7",
+          "chunkNumber": 7,
+          "sanskrit": "अ॒हव्ँवेद॒ न मे॑ मृत्युः।"
+        },
+        {
+          "id": "ta-1-13-8",
+          "chunkNumber": 8,
+          "sanskrit": "न चामृ॑त्युर॒घाह॑रत्।"
+        },
+        {
+          "id": "ta-1-13-9",
+          "chunkNumber": 9,
+          "sanskrit": "अ॒ष्टयो॑नीम॒ष्टपु॑त्राम्।"
+        },
+        {
+          "id": "ta-1-13-10",
+          "chunkNumber": 10,
+          "sanskrit": "अ॒ष्टप॑त्नीम॒मून्दिव᳚म् अ॒हव्ँवेद॒ न मे॑ मृत्युः।"
+        },
+        {
+          "id": "ta-1-13-11",
+          "chunkNumber": 11,
+          "sanskrit": "न चामृ॑त्युर॒घाह॑रत्॥"
+        },
+        {
+          "id": "ta-1-13-12",
+          "chunkNumber": 12,
+          "sanskrit": "सु॒त्रामा॑णं§3 म॒हीमू॒षु §4॥"
+        },
+        {
+          "id": "ta-1-13-13",
+          "chunkNumber": 13,
+          "sanskrit": "अदि॑ति॒र्द्यौरदि॑तिर॒न्तरि॑ख्षम्।"
+        },
+        {
+          "id": "ta-1-13-14",
+          "chunkNumber": 14,
+          "sanskrit": "अदि॑तिर्मा॒ता स पि॒ता स पु॒त्रः।"
+        },
+        {
+          "id": "ta-1-13-15",
+          "chunkNumber": 15,
+          "sanskrit": "विश्वे॑ दे॒वा अदि॑तिः॒ पञ्च॒ जनाः᳚।"
+        },
+        {
+          "id": "ta-1-13-16",
+          "chunkNumber": 16,
+          "sanskrit": "अदि॑तिर्जा॒तमदि॑ति॒र्जनि॑त्वम्॥"
+        },
+        {
+          "id": "ta-1-13-17",
+          "chunkNumber": 17,
+          "sanskrit": "अ॒ष्टौ पु॒त्रासो॒ अदि॑तेः।"
+        },
+        {
+          "id": "ta-1-13-18",
+          "chunkNumber": 18,
+          "sanskrit": "ये जा॒ता स्त॒न्वः॑ परि॑।"
+        },
+        {
+          "id": "ta-1-13-19",
+          "chunkNumber": 19,
+          "sanskrit": "दे॒वा (२) उँप॑प्रैथ् स॒प्तभिः॑ प॒रा॒ मा॒र्ता॒ण्डमास्य॑त्॥"
+        },
+        {
+          "id": "ta-1-13-20",
+          "chunkNumber": 20,
+          "sanskrit": "स॒प्तभिः॑ पु॒त्रैरदि॑तिः।"
+        },
+        {
+          "id": "ta-1-13-21",
+          "chunkNumber": 21,
+          "sanskrit": "उप॒ प्रैत् पू॒र्व्य॑य्ँयुग᳚म्।"
+        },
+        {
+          "id": "ta-1-13-22",
+          "chunkNumber": 22,
+          "sanskrit": "प्र॒जायै॑ मृ॒त्यवे त॑त्।"
+        },
+        {
+          "id": "ta-1-13-23",
+          "chunkNumber": 23,
+          "sanskrit": "प॒रा॒ मा॒र्ता॒ण्डमाभ॑र॒दिति॑॥"
+        },
+        {
+          "id": "ta-1-13-24",
+          "chunkNumber": 24,
+          "sanskrit": "ताननुक्र॑मिष्या॒मः॥"
+        },
+        {
+          "id": "ta-1-13-25",
+          "chunkNumber": 25,
+          "sanskrit": "मि॒त्रश्च॒ वरु॑णश्च।"
+        },
+        {
+          "id": "ta-1-13-26",
+          "chunkNumber": 26,
+          "sanskrit": "धा॒ता चा᳚र्य॒मा च॑।"
+        },
+        {
+          "id": "ta-1-13-27",
+          "chunkNumber": 27,
+          "sanskrit": "अꣳश॑श्च॒ भग॑श्च।"
+        },
+        {
+          "id": "ta-1-13-28",
+          "chunkNumber": 28,
+          "sanskrit": "इन्द्रश्च विवस्वा॑ꣴश्चेत्ये॒ते॥"
+        },
+        {
+          "id": "ta-1-13-29",
+          "chunkNumber": 29,
+          "sanskrit": "हि॒र॒ण्य॒ग॒र्भो§5 ह॒ꣳ॒सःशु॑चि॒षत्§6।"
+        },
+        {
+          "id": "ta-1-13-30",
+          "chunkNumber": 30,
+          "sanskrit": "ब्रह्म॑ जज्ञा॒नं§7 तदित्प॒द§8 मिति॑॥"
+        },
+        {
+          "id": "ta-1-13-31",
+          "chunkNumber": 31,
+          "sanskrit": "ग॒र्भः प्रा॑जाप॒त्यः।"
+        },
+        {
+          "id": "ta-1-13-32",
+          "chunkNumber": 32,
+          "sanskrit": "अथ॒ पुरु॑षः स॒प्तपुरु॑षः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-14",
+      "title": "Prapāṭhaka 1 · Anuvāka 14",
+      "sectionNumber": 14,
+      "chunks": [
+        {
+          "id": "ta-1-14-1",
+          "chunkNumber": 1,
+          "sanskrit": "योऽसौ॑ त॒पन्नु॒देति॑।",
+          "section": 14
+        },
+        {
+          "id": "ta-1-14-2",
+          "chunkNumber": 2,
+          "sanskrit": "स सर्वे॑षां भू॒तानां᳚ प्रा॒णाना॒दायो॒देति॑।"
+        },
+        {
+          "id": "ta-1-14-3",
+          "chunkNumber": 3,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-4",
+          "chunkNumber": 4,
+          "sanskrit": "मा मम॑ प्रा॒णाना॒दायोद॑गाः॥"
+        },
+        {
+          "id": "ta-1-14-5",
+          "chunkNumber": 5,
+          "sanskrit": "अ॒सौ यो᳚ ऽस्त॒मेति॑।"
+        },
+        {
+          "id": "ta-1-14-6",
+          "chunkNumber": 6,
+          "sanskrit": "स सर्वे॑षां भू॒तानां᳚ प्रा॒णाना॒दाया॒स्तमेति॑।"
+        },
+        {
+          "id": "ta-1-14-7",
+          "chunkNumber": 7,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-8",
+          "chunkNumber": 8,
+          "sanskrit": "मा मम॑ प्रा॒णाना॒दाया स्त॑ङ्गाः॥"
+        },
+        {
+          "id": "ta-1-14-9",
+          "chunkNumber": 9,
+          "sanskrit": "अ॒सौ य आ॒पूर्य॑ति।"
+        },
+        {
+          "id": "ta-1-14-10",
+          "chunkNumber": 10,
+          "sanskrit": "स सर्वे॑षां भू॒तानां᳚ प्रा॒णै रा॒पूर्य॑ति मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-11",
+          "chunkNumber": 11,
+          "sanskrit": "मा मम॑ प्रा॒णैरा॒पूरि॑ष्ठाः॥"
+        },
+        {
+          "id": "ta-1-14-12",
+          "chunkNumber": 12,
+          "sanskrit": "अ॒सौ यो॑ऽप॒ख्षीय॑ति।"
+        },
+        {
+          "id": "ta-1-14-13",
+          "chunkNumber": 13,
+          "sanskrit": "स सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ख्षीयति।"
+        },
+        {
+          "id": "ta-1-14-14",
+          "chunkNumber": 14,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-15",
+          "chunkNumber": 15,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ख्षेष्ठाः॥"
+        },
+        {
+          "id": "ta-1-14-16",
+          "chunkNumber": 16,
+          "sanskrit": "अ॒मूनि॒ नख्ष॑त्राणि।"
+        },
+        {
+          "id": "ta-1-14-17",
+          "chunkNumber": 17,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पन्ति॒ चोथ्स॑र्पन्ति च।"
+        },
+        {
+          "id": "ta-1-14-18",
+          "chunkNumber": 18,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-19",
+          "chunkNumber": 19,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृपत॒ मोथ्सृ॑पत इ॒मे मासा᳚श्चाद्र्धमा॒साश्च॑।"
+        },
+        {
+          "id": "ta-1-14-20",
+          "chunkNumber": 20,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पन्ति॒ चोथ्स॑र्पन्ति च।"
+        },
+        {
+          "id": "ta-1-14-21",
+          "chunkNumber": 21,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-22",
+          "chunkNumber": 22,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृपत॒ मोथ्सृ॑पत।"
+        },
+        {
+          "id": "ta-1-14-23",
+          "chunkNumber": 23,
+          "sanskrit": "इ॒म ऋ॒तवः॑।"
+        },
+        {
+          "id": "ta-1-14-24",
+          "chunkNumber": 24,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पन्ति॒ चोथ्स॑र्पन्ति च।"
+        },
+        {
+          "id": "ta-1-14-25",
+          "chunkNumber": 25,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-26",
+          "chunkNumber": 26,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृपत॒ मोथ्सृ॑पत॥"
+        },
+        {
+          "id": "ta-1-14-27",
+          "chunkNumber": 27,
+          "sanskrit": "अ॒यꣳ स॑व्ँवथ्स॒रः।"
+        },
+        {
+          "id": "ta-1-14-28",
+          "chunkNumber": 28,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पति॒ चोथ्स॑र्पति च मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-29",
+          "chunkNumber": 29,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृप॒ मोथ्सृ॑प॥"
+        },
+        {
+          "id": "ta-1-14-30",
+          "chunkNumber": 30,
+          "sanskrit": "इ॒दमहः॑।"
+        },
+        {
+          "id": "ta-1-14-31",
+          "chunkNumber": 31,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पति॒ चोथ्स॑र्पति च।"
+        },
+        {
+          "id": "ta-1-14-32",
+          "chunkNumber": 32,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-33",
+          "chunkNumber": 33,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृप॒ मोथ्सृ॑प।"
+        },
+        {
+          "id": "ta-1-14-34",
+          "chunkNumber": 34,
+          "sanskrit": "इ॒यꣳ रात्रिः॑।"
+        },
+        {
+          "id": "ta-1-14-35",
+          "chunkNumber": 35,
+          "sanskrit": "सर्वे॑षां भू॒तानां᳚ प्रा॒णैरप॑ प्रसर्पति॒ चोथ्स॑र्पति च।"
+        },
+        {
+          "id": "ta-1-14-36",
+          "chunkNumber": 36,
+          "sanskrit": "मा मे᳚ प्र॒जाया॒ मा प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-14-37",
+          "chunkNumber": 37,
+          "sanskrit": "मा मम॑ प्रा॒णैरप॑ प्रसृप॒ मोथ्सृ॑प॥"
+        },
+        {
+          "id": "ta-1-14-38",
+          "chunkNumber": 38,
+          "sanskrit": "औम् भूर्भुव॒स्स्वः॑॥"
+        },
+        {
+          "id": "ta-1-14-39",
+          "chunkNumber": 39,
+          "sanskrit": "एतद्वो मिथुनं मा नो मिथु॑नꣳ री॒ढ्वम्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-15",
+      "title": "Prapāṭhaka 1 · Anuvāka 15",
+      "sectionNumber": 15,
+      "chunks": [
+        {
+          "id": "ta-1-15-1",
+          "chunkNumber": 1,
+          "sanskrit": "अथादित्यस्याष्ट पु॑रुष॒स्य॥",
+          "section": 15
+        },
+        {
+          "id": "ta-1-15-2",
+          "chunkNumber": 2,
+          "sanskrit": "वसूना मादित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-3",
+          "chunkNumber": 3,
+          "sanskrit": "रुद्राणामादित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-4",
+          "chunkNumber": 4,
+          "sanskrit": "आदित्यानामादित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-5",
+          "chunkNumber": 5,
+          "sanskrit": "सता॑ꣳसत्या॒नाम्।"
+        },
+        {
+          "id": "ta-1-15-6",
+          "chunkNumber": 6,
+          "sanskrit": "आदित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-7",
+          "chunkNumber": 7,
+          "sanskrit": "अभिधून्वता॑मभि॒घ्नताम्।"
+        },
+        {
+          "id": "ta-1-15-8",
+          "chunkNumber": 8,
+          "sanskrit": "वातव॑तां म॒रुताम्।"
+        },
+        {
+          "id": "ta-1-15-9",
+          "chunkNumber": 9,
+          "sanskrit": "आदित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-10",
+          "chunkNumber": 10,
+          "sanskrit": "ऋभूणामादित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-11",
+          "chunkNumber": 11,
+          "sanskrit": "विश्वेषां᳚ देवा॒नाम्।"
+        },
+        {
+          "id": "ta-1-15-12",
+          "chunkNumber": 12,
+          "sanskrit": "आदित्यानाꣴ स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-13",
+          "chunkNumber": 13,
+          "sanskrit": "सव्ँवथ्सर॑स्य स॒वितुः।"
+        },
+        {
+          "id": "ta-1-15-14",
+          "chunkNumber": 14,
+          "sanskrit": "आदित्यस्य स्थाने स्वतेज॑सा भा॒नि॥"
+        },
+        {
+          "id": "ta-1-15-15",
+          "chunkNumber": 15,
+          "sanskrit": "औम् भूर्भुव॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-15-16",
+          "chunkNumber": 16,
+          "sanskrit": "रश्मयो वो मिथुनं मा नो मिथु॑नꣳ री॒ढ्वम्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-16",
+      "title": "Prapāṭhaka 1 · Anuvāka 16",
+      "sectionNumber": 16,
+      "chunks": [
+        {
+          "id": "ta-1-16-1",
+          "chunkNumber": 1,
+          "sanskrit": "आरोगस्य स्थाने स्वतेज॑सा भा॒नि।",
+          "section": 16
+        },
+        {
+          "id": "ta-1-16-2",
+          "chunkNumber": 2,
+          "sanskrit": "भ्राजस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-3",
+          "chunkNumber": 3,
+          "sanskrit": "पटरस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-4",
+          "chunkNumber": 4,
+          "sanskrit": "पतङ्गस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-5",
+          "chunkNumber": 5,
+          "sanskrit": "स्वर्णरस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-6",
+          "chunkNumber": 6,
+          "sanskrit": "ज्योतिषीमतस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-7",
+          "chunkNumber": 7,
+          "sanskrit": "विभासस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-8",
+          "chunkNumber": 8,
+          "sanskrit": "कश्यपस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-16-9",
+          "chunkNumber": 9,
+          "sanskrit": "औम् भूर्भुव॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-16-10",
+          "chunkNumber": 10,
+          "sanskrit": "आपो वो मिथुनं मा नो मिथु॑नꣳ री॒ढ्वम्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-17",
+      "title": "Prapāṭhaka 1 · Anuvāka 17",
+      "sectionNumber": 17,
+      "chunks": [
+        {
+          "id": "ta-1-17-1",
+          "chunkNumber": 1,
+          "sanskrit": "अथ वायोरेकादशपुरुषस्यैकादश॑स्त्रीक॒स्य॥",
+          "section": 17
+        },
+        {
+          "id": "ta-1-17-2",
+          "chunkNumber": 2,
+          "sanskrit": "प्रभ्राजमानानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-3",
+          "chunkNumber": 3,
+          "sanskrit": "व्यवदातानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-4",
+          "chunkNumber": 4,
+          "sanskrit": "वासुकिवैद्युतानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-5",
+          "chunkNumber": 5,
+          "sanskrit": "रजतानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-6",
+          "chunkNumber": 6,
+          "sanskrit": "परुषाणाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-7",
+          "chunkNumber": 7,
+          "sanskrit": "श्यामानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-8",
+          "chunkNumber": 8,
+          "sanskrit": "कपिलानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-9",
+          "chunkNumber": 9,
+          "sanskrit": "अतिलोहितानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-10",
+          "chunkNumber": 10,
+          "sanskrit": "ऊद्र्ध्वानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि अवपतन्तानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-11",
+          "chunkNumber": 11,
+          "sanskrit": "वैद्युतानाꣳ रुद्राणाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-12",
+          "chunkNumber": 12,
+          "sanskrit": "प्रभ्राजमानीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-13",
+          "chunkNumber": 13,
+          "sanskrit": "व्यवदातीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-14",
+          "chunkNumber": 14,
+          "sanskrit": "वासुकिवैद्युतीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-15",
+          "chunkNumber": 15,
+          "sanskrit": "रजतानाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-16",
+          "chunkNumber": 16,
+          "sanskrit": "परुषाणाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-17",
+          "chunkNumber": 17,
+          "sanskrit": "श्यामानाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-18",
+          "chunkNumber": 18,
+          "sanskrit": "कपिलानाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-19",
+          "chunkNumber": 19,
+          "sanskrit": "अतिलोहितीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-20",
+          "chunkNumber": 20,
+          "sanskrit": "ऊद्र्ध्वानाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-21",
+          "chunkNumber": 21,
+          "sanskrit": "अवपतन्तीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-22",
+          "chunkNumber": 22,
+          "sanskrit": "वैद्युतीनाꣳ रुद्राणीनाꣴ स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-17-23",
+          "chunkNumber": 23,
+          "sanskrit": "औम् भूर्भुव॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-17-24",
+          "chunkNumber": 24,
+          "sanskrit": "रूपाणि वो मिथुनं मा नो मिथु॑नꣳ री॒ढ्वम्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-18",
+      "title": "Prapāṭhaka 1 · Anuvāka 18",
+      "sectionNumber": 18,
+      "chunks": [
+        {
+          "id": "ta-1-18-1",
+          "chunkNumber": 1,
+          "sanskrit": "अथाग्ने॑रष्ट पु॑रुष॒स्य॥",
+          "section": 18
+        },
+        {
+          "id": "ta-1-18-2",
+          "chunkNumber": 2,
+          "sanskrit": "अग्नेः पूर्वदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-3",
+          "chunkNumber": 3,
+          "sanskrit": "जातवेदस उपदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-4",
+          "chunkNumber": 4,
+          "sanskrit": "सहोजसो दख्षिणदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-5",
+          "chunkNumber": 5,
+          "sanskrit": "अजिराप्रभव उपदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-6",
+          "chunkNumber": 6,
+          "sanskrit": "वैश्वानरस्यापरदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-7",
+          "chunkNumber": 7,
+          "sanskrit": "नर्यापस उपदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-8",
+          "chunkNumber": 8,
+          "sanskrit": "पङ्क्तिराधस उदग्दिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-9",
+          "chunkNumber": 9,
+          "sanskrit": "विसर्पिण उपदिश्यस्य स्थाने स्वतेज॑सा भा॒नि।"
+        },
+        {
+          "id": "ta-1-18-10",
+          "chunkNumber": 10,
+          "sanskrit": "औम् भूर्भुव॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-18-11",
+          "chunkNumber": 11,
+          "sanskrit": "दिशो वो मिथुनं मा नो मिथु॑नꣳ री॒ढ्वम्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-19",
+      "title": "Prapāṭhaka 1 · Anuvāka 19",
+      "sectionNumber": 19,
+      "chunks": [
+        {
+          "id": "ta-1-19-1",
+          "chunkNumber": 1,
+          "sanskrit": "दख्षिणपूर्वस्यान्दिशि विस॑र्पी न॒रकः।",
+          "section": 19
+        },
+        {
+          "id": "ta-1-19-2",
+          "chunkNumber": 2,
+          "sanskrit": "तस्मान्नः प॑रिपा॒हि॥"
+        },
+        {
+          "id": "ta-1-19-3",
+          "chunkNumber": 3,
+          "sanskrit": "दख्षिणापरस्यान्दिश्य विस॑र्पी न॒रकः।"
+        },
+        {
+          "id": "ta-1-19-4",
+          "chunkNumber": 4,
+          "sanskrit": "तस्मान्नः प॑रिपा॒हि॥"
+        },
+        {
+          "id": "ta-1-19-5",
+          "chunkNumber": 5,
+          "sanskrit": "उत्तरपूर्वस्यान्दिशि विषा॑दी न॒रकः।"
+        },
+        {
+          "id": "ta-1-19-6",
+          "chunkNumber": 6,
+          "sanskrit": "तस्मान्नः प॑रिपा॒हि॥"
+        },
+        {
+          "id": "ta-1-19-7",
+          "chunkNumber": 7,
+          "sanskrit": "उत्तरापरस्यान्दिश्य विषा॑दी न॒रकः।"
+        },
+        {
+          "id": "ta-1-19-8",
+          "chunkNumber": 8,
+          "sanskrit": "तस्मान्नः प॑रिपा॒हि॥"
+        },
+        {
+          "id": "ta-1-19-9",
+          "chunkNumber": 9,
+          "sanskrit": "आ यस्मिन्थ्सप्त वासवा§9 इन्द्रियाणि शतक्रत॑§10 वित्ये॒ते"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-20",
+      "title": "Prapāṭhaka 1 · Anuvāka 20",
+      "sectionNumber": 20,
+      "chunks": [
+        {
+          "id": "ta-1-20-1",
+          "chunkNumber": 1,
+          "sanskrit": "इ॒न्द्र॒ घो॒षा वो॒ वसु॑भिः पु॒रस्ता॒दुप॑दधताम्।",
+          "section": 20
+        },
+        {
+          "id": "ta-1-20-2",
+          "chunkNumber": 2,
+          "sanskrit": "मनो॑जवसो वः पि॒तृभि॑र् दख्षिण॒त उप॑दधताम्।"
+        },
+        {
+          "id": "ta-1-20-3",
+          "chunkNumber": 3,
+          "sanskrit": "प्रचे॑ता वो रु॒द्रैः प॒श्चादुप॑दधताम्।"
+        },
+        {
+          "id": "ta-1-20-4",
+          "chunkNumber": 4,
+          "sanskrit": "वि॒श्वक॑र्मा व आदि॒त्यैरु॑त्तर॒त उप॑दधताम्।"
+        },
+        {
+          "id": "ta-1-20-5",
+          "chunkNumber": 5,
+          "sanskrit": "त्वष्टा॑ वो रू॒पैरु॒परि॑ष्टा॒दुप॑दधताम्।"
+        },
+        {
+          "id": "ta-1-20-6",
+          "chunkNumber": 6,
+          "sanskrit": "संज्ञानव्ँवः प॑श्चादि॒ति॥"
+        },
+        {
+          "id": "ta-1-20-7",
+          "chunkNumber": 7,
+          "sanskrit": "आ॒दि॒त्यः सर्वो॒ऽग्निः पृ॑थि॒व्याम्।"
+        },
+        {
+          "id": "ta-1-20-8",
+          "chunkNumber": 8,
+          "sanskrit": "वा॒युर॒न्तरि॑ख्षे।"
+        },
+        {
+          "id": "ta-1-20-9",
+          "chunkNumber": 9,
+          "sanskrit": "सूर्यो॑ दि॒वि।"
+        },
+        {
+          "id": "ta-1-20-10",
+          "chunkNumber": 10,
+          "sanskrit": "च॒न्द्रमा॑ दि॒ख्षु।"
+        },
+        {
+          "id": "ta-1-20-11",
+          "chunkNumber": 11,
+          "sanskrit": "नख्ष॑त्राणि॒ स्वलो॒के॥"
+        },
+        {
+          "id": "ta-1-20-12",
+          "chunkNumber": 12,
+          "sanskrit": "ए॒वा ह्ये॑व।"
+        },
+        {
+          "id": "ta-1-20-13",
+          "chunkNumber": 13,
+          "sanskrit": "ए॒वा ह्य॑ग्ने।"
+        },
+        {
+          "id": "ta-1-20-14",
+          "chunkNumber": 14,
+          "sanskrit": "ए॒वा हि वा॑यो।"
+        },
+        {
+          "id": "ta-1-20-15",
+          "chunkNumber": 15,
+          "sanskrit": "ए॒वा ही᳚न्द्र।"
+        },
+        {
+          "id": "ta-1-20-16",
+          "chunkNumber": 16,
+          "sanskrit": "ए॒वा हि पू॑षन्न्।"
+        },
+        {
+          "id": "ta-1-20-17",
+          "chunkNumber": 17,
+          "sanskrit": "ए॒वा हि दे॑वाः"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-21",
+      "title": "Prapāṭhaka 1 · Anuvāka 21",
+      "sectionNumber": 21,
+      "chunks": [
+        {
+          "id": "ta-1-21-1",
+          "chunkNumber": 1,
+          "sanskrit": "आप॑मापाम॒पः सर्वाः᳚।",
+          "section": 21
+        },
+        {
+          "id": "ta-1-21-2",
+          "chunkNumber": 2,
+          "sanskrit": "अ॒स्माद॒स्मादि॒तोऽमुतः॑।"
+        },
+        {
+          "id": "ta-1-21-3",
+          "chunkNumber": 3,
+          "sanskrit": "अ॒ग्निर्वा॒युश्च॒ सूर्य॑श्च।"
+        },
+        {
+          "id": "ta-1-21-4",
+          "chunkNumber": 4,
+          "sanskrit": "स॒ह स॑ञ्चस्क॒रर्द्धि॑या॥"
+        },
+        {
+          "id": "ta-1-21-5",
+          "chunkNumber": 5,
+          "sanskrit": "वा॒य्वश्वा॑ रश्मि॒ पत॑यः।"
+        },
+        {
+          "id": "ta-1-21-6",
+          "chunkNumber": 6,
+          "sanskrit": "मरी᳚च्यात्मानो॒ अद्रु॑हः।"
+        },
+        {
+          "id": "ta-1-21-7",
+          "chunkNumber": 7,
+          "sanskrit": "दे॒वी र्भु॑वन॒ सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-21-8",
+          "chunkNumber": 8,
+          "sanskrit": "पु॒त्र॒व॒त्त्वाय॑ मे सुत॥"
+        },
+        {
+          "id": "ta-1-21-9",
+          "chunkNumber": 9,
+          "sanskrit": "महानाम्नीर्म॑हामा॒नाः।"
+        },
+        {
+          "id": "ta-1-21-10",
+          "chunkNumber": 10,
+          "sanskrit": "म॒ह॒सो म॑हस॒स्स्वः॑ दे॒वीः प॑र्जन्य॒ सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-21-11",
+          "chunkNumber": 11,
+          "sanskrit": "पु॒त्र॒व॒त्त्वाय॑ मे सुत॥"
+        },
+        {
+          "id": "ta-1-21-12",
+          "chunkNumber": 12,
+          "sanskrit": "अ॒पाश्न्यु॑ष्णिम॒पा रख्षः॑।"
+        },
+        {
+          "id": "ta-1-21-13",
+          "chunkNumber": 13,
+          "sanskrit": "अ॒पाश्न्यु॑ष्णिम॒पा रघ᳚म्।"
+        },
+        {
+          "id": "ta-1-21-14",
+          "chunkNumber": 14,
+          "sanskrit": "अपा᳚घ्रा॒मप॑ चा॒वर्ति᳚म्।"
+        },
+        {
+          "id": "ta-1-21-15",
+          "chunkNumber": 15,
+          "sanskrit": "अप॑ दे॒वीरि॒तो हि॑त॥"
+        },
+        {
+          "id": "ta-1-21-16",
+          "chunkNumber": 16,
+          "sanskrit": "वज्रं॑ दे॒वीरजी॑ताꣴश्च।"
+        },
+        {
+          "id": "ta-1-21-17",
+          "chunkNumber": 17,
+          "sanskrit": "भुव॑नं देव॒ सूव॑रीः।"
+        },
+        {
+          "id": "ta-1-21-18",
+          "chunkNumber": 18,
+          "sanskrit": "आ॒दि॒त्यानदि॑तिं दे॒वीम्।"
+        },
+        {
+          "id": "ta-1-21-19",
+          "chunkNumber": 19,
+          "sanskrit": "योनि॑नोद्र्ध्वमु॒दीष॑त भ॒द्रं कर्णे॑भिः शृणु॒याम॑ देवाः।"
+        },
+        {
+          "id": "ta-1-21-20",
+          "chunkNumber": 20,
+          "sanskrit": "भ॒द्रं प॑श्येमा॒ख्षभि॒र्यज॑त्राः।"
+        },
+        {
+          "id": "ta-1-21-21",
+          "chunkNumber": 21,
+          "sanskrit": "स्थि॒रैरङ्गै᳚ स्तुष्टु॒वाꣳ स॑स्त॒नूभिः॑।"
+        },
+        {
+          "id": "ta-1-21-22",
+          "chunkNumber": 22,
+          "sanskrit": "व्यशे॑म दे॒वहि॑त॒य्ँयदायुः॑॥"
+        },
+        {
+          "id": "ta-1-21-23",
+          "chunkNumber": 23,
+          "sanskrit": "स्व॒स्ति न॒ इन्द्रो॑ वृ॒द्धश्र॑वाः।"
+        },
+        {
+          "id": "ta-1-21-24",
+          "chunkNumber": 24,
+          "sanskrit": "स्व॒स्ति नः॑ पू॒षा वि॒श्ववे॑दाः।"
+        },
+        {
+          "id": "ta-1-21-25",
+          "chunkNumber": 25,
+          "sanskrit": "स्व॒स्ति न॒स्तार्ख्ष्यो॒ अरि॑ष्टनेमिः।"
+        },
+        {
+          "id": "ta-1-21-26",
+          "chunkNumber": 26,
+          "sanskrit": "स्व॒स्ति नो॒ बृह॒स्पति॑र्दधातु॥"
+        },
+        {
+          "id": "ta-1-21-27",
+          "chunkNumber": 27,
+          "sanskrit": "के॒तवो॒ अरु॑णासश्च।"
+        },
+        {
+          "id": "ta-1-21-28",
+          "chunkNumber": 28,
+          "sanskrit": "ऋ॒ष॒यो वात॑रश॒नाः।"
+        },
+        {
+          "id": "ta-1-21-29",
+          "chunkNumber": 29,
+          "sanskrit": "प्र॒ति॒ष्ठाꣳ श॒तधा॑ हि।"
+        },
+        {
+          "id": "ta-1-21-30",
+          "chunkNumber": 30,
+          "sanskrit": "स॒माहि॑तासो सहस्र॒धाय॑सम्॥"
+        },
+        {
+          "id": "ta-1-21-31",
+          "chunkNumber": 31,
+          "sanskrit": "शि॒वा नः॒ शन्त॑मा भवन्तु।"
+        },
+        {
+          "id": "ta-1-21-32",
+          "chunkNumber": 32,
+          "sanskrit": "दि॒व्या आप॒ ओष॑धयः॥"
+        },
+        {
+          "id": "ta-1-21-33",
+          "chunkNumber": 33,
+          "sanskrit": "सु॒मृ॒डी॒का सर॑स्वति।"
+        },
+        {
+          "id": "ta-1-21-34",
+          "chunkNumber": 34,
+          "sanskrit": "माते॒ व्यो॑म स॒न्दृशि॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-22",
+      "title": "Prapāṭhaka 1 · Anuvāka 22",
+      "sectionNumber": 22,
+      "chunks": [
+        {
+          "id": "ta-1-22-1",
+          "chunkNumber": 1,
+          "sanskrit": "यो॑ऽपां पुष्प॒व्ँवेद॑।",
+          "section": 22
+        },
+        {
+          "id": "ta-1-22-2",
+          "chunkNumber": 2,
+          "sanskrit": "पुष्प॑वान् प्र॒जावा᳚न् पशु॒मान् भ॑वति।"
+        },
+        {
+          "id": "ta-1-22-3",
+          "chunkNumber": 3,
+          "sanskrit": "च॒न्द्रमा॒ वा अ॒पां पुष्प᳚म्।"
+        },
+        {
+          "id": "ta-1-22-4",
+          "chunkNumber": 4,
+          "sanskrit": "पुष्प॑वान् प्र॒जावा᳚न् पशु॒मान् भ॑वति।"
+        },
+        {
+          "id": "ta-1-22-5",
+          "chunkNumber": 5,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-6",
+          "chunkNumber": 6,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-7",
+          "chunkNumber": 7,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-8",
+          "chunkNumber": 8,
+          "sanskrit": "अ॒ग्निर्वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-9",
+          "chunkNumber": 9,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-10",
+          "chunkNumber": 10,
+          "sanskrit": "यो᳚ऽग्नेरा॒यत॑न॒व्ँवेद॑ आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-11",
+          "chunkNumber": 11,
+          "sanskrit": "आपो॒ वा अ॒ग्नेरा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-12",
+          "chunkNumber": 12,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-13",
+          "chunkNumber": 13,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-14",
+          "chunkNumber": 14,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-15",
+          "chunkNumber": 15,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-16",
+          "chunkNumber": 16,
+          "sanskrit": "वा॒युर्वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-17",
+          "chunkNumber": 17,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-18",
+          "chunkNumber": 18,
+          "sanskrit": "यो वा॒योरा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-19",
+          "chunkNumber": 19,
+          "sanskrit": "आ॒यत॑नवान् भवति आपो॒ वै वा॒योरा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-20",
+          "chunkNumber": 20,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-21",
+          "chunkNumber": 21,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-22",
+          "chunkNumber": 22,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-23",
+          "chunkNumber": 23,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-24",
+          "chunkNumber": 24,
+          "sanskrit": "अ॒सौ वै तप॑न्न॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-25",
+          "chunkNumber": 25,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-26",
+          "chunkNumber": 26,
+          "sanskrit": "यो॑ऽमुष्य॒तप॑त आ॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-27",
+          "chunkNumber": 27,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-28",
+          "chunkNumber": 28,
+          "sanskrit": "आपो॒वा अ॒मुष्य॒तप॑त आ॒यत॑नम् आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-29",
+          "chunkNumber": 29,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-30",
+          "chunkNumber": 30,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-31",
+          "chunkNumber": 31,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-32",
+          "chunkNumber": 32,
+          "sanskrit": "च॒न्द्रमा॒ वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-33",
+          "chunkNumber": 33,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-34",
+          "chunkNumber": 34,
+          "sanskrit": "यश्च॒न्द्रम॑स आ॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-35",
+          "chunkNumber": 35,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-36",
+          "chunkNumber": 36,
+          "sanskrit": "आपो॒ वै च॒न्द्रम॑स आ॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-37",
+          "chunkNumber": 37,
+          "sanskrit": "आ॒यत॑नवान् भवति य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-38",
+          "chunkNumber": 38,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-39",
+          "chunkNumber": 39,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-40",
+          "chunkNumber": 40,
+          "sanskrit": "नख्ष॑त्राणि॒ वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-41",
+          "chunkNumber": 41,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-42",
+          "chunkNumber": 42,
+          "sanskrit": "यो नख्ष॑त्राणामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-43",
+          "chunkNumber": 43,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-44",
+          "chunkNumber": 44,
+          "sanskrit": "आपो॒ वै नख्ष॑त्राणामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-45",
+          "chunkNumber": 45,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-46",
+          "chunkNumber": 46,
+          "sanskrit": "य ए॒वव्ँवेद॑ यो॑ऽपामा॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-47",
+          "chunkNumber": 47,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-48",
+          "chunkNumber": 48,
+          "sanskrit": "प॒र्जन्यो॒ वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-49",
+          "chunkNumber": 49,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-50",
+          "chunkNumber": 50,
+          "sanskrit": "यः प॒र्जन्य॑स्या॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-51",
+          "chunkNumber": 51,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-52",
+          "chunkNumber": 52,
+          "sanskrit": "आपो॒ वै प॒र्जन्य॑स्या॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-53",
+          "chunkNumber": 53,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-54",
+          "chunkNumber": 54,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-55",
+          "chunkNumber": 55,
+          "sanskrit": "यो॑ऽपामा॒यत॑न॒व्ँवेद॑ आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-56",
+          "chunkNumber": 56,
+          "sanskrit": "स॒व्ँव॒थ्स॒रो वा अ॒पामा॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-57",
+          "chunkNumber": 57,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-58",
+          "chunkNumber": 58,
+          "sanskrit": "यः स॑व्ँवथ्स॒रस्या॒यत॑न॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-59",
+          "chunkNumber": 59,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-60",
+          "chunkNumber": 60,
+          "sanskrit": "आपो॒ वै स॑व्ँवथ्स॒रस्या॒यत॑नम्।"
+        },
+        {
+          "id": "ta-1-22-61",
+          "chunkNumber": 61,
+          "sanskrit": "आ॒यत॑नवान् भवति।"
+        },
+        {
+          "id": "ta-1-22-62",
+          "chunkNumber": 62,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-22-63",
+          "chunkNumber": 63,
+          "sanskrit": "यो᳚ऽफ्सु नावं॒ प्रति॑ष्ठिता॒व्ँवेद॑।"
+        },
+        {
+          "id": "ta-1-22-64",
+          "chunkNumber": 64,
+          "sanskrit": "प्रत्ये॒व ति॑ष्ठति इ॒मे वै लो॒का अ॒फ्सु प्रति॑ष्ठिताः।"
+        },
+        {
+          "id": "ta-1-22-65",
+          "chunkNumber": 65,
+          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता॥"
+        },
+        {
+          "id": "ta-1-22-66",
+          "chunkNumber": 66,
+          "sanskrit": "अ॒पाꣳ रस॒मुद॑यꣳसन्न्।"
+        },
+        {
+          "id": "ta-1-22-67",
+          "chunkNumber": 67,
+          "sanskrit": "सूर्ये॑ शु॒क्रꣳ स॒माभृ॑तम्।"
+        },
+        {
+          "id": "ta-1-22-68",
+          "chunkNumber": 68,
+          "sanskrit": "अ॒पाꣳ रस॑स्य॒ यो रसः॑।"
+        },
+        {
+          "id": "ta-1-22-69",
+          "chunkNumber": 69,
+          "sanskrit": "तव्ँवो॑ गृह्णाम्युत्त॒ममिति॑॥"
+        },
+        {
+          "id": "ta-1-22-70",
+          "chunkNumber": 70,
+          "sanskrit": "इ॒मे वै लो॒का अ॒पाꣳ रसः॑।"
+        },
+        {
+          "id": "ta-1-22-71",
+          "chunkNumber": 71,
+          "sanskrit": "ते॑ऽमुष्मि॑न्नादि॒त्ये स॒माभ॑ताः॥"
+        },
+        {
+          "id": "ta-1-22-72",
+          "chunkNumber": 72,
+          "sanskrit": "जा॒नु॒द॒घ्नीमु॑त्तरवे॒दीङ्खा॒त्वा।"
+        },
+        {
+          "id": "ta-1-22-73",
+          "chunkNumber": 73,
+          "sanskrit": "अ॒पां पू॑रयि॒त्वा गु॑ल्फद॒घ्नम् पुष्करपर्णैः पुष्करदण्डैः पुष्करैश्च॑ सꣴस्ती॒र्य।"
+        },
+        {
+          "id": "ta-1-22-74",
+          "chunkNumber": 74,
+          "sanskrit": "तस्मि॑न् विहा॒यसे।"
+        },
+        {
+          "id": "ta-1-22-75",
+          "chunkNumber": 75,
+          "sanskrit": "अ॒ग्निं प्र॒णीयो॑पसमा॒धाय॑॥"
+        },
+        {
+          "id": "ta-1-22-76",
+          "chunkNumber": 76,
+          "sanskrit": "ब्र॒ह्म॒वा॒दिनो॑ वदन्ति।"
+        },
+        {
+          "id": "ta-1-22-77",
+          "chunkNumber": 77,
+          "sanskrit": "कस्मा᳚त् प्रणी॒तेऽयम॒ग्निश्ची॒यते᳚।"
+        },
+        {
+          "id": "ta-1-22-78",
+          "chunkNumber": 78,
+          "sanskrit": "साः प्र॑णी॒तेऽयम॒फ्सु ह्यय॑ञ्ची॒यते᳚।"
+        },
+        {
+          "id": "ta-1-22-79",
+          "chunkNumber": 79,
+          "sanskrit": "अ॒सौ भुव॑ने॒ऽप्यना॑हिताग्निरे॒ताः।"
+        },
+        {
+          "id": "ta-1-22-80",
+          "chunkNumber": 80,
+          "sanskrit": "तम॒भित॑ ए॒ता अ॒बीष्ट॑का॒ उप॑दधाति॥"
+        },
+        {
+          "id": "ta-1-22-81",
+          "chunkNumber": 81,
+          "sanskrit": "अ॒ग्नि॒हो॒त्रे द॑र्शपूर्णमा॒सयोः᳚।"
+        },
+        {
+          "id": "ta-1-22-82",
+          "chunkNumber": 82,
+          "sanskrit": "प॒शु॒ब॒न्धे चा॑तुर्मा॒स्येषु॑ अथो॑ आहुः।"
+        },
+        {
+          "id": "ta-1-22-83",
+          "chunkNumber": 83,
+          "sanskrit": "सर्वे॑षु यज्ञक्र॒तुष्विति॑॥"
+        },
+        {
+          "id": "ta-1-22-84",
+          "chunkNumber": 84,
+          "sanskrit": "ए॒तद्ध॑ स्म॒ वा आ॑हुः शण्डि॒लाः।"
+        },
+        {
+          "id": "ta-1-22-85",
+          "chunkNumber": 85,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते॥"
+        },
+        {
+          "id": "ta-1-22-86",
+          "chunkNumber": 86,
+          "sanskrit": "स॒त्रि॒यम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-22-87",
+          "chunkNumber": 87,
+          "sanskrit": "स॒व्ँव॒थ्स॒रं प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-88",
+          "chunkNumber": 88,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-22-89",
+          "chunkNumber": 89,
+          "sanskrit": "सा॒वि॒त्रम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-22-90",
+          "chunkNumber": 90,
+          "sanskrit": "अ॒मुमा॑दि॒त्यं प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-91",
+          "chunkNumber": 91,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते ना॒चि॒के॒तम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-22-92",
+          "chunkNumber": 92,
+          "sanskrit": "प्रा॒णान् प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-93",
+          "chunkNumber": 93,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-22-94",
+          "chunkNumber": 94,
+          "sanskrit": "चा॒तु॒र्॒हो॒त्रि॒यम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-22-95",
+          "chunkNumber": 95,
+          "sanskrit": "ब्रह्म॑ प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-96",
+          "chunkNumber": 96,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-22-97",
+          "chunkNumber": 97,
+          "sanskrit": "वै॒श्व॒सृ॒जम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-22-98",
+          "chunkNumber": 98,
+          "sanskrit": "शरी॑रं प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-99",
+          "chunkNumber": 99,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-22-100",
+          "chunkNumber": 100,
+          "sanskrit": "उ॒पा॒नु॒वा॒क्य॑मा॒शुम॒ग्निञ्चि॑न्वा॒नः इ॒माल्ँलो॒कान् प्र॒त्यख्षे॑ण॥"
+        },
+        {
+          "id": "ta-1-22-101",
+          "chunkNumber": 101,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-22-102",
+          "chunkNumber": 102,
+          "sanskrit": "इ॒ममा॑रुणकेतुकम॒ग्निञ्चि॑न्वा॒न इति॑।"
+        },
+        {
+          "id": "ta-1-22-103",
+          "chunkNumber": 103,
+          "sanskrit": "य ए॒वासौ।"
+        },
+        {
+          "id": "ta-1-22-104",
+          "chunkNumber": 104,
+          "sanskrit": "इ॒तश्चा॒मुत॑श्चाव्यतीपा॒ती।"
+        },
+        {
+          "id": "ta-1-22-105",
+          "chunkNumber": 105,
+          "sanskrit": "तमिति॑॥"
+        },
+        {
+          "id": "ta-1-22-106",
+          "chunkNumber": 106,
+          "sanskrit": "यो᳚ऽग्नेर्मि॑थू॒या वेद॑।"
+        },
+        {
+          "id": "ta-1-22-107",
+          "chunkNumber": 107,
+          "sanskrit": "मि॒थु॒न॒वान् भ॑वति।"
+        },
+        {
+          "id": "ta-1-22-108",
+          "chunkNumber": 108,
+          "sanskrit": "आपो॒ वा अ॒ग्नेर्मि॑थू॒याः।"
+        },
+        {
+          "id": "ta-1-22-109",
+          "chunkNumber": 109,
+          "sanskrit": "मि॒थु॒न॒वान् भ॑वति।"
+        },
+        {
+          "id": "ta-1-22-110",
+          "chunkNumber": 110,
+          "sanskrit": "य ए॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-23",
+      "title": "Prapāṭhaka 1 · Anuvāka 23",
+      "sectionNumber": 23,
+      "chunks": [
+        {
+          "id": "ta-1-23-1",
+          "chunkNumber": 1,
+          "sanskrit": "आपो॒ वा इ॒दमा॑सन्थ् सलि॒लमे॒व।",
+          "section": 23
+        },
+        {
+          "id": "ta-1-23-2",
+          "chunkNumber": 2,
+          "sanskrit": "स प्र॒जाप॑ति॒रेकः॑ पुष्करप॒र्णे सम॑भवत्।"
+        },
+        {
+          "id": "ta-1-23-3",
+          "chunkNumber": 3,
+          "sanskrit": "तस्यान्त॒र् मन॑सि कामः॒ सम॑वर्तत।"
+        },
+        {
+          "id": "ta-1-23-4",
+          "chunkNumber": 4,
+          "sanskrit": "इ॒दꣳ सृ॑जेय॒मिति॑।"
+        },
+        {
+          "id": "ta-1-23-5",
+          "chunkNumber": 5,
+          "sanskrit": "तस्मा॒द्यत् पुरु॑षो॒ मन॑साऽभि॒गच्छ॑ति।"
+        },
+        {
+          "id": "ta-1-23-6",
+          "chunkNumber": 6,
+          "sanskrit": "तद्वा॒चा व॑दति।"
+        },
+        {
+          "id": "ta-1-23-7",
+          "chunkNumber": 7,
+          "sanskrit": "तत्कर्म॑णा करोति।"
+        },
+        {
+          "id": "ta-1-23-8",
+          "chunkNumber": 8,
+          "sanskrit": "तदे॒षा ऽभ्यनू᳚क्ता॥"
+        },
+        {
+          "id": "ta-1-23-9",
+          "chunkNumber": 9,
+          "sanskrit": "काम॒स्तदग्रे॒ सम॑वर्त॒ताधि॑।"
+        },
+        {
+          "id": "ta-1-23-10",
+          "chunkNumber": 10,
+          "sanskrit": "मन॑सो॒ रेतः॑ प्रथ॒मय्ँयदासी᳚त् स॒तो बन्धु॒मस॑ति॒ निर॑विन्दन्न्।"
+        },
+        {
+          "id": "ta-1-23-11",
+          "chunkNumber": 11,
+          "sanskrit": "हृ॒दि प्र॒तीष्या॑ क॒वयो॑ मनी॒षेति॑॥"
+        },
+        {
+          "id": "ta-1-23-12",
+          "chunkNumber": 12,
+          "sanskrit": "उपै॑न॒न्तदुप॑नमति।"
+        },
+        {
+          "id": "ta-1-23-13",
+          "chunkNumber": 13,
+          "sanskrit": "यत् का॑मो॒ भव॑ति।"
+        },
+        {
+          "id": "ta-1-23-14",
+          "chunkNumber": 14,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-23-15",
+          "chunkNumber": 15,
+          "sanskrit": "स तपो॑ऽतप्यत।"
+        },
+        {
+          "id": "ta-1-23-16",
+          "chunkNumber": 16,
+          "sanskrit": "स तप॑स्त॒प्त्वा।"
+        },
+        {
+          "id": "ta-1-23-17",
+          "chunkNumber": 17,
+          "sanskrit": "शरी॑रमधूनुत।"
+        },
+        {
+          "id": "ta-1-23-18",
+          "chunkNumber": 18,
+          "sanskrit": "तस्य॒ यन् मा॒ꣳ॒समासी᳚त्।"
+        },
+        {
+          "id": "ta-1-23-19",
+          "chunkNumber": 19,
+          "sanskrit": "ततो॑ऽरु॒णाः के॒तवो॒ वात॑रश॒ना ऋष॑य॒ उद॑तिष्ठन्न् ये नखाः᳚।"
+        },
+        {
+          "id": "ta-1-23-20",
+          "chunkNumber": 20,
+          "sanskrit": "ते वै॑खान॒साः।"
+        },
+        {
+          "id": "ta-1-23-21",
+          "chunkNumber": 21,
+          "sanskrit": "ये वालाः᳚।"
+        },
+        {
+          "id": "ta-1-23-22",
+          "chunkNumber": 22,
+          "sanskrit": "ते वा॑लखि॒ल्याः।"
+        },
+        {
+          "id": "ta-1-23-23",
+          "chunkNumber": 23,
+          "sanskrit": "यो रसः॑।"
+        },
+        {
+          "id": "ta-1-23-24",
+          "chunkNumber": 24,
+          "sanskrit": "सो॑ऽपाम्॥"
+        },
+        {
+          "id": "ta-1-23-25",
+          "chunkNumber": 25,
+          "sanskrit": "अ॒न्त॒र॒तः कू॒र्मं भू॒तꣳ सर्प॑न्तम्।"
+        },
+        {
+          "id": "ta-1-23-26",
+          "chunkNumber": 26,
+          "sanskrit": "तम॑ब्रवीत्।"
+        },
+        {
+          "id": "ta-1-23-27",
+          "chunkNumber": 27,
+          "sanskrit": "मम॒ वै त्वङ्मा॒ꣳ॒सा।"
+        },
+        {
+          "id": "ta-1-23-28",
+          "chunkNumber": 28,
+          "sanskrit": "सम॑भूत् नेत्य॑ब्रवीत्।"
+        },
+        {
+          "id": "ta-1-23-29",
+          "chunkNumber": 29,
+          "sanskrit": "पूर्व॑मे॒वाहमि॒हास॒मिति॑।"
+        },
+        {
+          "id": "ta-1-23-30",
+          "chunkNumber": 30,
+          "sanskrit": "तत्पुरु॑षस्य पुरुष॒त्वम्।"
+        },
+        {
+          "id": "ta-1-23-31",
+          "chunkNumber": 31,
+          "sanskrit": "स स॒हस्र॑शीर्षा॒ पुरु॑षः।"
+        },
+        {
+          "id": "ta-1-23-32",
+          "chunkNumber": 32,
+          "sanskrit": "स॒ह॒स्रा॒ख्षः स॒हस्र॑पात्।"
+        },
+        {
+          "id": "ta-1-23-33",
+          "chunkNumber": 33,
+          "sanskrit": "भू॒त्वोद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-34",
+          "chunkNumber": 34,
+          "sanskrit": "तम॑ब्रवीत्।"
+        },
+        {
+          "id": "ta-1-23-35",
+          "chunkNumber": 35,
+          "sanskrit": "त्वव्ँवै पूर्व॑ꣳ सम॑भूः।"
+        },
+        {
+          "id": "ta-1-23-36",
+          "chunkNumber": 36,
+          "sanskrit": "त्वमि॒दं पूर्वः॑ कुरु॒ष्वेति॑॥"
+        },
+        {
+          "id": "ta-1-23-37",
+          "chunkNumber": 37,
+          "sanskrit": "स इ॒त आ॒दायापः॑ अ॒ञ्ज॒लिना॑ पु॒रस्ता॑दु॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-38",
+          "chunkNumber": 38,
+          "sanskrit": "ए॒वा ह्ये॒वेति॑।"
+        },
+        {
+          "id": "ta-1-23-39",
+          "chunkNumber": 39,
+          "sanskrit": "तत॑ आदि॒त्य उद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-40",
+          "chunkNumber": 40,
+          "sanskrit": "सा प्राची॒ दिक्॥"
+        },
+        {
+          "id": "ta-1-23-41",
+          "chunkNumber": 41,
+          "sanskrit": "अथा॑रु॒णः के॒तुर्द॑ख्षिण॒त उ॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-42",
+          "chunkNumber": 42,
+          "sanskrit": "ए॒वा ह्यग्न॒ इति॑।"
+        },
+        {
+          "id": "ta-1-23-43",
+          "chunkNumber": 43,
+          "sanskrit": "ततो॒ वा अ॒ग्निरुद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-44",
+          "chunkNumber": 44,
+          "sanskrit": "सा द॑ख्षि॒णा दिक्।"
+        },
+        {
+          "id": "ta-1-23-45",
+          "chunkNumber": 45,
+          "sanskrit": "अथा॑रु॒णः के॒तुः प॒श्चादु॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-46",
+          "chunkNumber": 46,
+          "sanskrit": "ए॒वा हि वायो॒ इति॑ ततो॑ वा॒युरुद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-47",
+          "chunkNumber": 47,
+          "sanskrit": "सा प्र॒तीची॒ दिक्।"
+        },
+        {
+          "id": "ta-1-23-48",
+          "chunkNumber": 48,
+          "sanskrit": "अथा॑रु॒णः के॒तुरु॑त्तर॒त उ॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-49",
+          "chunkNumber": 49,
+          "sanskrit": "ए॒वा हीन्द्रेति॑।"
+        },
+        {
+          "id": "ta-1-23-50",
+          "chunkNumber": 50,
+          "sanskrit": "ततो॒ वा इन्द्र॒ उद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-51",
+          "chunkNumber": 51,
+          "sanskrit": "सोदी॑ची॒ दिक्।"
+        },
+        {
+          "id": "ta-1-23-52",
+          "chunkNumber": 52,
+          "sanskrit": "अथा॑रु॒णः के॒तुर्मद्ध्य॑ उ॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-53",
+          "chunkNumber": 53,
+          "sanskrit": "ए॒वा हि पूष॒न्निति॑।"
+        },
+        {
+          "id": "ta-1-23-54",
+          "chunkNumber": 54,
+          "sanskrit": "ततो॒ वै पू॒षोद॑तिष्ठत्।"
+        },
+        {
+          "id": "ta-1-23-55",
+          "chunkNumber": 55,
+          "sanskrit": "सेयन्दिक् अथा॑रु॒णः के॒तुरु॒परि॑ष्टादु॒पाद॑धात्।"
+        },
+        {
+          "id": "ta-1-23-56",
+          "chunkNumber": 56,
+          "sanskrit": "ए॒वा हि देवा॒ इति॑।"
+        },
+        {
+          "id": "ta-1-23-57",
+          "chunkNumber": 57,
+          "sanskrit": "ततो॑ देव मनु॒ष्याः पि॒तरः॑।"
+        },
+        {
+          "id": "ta-1-23-58",
+          "chunkNumber": 58,
+          "sanskrit": "ग॒न्ध॒र्वा॒फ्स॒रस॒ श्चोद॑तिष्ठन्न्।"
+        },
+        {
+          "id": "ta-1-23-59",
+          "chunkNumber": 59,
+          "sanskrit": "सोद्र्ध्वा दिक्॥"
+        },
+        {
+          "id": "ta-1-23-60",
+          "chunkNumber": 60,
+          "sanskrit": "या वि॒प्रुषो॑ वि॒परा॑पतन्न्।"
+        },
+        {
+          "id": "ta-1-23-61",
+          "chunkNumber": 61,
+          "sanskrit": "ताभ्योऽसु॑रा॒ रख्षा॑ꣳसि पिशा॒चाश्चोद॑तिष्ठन्न्।"
+        },
+        {
+          "id": "ta-1-23-62",
+          "chunkNumber": 62,
+          "sanskrit": "तस्मा॒त्ते परा॑भवन्न्।"
+        },
+        {
+          "id": "ta-1-23-63",
+          "chunkNumber": 63,
+          "sanskrit": "वि॒प्रुड्भ्यो॒ हि ते सम॑भवन्न्॥"
+        },
+        {
+          "id": "ta-1-23-64",
+          "chunkNumber": 64,
+          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता आपो॑ ह॒ यद् बृ॑ह॒तीर् गर्भ॒माय॑न्न्।"
+        },
+        {
+          "id": "ta-1-23-65",
+          "chunkNumber": 65,
+          "sanskrit": "दख्षं॒ दधा॑ना ज॒नय॑न्तीः स्वय॒म्भुम्।"
+        },
+        {
+          "id": "ta-1-23-66",
+          "chunkNumber": 66,
+          "sanskrit": "तत॑ इ॒मेऽद्ध्यसृ॑ज्यन्त॒ सर्गाः᳚।"
+        },
+        {
+          "id": "ta-1-23-67",
+          "chunkNumber": 67,
+          "sanskrit": "अद्भ्यो॒ वा इ॒दꣳ सम॑भूत्।"
+        },
+        {
+          "id": "ta-1-23-68",
+          "chunkNumber": 68,
+          "sanskrit": "तस्मा॑दि॒दꣳ सर्वं॒ ब्रह्म॑ स्वय॒भ्विंति॑॥"
+        },
+        {
+          "id": "ta-1-23-69",
+          "chunkNumber": 69,
+          "sanskrit": "तस्मा॑दि॒दꣳ सर्व॒ꣳ॒ शिथि॑लमि॒वा ध्रुव॑मिवाभवत्॥"
+        },
+        {
+          "id": "ta-1-23-70",
+          "chunkNumber": 70,
+          "sanskrit": "प्र॒जाप॑ति॒र् वाव तत्।"
+        },
+        {
+          "id": "ta-1-23-71",
+          "chunkNumber": 71,
+          "sanskrit": "आ॒त्मना॒ऽऽत्मान॑व्ँवि॒धाय॑।"
+        },
+        {
+          "id": "ta-1-23-72",
+          "chunkNumber": 72,
+          "sanskrit": "तदे॒वानु॒ प्रावि॑शत्॥"
+        },
+        {
+          "id": "ta-1-23-73",
+          "chunkNumber": 73,
+          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता वि॒धाय॑ लो॒कान्वि॒धाय॑ भू॒तानि॑।"
+        },
+        {
+          "id": "ta-1-23-74",
+          "chunkNumber": 74,
+          "sanskrit": "वि॒धाय॒ सर्वाः᳚ प्र॒दिशो॒ दिश॑श्च।"
+        },
+        {
+          "id": "ta-1-23-75",
+          "chunkNumber": 75,
+          "sanskrit": "प्र॒जाप॑तिः प्रथम॒जा ऋ॒तस्य॑।"
+        },
+        {
+          "id": "ta-1-23-76",
+          "chunkNumber": 76,
+          "sanskrit": "आ॒त्मना॒ऽऽत्मान॑म॒भिसव्ँवि॑वे॒शेति॑॥"
+        },
+        {
+          "id": "ta-1-23-77",
+          "chunkNumber": 77,
+          "sanskrit": "सर्व॑मे॒वेदमा॒प्त्वा।"
+        },
+        {
+          "id": "ta-1-23-78",
+          "chunkNumber": 78,
+          "sanskrit": "सर्व॑मव॒रुद्ध्य॑।"
+        },
+        {
+          "id": "ta-1-23-79",
+          "chunkNumber": 79,
+          "sanskrit": "तदे॒वानु॒ प्रवि॑शति।"
+        },
+        {
+          "id": "ta-1-23-80",
+          "chunkNumber": 80,
+          "sanskrit": "य ए॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-24",
+      "title": "Prapāṭhaka 1 · Anuvāka 24",
+      "sectionNumber": 24,
+      "chunks": [
+        {
+          "id": "ta-1-24-1",
+          "chunkNumber": 1,
+          "sanskrit": "चतु॑ष्टय्य॒ आपो॑ गृह्णाति।",
+          "section": 24
+        },
+        {
+          "id": "ta-1-24-2",
+          "chunkNumber": 2,
+          "sanskrit": "च॒त्वारि॒ वा अ॒पाꣳ रू॒पाणि॑।"
+        },
+        {
+          "id": "ta-1-24-3",
+          "chunkNumber": 3,
+          "sanskrit": "मेघो॑ वि॒द्युत्।"
+        },
+        {
+          "id": "ta-1-24-4",
+          "chunkNumber": 4,
+          "sanskrit": "स्त॒न॒यि॒त्नुर्वृ॒ष्टिः।"
+        },
+        {
+          "id": "ta-1-24-5",
+          "chunkNumber": 5,
+          "sanskrit": "तान्ये॒वा व॑रुन्धे॥"
+        },
+        {
+          "id": "ta-1-24-6",
+          "chunkNumber": 6,
+          "sanskrit": "आ॒तप॑ति॒ वर्ष्या॑ गृह्णाति।"
+        },
+        {
+          "id": "ta-1-24-7",
+          "chunkNumber": 7,
+          "sanskrit": "ताः पु॒रस्ता॒दुप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-8",
+          "chunkNumber": 8,
+          "sanskrit": "ए॒ता वै ब्र॑ह्मवर्च॒स्या आपः॑।"
+        },
+        {
+          "id": "ta-1-24-9",
+          "chunkNumber": 9,
+          "sanskrit": "मु॒ख॒त ए॒व ब्र॑ह्मवर्च॒समव॑रुन्धे।"
+        },
+        {
+          "id": "ta-1-24-10",
+          "chunkNumber": 10,
+          "sanskrit": "तस्मा᳚न्मुख॒तो ब्र॑ह्मवर्च॒सित॑रः कूप्या॑ गृह्णाति।"
+        },
+        {
+          "id": "ta-1-24-11",
+          "chunkNumber": 11,
+          "sanskrit": "ता द॑ख्षिण॒त उप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-12",
+          "chunkNumber": 12,
+          "sanskrit": "ए॒ता वै ते॑ज॒स्विनी॒रापः॑।"
+        },
+        {
+          "id": "ta-1-24-13",
+          "chunkNumber": 13,
+          "sanskrit": "तेज॑ ए॒वास्य॑ दख्षिण॒तो द॑धाति।"
+        },
+        {
+          "id": "ta-1-24-14",
+          "chunkNumber": 14,
+          "sanskrit": "तस्मा॒द् दख्षि॒णोद्र्ध॑ ऽस्तेज॒स्वित॑रः॥"
+        },
+        {
+          "id": "ta-1-24-15",
+          "chunkNumber": 15,
+          "sanskrit": "स्था॒व॒रा गृ॑ह्णाति।"
+        },
+        {
+          "id": "ta-1-24-16",
+          "chunkNumber": 16,
+          "sanskrit": "ताः प॒श्चादुप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-17",
+          "chunkNumber": 17,
+          "sanskrit": "प्रति॑ष्ठिता॒ वै स्था॑व॒राः।"
+        },
+        {
+          "id": "ta-1-24-18",
+          "chunkNumber": 18,
+          "sanskrit": "प॒श्चादे॒व प्रति॑तिष्ठति॥"
+        },
+        {
+          "id": "ta-1-24-19",
+          "chunkNumber": 19,
+          "sanskrit": "वह॑न्तीर् गृह्णाति ता उ॑त्तर॒त उप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-20",
+          "chunkNumber": 20,
+          "sanskrit": "ओज॑सा॒ वा ए॒ता वह॑न्तीरि॒वोद्ग॑तीरि॒व आकूज॑तीरि॒व धाव॑न्तीः।"
+        },
+        {
+          "id": "ta-1-24-21",
+          "chunkNumber": 21,
+          "sanskrit": "ओज॑ ए॒वास्यो᳚त्तर॒तो द॑धाति।"
+        },
+        {
+          "id": "ta-1-24-22",
+          "chunkNumber": 22,
+          "sanskrit": "तस्मा॒दुत्त॒रोऽद्ध॑ ओज॒स्वित॑रः॥"
+        },
+        {
+          "id": "ta-1-24-23",
+          "chunkNumber": 23,
+          "sanskrit": "स॒भां॒र्या गृ॑ह्णाति।"
+        },
+        {
+          "id": "ta-1-24-24",
+          "chunkNumber": 24,
+          "sanskrit": "ता मद्ध्य॒ उप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-25",
+          "chunkNumber": 25,
+          "sanskrit": "इ॒यव्ँवै स॑भां॒र्याः।"
+        },
+        {
+          "id": "ta-1-24-26",
+          "chunkNumber": 26,
+          "sanskrit": "अ॒स्यामे॒व प्रति॑तिष्ठति॥"
+        },
+        {
+          "id": "ta-1-24-27",
+          "chunkNumber": 27,
+          "sanskrit": "प॒ल्व॒ल्या गृ॑ह्णाति।"
+        },
+        {
+          "id": "ta-1-24-28",
+          "chunkNumber": 28,
+          "sanskrit": "ता उ॒परि॑ष्टादु॒पाद॑धाति अ॒सौ वै प॑ल्व॒ल्याः।"
+        },
+        {
+          "id": "ta-1-24-29",
+          "chunkNumber": 29,
+          "sanskrit": "अ॒मुष्या॑मे॒व प्रति॑तिष्ठति॥"
+        },
+        {
+          "id": "ta-1-24-30",
+          "chunkNumber": 30,
+          "sanskrit": "दि॒ख्षूप॑दधाति।"
+        },
+        {
+          "id": "ta-1-24-31",
+          "chunkNumber": 31,
+          "sanskrit": "दि॒ख्षु वा आपः॑।"
+        },
+        {
+          "id": "ta-1-24-32",
+          "chunkNumber": 32,
+          "sanskrit": "अन्न॒व्ँवा आपः॑।"
+        },
+        {
+          "id": "ta-1-24-33",
+          "chunkNumber": 33,
+          "sanskrit": "अ॒द्भ्यो वा अन्न॑ञ्जायते।"
+        },
+        {
+          "id": "ta-1-24-34",
+          "chunkNumber": 34,
+          "sanskrit": "यदे॒वाद्भ्योऽन्नं॒ जाय॑ते।"
+        },
+        {
+          "id": "ta-1-24-35",
+          "chunkNumber": 35,
+          "sanskrit": "तदव॑रुन्धे॥"
+        },
+        {
+          "id": "ta-1-24-36",
+          "chunkNumber": 36,
+          "sanskrit": "तव्ँवा ए॒तम॑रु॒णाः के॒तवो॒ वात॑रश॒ना ऋष॑योऽचिन्वन्न्।"
+        },
+        {
+          "id": "ta-1-24-37",
+          "chunkNumber": 37,
+          "sanskrit": "तस्मा॑दारुण के॒तुकः॑॥"
+        },
+        {
+          "id": "ta-1-24-38",
+          "chunkNumber": 38,
+          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता॥"
+        },
+        {
+          "id": "ta-1-24-39",
+          "chunkNumber": 39,
+          "sanskrit": "के॒तवो॒ अरु॑णासश्च।"
+        },
+        {
+          "id": "ta-1-24-40",
+          "chunkNumber": 40,
+          "sanskrit": "ऋ॒ष॒यो वात॑रश॒नाः।"
+        },
+        {
+          "id": "ta-1-24-41",
+          "chunkNumber": 41,
+          "sanskrit": "प्र॒ति॒ष्ठाꣳ श॒तधा॑ हि।"
+        },
+        {
+          "id": "ta-1-24-42",
+          "chunkNumber": 42,
+          "sanskrit": "स॒माहि॑तासो सहस्र॒धाय॑स॒मिति॑॥"
+        },
+        {
+          "id": "ta-1-24-43",
+          "chunkNumber": 43,
+          "sanskrit": "श॒तश॑श्चै॒व ऽस॒हस्र॑शश्च॒ प्रति॑तिष्ठति।"
+        },
+        {
+          "id": "ta-1-24-44",
+          "chunkNumber": 44,
+          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+        },
+        {
+          "id": "ta-1-24-45",
+          "chunkNumber": 45,
+          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-25",
+      "title": "Prapāṭhaka 1 · Anuvāka 25",
+      "sectionNumber": 25,
+      "chunks": [
+        {
+          "id": "ta-1-25-1",
+          "chunkNumber": 1,
+          "sanskrit": "जा॒नु॒द॒घ्नीमु॑त्तरवे॒दीङ्खा॒त्वा।",
+          "section": 25
+        },
+        {
+          "id": "ta-1-25-2",
+          "chunkNumber": 2,
+          "sanskrit": "अ॒पां पू॑रयति।"
+        },
+        {
+          "id": "ta-1-25-3",
+          "chunkNumber": 3,
+          "sanskrit": "अ॒पाꣳ स॑र्व॒त्वाय॑।"
+        },
+        {
+          "id": "ta-1-25-4",
+          "chunkNumber": 4,
+          "sanskrit": "पु॒ष्क॒र॒प॒र्णꣳ रु॒क्मं पुरु॑ष॒मित्युप॑दधाति।"
+        },
+        {
+          "id": "ta-1-25-5",
+          "chunkNumber": 5,
+          "sanskrit": "तपो॒ वै पु॑ष्करप॒र्णम्।"
+        },
+        {
+          "id": "ta-1-25-6",
+          "chunkNumber": 6,
+          "sanskrit": "स॒त्यꣳ रु॒क्मः।"
+        },
+        {
+          "id": "ta-1-25-7",
+          "chunkNumber": 7,
+          "sanskrit": "अ॒मृतं॒ पुरु॑षः।"
+        },
+        {
+          "id": "ta-1-25-8",
+          "chunkNumber": 8,
+          "sanskrit": "ए॒ताव॒द्वा वा᳚स्ति।"
+        },
+        {
+          "id": "ta-1-25-9",
+          "chunkNumber": 9,
+          "sanskrit": "याव॑दे॒तत्।"
+        },
+        {
+          "id": "ta-1-25-10",
+          "chunkNumber": 10,
+          "sanskrit": "याव॑दे॒वास्ति॑ तदव॑रुन्धे॥"
+        },
+        {
+          "id": "ta-1-25-11",
+          "chunkNumber": 11,
+          "sanskrit": "कू॒र्ममुप॑दधाति।"
+        },
+        {
+          "id": "ta-1-25-12",
+          "chunkNumber": 12,
+          "sanskrit": "अ॒पामे॒व मेध॒मव॑रुन्धे।"
+        },
+        {
+          "id": "ta-1-25-13",
+          "chunkNumber": 13,
+          "sanskrit": "अथो᳚ स्व॒र्गस्य॑ लो॒कस्य॒ सम॑ष्ट्यै॥"
+        },
+        {
+          "id": "ta-1-25-14",
+          "chunkNumber": 14,
+          "sanskrit": "आप॑मापाम॒पः सर्वाः᳚।"
+        },
+        {
+          "id": "ta-1-25-15",
+          "chunkNumber": 15,
+          "sanskrit": "अ॒स्माद॒स्मा दि॒तोऽमुतः॑।"
+        },
+        {
+          "id": "ta-1-25-16",
+          "chunkNumber": 16,
+          "sanskrit": "अ॒ग्निर्वा॒युश्च॒ सूर्य॑श्च।"
+        },
+        {
+          "id": "ta-1-25-17",
+          "chunkNumber": 17,
+          "sanskrit": "स॒ह स॑ञ्चस्क॒रर्द्धि॑या॒ इति॑।"
+        },
+        {
+          "id": "ta-1-25-18",
+          "chunkNumber": 18,
+          "sanskrit": "वा॒य्वश्वा॑ रश्मि॒पत॑यः§11॥"
+        },
+        {
+          "id": "ta-1-25-19",
+          "chunkNumber": 19,
+          "sanskrit": "लो॒कं पृ॑णच्छि॒द्रं पृ॑ण यास्ति॒स्रः प॑रम॒जाः॥"
+        },
+        {
+          "id": "ta-1-25-20",
+          "chunkNumber": 20,
+          "sanskrit": "इ॒न्द्र॒घो॒षा वो॒ वसु॑भि§12 रे॒वा ह्ये॒वे§13 ति॑॥"
+        },
+        {
+          "id": "ta-1-25-21",
+          "chunkNumber": 21,
+          "sanskrit": "पञ्च॒ चित॑य॒ उप॑दधाति।"
+        },
+        {
+          "id": "ta-1-25-22",
+          "chunkNumber": 22,
+          "sanskrit": "पाङ्क्त॒ऽग्निः।"
+        },
+        {
+          "id": "ta-1-25-23",
+          "chunkNumber": 23,
+          "sanskrit": "यावा॑ने॒वाग्निः।"
+        },
+        {
+          "id": "ta-1-25-24",
+          "chunkNumber": 24,
+          "sanskrit": "तञ्चि॑नुते॥"
+        },
+        {
+          "id": "ta-1-25-25",
+          "chunkNumber": 25,
+          "sanskrit": "लो॒कं पृ॑णया द्वि॒तीया॒मुप॑दधाति।"
+        },
+        {
+          "id": "ta-1-25-26",
+          "chunkNumber": 26,
+          "sanskrit": "पञ्च॑पदा॒ वै वि॒राट्।"
+        },
+        {
+          "id": "ta-1-25-27",
+          "chunkNumber": 27,
+          "sanskrit": "तस्या॒ वा इ॒यं पादः॑।"
+        },
+        {
+          "id": "ta-1-25-28",
+          "chunkNumber": 28,
+          "sanskrit": "अ॒न्तरि॑ख्षं॒ पादः॑।"
+        },
+        {
+          "id": "ta-1-25-29",
+          "chunkNumber": 29,
+          "sanskrit": "द्यौः पादः॑।"
+        },
+        {
+          "id": "ta-1-25-30",
+          "chunkNumber": 30,
+          "sanskrit": "दिशः॒ पादः॑।"
+        },
+        {
+          "id": "ta-1-25-31",
+          "chunkNumber": 31,
+          "sanskrit": "प॒रोर॑जाः॒ पादः॑॥"
+        },
+        {
+          "id": "ta-1-25-32",
+          "chunkNumber": 32,
+          "sanskrit": "वि॒राज्ये॒व प्रति॑तिष्ठति।"
+        },
+        {
+          "id": "ta-1-25-33",
+          "chunkNumber": 33,
+          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+        },
+        {
+          "id": "ta-1-25-34",
+          "chunkNumber": 34,
+          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-26",
+      "title": "Prapāṭhaka 1 · Anuvāka 26",
+      "sectionNumber": 26,
+      "chunks": [
+        {
+          "id": "ta-1-26-1",
+          "chunkNumber": 1,
+          "sanskrit": "अ॒ग्निं प्र॒णीयो॑पसमा॒धाय॑।",
+          "section": 26
+        },
+        {
+          "id": "ta-1-26-2",
+          "chunkNumber": 2,
+          "sanskrit": "तम॒भित॑ ए॒ता अ॒बीष्ट॑का॒ उप॑दधाति।"
+        },
+        {
+          "id": "ta-1-26-3",
+          "chunkNumber": 3,
+          "sanskrit": "अ॒ग्नि॒हो॒त्रे द॑र्शपूर्णमा॒सयोः᳚।"
+        },
+        {
+          "id": "ta-1-26-4",
+          "chunkNumber": 4,
+          "sanskrit": "प॒शु॒ब॒न्धे चा॑तुर्मा॒स्येषु॑।"
+        },
+        {
+          "id": "ta-1-26-5",
+          "chunkNumber": 5,
+          "sanskrit": "अथो॑ आहुः।"
+        },
+        {
+          "id": "ta-1-26-6",
+          "chunkNumber": 6,
+          "sanskrit": "सर्वे॑षु यज्ञक्र॒तुष्विति॑॥"
+        },
+        {
+          "id": "ta-1-26-7",
+          "chunkNumber": 7,
+          "sanskrit": "अथ॑ हस्मा हारु॒णः स्वा॑य॒म्भुवः॑।"
+        },
+        {
+          "id": "ta-1-26-8",
+          "chunkNumber": 8,
+          "sanskrit": "सा॒वि॒त्रः सर्वो॒ऽग्निरित्यन॑नुषङ्गं मन्यामहे।"
+        },
+        {
+          "id": "ta-1-26-9",
+          "chunkNumber": 9,
+          "sanskrit": "नाना॒ वा ए॒तेषा᳚व्ँवी॒र्या॑णि॥"
+        },
+        {
+          "id": "ta-1-26-10",
+          "chunkNumber": 10,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते स॒त्रि॒य म॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-11",
+          "chunkNumber": 11,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-12",
+          "chunkNumber": 12,
+          "sanskrit": "सा॒वि॒त्र म॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-13",
+          "chunkNumber": 13,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-14",
+          "chunkNumber": 14,
+          "sanskrit": "ना॒चि॒के॒त म॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-15",
+          "chunkNumber": 15,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-16",
+          "chunkNumber": 16,
+          "sanskrit": "चा॒तु॒र्॒हो॒त्रि॒यम॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-17",
+          "chunkNumber": 17,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-18",
+          "chunkNumber": 18,
+          "sanskrit": "वै॒श्व॒सृ॒ज म॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-19",
+          "chunkNumber": 19,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते उ॒पा॒नु॒वा॒क्य॑मा॒शु म॒ग्निञ्चि॑न्वा॒नः।"
+        },
+        {
+          "id": "ta-1-26-20",
+          "chunkNumber": 20,
+          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-21",
+          "chunkNumber": 21,
+          "sanskrit": "इ॒ममा॑रुणकेतुक म॒ग्निञ्चि॑न्वा॒न इति॑॥"
+        },
+        {
+          "id": "ta-1-26-22",
+          "chunkNumber": 22,
+          "sanskrit": "वृषा॒ वा अ॒ग्निः।"
+        },
+        {
+          "id": "ta-1-26-23",
+          "chunkNumber": 23,
+          "sanskrit": "वृषा॑णौ॒ सꣴस्फा॑लयेत्।"
+        },
+        {
+          "id": "ta-1-26-24",
+          "chunkNumber": 24,
+          "sanskrit": "ह॒न्येता᳚स्य य॒ज्ञः।"
+        },
+        {
+          "id": "ta-1-26-25",
+          "chunkNumber": 25,
+          "sanskrit": "तस्मा॒न्नानु॒षज्यः॑॥"
+        },
+        {
+          "id": "ta-1-26-26",
+          "chunkNumber": 26,
+          "sanskrit": "सोत्त॑रवे॒दिषु॑ क्र॒तुषु॑ चिन्वीत।"
+        },
+        {
+          "id": "ta-1-26-27",
+          "chunkNumber": 27,
+          "sanskrit": "उ॒त्त॒र॒वे॒द्याꣴ ह्य॑ग्निश्ची॒यते᳚॥"
+        },
+        {
+          "id": "ta-1-26-28",
+          "chunkNumber": 28,
+          "sanskrit": "प्र॒जाका॑मश्चिन्वीत प्रा॒जा॒प॒त्यो वा ए॒षो᳚ऽग्निः।"
+        },
+        {
+          "id": "ta-1-26-29",
+          "chunkNumber": 29,
+          "sanskrit": "प्रा॒जा॒प॒त्याः प्र॒जाः।"
+        },
+        {
+          "id": "ta-1-26-30",
+          "chunkNumber": 30,
+          "sanskrit": "प्र॒जावा᳚न् भवति।"
+        },
+        {
+          "id": "ta-1-26-31",
+          "chunkNumber": 31,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-26-32",
+          "chunkNumber": 32,
+          "sanskrit": "प॒शुका॑मश्चिन्वीत।"
+        },
+        {
+          "id": "ta-1-26-33",
+          "chunkNumber": 33,
+          "sanskrit": "सं॒ज्ञान॒व्ँवा ए॒तत् प॑शू॒नाम्।"
+        },
+        {
+          "id": "ta-1-26-34",
+          "chunkNumber": 34,
+          "sanskrit": "यदापः॑।"
+        },
+        {
+          "id": "ta-1-26-35",
+          "chunkNumber": 35,
+          "sanskrit": "प॒शू॒नामे॒व स॒ज्ञांने॒ ऽग्निञ्चि॑नुते।"
+        },
+        {
+          "id": "ta-1-26-36",
+          "chunkNumber": 36,
+          "sanskrit": "प॒शु॒मान् भ॑वति।"
+        },
+        {
+          "id": "ta-1-26-37",
+          "chunkNumber": 37,
+          "sanskrit": "य ए॒वव्ँवेद॑ वृष्टि॑कामश्चिन्वीत।"
+        },
+        {
+          "id": "ta-1-26-38",
+          "chunkNumber": 38,
+          "sanskrit": "आपो॒ वै वृष्टिः॑।"
+        },
+        {
+          "id": "ta-1-26-39",
+          "chunkNumber": 39,
+          "sanskrit": "प॒र्जन्यो॒ वर्षु॑को भवति।"
+        },
+        {
+          "id": "ta-1-26-40",
+          "chunkNumber": 40,
+          "sanskrit": "य ए॒वव्ँवेद॑॥"
+        },
+        {
+          "id": "ta-1-26-41",
+          "chunkNumber": 41,
+          "sanskrit": "आ॒म॒या॒वी चि॑न्वीत।"
+        },
+        {
+          "id": "ta-1-26-42",
+          "chunkNumber": 42,
+          "sanskrit": "आपो॒ वै भे॑ष॒जम्।"
+        },
+        {
+          "id": "ta-1-26-43",
+          "chunkNumber": 43,
+          "sanskrit": "भे॒ष॒जमे॒वास्मै॑ करोति।"
+        },
+        {
+          "id": "ta-1-26-44",
+          "chunkNumber": 44,
+          "sanskrit": "सर्व॒मायु॑रेति॥"
+        },
+        {
+          "id": "ta-1-26-45",
+          "chunkNumber": 45,
+          "sanskrit": "अ॒भि॒चर॑ꣴ श्चिन्वीत।"
+        },
+        {
+          "id": "ta-1-26-46",
+          "chunkNumber": 46,
+          "sanskrit": "वज्रो॒ वा आपः॑ वज्र॑मे॒व भ्रातृ॑व्येभ्यः॒ प्रह॑रति।"
+        },
+        {
+          "id": "ta-1-26-47",
+          "chunkNumber": 47,
+          "sanskrit": "स्तृ॒णु॒त ए॑नम्॥"
+        },
+        {
+          "id": "ta-1-26-48",
+          "chunkNumber": 48,
+          "sanskrit": "तेज॑स्कामो॒ यश॑स्कामः।"
+        },
+        {
+          "id": "ta-1-26-49",
+          "chunkNumber": 49,
+          "sanskrit": "ब्र॒ह्म॒व॒र्च॒सका॑मः स्व॒र्गका॑मश्चिन्वीत।"
+        },
+        {
+          "id": "ta-1-26-50",
+          "chunkNumber": 50,
+          "sanskrit": "ए॒ता व॒द्वा वा᳚स्ति।"
+        },
+        {
+          "id": "ta-1-26-51",
+          "chunkNumber": 51,
+          "sanskrit": "याव॑दे॒तत्।"
+        },
+        {
+          "id": "ta-1-26-52",
+          "chunkNumber": 52,
+          "sanskrit": "याव॑दे॒वास्ति॑।"
+        },
+        {
+          "id": "ta-1-26-53",
+          "chunkNumber": 53,
+          "sanskrit": "तदव॑रुन्धे॥"
+        },
+        {
+          "id": "ta-1-26-54",
+          "chunkNumber": 54,
+          "sanskrit": "तस्यै॒ तद्व्र॒तम्।"
+        },
+        {
+          "id": "ta-1-26-55",
+          "chunkNumber": 55,
+          "sanskrit": "वर्ष॑ति॒ न धा॑वेत् अ॒मृत॒व्ँवा आपः॑।"
+        },
+        {
+          "id": "ta-1-26-56",
+          "chunkNumber": 56,
+          "sanskrit": "अ॒मृत॒स्यान॑न्तरित्यै॥"
+        },
+        {
+          "id": "ta-1-26-57",
+          "chunkNumber": 57,
+          "sanskrit": "नाफ्सुमूत्र॑पुरी॒षङ्कु॑र्यात्।"
+        },
+        {
+          "id": "ta-1-26-58",
+          "chunkNumber": 58,
+          "sanskrit": "न निष्ठी॑वेत्।"
+        },
+        {
+          "id": "ta-1-26-59",
+          "chunkNumber": 59,
+          "sanskrit": "न वि॒वस॑नः स्नायात्।"
+        },
+        {
+          "id": "ta-1-26-60",
+          "chunkNumber": 60,
+          "sanskrit": "गुह्यो॒ वा ए॒षो᳚ऽग्निः।"
+        },
+        {
+          "id": "ta-1-26-61",
+          "chunkNumber": 61,
+          "sanskrit": "ए॒तस्या॒ग्ने रन॑ति दाहाय॥"
+        },
+        {
+          "id": "ta-1-26-62",
+          "chunkNumber": 62,
+          "sanskrit": "न पु॑ष्करप॒र्णानि॒ हिर॑ण्य॒व्ँवाऽधि॒तिष्ठे᳚त्।"
+        },
+        {
+          "id": "ta-1-26-63",
+          "chunkNumber": 63,
+          "sanskrit": "ए॒तस्या॒ग्नेरन॑भ्यारोहाय॥"
+        },
+        {
+          "id": "ta-1-26-64",
+          "chunkNumber": 64,
+          "sanskrit": "न कूर्म॒स्याश्नी॑यात्।"
+        },
+        {
+          "id": "ta-1-26-65",
+          "chunkNumber": 65,
+          "sanskrit": "नोद॒कस्या॒घातु॑का॒न्येन॑मोद॒कानि॑ भवन्ति।"
+        },
+        {
+          "id": "ta-1-26-66",
+          "chunkNumber": 66,
+          "sanskrit": "अ॒घातु॑का॒ आपः॑।"
+        },
+        {
+          "id": "ta-1-26-67",
+          "chunkNumber": 67,
+          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+        },
+        {
+          "id": "ta-1-26-68",
+          "chunkNumber": 68,
+          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-27",
+      "title": "Prapāṭhaka 1 · Anuvāka 27",
+      "sectionNumber": 27,
+      "chunks": [
+        {
+          "id": "ta-1-27-1",
+          "chunkNumber": 1,
+          "sanskrit": "इ॒मा नु॑कं॒ भुव॑ना सीषधेम।",
+          "section": 27
+        },
+        {
+          "id": "ta-1-27-2",
+          "chunkNumber": 2,
+          "sanskrit": "इन्द्र॑श्च॒ विश्वे॑च दे॒वाः॥"
+        },
+        {
+          "id": "ta-1-27-3",
+          "chunkNumber": 3,
+          "sanskrit": "य॒ज्ञञ्च॑ नस्त॒न्वञ्च॑ प्र॒जाञ्च॑।"
+        },
+        {
+          "id": "ta-1-27-4",
+          "chunkNumber": 4,
+          "sanskrit": "आ॒दि॒त्यैरिन्दः॑ स॒ह सी॑षधातु॥"
+        },
+        {
+          "id": "ta-1-27-5",
+          "chunkNumber": 5,
+          "sanskrit": "आ॒दि॒त्यैरिन्द्रः॒ सग॑णोम॒रुद्भिः॑।"
+        },
+        {
+          "id": "ta-1-27-6",
+          "chunkNumber": 6,
+          "sanskrit": "अ॒स्माकं॑ भूत्ववि॒ता त॒नूना᳚म्॥"
+        },
+        {
+          "id": "ta-1-27-7",
+          "chunkNumber": 7,
+          "sanskrit": "आप्ल॑वस्व॒ प्रप्ल॑वस्व।"
+        },
+        {
+          "id": "ta-1-27-8",
+          "chunkNumber": 8,
+          "sanskrit": "आ॒ण्डी भ॑व ज॒ मा मु॒हुः।"
+        },
+        {
+          "id": "ta-1-27-9",
+          "chunkNumber": 9,
+          "sanskrit": "सुखादीन्दुः॑ खनि॒धनाम्।"
+        },
+        {
+          "id": "ta-1-27-10",
+          "chunkNumber": 10,
+          "sanskrit": "प्रति॑मुञ्चस्व॒ स्वां पु॒रम् मरी॑चयः स्वायंभु॒वाः।"
+        },
+        {
+          "id": "ta-1-27-11",
+          "chunkNumber": 11,
+          "sanskrit": "ये श॑री॒राण्य॑ कल्पयन्न्।"
+        },
+        {
+          "id": "ta-1-27-12",
+          "chunkNumber": 12,
+          "sanskrit": "ते ते॑ दे॒हङ्क॑ल्पयन्तु।"
+        },
+        {
+          "id": "ta-1-27-13",
+          "chunkNumber": 13,
+          "sanskrit": "मा च॑ ते॒ ख्या स्म॑ तीरिषत्॥"
+        },
+        {
+          "id": "ta-1-27-14",
+          "chunkNumber": 14,
+          "sanskrit": "उत्ति॑ष्ठत॒ मा स्व॑प्त।"
+        },
+        {
+          "id": "ta-1-27-15",
+          "chunkNumber": 15,
+          "sanskrit": "अ॒ग्निमि॑च्छद्ध्वं॒ भार॑ताः।"
+        },
+        {
+          "id": "ta-1-27-16",
+          "chunkNumber": 16,
+          "sanskrit": "राज्ञः॒ सोम॑स्य तृ॒प्तासः॑।"
+        },
+        {
+          "id": "ta-1-27-17",
+          "chunkNumber": 17,
+          "sanskrit": "सूर्ये॑ण स॒युजो॑षसः॥"
+        },
+        {
+          "id": "ta-1-27-18",
+          "chunkNumber": 18,
+          "sanskrit": "युवा॑ सु॒वासाः᳚§14॥"
+        },
+        {
+          "id": "ta-1-27-19",
+          "chunkNumber": 19,
+          "sanskrit": "अ॒ष्टाच॑क्रा॒ नव॑द्वारा दे॒वानां॒ पूर॑यो॒द्ध्या।"
+        },
+        {
+          "id": "ta-1-27-20",
+          "chunkNumber": 20,
+          "sanskrit": "तस्या॑ꣳ हिरण्म॑यः को॒शः।"
+        },
+        {
+          "id": "ta-1-27-21",
+          "chunkNumber": 21,
+          "sanskrit": "स्व॒र्गो लो॒को ज्योति॒षा ऽऽवृ॑तः॥"
+        },
+        {
+          "id": "ta-1-27-22",
+          "chunkNumber": 22,
+          "sanskrit": "यो वै तां᳚ ब्रह्म॑णो वे॒द।"
+        },
+        {
+          "id": "ta-1-27-23",
+          "chunkNumber": 23,
+          "sanskrit": "अ॒मृते॑नावृ॒तां पु॑रीम्।"
+        },
+        {
+          "id": "ta-1-27-24",
+          "chunkNumber": 24,
+          "sanskrit": "तस्मै᳚ ब्रह्म च॑ ब्रह्मा॒ च।"
+        },
+        {
+          "id": "ta-1-27-25",
+          "chunkNumber": 25,
+          "sanskrit": "आ॒युः कीर्तिं॑ प्र॒जान्द॑दुः॥"
+        },
+        {
+          "id": "ta-1-27-26",
+          "chunkNumber": 26,
+          "sanskrit": "वि॒भ्राज॑माना॒ꣳ॒ हरि॑णीम्।"
+        },
+        {
+          "id": "ta-1-27-27",
+          "chunkNumber": 27,
+          "sanskrit": "य॒शसा॑ संप॒रीवृ॑ताम्।"
+        },
+        {
+          "id": "ta-1-27-28",
+          "chunkNumber": 28,
+          "sanskrit": "पुर॑ꣳ हिरण्म॑यीं ब्र॒ह्मा वि॒वेशा॑प॒राजि॑ता॥"
+        },
+        {
+          "id": "ta-1-27-29",
+          "chunkNumber": 29,
+          "sanskrit": "पराङ्गेत्य॑ (पराङत्य॑) ज्याम॒यी।"
+        },
+        {
+          "id": "ta-1-27-30",
+          "chunkNumber": 30,
+          "sanskrit": "पराङ्गेत्य॑ (पराङत्य॑) नाश॒की।"
+        },
+        {
+          "id": "ta-1-27-31",
+          "chunkNumber": 31,
+          "sanskrit": "इ॒ह चा॑मुत्र॑ चान्वे॒ति।"
+        },
+        {
+          "id": "ta-1-27-32",
+          "chunkNumber": 32,
+          "sanskrit": "वि॒द्वान् दे॑वासु॒रानु॑भ॒यान्॥"
+        },
+        {
+          "id": "ta-1-27-33",
+          "chunkNumber": 33,
+          "sanskrit": "यत्कु॑मा॒री म॒न्द्रय॑ते।"
+        },
+        {
+          "id": "ta-1-27-34",
+          "chunkNumber": 34,
+          "sanskrit": "य॒द्यो॒षिद्यत्प॑ति॒व्रता᳚।"
+        },
+        {
+          "id": "ta-1-27-35",
+          "chunkNumber": 35,
+          "sanskrit": "अरि॑ष्ट॒य्ँयत्किञ्च॑ क्रि॒यते᳚।"
+        },
+        {
+          "id": "ta-1-27-36",
+          "chunkNumber": 36,
+          "sanskrit": "अ॒ग्निस्तदनु॑ वेधति॥"
+        },
+        {
+          "id": "ta-1-27-37",
+          "chunkNumber": 37,
+          "sanskrit": "अ॒शृता॑सः शृ॑तास॒श्च य॒ज्वानो॒ येऽप्य॑य॒ज्वनः॑।"
+        },
+        {
+          "id": "ta-1-27-38",
+          "chunkNumber": 38,
+          "sanskrit": "स्व॑र्यन्तो॒ नापे᳚ख्षन्ते।"
+        },
+        {
+          "id": "ta-1-27-39",
+          "chunkNumber": 39,
+          "sanskrit": "इन्द्र॑म॒ग्निञ्च॑ ये वि॒दुः॥"
+        },
+        {
+          "id": "ta-1-27-40",
+          "chunkNumber": 40,
+          "sanskrit": "सिक॑ता इव स॒य्ँयन्ति॑।"
+        },
+        {
+          "id": "ta-1-27-41",
+          "chunkNumber": 41,
+          "sanskrit": "र॒श्मिभिः॑समु॒दीरि॑ताः।"
+        },
+        {
+          "id": "ta-1-27-42",
+          "chunkNumber": 42,
+          "sanskrit": "अ॒स्माल्लो॒काद॑मुष्मा॒च्च।"
+        },
+        {
+          "id": "ta-1-27-43",
+          "chunkNumber": 43,
+          "sanskrit": "ऋ॒षिभि॑रदात्पृ॒श्निभिः॑॥"
+        },
+        {
+          "id": "ta-1-27-44",
+          "chunkNumber": 44,
+          "sanskrit": "अपे॑त॒ वीत॒ वि च॑ सर्प॒तातः॑।"
+        },
+        {
+          "id": "ta-1-27-45",
+          "chunkNumber": 45,
+          "sanskrit": "येऽत्र॒ स्थ पु॑रा॒णा ये च॒ नूत॑नाः।"
+        },
+        {
+          "id": "ta-1-27-46",
+          "chunkNumber": 46,
+          "sanskrit": "अहो॑भिर॒द्भिर॒क्तुभि॒र्व्य॑क्तम् य॒मो द॑दात्वव॒सान॑मस्मै॥"
+        },
+        {
+          "id": "ta-1-27-47",
+          "chunkNumber": 47,
+          "sanskrit": "नृ मु॑णन्तु नृ पा॒त्वर्यः॑।"
+        },
+        {
+          "id": "ta-1-27-48",
+          "chunkNumber": 48,
+          "sanskrit": "अ॒कृ॒ष्टा ये च॒ कृष्ट॑जाः।"
+        },
+        {
+          "id": "ta-1-27-49",
+          "chunkNumber": 49,
+          "sanskrit": "कु॒मारी॑षु क॒नीनी॑षु।"
+        },
+        {
+          "id": "ta-1-27-50",
+          "chunkNumber": 50,
+          "sanskrit": "जा॒रिणी॑षु च॒ ये हि॒ताः॥"
+        },
+        {
+          "id": "ta-1-27-51",
+          "chunkNumber": 51,
+          "sanskrit": "रेतः॑ पीता॒ आण्ड॑पीताः।"
+        },
+        {
+          "id": "ta-1-27-52",
+          "chunkNumber": 52,
+          "sanskrit": "अङ्गा॑रेषु च॒ ये हु॒ताः।"
+        },
+        {
+          "id": "ta-1-27-53",
+          "chunkNumber": 53,
+          "sanskrit": "उ॒भया᳚न् पुत्र॑ पौत्र॒कान्।"
+        },
+        {
+          "id": "ta-1-27-54",
+          "chunkNumber": 54,
+          "sanskrit": "यु॒वे॒ऽहय्ँय॒मराज॑गान्॥"
+        },
+        {
+          "id": "ta-1-27-55",
+          "chunkNumber": 55,
+          "sanskrit": "श॒तमिन्नु श॒रदः॑§15॥"
+        },
+        {
+          "id": "ta-1-27-56",
+          "chunkNumber": 56,
+          "sanskrit": "अदो॒ यद्ब्रह्म॑ विल॒बम्।"
+        },
+        {
+          "id": "ta-1-27-57",
+          "chunkNumber": 57,
+          "sanskrit": "पि॒तृ॒णाञ्च॑ य॒मस्य॑ च।"
+        },
+        {
+          "id": "ta-1-27-58",
+          "chunkNumber": 58,
+          "sanskrit": "वरु॑ण॒स्याश्वि॑नोर॒ग्नेः।"
+        },
+        {
+          "id": "ta-1-27-59",
+          "chunkNumber": 59,
+          "sanskrit": "म॒रुता᳚ञ्च वि॒हाय॑साम्॥"
+        },
+        {
+          "id": "ta-1-27-60",
+          "chunkNumber": 60,
+          "sanskrit": "का॒म॒प्र॒यव॑णं मे अस्तु।"
+        },
+        {
+          "id": "ta-1-27-61",
+          "chunkNumber": 61,
+          "sanskrit": "स ह्ये॑वास्मि॑ स॒नात॑नः।"
+        },
+        {
+          "id": "ta-1-27-62",
+          "chunkNumber": 62,
+          "sanskrit": "इति नाको ब्रह्मिश्रवो॑ रायो॒ धनम्।"
+        },
+        {
+          "id": "ta-1-27-63",
+          "chunkNumber": 63,
+          "sanskrit": "पु॒त्रानापो॑ दे॒वीरि॒हाहि॑ता"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-28",
+      "title": "Prapāṭhaka 1 · Anuvāka 28",
+      "sectionNumber": 28,
+      "chunks": [
+        {
+          "id": "ta-1-28-1",
+          "chunkNumber": 1,
+          "sanskrit": "विशी᳚र्ष्णीं॒ गृद्ध्र॑शीर्ष्णीञ्च।",
+          "section": 28
+        },
+        {
+          "id": "ta-1-28-2",
+          "chunkNumber": 2,
+          "sanskrit": "अपेतो॑ निर्ऋ॒तिꣳ ह॑थः।"
+        },
+        {
+          "id": "ta-1-28-3",
+          "chunkNumber": 3,
+          "sanskrit": "परिबाधꣴ श्वे॑तकु॒ख्षम्।"
+        },
+        {
+          "id": "ta-1-28-4",
+          "chunkNumber": 4,
+          "sanskrit": "नि॒जङ्घ॑ꣳ शब॒लोद॑रम्॥"
+        },
+        {
+          "id": "ta-1-28-5",
+          "chunkNumber": 5,
+          "sanskrit": "स॒ तान्वा॒च्याय॑या स॒ह।"
+        },
+        {
+          "id": "ta-1-28-6",
+          "chunkNumber": 6,
+          "sanskrit": "अग्ने॒ नाश॑य स॒न्दृशः॑।"
+        },
+        {
+          "id": "ta-1-28-7",
+          "chunkNumber": 7,
+          "sanskrit": "ई॒र्ष्या॒सू॒ये बु॑भु॒ख्षाम्।"
+        },
+        {
+          "id": "ta-1-28-8",
+          "chunkNumber": 8,
+          "sanskrit": "म॒न्युं कृ॒त्यां च॑ दीधिरे।"
+        },
+        {
+          "id": "ta-1-28-9",
+          "chunkNumber": 9,
+          "sanskrit": "रथे॑न किꣳशु॒काव॑ता।"
+        },
+        {
+          "id": "ta-1-28-10",
+          "chunkNumber": 10,
+          "sanskrit": "अग्ने॒ नाश॑य स॒न्दृशः॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-29",
+      "title": "Prapāṭhaka 1 · Anuvāka 29",
+      "sectionNumber": 29,
+      "chunks": [
+        {
+          "id": "ta-1-29-1",
+          "chunkNumber": 1,
+          "sanskrit": "प॒र्जन्या॑य॒ प्रगा॑यत।",
+          "section": 29
+        },
+        {
+          "id": "ta-1-29-2",
+          "chunkNumber": 2,
+          "sanskrit": "दि॒वस्पु॒त्राय॑ मी॒ढुषे᳚।"
+        },
+        {
+          "id": "ta-1-29-3",
+          "chunkNumber": 3,
+          "sanskrit": "स नो॑ य॒वस॑मिच्छतु॥"
+        },
+        {
+          "id": "ta-1-29-4",
+          "chunkNumber": 4,
+          "sanskrit": "इ॒दव्ँवचः॑ प॒र्जन्या॑य स्व॒राजे᳚।"
+        },
+        {
+          "id": "ta-1-29-5",
+          "chunkNumber": 5,
+          "sanskrit": "हृ॒दो अ॒स्त्वन्त॑र॒न्तद्यु॑योत।"
+        },
+        {
+          "id": "ta-1-29-6",
+          "chunkNumber": 6,
+          "sanskrit": "म॒यो॒भूर्वातो॑ वि॒श्वकृ॑ष्टयः सन्त्व॒स्मे।"
+        },
+        {
+          "id": "ta-1-29-7",
+          "chunkNumber": 7,
+          "sanskrit": "सु॒पि॒प्प॒ला ओष॑धीर् दे॒वगो॑पाः॥"
+        },
+        {
+          "id": "ta-1-29-8",
+          "chunkNumber": 8,
+          "sanskrit": "यो गर्भ॒मोष॑धीनाम्।"
+        },
+        {
+          "id": "ta-1-29-9",
+          "chunkNumber": 9,
+          "sanskrit": "गवा᳚ङ्कृ॒णोत्यर्व॑ताम्।"
+        },
+        {
+          "id": "ta-1-29-10",
+          "chunkNumber": 10,
+          "sanskrit": "प॒र्जन्यः॑ पुरु॒षीणा᳚म्"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-30",
+      "title": "Prapāṭhaka 1 · Anuvāka 30",
+      "sectionNumber": 30,
+      "chunks": [
+        {
+          "id": "ta-1-30-1",
+          "chunkNumber": 1,
+          "sanskrit": "पुन॑र्मामैत्विन्द्रि॒यम्।",
+          "section": 30
+        },
+        {
+          "id": "ta-1-30-2",
+          "chunkNumber": 2,
+          "sanskrit": "पुन॒रायुः॒ पुन॒र्भगः॑।"
+        },
+        {
+          "id": "ta-1-30-3",
+          "chunkNumber": 3,
+          "sanskrit": "पुन॒र् ब्राह्म॑णमैतु मा।"
+        },
+        {
+          "id": "ta-1-30-4",
+          "chunkNumber": 4,
+          "sanskrit": "पुन॒र् द्रवि॑ण मैतु मा॥"
+        },
+        {
+          "id": "ta-1-30-5",
+          "chunkNumber": 5,
+          "sanskrit": "यन्मे॒ऽद्य रेतः॑ पृथि॒वीमस्का॑न्।"
+        },
+        {
+          "id": "ta-1-30-6",
+          "chunkNumber": 6,
+          "sanskrit": "यदोष॑धीर॒प्यस॑र॒द्यदापः॑।"
+        },
+        {
+          "id": "ta-1-30-7",
+          "chunkNumber": 7,
+          "sanskrit": "इ॒दन्तत् पुन॒राद॑दे।"
+        },
+        {
+          "id": "ta-1-30-8",
+          "chunkNumber": 8,
+          "sanskrit": "दी॒र्घा॒यु॒त्वाय॒ वर्च॑से॥"
+        },
+        {
+          "id": "ta-1-30-9",
+          "chunkNumber": 9,
+          "sanskrit": "यन्मे॒ रेतः॒ प्रसि॑च्यते।"
+        },
+        {
+          "id": "ta-1-30-10",
+          "chunkNumber": 10,
+          "sanskrit": "यन्म॒ आजा॑यते॒ पुनः॑।"
+        },
+        {
+          "id": "ta-1-30-11",
+          "chunkNumber": 11,
+          "sanskrit": "तेन॑ माम॒मृतं॑ कुरु।"
+        },
+        {
+          "id": "ta-1-30-12",
+          "chunkNumber": 12,
+          "sanskrit": "तेन॑ सुप्र॒जस॑ङ्कुरु"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-31",
+      "title": "Prapāṭhaka 1 · Anuvāka 31",
+      "sectionNumber": 31,
+      "chunks": [
+        {
+          "id": "ta-1-31-1",
+          "chunkNumber": 1,
+          "sanskrit": "अ॒द्भ्यस्तिरो॒धा जा॑यत।",
+          "section": 31
+        },
+        {
+          "id": "ta-1-31-2",
+          "chunkNumber": 2,
+          "sanskrit": "तव॑ वैश्रव॒णः स॑दा।"
+        },
+        {
+          "id": "ta-1-31-3",
+          "chunkNumber": 3,
+          "sanskrit": "तिरो॑ धेहि सप॒त्नान्नः॑।"
+        },
+        {
+          "id": "ta-1-31-4",
+          "chunkNumber": 4,
+          "sanskrit": "ये अपो॒ऽश्नन्ति॑ केच॒न॥"
+        },
+        {
+          "id": "ta-1-31-5",
+          "chunkNumber": 5,
+          "sanskrit": "त्वा॒ष्ट्रीं मा॒याव्ँव᳚श्रव॒णः।"
+        },
+        {
+          "id": "ta-1-31-6",
+          "chunkNumber": 6,
+          "sanskrit": "रथ॑ꣳ सहस्र॒ वन्धु॑रम्।"
+        },
+        {
+          "id": "ta-1-31-7",
+          "chunkNumber": 7,
+          "sanskrit": "पु॒रु॒श्च॒क्रꣳ सह॑स्राश्वम्।"
+        },
+        {
+          "id": "ta-1-31-8",
+          "chunkNumber": 8,
+          "sanskrit": "आस्था॒ याया॑हि नो ब॒लिम्॥"
+        },
+        {
+          "id": "ta-1-31-9",
+          "chunkNumber": 9,
+          "sanskrit": "यस्मै॑ भू॒तानि॑ ब॒लिमाव॑हन्ति।"
+        },
+        {
+          "id": "ta-1-31-10",
+          "chunkNumber": 10,
+          "sanskrit": "धन॒ङ्गावो॒ हस्ति॒ हिर॑ण्य॒मश्वा॑न् असा॑म सुम॒तौ य॒ज्ञिय॑स्य।"
+        },
+        {
+          "id": "ta-1-31-11",
+          "chunkNumber": 11,
+          "sanskrit": "श्रियं॒ बिभ्र॒तो ऽन्न॑मुखीव्ँवि॒राज᳚म्॥"
+        },
+        {
+          "id": "ta-1-31-12",
+          "chunkNumber": 12,
+          "sanskrit": "सु॒द॒र्॒श॒ने च॑ क्रौ॒ञ्चे च॑।"
+        },
+        {
+          "id": "ta-1-31-13",
+          "chunkNumber": 13,
+          "sanskrit": "मै॒ना॒गे च॑ म॒हागि॑रौ।"
+        },
+        {
+          "id": "ta-1-31-14",
+          "chunkNumber": 14,
+          "sanskrit": "श॒तद्वा॒ट्टर॑गम॒न्ता (स॒तद्वा॒ट्टर॑गम॒न्ता)।"
+        },
+        {
+          "id": "ta-1-31-15",
+          "chunkNumber": 15,
+          "sanskrit": "स॒ꣳ॒हार्यं॒ नग॑रं॒ तव॑॥"
+        },
+        {
+          "id": "ta-1-31-16",
+          "chunkNumber": 16,
+          "sanskrit": "इति मन्त्राः᳚।"
+        },
+        {
+          "id": "ta-1-31-17",
+          "chunkNumber": 17,
+          "sanskrit": "कल्पो॑ऽत ऊ॒द्र्ध्वम्॥"
+        },
+        {
+          "id": "ta-1-31-18",
+          "chunkNumber": 18,
+          "sanskrit": "यदि॒ बलि॒ꣳ॒ हरे᳚त्।"
+        },
+        {
+          "id": "ta-1-31-19",
+          "chunkNumber": 19,
+          "sanskrit": "हि॒र॒ण्य॒ना॒भये॑ वितु॒दये॑ कौबे॒राया॒यं ब॑लिः सर्वभूताधिपतये न॑म इ॒ति।"
+        },
+        {
+          "id": "ta-1-31-20",
+          "chunkNumber": 20,
+          "sanskrit": "अथ बलिꣳ हृत्वोप॑तिष्ठे॒त॥"
+        },
+        {
+          "id": "ta-1-31-21",
+          "chunkNumber": 21,
+          "sanskrit": "ख्ष॒त्रं ख्ष॒त्रव्ँवै᳚श्रव॒णः।"
+        },
+        {
+          "id": "ta-1-31-22",
+          "chunkNumber": 22,
+          "sanskrit": "ब्राह्मणा॑ वय॒ꣴ॒ स्मः।"
+        },
+        {
+          "id": "ta-1-31-23",
+          "chunkNumber": 23,
+          "sanskrit": "नम॑स्ते अस्तु॒ मा मा॑ हिꣳसीः।"
+        },
+        {
+          "id": "ta-1-31-24",
+          "chunkNumber": 24,
+          "sanskrit": "अस्मात् प्रविश्यान्न॑मद्धी॒ति॥"
+        },
+        {
+          "id": "ta-1-31-25",
+          "chunkNumber": 25,
+          "sanskrit": "अथ तमग्निमा॑दधी॒त।"
+        },
+        {
+          "id": "ta-1-31-26",
+          "chunkNumber": 26,
+          "sanskrit": "यस्मिन्ने तत्कर्म प्र॑युञ्जी॒त॥"
+        },
+        {
+          "id": "ta-1-31-27",
+          "chunkNumber": 27,
+          "sanskrit": "ति॒रोधा॒ भूः।"
+        },
+        {
+          "id": "ta-1-31-28",
+          "chunkNumber": 28,
+          "sanskrit": "ति॒रोधा॒ भुवः॑ ति॒रोधाः॒ स्वः॑।"
+        },
+        {
+          "id": "ta-1-31-29",
+          "chunkNumber": 29,
+          "sanskrit": "ति॒रोधा॒ भूर्भुव॒स्स्वः॑।"
+        },
+        {
+          "id": "ta-1-31-30",
+          "chunkNumber": 30,
+          "sanskrit": "सर्वेषाल्ँलोकानामाधिपत्ये॑ सीदे॒ति॥"
+        },
+        {
+          "id": "ta-1-31-31",
+          "chunkNumber": 31,
+          "sanskrit": "अथ तमग्नि॑मिन्धी॒त।"
+        },
+        {
+          "id": "ta-1-31-32",
+          "chunkNumber": 32,
+          "sanskrit": "यस्मिन्ने तत्कर्म प्र॑युञ्जी॒त॥"
+        },
+        {
+          "id": "ta-1-31-33",
+          "chunkNumber": 33,
+          "sanskrit": "ति॒रोधा॒ भूः स्वाहा᳚।"
+        },
+        {
+          "id": "ta-1-31-34",
+          "chunkNumber": 34,
+          "sanskrit": "ति॒रोधा॒ भुवः॒ स्वाहा᳚।"
+        },
+        {
+          "id": "ta-1-31-35",
+          "chunkNumber": 35,
+          "sanskrit": "ति॒रोधाः॒ स्वः॑ स्वाहा᳚।"
+        },
+        {
+          "id": "ta-1-31-36",
+          "chunkNumber": 36,
+          "sanskrit": "ति॒रोधा॒ भूर्भुव॒स्स्व॑स्स्वाहा᳚॥"
+        },
+        {
+          "id": "ta-1-31-37",
+          "chunkNumber": 37,
+          "sanskrit": "यस्मिन्नस्य काले सर्वा आहुतीर्हुता॑ भवे॒युः अपि ब्राह्मण॑मुखी॒नाः।"
+        },
+        {
+          "id": "ta-1-31-38",
+          "chunkNumber": 38,
+          "sanskrit": "तस्मिन्नह्नः काले प्र॑युञ्जी॒त।"
+        },
+        {
+          "id": "ta-1-31-39",
+          "chunkNumber": 39,
+          "sanskrit": "परः॑ सु॒प्तज॑नाद्वे॒पि॥"
+        },
+        {
+          "id": "ta-1-31-40",
+          "chunkNumber": 40,
+          "sanskrit": "मा स्म प्रमाद्यन्त॑ माद्ध्या॒पयेत्।"
+        },
+        {
+          "id": "ta-1-31-41",
+          "chunkNumber": 41,
+          "sanskrit": "सर्वार्थाः᳚ सिद्ध्य॒न्ते।"
+        },
+        {
+          "id": "ta-1-31-42",
+          "chunkNumber": 42,
+          "sanskrit": "य ए॑वव्ँवे॒द।"
+        },
+        {
+          "id": "ta-1-31-43",
+          "chunkNumber": 43,
+          "sanskrit": "ख्षुद्ध्यन्निद॑मजा॒नताम्।"
+        },
+        {
+          "id": "ta-1-31-44",
+          "chunkNumber": 44,
+          "sanskrit": "सर्वार्था न॑ सिद्ध्य॒न्ते॥"
+        },
+        {
+          "id": "ta-1-31-45",
+          "chunkNumber": 45,
+          "sanskrit": "यस्ते॑ वि॒घातु॑को भ्रा॒ता।"
+        },
+        {
+          "id": "ta-1-31-46",
+          "chunkNumber": 46,
+          "sanskrit": "ममान्तर्हृ॑दये॒ श्रितः तस्मा॑ इ॒ममग्र॒ पिण्ड॑ञ्जुहोमि।"
+        },
+        {
+          "id": "ta-1-31-47",
+          "chunkNumber": 47,
+          "sanskrit": "स मे᳚ऽर्था॒न् मा विव॑धीत्।"
+        },
+        {
+          "id": "ta-1-31-48",
+          "chunkNumber": 48,
+          "sanskrit": "मयि॒ स्वाहा᳚॥"
+        },
+        {
+          "id": "ta-1-31-49",
+          "chunkNumber": 49,
+          "sanskrit": "रा॒जा॒धि॒रा॒जाय॑ प्रसह्य सा॒हिने᳚।"
+        },
+        {
+          "id": "ta-1-31-50",
+          "chunkNumber": 50,
+          "sanskrit": "नमो॑ व॒यव्ँवै᳚श्रव॒णाय॑ कुर्महे।"
+        },
+        {
+          "id": "ta-1-31-51",
+          "chunkNumber": 51,
+          "sanskrit": "स मे॒ कामा॒न् काम॒ कामा॑य॒ मह्य᳚म्।"
+        },
+        {
+          "id": "ta-1-31-52",
+          "chunkNumber": 52,
+          "sanskrit": "का॒मे॒श्व॒रो वै᳚श्रव॒णो द॑दातु।"
+        },
+        {
+          "id": "ta-1-31-53",
+          "chunkNumber": 53,
+          "sanskrit": "कु॒बे॒राय॑ वैश्रव॒णाय॑।"
+        },
+        {
+          "id": "ta-1-31-54",
+          "chunkNumber": 54,
+          "sanskrit": "म॒हा॒रा॒जाय॒ नमः॑।"
+        },
+        {
+          "id": "ta-1-31-55",
+          "chunkNumber": 55,
+          "sanskrit": "के॒तवो॒ अरु॑णासश्च।"
+        },
+        {
+          "id": "ta-1-31-56",
+          "chunkNumber": 56,
+          "sanskrit": "ऋ॒ष॒यो वात॑रश॒नाः।"
+        },
+        {
+          "id": "ta-1-31-57",
+          "chunkNumber": 57,
+          "sanskrit": "प्र॒ति॒ष्ठाꣳ श॒तधा॑ हि।"
+        },
+        {
+          "id": "ta-1-31-58",
+          "chunkNumber": 58,
+          "sanskrit": "स॒माहि॑तासो सहस्र॒धाय॑सम्।"
+        },
+        {
+          "id": "ta-1-31-59",
+          "chunkNumber": 59,
+          "sanskrit": "शि॒वा नः॒ शन्त॑मा भवन्तु।"
+        },
+        {
+          "id": "ta-1-31-60",
+          "chunkNumber": 60,
+          "sanskrit": "दि॒व्या आप॒ ओष॑धयः।"
+        },
+        {
+          "id": "ta-1-31-61",
+          "chunkNumber": 61,
+          "sanskrit": "सु॒मृ॒डी॒का सर॑स्वति।"
+        },
+        {
+          "id": "ta-1-31-62",
+          "chunkNumber": 62,
+          "sanskrit": "मा ते॒ व्यो॑म स॒न्दृशि॑"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-aranyaka-1-32",
+      "title": "Prapāṭhaka 1 · Anuvāka 32",
+      "sectionNumber": 32,
+      "chunks": [
+        {
+          "id": "ta-1-32-1",
+          "chunkNumber": 1,
+          "sanskrit": "सव्ँवथ्सरमेत॑द् व्रत॒ञ्चरेत्।",
+          "section": 32
+        },
+        {
+          "id": "ta-1-32-2",
+          "chunkNumber": 2,
+          "sanskrit": "द्वौ॑ वा मा॒सौ॥"
+        },
+        {
+          "id": "ta-1-32-3",
+          "chunkNumber": 3,
+          "sanskrit": "नियमः स॑मासे॒न॥"
+        },
+        {
+          "id": "ta-1-32-4",
+          "chunkNumber": 4,
+          "sanskrit": "तस्मिन् नियम॑ विशे॒षाः।"
+        },
+        {
+          "id": "ta-1-32-5",
+          "chunkNumber": 5,
+          "sanskrit": "त्रिषवणमुदको॑पस्प॒र्॒शी।"
+        },
+        {
+          "id": "ta-1-32-6",
+          "chunkNumber": 6,
+          "sanskrit": "चतुर्थ कालपान॑भक्तः॒ स्यात्।"
+        },
+        {
+          "id": "ta-1-32-7",
+          "chunkNumber": 7,
+          "sanskrit": "अहरहर्वा भैख्ष॑मश्न॒यात्।"
+        },
+        {
+          "id": "ta-1-32-8",
+          "chunkNumber": 8,
+          "sanskrit": "औदुम्बरीभिः समिद्भिरग्निं॑ परि॒चरेत्।"
+        },
+        {
+          "id": "ta-1-32-9",
+          "chunkNumber": 9,
+          "sanskrit": "पुनर्मा मैत्विन्द्रियमित्येतेनाऽनु॑वाके॒न।"
+        },
+        {
+          "id": "ta-1-32-10",
+          "chunkNumber": 10,
+          "sanskrit": "उद्धृत परिपूताभिरद्भिः कार्यं॑ कुर्वी॒त अ॑सञ्च॒यवान्।"
+        },
+        {
+          "id": "ta-1-32-11",
+          "chunkNumber": 11,
+          "sanskrit": "अग्नये वायवे॑ सूर्या॒य।"
+        },
+        {
+          "id": "ta-1-32-12",
+          "chunkNumber": 12,
+          "sanskrit": "ब्रह्मणे प्र॑जाप॒तये।"
+        },
+        {
+          "id": "ta-1-32-13",
+          "chunkNumber": 13,
+          "sanskrit": "चन्द्रमसे न॑ख्षत्रे॒भ्यः।"
+        },
+        {
+          "id": "ta-1-32-14",
+          "chunkNumber": 14,
+          "sanskrit": "ऋतुभ्यः सव्ँव॑थ्सरा॒य।"
+        },
+        {
+          "id": "ta-1-32-15",
+          "chunkNumber": 15,
+          "sanskrit": "वरुणायारुणायेति व्र॑तहो॒माः।"
+        },
+        {
+          "id": "ta-1-32-16",
+          "chunkNumber": 16,
+          "sanskrit": "प्र॒व॒र्ग्यव॑दादे॒शः।"
+        },
+        {
+          "id": "ta-1-32-17",
+          "chunkNumber": 17,
+          "sanskrit": "अरुणाः का᳚ण्ड ऋ॒षयः॥"
+        },
+        {
+          "id": "ta-1-32-18",
+          "chunkNumber": 18,
+          "sanskrit": "अरण्ये॑ऽधीयी॒रन्न्।"
+        },
+        {
+          "id": "ta-1-32-19",
+          "chunkNumber": 19,
+          "sanskrit": "भद्रंकर्णेभिरिति द्वे॑ जपि॒त्वा महानाम्नीभिरुदकꣳ स॑ꣴस्प॒र्श्य।"
+        },
+        {
+          "id": "ta-1-32-20",
+          "chunkNumber": 20,
+          "sanskrit": "तमाचा᳚र्यो द॒द्यात्।"
+        },
+        {
+          "id": "ta-1-32-21",
+          "chunkNumber": 21,
+          "sanskrit": "शिवानः शन्तमेत्योषधी॑राल॒भते।"
+        },
+        {
+          "id": "ta-1-32-22",
+          "chunkNumber": 22,
+          "sanskrit": "सुमृडीके॑ति भू॒मिम्।"
+        },
+        {
+          "id": "ta-1-32-23",
+          "chunkNumber": 23,
+          "sanskrit": "एवम॑पव॒र्गे।"
+        },
+        {
+          "id": "ta-1-32-24",
+          "chunkNumber": 24,
+          "sanskrit": "धे॑नुर् द॒ख्षिणा।"
+        },
+        {
+          "id": "ta-1-32-25",
+          "chunkNumber": 25,
+          "sanskrit": "कꣳ सव्ँवास॑श्च ख्षौ॒मम्।"
+        },
+        {
+          "id": "ta-1-32-26",
+          "chunkNumber": 26,
+          "sanskrit": "अन्य॑द्वा शु॒क्लम्।"
+        },
+        {
+          "id": "ta-1-32-27",
+          "chunkNumber": 27,
+          "sanskrit": "य॑था श॒क्ति वा।"
+        },
+        {
+          "id": "ta-1-32-28",
+          "chunkNumber": 28,
+          "sanskrit": "एवꣴ स्वाद्ध्याय॑ धर्मे॒ण।"
+        },
+        {
+          "id": "ta-1-32-29",
+          "chunkNumber": 29,
+          "sanskrit": "अरण्ये॑ऽधीयी॒त।"
+        },
+        {
+          "id": "ta-1-32-30",
+          "chunkNumber": 30,
+          "sanskrit": "तपस्वी पुण्यो भवति तपस्वी पु॑ण्यो भ॒वति"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "id": "rigveda-khila-sri",
+  "title": {
+    "sanskrit": "श्री सूक्तम्",
+    "transliteration": "Śrī Sūktam",
+    "english": "Śrī Sūkta (Ṛgveda Khila)"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "rigveda",
+    "vedaNote": "Rigveda Khila (RvKh 2.6), the appendix to the Rigveda.",
+    "place": {
+      "work": {
+        "sanskrit": "ऋग्वेद खिल",
+        "english": "Ṛgveda (Khila)"
+      },
+      "divisions": [
+        {
+          "kind": "khaṇḍa",
+          "n": 2
+        },
+        {
+          "kind": "sūkta",
+          "n": 6
+        }
+      ]
+    },
+    "source": "sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html)",
+    "status": "draft",
+    "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+    "deity": "Sri Mahalakshmi",
+    "categories": [
+      "Suktas",
+      "Devi",
+      "Rigveda"
+    ],
+    "summary": "The Śrī Sūkta, the hymn to Śrī (Lakṣmī), from the Khila appendix to the Ṛgveda (RvKh 2.6). The sixteen printed verse numerals give the ṛk level; each printed line is a pada.",
+    "remoteUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
+    "provenance": {
+      "upstreamUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
+      "upstreamRef": "2025-11-06",
+      "retrievedAt": "2026-10-14",
+      "parser": "sri@1",
+      "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+      "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org",
+      "sha256": "b434b9d9bf68d4d943975d1fe9f752f8dfaf3c77c35a2355da5bd92f769da91d"
+    }
+  },
+  "sections": [
+    {
+      "id": "rigveda-khila-sri-1",
+      "title": "Śrī Sūkta (RvKh 2.6)",
+      "sectionNumber": 1,
+      "chunks": [
+        {
+          "id": "rigveda-khila-sri-1-1",
+          "chunkNumber": 1,
+          "sanskrit": "ॐ ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-2",
+          "chunkNumber": 2,
+          "sanskrit": "हिर॑ण्यवर्णां॒ हरि॑णीं सु॒वर्ण॑रज॒तस्र॑जाम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-3",
+          "chunkNumber": 3,
+          "sanskrit": "च॒न्द्रां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒ आव॑ह ॥ १॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-4",
+          "chunkNumber": 4,
+          "sanskrit": "तां म॒ आव॑ह॒ जात॑वेदो ल॒क्ष्मीमन॑पगा॒मिनी᳚म् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-5",
+          "chunkNumber": 5,
+          "sanskrit": "यस्यां॒ हिर॑ण्यं वि॒न्देयं॒ गामश्वं॒ पुरु॑षान॒हम् ॥ २॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-6",
+          "chunkNumber": 6,
+          "sanskrit": "अ॒श्व॒पू॒र्वां र॑थम॒ध्यां ह॒स्तिना᳚दप्र॒बोधि॑नीम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-7",
+          "chunkNumber": 7,
+          "sanskrit": "श्रियं॑ दे॒वीमुप॑ह्वये॒ श्रीर्मा᳚दे॒वीर्जु॑षताम् ॥ ३॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-8",
+          "chunkNumber": 8,
+          "sanskrit": "कां॒ सो॒स्मि॒तां हिर॑ण्यप्रा॒कारा॑मा॒र्द्रां ज्वल॑न्तीं तृ॒प्तां त॒र्पय॑न्तीम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-9",
+          "chunkNumber": 9,
+          "sanskrit": "प॒द्मे॒ स्थि॒तां प॒द्मव॑र्णां॒ तामि॒होप॑ह्वये॒ श्रियम् ॥ ४॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-10",
+          "chunkNumber": 10,
+          "sanskrit": "च॒न्द्रां प्र॑भा॒सां य॒शसा॒ ज्वल॑न्तीं॒ श्रियं॑ लो॒के दे॒वजु॑ष्टामुदा॒राम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-11",
+          "chunkNumber": 11,
+          "sanskrit": "तां प॒द्मिनी॑मीं॒ शर॑णम॒हं प्रप॑द्येऽल॒क्ष्मीर्मे॑ नश्यतां॒ त्वां वृ॑णे ॥ ५॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-12",
+          "chunkNumber": 12,
+          "sanskrit": "आ॒दि॒त्यव॑र्णे॒ तप॒सोऽधि॑जा॒तो वन॒स्पति॒स्तव॑ वृ॒क्षोऽथ बि॒ल्वः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-13",
+          "chunkNumber": 13,
+          "sanskrit": "तस्य॒ फला᳚नि॒ तप॒सा नु॑दन्तु मा॒यान्त॑रा॒याश्च॑ बा॒ह्या अ॑ल॒क्ष्मीः ॥ ६॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-14",
+          "chunkNumber": 14,
+          "sanskrit": "उपै॑तु॒ मां दे॑वस॒खः की॒र्तिश्च॒ मणि॑ना स॒ह ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-15",
+          "chunkNumber": 15,
+          "sanskrit": "प्रा॒दु॒र्भू॒तोऽस्मि॑ राष्ट्रे॒ऽस्मिन् की॒र्तिमृ॑द्धिं द॒दातु॑ मे ॥ ७॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-16",
+          "chunkNumber": 16,
+          "sanskrit": "क्षुत्पि॑पा॒साम॑लां ज्ये॒ष्ठाम॑ल॒क्ष्मीं ना॑शया॒म्यहम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-17",
+          "chunkNumber": 17,
+          "sanskrit": "अभू॑ति॒मस॑मृद्धिं॒ च सर्वां॒ निर्णु॑द मे॒ गृहा᳚त् ॥ ८॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-18",
+          "chunkNumber": 18,
+          "sanskrit": "गं॒ध॒द्वा॒रां दु॑राध॒र्षां॒ नि॒त्यपु॑ष्टां करी॒षिणी᳚म् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-19",
+          "chunkNumber": 19,
+          "sanskrit": "ई॒श्वरी॑ꣳ सर्व॑भूता॒नां॒ तामि॒होप॑ह्वये॒ श्रियम् ॥ ९॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-20",
+          "chunkNumber": 20,
+          "sanskrit": "मन॑सः॒ काम॒माकू᳚तिं वा॒चः स॒त्यम॑शीमहि ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-21",
+          "chunkNumber": 21,
+          "sanskrit": "प॒शू॒नां रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यतां॒ यशः॑ ॥ १०॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-22",
+          "chunkNumber": 22,
+          "sanskrit": "क॒र्दमे॑न प्र॑जाभू॒ता॒ म॒यि॒ सम्भ॑व क॒र्दम ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-23",
+          "chunkNumber": 23,
+          "sanskrit": "श्रियं॑ वा॒सय॑ मे कु॒ले मा॒तरं॑ पद्म॒मालि॑नीम् ॥ ११॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-24",
+          "chunkNumber": 24,
+          "sanskrit": "आपः॑ सृ॒जन्तु॑ स्नि॒ग्धा॒नि॒ चि॒क्ली॒त व॑स मे॒ गृहे ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-25",
+          "chunkNumber": 25,
+          "sanskrit": "नि च॑ दे॒वीं मा॒तरं॒ श्रियं॑ वा॒सय॑ मे कु॒ले ॥ १२॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-26",
+          "chunkNumber": 26,
+          "sanskrit": "आ॒र्द्रां पु॒ष्करि॑णीं पु॒ष्टिं॒ पि॒ङ्ग॒लां प॑द्ममा॒लिनीम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-27",
+          "chunkNumber": 27,
+          "sanskrit": "च॒न्द्रां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒ आव॑ह ॥ १३॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-28",
+          "chunkNumber": 28,
+          "sanskrit": "आ॒र्द्रां यः॒ करि॑णीं य॒ष्टिं॒ सु॒व॒र्णां हे॑ममा॒लिनीम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-29",
+          "chunkNumber": 29,
+          "sanskrit": "सू॒र्यां हि॒रण्म॑यीं ल॒क्ष्मीं॒ जात॑वेदो म॒ आव॑ह ॥ १४॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-30",
+          "chunkNumber": 30,
+          "sanskrit": "तां म॒ आव॑ह॒ जात॑वेदो ल॒क्ष्मीमन॑पगा॒मिनी᳚म् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-31",
+          "chunkNumber": 31,
+          "sanskrit": "यस्यां॒ हि॑रण्यं॒ प्रभू॑तं॒ गावो॑ दा॒स्योऽश्वा᳚न्वि॒न्देयं॒ पुरु॑षान॒हम् ॥ १५॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-32",
+          "chunkNumber": 32,
+          "sanskrit": "यः शुचिः॒ प्रय॑तो भू॒त्वा जु॒हुया᳚दाज्य॒ मन्व॑हम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-33",
+          "chunkNumber": 33,
+          "sanskrit": "श्रियः॑ प॒ञ्चद॑शर्चं॒ च श्री॒कामः॑ सत॒तं ज॑पेत् ॥ १६॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-34",
+          "chunkNumber": 34,
+          "sanskrit": "प॒द्मा॒न॒ने प॑द्म ऊ॒रू॒ प॒द्माक्षी॑ पद्म॒सम्भ॑वे ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-35",
+          "chunkNumber": 35,
+          "sanskrit": "त्वं मां᳚ भ॒जस्व॑ प॒द्मा॒क्षी॒ ये॒न सौ᳚ख्यं ल॒भाम्य॑हम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-36",
+          "chunkNumber": 36,
+          "sanskrit": "अश्व॑दा॒यी गो॑दा॒यी॒ ध॒नदा॑यी म॒हाध॑ने ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-37",
+          "chunkNumber": 37,
+          "sanskrit": "धनं मे॒ जुष॑तां दे॒वि॒ स॒र्वका॑मांश्च॒ देहि॑ मे ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-38",
+          "chunkNumber": 38,
+          "sanskrit": "पुत्रपौ॒त्र ध॑नं धा॒न्यं ह॒स्त्यश्वा॑दिग॒वे र॑थम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-39",
+          "chunkNumber": 39,
+          "sanskrit": "प्र॒जा॒नां भ॑वसि मा॒ता आ॒युष्म॑न्तं क॒रोतु॑ माम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-40",
+          "chunkNumber": 40,
+          "sanskrit": "धन॑म॒ग्निर्ध॑नं वा॒युर्ध॑नं॒ सूर्यो॑ धनं॒ वसुः॑ ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-41",
+          "chunkNumber": 41,
+          "sanskrit": "धन॒मिन्द्रो॒ बृह॒स्पति॒र्वरु॑णं॒ धन॒मश्नु॑ ते ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-42",
+          "chunkNumber": 42,
+          "sanskrit": "वैन॑तेय॒ सोमं॑ पिब॒ सोमं॑ पिबतु वृत्र॒हा ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-43",
+          "chunkNumber": 43,
+          "sanskrit": "सोमं॒ धन॑स्य सो॒मिनो॒ मह्यं॒ ददा॑तु सो॒मिनः॑ ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-44",
+          "chunkNumber": 44,
+          "sanskrit": "न क्रोधो न च॑ मात्स॒र्यं न॒ लोभो॑ नाशु॒भा म॑तिः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-45",
+          "chunkNumber": 45,
+          "sanskrit": "भव॑न्ति॒ कृत॑पुण्या॒नां भ॒क्तानां श्रीसू᳚क्तं ज॒पेत्स॑दा ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-46",
+          "chunkNumber": 46,
+          "sanskrit": "वर्ष॑न्तु॒ ते वि॑भाव॒रि॒ दि॒वो अ॑भ्रस्य॒ विद्यु॑तः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-47",
+          "chunkNumber": 47,
+          "sanskrit": "रोह॑न्तु॒ सर्व॑बी॒जा॒न्य॒व ब्र॑ह्म द्वि॒षो ज॑हि ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-48",
+          "chunkNumber": 48,
+          "sanskrit": "पद्म॑प्रिये पद्मिनि पद्म॒हस्ते पद्मा॑लये पद्मदलाय॑ताक्षि ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-49",
+          "chunkNumber": 49,
+          "sanskrit": "विश्व॑प्रिये॒ विष्णु मनो॑ऽनुकू॒ले त्वत्पा॑दप॒द्मं मयि॒ सन्नि॑धत्स्व ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-50",
+          "chunkNumber": 50,
+          "sanskrit": "या सा पद्मा॑सन॒स्था विपुलकटितटी पद्म॒पत्रा॑यता॒क्षी ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-51",
+          "chunkNumber": 51,
+          "sanskrit": "गम्भीरा व॑र्तना॒भिः स्तनभर नमिता शुभ्र वस्त्रो॑त्तरी॒या ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-52",
+          "chunkNumber": 52,
+          "sanskrit": "लक्ष्मीर्दि॒व्यैर्गजेन्द्रैर्म॒णिगण खचितैस्स्नापिता हे॑मकु॒म्भैः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-53",
+          "chunkNumber": 53,
+          "sanskrit": "नि॒त्यं सा प॑द्मह॒स्ता मम वस॑तु गृ॒हे सर्व॒माङ्गल्य॑युक्ता ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-54",
+          "chunkNumber": 54,
+          "sanskrit": "ल॒क्ष्मीं क्षीरसमुद्र राजतनयां श्री॒रंगधामे॑श्वरीम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-55",
+          "chunkNumber": 55,
+          "sanskrit": "दा॒सीभूतसमस्त देव व॒नितां लो॒कैक॒ दीपां॑कुराम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-56",
+          "chunkNumber": 56,
+          "sanskrit": "श्रीमन्मन्दकटाक्षलब्ध विभव ब्र॒ह्मेन्द्रगङ्गा॑धराम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-57",
+          "chunkNumber": 57,
+          "sanskrit": "त्वां त्रै॒लोक्य॒ कुटु॑म्बिनीं स॒रसिजां वन्दे॒ मुकु॑न्दप्रियाम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-58",
+          "chunkNumber": 58,
+          "sanskrit": "सि॒द्ध॒ल॒क्ष्मीर्मो॑क्षल॒क्ष्मी॒र्ज॒यल॑क्ष्मीस्स॒रस्व॑ती ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-59",
+          "chunkNumber": 59,
+          "sanskrit": "श्रीलक्ष्मीर्व॑रल॒क्ष्मी॒श्च॒ प्र॒सन्ना म॑म स॒र्वदा ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-60",
+          "chunkNumber": 60,
+          "sanskrit": "वरांकुशौ पाशमभी॑तिमु॒द्रां॒ क॒रैर्वहन्तीं क॑मला॒सनस्थाम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-61",
+          "chunkNumber": 61,
+          "sanskrit": "बालार्क कोटि प्रति॑भां त्रि॒णे॒त्रां॒ भ॒जेहमाद्यां ज॑गदी॒श्वरीं ताम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-62",
+          "chunkNumber": 62,
+          "sanskrit": "स॒र्व॒म॒ङ्ग॒लमा॒ङ्गल्ये॑ शि॒वे स॒र्वार्थ॑ साधिके ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-63",
+          "chunkNumber": 63,
+          "sanskrit": "शर॑ण्ये त्र्यम्ब॑के दे॒वि॒ ना॒राय॑णि न॒मोऽस्तु॑ ते ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-64",
+          "chunkNumber": 64,
+          "sanskrit": "सरसिजनिलये सरो॑जह॒स्ते धवलतरांशुक गन्धमा᳚ल्यशो॒भे ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-65",
+          "chunkNumber": 65,
+          "sanskrit": "भगवति हरिवल्लभे॑ मनो॒ज्ञे त्रिभुवनभूतिकरिप्र॑सीद म॒ह्यम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-66",
+          "chunkNumber": 66,
+          "sanskrit": "विष्णु॑प॒त्नीं क्ष॑मां दे॒वीं॒ मा॒धवीं᳚ माध॒वप्रि॑याम् ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-67",
+          "chunkNumber": 67,
+          "sanskrit": "विष्णोः᳚ प्रि॒यस॑खींम् दे॒वीं॒ न॒मा॒म्यच्यु॑तव॒ल्लभाम् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-68",
+          "chunkNumber": 68,
+          "sanskrit": "म॒हा॒ल॒क्ष्मी च॑ वि॒द्महे॑ विष्णुप॒त्नी च॑ धीमही ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-69",
+          "chunkNumber": 69,
+          "sanskrit": "तन्नो॑ लक्ष्मीः प्रचो॒दया᳚त् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-70",
+          "chunkNumber": 70,
+          "sanskrit": "श्री॒वर्च॑स्य॒मायु॑ष्य॒मारो᳚ग्य॒मावि॑धा॒त् पव॑मानं मही॒यते᳚ ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-71",
+          "chunkNumber": 71,
+          "sanskrit": "ध॒नं धा॒न्यं प॒शुं ब॒हुपु॑त्रला॒भं श॒तसं॑वत्स॒रं दी॒र्घमायुः॑ ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-72",
+          "chunkNumber": 72,
+          "sanskrit": "ऋणरोगादिदारिद्र्यपा॒पक्षु॑द॒पमृत्य॑वः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-73",
+          "chunkNumber": 73,
+          "sanskrit": "भय॑शो॒कम॑नस्ता॒पा न॒श्यन्तु॑ मम॒ सर्व॑दा ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-74",
+          "chunkNumber": 74,
+          "sanskrit": "श्रिये॑ जा॒त श्रिय॒ आनि॑र्याय॒ श्रियं॒ वयो᳚ जनि॒तृभ्यो᳚ दधातु ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-75",
+          "chunkNumber": 75,
+          "sanskrit": "श्रियं॒ वसा᳚ना अमृत॒त्वमा᳚य॒न् भजं᳚ति स॒द्यः स॑वि॒ता वि॒दध्यून्॑ ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-76",
+          "chunkNumber": 76,
+          "sanskrit": "श्रिय॑ एवैनं तच्छ्रि॒यामा॑दधा॒ति ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-77",
+          "chunkNumber": 77,
+          "sanskrit": "स॒न्त॒त॒मृ॒चा व॑षट्कृ॒त्यं सन्ध॑त्तं॒ सन्धी॑यते प्रज॒या प॒शुभिः ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-78",
+          "chunkNumber": 78,
+          "sanskrit": "य ए॑वं वे॒द ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-79",
+          "chunkNumber": 79,
+          "sanskrit": "ॐ म॒हा॒दे॒व्यै च॑ वि॒द्महे॑ विष्णुप॒त्नी च॑ धीमहि ।"
+        },
+        {
+          "id": "rigveda-khila-sri-1-80",
+          "chunkNumber": 80,
+          "sanskrit": "तन्नो॑ लक्ष्मीः प्रचो॒दया᳚त् ॥"
+        },
+        {
+          "id": "rigveda-khila-sri-1-81",
+          "chunkNumber": 81,
+          "sanskrit": "ॐ शान्तिः॒ शान्तिः॒ शान्तिः॑ ॥"
+        }
+      ]
+    }
+  ]
+}

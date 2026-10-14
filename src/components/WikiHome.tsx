@@ -1,5 +1,6 @@
 import { ArticleTitle } from './Sanskrit';
 import { Term } from './Term';
+import { LIVE_SOURCES } from '../data/liveSources';
 import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
 import { COMPOSE_HASH, articleHash, categoryHash } from '../services/wikiNav';
 
@@ -97,6 +98,18 @@ export function WikiHome() {
             {recent.map((a) => (
               <li key={a.id}>
                 <a href={articleHash(a.id)}><ArticleTitle title={a.title} /></a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="wiki-block">
+          <h2>Live sources</h2>
+          <p className="wiki-muted">Fetched from their pinned edition when opened.</p>
+          <ul className="wiki-list">
+            {LIVE_SOURCES.map((s) => (
+              <li key={s.id}>
+                <a href={articleHash(s.id)}>{s.label}</a>
               </li>
             ))}
           </ul>

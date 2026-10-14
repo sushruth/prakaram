@@ -27,6 +27,8 @@ export interface MantraChunk {
   section?: number;
   /** Player only: the padya this pada opens, where the section has a padya level. */
   padya?: number;
+  /** Player only: the source document this pada comes from, so the player can cite every source it reads. */
+  sourceId?: string;
   tokens?: AksharaToken[];
 }
 
@@ -66,6 +68,21 @@ export interface Place {
   divisions: { kind: DivisionKind; n: number }[];
 }
 
+/** Where a vendored source text came from and how it was processed (see sources/README.md). */
+export interface SourceProvenance {
+  upstreamUrl: string;
+  /** revid | commit sha | fetch date, whichever the host offers. */
+  upstreamRef: string;
+  /** ISO date YYYY-MM-DD the text was fetched. */
+  retrievedAt: string;
+  /** Parser id + version, e.g. 'aranyaka@1'. */
+  parser: string;
+  license: string;
+  attribution: string;
+  /** sha256 of the document JSON with sha256 blanked. */
+  sha256: string;
+}
+
 export interface MantraDocument {
   id: string;
   title: {
@@ -100,6 +117,10 @@ export interface MantraDocument {
     usage?: string;
     /** Media this article brings beyond what is derived from its text. */
     media?: MediaDecl[];
+    /** For a source referenced live: the upstream page (pinned revision). Its source/edit/history links point here. */
+    remoteUrl?: string;
+    /** Where a vendored source came from, for the wiki's attribution (see sources/README.md). */
+    provenance?: SourceProvenance;
     /** `source` (default) owns text and its sections are addressable parts. `composition` owns no text and references parts of sources. */
     kind?: 'source' | 'composition';
     /** For a composition: the parts of other articles it is made of, in order. */

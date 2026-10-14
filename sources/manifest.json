@@ -1,0 +1,314 @@
+{
+  "pin": "local",
+  "generatedAt": "2026-10-14T07:08:51.316Z",
+  "sources": [
+    {
+      "id": "rigveda-1",
+      "file": "rigveda-1.json",
+      "sha256": "f691cb3b970ff3a48cb76683cdbaf485a0bea4efb44c05d1455e33e8c0b572f4",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_1.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 1 — DharmicData (ODbL)",
+        "sha256": "f691cb3b970ff3a48cb76683cdbaf485a0bea4efb44c05d1455e33e8c0b572f4"
+      }
+    },
+    {
+      "id": "rigveda-10",
+      "file": "rigveda-10.json",
+      "sha256": "3c554c492f91d09d4d903fc7b0ada179ad98c4feed5c524ee75d3dda1fadb1a9",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_10.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (ODbL)",
+        "sha256": "3c554c492f91d09d4d903fc7b0ada179ad98c4feed5c524ee75d3dda1fadb1a9"
+      }
+    },
+    {
+      "id": "rigveda-2",
+      "file": "rigveda-2.json",
+      "sha256": "11311f5ab04f9ee913d758e4a35a241176e00877e090acd95b5991523315a38e",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_2.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 2 — DharmicData (ODbL)",
+        "sha256": "11311f5ab04f9ee913d758e4a35a241176e00877e090acd95b5991523315a38e"
+      }
+    },
+    {
+      "id": "rigveda-3",
+      "file": "rigveda-3.json",
+      "sha256": "611a7382fbcfd2d1f9d3c7670dc72d718823149aee15d77c1568515900b3f8f0",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_3.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 3 — DharmicData (ODbL)",
+        "sha256": "611a7382fbcfd2d1f9d3c7670dc72d718823149aee15d77c1568515900b3f8f0"
+      }
+    },
+    {
+      "id": "rigveda-4",
+      "file": "rigveda-4.json",
+      "sha256": "d5bc38d3e304ef95fa842ea5563029a300f776994e23f23dd151fe67fb44eccf",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_4.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 4 — DharmicData (ODbL)",
+        "sha256": "d5bc38d3e304ef95fa842ea5563029a300f776994e23f23dd151fe67fb44eccf"
+      }
+    },
+    {
+      "id": "rigveda-5",
+      "file": "rigveda-5.json",
+      "sha256": "4cab87e17df6e81676730347fa62c45736dd52d91c5ba6e90f973eb09707097f",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_5.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 5 — DharmicData (ODbL)",
+        "sha256": "4cab87e17df6e81676730347fa62c45736dd52d91c5ba6e90f973eb09707097f"
+      }
+    },
+    {
+      "id": "rigveda-6",
+      "file": "rigveda-6.json",
+      "sha256": "618dbcda4b421222a80df80b027d95ad66ed8c94cb908fc9780947c4aaa14a29",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_6.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 6 — DharmicData (ODbL)",
+        "sha256": "618dbcda4b421222a80df80b027d95ad66ed8c94cb908fc9780947c4aaa14a29"
+      }
+    },
+    {
+      "id": "rigveda-7",
+      "file": "rigveda-7.json",
+      "sha256": "71d10de2a8c897b1706b09e4a23b4179cf04f0d03cc01ec7b3593c3ca10d27c9",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_7.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 7 — DharmicData (ODbL)",
+        "sha256": "71d10de2a8c897b1706b09e4a23b4179cf04f0d03cc01ec7b3593c3ca10d27c9"
+      }
+    },
+    {
+      "id": "rigveda-8",
+      "file": "rigveda-8.json",
+      "sha256": "31bf8560dd0d7d0100cf43a46ecfe6f85c47924653aea58f192099594493ae44",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_8.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 8 — DharmicData (ODbL)",
+        "sha256": "31bf8560dd0d7d0100cf43a46ecfe6f85c47924653aea58f192099594493ae44"
+      }
+    },
+    {
+      "id": "rigveda-9",
+      "file": "rigveda-9.json",
+      "sha256": "5445a398c5e0fb608790f1c3a4b0b1276ea16020f6b1a7ce352dd5e8b38bc250",
+      "provenance": {
+        "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_9.json",
+        "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+        "retrievedAt": "2026-10-14",
+        "parser": "rigveda@1",
+        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 9 — DharmicData (ODbL)",
+        "sha256": "5445a398c5e0fb608790f1c3a4b0b1276ea16020f6b1a7ce352dd5e8b38bc250"
+      }
+    },
+    {
+      "id": "rigveda-khila-sri",
+      "file": "rigveda-khila-sri.json",
+      "sha256": "b434b9d9bf68d4d943975d1fe9f752f8dfaf3c77c35a2355da5bd92f769da91d",
+      "provenance": {
+        "upstreamUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
+        "upstreamRef": "2025-11-06",
+        "retrievedAt": "2026-10-14",
+        "parser": "sri@1",
+        "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+        "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org",
+        "sha256": "b434b9d9bf68d4d943975d1fe9f752f8dfaf3c77c35a2355da5bd92f769da91d"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-1",
+      "file": "taittiriya-aranyaka-1.json",
+      "sha256": "fd78b533edf834ed6c596848f0eeb1eb0cc06bc6b5a088bbc6d5dd5c3c132c63",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_1",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 1 — taittiriya.com",
+        "sha256": "fd78b533edf834ed6c596848f0eeb1eb0cc06bc6b5a088bbc6d5dd5c3c132c63"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-10",
+      "file": "taittiriya-aranyaka-10.json",
+      "sha256": "511532dac247f555a1834262d9fb5bbe055a7fd4430cc0acd27504747ccf5d0f",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_10",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com",
+        "sha256": "511532dac247f555a1834262d9fb5bbe055a7fd4430cc0acd27504747ccf5d0f"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-2",
+      "file": "taittiriya-aranyaka-2.json",
+      "sha256": "64cb9e7ce200207048d89113365aca8e1b682fc43d94c95250b7d6a0d8d9d622",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_2",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 2 — taittiriya.com",
+        "sha256": "64cb9e7ce200207048d89113365aca8e1b682fc43d94c95250b7d6a0d8d9d622"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-3",
+      "file": "taittiriya-aranyaka-3.json",
+      "sha256": "139e5eb82b2067428887c926ef53fd7dbd5a7bbaf08d5c0b819d99e2139143b8",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com",
+        "sha256": "139e5eb82b2067428887c926ef53fd7dbd5a7bbaf08d5c0b819d99e2139143b8"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-4",
+      "file": "taittiriya-aranyaka-4.json",
+      "sha256": "e3b0e42472efe371baf2612540b54122fcac291d383b12477afd8a7d381f47e8",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_4",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 4 — taittiriya.com",
+        "sha256": "e3b0e42472efe371baf2612540b54122fcac291d383b12477afd8a7d381f47e8"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-5",
+      "file": "taittiriya-aranyaka-5.json",
+      "sha256": "282337370639b2fae58788fe07096f159529d8ea7d9045d22ea4a01eb26d4a95",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_5",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 5 — taittiriya.com",
+        "sha256": "282337370639b2fae58788fe07096f159529d8ea7d9045d22ea4a01eb26d4a95"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-6",
+      "file": "taittiriya-aranyaka-6.json",
+      "sha256": "7833cbb7f6d9dc86de22c63f23f44024d210207db7e3226ceb55ebd9145fe778",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_6",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 6 — taittiriya.com",
+        "sha256": "7833cbb7f6d9dc86de22c63f23f44024d210207db7e3226ceb55ebd9145fe778"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-7",
+      "file": "taittiriya-aranyaka-7.json",
+      "sha256": "80d9c183dedbe38b98bdbd597b16cca400b4dbf74704458b849b3508b4a0b58d",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_7",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 7 — taittiriya.com",
+        "sha256": "80d9c183dedbe38b98bdbd597b16cca400b4dbf74704458b849b3508b4a0b58d"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-8",
+      "file": "taittiriya-aranyaka-8.json",
+      "sha256": "c63fd01bf802438a4a40a64cea8f6bc15763f0a603088ba7e200e76444161457",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_8",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com",
+        "sha256": "c63fd01bf802438a4a40a64cea8f6bc15763f0a603088ba7e200e76444161457"
+      }
+    },
+    {
+      "id": "taittiriya-aranyaka-9",
+      "file": "taittiriya-aranyaka-9.json",
+      "sha256": "64b8b243bd0de7c5d8ab63c7176bf195f72772104cf42eb57644e99d0190054d",
+      "provenance": {
+        "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_9",
+        "upstreamRef": "2026-10-14",
+        "retrievedAt": "2026-10-14",
+        "parser": "aranyaka@1",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com",
+        "sha256": "64b8b243bd0de7c5d8ab63c7176bf195f72772104cf42eb57644e99d0190054d"
+      }
+    },
+    {
+      "id": "taittiriya-samhita-4",
+      "file": "taittiriya-samhita-4.json",
+      "sha256": "af300755e74aa8169a64537432fc8297a7f7dece73c3036ebca286acdab70cbd",
+      "provenance": {
+        "upstreamUrl": "https://sa.wikisource.org/w/index.php?title=%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%B8%E0%A4%82%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A4%BE-%E0%A5%A7-%E0%A5%AA&oldid=417990",
+        "upstreamRef": "revid 417990",
+        "retrievedAt": "2026-10-14",
+        "parser": "taittiriya@1",
+        "license": "CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)",
+        "sha256": "af300755e74aa8169a64537432fc8297a7f7dece73c3036ebca286acdab70cbd"
+      }
+    }
+  ]
+}

@@ -14,12 +14,14 @@ export interface SettingsState {
   fontSize: number;
   wrapLines: boolean;
   splitLines: boolean;
+  showTranslation: boolean;
   pauseWhenAway: boolean;
   setTheme: (theme: AppTheme) => void;
   setScript: (script: TargetScript) => void;
   setFontSize: (size: number) => void;
   toggleWrapLines: () => void;
   toggleSplitLines: () => void;
+  toggleShowTranslation: () => void;
   togglePauseWhenAway: () => void;
 }
 
@@ -34,12 +36,14 @@ export const useSettingsStore = create<SettingsState>()(
       fontSize: FONT_SIZE.fallback,
       wrapLines: true,
       splitLines: false,
+      showTranslation: false,
       pauseWhenAway: true,
       setTheme: (theme) => set({ theme }),
       setScript: (script) => set({ script }),
       setFontSize: (size) => set({ fontSize: clampNumber(size, FONT_SIZE.min, FONT_SIZE.max, FONT_SIZE.fallback) }),
       toggleWrapLines: () => set((s) => ({ wrapLines: !s.wrapLines })),
       toggleSplitLines: () => set((s) => ({ splitLines: !s.splitLines })),
+      toggleShowTranslation: () => set((s) => ({ showTranslation: !s.showTranslation })),
       togglePauseWhenAway: () => set((s) => ({ pauseWhenAway: !s.pauseWhenAway })),
     }),
     {
@@ -54,6 +58,7 @@ export const useSettingsStore = create<SettingsState>()(
           fontSize: clampNumber(p.fontSize, FONT_SIZE.min, FONT_SIZE.max, current.fontSize),
           wrapLines: boolOr(p.wrapLines, current.wrapLines),
           splitLines: boolOr(p.splitLines, current.splitLines),
+          showTranslation: boolOr(p.showTranslation, current.showTranslation),
           pauseWhenAway: boolOr(p.pauseWhenAway, current.pauseWhenAway),
         };
       },

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sources:refresh": "bun scripts/sources/refresh.ts"
   },
   "dependencies": {
     "preact": "^10.26.4",

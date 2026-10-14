@@ -39,6 +39,12 @@ export function SplitSwitch() {
   return <Switch checked={checked} onToggle={onToggle} />;
 }
 
+export function TranslationSwitch() {
+  const checked = useSettingsStore((s) => s.showTranslation);
+  const onToggle = useSettingsStore((s) => s.toggleShowTranslation);
+  return <Switch checked={checked} onToggle={onToggle} />;
+}
+
 export function ThemeSegmented() {
   const theme = useSettingsStore((s) => s.theme);
   const setTheme = useSettingsStore((s) => s.setTheme);

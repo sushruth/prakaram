@@ -12,7 +12,8 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'item-1',
         type: 'sukta_ref',
-        suktaId: 'ganapati-prarthana',
+        suktaId: 'rigveda-2',
+        nirdesa: 'rigveda-2/23',
         customTitle: '1. Ganapati Prarthana'
       },
       {
@@ -25,7 +26,8 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'item-3',
         type: 'sukta_ref',
-        suktaId: 'purusha-suktam',
+        suktaId: 'taittiriya-aranyaka-3',
+        nirdesa: 'taittiriya-aranyaka-3/12',
         customTitle: '2. Purusha Suktam'
       },
       {
@@ -38,19 +40,22 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'item-5',
         type: 'sukta_ref',
-        suktaId: 'sri-suktam',
+        suktaId: 'rigveda-khila-sri',
+        nirdesa: 'rigveda-khila-sri/1',
         customTitle: '3. Sri Suktam'
       },
       {
         id: 'item-6',
         type: 'sukta_ref',
-        suktaId: 'durga-suktam',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/2',
         customTitle: '4. Durga Suktam'
       },
       {
         id: 'item-7',
         type: 'sukta_ref',
-        suktaId: 'narayana-suktam',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/13',
         customTitle: '5. Narayana Suktam'
       },
       {
@@ -104,6 +109,30 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         type: 'sukta_ref',
         suktaId: 'shanti-mantras',
         customTitle: 'Vedic Shanti Mantras'
+      }
+    ]
+  },
+  {
+    id: 'rudram-ts',
+    title: 'श्री रुद्रम् — तैत्तिरीय संहिता (Sri Rudram, from the Taittirīya Saṃhitā)',
+    author: 'Taittirīya Saṃhitā, kāṇḍa 4 (Wikisource, CC BY-SA 4.0)',
+    description: 'The Namakam (TS 4.5) and Chamakam (TS 4.7) described as ranges of the Taittirīya Saṃhitā source.',
+    preferredBpm: 60,
+    createdTimestamp: Date.now(),
+    items: [
+      {
+        id: 'rts-1',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/48.1-58.16',
+        customTitle: 'Namakam (TS 4.5)'
+      },
+      {
+        id: 'rts-2',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/68.1-82.45',
+        customTitle: 'Chamakam (TS 4.7)'
       }
     ]
   },

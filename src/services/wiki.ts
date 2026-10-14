@@ -1,7 +1,8 @@
+import { TRANSLATION_ENABLED } from '../config/features';
 import { MantraDocument, MediaDecl, Prakara, SuktaSection } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_FILE } from '../data';
 import { itemNirdesa, listPieces } from './koshah';
-import { parseNirdesa } from './nirdesa';
+import { resolveNirdesa } from './nirdesa';
 import { splitTitle } from './titles';
 import { truncateAksharas } from './aksharas';
 import { transliterateVedic } from './transliteration';
@@ -29,6 +30,13 @@ export interface ArticleRef {
   sanskrit: string;
 }
 
+/** One source a page reads from: the document itself, so a citation can be built in any script. A composition lists every source it is made of, in order. */
+export interface ArticleSource {
+  doc: MantraDocument;
+  /** The address to cite the whole source at: its document id. */
+  id: string;
+}
+
 export interface WikiArticle {
   id: string;
   title: { sanskrit: string; transliteration: string; english: string };
@@ -49,6 +57,8 @@ export interface WikiArticle {
   /** Compositions that reference any part of this source. */
   usedIn: ArticleRef[];
   lines: number;
+  /** Every source this page reads from, in order of first use (a source article has one; a composition has all its parts'). */
+  sources: ArticleSource[];
   sourceUrl: string;
   editUrl: string;
   historyUrl: string;
@@ -87,8 +97,11 @@ function deriveMedia(parts: Part[], declared: MediaDecl[]): WikiMedia[] {
     { kind: 'text', language: 'Sanskrit', script: 'Devanagari', swara: chunks.some((c) => SWARA.test(c.sanskrit)), count: chunks.length },
     { kind: 'transliteration', script: SCRIPTS, swara: true },
   ];
-  const translated = chunks.filter((c) => c.translation).length;
-  if (translated) media.push({ kind: 'translation', language: 'English', count: translated });
+  // Translation is an experiment, not a shipped feature (src/config/features.ts); do not advertise it.
+  if (TRANSLATION_ENABLED) {
+    const translated = chunks.filter((c) => c.translation).length;
+    if (translated) media.push({ kind: 'translation', language: 'English', count: translated });
+  }
   return [...media, ...declared];
 }
 
@@ -97,9 +110,11 @@ export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument
   const title = splitTitle(p.title);
   const parts = p.items.flatMap((i) => {
     if (i.type !== 'sukta_ref' || !i.suktaId) return [];
-    // ponytail: a composition part is a whole section; a line range widens to its section here.
-    const section = parseNirdesa(itemNirdesa(i, docs) ?? '')?.section;
-    return [{ article: i.suktaId, ...(section ? { section } : {}) }];
+    // A range is described by every section it touches, so a composition lists all its parts.
+    const article = i.suktaId;
+    const r = resolveNirdesa(itemNirdesa(i, docs) ?? article, docs);
+    if (!r.ok || r.document.id !== article) return [{ article }];
+    return r.sections.map((s) => ({ article, section: s.sectionNumber }));
   });
   return {
     id: p.id,
@@ -109,7 +124,39 @@ export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument
   };
 }
 
-const CORPUS = [...ALL_SUKTAMS, ...DEFAULT_PRAKARAS.map((p) => prakaraAsDoc(p, ALL_SUKTAMS))];
+// Rebuilt after a live source is registered at boot (see main.tsx); default args read the current binding.
+let CORPUS: MantraDocument[] = [];
+export function rebuildCorpus(): void {
+  CORPUS = [...ALL_SUKTAMS, ...DEFAULT_PRAKARAS.map((p) => prakaraAsDoc(p, ALL_SUKTAMS))];
+}
+rebuildCorpus();
+
+/**
+ * The live source ids an article needs before it can resolve: a source is itself, a composition is the
+ * sources its parts reference (recursively). A referenced id not yet in the corpus is included, so a
+ * composition can ask for its live sources before they are loaded. Returns [] for an unknown id.
+ */
+export function requiredSourceIds(id: string): string[] {
+  const doc = CORPUS.find((d) => d.id === id);
+  if (!doc) return [];
+  const out = new Set<string>();
+  const seen = new Set<string>();
+  const walk = (d: MantraDocument): void => {
+    if (seen.has(d.id)) return;
+    seen.add(d.id);
+    if (d.metadata.kind !== 'composition') {
+      out.add(d.id);
+      return;
+    }
+    for (const part of d.metadata.parts ?? []) {
+      const child = CORPUS.find((x) => x.id === part.article);
+      if (child) walk(child);
+      else out.add(part.article);
+    }
+  };
+  walk(doc);
+  return [...out];
+}
 
 const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => {
   const pieces = listPieces([doc]);
@@ -119,6 +166,14 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
   const path = `src/data/${file}`;
   const parts = resolveParts(doc, docs);
   const composed = doc.metadata.kind === 'composition';
+  // Distinct sources, in the order their parts first appear, so a composition cites every text it reads.
+  const sources: ArticleSource[] = [];
+  const seenSources = new Set<string>();
+  for (const p of parts) {
+    if (seenSources.has(p.doc.id)) continue;
+    seenSources.add(p.doc.id);
+    sources.push({ doc: p.doc, id: p.doc.id });
+  }
   const sections: WikiSection[] = parts.map((p, i) => ({
     id: p.section.id,
     number: composed ? i + 1 : p.section.sectionNumber,
@@ -146,6 +201,7 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
       return other ? [{ id, title: other.title.english, sanskrit: other.title.sanskrit }] : [];
     }),
     sections,
+    sources,
     media: deriveMedia(parts, doc.metadata.media ?? []),
     kind: composed ? 'composition' : 'source',
     parts: composed ? sections : [],
@@ -155,9 +211,10 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
           .filter((c) => c.metadata.kind === 'composition' && resolveParts(c, docs).some((p) => p.doc.id === doc.id))
           .map((c) => ({ id: c.id, title: c.title.english, sanskrit: c.title.sanskrit })),
     lines: composed ? parts.reduce((n, p) => n + p.section.chunks.length, 0) : whole.lines,
-    sourceUrl: `${REPO_URL}/blob/${BRANCH}/${path}`,
-    editUrl: `${REPO_URL}/edit/${BRANCH}/${path}`,
-    historyUrl: `${REPO_URL}/commits/${BRANCH}/${path}`,
+    // A live-referenced source is not ours to edit; its links point at the pinned upstream page.
+    sourceUrl: doc.metadata.remoteUrl ?? `${REPO_URL}/blob/${BRANCH}/${path}`,
+    editUrl: doc.metadata.remoteUrl ?? `${REPO_URL}/edit/${BRANCH}/${path}`,
+    historyUrl: doc.metadata.remoteUrl ?? `${REPO_URL}/commits/${BRANCH}/${path}`,
   };
 };
 

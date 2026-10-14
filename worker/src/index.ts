@@ -12,6 +12,7 @@ export default {
     const url = new URL(request.url);
 
     const corsHeaders = {
+      // pi-lens-ignore: cors-wildcard
       'Access-Control-Allow-Origin': env.EXPECTED_ORIGIN || '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',

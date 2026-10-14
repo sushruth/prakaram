@@ -59,6 +59,9 @@
     margin-bottom: 1.1rem;
     cursor: pointer;
     opacity: 0.35;
+    /* Long prakarams: skip layout and paint for rows off screen. The DOM stays, so scroll-to-line, the minimap and print keep working. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 3rem;
     transition: opacity var(--focus-dur) var(--focus-ease), transform var(--focus-dur) var(--focus-ease), filter var(--focus-dur) var(--focus-ease);
   }
 
@@ -416,5 +419,44 @@
 
   @keyframes term-fade {
     from { opacity: 0; }
+  }
+}
+
+/* On-the-wire translation (ZenMantraReader): a muted line under the pada, off by default. DESIGN.md §7b. */
+@layer components {
+  .chunk-translation {
+    max-width: calc(100% / var(--focus-scale));
+    margin: 0.15rem 0 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+
+  .chunk-translation-pending {
+    display: inline-block;
+    min-height: 1.2em;
+    animation: translation-pulse 1.4s ease-in-out infinite;
+  }
+
+  @keyframes translation-pulse {
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chunk-translation-pending {
+      animation: none;
+      opacity: 0.5;
+    }
+  }
+
+  /* Reserve room for the translation line, so turning it on does not change the scroll estimate. */
+  .chunks-container.with-translation .chunk-row {
+    contain-intrinsic-size: auto 4.5rem;
   }
 }

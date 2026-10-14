@@ -9,16 +9,25 @@
     "veda": "yajurveda",
     "vedaNote": "Krishna Yajurveda, Taittiriya Samhita (fourth kāṇḍa, fifth prapāṭhaka)",
     "place": {
-      "work": { "sanskrit": "तैत्तिरीय संहिता", "english": "Taittirīya Saṃhitā" },
+      "work": {
+        "sanskrit": "तैत्तिरीय संहिता",
+        "english": "Taittirīya Saṃhitā"
+      },
       "divisions": [
-        { "kind": "kāṇḍa", "n": 4 },
-        { "kind": "prapāṭhaka", "n": 5 }
+        {
+          "kind": "kāṇḍa",
+          "n": 4
+        },
+        {
+          "kind": "prapāṭhaka",
+          "n": 5
+        }
       ]
     },
-    "source": "Vignanam (vignanam.org), supplied by the maintainer. Reuse permission not yet confirmed.",
+    "source": "Vignanam (vignanam.org). Reused by maintainer decision 2026-10-13; permission discussion being opened with Vignanam.",
     "devata": "Rudra",
     "status": "draft",
-    "license": "Text permission from Vignanam not yet confirmed",
+    "license": "Text permission from Vignanam being sought in writing (discussion opened by maintainer, 2026-10-13); kept at draft until confirmed",
     "deity": "Rudra (Shiva)",
     "categories": [
       "Rudram",

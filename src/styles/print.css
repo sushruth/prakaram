@@ -1,0 +1,81 @@
+/* Print: paper, not the screen. Chrome and controls are dropped, every line is shown at full ink, and the
+   sources print with the text. Colours are forced to their light values so a dark theme still prints dark-on-white. */
+@media print {
+  :root,
+  [data-theme="dark"] {
+    --bg-base: #ffffff;
+    --bg-card: #f2f2f0;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-muted: #555555;
+    --accent: #2f5f7a;
+    --swara-up: #6d28d9;
+    --swara-down: #1d4ed8;
+    --swara-double: #b91c1c;
+    --shloka: #3d7a55;
+    --vakya: #6e6c85;
+  }
+
+  @page {
+    margin: 1.6cm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  /* Chrome, controls and transient panels do not belong on paper. */
+  .chrome,
+  .cadence-strip,
+  .locate-line,
+  .minimap,
+  .wiki-basket-row,
+  .wiki-site-footer,
+  .wiki-contents,
+  .wiki-contents-btn,
+  .wiki-section-actions,
+  .wiki-add,
+  .wiki-range-follow,
+  .wiki-refine,
+  .icon-btn,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  /* The whole text prints, at full ink, with no active-line emphasis or zen dimming. */
+  .chunk-row,
+  .chunk-row .vedic-text,
+  .zen-active .chunk-row:not(.active),
+  .zen-active .chunk-row.active {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    content-visibility: visible !important;
+  }
+
+  .chunk-row .vedic-text {
+    max-width: 100% !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  /* Keep a verse together and its heading with it. */
+  .chunk-row,
+  .wiki-section {
+    break-inside: avoid;
+  }
+
+  .chunk-heading,
+  .wiki-section-title,
+  .wiki-sources-title,
+  .player-sources-title {
+    break-after: avoid;
+  }
+
+  .wiki-article a,
+  .source-work a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

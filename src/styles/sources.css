@@ -1,0 +1,78 @@
+@layer components {
+  /* Sources: a plain list, separated by space and type scale, no rules (DESIGN.md §7b). Shared by the wiki and the player. */
+  .source-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .source-item {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .source-work {
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  .source-work a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+  }
+
+  .source-work a:hover,
+  .source-work a:focus-visible {
+    color: var(--accent);
+  }
+
+  .source-pin {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .source-meta {
+    margin: 0.15rem 0 0;
+    color: var(--text-muted);
+  }
+
+  .source-provenance {
+    margin: 0.15rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+  }
+
+  .source-license {
+    margin: 0.15rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+  }
+
+  .wiki-sources {
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .player-sources {
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  .wiki-sources-title,
+  .player-sources-title {
+    margin: 0 0 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .player-sources-note {
+    margin: 0.9rem 0 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+}

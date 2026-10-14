@@ -11,6 +11,9 @@ import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
 interface PrakaraState {
   prakaras: Prakara[];
   activePrakaraId: string;
+  /** Bumped when a live source is registered, so a reader whose text only now resolves re-renders. Not persisted. */
+  documentsVersion: number;
+  bumpDocuments: () => void;
   selectPrakara: (id: string) => void;
   /** Run one Koshah piece on its own, without saving a prakara. */
   runPiece: (pieceId: string) => void;
@@ -28,6 +31,9 @@ export const usePrakaraStore = create<PrakaraState>()(
     (set, get) => ({
       prakaras: DEFAULT_PRAKARAS,
       activePrakaraId: 'maha-prakaram',
+      documentsVersion: 0,
+
+      bumpDocuments: () => set((s) => ({ documentsVersion: s.documentsVersion + 1 })),
 
       selectPrakara: (id) => set({ activePrakaraId: id }),
 
@@ -57,14 +63,15 @@ export const usePrakaraStore = create<PrakaraState>()(
             const opens = new Map<string, { section?: number; padya?: number }>();
             for (const sec of doc.sections) {
               const inRange = sec.chunks.find((c) => r.chunks.some((x) => x.id === c.id));
-              if (inRange && doc.sections.length > 1) opens.set(inRange.id, { section: sec.sectionNumber });
+              // The chunk's own anuvāka number wins where a source prints one (the Taittirīya Saṃhitā); otherwise the section number.
+              if (inRange && doc.sections.length > 1) opens.set(inRange.id, { section: inRange.section ?? sec.sectionNumber });
               for (const g of padyas(sec) ?? []) {
                 const c = sec.chunks[g.from - 1];
                 if (r.chunks.some((x) => x.id === c.id)) opens.set(c.id, { ...opens.get(c.id), padya: g.number });
               }
             }
             for (const ch of r.chunks) {
-              chunks.push({ ...ch, ...opens.get(ch.id), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true });
+              chunks.push({ ...ch, ...opens.get(ch.id), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({
