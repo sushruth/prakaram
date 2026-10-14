@@ -71,7 +71,7 @@ export interface Place {
 /** Where a vendored source text came from and how it was processed (see sources/README.md). */
 export interface SourceProvenance {
   upstreamUrl: string;
-  /** revid | commit sha | fetch date, whichever the host offers. */
+  /** commit sha | Last-Modified date | fetch date, whichever the host offers. */
   upstreamRef: string;
   /** ISO date YYYY-MM-DD the text was fetched. */
   retrievedAt: string;

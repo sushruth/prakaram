@@ -25,7 +25,7 @@
         }
       ]
     },
-    "source": "sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html)",
+    "source": "sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html), encoded by Avinash Sathaye and Anant Upadhyayula",
     "status": "draft",
     "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
     "deity": "Sri Mahalakshmi",
@@ -42,8 +42,8 @@
       "retrievedAt": "2026-10-14",
       "parser": "sri@1",
       "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
-      "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org",
-      "sha256": "554ef04952036fa2f5b26ee28cfb86a69f43b8ab3e524a05aef62ba394ffe095"
+      "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org, encoded by Avinash Sathaye and Anant Upadhyayula",
+      "sha256": "d7d540a163c92b2a6ab4980adfc943cc978dd9210b0672af90a1ce67f717933d"
     }
   },
   "sections": [

@@ -46,7 +46,7 @@ async function generate(): Promise<ManifestEntry[]> {
       retrievedAt,
       parser: PARSER,
       license: parsed.metadata.license ?? LICENSE,
-      attribution: 'Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org',
+      attribution: 'Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org, encoded by Avinash Sathaye and Anant Upadhyayula',
     }),
   );
   console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);

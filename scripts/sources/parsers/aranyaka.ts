@@ -17,11 +17,11 @@ const ANUVAKA_NUMBER = /<span class="anuvaka-number">[\s\S]*?<span class="script
 const DEVANAGARI_BLOCK = /<span class="script-devanagari">([\s\S]*?)<\/span><span class="script-(?:kannada|telugu|tamil|grantha)"/g;
 
 const DEVANAGARI_DIGITS = '०१२३४५६७८९';
-const ZERO_WIDTH = /[\u200b\u200c\u200d\u2060]/g;
-const TAGS = /<[^>]*>/g;
+export const ZERO_WIDTH = /[\u200b\u200c\u200d\u2060]/g;
+export const TAGS = /<[^>]*>/g;
 
 /** Decode the entities the page prints (`&amp;`, numeric, and the named few). `&amp;` last, so it is not decoded twice. */
-function decodeEntities(s: string): string {
+export function decodeEntities(s: string): string {
   return s
     .replace(/&nbsp;/g, ' ')
     .replace(/&lt;/g, '<')
@@ -103,7 +103,7 @@ export function parseAranyaka(html: string, prapathaka: number): MantraDocument 
       veda: 'yajurveda',
       vedaNote: `Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka ${prapathaka}.`,
       place: { work: { sanskrit: 'तैत्तिरीय आरण्यक', english: 'Taittirīya Āraṇyaka' }, divisions: [{ kind: 'prapāṭhaka', n: prapathaka }] },
-      source: `taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka ${prapathaka})`,
+      source: `taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka ${prapathaka}), edited by Sridhar Iyer`,
       status: 'draft',
       license: 'Text from taittiriya.com; permission not yet confirmed.',
       categories: ['Yajurveda', 'Krishna Yajurveda', 'Aranyakas'],

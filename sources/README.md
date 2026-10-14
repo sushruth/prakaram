@@ -13,15 +13,12 @@ relicensed. Every generated file repeats its licence in `metadata.provenance.lic
 | files | upstream | licence | licence file |
 | :-- | :-- | :-- | :-- |
 | `rigveda-1/` … `rigveda-10/` (`rigveda-<m>/`) | DharmicData | **ODbL 1.0** | `LICENSE-ODbL.txt` |
-| `taittiriya-samhita-4/` | Sanskrit Wikisource | **CC BY-SA 4.0** | `LICENSE-CC-BY-SA-4.0.txt` |
-| `taittiriya-aranyaka-1/` … `-10/` | taittiriya.com | permission not yet confirmed | — |
+| `taittiriya-samhita-4/`, `taittiriya-aranyaka-1/` … `-10/` | taittiriya.com | permission not yet confirmed | — |
 | `rigveda-khila-sri/` | sanskritdocuments.org | permission not yet confirmed | — |
 
 The `rigveda-*` files are a Derivative Database of DharmicData and are licensed ODbL 1.0; each carries
 the ODbL §4.3 notice "Contains information from DharmicData …" and the licence URI, and the licence
-text is in `LICENSE-ODbL.txt`. `taittiriya-samhita-4` is Adapted Material of the Wikisource page and is
-licensed CC BY-SA 4.0; its attribution, modification statement and ShareAlike are in the file and in
-`LICENSE-CC-BY-SA-4.0.txt`. The `taittiriya-aranyaka-*` and `rigveda-khila-sri` files stay
+text is in `LICENSE-ODbL.txt`. The `taittiriya-samhita-4`, `taittiriya-aranyaka-*` and `rigveda-khila-sri` files stay
 `status: "draft"` and carry **no** open licence until the upstream permission is confirmed in writing
 (see `docs/licence-compliance.md` §2.3, §5). The application code (`src/`, `scripts/`, `worker/`) is not
 covered by these content licences.
@@ -40,7 +37,7 @@ sources/
 | docId | file | upstream |
 | :-- | :-- | :-- |
 | `rigveda-1` … `rigveda-10` | `rigveda-<m>.json` | DharmicData `Rigveda/rigveda_mandala_<m>.json` @ pinned commit |
-| `taittiriya-samhita-4` | `taittiriya-samhita-4.json` | Wikisource `तैत्तिरीयसंहिता-१-४` @ revid |
+| `taittiriya-samhita-4` | `taittiriya-samhita-4.json` | `taittiriya.com/samhita/kanda_4_prashna_<p>` (p = 1…7) |
 | `taittiriya-aranyaka-1` … `-10` | `taittiriya-aranyaka-<p>.json` | `taittiriya.com/aranyaka/prapathaka_<p>` |
 | `rigveda-khila-sri` | `rigveda-khila-sri.json` | `sanskritdocuments.org/doc_veda/s-sukta-accent.html` |
 
@@ -53,7 +50,7 @@ A processed file is a `MantraDocument` (see `src/types/mantra.ts`) with one extr
   // ...the usual MantraDocument metadata...
   "provenance": {
     "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
-    "upstreamRef": "2026-10-13",          // revid | commit sha | fetch date, whichever the host offers
+    "upstreamRef": "2026-10-13",          // commit sha | Last-Modified date | fetch date, whichever the host offers
     "retrievedAt": "2026-10-13",          // ISO date the text was fetched
     "parser": "aranyaka@1",               // parser id + version
     "license": "Text from taittiriya.com; permission not yet confirmed.",

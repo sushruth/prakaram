@@ -125,7 +125,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'rudram-ts',
     title: 'श्री रुद्रम् — तैत्तिरीय संहिता (Sri Rudram, from the Taittirīya Saṃhitā)',
-    author: 'Taittirīya Saṃhitā, kāṇḍa 4 (Wikisource, CC BY-SA 4.0)',
+    author: 'Taittirīya Saṃhitā, kāṇḍa 4 (taittiriya.com)',
     description: 'The Namakam (TS 4.5) and Chamakam (TS 4.7) described as ranges of the Taittirīya Saṃhitā source.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
@@ -134,14 +134,14 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         id: 'rts-1',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
-        nirdesa: 'taittiriya-samhita-4/48.1-58.16',
+        nirdesa: 'taittiriya-samhita-4/48.1-58.13',
         customTitle: 'Namakam (TS 4.5)'
       },
       {
         id: 'rts-2',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
-        nirdesa: 'taittiriya-samhita-4/68.1-82.45',
+        nirdesa: 'taittiriya-samhita-4/68.1-82.24',
         customTitle: 'Chamakam (TS 4.7)'
       }
     ]

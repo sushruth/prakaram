@@ -79,7 +79,7 @@ export function parseSri(html: string): MantraDocument {
       vedaNote: 'Rigveda Khila (RvKh 2.6), the appendix to the Rigveda.',
       // RvKh 2.6: khaṇḍa 2, sūkta 6 (the closest division name to the Khila's own grouping).
       place: { work: { sanskrit: 'ऋग्वेद खिल', english: 'Ṛgveda (Khila)' }, divisions: [{ kind: 'khaṇḍa', n: 2 }, { kind: 'sūkta', n: 6 }] },
-      source: 'sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html)',
+      source: 'sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html), encoded by Avinash Sathaye and Anant Upadhyayula',
       status: 'draft',
       license: 'Text from sanskritdocuments.org; permission not yet confirmed.',
       deity: 'Sri Mahalakshmi',

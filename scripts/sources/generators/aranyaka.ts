@@ -50,7 +50,7 @@ async function generate(): Promise<ManifestEntry[]> {
           retrievedAt,
           parser: PARSER,
           license: parsed.metadata.license ?? 'Text from taittiriya.com; permission not yet confirmed.',
-          attribution: `Taittirīya Āraṇyaka, prapāṭhaka ${p} — taittiriya.com`,
+          attribution: `Taittirīya Āraṇyaka, prapāṭhaka ${p} — taittiriya.com, edited by Sridhar Iyer`,
         }),
       );
       entries.push(entry);

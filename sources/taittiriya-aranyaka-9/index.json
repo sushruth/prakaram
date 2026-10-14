@@ -21,7 +21,7 @@
         }
       ]
     },
-    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 9)",
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 9), edited by Sridhar Iyer",
     "status": "draft",
     "license": "Text from taittiriya.com; permission not yet confirmed.",
     "categories": [
@@ -37,8 +37,8 @@
       "retrievedAt": "2026-10-14",
       "parser": "aranyaka@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
-      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com",
-      "sha256": "ef4061bb0603a2ccb4b1e8381e8f34628f21a297ed57d332d11f599f081b22b2"
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com, edited by Sridhar Iyer",
+      "sha256": "b5fd8724c6e8f2690b84315111c41ae2fc5e597117a1c44771759178dd318a23"
     }
   },
   "sections": [

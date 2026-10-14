@@ -2,11 +2,9 @@ import { articleHash } from '../services/wikiNav';
 import { useCiteInWords } from './Sanskrit';
 import type { ArticleSource } from '../services/wiki';
 
-/** The revision or commit a live source is pinned to, read out of its upstream URL (Wikisource `oldid`, DharmicData blob). */
+/** The revision or commit a live source is pinned to, read out of its upstream URL (DharmicData blob). */
 const pinnedRef = (url?: string): string | undefined => {
   if (!url) return undefined;
-  const revid = url.match(/[?&]oldid=(\d+)/);
-  if (revid) return `revid ${revid[1]}`;
   const commit = url.match(/\/blob\/([0-9a-f]{7,40})\//);
   if (commit) return `@${commit[1].slice(0, 7)}`;
   return undefined;

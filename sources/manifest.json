@@ -1,6 +1,6 @@
 {
-  "pin": "fc250df2e6f65418a8fe3db8e78b414fd178e1b2",
-  "generatedAt": "2026-10-14T08:21:35.988Z",
+  "pin": "local",
+  "generatedAt": "2026-10-14T10:29:31.007Z",
   "sources": [
     {
       "id": "rigveda-1",
@@ -477,15 +477,15 @@
     {
       "id": "rigveda-khila-sri",
       "index": "rigveda-khila-sri/index.json",
-      "sha256": "554ef04952036fa2f5b26ee28cfb86a69f43b8ab3e524a05aef62ba394ffe095",
+      "sha256": "d7d540a163c92b2a6ab4980adfc943cc978dd9210b0672af90a1ce67f717933d",
       "provenance": {
         "upstreamUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
         "upstreamRef": "2025-11-06",
         "retrievedAt": "2026-10-14",
         "parser": "sri@1",
         "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
-        "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org",
-        "sha256": "554ef04952036fa2f5b26ee28cfb86a69f43b8ab3e524a05aef62ba394ffe095"
+        "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org, encoded by Avinash Sathaye and Anant Upadhyayula",
+        "sha256": "d7d540a163c92b2a6ab4980adfc943cc978dd9210b0672af90a1ce67f717933d"
       },
       "parts": [
         {
@@ -499,15 +499,15 @@
     {
       "id": "taittiriya-aranyaka-1",
       "index": "taittiriya-aranyaka-1/index.json",
-      "sha256": "0555fd7eed6d6785c722da05f68357d9156096ce9d99159573b54290d6ae9bc9",
+      "sha256": "b39bc24551a88cc580a934204692936b4b8668bd420230fa98d2595d180b4b24",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_1",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 1 — taittiriya.com",
-        "sha256": "0555fd7eed6d6785c722da05f68357d9156096ce9d99159573b54290d6ae9bc9"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 1 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "b39bc24551a88cc580a934204692936b4b8668bd420230fa98d2595d180b4b24"
       },
       "parts": [
         {
@@ -527,15 +527,15 @@
     {
       "id": "taittiriya-aranyaka-10",
       "index": "taittiriya-aranyaka-10/index.json",
-      "sha256": "30f708f89dc6d5826aff7b832dbdf9beefec794c90ed1a3a485b89a2070af55c",
+      "sha256": "150529a583541d87465c3241aefb6ef77c65617382f29b17697719cc4df8b1eb",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_10",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com",
-        "sha256": "30f708f89dc6d5826aff7b832dbdf9beefec794c90ed1a3a485b89a2070af55c"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "150529a583541d87465c3241aefb6ef77c65617382f29b17697719cc4df8b1eb"
       },
       "parts": [
         {
@@ -555,15 +555,15 @@
     {
       "id": "taittiriya-aranyaka-2",
       "index": "taittiriya-aranyaka-2/index.json",
-      "sha256": "12f25c8f5e537de947c4ebce8f7a6d6cac282c15d14710e25c90b979157b47d1",
+      "sha256": "b127c21fb4874dfff3b7bd4c65b311a625e0f35effa54106ee0cdde11b81995c",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_2",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 2 — taittiriya.com",
-        "sha256": "12f25c8f5e537de947c4ebce8f7a6d6cac282c15d14710e25c90b979157b47d1"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 2 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "b127c21fb4874dfff3b7bd4c65b311a625e0f35effa54106ee0cdde11b81995c"
       },
       "parts": [
         {
@@ -577,15 +577,15 @@
     {
       "id": "taittiriya-aranyaka-3",
       "index": "taittiriya-aranyaka-3/index.json",
-      "sha256": "1dbf66eb8ee91a9c1b06ded657e1d091cfc646d8b25baee3fe8d2c5b28f010dc",
+      "sha256": "6fabf05d80967dca31b5d21791eb05c396285b77140f0c6ef07d802bd2326187",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com",
-        "sha256": "1dbf66eb8ee91a9c1b06ded657e1d091cfc646d8b25baee3fe8d2c5b28f010dc"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "6fabf05d80967dca31b5d21791eb05c396285b77140f0c6ef07d802bd2326187"
       },
       "parts": [
         {
@@ -599,15 +599,15 @@
     {
       "id": "taittiriya-aranyaka-4",
       "index": "taittiriya-aranyaka-4/index.json",
-      "sha256": "534e491c06e9804f596b839152b89b90ff1390ebbdbdca5cf68839b25eb31007",
+      "sha256": "809a28ed825cf9462236b41eae79e9127e371cd1ed36c705c5a78fe762596243",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_4",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 4 — taittiriya.com",
-        "sha256": "534e491c06e9804f596b839152b89b90ff1390ebbdbdca5cf68839b25eb31007"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "809a28ed825cf9462236b41eae79e9127e371cd1ed36c705c5a78fe762596243"
       },
       "parts": [
         {
@@ -621,15 +621,15 @@
     {
       "id": "taittiriya-aranyaka-5",
       "index": "taittiriya-aranyaka-5/index.json",
-      "sha256": "e7c55a3fb9f0ab8b951abfbf6d6d12ebd0b64f1094ac80f94ffd92ff78818c2f",
+      "sha256": "2d723ad8f9cce42e858a5c13e0c1bea27f17682f21104ae74118bfd5eb025ef6",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_5",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 5 — taittiriya.com",
-        "sha256": "e7c55a3fb9f0ab8b951abfbf6d6d12ebd0b64f1094ac80f94ffd92ff78818c2f"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 5 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "2d723ad8f9cce42e858a5c13e0c1bea27f17682f21104ae74118bfd5eb025ef6"
       },
       "parts": [
         {
@@ -649,15 +649,15 @@
     {
       "id": "taittiriya-aranyaka-6",
       "index": "taittiriya-aranyaka-6/index.json",
-      "sha256": "c824060cac89cb5a7c634d85c242e8219442a2ace60607dcd720602a0d125c5c",
+      "sha256": "e1dd40f24097b04c395074bdda9e4d9f26064832034721f069781b7e2b80e534",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_6",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 6 — taittiriya.com",
-        "sha256": "c824060cac89cb5a7c634d85c242e8219442a2ace60607dcd720602a0d125c5c"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 6 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "e1dd40f24097b04c395074bdda9e4d9f26064832034721f069781b7e2b80e534"
       },
       "parts": [
         {
@@ -671,15 +671,15 @@
     {
       "id": "taittiriya-aranyaka-7",
       "index": "taittiriya-aranyaka-7/index.json",
-      "sha256": "ba82b0099b1667bcfea7f17955c56a2c63fa6a4f30f69b91b5a3b3ae3914f20a",
+      "sha256": "b6678a712437b2b33c3919616021569af6bb118a4b49b9f9be9b9dbcde9570c8",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_7",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 7 — taittiriya.com",
-        "sha256": "ba82b0099b1667bcfea7f17955c56a2c63fa6a4f30f69b91b5a3b3ae3914f20a"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 7 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "b6678a712437b2b33c3919616021569af6bb118a4b49b9f9be9b9dbcde9570c8"
       },
       "parts": [
         {
@@ -693,15 +693,15 @@
     {
       "id": "taittiriya-aranyaka-8",
       "index": "taittiriya-aranyaka-8/index.json",
-      "sha256": "95a696546379a7614cd106e298332cd7b0ed4c3c8918c7050f10fbe1eab07009",
+      "sha256": "232346dd3f6cb34c5ae0bdf441c426bb89688e5327a32581bc64a98eed2a52a4",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_8",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com",
-        "sha256": "95a696546379a7614cd106e298332cd7b0ed4c3c8918c7050f10fbe1eab07009"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "232346dd3f6cb34c5ae0bdf441c426bb89688e5327a32581bc64a98eed2a52a4"
       },
       "parts": [
         {
@@ -715,15 +715,15 @@
     {
       "id": "taittiriya-aranyaka-9",
       "index": "taittiriya-aranyaka-9/index.json",
-      "sha256": "ef4061bb0603a2ccb4b1e8381e8f34628f21a297ed57d332d11f599f081b22b2",
+      "sha256": "b5fd8724c6e8f2690b84315111c41ae2fc5e597117a1c44771759178dd318a23",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_9",
         "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
-        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com",
-        "sha256": "ef4061bb0603a2ccb4b1e8381e8f34628f21a297ed57d332d11f599f081b22b2"
+        "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "b5fd8724c6e8f2690b84315111c41ae2fc5e597117a1c44771759178dd318a23"
       },
       "parts": [
         {
@@ -737,66 +737,66 @@
     {
       "id": "taittiriya-samhita-4",
       "index": "taittiriya-samhita-4/index.json",
-      "sha256": "c131b95cf8c16fad42da70170658961cd996fb33581faaa58f290fc0143d9795",
+      "sha256": "70d5c869da02becad104635d42cff0ec759c505dbcb9868b28ebd854775bc9b4",
       "provenance": {
-        "upstreamUrl": "https://sa.wikisource.org/w/index.php?title=%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%B8%E0%A4%82%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A4%BE-%E0%A5%A7-%E0%A5%AA&oldid=417990",
-        "upstreamRef": "revid 417990",
+        "upstreamUrl": "https://taittiriya.com/samhita/kanda_4_prashna_1",
+        "upstreamRef": "2026-10-14",
         "retrievedAt": "2026-10-14",
-        "parser": "taittiriya@1",
-        "license": "CC BY-SA 4.0 — Adapted from \"तैत्तिरीयसंहिता-१-४\", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/",
-        "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource contributors, \"तैत्तिरीयसंहिता-१-४\" revid 417990, CC BY-SA 4.0",
-        "sha256": "c131b95cf8c16fad42da70170658961cd996fb33581faaa58f290fc0143d9795"
+        "parser": "taittiriya@2",
+        "license": "Text from taittiriya.com; permission not yet confirmed.",
+        "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — taittiriya.com, edited by Sridhar Iyer",
+        "sha256": "70d5c869da02becad104635d42cff0ec759c505dbcb9868b28ebd854775bc9b4"
       },
       "parts": [
         {
           "file": "taittiriya-samhita-4/part-1.json",
-          "sha256": "911c5f6abed63e4412ed0d8164fa74850127fe7e459120d415d4f2a90117b983",
-          "bytes": 83948,
-          "gzip": 12798
+          "sha256": "e111461754669ce87c5f0b6ab2739226e068bd91f3551e89e018c8da735239f6",
+          "bytes": 51956,
+          "gzip": 8605
         },
         {
           "file": "taittiriya-samhita-4/part-2.json",
-          "sha256": "76fce4120b21496eab4da51d9e3dfa6d446003844bbd466013973acbad87de94",
-          "bytes": 89208,
-          "gzip": 13579
+          "sha256": "4a43d3021f6cf7cb1d274ce279a8f226d9664030e73194850191100c8019439b",
+          "bytes": 57185,
+          "gzip": 9512
         },
         {
           "file": "taittiriya-samhita-4/part-3.json",
-          "sha256": "03d80364bbb527bf684ed86310581c612abca714449db6c0bb8e9e863f3d9750",
-          "bytes": 60994,
-          "gzip": 9836
+          "sha256": "786c066a1d250886d5538a5100e98b3abec4fc8a9d7964ccb4ca8d5dcf0f62e3",
+          "bytes": 40010,
+          "gzip": 7127
         },
         {
           "file": "taittiriya-samhita-4/part-4.json",
-          "sha256": "f8985150a1e2a86209379332cc675ff30b6984fd54d7e78eefe943e749a772eb",
-          "bytes": 58122,
-          "gzip": 9877
+          "sha256": "fa3d2af63fbe5be0b820f24a4b2ccc433fd7c12e56777f7cfc624695e6608917",
+          "bytes": 40353,
+          "gzip": 7537
         },
         {
           "file": "taittiriya-samhita-4/part-5.json",
-          "sha256": "4594aa4a4b237fcee57c8518ce2ae67c1c146688beee3add345cf92a911d45aa",
-          "bytes": 37249,
-          "gzip": 5926
+          "sha256": "a79506ac8477c2dfef80d5020cc84893a8f0b80d303d4bd169acf4f16e7a68ab",
+          "bytes": 30777,
+          "gzip": 5294
         },
         {
           "file": "taittiriya-samhita-4/part-6.json",
-          "sha256": "1e5e7aaa8f8f843cac7b9ed4196e17a9637b35a6b572c9c530f57b07a4881d49",
-          "bytes": 82430,
-          "gzip": 13305
+          "sha256": "e1faaaf68573fa93c02d547b2f29408d120086dbb451a34bb8a407aad7c09dd0",
+          "bytes": 48127,
+          "gzip": 8557
         },
         {
           "file": "taittiriya-samhita-4/part-7.json",
-          "sha256": "9c330368ff9c62276ea78c489c0f199e5417139d81d258ddd5ae400e8541f1b2",
-          "bytes": 53092,
-          "gzip": 8313
+          "sha256": "89d5a111548e0b4b5dc8774b28f593dbec8a64d50a4e0c2fdad5b3b9a8b72e65",
+          "bytes": 33045,
+          "gzip": 5615
         }
       ]
     }
   ],
   "metrics": {
     "total": {
-      "raw": 7743096,
-      "gzip": 1192623
+      "raw": 7579411,
+      "gzip": 1171253
     },
     "largestPart": {
       "file": "rigveda-1/part-7.json",
@@ -807,7 +807,7 @@
         "id": "rudram",
         "label": "Śrī Rudram",
         "parts": 2,
-        "gzip": 14239,
+        "gzip": 10909,
         "budget": 25600,
         "maxParts": 3,
         "ok": true

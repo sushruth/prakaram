@@ -1,63 +1,50 @@
-import type { MantraDocument } from '../../../src/types/mantra';
+import type { MantraChunk, MantraDocument } from '../../../src/types/mantra';
+import { decodeEntities, TAGS, ZERO_WIDTH } from './aranyaka';
 import { splitAtDanda } from './danda';
 
 /**
- * Parse a Taittiriya Samhita page (Wikisource wikitext) into a MantraDocument.
- *
- * The Wikisource text is typed in a font whose Vedic marks live in the Private Use Area. They are
- * mapped here to Unicode; the two stray marks that could not be identified from context are dropped.
- * The source is the saṃhitā with words spaced; each printed mantra is split at its daṇḍas into padas.
+ * Parse taittiriya.com Taittirīya Saṃhitā prashna pages (samhita/kanda_K_prashna_P) into one kāṇḍa's
+ * MantraDocument: one section per anuvāka, numbered in reading order across the kāṇḍa, one pada per daṇḍa.
+ * The fetch and cache live in the generator; only the parse lives here.
  */
-const PUA: Record<string, string> = {
-  '\ue001': 'ं', // anusvara
-  '\uf131': 'ः', // visarga (upadhmaniya before p)
-  '\uf156': 'ः', // visarga (before s)
-  '\uf176': '', // spurious reph-like mark
-  '\uf185': '', // stray mark
-  '\ue007': '', // stray mark
-};
+const SECTION = /<section class="anuvaka-section" id="anuvaka-([^"]+)">/g;
+/** The Devanagari half of a pañcāśat's text. The nested `pancashati-reading` span is a different class and is skipped. */
+const PANCASHATI = /<span class="pancashati-text"[^>]*><span class="script-devanagari">([\s\S]*?)<\/span><span class="script-kannada"/g;
 
-const clean = (s: string) =>
-  [...s.replace(/[<>\u200b\u200c\u200d]/g, '')]
-    .map((ch) => PUA[ch] ?? ch)
-    .join('')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-
-export interface TsRecord {
-  k: number;
-  p: number;
-  a: number;
-  m: number;
-  text: string;
+export interface PrashnaPage {
+  prashna: number;
+  html: string;
 }
 
-/** Records keyed by their `k.p.a.m` address; the text is the next line. */
-export function parseRecords(wikitext: string): TsRecord[] {
-  const body = wikitext.replace(/<\/?pre>/g, '').split('\n');
-  const recs: TsRecord[] = [];
-  for (let i = 0; i < body.length - 1; i++) {
-    const m = body[i].trim().match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
-    if (!m) continue;
-    const [k, p, a, n] = m.slice(1).map(Number);
-    const text = clean(body[i + 1]);
-    if (text) recs.push({ k, p, a, m: n, text });
-  }
-  return recs;
+const text = (html: string): string => decodeEntities(html.replace(TAGS, '')).replace(ZERO_WIDTH, '').replace(/\s+/g, ' ').trim();
+
+/** The Devanagari text of each anuvāka on a page, in order, with its printed id. */
+function anuvakas(html: string): { id: string; text: string }[] {
+  const marks = [...html.matchAll(SECTION)];
+  return marks.map((m, i) => {
+    const body = html.slice(m.index! + m[0].length, i + 1 < marks.length ? marks[i + 1].index! : html.length);
+    return { id: m[1], text: [...body.matchAll(PANCASHATI)].map((p) => text(p[1])).filter(Boolean).join(' ') };
+  });
 }
 
-/** Records for one kāṇḍa, one section per anuvāka, one pada per line. */
-export function parseTaittiriya(wikitext: string, kanda: number): MantraDocument {
-  const all = parseRecords(wikitext).filter((r) => r.k === kanda);
-  if (!all.length) throw new Error(`no records for kanda ${kanda}`);
-
-  const byAnuvaka = new Map<string, TsRecord[]>();
-  for (const r of all) {
-    if (r.a === 0) continue; // a=0 is the prapāṭhaka heading, not an anuvāka
-    const key = `${r.k}.${r.p}.${r.a}`;
-    if (!byAnuvaka.has(key)) byAnuvaka.set(key, []);
-    byAnuvaka.get(key)!.push(r);
-  }
+/** One kāṇḍa of the Taittirīya Saṃhitā as a document; `pages` are its prashnas in order. */
+export function parseTaittiriya(pages: PrashnaPage[], kanda: number): MantraDocument {
+  let n = 0;
+  const sections = pages.flatMap(({ prashna, html }) =>
+    anuvakas(html)
+      .filter((a) => a.text)
+      .map((a) => {
+        const anuvaka = Number(a.id);
+        const chunks: MantraChunk[] = splitAtDanda(a.text).map((sanskrit, j) => ({
+          id: `ts-${kanda}-${prashna}-${anuvaka}-${j + 1}`,
+          chunkNumber: j + 1,
+          sanskrit,
+          ...(j === 0 ? { section: anuvaka } : {}),
+        }));
+        return { id: `taittiriya-samhita-${kanda}-${prashna}-${anuvaka}`, title: `Kāṇḍa ${kanda} · Prapāṭhaka ${prashna} · Anuvāka ${anuvaka}`, sectionNumber: ++n, chunks };
+      }),
+  );
+  if (!sections.length) throw new Error(`no text for Taittiriya Samhita kanda ${kanda}`);
 
   return {
     id: `taittiriya-samhita-${kanda}`,
@@ -66,26 +53,12 @@ export function parseTaittiriya(wikitext: string, kanda: number): MantraDocument
       veda: 'yajurveda',
       vedaNote: `Krishna Yajurveda, Taittiriya Samhita (kāṇḍa ${kanda}).`,
       // No `place`: the work's division (prapāṭhaka) changes from section to section, which `place` cannot express.
-      source: 'Wikisource (sa.wikisource.org), तैत्तिरीयसंहिता-१-४ (revid 417990) / -५-७ (revid 417991)',
+      source: `taittiriya.com (Taittirīya Saṃhitā, kāṇḍa ${kanda}), edited by Sridhar Iyer`,
       status: 'draft',
-      // Kept in step with scripts/sources/generators/taittiriya.ts; the generator overrides it so that
-      // metadata.license always equals provenance.license (docs/licence-compliance.md §2.2).
-      license: 'CC BY-SA 4.0 — Adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/',
+      license: 'Text from taittiriya.com; permission not yet confirmed.',
       categories: ['Yajurveda', 'Krishna Yajurveda', 'Samhitas'],
-      summary: `The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa ${kanda}, from Wikisource. The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.`,
+      summary: `The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa ${kanda}, from taittiriya.com. The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.`,
     },
-    sections: [...byAnuvaka.entries()].map(([key, recs], i) => {
-      const [k, p, a] = key.split('.').map(Number);
-      return {
-        id: `taittiriya-samhita-${k}-${p}-${a}`,
-        title: `Kāṇḍa ${k} · Prapāṭhaka ${p} · Anuvāka ${a}`,
-        sectionNumber: i + 1,
-        // `section` (the anuvāka) goes on the first pada only, so the player prints the heading once.
-        chunks: recs
-          .filter((r) => r.m > 0)
-          .flatMap((r) => splitAtDanda(r.text))
-          .map((sanskrit, j) => ({ id: `ts-${k}-${p}-${a}-${j + 1}`, chunkNumber: j + 1, sanskrit, ...(j === 0 ? { section: a } : {}) })),
-      };
-    }),
+    sections,
   };
 }
