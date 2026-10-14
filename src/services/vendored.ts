@@ -7,7 +7,7 @@ import { rebuildCorpus } from './wiki';
  * The commit the vendored `sources/` files are pinned to. Set to the data commit sha once the files
  * land; until then the dev server serves them from the repo root. See sources/README.md.
  */
-export const SOURCES_PIN = 'local';
+export const SOURCES_PIN = 'fc250df2e6f65418a8fe3db8e78b414fd178e1b2';
 
 /** The Cache API store for vendored sources, keyed by pin + path. */
 export const SOURCES_CACHE = 'prakaram-sources-v1';

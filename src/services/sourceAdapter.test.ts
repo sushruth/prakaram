@@ -6,6 +6,7 @@ import { LIVE_SOURCES } from '../data/liveSources';
 import { VENDORED_SOURCES } from '../data/vendoredSources';
 import type { MantraDocument, SourceIndex, SourcePart } from '../types/mantra';
 import { SOURCE_ADAPTERS, adapterFor, ensureDocument, ensureDocumentSections, hasDocument } from './sourceAdapter';
+import { SOURCES_PIN } from './vendored';
 import { getArticle, rebuildCorpus, requiredSourceIds, requiredSourceParts } from './wiki';
 
 /** A minimal processed document for a vendored id, with one chunk per section. */
@@ -125,8 +126,8 @@ describe('ensureDocument', () => {
     expect(SUKTA_MAP.has('rigveda-1')).toBe(true);
     expect(fetchCalls.map(sourcePath)).toEqual(['rigveda-1/index.json', 'rigveda-1/part-1.json']);
     expect(opened).toContain('prakaram-sources-v1');
-    expect(store.has('local|rigveda-1/index.json')).toBe(true);
-    expect(store.has('local|rigveda-1/part-1.json')).toBe(true);
+    expect(store.has(`${SOURCES_PIN}|rigveda-1/index.json`)).toBe(true);
+    expect(store.has(`${SOURCES_PIN}|rigveda-1/part-1.json`)).toBe(true);
 
     await ensureDocument('rigveda-1');
     expect(fetchCalls).toHaveLength(2);
