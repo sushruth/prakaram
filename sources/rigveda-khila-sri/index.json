@@ -1,0 +1,58 @@
+{
+  "id": "rigveda-khila-sri",
+  "title": {
+    "sanskrit": "श्री सूक्तम्",
+    "transliteration": "Śrī Sūktam",
+    "english": "Śrī Sūkta (Ṛgveda Khila)"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "rigveda",
+    "vedaNote": "Rigveda Khila (RvKh 2.6), the appendix to the Rigveda.",
+    "place": {
+      "work": {
+        "sanskrit": "ऋग्वेद खिल",
+        "english": "Ṛgveda (Khila)"
+      },
+      "divisions": [
+        {
+          "kind": "khaṇḍa",
+          "n": 2
+        },
+        {
+          "kind": "sūkta",
+          "n": 6
+        }
+      ]
+    },
+    "source": "sanskritdocuments.org (Śrī Sūkta, s-sukta-accent.html)",
+    "status": "draft",
+    "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+    "deity": "Sri Mahalakshmi",
+    "categories": [
+      "Suktas",
+      "Devi",
+      "Rigveda"
+    ],
+    "summary": "The Śrī Sūkta, the hymn to Śrī (Lakṣmī), from the Khila appendix to the Ṛgveda (RvKh 2.6). The sixteen printed verse numerals give the ṛk level; each printed line is a pada.",
+    "remoteUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
+    "provenance": {
+      "upstreamUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
+      "upstreamRef": "2025-11-06",
+      "retrievedAt": "2026-10-14",
+      "parser": "sri@1",
+      "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+      "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org",
+      "sha256": "554ef04952036fa2f5b26ee28cfb86a69f43b8ab3e524a05aef62ba394ffe095"
+    }
+  },
+  "sections": [
+    {
+      "id": "rigveda-khila-sri-1",
+      "sectionNumber": 1,
+      "title": "Śrī Sūkta (RvKh 2.6)",
+      "file": "part-1.json",
+      "chunkCount": 81
+    }
+  ]
+}

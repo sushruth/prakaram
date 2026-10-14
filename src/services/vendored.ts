@@ -1,5 +1,7 @@
-import type { MantraDocument, SourceProvenance } from '../types/mantra';
+import type { MantraDocument, SourceIndex, SourcePart, SourceProvenance } from '../types/mantra';
+import { mergeDocument } from '../data';
 import { VENDORED_SOURCES } from '../data/vendoredSources';
+import { rebuildCorpus } from './wiki';
 
 /**
  * The commit the vendored `sources/` files are pinned to. Set to the data commit sha once the files
@@ -7,7 +9,7 @@ import { VENDORED_SOURCES } from '../data/vendoredSources';
  */
 export const SOURCES_PIN = 'local';
 
-/** The Cache API store for vendored sources, keyed by pin + file. */
+/** The Cache API store for vendored sources, keyed by pin + path. */
 export const SOURCES_CACHE = 'prakaram-sources-v1';
 
 /**
@@ -23,70 +25,102 @@ export function sourcesBaseUrl(): string {
 
 const hasCache = (): boolean => typeof caches !== 'undefined';
 
-const cacheKey = (file: string): string => `${SOURCES_PIN}|${file}`;
+const cacheKey = (path: string): string => `${SOURCES_PIN}|${path}`;
 
-async function cacheGet(file: string): Promise<MantraDocument | undefined> {
+async function cacheGet<T>(path: string): Promise<T | undefined> {
   if (!hasCache()) return undefined;
   try {
-    const hit = await (await caches.open(SOURCES_CACHE)).match(cacheKey(file));
-    return hit ? ((await hit.json()) as MantraDocument) : undefined;
+    const hit = await (await caches.open(SOURCES_CACHE)).match(cacheKey(path));
+    return hit ? ((await hit.json()) as T) : undefined;
   } catch {
     return undefined;
   }
 }
 
-async function cachePut(file: string, doc: MantraDocument): Promise<void> {
+async function cachePut<T>(path: string, value: T): Promise<void> {
   if (!hasCache()) return;
   try {
-    await (await caches.open(SOURCES_CACHE)).put(cacheKey(file), new Response(JSON.stringify(doc), { headers: { 'content-type': 'application/json' } }));
+    await (await caches.open(SOURCES_CACHE)).put(cacheKey(path), new Response(JSON.stringify(value), { headers: { 'content-type': 'application/json' } }));
   } catch {
     // A cache write is best-effort; the fetch already succeeded.
   }
 }
 
-/**
- * The processed document for a vendored source id: from the Cache API when present, else fetched from
- * `sourcesBaseUrl()` and cached. Resolves undefined on any failure (unknown id, HTTP error, bad JSON);
- * never throws, and never touches the corpus — the adapter registers and rebuilds.
- */
-export async function fetchSourceDocument(id: string): Promise<MantraDocument | undefined> {
-  const source = VENDORED_SOURCES.find((s) => s.id === id);
-  if (!source) return undefined;
+/** Fetch one JSON document from the sources base URL, caching it. Resolves undefined on any failure. */
+async function fetchJson<T>(path: string): Promise<T | undefined> {
+  const cached = await cacheGet<T>(path);
+  if (cached) return cached;
   try {
-    const cached = await cacheGet(source.file);
-    if (cached) return cached;
-    const res = await fetch(`${sourcesBaseUrl()}/${source.file}`);
+    const res = await fetch(`${sourcesBaseUrl()}/${path}`);
     if (!res.ok) return undefined;
-    const doc = (await res.json()) as MantraDocument;
-    await cachePut(source.file, doc);
-    return doc;
+    const value = (await res.json()) as T;
+    await cachePut(path, value);
+    return value;
   } catch {
     return undefined;
   }
 }
 
-/** One entry of `sources/manifest.json`: a file, its content hash and its provenance. */
-export interface VendoredManifestEntry {
-  id: string;
-  file: string;
-  sha256: string;
-  provenance: SourceProvenance;
+/** A vendored source's index (its metadata and per-section part pointers), from cache or the wire. */
+export function fetchSourceIndex(id: string): Promise<SourceIndex | undefined> {
+  const source = VENDORED_SOURCES.find((s) => s.id === id);
+  return source ? fetchJson<SourceIndex>(source.index) : Promise.resolve(undefined);
 }
 
-/** `sources/manifest.json`: the pin the app should use and the per-file provenance. */
+/** One part file of a vendored source, from cache or the wire. `file` is as the index names it. */
+export function fetchSourcePart(id: string, file: string): Promise<SourcePart | undefined> {
+  return fetchJson<SourcePart>(`${id}/${file}`);
+}
+
+/**
+ * Load a vendored source into the corpus: fetch its index, then the parts covering `sections` (every part when
+ * `sections` is omitted), assemble a `MantraDocument`, merge it into `SUKTA_MAP` (register when absent, else
+ * add/replace sections so a partial load later completes) and rebuild the corpus. Resolves undefined on any
+ * failure; never throws.
+ */
+export async function loadSource(id: string, sections?: number[]): Promise<MantraDocument | undefined> {
+  const index = await fetchSourceIndex(id);
+  if (!index) return undefined;
+  const wanted = sections === undefined ? undefined : new Set(sections);
+  const files = [...new Set(index.sections.filter((s) => !wanted || wanted.has(s.sectionNumber)).map((s) => s.file))];
+  const fetched = await Promise.all(files.map((file) => fetchSourcePart(id, file)));
+  if (fetched.some((part) => part === undefined)) return undefined;
+  const order = new Map(index.sections.map((s, i) => [s.sectionNumber, i]));
+  const loaded = fetched
+    .flatMap((part) => part!.sections)
+    .sort((a, b) => (order.get(a.sectionNumber) ?? Number.MAX_SAFE_INTEGER) - (order.get(b.sectionNumber) ?? Number.MAX_SAFE_INTEGER));
+  const doc: MantraDocument = { id: index.id, title: index.title, metadata: index.metadata, sections: loaded };
+  const stored = mergeDocument(doc);
+  rebuildCorpus();
+  return stored;
+}
+
+/** One part of `sources/manifest.json`: a file, its content hash and its raw/gzipped size. */
+export interface VendoredManifestPart {
+  file: string;
+  sha256: string;
+  bytes: number;
+  gzip: number;
+}
+
+/** One entry of `sources/manifest.json`: an index, its provenance and its part files. */
+export interface VendoredManifestEntry {
+  id: string;
+  index: string;
+  sha256: string;
+  provenance: SourceProvenance;
+  parts: VendoredManifestPart[];
+}
+
+/** `sources/manifest.json`: the pin the app should use, the per-source files and the size report. */
 export interface VendoredManifest {
   pin: string;
   generatedAt: string;
   sources: VendoredManifestEntry[];
+  metrics?: unknown;
 }
 
 /** The `sources/manifest.json` index, or undefined when it cannot be fetched. The runtime does not need it. */
 export async function fetchManifest(): Promise<VendoredManifest | undefined> {
-  try {
-    const res = await fetch(`${sourcesBaseUrl()}/manifest.json`);
-    if (!res.ok) return undefined;
-    return (await res.json()) as VendoredManifest;
-  } catch {
-    return undefined;
-  }
+  return fetchJson<VendoredManifest>('manifest.json');
 }

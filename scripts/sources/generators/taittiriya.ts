@@ -1,17 +1,16 @@
 /**
  * Generator contract: a module under `scripts/sources/generators/` default-exports
  * `{ id: string; generate(): Promise<ManifestEntry[]> }`. `generate()` fetches its upstream, parses,
- * attaches provenance and writes `sources/<docId>.json` for every document it produces, then returns
- * the manifest entries. It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so
- * any two generators can run at once without racing. A module is directly runnable
+ * builds the document's index + part files under `sources/<docId>/` and returns the manifest entries.
+ * It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so any two generators can
+ * run at once without racing. A module is directly runnable
  * (`bun scripts/sources/generators/taittiriya.ts`) and writes only its own files.
  */
-import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { MantraDocument } from '../../../src/types/mantra';
+import type { MantraDocument, SourceProvenance } from '../../../src/types/mantra';
 import { parseTaittiriya } from '../parsers/taittiriya';
 import { getJson } from '../lib/fetch';
-import { withProvenance } from '../lib/provenance';
+import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'taittiriya-samhita';
@@ -36,11 +35,6 @@ interface WikiResponse {
   query: { pages: { revisions: { revid: number; slots: { main: { content: string } } }[] }[] };
 }
 
-/** The file kāṇḍa 4 is written to. */
-export function taittiriyaFile(kanda: number): string {
-  return `taittiriya-samhita-${kanda}.json`;
-}
-
 /** The wikitext of the pinned revision, failing loudly if the server serves a different revid. */
 export async function fetchRevision(revid: number): Promise<string> {
   const data = await getJson<WikiResponse>(apiUrl(revid));
@@ -50,29 +44,32 @@ export async function fetchRevision(revid: number): Promise<string> {
   return revision.slots.main.content;
 }
 
-/** Parse one kāṇḍa and attach provenance; no fetch, no write, so a test can run it on a fixture. */
-export function buildTaittiriyaDocument(wikitext: string, kanda: number, retrievedAt: string): MantraDocument {
+/** Parse one kāṇḍa into a raw document (no provenance; the index carries it); no fetch, no write. */
+export function buildTaittiriyaDocument(wikitext: string, kanda: number): MantraDocument {
   const parsed = parseTaittiriya(wikitext, kanda);
-  return withProvenance({ ...parsed, metadata: { ...parsed.metadata, license: LICENSE } }, {
+  return { ...parsed, metadata: { ...parsed.metadata, license: LICENSE } };
+}
+
+/** The provenance for kāṇḍa `kanda` of the pinned revision. */
+export function taittiriyaProvenance(kanda: number, retrievedAt: string): Omit<SourceProvenance, 'sha256'> {
+  return {
     upstreamUrl: pageUrl(REVID),
     upstreamRef: `revid ${REVID}`,
     retrievedAt,
     parser: PARSER,
     license: LICENSE,
     attribution: `Taittirīya Saṃhitā, kāṇḍa ${kanda} — Wikisource (CC BY-SA 4.0)`,
-  });
+  };
 }
 
-/** Fetch the pinned kāṇḍa 4 revision, parse it, attach provenance and write its file. */
+/** Fetch the pinned kāṇḍa 4 revision, parse it, build and write its index + parts. */
 async function generate(): Promise<ManifestEntry[]> {
   const retrievedAt = new Date().toISOString().slice(0, 10);
   const wikitext = await fetchRevision(REVID);
-  const doc = buildTaittiriyaDocument(wikitext, KANDA, retrievedAt);
-  const file = taittiriyaFile(KANDA);
-  writeFileSync(join(SOURCES_DIR, file), `${JSON.stringify(doc, null, 2)}\n`);
-  const provenance = doc.metadata.provenance!;
-  console.log(`[${ID}] wrote ${file}`);
-  return [{ id: doc.id, file, sha256: provenance.sha256, provenance }];
+  const doc = buildTaittiriyaDocument(wikitext, KANDA);
+  const entry = writeSource(SOURCES_DIR, buildSource(doc, taittiriyaProvenance(KANDA, retrievedAt)));
+  console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
+  return [entry];
 }
 
 export default { id: ID, generate };

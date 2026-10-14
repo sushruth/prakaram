@@ -1,0 +1,606 @@
+{
+  "id": "taittiriya-aranyaka-10",
+  "title": {
+    "sanskrit": "तैत्तिरीय आरण्यक",
+    "transliteration": "Taittirīya Āraṇyaka",
+    "english": "Taittirīya Āraṇyaka, Prapāṭhaka 10"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 10.",
+    "place": {
+      "work": {
+        "sanskrit": "तैत्तिरीय आरण्यक",
+        "english": "Taittirīya Āraṇyaka"
+      },
+      "divisions": [
+        {
+          "kind": "prapāṭhaka",
+          "n": 10
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 10)",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Aranyakas"
+    ],
+    "summary": "The Taittirīya Āraṇyaka of the Krishna Yajurveda, prapāṭhaka 10, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/aranyaka/prapathaka_10",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_10",
+      "upstreamRef": "2026-10-14",
+      "retrievedAt": "2026-10-14",
+      "parser": "aranyaka@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com",
+      "sha256": "30f708f89dc6d5826aff7b832dbdf9beefec794c90ed1a3a485b89a2070af55c"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-aranyaka-10-1",
+      "sectionNumber": 1,
+      "title": "Prapāṭhaka 10 · Anuvāka 1",
+      "file": "part-1.json",
+      "chunkCount": 180
+    },
+    {
+      "id": "taittiriya-aranyaka-10-2",
+      "sectionNumber": 2,
+      "title": "Prapāṭhaka 10 · Anuvāka 2",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "taittiriya-aranyaka-10-3",
+      "sectionNumber": 3,
+      "title": "Prapāṭhaka 10 · Anuvāka 3",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-4",
+      "sectionNumber": 4,
+      "title": "Prapāṭhaka 10 · Anuvāka 4",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-5",
+      "sectionNumber": 5,
+      "title": "Prapāṭhaka 10 · Anuvāka 5",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-6",
+      "sectionNumber": 6,
+      "title": "Prapāṭhaka 10 · Anuvāka 6",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-7",
+      "sectionNumber": 7,
+      "title": "Prapāṭhaka 10 · Anuvāka 7",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-8",
+      "sectionNumber": 8,
+      "title": "Prapāṭhaka 10 · Anuvāka 8",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-9",
+      "sectionNumber": 9,
+      "title": "Prapāṭhaka 10 · Anuvāka 9",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-10",
+      "sectionNumber": 10,
+      "title": "Prapāṭhaka 10 · Anuvāka 10",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-11",
+      "sectionNumber": 11,
+      "title": "Prapāṭhaka 10 · Anuvāka 11",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-12",
+      "sectionNumber": 12,
+      "title": "Prapāṭhaka 10 · Anuvāka 12",
+      "file": "part-1.json",
+      "chunkCount": 32
+    },
+    {
+      "id": "taittiriya-aranyaka-10-13",
+      "sectionNumber": 13,
+      "title": "Prapāṭhaka 10 · Anuvāka 13",
+      "file": "part-1.json",
+      "chunkCount": 25
+    },
+    {
+      "id": "taittiriya-aranyaka-10-14",
+      "sectionNumber": 14,
+      "title": "Prapāṭhaka 10 · Anuvāka 14",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-15",
+      "sectionNumber": 15,
+      "title": "Prapāṭhaka 10 · Anuvāka 15",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-16",
+      "sectionNumber": 16,
+      "title": "Prapāṭhaka 10 · Anuvāka 16",
+      "file": "part-1.json",
+      "chunkCount": 22
+    },
+    {
+      "id": "taittiriya-aranyaka-10-17",
+      "sectionNumber": 17,
+      "title": "Prapāṭhaka 10 · Anuvāka 17",
+      "file": "part-1.json",
+      "chunkCount": 3
+    },
+    {
+      "id": "taittiriya-aranyaka-10-18",
+      "sectionNumber": 18,
+      "title": "Prapāṭhaka 10 · Anuvāka 18",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-19",
+      "sectionNumber": 19,
+      "title": "Prapāṭhaka 10 · Anuvāka 19",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-20",
+      "sectionNumber": 20,
+      "title": "Prapāṭhaka 10 · Anuvāka 20",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-21",
+      "sectionNumber": 21,
+      "title": "Prapāṭhaka 10 · Anuvāka 21",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-22",
+      "sectionNumber": 22,
+      "title": "Prapāṭhaka 10 · Anuvāka 22",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-23",
+      "sectionNumber": 23,
+      "title": "Prapāṭhaka 10 · Anuvāka 23",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-24",
+      "sectionNumber": 24,
+      "title": "Prapāṭhaka 10 · Anuvāka 24",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-25",
+      "sectionNumber": 25,
+      "title": "Prapāṭhaka 10 · Anuvāka 25",
+      "file": "part-1.json",
+      "chunkCount": 3
+    },
+    {
+      "id": "taittiriya-aranyaka-10-26",
+      "sectionNumber": 26,
+      "title": "Prapāṭhaka 10 · Anuvāka 26",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-27",
+      "sectionNumber": 27,
+      "title": "Prapāṭhaka 10 · Anuvāka 27",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "taittiriya-aranyaka-10-28",
+      "sectionNumber": 28,
+      "title": "Prapāṭhaka 10 · Anuvāka 28",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-29",
+      "sectionNumber": 29,
+      "title": "Prapāṭhaka 10 · Anuvāka 29",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-30",
+      "sectionNumber": 30,
+      "title": "Prapāṭhaka 10 · Anuvāka 30",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-31",
+      "sectionNumber": 31,
+      "title": "Prapāṭhaka 10 · Anuvāka 31",
+      "file": "part-1.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "taittiriya-aranyaka-10-32",
+      "sectionNumber": 32,
+      "title": "Prapāṭhaka 10 · Anuvāka 32",
+      "file": "part-1.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "taittiriya-aranyaka-10-33",
+      "sectionNumber": 33,
+      "title": "Prapāṭhaka 10 · Anuvāka 33",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-34",
+      "sectionNumber": 34,
+      "title": "Prapāṭhaka 10 · Anuvāka 34",
+      "file": "part-1.json",
+      "chunkCount": 5
+    },
+    {
+      "id": "taittiriya-aranyaka-10-35",
+      "sectionNumber": 35,
+      "title": "Prapāṭhaka 10 · Anuvāka 35",
+      "file": "part-1.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "taittiriya-aranyaka-10-36",
+      "sectionNumber": 36,
+      "title": "Prapāṭhaka 10 · Anuvāka 36",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-37",
+      "sectionNumber": 37,
+      "title": "Prapāṭhaka 10 · Anuvāka 37",
+      "file": "part-1.json",
+      "chunkCount": 3
+    },
+    {
+      "id": "taittiriya-aranyaka-10-38",
+      "sectionNumber": 38,
+      "title": "Prapāṭhaka 10 · Anuvāka 38",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "taittiriya-aranyaka-10-39",
+      "sectionNumber": 39,
+      "title": "Prapāṭhaka 10 · Anuvāka 39",
+      "file": "part-1.json",
+      "chunkCount": 19
+    },
+    {
+      "id": "taittiriya-aranyaka-10-40",
+      "sectionNumber": 40,
+      "title": "Prapāṭhaka 10 · Anuvāka 40",
+      "file": "part-1.json",
+      "chunkCount": 19
+    },
+    {
+      "id": "taittiriya-aranyaka-10-41",
+      "sectionNumber": 41,
+      "title": "Prapāṭhaka 10 · Anuvāka 41",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-42",
+      "sectionNumber": 42,
+      "title": "Prapāṭhaka 10 · Anuvāka 42",
+      "file": "part-1.json",
+      "chunkCount": 4
+    },
+    {
+      "id": "taittiriya-aranyaka-10-43",
+      "sectionNumber": 43,
+      "title": "Prapāṭhaka 10 · Anuvāka 43",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-44",
+      "sectionNumber": 44,
+      "title": "Prapāṭhaka 10 · Anuvāka 44",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-45",
+      "sectionNumber": 45,
+      "title": "Prapāṭhaka 10 · Anuvāka 45",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-46",
+      "sectionNumber": 46,
+      "title": "Prapāṭhaka 10 · Anuvāka 46",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-47",
+      "sectionNumber": 47,
+      "title": "Prapāṭhaka 10 · Anuvāka 47",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-48",
+      "sectionNumber": 48,
+      "title": "Prapāṭhaka 10 · Anuvāka 48",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-49",
+      "sectionNumber": 49,
+      "title": "Prapāṭhaka 10 · Anuvāka 49",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-50",
+      "sectionNumber": 50,
+      "title": "Prapāṭhaka 10 · Anuvāka 50",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-51",
+      "sectionNumber": 51,
+      "title": "Prapāṭhaka 10 · Anuvāka 51",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-52",
+      "sectionNumber": 52,
+      "title": "Prapāṭhaka 10 · Anuvāka 52",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-53",
+      "sectionNumber": 53,
+      "title": "Prapāṭhaka 10 · Anuvāka 53",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-54",
+      "sectionNumber": 54,
+      "title": "Prapāṭhaka 10 · Anuvāka 54",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-55",
+      "sectionNumber": 55,
+      "title": "Prapāṭhaka 10 · Anuvāka 55",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-56",
+      "sectionNumber": 56,
+      "title": "Prapāṭhaka 10 · Anuvāka 56",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-57",
+      "sectionNumber": 57,
+      "title": "Prapāṭhaka 10 · Anuvāka 57",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-58",
+      "sectionNumber": 58,
+      "title": "Prapāṭhaka 10 · Anuvāka 58",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-59",
+      "sectionNumber": 59,
+      "title": "Prapāṭhaka 10 · Anuvāka 59",
+      "file": "part-1.json",
+      "chunkCount": 11
+    },
+    {
+      "id": "taittiriya-aranyaka-10-60",
+      "sectionNumber": 60,
+      "title": "Prapāṭhaka 10 · Anuvāka 60",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-61",
+      "sectionNumber": 61,
+      "title": "Prapāṭhaka 10 · Anuvāka 61",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-62",
+      "sectionNumber": 62,
+      "title": "Prapāṭhaka 10 · Anuvāka 62",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-63",
+      "sectionNumber": 63,
+      "title": "Prapāṭhaka 10 · Anuvāka 63",
+      "file": "part-2.json",
+      "chunkCount": 5
+    },
+    {
+      "id": "taittiriya-aranyaka-10-64",
+      "sectionNumber": 64,
+      "title": "Prapāṭhaka 10 · Anuvāka 64",
+      "file": "part-2.json",
+      "chunkCount": 7
+    },
+    {
+      "id": "taittiriya-aranyaka-10-65",
+      "sectionNumber": 65,
+      "title": "Prapāṭhaka 10 · Anuvāka 65",
+      "file": "part-2.json",
+      "chunkCount": 5
+    },
+    {
+      "id": "taittiriya-aranyaka-10-66",
+      "sectionNumber": 66,
+      "title": "Prapāṭhaka 10 · Anuvāka 66",
+      "file": "part-2.json",
+      "chunkCount": 15
+    },
+    {
+      "id": "taittiriya-aranyaka-10-67",
+      "sectionNumber": 67,
+      "title": "Prapāṭhaka 10 · Anuvāka 67",
+      "file": "part-2.json",
+      "chunkCount": 38
+    },
+    {
+      "id": "taittiriya-aranyaka-10-68",
+      "sectionNumber": 68,
+      "title": "Prapāṭhaka 10 · Anuvāka 68",
+      "file": "part-2.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "taittiriya-aranyaka-10-69",
+      "sectionNumber": 69,
+      "title": "Prapāṭhaka 10 · Anuvāka 69",
+      "file": "part-2.json",
+      "chunkCount": 24
+    },
+    {
+      "id": "taittiriya-aranyaka-10-70",
+      "sectionNumber": 70,
+      "title": "Prapāṭhaka 10 · Anuvāka 70",
+      "file": "part-2.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "taittiriya-aranyaka-10-71",
+      "sectionNumber": 71,
+      "title": "Prapāṭhaka 10 · Anuvāka 71",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-72",
+      "sectionNumber": 72,
+      "title": "Prapāṭhaka 10 · Anuvāka 72",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "taittiriya-aranyaka-10-73",
+      "sectionNumber": 73,
+      "title": "Prapāṭhaka 10 · Anuvāka 73",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-74",
+      "sectionNumber": 74,
+      "title": "Prapāṭhaka 10 · Anuvāka 74",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-75",
+      "sectionNumber": 75,
+      "title": "Prapāṭhaka 10 · Anuvāka 75",
+      "file": "part-2.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-76",
+      "sectionNumber": 76,
+      "title": "Prapāṭhaka 10 · Anuvāka 76",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-77",
+      "sectionNumber": 77,
+      "title": "Prapāṭhaka 10 · Anuvāka 77",
+      "file": "part-2.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-10-78",
+      "sectionNumber": 78,
+      "title": "Prapāṭhaka 10 · Anuvāka 78",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-79",
+      "sectionNumber": 79,
+      "title": "Prapāṭhaka 10 · Anuvāka 79",
+      "file": "part-2.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-10-80",
+      "sectionNumber": 80,
+      "title": "Prapāṭhaka 10 · Anuvāka 80",
+      "file": "part-2.json",
+      "chunkCount": 1
+    }
+  ]
+}

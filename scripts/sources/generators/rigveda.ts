@@ -1,17 +1,16 @@
 /**
  * Generator contract: a module under `scripts/sources/generators/` default-exports
  * `{ id: string; generate(): Promise<ManifestEntry[]> }`. `generate()` fetches its upstream, parses,
- * attaches provenance and writes `sources/<docId>.json` for every document it produces, then returns
- * the manifest entries. It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so
- * any two generators can run at once without racing. A module is directly runnable
+ * builds the document's index + part files under `sources/<docId>/` and returns the manifest entries.
+ * It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so any two generators can
+ * run at once without racing. A module is directly runnable
  * (`bun scripts/sources/generators/rigveda.ts`) and writes only its own files.
  */
-import { writeFileSync } from 'node:fs';
+import type { MantraDocument, SourceProvenance } from '../../../src/types/mantra';
 import { join } from 'node:path';
-import type { MantraDocument } from '../../../src/types/mantra';
 import { parseRigvedaMandala, type RigvedaRecord } from '../parsers/rigveda';
 import { getJson } from '../lib/fetch';
-import { withProvenance } from '../lib/provenance';
+import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'rigveda';
@@ -25,24 +24,21 @@ const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');
 const upstreamUrl = (m: number): string =>
   `https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@${COMMIT}/Rigveda/rigveda_mandala_${m}.json`;
 
-/** The file a maṇḍala is written to. */
-export function rigvedaFile(m: number): string {
-  return `rigveda-${m}.json`;
+/** Parse one maṇḍala into a raw document (no provenance; the index carries it); no fetch, no write. */
+export function buildRigvedaDocument(records: RigvedaRecord[], m: number): MantraDocument {
+  return parseRigvedaMandala(records, m);
 }
 
-/** Parse one maṇḍala and attach provenance; no fetch, no write, so a test can run it on a fixture. */
-export function buildRigvedaDocument(records: RigvedaRecord[], m: number, retrievedAt: string): MantraDocument {
-  const parsed = parseRigvedaMandala(records, m);
-  const license = parsed.metadata.license;
-  if (!license) throw new Error(`Rigveda maṇḍala ${m} has no licence`);
-  return withProvenance(parsed, {
+/** The provenance for maṇḍala `m`, whose licence comes from the parsed document. */
+export function rigvedaProvenance(m: number, license: string, retrievedAt: string): Omit<SourceProvenance, 'sha256'> {
+  return {
     upstreamUrl: upstreamUrl(m),
     upstreamRef: COMMIT,
     retrievedAt,
     parser: PARSER,
     license,
     attribution: `Ṛgveda, maṇḍala ${m} — DharmicData (ODbL)`,
-  });
+  };
 }
 
 /** One entry per maṇḍala; a maṇḍala that fails to fetch or parse is logged and skipped. */
@@ -52,12 +48,12 @@ async function generate(): Promise<ManifestEntry[]> {
   for (const m of MANDALAS) {
     try {
       const records = await getJson<RigvedaRecord[]>(upstreamUrl(m));
-      const doc = buildRigvedaDocument(records, m, retrievedAt);
-      const file = rigvedaFile(m);
-      writeFileSync(join(SOURCES_DIR, file), `${JSON.stringify(doc, null, 2)}\n`);
-      const provenance = doc.metadata.provenance!;
-      entries.push({ id: doc.id, file, sha256: provenance.sha256, provenance });
-      console.log(`[${ID}] wrote ${file}`);
+      const doc = buildRigvedaDocument(records, m);
+      const license = doc.metadata.license;
+      if (!license) throw new Error(`Rigveda maṇḍala ${m} has no licence`);
+      const entry = writeSource(SOURCES_DIR, buildSource(doc, rigvedaProvenance(m, license, retrievedAt)));
+      entries.push(entry);
+      console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
     } catch (err) {
       console.warn(`[${ID}] skipped maṇḍala ${m}: ${(err as Error).message}`);
     }

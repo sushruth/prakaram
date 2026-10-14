@@ -1,16 +1,15 @@
 /**
  * Generator contract: a module under `scripts/sources/generators/` default-exports
  * `{ id: string; generate(): Promise<ManifestEntry[]> }`. `generate()` fetches its upstream, parses,
- * attaches provenance and writes `sources/<docId>.json` for every document it produces, then returns
- * the manifest entries. It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so
- * any two generators can run at once without racing. A module is directly runnable
+ * builds the document's index + part files under `sources/<docId>/` and returns the manifest entries.
+ * It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so any two generators can
+ * run at once without racing. A module is directly runnable
  * (`bun scripts/sources/generators/aranyaka.ts`) and writes only its own files.
  */
-import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseAranyaka } from '../parsers/aranyaka';
 import { getText, head } from '../lib/fetch';
-import { withProvenance } from '../lib/provenance';
+import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'taittiriya-aranyaka';
@@ -43,19 +42,19 @@ async function generate(): Promise<ManifestEntry[]> {
       const upstreamRef = await upstreamRefFor(url, retrievedAt);
       const html = await getText(url);
       const parsed = parseAranyaka(html, p);
-      const doc = withProvenance(parsed, {
-        upstreamUrl: url,
-        upstreamRef,
-        retrievedAt,
-        parser: PARSER,
-        license: parsed.metadata.license ?? 'Text from taittiriya.com; permission not yet confirmed.',
-        attribution: `Taittirīya Āraṇyaka, prapāṭhaka ${p} — taittiriya.com`,
-      });
-      const file = `${doc.id}.json`;
-      writeFileSync(join(SOURCES_DIR, file), `${JSON.stringify(doc, null, 2)}\n`);
-      const provenance = doc.metadata.provenance!;
-      entries.push({ id: doc.id, file, sha256: provenance.sha256, provenance });
-      console.log(`[${ID}] wrote ${file}`);
+      const entry = writeSource(
+        SOURCES_DIR,
+        buildSource(parsed, {
+          upstreamUrl: url,
+          upstreamRef,
+          retrievedAt,
+          parser: PARSER,
+          license: parsed.metadata.license ?? 'Text from taittiriya.com; permission not yet confirmed.',
+          attribution: `Taittirīya Āraṇyaka, prapāṭhaka ${p} — taittiriya.com`,
+        }),
+      );
+      entries.push(entry);
+      console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
     } catch (err) {
       console.warn(`[${ID}] skipped prapāṭhaka ${p}: ${(err as Error).message}`);
     }

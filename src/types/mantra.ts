@@ -83,6 +83,29 @@ export interface SourceProvenance {
   sha256: string;
 }
 
+/** One section of a vendored source's index: where its full text lives (see sources/README.md). */
+export interface SourceIndexSection {
+  id: string;
+  sectionNumber: number;
+  title: string;
+  /** The part file, relative to the document directory, that holds this section's chunks. */
+  file: string;
+  chunkCount: number;
+}
+
+/** The shell of a vendored source: metadata (with provenance) plus a pointer per section to its part file. */
+export interface SourceIndex {
+  id: string;
+  title: MantraDocument['title'];
+  metadata: MantraDocument['metadata'];
+  sections: SourceIndexSection[];
+}
+
+/** One part file of a vendored source: the sections it holds, in order. */
+export interface SourcePart {
+  sections: SuktaSection[];
+}
+
 export interface MantraDocument {
   id: string;
   title: {

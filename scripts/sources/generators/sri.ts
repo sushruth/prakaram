@@ -1,16 +1,15 @@
 /**
  * Generator contract: a module under `scripts/sources/generators/` default-exports
  * `{ id: string; generate(): Promise<ManifestEntry[]> }`. `generate()` fetches its upstream, parses,
- * attaches provenance and writes `sources/<docId>.json` for every document it produces, then returns
- * the manifest entries. It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so
- * any two generators can run at once without racing. A module is directly runnable
- * (`bun scripts/sources/generators/sri.ts`) and writes only its own file.
+ * builds the document's index + part files under `sources/<docId>/` and returns the manifest entries.
+ * It never writes `manifest.json` — `scripts/sources/refresh.ts` owns that — so any two generators can
+ * run at once without racing. A module is directly runnable
+ * (`bun scripts/sources/generators/sri.ts`) and writes only its own files.
  */
-import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseSri } from '../parsers/sri';
 import { getText, head } from '../lib/fetch';
-import { withProvenance } from '../lib/provenance';
+import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'rigveda-khila-sri';
@@ -39,19 +38,19 @@ async function generate(): Promise<ManifestEntry[]> {
   const upstreamRef = await upstreamRefFor(URL, retrievedAt);
   const html = await getText(URL);
   const parsed = parseSri(html);
-  const doc = withProvenance(parsed, {
-    upstreamUrl: URL,
-    upstreamRef,
-    retrievedAt,
-    parser: PARSER,
-    license: parsed.metadata.license ?? LICENSE,
-    attribution: 'Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org',
-  });
-  const file = `${doc.id}.json`;
-  writeFileSync(join(SOURCES_DIR, file), `${JSON.stringify(doc, null, 2)}\n`);
-  const provenance = doc.metadata.provenance!;
-  console.log(`[${ID}] wrote ${file}`);
-  return [{ id: doc.id, file, sha256: provenance.sha256, provenance }];
+  const entry = writeSource(
+    SOURCES_DIR,
+    buildSource(parsed, {
+      upstreamUrl: URL,
+      upstreamRef,
+      retrievedAt,
+      parser: PARSER,
+      license: parsed.metadata.license ?? LICENSE,
+      attribution: 'Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org',
+    }),
+  );
+  console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
+  return [entry];
 }
 
 export default { id: ID, generate };

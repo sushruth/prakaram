@@ -1,0 +1,843 @@
+{
+  "id": "rigveda-9",
+  "title": {
+    "sanskrit": "ऋग्वेद",
+    "transliteration": "Ṛgveda, Maṇḍala 9",
+    "english": "Ṛgveda, Maṇḍala 9"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "rigveda",
+    "vedaNote": "Ṛgveda, maṇḍala 9, from DharmicData (ODbL).",
+    "place": {
+      "work": {
+        "sanskrit": "ऋग्वेद",
+        "english": "Ṛgveda"
+      },
+      "divisions": [
+        {
+          "kind": "maṇḍala",
+          "n": 9
+        }
+      ]
+    },
+    "source": "DharmicData (github.com/bhavykhatri/DharmicData), Rigveda/rigveda_mandala_9.json",
+    "status": "draft",
+    "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+    "categories": [
+      "Rigveda",
+      "Samhitas"
+    ],
+    "summary": "The Ṛgveda, maṇḍala 9, from DharmicData's accented text. Each section is a sūkta and each line a pada.",
+    "remoteUrl": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_9.json",
+    "provenance": {
+      "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_9.json",
+      "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+      "retrievedAt": "2026-10-14",
+      "parser": "rigveda@1",
+      "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "Ṛgveda, maṇḍala 9 — DharmicData (ODbL)",
+      "sha256": "3d0cdf3c3f78aacd8bd3649214e22017c4f7a87a90e3cd6306dc306d8527ae03"
+    }
+  },
+  "sections": [
+    {
+      "id": "rigveda-9-1",
+      "sectionNumber": 1,
+      "title": "Maṇḍala 9 · Sūkta 1",
+      "file": "part-1.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-2",
+      "sectionNumber": 2,
+      "title": "Maṇḍala 9 · Sūkta 2",
+      "file": "part-1.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-3",
+      "sectionNumber": 3,
+      "title": "Maṇḍala 9 · Sūkta 3",
+      "file": "part-1.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-4",
+      "sectionNumber": 4,
+      "title": "Maṇḍala 9 · Sūkta 4",
+      "file": "part-1.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-5",
+      "sectionNumber": 5,
+      "title": "Maṇḍala 9 · Sūkta 5",
+      "file": "part-1.json",
+      "chunkCount": 22
+    },
+    {
+      "id": "rigveda-9-6",
+      "sectionNumber": 6,
+      "title": "Maṇḍala 9 · Sūkta 6",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-7",
+      "sectionNumber": 7,
+      "title": "Maṇḍala 9 · Sūkta 7",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-8",
+      "sectionNumber": 8,
+      "title": "Maṇḍala 9 · Sūkta 8",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-9",
+      "sectionNumber": 9,
+      "title": "Maṇḍala 9 · Sūkta 9",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-10",
+      "sectionNumber": 10,
+      "title": "Maṇḍala 9 · Sūkta 10",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-11",
+      "sectionNumber": 11,
+      "title": "Maṇḍala 9 · Sūkta 11",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-12",
+      "sectionNumber": 12,
+      "title": "Maṇḍala 9 · Sūkta 12",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-13",
+      "sectionNumber": 13,
+      "title": "Maṇḍala 9 · Sūkta 13",
+      "file": "part-1.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-14",
+      "sectionNumber": 14,
+      "title": "Maṇḍala 9 · Sūkta 14",
+      "file": "part-1.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-15",
+      "sectionNumber": 15,
+      "title": "Maṇḍala 9 · Sūkta 15",
+      "file": "part-1.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-16",
+      "sectionNumber": 16,
+      "title": "Maṇḍala 9 · Sūkta 16",
+      "file": "part-1.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-17",
+      "sectionNumber": 17,
+      "title": "Maṇḍala 9 · Sūkta 17",
+      "file": "part-1.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-18",
+      "sectionNumber": 18,
+      "title": "Maṇḍala 9 · Sūkta 18",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-19",
+      "sectionNumber": 19,
+      "title": "Maṇḍala 9 · Sūkta 19",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-20",
+      "sectionNumber": 20,
+      "title": "Maṇḍala 9 · Sūkta 20",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-21",
+      "sectionNumber": 21,
+      "title": "Maṇḍala 9 · Sūkta 21",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-22",
+      "sectionNumber": 22,
+      "title": "Maṇḍala 9 · Sūkta 22",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-23",
+      "sectionNumber": 23,
+      "title": "Maṇḍala 9 · Sūkta 23",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-24",
+      "sectionNumber": 24,
+      "title": "Maṇḍala 9 · Sūkta 24",
+      "file": "part-1.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-25",
+      "sectionNumber": 25,
+      "title": "Maṇḍala 9 · Sūkta 25",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-26",
+      "sectionNumber": 26,
+      "title": "Maṇḍala 9 · Sūkta 26",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-27",
+      "sectionNumber": 27,
+      "title": "Maṇḍala 9 · Sūkta 27",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-28",
+      "sectionNumber": 28,
+      "title": "Maṇḍala 9 · Sūkta 28",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-29",
+      "sectionNumber": 29,
+      "title": "Maṇḍala 9 · Sūkta 29",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-30",
+      "sectionNumber": 30,
+      "title": "Maṇḍala 9 · Sūkta 30",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-31",
+      "sectionNumber": 31,
+      "title": "Maṇḍala 9 · Sūkta 31",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-32",
+      "sectionNumber": 32,
+      "title": "Maṇḍala 9 · Sūkta 32",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-33",
+      "sectionNumber": 33,
+      "title": "Maṇḍala 9 · Sūkta 33",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-34",
+      "sectionNumber": 34,
+      "title": "Maṇḍala 9 · Sūkta 34",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-35",
+      "sectionNumber": 35,
+      "title": "Maṇḍala 9 · Sūkta 35",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-36",
+      "sectionNumber": 36,
+      "title": "Maṇḍala 9 · Sūkta 36",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-37",
+      "sectionNumber": 37,
+      "title": "Maṇḍala 9 · Sūkta 37",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-38",
+      "sectionNumber": 38,
+      "title": "Maṇḍala 9 · Sūkta 38",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-39",
+      "sectionNumber": 39,
+      "title": "Maṇḍala 9 · Sūkta 39",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-40",
+      "sectionNumber": 40,
+      "title": "Maṇḍala 9 · Sūkta 40",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-41",
+      "sectionNumber": 41,
+      "title": "Maṇḍala 9 · Sūkta 41",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-42",
+      "sectionNumber": 42,
+      "title": "Maṇḍala 9 · Sūkta 42",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-43",
+      "sectionNumber": 43,
+      "title": "Maṇḍala 9 · Sūkta 43",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-44",
+      "sectionNumber": 44,
+      "title": "Maṇḍala 9 · Sūkta 44",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-45",
+      "sectionNumber": 45,
+      "title": "Maṇḍala 9 · Sūkta 45",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-46",
+      "sectionNumber": 46,
+      "title": "Maṇḍala 9 · Sūkta 46",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-47",
+      "sectionNumber": 47,
+      "title": "Maṇḍala 9 · Sūkta 47",
+      "file": "part-1.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-48",
+      "sectionNumber": 48,
+      "title": "Maṇḍala 9 · Sūkta 48",
+      "file": "part-1.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-49",
+      "sectionNumber": 49,
+      "title": "Maṇḍala 9 · Sūkta 49",
+      "file": "part-1.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-50",
+      "sectionNumber": 50,
+      "title": "Maṇḍala 9 · Sūkta 50",
+      "file": "part-2.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-51",
+      "sectionNumber": 51,
+      "title": "Maṇḍala 9 · Sūkta 51",
+      "file": "part-2.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-52",
+      "sectionNumber": 52,
+      "title": "Maṇḍala 9 · Sūkta 52",
+      "file": "part-2.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-53",
+      "sectionNumber": 53,
+      "title": "Maṇḍala 9 · Sūkta 53",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-54",
+      "sectionNumber": 54,
+      "title": "Maṇḍala 9 · Sūkta 54",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-55",
+      "sectionNumber": 55,
+      "title": "Maṇḍala 9 · Sūkta 55",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-56",
+      "sectionNumber": 56,
+      "title": "Maṇḍala 9 · Sūkta 56",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-57",
+      "sectionNumber": 57,
+      "title": "Maṇḍala 9 · Sūkta 57",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-58",
+      "sectionNumber": 58,
+      "title": "Maṇḍala 9 · Sūkta 58",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-59",
+      "sectionNumber": 59,
+      "title": "Maṇḍala 9 · Sūkta 59",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-60",
+      "sectionNumber": 60,
+      "title": "Maṇḍala 9 · Sūkta 60",
+      "file": "part-2.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-61",
+      "sectionNumber": 61,
+      "title": "Maṇḍala 9 · Sūkta 61",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-62",
+      "sectionNumber": 62,
+      "title": "Maṇḍala 9 · Sūkta 62",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-63",
+      "sectionNumber": 63,
+      "title": "Maṇḍala 9 · Sūkta 63",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-64",
+      "sectionNumber": 64,
+      "title": "Maṇḍala 9 · Sūkta 64",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-65",
+      "sectionNumber": 65,
+      "title": "Maṇḍala 9 · Sūkta 65",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-66",
+      "sectionNumber": 66,
+      "title": "Maṇḍala 9 · Sūkta 66",
+      "file": "part-2.json",
+      "chunkCount": 60
+    },
+    {
+      "id": "rigveda-9-67",
+      "sectionNumber": 67,
+      "title": "Maṇḍala 9 · Sūkta 67",
+      "file": "part-2.json",
+      "chunkCount": 61
+    },
+    {
+      "id": "rigveda-9-68",
+      "sectionNumber": 68,
+      "title": "Maṇḍala 9 · Sūkta 68",
+      "file": "part-2.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-69",
+      "sectionNumber": 69,
+      "title": "Maṇḍala 9 · Sūkta 69",
+      "file": "part-2.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-70",
+      "sectionNumber": 70,
+      "title": "Maṇḍala 9 · Sūkta 70",
+      "file": "part-2.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "rigveda-9-71",
+      "sectionNumber": 71,
+      "title": "Maṇḍala 9 · Sūkta 71",
+      "file": "part-2.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-72",
+      "sectionNumber": 72,
+      "title": "Maṇḍala 9 · Sūkta 72",
+      "file": "part-2.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-73",
+      "sectionNumber": 73,
+      "title": "Maṇḍala 9 · Sūkta 73",
+      "file": "part-3.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-74",
+      "sectionNumber": 74,
+      "title": "Maṇḍala 9 · Sūkta 74",
+      "file": "part-3.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-75",
+      "sectionNumber": 75,
+      "title": "Maṇḍala 9 · Sūkta 75",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-76",
+      "sectionNumber": 76,
+      "title": "Maṇḍala 9 · Sūkta 76",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-77",
+      "sectionNumber": 77,
+      "title": "Maṇḍala 9 · Sūkta 77",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-78",
+      "sectionNumber": 78,
+      "title": "Maṇḍala 9 · Sūkta 78",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-79",
+      "sectionNumber": 79,
+      "title": "Maṇḍala 9 · Sūkta 79",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-80",
+      "sectionNumber": 80,
+      "title": "Maṇḍala 9 · Sūkta 80",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-81",
+      "sectionNumber": 81,
+      "title": "Maṇḍala 9 · Sūkta 81",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-82",
+      "sectionNumber": 82,
+      "title": "Maṇḍala 9 · Sūkta 82",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-83",
+      "sectionNumber": 83,
+      "title": "Maṇḍala 9 · Sūkta 83",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-84",
+      "sectionNumber": 84,
+      "title": "Maṇḍala 9 · Sūkta 84",
+      "file": "part-3.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-85",
+      "sectionNumber": 85,
+      "title": "Maṇḍala 9 · Sūkta 85",
+      "file": "part-3.json",
+      "chunkCount": 24
+    },
+    {
+      "id": "rigveda-9-86",
+      "sectionNumber": 86,
+      "title": "Maṇḍala 9 · Sūkta 86",
+      "file": "part-4.json",
+      "chunkCount": 96
+    },
+    {
+      "id": "rigveda-9-87",
+      "sectionNumber": 87,
+      "title": "Maṇḍala 9 · Sūkta 87",
+      "file": "part-4.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-88",
+      "sectionNumber": 88,
+      "title": "Maṇḍala 9 · Sūkta 88",
+      "file": "part-4.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-89",
+      "sectionNumber": 89,
+      "title": "Maṇḍala 9 · Sūkta 89",
+      "file": "part-4.json",
+      "chunkCount": 14
+    },
+    {
+      "id": "rigveda-9-90",
+      "sectionNumber": 90,
+      "title": "Maṇḍala 9 · Sūkta 90",
+      "file": "part-4.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-91",
+      "sectionNumber": 91,
+      "title": "Maṇḍala 9 · Sūkta 91",
+      "file": "part-4.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-92",
+      "sectionNumber": 92,
+      "title": "Maṇḍala 9 · Sūkta 92",
+      "file": "part-4.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-93",
+      "sectionNumber": 93,
+      "title": "Maṇḍala 9 · Sūkta 93",
+      "file": "part-4.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-94",
+      "sectionNumber": 94,
+      "title": "Maṇḍala 9 · Sūkta 94",
+      "file": "part-4.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-95",
+      "sectionNumber": 95,
+      "title": "Maṇḍala 9 · Sūkta 95",
+      "file": "part-4.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "rigveda-9-96",
+      "sectionNumber": 96,
+      "title": "Maṇḍala 9 · Sūkta 96",
+      "file": "part-4.json",
+      "chunkCount": 48
+    },
+    {
+      "id": "rigveda-9-97",
+      "sectionNumber": 97,
+      "title": "Maṇḍala 9 · Sūkta 97",
+      "file": "part-5.json",
+      "chunkCount": 116
+    },
+    {
+      "id": "rigveda-9-98",
+      "sectionNumber": 98,
+      "title": "Maṇḍala 9 · Sūkta 98",
+      "file": "part-5.json",
+      "chunkCount": 24
+    },
+    {
+      "id": "rigveda-9-99",
+      "sectionNumber": 99,
+      "title": "Maṇḍala 9 · Sūkta 99",
+      "file": "part-5.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-100",
+      "sectionNumber": 100,
+      "title": "Maṇḍala 9 · Sūkta 100",
+      "file": "part-5.json",
+      "chunkCount": 18
+    },
+    {
+      "id": "rigveda-9-101",
+      "sectionNumber": 101,
+      "title": "Maṇḍala 9 · Sūkta 101",
+      "file": "part-5.json",
+      "chunkCount": 32
+    },
+    {
+      "id": "rigveda-9-102",
+      "sectionNumber": 102,
+      "title": "Maṇḍala 9 · Sūkta 102",
+      "file": "part-5.json",
+      "chunkCount": 16
+    },
+    {
+      "id": "rigveda-9-103",
+      "sectionNumber": 103,
+      "title": "Maṇḍala 9 · Sūkta 103",
+      "file": "part-5.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-104",
+      "sectionNumber": 104,
+      "title": "Maṇḍala 9 · Sūkta 104",
+      "file": "part-5.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-105",
+      "sectionNumber": 105,
+      "title": "Maṇḍala 9 · Sūkta 105",
+      "file": "part-5.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "rigveda-9-106",
+      "sectionNumber": 106,
+      "title": "Maṇḍala 9 · Sūkta 106",
+      "file": "part-5.json",
+      "chunkCount": 28
+    },
+    {
+      "id": "rigveda-9-107",
+      "sectionNumber": 107,
+      "title": "Maṇḍala 9 · Sūkta 107",
+      "file": "part-5.json",
+      "chunkCount": 50
+    },
+    {
+      "id": "rigveda-9-108",
+      "sectionNumber": 108,
+      "title": "Maṇḍala 9 · Sūkta 108",
+      "file": "part-5.json",
+      "chunkCount": 32
+    },
+    {
+      "id": "rigveda-9-109",
+      "sectionNumber": 109,
+      "title": "Maṇḍala 9 · Sūkta 109",
+      "file": "part-5.json",
+      "chunkCount": 21
+    },
+    {
+      "id": "rigveda-9-110",
+      "sectionNumber": 110,
+      "title": "Maṇḍala 9 · Sūkta 110",
+      "file": "part-5.json",
+      "chunkCount": 24
+    },
+    {
+      "id": "rigveda-9-111",
+      "sectionNumber": 111,
+      "title": "Maṇḍala 9 · Sūkta 111",
+      "file": "part-5.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "rigveda-9-112",
+      "sectionNumber": 112,
+      "title": "Maṇḍala 9 · Sūkta 112",
+      "file": "part-5.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "rigveda-9-113",
+      "sectionNumber": 113,
+      "title": "Maṇḍala 9 · Sūkta 113",
+      "file": "part-5.json",
+      "chunkCount": 22
+    },
+    {
+      "id": "rigveda-9-114",
+      "sectionNumber": 114,
+      "title": "Maṇḍala 9 · Sūkta 114",
+      "file": "part-5.json",
+      "chunkCount": 8
+    }
+  ]
+}

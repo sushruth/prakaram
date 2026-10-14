@@ -56,3 +56,5 @@ const doc = {
 };
 await Bun.write(out, JSON.stringify(doc, null, 2) + '\n');
 console.log(`${sections.length} sections, ${n} lines`);
+
+export {};

@@ -1,0 +1,60 @@
+{
+  "id": "taittiriya-aranyaka-8",
+  "title": {
+    "sanskrit": "तैत्तिरीय आरण्यक",
+    "transliteration": "Taittirīya Āraṇyaka",
+    "english": "Taittirīya Āraṇyaka, Prapāṭhaka 8"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 8.",
+    "place": {
+      "work": {
+        "sanskrit": "तैत्तिरीय आरण्यक",
+        "english": "Taittirīya Āraṇyaka"
+      },
+      "divisions": [
+        {
+          "kind": "prapāṭhaka",
+          "n": 8
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 8)",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Aranyakas"
+    ],
+    "summary": "The Taittirīya Āraṇyaka of the Krishna Yajurveda, prapāṭhaka 8, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/aranyaka/prapathaka_8",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_8",
+      "upstreamRef": "2026-10-14",
+      "retrievedAt": "2026-10-14",
+      "parser": "aranyaka@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com",
+      "sha256": "95a696546379a7614cd106e298332cd7b0ed4c3c8918c7050f10fbe1eab07009"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-aranyaka-8-1",
+      "sectionNumber": 1,
+      "title": "Prapāṭhaka 8 · Anuvāka 1",
+      "file": "part-1.json",
+      "chunkCount": 5
+    },
+    {
+      "id": "taittiriya-aranyaka-8-2",
+      "sectionNumber": 2,
+      "title": "Prapāṭhaka 8 · Anuvāka 2",
+      "file": "part-1.json",
+      "chunkCount": 208
+    }
+  ]
+}

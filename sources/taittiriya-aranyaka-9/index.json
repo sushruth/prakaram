@@ -1,0 +1,53 @@
+{
+  "id": "taittiriya-aranyaka-9",
+  "title": {
+    "sanskrit": "तैत्तिरीय आरण्यक",
+    "transliteration": "Taittirīya Āraṇyaka",
+    "english": "Taittirīya Āraṇyaka, Prapāṭhaka 9"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 9.",
+    "place": {
+      "work": {
+        "sanskrit": "तैत्तिरीय आरण्यक",
+        "english": "Taittirīya Āraṇyaka"
+      },
+      "divisions": [
+        {
+          "kind": "prapāṭhaka",
+          "n": 9
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 9)",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Aranyakas"
+    ],
+    "summary": "The Taittirīya Āraṇyaka of the Krishna Yajurveda, prapāṭhaka 9, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/aranyaka/prapathaka_9",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_9",
+      "upstreamRef": "2026-10-14",
+      "retrievedAt": "2026-10-14",
+      "parser": "aranyaka@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com",
+      "sha256": "ef4061bb0603a2ccb4b1e8381e8f34628f21a297ed57d332d11f599f081b22b2"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-aranyaka-9-15",
+      "sectionNumber": 15,
+      "title": "Prapāṭhaka 9 · Anuvāka 15",
+      "file": "part-1.json",
+      "chunkCount": 156
+    }
+  ]
+}

@@ -20,8 +20,8 @@ import { useMantraStore } from './stores/useMantraStore';
 import { isLearning, useCadenceStore } from './stores/useCadenceStore';
 import { decodePrakaraFromUrlHash } from './services/urlCodec';
 import { initLineClock } from './services/lineClock';
-import { listArticles, requiredSourceIds } from './services/wiki';
-import { adapterFor, ensureDocument, ensureDocuments } from './services/sourceAdapter';
+import { listArticles, prakaraSourceParts, requiredSourceParts } from './services/wiki';
+import { adapterFor, ensureDocument, ensureDocumentSections, hasDocument } from './services/sourceAdapter';
 import { SUKTA_MAP } from './data';
 import { liveSourceLabel } from './data/liveSources';
 import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute } from './services/wikiNav';
@@ -99,8 +99,8 @@ export function App() {
       setLive(null);
       return;
     }
-    // A direct source route shows the quiet notice and reloads its deep link once registered.
-    if (adapterFor(route.id) && !SUKTA_MAP.has(route.id)) {
+    // A direct source route loads every section and shows the quiet notice until it is registered.
+    if (adapterFor(route.id) && !hasDocument(route.id)) {
       let cancelled = false;
       setLive({ id: route.id, status: 'loading' });
       void ensureDocument(route.id).then((doc) => {
@@ -118,16 +118,16 @@ export function App() {
       };
     }
     // A composition loads the live sources its parts reference, quietly in place, then re-renders.
-    const needed = requiredSourceIds(route.id).filter((id) => adapterFor(id) && !SUKTA_MAP.has(id) && !failedSources.current.has(id));
+    const needed = requiredSourceParts(route.id).filter((part) => adapterFor(part.id) && !hasDocument(part.id, part.sections) && !failedSources.current.has(part.id));
     if (needed.length === 0) {
       setLive(null);
       return;
     }
     let cancelled = false;
-    void ensureDocuments(needed).then((docs) => {
+    void ensureDocumentSections(needed).then((docs) => {
       if (cancelled) return;
       docs.forEach((doc, i) => {
-        if (!doc) failedSources.current.add(needed[i]);
+        if (!doc) failedSources.current.add(needed[i].id);
       });
       if (docs.some((d) => d)) setRoute(readRoute());
     });
@@ -140,16 +140,15 @@ export function App() {
   const activePrakaraId = usePrakaraStore((s) => s.activePrakaraId);
   useEffect(() => {
     if (!playing) return;
-    const items = usePrakaraStore.getState().getActivePrakara().items;
-    const needed = [...new Set(items.flatMap((i) => (i.type === 'sukta_ref' && i.suktaId ? [i.suktaId] : [])))].filter(
-      (id) => adapterFor(id) && !SUKTA_MAP.has(id) && !failedSources.current.has(id),
+    const needed = prakaraSourceParts(usePrakaraStore.getState().getActivePrakara()).filter(
+      (part) => adapterFor(part.id) && !hasDocument(part.id, part.sections) && !failedSources.current.has(part.id),
     );
     if (needed.length === 0) return;
     let cancelled = false;
-    void ensureDocuments(needed).then((docs) => {
+    void ensureDocumentSections(needed).then((docs) => {
       if (cancelled) return;
       docs.forEach((doc, i) => {
-        if (!doc) failedSources.current.add(needed[i]);
+        if (!doc) failedSources.current.add(needed[i].id);
       });
       // Re-render the reader, whose lines only now resolve against the registered sources.
       if (docs.some((d) => d)) usePrakaraStore.getState().bumpDocuments();

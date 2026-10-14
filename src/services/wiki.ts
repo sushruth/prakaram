@@ -1,8 +1,8 @@
 import { TRANSLATION_ENABLED } from '../config/features';
-import { MantraDocument, MediaDecl, Prakara, SuktaSection } from '../types/mantra';
+import { ComposedPart, MantraDocument, MediaDecl, Prakara, SuktaSection } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS, SUKTA_FILE } from '../data';
 import { itemNirdesa, listPieces } from './koshah';
-import { resolveNirdesa } from './nirdesa';
+import { parseNirdesa } from './nirdesa';
 import { splitTitle } from './titles';
 import { truncateAksharas } from './aksharas';
 import { transliterateVedic } from './transliteration';
@@ -105,16 +105,26 @@ function deriveMedia(parts: Part[], declared: MediaDecl[]): WikiMedia[] {
   return [...media, ...declared];
 }
 
+/**
+ * The parts a kriyā address touches, read from the address alone so it works before the source is loaded:
+ * every section a range covers, or a whole-source reference when no section is given.
+ */
+function partsOfNirdesa(article: string, addr: string): ComposedPart[] {
+  const n = parseNirdesa(addr);
+  if (!n || n.source !== article || n.section === undefined) return [{ article }];
+  const last = n.padya?.to?.section ?? n.to?.section ?? n.section;
+  const parts: ComposedPart[] = [];
+  for (let section = n.section; section <= last; section += 1) parts.push({ article, section });
+  return parts;
+}
+
 /** A default prakara as a composition article: its sukta items become parts. Procedural vakyas have text of their own and are left out. */
 export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument {
   const title = splitTitle(p.title);
   const parts = p.items.flatMap((i) => {
     if (i.type !== 'sukta_ref' || !i.suktaId) return [];
     // A range is described by every section it touches, so a composition lists all its parts.
-    const article = i.suktaId;
-    const r = resolveNirdesa(itemNirdesa(i, docs) ?? article, docs);
-    if (!r.ok || r.document.id !== article) return [{ article }];
-    return r.sections.map((s) => ({ article, section: s.sectionNumber }));
+    return partsOfNirdesa(i.suktaId, itemNirdesa(i, docs) ?? i.suktaId);
   });
   return {
     id: p.id,
@@ -131,31 +141,59 @@ export function rebuildCorpus(): void {
 }
 rebuildCorpus();
 
-/**
- * The live source ids an article needs before it can resolve: a source is itself, a composition is the
- * sources its parts reference (recursively). A referenced id not yet in the corpus is included, so a
- * composition can ask for its live sources before they are loaded. Returns [] for an unknown id.
- */
-export function requiredSourceIds(id: string): string[] {
-  const doc = CORPUS.find((d) => d.id === id);
-  if (!doc) return [];
-  const out = new Set<string>();
+/** A live source an article needs and the section numbers its parts reference; a whole-source reference has no `sections`. */
+export interface RequiredSourcePart {
+  id: string;
+  sections?: number[];
+}
+
+/** The source ids and sections a document needs, walking nested compositions. A source needs only itself. */
+function sourcePartsOf(doc: MantraDocument): RequiredSourcePart[] {
+  if (doc.metadata.kind !== 'composition') return [{ id: doc.id }];
+  const acc = new Map<string, Set<number> | null>(); // null = a whole-source reference
   const seen = new Set<string>();
+  const add = (sourceId: string, section?: number): void => {
+    if (section === undefined) {
+      acc.set(sourceId, null);
+      return;
+    }
+    if (acc.get(sourceId) === null) return;
+    const set = acc.get(sourceId) ?? new Set<number>();
+    set.add(section);
+    acc.set(sourceId, set);
+  };
   const walk = (d: MantraDocument): void => {
     if (seen.has(d.id)) return;
     seen.add(d.id);
-    if (d.metadata.kind !== 'composition') {
-      out.add(d.id);
-      return;
-    }
+    if (d.metadata.kind !== 'composition') return;
     for (const part of d.metadata.parts ?? []) {
       const child = CORPUS.find((x) => x.id === part.article);
-      if (child) walk(child);
-      else out.add(part.article);
+      if (child && child.metadata.kind === 'composition') walk(child);
+      else add(part.article, part.section);
     }
   };
   walk(doc);
-  return [...out];
+  return [...acc].map(([id, sections]) => (sections ? { id, sections: [...sections].sort((a, b) => a - b) } : { id }));
+}
+
+/**
+ * The live source ids an article needs before it can resolve, each with the section numbers its parts reference
+ * (a whole-source reference has no `sections`). A referenced id not yet in the corpus is included. Returns []
+ * for an unknown id.
+ */
+export function requiredSourceParts(id: string): RequiredSourcePart[] {
+  const doc = CORPUS.find((d) => d.id === id);
+  return doc ? sourcePartsOf(doc) : [];
+}
+
+/** The same, for a prakara the player is about to open (it may not be a corpus article). */
+export function prakaraSourceParts(p: Prakara): RequiredSourcePart[] {
+  return sourcePartsOf(prakaraAsDoc(p, CORPUS));
+}
+
+/** The live source ids an article needs. Convenience over `requiredSourceParts`. */
+export function requiredSourceIds(id: string): string[] {
+  return requiredSourceParts(id).map((part) => part.id);
 }
 
 const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => {

@@ -1,0 +1,193 @@
+{
+  "id": "taittiriya-aranyaka-3",
+  "title": {
+    "sanskrit": "तैत्तिरीय आरण्यक",
+    "transliteration": "Taittirīya Āraṇyaka",
+    "english": "Taittirīya Āraṇyaka, Prapāṭhaka 3"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 3.",
+    "place": {
+      "work": {
+        "sanskrit": "तैत्तिरीय आरण्यक",
+        "english": "Taittirīya Āraṇyaka"
+      },
+      "divisions": [
+        {
+          "kind": "prapāṭhaka",
+          "n": 3
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Āraṇyaka, prapāṭhaka 3)",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Aranyakas"
+    ],
+    "summary": "The Taittirīya Āraṇyaka of the Krishna Yajurveda, prapāṭhaka 3, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
+      "upstreamRef": "2026-10-14",
+      "retrievedAt": "2026-10-14",
+      "parser": "aranyaka@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com",
+      "sha256": "1dbf66eb8ee91a9c1b06ded657e1d091cfc646d8b25baee3fe8d2c5b28f010dc"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-aranyaka-3-1",
+      "sectionNumber": 1,
+      "title": "Prapāṭhaka 3 · Anuvāka 1",
+      "file": "part-1.json",
+      "chunkCount": 15
+    },
+    {
+      "id": "taittiriya-aranyaka-3-2",
+      "sectionNumber": 2,
+      "title": "Prapāṭhaka 3 · Anuvāka 2",
+      "file": "part-1.json",
+      "chunkCount": 10
+    },
+    {
+      "id": "taittiriya-aranyaka-3-3",
+      "sectionNumber": 3,
+      "title": "Prapāṭhaka 3 · Anuvāka 3",
+      "file": "part-1.json",
+      "chunkCount": 8
+    },
+    {
+      "id": "taittiriya-aranyaka-3-4",
+      "sectionNumber": 4,
+      "title": "Prapāṭhaka 3 · Anuvāka 4",
+      "file": "part-1.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "taittiriya-aranyaka-3-5",
+      "sectionNumber": 5,
+      "title": "Prapāṭhaka 3 · Anuvāka 5",
+      "file": "part-1.json",
+      "chunkCount": 13
+    },
+    {
+      "id": "taittiriya-aranyaka-3-6",
+      "sectionNumber": 6,
+      "title": "Prapāṭhaka 3 · Anuvāka 6",
+      "file": "part-1.json",
+      "chunkCount": 9
+    },
+    {
+      "id": "taittiriya-aranyaka-3-7",
+      "sectionNumber": 7,
+      "title": "Prapāṭhaka 3 · Anuvāka 7",
+      "file": "part-1.json",
+      "chunkCount": 37
+    },
+    {
+      "id": "taittiriya-aranyaka-3-8",
+      "sectionNumber": 8,
+      "title": "Prapāṭhaka 3 · Anuvāka 8",
+      "file": "part-1.json",
+      "chunkCount": 20
+    },
+    {
+      "id": "taittiriya-aranyaka-3-9",
+      "sectionNumber": 9,
+      "title": "Prapāṭhaka 3 · Anuvāka 9",
+      "file": "part-1.json",
+      "chunkCount": 25
+    },
+    {
+      "id": "taittiriya-aranyaka-3-10",
+      "sectionNumber": 10,
+      "title": "Prapāṭhaka 3 · Anuvāka 10",
+      "file": "part-1.json",
+      "chunkCount": 45
+    },
+    {
+      "id": "taittiriya-aranyaka-3-11",
+      "sectionNumber": 11,
+      "title": "Prapāṭhaka 3 · Anuvāka 11",
+      "file": "part-1.json",
+      "chunkCount": 116
+    },
+    {
+      "id": "taittiriya-aranyaka-3-12",
+      "sectionNumber": 12,
+      "title": "Prapāṭhaka 3 · Anuvāka 12",
+      "file": "part-1.json",
+      "chunkCount": 66
+    },
+    {
+      "id": "taittiriya-aranyaka-3-13",
+      "sectionNumber": 13,
+      "title": "Prapāṭhaka 3 · Anuvāka 13",
+      "file": "part-1.json",
+      "chunkCount": 26
+    },
+    {
+      "id": "taittiriya-aranyaka-3-14",
+      "sectionNumber": 14,
+      "title": "Prapāṭhaka 3 · Anuvāka 14",
+      "file": "part-1.json",
+      "chunkCount": 37
+    },
+    {
+      "id": "taittiriya-aranyaka-3-15",
+      "sectionNumber": 15,
+      "title": "Prapāṭhaka 3 · Anuvāka 15",
+      "file": "part-1.json",
+      "chunkCount": 23
+    },
+    {
+      "id": "taittiriya-aranyaka-3-16",
+      "sectionNumber": 16,
+      "title": "Prapāṭhaka 3 · Anuvāka 16",
+      "file": "part-1.json",
+      "chunkCount": 3
+    },
+    {
+      "id": "taittiriya-aranyaka-3-17",
+      "sectionNumber": 17,
+      "title": "Prapāṭhaka 3 · Anuvāka 17",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-3-18",
+      "sectionNumber": 18,
+      "title": "Prapāṭhaka 3 · Anuvāka 18",
+      "file": "part-1.json",
+      "chunkCount": 2
+    },
+    {
+      "id": "taittiriya-aranyaka-3-19",
+      "sectionNumber": 19,
+      "title": "Prapāṭhaka 3 · Anuvāka 19",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-3-20",
+      "sectionNumber": 20,
+      "title": "Prapāṭhaka 3 · Anuvāka 20",
+      "file": "part-1.json",
+      "chunkCount": 1
+    },
+    {
+      "id": "taittiriya-aranyaka-3-21",
+      "sectionNumber": 21,
+      "title": "Prapāṭhaka 3 · Anuvāka 21",
+      "file": "part-1.json",
+      "chunkCount": 1
+    }
+  ]
+}
