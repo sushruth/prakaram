@@ -80,6 +80,7 @@ function transliterateIast(src: string): string {
         continue;
       }
       if (ch === 'ं') { out += 'ṃ'; i++; continue; }
+      if (ch === 'ँ') { out += 'm\u0310'; i++; continue; }
       if (ch === 'ः') { out += 'ḥ'; i++; continue; }
       if (ch === '।') { out += ' | '; i++; continue; }
       if (ch === '॥') { out += ' || '; i++; continue; }

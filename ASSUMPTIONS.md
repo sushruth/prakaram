@@ -20,7 +20,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * **Guru (दीर्घ / Long vowel, or short vowel followed by Anusvāra, Visarga, or Conjunct consonant / Saṃyoga)** = $2\text{ mātrās}$ ($M = 2$)
 * **Pluta (प्लुत / Extended vowel)** = $3\text{ mātrās}$ ($M = 3$)
 * **Daṇḍa Caesura (`।`)** = $2.0\text{ mātrās}$ pause; **Double Daṇḍa (`॥`)** = $3.5\text{ mātrās}$ pause. Only Devanagari dandas count. Verse numbers and Latin text add nothing.
-* **Vedic sign `ꣳ`** is pronounced on its own and takes one mātrā.
+* **Vedic sign `ꣳ`** is pronounced on its own and takes one mātrā. In Kannada, Telugu, Malayalam, Tamil and IAST it is written `ग्ं` (and `व्ँ` as `व्ं`) because stock fonts have no glyph for it; the setting "Spell ꣳ as ग्ं" turns that off.
 
 **Assumption on Cadence Learning:**
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.
@@ -127,4 +127,4 @@ A *Prakara* is an ordered compilation of mantra chunks, invocations, and procedu
 * **My prakaram is a local basket** (`useBasketStore`, persisted in the browser). Pieces are whole texts or sections, and a saved basket becomes an ordinary prakara. It is not shared or synced.
 * **Addresses are hash routes** (`#/wiki/...`), so the app needs no server routing, and old `#k=` links redirect.
 * **One Sanskrit renderer.** All Sanskrit shown goes through `src/components/Sanskrit.tsx`, so the selected script applies everywhere, and verse numerals follow the script (Arabic digits in Tamil and IAST, offset-mapped digits in the other Brahmic scripts).
-* **Licence honesty.** Each article shows its source, status and licence. Text whose permission is unconfirmed (the Vignanam Sri Rudram) stays `draft`.
+* **Licence honesty.** Each article shows its source, status and licence. Text whose permission is unconfirmed (everything from taittiriya.com and sanskritdocuments.org) stays `draft`.

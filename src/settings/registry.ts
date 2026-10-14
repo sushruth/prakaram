@@ -1,6 +1,6 @@
 import type { ComponentType } from 'preact';
 import { ScriptSelector } from '../components/ScriptSelector';
-import { FontSizeStepper, PauseAwaySwitch, SplitSwitch, ThemeSegmented, WrapSwitch } from './controls';
+import { FontSizeStepper, PauseAwaySwitch, PrintedNasalsSwitch, SplitSwitch, ThemeSegmented, WrapSwitch } from './controls';
 
 export interface SettingDescriptor {
   id: string;
@@ -14,5 +14,6 @@ export const SETTINGS: readonly SettingDescriptor[] = [
   { id: 'wrap', label: 'Wrap long lines', Control: WrapSwitch },
   { id: 'split', label: 'Split into phrases', Control: SplitSwitch },
   { id: 'pauseAway', label: 'Pause when away', Control: PauseAwaySwitch },
+  { id: 'printedNasals', label: 'Spell ꣳ as ग्ं', Control: PrintedNasalsSwitch },
   { id: 'theme', label: 'Theme', Control: ThemeSegmented },
 ];

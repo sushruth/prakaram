@@ -11,11 +11,13 @@ import type { MantraDocument } from '../types/mantra';
 import { useSwaraHighlight } from './useSwaraHighlight';
 
 export const useScript = () => useSettingsStore((s) => s.script);
+const usePrintedNasals = () => useSettingsStore((s) => s.printedNasals);
 
 /** Plain-string form for attributes, aria-labels, document.title and messages. */
 export function useSanskritText(): (text: string) => string {
   const script = useScript();
-  return (text) => transliterateVedic(text, script);
+  const printedNasals = usePrintedNasals();
+  return (text) => transliterateVedic(text, script, printedNasals);
 }
 
 /** Citation in words (see services/cite.ts) as plain text in the selected script; follows a script change. */
@@ -37,7 +39,8 @@ export function useTitleText(): (title: string, opts?: { short?: boolean; full?:
 /** Devanagari source text in the selected script, swara syllables coloured through the CSS Custom Highlight API. */
 export function Sanskrit({ text }: { text: string }) {
   const script = useScript();
-  const { text: line, ranges } = useMemo(() => vedicText(text, script), [text, script]);
+  const printedNasals = usePrintedNasals();
+  const { text: line, ranges } = useMemo(() => vedicText(text, script, printedNasals), [text, script, printedNasals]);
   const ref = useRef<HTMLSpanElement>(null);
   useSwaraHighlight(ref, ranges);
   return <span className="vedic" ref={ref}>{line}</span>;

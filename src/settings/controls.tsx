@@ -33,6 +33,12 @@ export function PauseAwaySwitch() {
   return <Switch checked={checked} onToggle={onToggle} />;
 }
 
+export function PrintedNasalsSwitch() {
+  const checked = useSettingsStore((s) => s.printedNasals);
+  const onToggle = useSettingsStore((s) => s.togglePrintedNasals);
+  return <Switch checked={checked} onToggle={onToggle} />;
+}
+
 export function SplitSwitch() {
   const checked = useSettingsStore((s) => s.splitLines);
   const onToggle = useSettingsStore((s) => s.toggleSplitLines);

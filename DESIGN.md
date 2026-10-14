@@ -363,7 +363,7 @@ Translation lines are not shown under mantras. Do not reintroduce them as a defa
 
 - Page gutter is 16 px.
 - Header is one row, vertically centred: flame and prakara title on the left, four borderless icon buttons on the right (settings, Koshah, parāyaṇam room, zen). Active icons take the accent colour and the flame glow on the glyph, not a tint.
-- Settings (script, text size, wrap, split, theme) drop down from behind the header on every screen size. Do not add settings to the header.
+- Settings (script, text size, wrap, split, pause when away, spell ꣳ as ग्ं, theme) drop down from behind the header on every screen size. Do not add settings to the header.
 - Cadence controls are a drop panel from the header, not a floating bar. Nothing is hidden off-screen.
 - Touch targets are 40 px on every screen. Icon buttons keep 40 px on phones too (the header row fits at 412 px). Do not shrink text targets.
 

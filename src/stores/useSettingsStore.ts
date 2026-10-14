@@ -16,6 +16,7 @@ export interface SettingsState {
   splitLines: boolean;
   showTranslation: boolean;
   pauseWhenAway: boolean;
+  printedNasals: boolean;
   setTheme: (theme: AppTheme) => void;
   setScript: (script: TargetScript) => void;
   setFontSize: (size: number) => void;
@@ -23,6 +24,7 @@ export interface SettingsState {
   toggleSplitLines: () => void;
   toggleShowTranslation: () => void;
   togglePauseWhenAway: () => void;
+  togglePrintedNasals: () => void;
 }
 
 const THEME_IDS = THEMES.map((t) => t.id);
@@ -38,6 +40,7 @@ export const useSettingsStore = create<SettingsState>()(
       splitLines: false,
       showTranslation: false,
       pauseWhenAway: true,
+      printedNasals: true,
       setTheme: (theme) => set({ theme }),
       setScript: (script) => set({ script }),
       setFontSize: (size) => set({ fontSize: clampNumber(size, FONT_SIZE.min, FONT_SIZE.max, FONT_SIZE.fallback) }),
@@ -45,6 +48,7 @@ export const useSettingsStore = create<SettingsState>()(
       toggleSplitLines: () => set((s) => ({ splitLines: !s.splitLines })),
       toggleShowTranslation: () => set((s) => ({ showTranslation: !s.showTranslation })),
       togglePauseWhenAway: () => set((s) => ({ pauseWhenAway: !s.pauseWhenAway })),
+      togglePrintedNasals: () => set((s) => ({ printedNasals: !s.printedNasals })),
     }),
     {
       name: 'prakaram-settings',
@@ -60,6 +64,7 @@ export const useSettingsStore = create<SettingsState>()(
           splitLines: boolOr(p.splitLines, current.splitLines),
           showTranslation: boolOr(p.showTranslation, current.showTranslation),
           pauseWhenAway: boolOr(p.pauseWhenAway, current.pauseWhenAway),
+          printedNasals: boolOr(p.printedNasals, current.printedNasals),
         };
       },
     },

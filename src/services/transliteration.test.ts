@@ -62,3 +62,38 @@ describe('verse numbers', () => {
     expect(transliterateVedic('२३', 'tamil')).toBe('23');
   });
 });
+
+describe('taittiriya.com nasals', () => {
+  const gum = 'चे॒माꣳ रु॒द्रा अवै॑षा॒ꣳ॒ स॒व्ँवि॒च्च';
+
+  it('writes ꣳ as ग्ं and virama + candrabindu as virama + anusvara in Kannada', () => {
+    const out = transliterateVedic(gum, 'kannada');
+    expect(out).toContain('ಚೇ॒ಮಾಗ್ಂ');
+    expect(out).toContain('ಷಾ॒ಗ್ಂ॒');
+    expect(out).toContain('ಸ॒ವ್ಂ');
+    expect(out).not.toMatch(/[ꣳꣴಁ]/);
+  });
+
+  it('does the same in Telugu, Malayalam, Tamil and IAST', () => {
+    expect(transliterateVedic('माꣳ', 'telugu')).toBe('మాగ్ం');
+    expect(transliterateVedic('माꣳ', 'malayalam')).toBe('മാഗ്ം');
+    expect(transliterateVedic('माꣳ', 'tamil')).toBe('மாக்₃ம்');
+    expect(transliterateVedic('माꣳ', 'iast')).toBe('māgṃ');
+    expect(transliterateVedic('व्ँ', 'iast')).toBe('vṃ');
+  });
+
+  it('maps a plain candrabindu in Tamil and IAST instead of passing Devanagari through', () => {
+    expect(transliterateVedic('अग्ँ', 'tamil')).not.toMatch(/[ऀ-ॿ]/);
+    expect(transliterateVedic('मँ', 'iast')).toBe('mam̐');
+  });
+
+  it('leaves Devanagari untouched', () => {
+    expect(transliterateVedic(gum, 'devanagari')).toBe(gum);
+  });
+});
+
+describe('printedNasals option', () => {
+  it('keeps ꣳ and virama + candrabindu as written when off', () => {
+    expect(transliterateVedic('माꣳ व्ँ', 'kannada', false)).toBe('ಮಾꣳ ವ್ಁ');
+  });
+});
