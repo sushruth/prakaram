@@ -118,7 +118,7 @@ export function FlameMark({ size = 22, ambient = false }: { size?: number; ambie
         </radialGradient>
       </defs>
       {/* Only the flame that lights the room (the header logo) carries the halo. */}
-      {ambient && <circle className="flame-halo" cx="128" cy="128" r="256" fill="url(#flame-halo)" />}
+      {ambient && <circle className="flame-halo" cx="128" cy="128" r="512" fill="url(#flame-halo)" />}
       <path className="flame-body" fill="url(#flame-body)" d={OUTLINE} />
     </svg>
   );

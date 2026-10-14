@@ -26,45 +26,47 @@
     /* Flickers and swells with the flame: the header flame writes --flame-glow/--flame-burst to :root.
        Under prefers-reduced-motion those vars are unset, so the highlight holds still. */
     opacity: calc(var(--flame-room-alpha, 0) * var(--flame-glow, 1) * (1 + 0.6 * var(--flame-burst, 0)));
-    /* A small bloom where the flame's own light lands on the top-left corner. */
+    /* A small bloom where the flame's own light lands. Centred on the flame itself (1rem header
+       padding + half the 1.5rem icon = 1.75rem, in both axes), not on the viewport corner, so the
+       light reads as coming from the flame. */
     background: radial-gradient(
-      5rem 5rem at 0% 0%,
+      10rem 10rem at 1.75rem 1.75rem,
       color-mix(in srgb, var(--flame-mid) 45%, transparent) 0%,
       transparent 62%
     );
   }
 
-  /* The top edge catch: a ~1px core at the edge falling off within 4px into the page. It is kept to
-     the logo's corner (about the logo's width), not run along the whole top. */
+  /* The top edge catch: a ~1px core in a 2px band. It runs 3.5rem (2 x 1.75rem) so its centre lands
+     on the flame's centre, and fades out toward the page rather than running along the whole top. */
   .flame-room-light::before {
     content: "";
     position: absolute;
     inset: 0 auto auto 0;
-    width: 2.5rem;
-    height: 4px;
+    width: 3.5rem;
+    height: 2px;
     background: linear-gradient(
       to right,
       color-mix(in srgb, var(--flame-mid) 70%, transparent) 0%,
       transparent 100%
     );
-    -webkit-mask-image: linear-gradient(to bottom, #000 0 1px, transparent 4px);
-    mask-image: linear-gradient(to bottom, #000 0 1px, transparent 4px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0 1px, transparent 2px);
+    mask-image: linear-gradient(to bottom, #000 0 1px, transparent 2px);
   }
 
-  /* The left edge catch: the same core and falloff, only as tall as the logo's corner and fading out. */
+  /* The left edge catch: the same core, band and centring, only down the side. */
   .flame-room-light::after {
     content: "";
     position: absolute;
     inset: 0 auto auto 0;
-    width: 4px;
-    height: 2.5rem;
+    width: 2px;
+    height: 3.5rem;
     background: linear-gradient(
       to bottom,
       color-mix(in srgb, var(--flame-tip) 65%, transparent) 0%,
       transparent 100%
     );
-    -webkit-mask-image: linear-gradient(to right, #000 0 1px, transparent 4px);
-    mask-image: linear-gradient(to right, #000 0 1px, transparent 4px);
+    -webkit-mask-image: linear-gradient(to right, #000 0 1px, transparent 2px);
+    mask-image: linear-gradient(to right, #000 0 1px, transparent 2px);
   }
 
   .app-header {
