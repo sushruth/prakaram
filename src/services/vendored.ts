@@ -4,10 +4,12 @@ import { VENDORED_SOURCES } from '../data/vendoredSources';
 import { rebuildCorpus } from './wiki';
 
 /**
- * The commit the vendored `sources/` files are pinned to. Set to the data commit sha once the files
- * land; until then the dev server serves them from the repo root. See sources/README.md.
+ * The commit the vendored `sources/` files are pinned to. Injected at build time by `vite.config.ts`
+ * (the last commit that touched `sources/`, or `VITE_SOURCES_PIN` when set); `'local'` when no pin is
+ * available, e.g. under Bun in tests. The dev server serves `/sources` from the repo root, so the pin
+ * is unused in dev. See sources/README.md.
  */
-export const SOURCES_PIN = 'fc250df2e6f65418a8fe3db8e78b414fd178e1b2';
+export const SOURCES_PIN = import.meta.env.VITE_SOURCES_PIN || 'local';
 
 /** The Cache API store for vendored sources, keyed by pin + path. */
 export const SOURCES_CACHE = 'prakaram-sources-v1';

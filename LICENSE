@@ -1,0 +1,49 @@
+# Licence
+
+## Our code — The Unlicense (public domain)
+
+Everything in this repository that we wrote — the application (`src/`), the build and source
+tooling (`scripts/`), the Cloudflare Worker (`worker/`), styles, tests and documentation — is
+released into the public domain under **The Unlicense**. See the dedication and warranty
+disclaimer at the end of this file.
+
+## The source text — per-source licences
+
+The Vedic and other source texts we reference are **not** covered by The Unlicense. Each
+vendored source under `sources/` carries its own upstream licence, recorded per file in
+`metadata.provenance.license` and summarised in [`sources/README.md`](sources/README.md) and
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md):
+
+| Files | Licence |
+| :-- | :-- |
+| `sources/rigveda-*.json` | **ODbL 1.0** — a Derivative Database from DharmicData. Licence text in [`sources/LICENSE-ODbL.txt`](sources/LICENSE-ODbL.txt). |
+| `sources/taittiriya-samhita-4.json` | **CC BY-SA 4.0** — adapted from Sanskrit Wikisource. |
+| `sources/taittiriya-aranyaka-*.json` | Permission not yet confirmed (taittiriya.com). |
+| `sources/rigveda-khila-sri.json` | Permission not yet confirmed (sanskritdocuments.org). |
+
+If you reuse the source text, comply with **that** source's licence, not this one. The code
+that fetches and renders it is ours and is public domain.
+
+---
+
+## The Unlicense
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software,
+either in source code form or as a compiled binary, for any purpose, commercial or
+non-commercial, and by any means.
+
+In jurisdictions that recognize copyright laws, the author or authors of this software
+dedicate any and all copyright interest in the software to the public domain. We make this
+dedication for the benefit of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of relinquishment in perpetuity of
+all present and future rights to this software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org>

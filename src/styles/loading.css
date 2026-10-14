@@ -1,0 +1,28 @@
+/* Loading indicator for live sources: the flame's movement is the spinner. No borders or boxes (DESIGN.md §7b). */
+@layer components {
+  .flame-loader {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 3.5rem 1rem;
+    text-align: center;
+  }
+
+  .flame-loader-label {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Under prefers-reduced-motion FlameMark holds the flame still; nothing else here moves. */
+  @media (prefers-reduced-motion: reduce) {
+    .flame-loader .flame-mark {
+      transition: none;
+      animation: none;
+    }
+  }
+}

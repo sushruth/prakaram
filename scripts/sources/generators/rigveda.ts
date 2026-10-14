@@ -17,6 +17,13 @@ const ID = 'rigveda';
 const PARSER = 'rigveda@1';
 /** The DharmicData commit the upstream paths are pinned to. */
 const COMMIT = '96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7';
+/**
+ * The ODbL 1.0 licence string for the DharmicData-derived files, verbatim from
+ * docs/licence-compliance.md §2.1. It carries the ODbL §4.3 "Contains information from …" notice and the
+ * licence URI, and is set on `metadata.license` too so that it stays equal to `provenance.license`.
+ */
+const LICENSE =
+  'ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/';
 const MANDALAS = Array.from({ length: 10 }, (_, i) => i + 1);
 const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');
 
@@ -26,18 +33,19 @@ const upstreamUrl = (m: number): string =>
 
 /** Parse one maṇḍala into a raw document (no provenance; the index carries it); no fetch, no write. */
 export function buildRigvedaDocument(records: RigvedaRecord[], m: number): MantraDocument {
-  return parseRigvedaMandala(records, m);
+  const parsed = parseRigvedaMandala(records, m);
+  return { ...parsed, metadata: { ...parsed.metadata, license: LICENSE } };
 }
 
-/** The provenance for maṇḍala `m`, whose licence comes from the parsed document. */
-export function rigvedaProvenance(m: number, license: string, retrievedAt: string): Omit<SourceProvenance, 'sha256'> {
+/** The provenance for maṇḍala `m`: the ODbL 1.0 licence and its per-maṇḍala attribution (docs §2.1). */
+export function rigvedaProvenance(m: number, retrievedAt: string): Omit<SourceProvenance, 'sha256'> {
   return {
     upstreamUrl: upstreamUrl(m),
     upstreamRef: COMMIT,
     retrievedAt,
     parser: PARSER,
-    license,
-    attribution: `Ṛgveda, maṇḍala ${m} — DharmicData (ODbL)`,
+    license: LICENSE,
+    attribution: `Ṛgveda, maṇḍala ${m} — DharmicData (https://github.com/bhavykhatri/DharmicData), commit ${COMMIT}, ODbL 1.0`,
   };
 }
 
@@ -49,9 +57,7 @@ async function generate(): Promise<ManifestEntry[]> {
     try {
       const records = await getJson<RigvedaRecord[]>(upstreamUrl(m));
       const doc = buildRigvedaDocument(records, m);
-      const license = doc.metadata.license;
-      if (!license) throw new Error(`Rigveda maṇḍala ${m} has no licence`);
-      const entry = writeSource(SOURCES_DIR, buildSource(doc, rigvedaProvenance(m, license, retrievedAt)));
+      const entry = writeSource(SOURCES_DIR, buildSource(doc, rigvedaProvenance(m, retrievedAt)));
       entries.push(entry);
       console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
     } catch (err) {

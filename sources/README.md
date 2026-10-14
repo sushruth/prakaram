@@ -4,6 +4,28 @@ The text of every source is **compiled into this directory by CI/build scripts**
 from **jsDelivr**, off this repo. The app never parses upstream HTML at runtime and never uses a proxy.
 `src/services/adapters/` is gone; parsing lives in `scripts/sources/`.
 
+## Licences of files in this directory
+
+This directory is a **collection of independently licensed sources**; the repository as a whole is not
+relicensed. Every generated file repeats its licence in `metadata.provenance.license` (kept equal to
+`metadata.license`), and the licence files sit beside this README:
+
+| files | upstream | licence | licence file |
+| :-- | :-- | :-- | :-- |
+| `rigveda-1/` … `rigveda-10/` (`rigveda-<m>/`) | DharmicData | **ODbL 1.0** | `LICENSE-ODbL.txt` |
+| `taittiriya-samhita-4/` | Sanskrit Wikisource | **CC BY-SA 4.0** | `LICENSE-CC-BY-SA-4.0.txt` |
+| `taittiriya-aranyaka-1/` … `-10/` | taittiriya.com | permission not yet confirmed | — |
+| `rigveda-khila-sri/` | sanskritdocuments.org | permission not yet confirmed | — |
+
+The `rigveda-*` files are a Derivative Database of DharmicData and are licensed ODbL 1.0; each carries
+the ODbL §4.3 notice "Contains information from DharmicData …" and the licence URI, and the licence
+text is in `LICENSE-ODbL.txt`. `taittiriya-samhita-4` is Adapted Material of the Wikisource page and is
+licensed CC BY-SA 4.0; its attribution, modification statement and ShareAlike are in the file and in
+`LICENSE-CC-BY-SA-4.0.txt`. The `taittiriya-aranyaka-*` and `rigveda-khila-sri` files stay
+`status: "draft"` and carry **no** open licence until the upstream permission is confirmed in writing
+(see `docs/licence-compliance.md` §2.3, §5). The application code (`src/`, `scripts/`, `worker/`) is not
+covered by these content licences.
+
 ## Layout
 
 ```text
@@ -61,8 +83,10 @@ A processed file is a `MantraDocument` (see `src/types/mantra.ts`) with one extr
 * `src/services/vendored.ts` — `SOURCES_PIN`, `sourcesBaseUrl()`, `fetchSourceDocument(id)`.
   * dev: `/sources/<file>` (served from the repo root by a Vite middleware, `vite.config.ts`)
   * prod: `https://cdn.jsdelivr.net/gh/sushruth/prakaram@<SOURCES_PIN>/sources/<file>`
-  * Cache API store `prakaram-sources-v1`, keyed by pin + file. `SOURCES_PIN` is set after the data
-    commit lands (the app must pin the commit that contains these files).
+  * Cache API store `prakaram-sources-v1`, keyed by pin + file. `SOURCES_PIN` is **computed at build
+    time** by `vite.config.ts` as the last commit that touched `sources/`, so a refresh needs only
+    commit + deploy — no manual bump. Set `VITE_SOURCES_PIN` to override (CI/deploy); with no git
+    history it falls back to the build's own commit, then `'local'`.
 * `src/services/adapters/vendoredAdapter.ts` — one generic adapter over `VENDORED_SOURCES`.
 
 ## Generator contract

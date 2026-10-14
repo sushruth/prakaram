@@ -1,19 +1,19 @@
 {
   "pin": "fc250df2e6f65418a8fe3db8e78b414fd178e1b2",
-  "generatedAt": "2026-10-14T07:50:08.366Z",
+  "generatedAt": "2026-10-14T08:21:35.988Z",
   "sources": [
     {
       "id": "rigveda-1",
       "index": "rigveda-1/index.json",
-      "sha256": "b9832986c77fc20ef58437f4d5b66642e15e403f0978c35a269f7e109b07be66",
+      "sha256": "c6251e291764556594172e6ec7b5ffee907e96ac98ecf80fbcf787f7e233156e",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_1.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 1 — DharmicData (ODbL)",
-        "sha256": "b9832986c77fc20ef58437f4d5b66642e15e403f0978c35a269f7e109b07be66"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 1 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "c6251e291764556594172e6ec7b5ffee907e96ac98ecf80fbcf787f7e233156e"
       },
       "parts": [
         {
@@ -81,15 +81,15 @@
     {
       "id": "rigveda-10",
       "index": "rigveda-10/index.json",
-      "sha256": "db141cc0b63ba115d4ce1a1a1e56515499bed2c4c9abc1f5a806e8f4dd1ce1dd",
+      "sha256": "72583c229dccebbb1349e551a9a993ab5cd85ef49b9ccb0b706c1711c24628e3",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_10.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (ODbL)",
-        "sha256": "db141cc0b63ba115d4ce1a1a1e56515499bed2c4c9abc1f5a806e8f4dd1ce1dd"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "72583c229dccebbb1349e551a9a993ab5cd85ef49b9ccb0b706c1711c24628e3"
       },
       "parts": [
         {
@@ -151,15 +151,15 @@
     {
       "id": "rigveda-2",
       "index": "rigveda-2/index.json",
-      "sha256": "83861b662c4ee5c3a7b3285f408e20a2b1a241463fd299421a4d9bfa8963d9fe",
+      "sha256": "1d6579180edee88170535bb2151599725746df3fe24a57fe93e89bb53e08fe06",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_2.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 2 — DharmicData (ODbL)",
-        "sha256": "83861b662c4ee5c3a7b3285f408e20a2b1a241463fd299421a4d9bfa8963d9fe"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 2 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "1d6579180edee88170535bb2151599725746df3fe24a57fe93e89bb53e08fe06"
       },
       "parts": [
         {
@@ -185,15 +185,15 @@
     {
       "id": "rigveda-3",
       "index": "rigveda-3/index.json",
-      "sha256": "450281781bac78825691fb2543629c646f55bbcbb0a185d9e98471b088390306",
+      "sha256": "321ca76b101c141de3d75bb252e100689f4cb3fa95c51df56d020ee63d59ca88",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_3.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 3 — DharmicData (ODbL)",
-        "sha256": "450281781bac78825691fb2543629c646f55bbcbb0a185d9e98471b088390306"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 3 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "321ca76b101c141de3d75bb252e100689f4cb3fa95c51df56d020ee63d59ca88"
       },
       "parts": [
         {
@@ -219,15 +219,15 @@
     {
       "id": "rigveda-4",
       "index": "rigveda-4/index.json",
-      "sha256": "8c2291d0ae52498e5db3b4a613cda25429ee3ad18fef878a7b8b921c27c276b1",
+      "sha256": "105e7a756b2ea17ab18365a5a6da0034265022b2bec9c865f1296847ec29713e",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_4.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 4 — DharmicData (ODbL)",
-        "sha256": "8c2291d0ae52498e5db3b4a613cda25429ee3ad18fef878a7b8b921c27c276b1"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 4 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "105e7a756b2ea17ab18365a5a6da0034265022b2bec9c865f1296847ec29713e"
       },
       "parts": [
         {
@@ -253,15 +253,15 @@
     {
       "id": "rigveda-5",
       "index": "rigveda-5/index.json",
-      "sha256": "a8ea2d08aa9f6b2af1f7601b216e90a48b1efbaab2733c98f66f10f18d9184f5",
+      "sha256": "bc5bc13d832982eb3bedb028b70472da5b480804e1b1d5533bb5dc3ee64cdaea",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_5.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 5 — DharmicData (ODbL)",
-        "sha256": "a8ea2d08aa9f6b2af1f7601b216e90a48b1efbaab2733c98f66f10f18d9184f5"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 5 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "bc5bc13d832982eb3bedb028b70472da5b480804e1b1d5533bb5dc3ee64cdaea"
       },
       "parts": [
         {
@@ -293,15 +293,15 @@
     {
       "id": "rigveda-6",
       "index": "rigveda-6/index.json",
-      "sha256": "50c208a4be9884e4272be21ad5cbbcf7fffdfb327009972b4b668237c6e360bb",
+      "sha256": "b2baf5e35c013005f4d26fa7442a93042d21fa7be1a0a10615d906ae65e37117",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_6.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 6 — DharmicData (ODbL)",
-        "sha256": "50c208a4be9884e4272be21ad5cbbcf7fffdfb327009972b4b668237c6e360bb"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 6 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "b2baf5e35c013005f4d26fa7442a93042d21fa7be1a0a10615d906ae65e37117"
       },
       "parts": [
         {
@@ -333,15 +333,15 @@
     {
       "id": "rigveda-7",
       "index": "rigveda-7/index.json",
-      "sha256": "fac88fd41b293190a7f63484a85477dc6df138e8bfb6dd86fe4584c3508a6d65",
+      "sha256": "f949893de521d0983ac450c35992f1f9722571d1f767576b21276e5306675937",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_7.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 7 — DharmicData (ODbL)",
-        "sha256": "fac88fd41b293190a7f63484a85477dc6df138e8bfb6dd86fe4584c3508a6d65"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 7 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "f949893de521d0983ac450c35992f1f9722571d1f767576b21276e5306675937"
       },
       "parts": [
         {
@@ -373,15 +373,15 @@
     {
       "id": "rigveda-8",
       "index": "rigveda-8/index.json",
-      "sha256": "7d5b8ca4f965bb3b999d28b780f678a5f7c6271d15faf45ee96e5e767deac450",
+      "sha256": "94849ac8a0c53f0f6932acd51facfd991fcdca9ef3e143a4131bd31a1d1a0455",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_8.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 8 — DharmicData (ODbL)",
-        "sha256": "7d5b8ca4f965bb3b999d28b780f678a5f7c6271d15faf45ee96e5e767deac450"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 8 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "94849ac8a0c53f0f6932acd51facfd991fcdca9ef3e143a4131bd31a1d1a0455"
       },
       "parts": [
         {
@@ -431,15 +431,15 @@
     {
       "id": "rigveda-9",
       "index": "rigveda-9/index.json",
-      "sha256": "3d0cdf3c3f78aacd8bd3649214e22017c4f7a87a90e3cd6306dc306d8527ae03",
+      "sha256": "e53d2a81ba5576969fb9fc386e3ff639f7a11def8169b5f0de1db7fdb1188d0d",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_9.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
         "retrievedAt": "2026-10-14",
         "parser": "rigveda@1",
-        "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-        "attribution": "Ṛgveda, maṇḍala 9 — DharmicData (ODbL)",
-        "sha256": "3d0cdf3c3f78aacd8bd3649214e22017c4f7a87a90e3cd6306dc306d8527ae03"
+        "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+        "attribution": "Ṛgveda, maṇḍala 9 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+        "sha256": "e53d2a81ba5576969fb9fc386e3ff639f7a11def8169b5f0de1db7fdb1188d0d"
       },
       "parts": [
         {
@@ -737,15 +737,15 @@
     {
       "id": "taittiriya-samhita-4",
       "index": "taittiriya-samhita-4/index.json",
-      "sha256": "96bf11b90467524e1fecb8c9babb032e459b36f169acf2979d3d2bdcd20724d4",
+      "sha256": "c131b95cf8c16fad42da70170658961cd996fb33581faaa58f290fc0143d9795",
       "provenance": {
         "upstreamUrl": "https://sa.wikisource.org/w/index.php?title=%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%B8%E0%A4%82%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A4%BE-%E0%A5%A7-%E0%A5%AA&oldid=417990",
         "upstreamRef": "revid 417990",
         "retrievedAt": "2026-10-14",
         "parser": "taittiriya@1",
-        "license": "CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/",
-        "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)",
-        "sha256": "96bf11b90467524e1fecb8c9babb032e459b36f169acf2979d3d2bdcd20724d4"
+        "license": "CC BY-SA 4.0 — Adapted from \"तैत्तिरीयसंहिता-१-४\", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource contributors, \"तैत्तिरीयसंहिता-१-४\" revid 417990, CC BY-SA 4.0",
+        "sha256": "c131b95cf8c16fad42da70170658961cd996fb33581faaa58f290fc0143d9795"
       },
       "parts": [
         {
@@ -795,8 +795,8 @@
   ],
   "metrics": {
     "total": {
-      "raw": 7740362,
-      "gzip": 1192305
+      "raw": 7743096,
+      "gzip": 1192623
     },
     "largestPart": {
       "file": "rigveda-1/part-7.json",

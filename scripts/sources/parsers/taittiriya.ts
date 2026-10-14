@@ -68,7 +68,9 @@ export function parseTaittiriya(wikitext: string, kanda: number): MantraDocument
       // No `place`: the work's division (prapāṭhaka) changes from section to section, which `place` cannot express.
       source: 'Wikisource (sa.wikisource.org), तैत्तिरीयसंहिता-१-४ (revid 417990) / -५-७ (revid 417991)',
       status: 'draft',
-      license: 'CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/ (text fetched live, revision pinned)',
+      // Kept in step with scripts/sources/generators/taittiriya.ts; the generator overrides it so that
+      // metadata.license always equals provenance.license (docs/licence-compliance.md §2.2).
+      license: 'CC BY-SA 4.0 — Adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/',
       categories: ['Yajurveda', 'Krishna Yajurveda', 'Samhitas'],
       summary: `The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa ${kanda}, from Wikisource. The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.`,
     },

@@ -65,7 +65,9 @@ export function parseRigvedaMandala(records: RigvedaRecord[], mandala: number): 
       place: { work: { sanskrit: 'ऋग्वेद', english: 'Ṛgveda' }, divisions: [{ kind: 'maṇḍala', n: mandala }] },
       source: `DharmicData (github.com/${REPO}), ${mandalaPath(mandala)}`,
       status: 'draft',
-      license: 'ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/',
+      // Kept in step with scripts/sources/generators/rigveda.ts; the generator overrides it so that
+      // metadata.license always equals provenance.license (docs/licence-compliance.md §2.1).
+      license: 'ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/',
       categories: ['Rigveda', 'Samhitas'],
       summary: `The Ṛgveda, maṇḍala ${mandala}, from DharmicData's accented text. Each section is a sūkta and each line a pada.`,
       remoteUrl: commitUrl(mandala),

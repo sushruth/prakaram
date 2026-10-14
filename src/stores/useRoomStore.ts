@@ -14,7 +14,8 @@ interface RoomState {
 
   /** The owner starts a parāyaṇam: resolves once the room can be found, then the owner is its host. */
   createRoom: (roomCode: string) => Promise<void>;
-  joinRoom: (roomCode: string, asHost: boolean) => void;
+  /** Joining loads the trystero stack, so it resolves once the room is connected. */
+  joinRoom: (roomCode: string, asHost: boolean) => Promise<void>;
   leaveRoom: () => void;
 }
 
@@ -43,14 +44,24 @@ export const useRoomStore = create<RoomState>((set) => {
 
     createRoom: async (roomCode) => {
       set({ creating: true });
-      connect(roomCode, true);
-      await chantingRoom.ready();
-      set({ creating: false, isInRoom: true, roomCode, isHost: true, peerCount: 0 });
+      try {
+        // The trystero stack loads here, then the host waits for a tracker before the room counts as open.
+        await connect(roomCode, true);
+        await chantingRoom.ready();
+        set({ creating: false, isInRoom: true, roomCode, isHost: true, peerCount: 0 });
+      } catch (e) {
+        console.warn('[room] create failed', e);
+        set({ creating: false });
+      }
     },
 
-    joinRoom: (roomCode, asHost) => {
-      connect(roomCode, asHost);
-      set({ isInRoom: true, roomCode, isHost: asHost, peerCount: 0 });
+    joinRoom: async (roomCode, asHost) => {
+      try {
+        await connect(roomCode, asHost);
+        set({ isInRoom: true, roomCode, isHost: asHost, peerCount: 0 });
+      } catch (e) {
+        console.warn('[room] join failed', e);
+      }
     },
 
     leaveRoom: () => {

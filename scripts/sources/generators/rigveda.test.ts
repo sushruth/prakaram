@@ -10,8 +10,7 @@ const FIXTURE = JSON.parse(readFileSync(join(import.meta.dir, 'fixtures', 'rigve
 
 describe('rigveda generator', () => {
   const doc = buildRigvedaDocument(FIXTURE, 1);
-  const license = doc.metadata.license!;
-  const built = buildSource(doc, rigvedaProvenance(1, license, '2026-10-14'));
+  const built = buildSource(doc, rigvedaProvenance(1, '2026-10-14'));
 
   it('builds the rigveda-1 index and its part files', () => {
     expect(built.index.id).toBe('rigveda-1');

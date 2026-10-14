@@ -1,24 +1,12 @@
 import { MantraDocument } from '../types/mantra';
 export { DEFAULT_PRAKARAS } from './defaultPrakaras';
-import shantiMantras from './shantiMantras.json';
-import ganapatiPrarthana from './ganapatiPrarthana.json';
-import purushaSuktam from './purushaSuktam.json';
-import sriSuktam from './sriSuktam.json';
-import durgaSuktam from './durgaSuktam.json';
-import narayanaSuktam from './narayanaSuktam.json';
-import rudramNamakam from './rudramNamakam.json';
-import rudramChamakam from './rudramChamakam.json';
 
-export const ALL_SUKTAMS: MantraDocument[] = [
-  shantiMantras as MantraDocument,
-  ganapatiPrarthana as MantraDocument,
-  purushaSuktam as MantraDocument,
-  sriSuktam as MantraDocument,
-  durgaSuktam as MantraDocument,
-  narayanaSuktam as MantraDocument,
-  rudramNamakam as MantraDocument,
-  rudramChamakam as MantraDocument,
-];
+/**
+ * The bundled corpus is empty: every text the app shows is a live source, vendored under `sources/` and
+ * fetched on demand (see `src/services/sourceAdapter.ts`). Nothing ships as JSON in `src/data`. Documents
+ * loaded at runtime are registered here; `SUKTA_MAP` is the id → document index over the same list.
+ */
+export const ALL_SUKTAMS: MantraDocument[] = [];
 
 /** Adds a document loaded at runtime (a live-referenced source). Idempotent. */
 export function registerDocument(doc: MantraDocument): void {
@@ -49,14 +37,9 @@ export const SUKTA_MAP = new Map<string, MantraDocument>(
   ALL_SUKTAMS.map((s) => [s.id, s])
 );
 
-/** The JSON file each document lives in, relative to src/data. Used for the wiki's source and edit links. */
-export const SUKTA_FILE: Record<string, string> = {
-  'shanti-mantras': 'shantiMantras.json',
-  'ganapati-prarthana': 'ganapatiPrarthana.json',
-  'purusha-suktam': 'purushaSuktam.json',
-  'sri-suktam': 'sriSuktam.json',
-  'durga-suktam': 'durgaSuktam.json',
-  'narayana-suktam': 'narayanaSuktam.json',
-  'rudram-namakam': 'rudramNamakam.json',
-  'rudram-chamakam': 'rudramChamakam.json',
-};
+/**
+ * The JSON file each bundled document lived in, relative to `src/data`. Kept for the wiki's source and edit
+ * links, which fall back to `<id>.json` for any document without a `metadata.remoteUrl`. Empty now that
+ * nothing is bundled: every source is live and links to its upstream via `metadata.remoteUrl`.
+ */
+export const SUKTA_FILE: Record<string, string> = {};

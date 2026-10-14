@@ -10,7 +10,7 @@
     "vedaNote": "Krishna Yajurveda, Taittiriya Samhita (kāṇḍa 4).",
     "source": "Wikisource (sa.wikisource.org), तैत्तिरीयसंहिता-१-४ (revid 417990) / -५-७ (revid 417991)",
     "status": "draft",
-    "license": "CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/",
+    "license": "CC BY-SA 4.0 — Adapted from \"तैत्तिरीयसंहिता-१-४\", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/",
     "categories": [
       "Yajurveda",
       "Krishna Yajurveda",
@@ -22,9 +22,9 @@
       "upstreamRef": "revid 417990",
       "retrievedAt": "2026-10-14",
       "parser": "taittiriya@1",
-      "license": "CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/",
-      "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)",
-      "sha256": "96bf11b90467524e1fecb8c9babb032e459b36f169acf2979d3d2bdcd20724d4"
+      "license": "CC BY-SA 4.0 — Adapted from \"तैत्तिरीयसंहिता-१-४\", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource contributors, \"तैत्तिरीयसंहिता-१-४\" revid 417990, CC BY-SA 4.0",
+      "sha256": "c131b95cf8c16fad42da70170658961cd996fb33581faaa58f290fc0143d9795"
     }
   },
   "sections": [

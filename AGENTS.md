@@ -89,6 +89,23 @@ Agents modifying or extending this repository must strictly adhere to the follow
 | **Authentication** | **WebAuthn Passkeys** (deferred) | **Zero passwords**. The account UI is hidden and the Worker verify endpoints return `501`. Do not expose accounts or mint sessions until verification with `@simplewebauthn/server` is implemented. |
 | **Backend (Optional)** | **Cloudflare Workers + D1** | Keep backend code isolated in `worker/` using Hono and `@simplewebauthn`. |
 
+### Browser support & modern platform (all-or-nothing)
+
+Support is **the latest stable release of every major browser and the one before it** (Chrome, Edge, Safari, Firefox; iOS Safari rides Safari). It is declared in `package.json` `browserslist` (`last 2 versions, not dead`) and enforced by `vite.config.ts` `build.target`. Anything outside that set is unsupported.
+
+There are **no polyfills and no runtime fallbacks** for older browsers. If a feature works across the supported set, use it plainly and delete the old path. A `typeof`/feature guard for an API we already require is dead weight — do not add one. In use or expected: CSS `@layer`, `color-mix()`, nesting, `:has()`, container queries, `content-visibility`, view transitions, and the **CSS Custom Highlight API** (`::highlight()`, Baseline 2026 — swara colouring uses it instead of per-syllable `<span>`s).
+
+### File size — around 180 lines
+
+Every file — source, style, test, script — should be **around 180 lines**. A file that grows past that is a signal to split it by concern, not to keep appending: prefer several small modules over one long one, and the same applies to CSS concern files and to a test file that covers too many behaviours. A file may exceed this only where a single unit genuinely cannot be split (a long data table, a generated file), and it should say why at the top.
+
+**CSS is a first-class asset and must be audited, not accreted.** When touching styles, also:
+- prefer a platform feature to a DOM wrapper — style text with `::highlight`/`::selection`/`::marker` rather than wrapping it in elements;
+- delete rules that no longer match anything, and fold duplicated declarations into a token or a shared class;
+- keep one concern per file in `src/styles/`, inside the right `@layer`;
+- look for rules that force layout or paint (large blurs, filters on many nodes, per-line wrappers) and prefer `content-visibility`/`contain` where a subtree is off-screen;
+- if a feature is not yet available across the supported set, record that here rather than shipping a fallback.
+
 ---
 
 ## 3. Non-Negotiable Vedic & Linguistic Invariants
@@ -100,7 +117,7 @@ When editing or generating Vedic texts and transliteration logic:
   - `U+0951` (॑) : *Svarita* (high pitch)
   - `U+0952` (॒) : *Anudātta* (low pitch)
   - `U+1CDA` (᳚) : *Dīrgha Svarita* (independent long accent)
-* Canonical source text in `src/data/*.json` is always stored in **Devanagari with explicit swaras**.
+* Canonical source text in the vendored `sources/*.json` files is always stored in **Devanagari with explicit swaras**.
 
 ### B. Tamil Script Clustering Order
 Standard Tamil lacks separate letters for aspirated consonants ($kh, g, gh$). We use South Indian subscript digits (`U+2081–U+2084`).
@@ -133,7 +150,7 @@ Do not calculate cadence using raw word counts. Sanskrit prosody uses *mātrās*
 
 ### E. Koshah Wiki
 
-* The wiki is derived from `src/data` on each render (`src/services/wiki.ts`); nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/<id>/<s>.<from>-<to>` or `#/wiki/<id>/<s>.p<n>` (a nirdeśa), `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
+* The wiki is derived from the corpus on each render (`src/services/wiki.ts`): the live sources registered in `ALL_SUKTAMS` plus the default prakaras, nothing bundled; nothing is stored. Routes are hash routes parsed in `src/services/wikiNav.ts`: `#/wiki`, `#/wiki/<id>`, `#/wiki/<id>/<n>`, `#/wiki/<id>/<s>.<from>-<to>` or `#/wiki/<id>/<s>.p<n>` (a nirdeśa), `#/wiki/Category:<name>`, `#/wiki/Special:Search?q=`, `Special:Random`, `Special:Compose`. Old `#k=` links redirect.
 * A **source** owns text and its sections are the addressable parts (`docId/n`); a nirdeśa also addresses padas, padyas and ranges of them. A **composition** (`metadata.kind: 'composition'`, `metadata.parts`) owns no text and references parts. The default prakaras are derived as compositions. Do not copy text into a composition.
 * Media are declared per article: text, transliteration and translation are derived; declare only audio, commentary, images or extras in `metadata.media`. The player plays text only.
 * The action word is **Follow** (the cadence follows the reader), not "Chant". Each pada has a quiet number (section-relative); where a padya level exists the padya number sits beside the padya's last pada. The player shows the same structure: a quiet ṛk number above the first line of each verse (only where a verse level exists) and an `anuvāka N` heading at the start of each section in a multi-section source (`MantraChunk.section` and `.padya`, set in `getFlattenedChunks`). Tapping two numbers selects a range that snaps to whole padyas, with a `padas` toggle in the range row to refine to padas; the row reads `Follow ṛks 3–5` / `Follow padas 3–9`, Add to my prakaram, Copy link and clear. The article's own play button is the Phosphor `play` icon.
@@ -164,7 +181,7 @@ Target benchmarks:
 * Unit tests: **100% pass** in $<100\text{ ms}$.
 * Production build: **$<1\text{ s}$ build time**, total client bundle $<220\text{ KB}$ uncompressed ($<70\text{ KB}$ gzipped).
 
-Current state (last measured): 315 tests pass in about 105 ms. The build takes about 0.6 s and the JS bundle is 332.16 kB (103.05 kB gzipped) with CSS 32.89 kB (7.35 kB gzipped), so the bundle is above target (the parsers moved to `scripts/sources/` are not in it; `origin/main` was already 273.50 kB, 82.88 kB gzipped).
+Current state (last measured): 335 tests pass in about 230 ms. The build takes about 0.4 s and the JS bundle is about 224 kB (about 77 kB gzipped), down from 332.16 kB after the bundled corpus was removed: close to the 220 KB target but still just over (the parsers moved to `scripts/sources/` are not in it).
 
 ---
 
@@ -172,15 +189,15 @@ Handoff, the repo-rename checklist and open items are in `MAINTAINERS.md` §7. R
 
 ---
 
-## 5. Adding New Suktams to the Corpus
+## 5. Adding a Source to the Corpus
 
-When adding a new Suktam from *Saswara Veda Mantrah*:
-1. Create a new JSON file in `src/data/<suktamId>.json` matching `MantraDocument` type.
-2. Ensure every chunk includes authentic Devanagari with swara marks. Translations may be kept in the data but are not displayed.
-3. Register the file in `src/data/index.ts` under `ALL_SUKTAMS`.
-4. Add its file name to `SUKTA_FILE` in `src/data/index.ts` (the wiki's edit and history links use it). Optionally add it as an item in a default Prakara preset in `src/data/defaultPrakaras.ts`; that preset then appears as a composition.
-5. Set `metadata.veda`, `deity`, `categories`, `summary`, `related` and `usage` (the wiki reads them), and `metadata.status` and `metadata.license` as in MAINTAINERS.md §4a. Status is `draft` until proofread, and text with unconfirmed permission stays `draft`.
-6. Run `bun run build` to verify type safety.
+Nothing is bundled in `src/data` any more: every text the app shows is a live source, vendored under `sources/` and fetched on demand. `ALL_SUKTAMS` starts empty and holds only what the runtime loader registers. To add a source:
+1. Add a generator under `scripts/sources/generators/` (parsing lives in `scripts/sources/parsers/`) that fetches its upstream, parses it, attaches `metadata.provenance` and writes `sources/<docId>.json` (see `sources/README.md`).
+2. Run `bun run sources:refresh`. It regenerates every file and `sources/manifest.json`, and prints the new `sha256`/size report.
+3. Add the id, index path and label to `src/data/vendoredSources.ts`, so the loader and the wiki home can reach it. `scripts/sources/manifest.test.ts` guards the two in step.
+4. Optionally add it as an item in a default Prakara preset in `src/data/defaultPrakaras.ts` (`type: 'sukta_ref'`, `suktaId`, and a `nirdesa` for one section or range); that preset then appears as a composition.
+5. Set `metadata.veda`, `deity`, `categories`, `summary`, `related` and `usage` in the generator's metadata (the wiki reads them), and `metadata.status` and `metadata.license` as in MAINTAINERS.md §4a. Status is `draft` until proofread, and text with unconfirmed permission stays `draft`.
+6. Commit `sources/` and deploy; the pin is computed at build time (`vite.config.ts`), so there is no manual bump. Run `bunx tsc --noEmit && bun test && bun run build` to verify.
 
 ---
 

@@ -1,11 +1,42 @@
 import { describe, expect, it } from 'bun:test';
-import { ALL_SUKTAMS } from '../data';
+import type { MantraDocument, SuktaSection } from '../types/mantra';
 import { formatNirdesa, nirdesaOfChunk, normaliseNirdesa, padaOf, parseNirdesa, partWords, rangeNirdesa, rangeWords, resolveNirdesa, selectionNirdesa } from './nirdesa';
 import { padyas } from './padya';
 
+// Fixtures standing in for the live corpus: nothing is bundled in `src/data` any more, so the integrity
+// checks run over these. A section of `count` padas; `numeralOn` lists the 1-based padas that print a verse
+// numeral at their end (the padya level is derived from those numerals, never invented).
+const section = (docId: string, n: number, count: number, numeralOn: number[] = []): SuktaSection => ({
+  id: `${docId}-${n}`,
+  title: `Anuvaka ${n}`,
+  sectionNumber: n,
+  chunks: Array.from({ length: count }, (_, i) => ({
+    id: `${docId}-${n}-${i + 1}`,
+    chunkNumber: i + 1,
+    sanskrit: numeralOn.includes(i + 1) ? `अ ॥ ${numeralOn.indexOf(i + 1) + 1} ॥` : 'अ',
+  })),
+});
+
+const doc = (id: string, sections: SuktaSection[]): MantraDocument => ({
+  id,
+  title: { sanskrit: 'सूक्तम्', transliteration: id, english: id },
+  metadata: { source: 'test' },
+  sections,
+});
+
 const ns = 'rudram-namakam';
+const sri = 'sri-suktam';
+const shanti = 'shanti-mantras';
+// Four anuvākas, none printing a verse numeral (like the Namakam, which prints only the anuvāka number).
+const nsDoc = doc(ns, [1, 2, 3, 4].map((n) => section(ns, n, 20)));
+// One section, sixteen padyas of two padas each.
+const sriDoc = doc(sri, [section(sri, 1, 32, [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32])]);
+const shantiDoc = doc(shanti, [section(shanti, 1, 3)]);
+const docs = [nsDoc, sriDoc, shantiDoc];
+
+const resolve = (a: string) => resolveNirdesa(a, docs);
 const err = (a: string) => {
-  const r = resolveNirdesa(a);
+  const r = resolve(a);
   return r.ok ? undefined : r.error;
 };
 
@@ -57,20 +88,20 @@ describe('grammar', () => {
 
 describe('resolve', () => {
   it('slices lines inside a section and across sections', () => {
-    const s3 = ALL_SUKTAMS.find((d) => d.id === ns)!.sections[2];
-    const r = resolveNirdesa(`${ns}/3.2-9`);
+    const s3 = nsDoc.sections[2];
+    const r = resolve(`${ns}/3.2-9`);
     expect(r.ok && r.chunks.map((c) => c.id)).toEqual(s3.chunks.slice(1, 9).map((c) => c.id));
-    const x = resolveNirdesa(`${ns}/2.14-3.2`);
-    const s2 = ALL_SUKTAMS.find((d) => d.id === ns)!.sections[1];
+    const x = resolve(`${ns}/2.14-3.2`);
+    const s2 = nsDoc.sections[1];
     expect(x.ok && x.chunks.map((c) => c.id)).toEqual([...s2.chunks.slice(13), ...s3.chunks.slice(0, 2)].map((c) => c.id));
     expect(x.ok && [x.first, x.last]).toEqual([{ section: 2, pada: 14 }, { section: 3, pada: 2 }]);
   });
 
   it('labels with the part in words', () => {
-    const r = resolveNirdesa(`${ns}/3.2-3.9`);
+    const r = resolve(`${ns}/3.2-3.9`);
     expect(r.ok && r.label.text).toBe('§3 padas 2–9');
-    const p = resolveNirdesa('sri-suktam');
-    expect(p.ok && p.label.text).toBe('sri-suktam');
+    const p = resolve(sri);
+    expect(p.ok && p.label.text).toBe(sri);
   });
 
   it('reports each error', () => {
@@ -86,56 +117,53 @@ describe('resolve', () => {
   });
 
   it('resolves the padya step to whole padas', () => {
-    const sri = ALL_SUKTAMS.find((d) => d.id === 'sri-suktam')!;
-    const sec = sri.sections[0];
+    const sec = sriDoc.sections[0];
     const g = padyas(sec)!;
     const at = (n: number) => g.find((x) => x.number === n)!;
-    const one = resolveNirdesa('sri-suktam/1.p3');
+    const one = resolve(`${sri}/1.p3`);
     expect(one.ok && one.chunks).toEqual(sec.chunks.slice(at(3).from - 1, at(3).to));
-    const rng = resolveNirdesa('sri-suktam/1.p2-p4');
+    const rng = resolve(`${sri}/1.p2-p4`);
     expect(rng.ok && rng.chunks).toEqual(sec.chunks.slice(at(2).from - 1, at(4).to));
     expect(rng.ok && [rng.first, rng.last]).toEqual([{ section: 1, pada: at(2).from }, { section: 1, pada: at(4).to }]);
-    const k = resolveNirdesa('sri-suktam/1.p3.2');
+    const k = resolve(`${sri}/1.p3.2`);
     expect(k.ok && k.chunks).toEqual([sec.chunks[at(3).from]]);
-    const kr = resolveNirdesa('sri-suktam/1.p3.1-2');
+    const kr = resolve(`${sri}/1.p3.1-2`);
     expect(kr.ok && kr.chunks).toEqual(sec.chunks.slice(at(3).from - 1, at(3).to));
-    const same = resolveNirdesa('sri-suktam/1.p2-p4');
+    const same = resolve(`${sri}/1.p2-p4`);
     expect(same.ok && same.label.text).toBe('§1 ṛks 2–4');
   });
 
   it('reports padya errors with typed errors', () => {
-    expect(err('sri-suktam/1.p99')).toEqual({ kind: 'padya-not-found', section: 1, padya: 99 });
-    expect(err('sri-suktam/1.p4-p2')).toEqual({ kind: 'reversed-range' });
-    expect(err('sri-suktam/1.p3.9')).toMatchObject({ kind: 'pada-out-of-range', section: 1, pada: 9, max: 2 });
-    expect(err('sri-suktam/1.p3.2-1')).toEqual({ kind: 'reversed-range' });
-    expect(err('sri-suktam/2.p1')).toEqual({ kind: 'unknown-section', section: 2 });
-    expect(err('sri-suktam/1.p2-2.p1')).toEqual({ kind: 'unknown-section', section: 2 });
-    // The Namakam section has one trailing numeral (the anuvāka number): no padya level.
+    expect(err(`${sri}/1.p99`)).toEqual({ kind: 'padya-not-found', section: 1, padya: 99 });
+    expect(err(`${sri}/1.p4-p2`)).toEqual({ kind: 'reversed-range' });
+    expect(err(`${sri}/1.p3.9`)).toMatchObject({ kind: 'pada-out-of-range', section: 1, pada: 9, max: 2 });
+    expect(err(`${sri}/1.p3.2-1`)).toEqual({ kind: 'reversed-range' });
+    expect(err(`${sri}/2.p1`)).toEqual({ kind: 'unknown-section', section: 2 });
+    expect(err(`${sri}/1.p2-2.p1`)).toEqual({ kind: 'unknown-section', section: 2 });
+    // The Namakam section prints one trailing numeral (the anuvāka number): no padya level.
     expect(err(`${ns}/3.p1`)).toEqual({ kind: 'no-padya-level', section: 3 });
-    expect(err('shanti-mantras/1.p1')).toEqual({ kind: 'no-padya-level', section: 1 });
+    expect(err(`${shanti}/1.p1`)).toEqual({ kind: 'no-padya-level', section: 1 });
   });
 
   it('snaps a selection to whole padyas, unless refined to padas', () => {
-    const sri = ALL_SUKTAMS.find((d) => d.id === 'sri-suktam')!;
-    const a = selectionNirdesa(sri, { section: 1, pada: 3 }, { section: 1, pada: 3 });
-    expect(a).toMatchObject({ addr: 'sri-suktam/1.p2', padya: true, lo: { pada: 3 }, hi: { pada: 4 } });
-    expect(selectionNirdesa(sri, { section: 1, pada: 8 }, { section: 1, pada: 3 }).addr).toBe('sri-suktam/1.p2-p4');
-    expect(selectionNirdesa(sri, { section: 1, pada: 8 }, { section: 1, pada: 3 }, true)).toMatchObject({ addr: 'sri-suktam/1.3-8', padya: false });
-    const ns3 = ALL_SUKTAMS.find((d) => d.id === ns)!;
-    expect(selectionNirdesa(ns3, { section: 3, pada: 2 }, { section: 3, pada: 9 })).toMatchObject({ addr: `${ns}/3.2-9`, padya: false });
+    const a = selectionNirdesa(sriDoc, { section: 1, pada: 3 }, { section: 1, pada: 3 });
+    expect(a).toMatchObject({ addr: `${sri}/1.p2`, padya: true, lo: { pada: 3 }, hi: { pada: 4 } });
+    expect(selectionNirdesa(sriDoc, { section: 1, pada: 8 }, { section: 1, pada: 3 }).addr).toBe(`${sri}/1.p2-p4`);
+    expect(selectionNirdesa(sriDoc, { section: 1, pada: 8 }, { section: 1, pada: 3 }, true)).toMatchObject({ addr: `${sri}/1.3-8`, padya: false });
+    expect(selectionNirdesa(nsDoc, { section: 3, pada: 2 }, { section: 3, pada: 9 })).toMatchObject({ addr: `${ns}/3.2-9`, padya: false });
   });
 
   it('addresses a chunk, whatever its id looks like', () => {
-    const doc = { ...ALL_SUKTAMS[0], sections: [{ id: 'q', title: 't', sectionNumber: 1, chunks: [{ id: 'zz', chunkNumber: 40, sanskrit: 'अ' }, { id: 'a/b c', chunkNumber: 7, sanskrit: 'ब' }] }] };
-    expect(padaOf(doc, 'a/b c')).toEqual({ section: 1, pada: 2 });
-    expect(nirdesaOfChunk(doc, 'zz')).toBe(`${doc.id}/1.1`);
-    expect(nirdesaOfChunk(doc, 'missing')).toBeUndefined();
+    const chunkDoc: MantraDocument = { ...shantiDoc, sections: [{ id: 'q', title: 't', sectionNumber: 1, chunks: [{ id: 'zz', chunkNumber: 40, sanskrit: 'अ' }, { id: 'a/b c', chunkNumber: 7, sanskrit: 'ब' }] }] };
+    expect(padaOf(chunkDoc, 'a/b c')).toEqual({ section: 1, pada: 2 });
+    expect(nirdesaOfChunk(chunkDoc, 'zz')).toBe(`${chunkDoc.id}/1.1`);
+    expect(nirdesaOfChunk(chunkDoc, 'missing')).toBeUndefined();
   });
 });
 
 describe('corpus', () => {
   it('has a padya level exactly where two or more numerals are printed, and it covers padas in order', () => {
-    for (const d of ALL_SUKTAMS) {
+    for (const d of docs) {
       for (const s of d.sections) {
         const g = padyas(s);
         const printed = s.chunks.filter((c) => /॥\s*\p{Nd}+\s*॥\s*$/u.test(c.sanskrit)).length;
@@ -146,19 +174,19 @@ describe('corpus', () => {
           expect(x.from).toBe(prev + 1);
           expect(x.to).toBeGreaterThanOrEqual(x.from);
           prev = x.to;
-          const r = resolveNirdesa(`${d.id}/${s.sectionNumber}.p${x.number}`);
+          const r = resolveNirdesa(`${d.id}/${s.sectionNumber}.p${x.number}`, docs);
           expect(r.ok && r.chunks).toEqual(s.chunks.slice(x.from - 1, x.to));
         }
         expect(prev).toBeLessThanOrEqual(s.chunks.length);
       }
     }
-    expect(padyas(ALL_SUKTAMS.find((d) => d.id === 'sri-suktam')!.sections[0])!.length).toBe(16);
-    for (const d of ['rudram-namakam', 'rudram-chamakam', 'shanti-mantras', 'ganapati-prarthana']) expect(ALL_SUKTAMS.find((x) => x.id === d)!.sections.every((s) => padyas(s) === null)).toBe(true);
+    expect(padyas(sriDoc.sections[0])!.length).toBe(16);
+    for (const d of [nsDoc, shantiDoc]) expect(d.sections.every((s) => padyas(s) === null)).toBe(true);
   });
 
   it('has unique ids, consecutive section numbers and no empty section', () => {
-    expect(new Set(ALL_SUKTAMS.map((d) => d.id)).size).toBe(ALL_SUKTAMS.length);
-    for (const d of ALL_SUKTAMS) {
+    expect(new Set(docs.map((d) => d.id)).size).toBe(docs.length);
+    for (const d of docs) {
       expect(d.sections.map((s) => s.sectionNumber)).toEqual(d.sections.map((_, i) => i + 1));
       expect(new Set(d.sections.map((s) => s.id)).size).toBe(d.sections.length);
       const ids = d.sections.flatMap((s) => s.chunks.map((c) => c.id));
@@ -168,21 +196,21 @@ describe('corpus', () => {
   });
 
   it('resolves whole, section, first line and last line of every document', () => {
-    for (const d of ALL_SUKTAMS) {
+    for (const d of docs) {
       const all = d.sections.flatMap((s) => s.chunks);
-      const whole = resolveNirdesa(d.id);
+      const whole = resolveNirdesa(d.id, docs);
       expect(whole.ok && whole.chunks.length).toBe(all.length);
       for (const s of d.sections) {
-        const sec = resolveNirdesa(`${d.id}/${s.sectionNumber}`);
+        const sec = resolveNirdesa(`${d.id}/${s.sectionNumber}`, docs);
         expect(sec.ok && sec.chunks).toEqual(s.chunks);
-        const first = resolveNirdesa(`${d.id}/${s.sectionNumber}.1`);
+        const first = resolveNirdesa(`${d.id}/${s.sectionNumber}.1`, docs);
         expect(first.ok && first.chunks).toEqual([s.chunks[0]]);
-        const last = resolveNirdesa(`${d.id}/${s.sectionNumber}.${s.chunks.length}`);
+        const last = resolveNirdesa(`${d.id}/${s.sectionNumber}.${s.chunks.length}`, docs);
         expect(last.ok && last.chunks).toEqual([s.chunks[s.chunks.length - 1]]);
         expect(nirdesaOfChunk(d, s.chunks[0].id)).toBe(`${d.id}/${s.sectionNumber}.1`);
       }
       const n = d.sections.length;
-      const span = resolveNirdesa(`${d.id}/1.1-${n}.${d.sections[n - 1].chunks.length}`);
+      const span = resolveNirdesa(`${d.id}/1.1-${n}.${d.sections[n - 1].chunks.length}`, docs);
       expect(span.ok && span.chunks.length).toBe(all.length);
     }
   });

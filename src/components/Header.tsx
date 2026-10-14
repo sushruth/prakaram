@@ -4,7 +4,7 @@ import { useRoomStore } from '../stores/useRoomStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { searchArticles } from '../services/wiki';
 import { useBasketStore } from '../stores/useBasketStore';
-import { COMPOSE_HASH, HOME_HASH, REPO_URL, articleHash, nirdesaHash, searchHash } from '../services/wikiNav';
+import { COMPOSE_HASH, HOME_HASH, PLAYER_HASH, REPO_URL, articleHash, nirdesaHash, searchHash } from '../services/wikiNav';
 import { resolveNirdesa } from '../services/nirdesa';
 import { ArticleTitle, SanskritTitle, useTitleText } from './Sanskrit';
 import { FlameMark } from './FlameMark';
@@ -33,7 +33,7 @@ export function Header({ onOpenRoom, onOpenSettings, onOpenDetails, settingsOpen
     <header className="app-header">
       <div className="header-start">
         <span className="header-flame" aria-hidden="true">
-          <FlameMark size={24} />
+          <FlameMark size={24} ambient />
         </span>
         <button className="header-title" onClick={onOpenDetails} aria-expanded={detailsOpen} title={titleText(prakara.title, { full: true })}>
           <SanskritTitle title={prakara.title} short />
@@ -90,7 +90,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
     <>
     <header className="app-header wiki-bar">
       <a className="header-flame" href={HOME_HASH} aria-label="Koshah main page" title="Koshah">
-        <FlameMark size={24} />
+        <FlameMark size={24} ambient />
       </a>
 
       <form
@@ -144,7 +144,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
           <Icon name="users-three" size={20} />
           {isInRoom && <span className="icon-dot" />}
         </button>
-        <a className="icon-btn" href="#" aria-label="Back to the player" title="Player">
+        <a className="icon-btn" href={PLAYER_HASH} aria-label="Back to the player" title="Player">
           <Icon name="play" size={20} />
         </a>
       </nav>

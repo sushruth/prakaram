@@ -4,7 +4,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'maha-prakaram',
     title: 'महापारायणम् (Maha Parayanam)',
-    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
+    author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
     description: 'Complete sacred sequence: Ganapati -> Purusha -> Sri -> Durga -> Narayana',
     preferredBpm: 72,
     createdTimestamp: Date.now(),
@@ -70,7 +70,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'purusha-sri-combo',
     title: 'पुरुष-श्री सूक्तम् (Purusha & Sri Suktam Combo)',
-    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
+    author: 'Taittirīya Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
     description: 'Traditional Purusha and Sri Sukta combination for abhishekam and archana',
     preferredBpm: 68,
     createdTimestamp: Date.now(),
@@ -78,7 +78,8 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'ps-combo-1',
         type: 'sukta_ref',
-        suktaId: 'purusha-suktam',
+        suktaId: 'taittiriya-aranyaka-3',
+        nirdesa: 'taittiriya-aranyaka-3/12',
         customTitle: 'Purusha Suktam'
       },
       {
@@ -91,7 +92,8 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'ps-combo-3',
         type: 'sukta_ref',
-        suktaId: 'sri-suktam',
+        suktaId: 'rigveda-khila-sri',
+        nirdesa: 'rigveda-khila-sri/1',
         customTitle: 'Sri Suktam'
       }
     ]
@@ -99,7 +101,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'shanti-patha',
     title: 'शान्ति पाठः (Shanti Patha & Meditation)',
-    author: 'Compiled from Saswara Veda Mantrah (Sri Ramakrishna Math)',
+    author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Āraṇyaka (taittiriya.com)',
     description: 'Meditative peace chants for dhyana and daily start of study',
     preferredBpm: 50,
     createdTimestamp: Date.now(),
@@ -107,8 +109,16 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'sp-1',
         type: 'sukta_ref',
-        suktaId: 'shanti-mantras',
-        customTitle: 'Vedic Shanti Mantras'
+        suktaId: 'rigveda-1',
+        nirdesa: 'rigveda-1/90',
+        customTitle: 'Śānti (Peace)'
+      },
+      {
+        id: 'sp-2',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/13',
+        customTitle: 'Saha Nāvavatu'
       }
     ]
   },
@@ -133,28 +143,6 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/68.1-82.45',
         customTitle: 'Chamakam (TS 4.7)'
-      }
-    ]
-  },
-  {
-    id: 'sri-rudram',
-    title: 'श्री रुद्रम् (Sri Rudram · Namakam & Chamakam)',
-    author: 'Taittiriya Samhita 4.5 (Krishna Yajurveda). Text from Vignanam, supplied by the maintainer.',
-    description: 'The Namakam and the Chamakam, eleven anuvakas each with their concluding mantras, with swara.',
-    preferredBpm: 60,
-    createdTimestamp: Date.now(),
-    items: [
-      {
-        id: 'sr-1',
-        type: 'sukta_ref',
-        suktaId: 'rudram-namakam',
-        customTitle: 'Namakam'
-      },
-      {
-        id: 'sr-2',
-        type: 'sukta_ref',
-        suktaId: 'rudram-chamakam',
-        customTitle: 'Chamakam'
       }
     ]
   }

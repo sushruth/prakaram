@@ -1,10 +1,34 @@
-import { expect, test } from 'bun:test';
+import { afterAll, expect, test } from 'bun:test';
+import { ALL_SUKTAMS, SUKTA_MAP, registerDocument } from '../data';
+import type { MantraDocument } from '../types/mantra';
 import { articleHash, categoryHash, legacyHash, nirdesaHash, parseRoute, routeRangeOk, searchHash } from './wikiNav';
+
+// A fixture standing in for the live corpus: nothing is bundled in `src/data` any more, so the linked-range
+// check (which resolves against the default corpus) gets this registered for the file.
+const rudram: MantraDocument = {
+  id: 'rudram-namakam',
+  title: { sanskrit: 'रुद्रम्', transliteration: 'Rudram', english: 'Rudram' },
+  metadata: { source: 'test' },
+  sections: [1, 2, 3, 4].map((n) => ({
+    id: `rudram-namakam-${n}`,
+    title: `Anuvaka ${n}`,
+    sectionNumber: n,
+    chunks: Array.from({ length: 5 }, (_, j) => ({ id: `rudram-namakam-${n}-${j + 1}`, chunkNumber: j + 1, sanskrit: 'अ' })),
+  })),
+};
+registerDocument(rudram);
+afterAll(() => {
+  const i = ALL_SUKTAMS.findIndex((d) => d.id === rudram.id);
+  if (i >= 0) ALL_SUKTAMS.splice(i, 1);
+  SUKTA_MAP.delete(rudram.id);
+});
 
 test('hash routes', () => {
   expect(parseRoute('')).toEqual({ kind: 'player' });
   expect(parseRoute('#')).toEqual({ kind: 'player' });
   expect(parseRoute('#compose')).toEqual({ kind: 'player' });
+  expect(parseRoute('#/player')).toEqual({ kind: 'player' });
+  expect(parseRoute('#p=abc')).toEqual({ kind: 'player' });
   expect(parseRoute('#/wiki')).toEqual({ kind: 'home' });
   expect(parseRoute('#/wiki/')).toEqual({ kind: 'home' });
   expect(parseRoute('#/wiki/Special:Compose')).toEqual({ kind: 'compose' });

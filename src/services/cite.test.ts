@@ -1,10 +1,33 @@
 import { describe, expect, it } from 'bun:test';
 import { Glob } from 'bun';
 import { readFileSync } from 'node:fs';
-import { ALL_SUKTAMS } from '../data';
+import type { MantraDocument } from '../types/mantra';
 import { citeInWords, ordinal } from './cite';
 
-const doc = (id: string) => ALL_SUKTAMS.find((d) => d.id === id)!;
+// Fixtures standing in for the live corpus: nothing is bundled in `src/data` any more. Two documents carry
+// a `place` (as the Taittirīya Saṃhitā does) and one does not, so both citation paths are exercised.
+const withPlace = (id: string, prapathaka: number): MantraDocument => ({
+  id,
+  title: { sanskrit: 'तैत्तिरीय संहिता', transliteration: id, english: id },
+  metadata: {
+    source: 'test',
+    place: { work: { sanskrit: 'तैत्तिरीय संहिता', english: 'Taittirīya Saṃhitā' }, divisions: [{ kind: 'kāṇḍa', n: 4 }, { kind: 'prapāṭhaka', n: prapathaka }] },
+  },
+  sections: [{ id: `${id}-1`, title: 'Anuvaka 1', sectionNumber: 1, chunks: [{ id: `${id}-1-1`, chunkNumber: 1, sanskrit: 'अ' }] }],
+});
+
+const FIXTURES: MantraDocument[] = [
+  withPlace('rudram-namakam', 5),
+  withPlace('rudram-chamakam', 7),
+  {
+    id: 'sri-suktam',
+    title: { sanskrit: 'श्री सूक्तम्', transliteration: 'Śrī Sūktam', english: 'Sri Suktam' },
+    metadata: { source: 'test' },
+    sections: [{ id: 'sri-suktam-1', title: 'Anuvaka 1', sectionNumber: 1, chunks: [{ id: 'sri-suktam-1-1', chunkNumber: 1, sanskrit: 'अ' }] }],
+  },
+];
+
+const doc = (id: string) => FIXTURES.find((d) => d.id === id)!;
 
 describe('ordinals', () => {
   it('are Sanskrit words up to 30, then a numeral with a suffix', () => {
@@ -34,8 +57,8 @@ describe('citeInWords', () => {
     expect(citeInWords(doc('sri-suktam'), 'sri-suktam/1.p2', 'devanagari')).toBe(doc('sri-suktam').title.sanskrit);
   });
   it('has places only where filled, with no dotted cite left', () => {
-    expect(ALL_SUKTAMS.filter((d) => d.metadata.place).map((d) => d.id)).toEqual(['rudram-namakam', 'rudram-chamakam']);
-    for (const d of ALL_SUKTAMS) expect('cite' in d.metadata).toBe(false);
+    expect(FIXTURES.filter((d) => d.metadata.place).map((d) => d.id)).toEqual(['rudram-namakam', 'rudram-chamakam']);
+    for (const d of FIXTURES) expect('cite' in d.metadata).toBe(false);
   });
 });
 

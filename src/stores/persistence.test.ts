@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { boolOr, clampNumber, oneOf } from './persistence';
+import { boolOr, clampNumber, oneOf, stringList } from './persistence';
 
 describe('stored value validation', () => {
   it('keeps a known value and falls back on anything else', () => {
@@ -18,5 +18,11 @@ describe('stored value validation', () => {
   it('accepts only real booleans', () => {
     expect(boolOr(true, false)).toBe(true);
     expect(boolOr('true', false)).toBe(false);
+  });
+
+  it('keeps non-empty strings, trims, dedupes and caps', () => {
+    expect(stringList([' a ', 'b', 'a', '', 7, null, 'c'], 12)).toEqual(['a', 'b', 'c']);
+    expect(stringList('junk', 12)).toEqual([]);
+    expect(stringList(Array.from({ length: 20 }, (_, i) => `x${i}`), 12)).toHaveLength(12);
   });
 });

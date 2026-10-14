@@ -11,6 +11,7 @@ import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useBasketStore } from '../stores/useBasketStore';
+import { useRecentStore } from '../stores/useRecentStore';
 import { Icon } from './Icon';
 import { Term } from './Term';
 import { SourceList } from './SourceList';
@@ -161,6 +162,13 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
     target?.scrollIntoView({ block: 'start' });
     target?.focus({ preventScroll: true });
   }, [id, section, range?.from.pada, range?.to.pada]);
+
+  // Remember the article the reader opened. Category, search and compose pages render other components, so
+  // only real articles reach here; an unknown id is not recorded (getArticle returns undefined).
+  const recordRecent = useRecentStore((s) => s.record);
+  useEffect(() => {
+    if (getArticle(id)) recordRecent(id);
+  }, [id, recordRecent]);
 
   // ponytail: a composed work has no piece of its own, so Follow saves it as a prakara first.
   const followAll = () => {

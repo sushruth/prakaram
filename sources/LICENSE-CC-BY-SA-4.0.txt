@@ -1,0 +1,30 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+=========================================================================
+
+Licence:            CC BY-SA 4.0
+Licence URI:        https://creativecommons.org/licenses/by-sa/4.0/
+Legal code (URI):   https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
+
+This file is the licence notice for the CC BY-SA 4.0 material in this directory, namely
+`sources/taittiriya-samhita-4/` (compiled from `sources/taittiriya-samhita-4.json`). The full legal
+code is not reproduced here: the URI above is given in place of a copy, as CC BY-SA 4.0 §3(a)(1)
+permits. The licence text itself is available at that URI.
+
+Attribution (CC BY-SA 4.0 §3(a)(1))
+-----------------------------------
+Adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource
+(https://sa.wikisource.org/w/index.php?title=तैत्तिरीयसंहिता-१-४&oldid=417990), by Wikisource
+contributors, retrieved 2026-10-14, and modified for this project (restructured into sections and
+padas, metadata added, script normalised to NFC). Copyright in the original is held by the
+Wikisource contributors; this notice refers to the licence and to the disclaimer of warranties below.
+
+ShareAlike (CC BY-SA 4.0 §3(b))
+-------------------------------
+This adapted material is distributed under CC BY-SA 4.0, the same licence as the original. You may
+copy and redistribute it, and adapt it, only under the terms of CC BY-SA 4.0 (or a later version of
+the same licence with the same Licence Elements, or a licence compatible with CC BY-SA 4.0).
+
+No warranties (CC BY-SA 4.0 §5)
+-------------------------------
+This material is provided without warranties of any kind, whether express, implied, statutory or
+otherwise; see §5 of the licence at the URI above.

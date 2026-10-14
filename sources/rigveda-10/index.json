@@ -23,7 +23,7 @@
     },
     "source": "DharmicData (github.com/bhavykhatri/DharmicData), Rigveda/rigveda_mandala_10.json",
     "status": "draft",
-    "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
+    "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
     "categories": [
       "Rigveda",
       "Samhitas"
@@ -35,9 +35,9 @@
       "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
       "retrievedAt": "2026-10-14",
       "parser": "rigveda@1",
-      "license": "ODbL 1.0 — Contains information from DharmicData, made available here under the Open Database License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/",
-      "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (ODbL)",
-      "sha256": "db141cc0b63ba115d4ce1a1a1e56515499bed2c4c9abc1f5a806e8f4dd1ce1dd"
+      "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
+      "sha256": "72583c229dccebbb1349e551a9a993ab5cd85ef49b9ccb0b706c1711c24628e3"
     }
   },
   "sections": [

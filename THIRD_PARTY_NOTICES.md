@@ -32,18 +32,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Sri Rudram, Namakam and Chamakam text
-
-`src/data/rudramNamakam.json` and `src/data/rudramChamakam.json` were converted from the Kannada-script swara text published by Vignanam
-(vignanam.org), supplied by the maintainer, using `scripts/kannadaToDocument.ts`. The Vedic text itself is ancient;
-Vignanam's typed and proofread edition may carry rights. **Permission to reuse it has not been confirmed in writing.**
-On 2026-10-13 the maintainer decided to reuse Vignanam as the sourcing source anyway and to open a discussion with
-Vignanam (contact@vignanam.org) seeking formal permission and proposing that Prakaram's chanting features be offered
-to Vignanam. Texts sourced from Vignanam stay at `status: "draft"` until that discussion concludes. New imports use
-`scripts/vignanamToDocument.ts`, which fetches Vignanam's Devanagari pages; this repo's normalization conventions
-(anusvara as ं, Devanagari digits in verse markers) are applied on import, since Vignanam prints ङ्/ञ् forms
-and ASCII digits for the same text.
-
 ## Vendored source text (`sources/`)
 
 The app's live sources are compiled into `sources/` by `bun run sources:refresh` and served to the app from
@@ -51,25 +39,32 @@ jsDelivr at the commit `SOURCES_PIN` points at (`src/services/vendored.ts`). Par
 there is no proxy. Every processed file carries `metadata.provenance` and stays `status: "draft"` until proofread.
 Four upstreams feed the 22 files.
 
-### Rigveda — DharmicData
+### Ṛgveda — DharmicData (ODbL 1.0)
 
-`sources/rigveda-1.json` … `rigveda-10.json` are compiled from DharmicData (`bhavykhatri/DharmicData`), pinned to
-commit `96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7` and fetched over jsDelivr (`cdn.jsdelivr.net`).
+`sources/rigveda-1/index.json` … `sources/rigveda-10/index.json` (with their part files) are a Derivative
+Database compiled from DharmicData, https://github.com/bhavykhatri/DharmicData, at commit
+96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7.
 
-> Contains information from DharmicData, made available here under the Open Database License (ODbL).
+> Contains information from DharmicData, which is made available here under the Open Database
+> License (ODbL). https://opendatacommons.org/licenses/odbl/1-0/
 
-- Source: https://github.com/bhavykhatri/DharmicData
-- Licence: Open Database License (ODbL) 1.0, https://opendatacommons.org/licenses/odbl/1-0/
-- The text stays at `status: "draft"` until it is proofread against a printed edition.
+These files are licensed to you under the ODbL 1.0. The licence text is included in this repository at
+`sources/LICENSE-ODbL.txt`. The transformation applied to the upstream data (fetch → parse →
+re-serialise into a MantraDocument) is the "alteration method" required by ODbL §4.6(b) and lives in
+`scripts/sources/parsers/rigveda.ts` and `scripts/sources/generators/`. The text stays at
+`status: "draft"` until it is proofread against a printed edition.
 
-### Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource
+### Taittirīya Saṃhitā, kāṇḍa 4 — Wikisource (CC BY-SA 4.0)
 
-`sources/taittiriya-samhita-4.json` is compiled from the Sanskrit Wikisource page `तैत्तिरीयसंहिता-१-४` at
-revid 417990.
-
-- Source: https://sa.wikisource.org/w/index.php?title=%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%B8%E0%A4%82%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A4%BE-%E0%A5%A7-%E0%A5%AA&oldid=417990
-- Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0), https://creativecommons.org/licenses/by-sa/4.0/
-- The text stays at `status: "draft"` until it is proofread against a printed edition.
+`sources/taittiriya-samhita-4/index.json` (with its part files) is adapted from
+"तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource
+(https://sa.wikisource.org/w/index.php?title=तैत्तिरीयसंहिता-१-४&oldid=417990), by Wikisource
+contributors, retrieved 2026-10-14, and modified for this project (restructured into sections and padas,
+metadata added, script normalised to NFC). The original is licensed under CC BY-SA 4.0; this adapted
+file is distributed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/
+This material is provided without warranties of any kind; see §5 of the licence. The licence notice is
+at `sources/LICENSE-CC-BY-SA-4.0.txt`. The text stays at `status: "draft"` until it is proofread against
+a printed edition.
 
 ### Taittirīya Āraṇyaka — taittiriya.com
 

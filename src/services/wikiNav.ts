@@ -1,5 +1,6 @@
 
 export const HOME_HASH = '#/wiki';
+export const PLAYER_HASH = '#/player';
 export const REPO_URL = 'https://github.com/sushruth/prakaram';
 
 import { formatNirdesa, parseNirdesa, resolveNirdesa, type Pos } from './nirdesa';
@@ -21,8 +22,9 @@ const dec = (s: string) => {
   }
 };
 
-/** Maps a location hash to a wiki page. Anything outside `#/wiki` is the player. */
+/** Maps a location hash to a wiki page. `#/player` (and anything else outside `#/wiki`) is the player. */
 export function parseRoute(hash: string): Route {
+  if (hash === PLAYER_HASH) return { kind: 'player' };
   const m = hash.match(/^#\/wiki(?:\/(.*))?$/);
   if (!m) return { kind: 'player' };
   const rest = m[1] ?? '';

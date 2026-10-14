@@ -90,7 +90,7 @@ describe('source adapters', () => {
     expect(adapterFor('taittiriya-samhita-4')?.id).toBe('vendored');
     expect(adapterFor('taittiriya-aranyaka-3')?.id).toBe('vendored');
     expect(adapterFor('rigveda-khila-sri')?.id).toBe('vendored');
-    expect(adapterFor('shanti-mantras')).toBeUndefined();
+    expect(adapterFor('not-a-source')).toBeUndefined();
   });
 
   it('owns only the ids of the vendored table', () => {
@@ -101,7 +101,7 @@ describe('source adapters', () => {
     expect(adapter.owns('rigveda-11')).toBe(false);
     expect(adapter.owns('taittiriya-aranyaka-11')).toBe(false);
     expect(adapter.owns('taittiriya-samhita-4')).toBe(true);
-    expect(adapter.owns('shanti-mantras')).toBe(false);
+    expect(adapter.owns('not-a-source')).toBe(false);
   });
 
   it('gives every navigable live source an adapter', () => {
@@ -170,7 +170,7 @@ describe('ensureDocument', () => {
 
   it('returns undefined, fetching nothing, when no adapter owns the id', async () => {
     const { fetchCalls } = installStubs(DOCS);
-    expect(await ensureDocument('shanti-mantras')).toBeUndefined();
+    expect(await ensureDocument('not-a-source')).toBeUndefined();
     expect(fetchCalls).toEqual([]);
   });
 

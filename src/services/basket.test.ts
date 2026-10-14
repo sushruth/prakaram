@@ -1,10 +1,31 @@
-import { expect, test } from 'bun:test';
-import { ALL_SUKTAMS } from '../data';
+import { afterAll, expect, test } from 'bun:test';
+import { ALL_SUKTAMS, SUKTA_MAP, registerDocument } from '../data';
+import type { MantraDocument } from '../types/mantra';
 import { basketToPrakara, mergeStoredBasket, migrateBasket, migrateStoredBasket, moveItem } from './basket';
 import { decodePrakaraFromUrlHash, encodePrakaraToUrlHash } from './urlCodec';
 
-const multi = ALL_SUKTAMS.find((d) => d.sections.length > 2)!;
-const other = ALL_SUKTAMS.find((d) => d.id !== multi.id)!;
+// Fixtures standing in for the live corpus: nothing is bundled in `src/data` any more, so the basket
+// functions (which resolve a nirdeśa against the default corpus) get these registered for the file.
+const mkDoc = (id: string, sections: number, chunks: number): MantraDocument => ({
+  id,
+  title: { sanskrit: 'सूक्तम्', transliteration: id, english: `Hymn ${id}` },
+  metadata: { source: 'test' },
+  sections: Array.from({ length: sections }, (_, i) => ({
+    id: `${id}-${i + 1}`,
+    title: `Anuvaka ${i + 1}`,
+    sectionNumber: i + 1,
+    chunks: Array.from({ length: chunks }, (_, j) => ({ id: `${id}-${i + 1}-${j + 1}`, chunkNumber: j + 1, sanskrit: 'अ' })),
+  })),
+});
+
+const multi = mkDoc('multi', 3, 10);
+const other = mkDoc('other', 1, 1);
+for (const d of [multi, other]) registerDocument(d);
+afterAll(() => {
+  for (let i = ALL_SUKTAMS.length - 1; i >= 0; i--) if (ALL_SUKTAMS[i].id === multi.id || ALL_SUKTAMS[i].id === other.id) ALL_SUKTAMS.splice(i, 1);
+  SUKTA_MAP.delete(multi.id);
+  SUKTA_MAP.delete(other.id);
+});
 
 test('moveItem swaps neighbours and stops at the ends', () => {
   const l = ['a', 'b', 'c'];
@@ -31,7 +52,7 @@ test('an old saved basket of piece ids still loads, and junk is dropped', () => 
 const rehydrate = (stored: { state: unknown; version: number }) => mergeStoredBasket(stored.version === 2 ? stored.state : migrateStoredBasket(stored.state), { items: [] as string[] });
 
 test('a version 1 stored basket survives rehydration', () => {
-  const item = 'rudram-namakam/3';
+  const item = `${multi.id}/3`;
   expect(rehydrate({ state: { items: [{ pieceId: item }] }, version: 1 }).items).toEqual([item]);
   expect(rehydrate({ state: { items: [item] }, version: 2 }).items).toEqual([item]);
   expect(mergeStoredBasket(undefined, { items: [] }).items).toEqual([]);

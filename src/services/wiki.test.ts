@@ -1,7 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
-import { ALL_SUKTAMS, SUKTA_FILE } from '../data';
+import { DEFAULT_PRAKARAS } from '../data';
 import { MantraDocument } from '../types/mantra';
 import { pratika, articlesForName, articlesInCategory, getArticle, listArticles, listCategories, searchArticles } from './wiki';
 
@@ -58,27 +56,25 @@ describe('wiki articles', () => {
     expect(getArticle('nope', docs)).toBeUndefined();
   });
 
-  it('builds the GitHub source, edit and history URLs from the data file', () => {
-    const a = getArticle('shanti-mantras')!;
-    expect(a.sourceUrl).toBe('https://github.com/sushruth/prakaram/blob/main/src/data/shantiMantras.json');
-    expect(a.editUrl).toBe('https://github.com/sushruth/prakaram/edit/main/src/data/shantiMantras.json');
-    expect(a.historyUrl).toBe('https://github.com/sushruth/prakaram/commits/main/src/data/shantiMantras.json');
+  it('links a live source to its upstream page, and falls back to the data file otherwise', () => {
+    const base = doc('rigveda-1');
+    const live = { ...base, metadata: { ...base.metadata, remoteUrl: 'https://example.org/rigveda-1' } };
+    const a = getArticle('rigveda-1', [live])!;
+    expect(a.sourceUrl).toBe('https://example.org/rigveda-1');
+    expect(a.editUrl).toBe('https://example.org/rigveda-1');
+    expect(a.historyUrl).toBe('https://example.org/rigveda-1');
+    const local = getArticle('my-source', [doc('my-source')])!;
+    expect(local.sourceUrl).toBe('https://github.com/sushruth/prakaram/blob/main/src/data/my-source.json');
+    expect(local.editUrl).toBe('https://github.com/sushruth/prakaram/edit/main/src/data/my-source.json');
+    expect(local.historyUrl).toBe('https://github.com/sushruth/prakaram/commits/main/src/data/my-source.json');
   });
 
-  it('maps every bundled document to a file that exists', () => {
-    for (const d of ALL_SUKTAMS) {
-      expect(SUKTA_FILE[d.id]).toBeDefined();
-      expect(existsSync(join(import.meta.dir, '..', 'data', SUKTA_FILE[d.id]))).toBe(true);
-    }
-  });
-
-  it('defaults to the bundled corpus', () => {
+  it('defaults to the default prakaras: compositions only, with no bundled sources', () => {
     const all = listArticles();
-    expect(all.filter((a) => a.kind === 'source').map((a) => a.id)).toEqual(ALL_SUKTAMS.map((d) => d.id));
-    // Default prakaras show up as compositions, and their sources list them under Used in.
-    expect(getArticle('sri-rudram')?.kind).toBe('composition');
-    expect(getArticle('rudram-namakam')?.usedIn.some((u) => u.id === 'sri-rudram')).toBe(true);
-    expect(getArticle('purusha-suktam')?.veda).toBe('rigveda');
+    expect(all.map((a) => a.id)).toEqual(DEFAULT_PRAKARAS.map((p) => p.id));
+    expect(all.every((a) => a.kind === 'composition')).toBe(true);
+    // A prakara whose live parts are not loaded yet resolves to no sections.
+    expect(getArticle('maha-prakaram')?.parts).toEqual([]);
   });
 });
 
@@ -131,14 +127,19 @@ describe('wiki search', () => {
   });
 });
 
-describe('real data', () => {
+describe('search over live-shaped fixtures', () => {
+  const rv = doc('rigveda-2', { veda: 'rigveda', sections: 2, categories: ['Suktas'] });
+  rv.sections[0].title = 'Prathama Anuvakah';
+  const yv = doc('taittiriya-aranyaka-3', { veda: 'yajurveda', categories: ['Suktas'] });
+  const corpus = [rv, yv];
   it('searches section titles and source', () => {
-    expect(searchArticles('Prathama Anuvakah').length).toBeGreaterThan(0);
-    expect(searchArticles('Ramakrishna Math').length).toBeGreaterThan(0);
+    expect(searchArticles('Prathama Anuvakah', corpus).map((a) => a.id)).toEqual(['rigveda-2']);
+    expect(searchArticles('Test source', corpus).length).toBe(2);
   });
-  it('counts an article under every Veda it carries', () => {
-    expect(articlesForName('Rigveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
-    expect(articlesForName('Yajurveda').some((a) => a.id === 'purusha-suktam')).toBe(true);
+  it('counts an article under its Veda, and matches a category name', () => {
+    expect(articlesForName('Rigveda', corpus).map((a) => a.id)).toEqual(['rigveda-2']);
+    expect(articlesForName('Yajurveda', corpus).map((a) => a.id)).toEqual(['taittiriya-aranyaka-3']);
+    expect(articlesForName('Suktas', corpus).length).toBe(2);
   });
 });
 

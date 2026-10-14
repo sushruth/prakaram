@@ -61,7 +61,7 @@ Cloudflare Pages is legacy. The frontend ships as a Worker that serves `dist/` t
 2. Build command: `bun install --frozen-lockfile && bun run build`
 3. Deploy command: `bunx wrangler deploy`. Build cache is enabled on the Workers project.
 4. Production branch: `main`. Each push to it builds and deploys.
-5. No environment variables are needed for the frontend.
+5. No environment variables are needed for the frontend. The build computes the vendored-sources jsDelivr pin from the last commit touching `sources/` (see §4a); set `VITE_SOURCES_PIN` only to override it.
 6. **PR previews.** The empty `"previews": {}` block in `wrangler.jsonc` makes Cloudflare build a preview for each branch and pull request. The preview URL is `https://<branch>-prakaram.sushruth-sastry.workers.dev`, and the Cloudflare bot comments it on the PR. Production is `main` only.
 
 Before every push to `main`, check that CI passed (see §5).
@@ -143,9 +143,7 @@ The Koshah wiki is built from the documents in `src/data`. Nothing is stored sep
    - `related`: ids of other documents, shown as Related articles.
    - `usage`: when the text is chanted.
    - `kind`, `parts`, `media`: see Declaring media, and compositions.
-3. Register the file in two places in `src/data/index.ts`:
-   - Add the document to `ALL_SUKTAMS`. Without this the document has no article.
-   - Add its file name to `SUKTA_FILE`, keyed by the document id. The article's [edit] and history links use it. Without it they point at `<id>.json`, which is wrong if the file is named differently.
+3. Nothing is bundled any more: a source lives under `sources/` (see Vendored sources below), and `src/data/index.ts` keeps only the runtime registry (`ALL_SUKTAMS`/`SUKTA_MAP`) that the loader fills. The article's [edit] and history links come from `metadata.remoteUrl` (the pinned upstream); only a document with neither `remoteUrl` nor a `SUKTA_FILE` entry falls back to `src/data/<id>.json`.
 4. Optionally add it to a prakara in `src/data/defaultPrakaras.ts`, as an item with `type: 'sukta_ref'` and `suktaId`. Set `sectionId` to take one section only.
 
 ### Vendored sources (`sources/`)
@@ -167,7 +165,7 @@ bun run sources:refresh
 
 `scripts/sources/refresh.ts` globs `scripts/sources/generators/*.ts`, runs each generator (each fetches its upstream, parses, attaches `metadata.provenance` and writes its own `sources/<docId>.json`), then writes `sources/manifest.json` with every file's `sha256` and provenance. There is no proxy: the build-time fetch is server-side and unrestricted. `scripts/sources/manifest.test.ts` guards the manifest against `VENDORED_SOURCES` and the files on disk (skipped until the manifest exists).
 
-**Pin step.** `src/services/vendored.ts` reads `sources/` from jsDelivr at `SOURCES_PIN` (dev serves the same path from the repo root). Commit the regenerated `sources/`, then set `SOURCES_PIN` to that commit's sha; it stays `'local'` until then. Keep `src/data/vendoredSources.ts` in step with the manifest (an id, its file name and its label).
+**Pin step.** `src/services/vendored.ts` reads `sources/` from jsDelivr at `SOURCES_PIN` (dev serves the same path from the repo root). The pin is **computed at build time**: `vite.config.ts` uses the last commit that touched `sources/`, so a refresh needs only commit + deploy — no manual bump. `VITE_SOURCES_PIN` overrides it (for example in CI); if git history is unavailable the build falls back to its own commit (`WORKERS_CI_COMMIT_SHA` / `CF_PAGES_COMMIT_SHA`), then `'local'`. Keep `src/data/vendoredSources.ts` in step with the manifest (an id, its file name and its label).
 
 ### Keeping pada numbers stable (nirdeśa)
 
@@ -201,7 +199,7 @@ A source (the default) owns its text, and its sections are the parts others can 
 }
 ```
 
-Register it in `ALL_SUKTAMS` and `SUKTA_FILE` like any document (or add a default prakara, which is derived into a composition for you). Referenced ids must exist; cycles and missing ids are skipped silently. The source's page then lists it under Used in.
+Add a composition as a default prakara in `src/data/defaultPrakaras.ts`, which is derived into a composition for you. Referenced ids must exist; cycles and missing ids are skipped silently. The source's page then lists it under Used in.
 
 ### Editing an existing article
 
@@ -228,14 +226,6 @@ bunx tsc --noEmit && bun test && bun run build
 ```
 
 Once merged, the wiki updates on the next deployment (section 2.A).
-
-### Licence caution: Vignanam text
-
-`src/data/rudramNamakam.json` and `src/data/rudramChamakam.json` (Sri Rudram, Namakam and Chamakam) are converted from Vignanam's Kannada-script text. **Permission to reuse that text has not been confirmed** (THIRD_PARTY_NOTICES.md).
-
-- Keep both documents at `status: "draft"` and keep the licence note. The wiki shows a notice under their titles while either holds.
-- On 2026-10-13 the maintainer decided to reuse Vignanam as the sourcing source for further texts (`scripts/vignanamToDocument.ts` fetches their Devanagari pages) and to open a discussion with Vignanam (contact@vignanam.org) seeking written permission and offering Prakaram's chanting features to them. Record the outcome in THIRD_PARTY_NOTICES.md when the discussion concludes.
-- Do not promote the status or remove the note until permission is confirmed in writing.
 
 ### Converting Kannada-script text
 
@@ -292,7 +282,7 @@ bun run build
 
 **Measured times** (local, bun 1.4.2, fresh clone): install 3.4 s cold, 0.24 s warm; `tsc` 2.9 s; `bun test` 0.1 s; build 1.6 s; `wrangler deploy --dry-run` 2.0 s warm, 4.4 s cold. CI's check job took about 15 s before the Bun package cache was added. The real Cloudflare upload and queue time were not measured.
 
-**Current numbers** (last run, bun 1.4.2): 315 tests pass in 33 files (about 105 ms). `bun run build` takes about 0.6 s and gives a JS bundle of 332.16 kB (103.05 kB gzipped) and CSS of 32.89 kB (7.35 kB gzipped). The JS is above the 220 KB target in `AGENTS.md` §4 (`origin/main` was 273.50 kB, also above it); the parsers moved to `scripts/sources/` are not in it.
+**Current numbers** (last run, bun 1.4.2): 335 tests pass in 36 files (about 230 ms). `bun run build` takes about 0.4 s and gives a JS bundle of about 224 kB (about 77 kB gzipped). Removing the bundled corpus shrank the JS from 332.16 kB; it is still just above the 220 KB target in `AGENTS.md` §4 (the parsers moved to `scripts/sources/` are not in it).
 
 **Shipped recently:** the Koshah wiki (git-backed articles at hash routes, sources and compositions, per-article media, Used in backlinks, Follow wording, My prakaram basket and Special:Compose, the player's header on wiki pages, one Sanskrit renderer with a guard test); Auto (cadence) off by default; a monochrome PWA icon for Android themed icons; PR previews; installable PWA (manifest, icons, production-only service worker); the Phosphor flame outline with its gradient, with a random-walk flicker and sway (off under reduced motion); a taller cadence strip and flyouts that fade out below their panels; pause and the current line's remaining time persist across reloads; slate-blue accent with a yellow-first spectrum on switches and active words; the Prakaram rename; a GitHub link in settings.
 
@@ -300,7 +290,7 @@ bun run build
 
 Done this session:
 
-* Wiki and library: Koshah wiki, compositions, My prakaram and Compose; nirdeśa addresses with ranges and a verse (padya) step; citations in words; glossary hovers (43 terms); one Sanskrit renderer; Durga Sūktam is in the wiki (`durga-suktam`, Ramakrishna Math Saswara text, not yet re-sourced).
+* Wiki and library: Koshah wiki, compositions, My prakaram and Compose; nirdeśa addresses with ranges and a verse (padya) step; citations in words; glossary hovers (43 terms); one Sanskrit renderer; Durga Sūktam is in the wiki as part of the Taittirīya Āraṇyaka source (`taittiriya-aranyaka-10`).
 * Player: smooth focus; quiet **ṛk** numbers (ऋक्, the UI word for the verse unit; code keeps "padya" and the `p<n>` address step) above the first line of each verse where the text prints its own numerals, and **anuvāka N** headings in sources with several sections (`chunk.section`, `chunk.padya`, set in `getFlattenedChunks`, kept through the phrase split). Namakam and Chamakam print only the anuvāka numeral, so they get headings and no ṛk labels, by design.
 * Cadence: every pada rests 1 mātrā at its end (replaced by a printed daṇḍa, so pauses never stack); a full letter with the double svarita is a dvimātra; half letters are beats of their own (½ bare, 1 with a swara, 2 with the double svarita). Not yet judged by ear: please read a few conjunct-heavy lines (the Namakam) and say whether the pacing feels right; the half-mātrā figure is easy to tune.
 * Parāyaṇam room: flyout, generated name, copy and another-name buttons. Never tested end to end (trackers are unreachable from the sandbox): create a room on one phone and join from another.
@@ -308,10 +298,10 @@ Done this session:
 
 Next, by front:
 
-* **Vedas as sources (blocked on reading real scans).** The sandbox cannot reach archive.org, Wikimedia, Wikisource or Google Books, so no agent here can read the editions; allowing `archive.org`, `*.archive.org`, `upload.wikimedia.org`, `commons.wikimedia.org` and `en.wikisource.org` under the environment's Network access is the unblock. The owner tried Gemini ("Spark") with links and a target-format block (JSON shape as in §4a: one document per sūkta, sections as the edition's own divisions, one chunk per printed line, verse numerals kept as printed, accents `॒ ॑ ᳚`, plus a `review.md` of every doubtful mark). Pilot output (`rigveda-1-1`, `ta-10-1`) was not imported: the Durga verse 3 second line was wrong (`भवा॑ नः श॒ंयोर्वि॒तोश्च॒ यन्तो॑:` against the known `भवा॑ तो॒काय॒ तन॑याय॒ शंयोः`), which shows it was written from memory, not read from the scan; there were ASCII colons (`:`) instead of the visarga `ः`, a stray accent in `वीरव॑त्त॑मम्`, a mark before an anusvāra, one `ꣳ`; the placement `prapāṭhaka 10, anuvāka 1` was unverified; and the review file's explanations read as invented. Next: attach the PDFs to the model directly (links are not enough) and ask it to quote the printed first line and page number as proof, or run the transcription from a session that can fetch the scans (the planned workflow: fetch, quality check, per-page vision transcription, a second independent witness, a diff, then a human check of accents). Any import must pass a mechanical check first: NFC, no ASCII colon, accent after the vowel sign and before the anusvāra, section and chunk numbering without gaps, nothing printed that is not on the page. Start with what the wiki already has (Namakam, Chamakam, the Āraṇyaka sūktas) so the new text can be diffed against the old, then replace the Vignanam-derived Rudram text.
+* **Vedas as sources (blocked on reading real scans).** The sandbox cannot reach archive.org, Wikimedia, Wikisource or Google Books, so no agent here can read the editions; allowing `archive.org`, `*.archive.org`, `upload.wikimedia.org`, `commons.wikimedia.org` and `en.wikisource.org` under the environment's Network access is the unblock. The owner tried Gemini ("Spark") with links and a target-format block (JSON shape as in §4a: one document per sūkta, sections as the edition's own divisions, one chunk per printed line, verse numerals kept as printed, accents `॒ ॑ ᳚`, plus a `review.md` of every doubtful mark). Pilot output (`rigveda-1-1`, `ta-10-1`) was not imported: the Durga verse 3 second line was wrong (`भवा॑ नः श॒ंयोर्वि॒तोश्च॒ यन्तो॑:` against the known `भवा॑ तो॒काय॒ तन॑याय॒ शंयोः`), which shows it was written from memory, not read from the scan; there were ASCII colons (`:`) instead of the visarga `ः`, a stray accent in `वीरव॑त्त॑मम्`, a mark before an anusvāra, one `ꣳ`; the placement `prapāṭhaka 10, anuvāka 1` was unverified; and the review file's explanations read as invented. Next: attach the PDFs to the model directly (links are not enough) and ask it to quote the printed first line and page number as proof, or run the transcription from a session that can fetch the scans (the planned workflow: fetch, quality check, per-page vision transcription, a second independent witness, a diff, then a human check of accents). Any import must pass a mechanical check first: NFC, no ASCII colon, accent after the vowel sign and before the anusvāra, section and chunk numbering without gaps, nothing printed that is not on the page. Start with what the wiki already has (Namakam, Chamakam, the Āraṇyaka sūktas) so the new text can be diffed against the old, then replace the live Rudram text (`taittiriya-samhita-4`).
 * **Readings (pāṭhāntara) and audio** are discussion items only: the owner has not decided either. Readings: steps that carry readings, then an editing UI. Audio: what it means (own, public-domain or user recordings) and whether it drives follow. Do not build them until asked.
 * **Verification still owed by the owner:** the pace by ear; the room with two devices; the Contents list on a phone (sections 11 and 12); the monochrome PWA icon; the glossary glosses for the Veda names, divisions and mātrā; writing to IGNCA for a CC0 or public-domain release.
-* **Small rough edges:** a ṛk link that does not resolve (for example `sri-suktam/1.p99`) scrolls to its section with no "not in this text" note; the older UI-review items below; the Vignanam permission question.
+* **Small rough edges:** a ṛk link that does not resolve (for example `rigveda-khila-sri/1.p99`) scrolls to its section with no "not in this text" note; the older UI-review items below.
 * **Later:** the `color_scheme_dark` manifest member, when Chrome ships it, fixes the bottom bar for both themes.
 
 **Open items** (from the UI review; none is in progress):
@@ -324,11 +314,9 @@ Next, by front:
 * No safe-area handling (`env(safe-area-inset-*)`), and the back-to-line arrow sits over verse text.
 * Desktop cadence strip is not aligned to the 960 px reading column.
 * The script selector's style differs from the other controls.
-* `PasskeyAuthModal.tsx` is unmounted and calls hooks after an early return. Delete it or fix it.
 * The back-to-line arrow is green, the only green in the UI. Confirm or change it.
 * Known gaps in §6 still apply: the passkey verify endpoints are not implemented, and the Worker config has a placeholder D1 ID and a committed `JWT_SECRET`.
-* Confirm permission to reuse the Vignanam text of the Sri Rudram (Namakam and Chamakam), in writing, or replace it with text under a stated open licence. Until then both documents stay `draft` (see `THIRD_PARTY_NOTICES.md`).
-* Proofread Rudram Namakam and Chamakam against a printed edition, then set `metadata.status` to `proofread`. The status stays `draft` until the permission above is settled.
+* Proofread the live Taittirīya Saṃhitā text (the Rudram Namakam and Chamakam, `taittiriya-samhita-4`) against a printed edition, then set `metadata.status` to `proofread`.
 * Bundle size: the JS is about 322 kB against the 220 KB target (and the build is 1.3 s against 1 s). Trim or raise the target in `AGENTS.md` §4.
 * Wiki parts are whole sections only. Pada-range and padya parts (`docId/n` plus a span) are not supported.
 * Vedas scouting result (2026-10-13): no machine-readable accented Devanagari text that is public domain or CC0 was found, and every scan host (archive.org, HathiTrust, Google Books, Wikisource, GRETIL, TITUS, Sanskrit Documents) is unreachable from the agent sandbox; only GitHub is reachable. Incompatible with our belief and not to be copied: DharmicData (ODbL), GRETIL and the Sanskrit Library (non-commercial), VedaWeb (CC-BY or CC-BY-SA), hvram1 (GPL), Sanskrit Documents (personal use). DharmicData may be used only as a read-only diff checker. Public-domain editions to download as scans: Rigveda: Max Müller 1873 Saṃhitā and Padapāṭha (or 1849-74 with Sāyaṇa), Aufrecht 1877 (Roman witness). Yajurveda: Ānandāśrama Taittirīya Saṃhitā and Āraṇyaka with Sāyaṇa (status to confirm), Weber's Taittirīya Saṃhitā 1871-72, Weber's Vājasaneyi Saṃhitā 1849-52, Mitra's Taittirīya Brāhmaṇa 1859-70. Sāmaveda: Satyavrata Sāmaśramī 1871-78, Benfey 1848. Atharvaveda: Roth and Whitney 1856, Pandit 1895-98, Whitney and Lanman 1905 (counts only). Method: vision transcription per page, a second independent witness, diff by sūkta, count checks, human check of the accent marks. Another route: ask IGNCA (Vedic Heritage Portal) in writing for a public-domain or CC0 release of its text.

@@ -76,7 +76,7 @@
 * **Zero-Server Link Sharing:** Custom Prakaras and cadence configurations compress into native URL fragments (`#p=...`) using `CompressionStream('deflate-raw')`. URL fragments are never sent to servers (100% client-side privacy).
 
 ### 5. Accounts (Hidden) & Cloudflare Worker
-* **Passkey accounts are hidden.** The UI entry point is not mounted. The code stays in `src/services/passkeyAuth.ts` and `src/components/PasskeyAuthModal.tsx` for the proper build later.
+* **Passkey accounts are hidden.** The UI entry point is not mounted, and the dead client UI/service (`PasskeyAuthModal.tsx`, `PasskeyViews.tsx`, `passkeyAuth.ts`) has been removed. The Worker endpoints remain for the proper build later.
 * **Worker verify endpoints fail closed.** `/api/auth/*/verify` returns `501` until WebAuthn verification is implemented in `worker/`.
 * **Cloudflare Workers + D1:** the API skeleton and schema live in `worker/`.
 

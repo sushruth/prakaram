@@ -1,7 +1,11 @@
 import { ArticleTitle } from './Sanskrit';
 import { Term } from './Term';
-import { LIVE_SOURCES } from '../data/liveSources';
-import { articlesForName, listArticles, listCategories, type WikiArticle } from '../services/wiki';
+import { LIVE_SOURCES, liveSourceLabel } from '../data/liveSources';
+import { DEFAULT_PRAKARAS } from '../data';
+import { TOP_BROWSED, type HomePick } from '../data/topBrowsed';
+import { seasonAt } from '../data/seasonal';
+import { articlesForName, getArticle, listArticles, listCategories, type WikiArticle } from '../services/wiki';
+import { useRecentStore } from '../stores/useRecentStore';
 import { COMPOSE_HASH, articleHash, categoryHash } from '../services/wikiNav';
 
 const DAY_MS = 86_400_000;
@@ -16,15 +20,35 @@ function tally(articles: WikiArticle[], field: (a: WikiArticle) => string | unde
   return [...counts].map(([name]) => ({ name, count: articlesForName(name).length })).sort((x, y) => x.name.localeCompare(y.name));
 }
 
+/** A label for an id the home links to: a loaded article's English title, else the live source's label, else the id. */
+const labelFor = (id: string) => getArticle(id)?.title.english ?? liveSourceLabel(id) ?? id;
+
+/** A plain text list of links to articles. */
+function PickList({ picks }: { picks: HomePick[] }) {
+  return (
+    <ul className="wiki-list">
+      {picks.map((p) => (
+        <li key={p.id}>
+          <a href={articleHash(p.id)}>{p.label}</a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * The front page. Order is by what a reader is most likely to want first: the articles they opened
+ * (Recently used), then a seasonal placeholder, a static "top browsed" placeholder, then the browse
+ * blocks. Counts describe the catalog the home offers, not the (empty until loaded) bundled corpus.
+ */
 export function WikiHome() {
   const all = listArticles();
   const articles = all.filter((a) => a.kind === 'source');
   const categories = listCategories();
-  const lines = articles.reduce((n, a) => n + a.lines, 0);
+  const recentIds = useRecentStore((s) => s.ids);
+  const season = seasonAt(new Date());
   // Rotates by day (UTC). Same article all day, the next one tomorrow.
   const featured = articles[Math.floor(Date.now() / DAY_MS) % Math.max(articles.length, 1)];
-  // ponytail: no date on articles, so "recent" is the last five in corpus order.
-  const recent = articles.slice(-5).reverse();
   const vedas = tally(articles, (a) => a.veda);
   const deities = tally(articles, (a) => a.deity);
 
@@ -32,11 +56,29 @@ export function WikiHome() {
     <div className="wiki-page">
       <h1 className="wiki-welcome"><Term id="koshah">Koshah</Term>, the free, open library of Vedic chants with swara.</h1>
       <p className="wiki-figures">
-        <span><b>{articles.length}</b> <span className="wiki-muted">articles</span></span>
-        <span><b>{lines}</b> <span className="wiki-muted"><Term id="pada">padas</Term></span></span>
+        <span><b>{LIVE_SOURCES.length}</b> <span className="wiki-muted">live sources</span></span>
+        <span><b>{DEFAULT_PRAKARAS.length}</b> <span className="wiki-muted">compositions</span></span>
       </p>
 
       <div className="wiki-grid">
+        {recentIds.length > 0 && (
+          <section className="wiki-block">
+            <h2>Recently used</h2>
+            <PickList picks={recentIds.map((id) => ({ id, label: labelFor(id) }))} />
+          </section>
+        )}
+
+        <section className="wiki-block">
+          <h2>Season / festival</h2>
+          <p className="wiki-muted">{season.name}</p>
+          <PickList picks={season.picks} />
+        </section>
+
+        <section className="wiki-block">
+          <h2>Top browsed</h2>
+          <PickList picks={TOP_BROWSED} />
+        </section>
+
         {featured && (
           <section className="wiki-block wiki-featured">
             <h2>Featured article</h2>
@@ -87,17 +129,6 @@ export function WikiHome() {
             {categories.map((c) => (
               <li key={c.name}>
                 <a href={categoryHash(c.name)}>{c.name}</a> <span className="wiki-muted">{c.count}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="wiki-block">
-          <h2>Recently added</h2>
-          <ul className="wiki-list">
-            {recent.map((a) => (
-              <li key={a.id}>
-                <a href={articleHash(a.id)}><ArticleTitle title={a.title} /></a>
               </li>
             ))}
           </ul>

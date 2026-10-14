@@ -19,7 +19,14 @@ const PARSER = 'taittiriya@1';
 const KANDA = 4;
 const REVID = 417990;
 const PAGE = 'तैत्तिरीयसंहिता-१-४';
-const LICENSE = 'CC BY-SA 4.0 — Wikisource contributors, https://creativecommons.org/licenses/by-sa/4.0/';
+/**
+ * The CC BY-SA 4.0 licence string for the Wikisource-derived file, verbatim from
+ * docs/licence-compliance.md §2.2. It names the source and its revision, states the modification and the
+ * ShareAlike, and gives the licence URI, and is set on `metadata.license` too so it stays equal to
+ * `provenance.license`.
+ */
+const LICENSE =
+  'CC BY-SA 4.0 — Adapted from "तैत्तिरीयसंहिता-१-४", Sanskrit Wikisource, revid 417990 (Wikisource contributors), used and licensed under CC BY-SA 4.0. Licence text: https://creativecommons.org/licenses/by-sa/4.0/';
 const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');
 
 /** The MediaWiki API query for one pinned revision's content. */
@@ -58,7 +65,7 @@ export function taittiriyaProvenance(kanda: number, retrievedAt: string): Omit<S
     retrievedAt,
     parser: PARSER,
     license: LICENSE,
-    attribution: `Taittirīya Saṃhitā, kāṇḍa ${kanda} — Wikisource (CC BY-SA 4.0)`,
+    attribution: `Taittirīya Saṃhitā, kāṇḍa ${kanda} — Wikisource contributors, "तैत्तिरीयसंहिता-१-४" revid ${REVID}, CC BY-SA 4.0`,
   };
 }
 

@@ -1,7 +1,29 @@
-import { describe, it, expect } from 'bun:test';
+import { afterAll, describe, it, expect } from 'bun:test';
 import { encodePrakaraToUrlHash, decodePrakaraFromUrlHash } from './urlCodec';
 import { Prakara } from '../types/mantra';
 import { normalizePrakara } from './koshah';
+import { ALL_SUKTAMS, SUKTA_MAP, registerDocument } from '../data';
+import type { MantraDocument } from '../types/mantra';
+
+// A fixture standing in for the live corpus: nothing is bundled in `src/data` any more, so the persistence
+// migration (which resolves a nirdeśa against the default corpus) gets this registered for the file.
+const rudra: MantraDocument = {
+  id: 'rudra-demo',
+  title: { sanskrit: 'रुद्रम्', transliteration: 'Rudram', english: 'Rudram' },
+  metadata: { source: 'test' },
+  sections: [1, 2, 3].map((n) => ({
+    id: `rudra-demo-${n}`,
+    title: `Anuvaka ${n}`,
+    sectionNumber: n,
+    chunks: Array.from({ length: 5 }, (_, j) => ({ id: `rudra-demo-${n}-${j + 1}`, chunkNumber: j + 1, sanskrit: 'अ' })),
+  })),
+};
+registerDocument(rudra);
+afterAll(() => {
+  const i = ALL_SUKTAMS.findIndex((d) => d.id === rudra.id);
+  if (i >= 0) ALL_SUKTAMS.splice(i, 1);
+  SUKTA_MAP.delete(rudra.id);
+});
 
 describe('Prakara URL Codec', () => {
   const testPrakara: Prakara = {
@@ -11,7 +33,7 @@ describe('Prakara URL Codec', () => {
     preferredBpm: 84,
     createdTimestamp: 1700000000,
     items: [
-      { id: 'item-1', type: 'sukta_ref', suktaId: 'purusha-suktam' },
+      { id: 'item-1', type: 'sukta_ref', suktaId: 'demo-source' },
       { id: 'item-2', type: 'vakya', customTitle: 'Dhyanam', customText: 'शान्ताकारं भुजगशयनम्' }
     ]
   };
@@ -37,13 +59,13 @@ describe('Prakara persistence shape', () => {
     const old: Prakara = {
       id: 'old', title: 't', description: '', createdTimestamp: 1,
       items: [
-        { id: 'a', type: 'sukta_ref', suktaId: 'rudram-namakam', sectionId: 'rudram-namakam-3' },
-        { id: 'b', type: 'sukta_ref', suktaId: 'rudram-namakam', nirdesa: 'rudram-namakam/2.3-2.5' },
-        { id: 'c', type: 'sukta_ref', suktaId: 'rudram-namakam', nirdesa: 'bad//' },
+        { id: 'a', type: 'sukta_ref', suktaId: 'rudra-demo', sectionId: 'rudra-demo-3' },
+        { id: 'b', type: 'sukta_ref', suktaId: 'rudra-demo', nirdesa: 'rudra-demo/2.3-2.5' },
+        { id: 'c', type: 'sukta_ref', suktaId: 'rudra-demo', nirdesa: 'bad//' },
       ],
     };
     const back = await decodePrakaraFromUrlHash(await encodePrakaraToUrlHash(old));
-    expect(back?.items.map((i) => [i.sectionId, i.nirdesa])).toEqual([[undefined, 'rudram-namakam/3'], [undefined, 'rudram-namakam/2.3-5'], [undefined, undefined]]);
+    expect(back?.items.map((i) => [i.sectionId, i.nirdesa])).toEqual([[undefined, 'rudra-demo/3'], [undefined, 'rudra-demo/2.3-5'], [undefined, undefined]]);
   });
 
   it('rejects what is not a prakara', () => {

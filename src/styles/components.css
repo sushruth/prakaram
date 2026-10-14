@@ -348,11 +348,38 @@
 }
 
 @layer components {
-  /* Live flame. FlameMark's random walk sets --flame-glow, --flame-sway and --flame-squash on the svg. */
+  /* Live flame. FlameMark's random walk sets --flame-glow, --flame-sway, --flame-squash and
+     --flame-burst on the wrapper (.header-flame); the svg inherits them for its own transform. */
   .header-flame {
+    position: relative;
+    isolation: isolate;
     display: inline-flex;
     flex-shrink: 0;
     color: var(--flame-tip);
+  }
+
+  /* The room-light halo, drawn inside the glyph's own SVG (FlameMark) so it is concentric with the
+     flame by construction and inherits the icon's transform. It dances with the same random walk. */
+  .flame-halo {
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: calc(var(--flame-halo-alpha, 0.18) * var(--flame-glow, 1) * (1 + 0.5 * var(--flame-burst, 0)));
+    transform: translate(calc(var(--flame-sway, 0) * 6px), calc(var(--flame-sway, 0) * -4px))
+      scale(calc(1 + 0.1 * var(--flame-glow, 1) + 0.08 * var(--flame-burst, 0)));
+  }
+
+  /* The halo's gradient stops (theme-aware); the <radialGradient> itself is in FlameMark. */
+  .flame-halo-from {
+    stop-color: var(--flame-mid);
+    stop-opacity: 0.65;
+  }
+  .flame-halo-mid {
+    stop-color: var(--flame-tip);
+    stop-opacity: 0.3;
+  }
+  .flame-halo-to {
+    stop-color: var(--flame-tip);
+    stop-opacity: 0;
   }
 
   .flame-mark {

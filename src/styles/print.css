@@ -26,6 +26,7 @@
   }
 
   /* Chrome, controls and transient panels do not belong on paper. */
+  .flame-room-light,
   .chrome,
   .cadence-strip,
   .locate-line,
