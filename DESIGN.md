@@ -95,7 +95,7 @@ The reader is a page, not a set of cards.
 - Verse lines have 0.2 rem padding and 0.45 rem between lines. Do not add card padding or large gaps.
 - Verse text line-height is 1.85.
 - **Wrap** (on by default) wraps long lines. Off, each line stays on one row and scrolls sideways.
-- **Split** (off by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
+- **Split** (on by default) divides each verse at danda (`।`, `॥`), then breaks any phrase longer than 1.5× the median phrase length at the word nearest the median. The split happens in the data layer, so the active line, tap cadence, and auto-progress all agree with what is on screen.
 - The instruction label appears on the first phrase of an instruction only.
 
 ## 5e. Header, Title and Flyouts
@@ -211,7 +211,7 @@ Boxes take the colour of the line's text: `--text-primary` for mantra, `--shloka
 
 - **Hold** (touch the active line). Pauses auto-advance at once, and releasing resumes with the time that was left. It is a relearn signal: the time held stays in the line's reading time, so a long hold teaches the learner that the line is slower. In Manual and once learned, the touch does not advance the line. In Learn, a tap on the active line still counts as a learning tap.
 - **Pause** (the minimap). A deliberate pause, to come back to later. It stops the line clock, so the time paused adds nothing to learning.
-- **Away.** When the tab is hidden or the window loses focus, auto-advance and the line clock stop, and resume on return. This is the "Pause when away" setting, on by default.
+- **Away.** When the tab is hidden or the window loses focus, auto-advance and the line clock stop, and resume on return. This is the "Pause when away" setting, off by default.
 
 **Learning samples.** While Learn is active (learning, or learned), each line's active time is a sample: the time it was on screen, excluding pauses and away time, including holds. Every advance of one line gives a sample: a learning tap, a timer advance, Next, or a click on the next line. A jump of more than one line gives none. Guests give none.
 - Holding and away are not saved.

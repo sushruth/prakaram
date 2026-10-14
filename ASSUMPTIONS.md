@@ -20,7 +20,7 @@ Vedic verses are not fixed-word-count prose; they follow metrical rules based on
 * **Guru (दीर्घ / Long vowel, or short vowel followed by Anusvāra, Visarga, or Conjunct consonant / Saṃyoga)** = $2\text{ mātrās}$ ($M = 2$)
 * **Pluta (प्लुत / Extended vowel)** = $3\text{ mātrās}$ ($M = 3$)
 * **Daṇḍa Caesura (`।`)** = $2.0\text{ mātrās}$ pause; **Double Daṇḍa (`॥`)** = $3.5\text{ mātrās}$ pause. Only Devanagari dandas count. Verse numbers and Latin text add nothing.
-* **Vedic sign `ꣳ`** is pronounced on its own and takes one mātrā. In Kannada, Telugu, Malayalam, Tamil and IAST it is written `ग्ं` (and `व्ँ` as `व्ं`) because stock fonts have no glyph for it; the setting "Spell ꣳ as ग्ं" turns that off.
+* **Vedic sign `ꣳ`** is pronounced on its own and takes one mātrā. It is shown as the source writes it by default. The setting "Spell ꣳ as ग्ं" writes it (and `ꣴ`) as `ग्ं`, and `व्ँ` as `व्ं`, in Kannada, Telugu, Malayalam, Tamil and IAST, for fonts that have no glyph for it.
 
 **Assumption on Cadence Learning:**
 * Naive tap-tempo (milliseconds per line) fails because verse lengths vary widely.

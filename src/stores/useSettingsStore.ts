@@ -34,13 +34,13 @@ export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
       theme: 'system',
-      script: 'devanagari',
+      script: 'kannada',
       fontSize: FONT_SIZE.fallback,
       wrapLines: true,
-      splitLines: false,
+      splitLines: true,
       showTranslation: false,
-      pauseWhenAway: true,
-      printedNasals: true,
+      pauseWhenAway: false,
+      printedNasals: false,
       setTheme: (theme) => set({ theme }),
       setScript: (script) => set({ script }),
       setFontSize: (size) => set({ fontSize: clampNumber(size, FONT_SIZE.min, FONT_SIZE.max, FONT_SIZE.fallback) }),
