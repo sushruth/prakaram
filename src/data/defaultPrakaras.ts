@@ -2,6 +2,79 @@ import { Prakara } from '../types/mantra';
 
 export const DEFAULT_PRAKARAS: Prakara[] = [
   {
+    id: 'nava-sukta',
+    title: 'रुद्र-सूक्त पारायणम् (Rudra & Sukta Parayanam)',
+    author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
+    description: 'Ganesha, Rudra Praśna, Śivopāsana, Durga, Purusha, Narayana, Vishnu and Sri Suktams',
+    preferredBpm: 60,
+    createdTimestamp: Date.now(),
+    items: [
+      {
+        id: 'ns-1',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-2',
+        nirdesa: 'rigveda-2/23.p1',
+        customTitle: 'Ganesha Suktam'
+      },
+      {
+        id: 'ns-2',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/48.1-58.13',
+        customTitle: 'Rudra Praśna · Namakam'
+      },
+      {
+        id: 'ns-3',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/68.1-82.24',
+        customTitle: 'Rudra Praśna · Chamakam'
+      },
+      {
+        id: 'ns-4',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/16.1-25.3',
+        customTitle: 'Śivopāsana Mantrāḥ'
+      },
+      {
+        id: 'ns-5',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/2',
+        customTitle: 'Durga Suktam'
+      },
+      {
+        id: 'ns-6',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-3',
+        nirdesa: 'taittiriya-aranyaka-3/12.1-13.26',
+        customTitle: 'Purusha Suktam'
+      },
+      {
+        id: 'ns-7',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/13',
+        customTitle: 'Narayana Suktam'
+      },
+      {
+        id: 'ns-8',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-1',
+        nirdesa: 'rigveda-1/154',
+        customTitle: 'Vishnu Suktam'
+      },
+      {
+        id: 'ns-9',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-khila-sri',
+        nirdesa: 'rigveda-khila-sri/1',
+        customTitle: 'Sri Suktam'
+      }
+    ]
+  },
+  {
     id: 'maha-prakaram',
     title: 'महापारायणम् (Maha Parayanam)',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
