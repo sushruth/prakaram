@@ -3,6 +3,7 @@ import { useMantraStore } from '../stores/useMantraStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useRoomStore } from '../stores/useRoomStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
+import { logLine } from './paceLog';
 
 // Times each line while Learn is active and sends its active time to the learner.
 // A deliberate pause (the ring) and away time are excluded. Holds are included: a hold is a relearn signal.
@@ -43,6 +44,7 @@ function onLineChange(prev: number, next: number) {
     const line = usePrakaraStore.getState().getFlattenedChunks()[prev];
     const ms = accumMs + (since !== null ? Date.now() - since : 0);
     if (line) useCadenceStore.getState().learnLine(line.id, line.sanskrit, ms);
+    if (line && useSettingsStore.getState().paceDebug) logLine(prev, line, ms);
   }
   // A jump, or a first line, starts a new clock; it is not a reading of the line left.
   started = active;

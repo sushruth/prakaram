@@ -14,6 +14,7 @@ import {
   transition,
 } from '../services/cadenceMachine';
 import { boolOr, clampNumber, oneOf } from './persistence';
+import { useSettingsStore } from './useSettingsStore';
 
 export { LEARN_LINES, isAutoRunning, isLearning, modeOf };
 export type { CadenceMode, CadencePhase };
@@ -53,7 +54,8 @@ export const useCadenceStore = create<CadenceState>()(
         engine,
         send,
         setMode: (mode) => send({ type: 'setMode', mode }),
-        tap: (chunkId, chunkSanskrit) => send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit }),
+        tap: (chunkId, chunkSanskrit) =>
+          send({ type: 'tap', now: Date.now(), chunkId, chunkSanskrit, keepLearning: useSettingsStore.getState().paceDebug }),
         resetLearning: () => send({ type: 'reset' }),
         followHost: (on) => send({ type: on ? 'hostOn' : 'hostOff' }),
         togglePause: () => send({ type: 'togglePause' }),

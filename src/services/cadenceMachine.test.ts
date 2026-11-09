@@ -91,3 +91,10 @@ describe('cadence modes', () => {
     expect(transition(learn(), { type: 'hostOff' }).phase).toBe('waiting');
   });
 });
+
+it('keepLearning taps never engage', () => {
+  let s = transition(INITIAL_LEARNING, { type: 'setMode', mode: 'learn' });
+  for (let i = 0; i < LEARN_LINES + 3; i++)
+    s = transition(s, { type: 'tap', now: i, chunkId: 'c', chunkSanskrit: 'क', keepLearning: true });
+  expect(s.phase).toBe('measuring');
+});

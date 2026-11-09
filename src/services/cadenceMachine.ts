@@ -12,7 +12,7 @@ export interface LearningState {
 
 export type CadenceEvent =
   | { type: 'setMode'; mode: CadenceMode }
-  | { type: 'tap'; now: number; chunkId: string; chunkSanskrit: string }
+  | { type: 'tap'; now: number; chunkId: string; chunkSanskrit: string; keepLearning?: boolean }
   | { type: 'reset' }
   | { type: 'hostOn' }
   | { type: 'hostOff' }
@@ -42,7 +42,7 @@ export function transition(state: LearningState, event: CadenceEvent): LearningS
       if (!isLearning(state.phase)) return state;
       const learned = Math.min(LEARN_LINES, state.learnedLines + 1);
       return {
-        phase: learned >= LEARN_LINES ? 'engaged' : 'measuring',
+        phase: learned >= LEARN_LINES && !event.keepLearning ? 'engaged' : 'measuring',
         learnedLines: learned,
         firstTapAt: state.firstTapAt ?? event.now,
         paused: false,

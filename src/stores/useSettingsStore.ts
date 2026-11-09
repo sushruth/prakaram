@@ -17,6 +17,7 @@ export interface SettingsState {
   showTranslation: boolean;
   pauseWhenAway: boolean;
   printedNasals: boolean;
+  paceDebug: boolean;
   setTheme: (theme: AppTheme) => void;
   setScript: (script: TargetScript) => void;
   setFontSize: (size: number) => void;
@@ -25,6 +26,7 @@ export interface SettingsState {
   toggleShowTranslation: () => void;
   togglePauseWhenAway: () => void;
   togglePrintedNasals: () => void;
+  togglePaceDebug: () => void;
 }
 
 const THEME_IDS = THEMES.map((t) => t.id);
@@ -41,6 +43,7 @@ export const useSettingsStore = create<SettingsState>()(
       showTranslation: false,
       pauseWhenAway: false,
       printedNasals: false,
+      paceDebug: false,
       setTheme: (theme) => set({ theme }),
       setScript: (script) => set({ script }),
       setFontSize: (size) => set({ fontSize: clampNumber(size, FONT_SIZE.min, FONT_SIZE.max, FONT_SIZE.fallback) }),
@@ -49,6 +52,7 @@ export const useSettingsStore = create<SettingsState>()(
       toggleShowTranslation: () => set((s) => ({ showTranslation: !s.showTranslation })),
       togglePauseWhenAway: () => set((s) => ({ pauseWhenAway: !s.pauseWhenAway })),
       togglePrintedNasals: () => set((s) => ({ printedNasals: !s.printedNasals })),
+      togglePaceDebug: () => set((s) => ({ paceDebug: !s.paceDebug })),
     }),
     {
       name: 'prakaram-settings',
@@ -65,6 +69,7 @@ export const useSettingsStore = create<SettingsState>()(
           showTranslation: boolOr(p.showTranslation, current.showTranslation),
           pauseWhenAway: boolOr(p.pauseWhenAway, current.pauseWhenAway),
           printedNasals: boolOr(p.printedNasals, current.printedNasals),
+          paceDebug: boolOr(p.paceDebug, current.paceDebug),
         };
       },
     },

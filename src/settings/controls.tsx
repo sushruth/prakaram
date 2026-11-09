@@ -1,5 +1,9 @@
 import { FONT_SIZE, useSettingsStore } from '../stores/useSettingsStore';
 import { THEMES } from '../config/themes';
+import { useState } from 'preact/hooks';
+import { clearPaceLog, downloadPaceLog, paceLogSize } from '../services/paceLog';
+import { useCadenceStore } from '../stores/useCadenceStore';
+import { useMantraStore } from '../stores/useMantraStore';
 
 export function Switch({ checked, onToggle }: { checked: boolean; onToggle: () => void }) {
   return <button className="switch" role="switch" aria-checked={checked} onClick={onToggle} />;
@@ -37,6 +41,27 @@ export function PrintedNasalsSwitch() {
   const checked = useSettingsStore((s) => s.printedNasals);
   const onToggle = useSettingsStore((s) => s.togglePrintedNasals);
   return <Switch checked={checked} onToggle={onToggle} />;
+}
+
+export function PaceDebugControl() {
+  const checked = useSettingsStore((s) => s.paceDebug);
+  const toggle = useSettingsStore((s) => s.togglePaceDebug);
+  const [, rerender] = useState(0);
+  const onToggle = () => {
+    toggle();
+    clearPaceLog();
+    useCadenceStore.getState().resetLearning();
+  };
+  return (
+    <div className="stepper">
+      {checked && (
+        <button className="segment" onClick={() => { downloadPaceLog(useMantraStore.getState().prakaraId ?? 'none'); rerender((n) => n + 1); }}>
+          Download {paceLogSize()} lines
+        </button>
+      )}
+      <Switch checked={checked} onToggle={onToggle} />
+    </div>
+  );
 }
 
 export function SplitSwitch() {
