@@ -5,7 +5,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     id: 'nava-sukta',
     title: 'Sri Krishna Vrundavana Prayanam',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
-    description: 'As in the Saswara Veda Mantrah book. Vishnu Suktam and Narayanopanishat are not in the library yet.',
+    description: 'As in the Saswara Veda Mantraḥ book. Vishnu Suktam and Narayanopanishat are not in the library yet.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
     items: [
@@ -14,56 +14,56 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         type: 'sukta_ref',
         suktaId: 'rigveda-8',
         nirdesa: 'rigveda-8/81',
-        customTitle: 'Ganesha Suktam (1/3)'
+        customTitle: 'Ganesha Suktam · ā tū na indra'
       },
       {
         id: 'ns-2',
         type: 'sukta_ref',
         suktaId: 'rigveda-2',
         nirdesa: 'rigveda-2/23.p1',
-        customTitle: 'Ganesha Suktam (2/3)'
+        customTitle: 'Ganesha Suktam · gaṇānāṃ tvā'
       },
       {
         id: 'ns-3',
         type: 'sukta_ref',
         suktaId: 'rigveda-10',
         nirdesa: 'rigveda-10/112.p9-p10',
-        customTitle: 'Ganesha Suktam (3/3)'
+        customTitle: 'Ganesha Suktam · ni ṣu sīda'
       },
       {
         id: 'ns-4',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/48.1-58.13',
-        customTitle: 'Rudra Prashna (Namakam)'
+        customTitle: 'Rudra Praśna · Namakam'
       },
       {
         id: 'ns-5',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/68.1-82.24',
-        customTitle: 'Rudra Prashna (Chamakam)'
+        customTitle: 'Rudra Praśna · Chamakam'
       },
       {
         id: 'ns-6',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/16.1-25.3',
-        customTitle: 'Shivopasana Mantrah'
+        customTitle: 'Śivopāsana Mantrāḥ'
       },
       {
         id: 'ns-7',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/2',
-        customTitle: 'Durga Suktam (1/2)'
+        customTitle: 'Durga Suktam'
       },
       {
         id: 'ns-8',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/1.103-104',
-        customTitle: 'Durga Suktam (2/2)'
+        customTitle: 'Durga Gāyatrī'
       },
       {
         id: 'ns-9',
@@ -77,21 +77,21 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/13',
-        customTitle: 'Narayana Suktam (1/3)'
+        customTitle: 'Narayana Suktam'
       },
       {
         id: 'ns-11',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/23',
-        customTitle: 'Narayana Suktam (2/3)'
+        customTitle: 'Narayana Suktam · ṛtaṃ satyam'
       },
       {
         id: 'ns-12',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/1.96-97',
-        customTitle: 'Narayana Suktam (3/3)'
+        customTitle: 'Narayana Gāyatrī'
       },
       {
         id: 'ns-13',
