@@ -112,8 +112,10 @@ Every file — source, style, test, script — should be **around 180 lines**. A
 
 When editing or generating Vedic texts and transliteration logic:
 
-### 0. No hand-converted text
-* Never write text into code or `sources/` that an agent converted by hand from one script to another (IAST to Devanagari, a book scan to Devanagari, a paste in one script to another). Sanskrit enters the repo only through a generator that fetches and parses an upstream, and leaves it only through the transliteration engine. Sanskrit written by hand in code (titles, kriyā names, descriptions) is IAST with its diacritics, never Devanagari or another Indic script and never stripped to plain ASCII.
+### 0. Sanskrit in code is IAST; Indic script is the renderer's job
+* Any Sanskrit or Indic text written in code (titles, kriyā names, descriptions, tests, docs) is **always IAST with full diacritics** (`Śrī Kṛṣṇa Vṛndāvana Prayāṇam`). It is **never** in an Indic script (Devanagari, Kannada, Tamil, ...) and never stripped to plain ASCII. Turning it into the reader's script is always the renderer's job.
+* The owner types plain ASCII (`Sri Krishna`). An agent writes the IAST for it (`Śrī Kṛṣṇa`) and shows it to the owner before committing.
+* Never write text that an agent converted by hand from one script into another (a book scan, a paste, IAST into Devanagari). Source text enters the repo only through a generator that fetches and parses an upstream.
 
 ### A. Swara Preservation
 * **Never strip or replace Vedic cantillation marks**:
