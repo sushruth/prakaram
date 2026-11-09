@@ -5,68 +5,96 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     id: 'nava-sukta',
     title: 'रुद्र-सूक्त पारायणम् (Rudra & Sukta Parayanam)',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
-    description: 'Ganesha, Rudra Praśna, Śivopāsana, Durga, Purusha, Narayana, Vishnu and Sri Suktams',
+    description: 'As in the Saswara Veda Mantraḥ book. Vishnu Suktam and Narayanopanishat are not in the library yet.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
     items: [
       {
         id: 'ns-1',
         type: 'sukta_ref',
-        suktaId: 'rigveda-2',
-        nirdesa: 'rigveda-2/23.p1',
-        customTitle: 'Ganesha Suktam'
+        suktaId: 'rigveda-8',
+        nirdesa: 'rigveda-8/81',
+        customTitle: 'Ganesha Suktam · ā tū na indra'
       },
       {
         id: 'ns-2',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-2',
+        nirdesa: 'rigveda-2/23.p1',
+        customTitle: 'Ganesha Suktam · gaṇānāṃ tvā'
+      },
+      {
+        id: 'ns-3',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-10',
+        nirdesa: 'rigveda-10/112.p9-p10',
+        customTitle: 'Ganesha Suktam · ni ṣu sīda'
+      },
+      {
+        id: 'ns-4',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/48.1-58.13',
         customTitle: 'Rudra Praśna · Namakam'
       },
       {
-        id: 'ns-3',
+        id: 'ns-5',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/68.1-82.24',
         customTitle: 'Rudra Praśna · Chamakam'
       },
       {
-        id: 'ns-4',
+        id: 'ns-6',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/16.1-25.3',
         customTitle: 'Śivopāsana Mantrāḥ'
       },
       {
-        id: 'ns-5',
+        id: 'ns-7',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/2',
         customTitle: 'Durga Suktam'
       },
       {
-        id: 'ns-6',
+        id: 'ns-8',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/1.103-104',
+        customTitle: 'Durga Gāyatrī'
+      },
+      {
+        id: 'ns-9',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-3',
         nirdesa: 'taittiriya-aranyaka-3/12.1-13.26',
         customTitle: 'Purusha Suktam'
       },
       {
-        id: 'ns-7',
+        id: 'ns-10',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/13',
         customTitle: 'Narayana Suktam'
       },
       {
-        id: 'ns-8',
+        id: 'ns-11',
         type: 'sukta_ref',
-        suktaId: 'rigveda-1',
-        nirdesa: 'rigveda-1/154',
-        customTitle: 'Vishnu Suktam'
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/23',
+        customTitle: 'Narayana Suktam · ṛtaṃ satyam'
       },
       {
-        id: 'ns-9',
+        id: 'ns-12',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-aranyaka-10',
+        nirdesa: 'taittiriya-aranyaka-10/1.96-97',
+        customTitle: 'Narayana Gāyatrī'
+      },
+      {
+        id: 'ns-13',
         type: 'sukta_ref',
         suktaId: 'rigveda-khila-sri',
         nirdesa: 'rigveda-khila-sri/1',
