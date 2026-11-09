@@ -3,7 +3,7 @@ import { Prakara } from '../types/mantra';
 export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'nava-sukta',
-    title: 'रुद्र-सूक्त पारायणम् (Rudra & Sukta Parayanam)',
+    title: 'Sri Krishna Vrundavana Prayanam',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
     description: 'As in the Saswara Veda Mantraḥ book. Vishnu Suktam and Narayanopanishat are not in the library yet.',
     preferredBpm: 60,

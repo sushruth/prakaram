@@ -112,6 +112,9 @@ Every file — source, style, test, script — should be **around 180 lines**. A
 
 When editing or generating Vedic texts and transliteration logic:
 
+### 0. No hand-converted text
+* Never write text into code or `sources/` that an agent converted by hand from one script to another (IAST to Devanagari, a book scan to Devanagari, a paste in one script to another). Sanskrit enters the repo only through a generator that fetches and parses an upstream, and leaves it only through the transliteration engine. A name the user gives in Latin letters stays in Latin letters.
+
 ### A. Swara Preservation
 * **Never strip or replace Vedic cantillation marks**:
   - `U+0951` (॑) : *Svarita* (high pitch)
