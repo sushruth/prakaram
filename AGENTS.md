@@ -113,7 +113,7 @@ Every file — source, style, test, script — should be **around 180 lines**. A
 When editing or generating Vedic texts and transliteration logic:
 
 ### 0. Sanskrit in code is IAST; Indic script is the renderer's job
-* Any Sanskrit or Indic text written in code (titles, kriyā names, descriptions, tests, docs) is **always IAST with full diacritics** (`Śrī Kṛṣṇa Vṛndāvana Prayāṇam`). It is **never** in an Indic script (Devanagari, Kannada, Tamil, ...) and never stripped to plain ASCII. Turning it into the reader's script is always the renderer's job.
+* Every text that represents Sanskrit or Indic words, anywhere in the repo (code, `sources/*.json`, titles, kriyā names, descriptions, tests, docs), is **always IAST with full diacritics** (`Śrī Kṛṣṇa Vṛndāvana Prayāṇam`). It is **never** in an Indic script (Devanagari, Kannada, Tamil, ...) and never stripped to plain ASCII. Turning it into the reader's script is always the renderer's job.
 * The owner types plain ASCII (`Sri Krishna`). An agent writes the IAST for it (`Śrī Kṛṣṇa`) and shows it to the owner before committing.
 * Never write text that an agent converted by hand from one script into another (a book scan, a paste, IAST into Devanagari). Source text enters the repo only through a generator that fetches and parses an upstream.
 
@@ -122,7 +122,7 @@ When editing or generating Vedic texts and transliteration logic:
   - `U+0951` (॑) : *Svarita* (high pitch)
   - `U+0952` (॒) : *Anudātta* (low pitch)
   - `U+1CDA` (᳚) : *Dīrgha Svarita* (independent long accent)
-* Canonical source text in the vendored `sources/*.json` files is always stored in **Devanagari with explicit swaras**.
+* Canonical source text in the vendored `sources/*.json` files is stored in **IAST with explicit swaras** (decided 2026-11-09, §3.0; the migration is not done, and the files and the renderer still use Devanagari today). A generator converts the upstream's script to IAST by code at refresh time; that is machine conversion, not hand conversion.
 
 ### B. Tamil Script Clustering Order
 Standard Tamil lacks separate letters for aspirated consonants ($kh, g, gh$). We use South Indian subscript digits (`U+2081–U+2084`).
