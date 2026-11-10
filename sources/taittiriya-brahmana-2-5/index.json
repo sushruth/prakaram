@@ -39,10 +39,10 @@
       "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_5",
       "upstreamRef": "2026-11-10",
       "retrievedAt": "2026-11-10",
-      "parser": "brahmana@2",
+      "parser": "brahmana@3",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 5 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "32d9c5d836127d5cb6f644d5b3638720867f3a6570b12fd46d1cae961124e799"
+      "sha256": "0b189c9c39efb1811fb28a464a14c8cc0254bc7f2e8026b9ae2e3f7f9d00f71f"
     }
   },
   "sections": [

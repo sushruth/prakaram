@@ -39,10 +39,10 @@
       "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_8",
       "upstreamRef": "2026-11-10",
       "retrievedAt": "2026-11-10",
-      "parser": "brahmana@2",
+      "parser": "brahmana@3",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "e0285c8e5280e34aaf71c4440de5002c10a7ca7317397cc11910f79c4e9e9a68"
+      "sha256": "073b76adc76582c007b57195a9485bf9bc89dd108d224f03105fac208b6cc4b6"
     }
   },
   "sections": [
@@ -51,49 +51,49 @@
       "sectionNumber": 1,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 1",
       "file": "part-1.json",
-      "chunkCount": 72
+      "chunkCount": 75
     },
     {
       "id": "taittiriya-brahmana-2-8-2",
       "sectionNumber": 2,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 2",
       "file": "part-1.json",
-      "chunkCount": 93
+      "chunkCount": 95
     },
     {
       "id": "taittiriya-brahmana-2-8-3",
       "sectionNumber": 3,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 3",
       "file": "part-1.json",
-      "chunkCount": 94
+      "chunkCount": 96
     },
     {
       "id": "taittiriya-brahmana-2-8-4",
       "sectionNumber": 4,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 4",
       "file": "part-1.json",
-      "chunkCount": 88
+      "chunkCount": 89
     },
     {
       "id": "taittiriya-brahmana-2-8-5",
       "sectionNumber": 5,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 5",
       "file": "part-1.json",
-      "chunkCount": 95
+      "chunkCount": 98
     },
     {
       "id": "taittiriya-brahmana-2-8-6",
       "sectionNumber": 6,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 6",
       "file": "part-1.json",
-      "chunkCount": 94
+      "chunkCount": 97
     },
     {
       "id": "taittiriya-brahmana-2-8-7",
       "sectionNumber": 7,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 7",
       "file": "part-1.json",
-      "chunkCount": 99
+      "chunkCount": 100
     },
     {
       "id": "taittiriya-brahmana-2-8-8",
@@ -107,7 +107,7 @@
       "sectionNumber": 9,
       "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 9",
       "file": "part-2.json",
-      "chunkCount": 89
+      "chunkCount": 91
     }
   ]
 }
