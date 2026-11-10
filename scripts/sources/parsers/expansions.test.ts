@@ -9,12 +9,12 @@ describe('expandBlock', () => {
   const page = entry(63, '', 'विष्णो॒र्नुक॑व्ँवी॒र्या॑णि॒ प्र वो॑चम्॥') + entry(66, '<span id="expansion-67"></span>', 'विच॑क्रमे पृथि॒वीम्॥ त्रिर्दे॒वः पृ॑थि॒वीम्॥');
   const expansions = parseExpansions(page);
 
-  it('replaces a pratīka with its appendix text across sandhi', () => {
-    expect(expandBlock(`आ॒दौ विष्णो॒र्नु कं॒ ${marker(63)}`, expansions)).toBe('आ॒दौ विष्णो॒र्नुक॑व्ँवी॒र्या॑णि॒ प्र वो॑चम्॥');
+  it('replaces a pratīka with its appendix text across sandhi, on a new line', () => {
+    expect(expandBlock(`आ॒दौ विष्णो॒र्नु कं॒ ${marker(63)}`, expansions)).toBe('आ॒दौ\nविष्णो॒र्नुक॑व्ँवी॒र्या॑णि॒ प्र वो॑चम्॥');
   });
 
   it('inserts an entry shared by two markers once', () => {
-    expect(expandBlock(`विच॑क्रमे॒ ${marker(66)} त्रिर्दे॒वः ${marker(67)}॥`, expansions)).toBe('विच॑क्रमे पृथि॒वीम्॥ त्रिर्दे॒वः पृ॑थि॒वीम्॥ ॥');
+    expect(expandBlock(`विच॑क्रमे॒ ${marker(66)} त्रिर्दे॒वः ${marker(67)}॥`, expansions)).toBe('\nविच॑क्रमे पृथि॒वीम्॥ त्रिर्दे॒वः पृ॑थि॒वीम्॥ ॥');
   });
 
   it('drops a marker it cannot resolve and keeps the text', () => {

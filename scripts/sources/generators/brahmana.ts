@@ -6,7 +6,7 @@ import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'taittiriya-brahmana';
-const PARSER = 'brahmana@2';
+const PARSER = 'brahmana@3';
 /** The aṣṭakas in the vendored table and their prapāṭhaka counts. */
 const ASHTAKAS: Record<number, number> = { 2: 8 };
 const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');

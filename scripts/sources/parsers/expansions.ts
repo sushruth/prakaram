@@ -27,7 +27,11 @@ export function parseExpansions(html: string): Expansions {
   return map;
 }
 
-/** A Devanagari block with each pratīka + `§N` replaced by the full text; an unmatched marker is dropped. */
+/**
+ * A Devanagari block with each pratīka + `§N` replaced by the full text; an unmatched marker is dropped.
+ * Text cited mid-sentence starts on a new line (`\n`), so a verse given in full never shares a line with
+ * the words before it; no daṇḍa is added.
+ */
 export function expandBlock(blockHtml: string, expansions: Expansions): string {
   const pieces = blockHtml.split(MARKER);
   const out: string[] = [];
@@ -41,7 +45,8 @@ export function expandBlock(blockHtml: string, expansions: Expansions): string {
       const full = bare(exp.text);
       const shared = exp.entry === last;
       const k = words.findIndex((_, j) => (shared ? full.includes.bind(full) : full.startsWith.bind(full))(bare(words.slice(j).join(' '))));
-      if (k >= 0) text = [...words.slice(0, k), exp.entry === last ? '' : exp.text].join(' ').trim();
+      const before = words.slice(0, k).join(' ');
+      if (k >= 0) text = exp.entry === last ? before : `${before}\n${exp.text}`;
       last = exp.entry;
     }
     if (text) out.push(text);

@@ -13,6 +13,7 @@ export function parseBrahmana(html: string, ashtaka: number, prapathaka: number)
     .map((s, i) => {
       const number = anuvakaNumber(s.html, s.key, i + 1);
       const chunks: MantraChunk[] = splitAtDanda(devanagariText(s.html, (block) => expandBlock(block, expansions)))
+        .flatMap((pada) => pada.split('\n').map((line) => line.trim()))
         .filter((pada) => /[^\s।॥]/.test(pada))
         .map((sanskrit, j) => ({
         id: `tb-${ashtaka}-${prapathaka}-${number}-${j + 1}`,
