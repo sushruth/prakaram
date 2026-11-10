@@ -903,8 +903,13 @@
         {
           "id": "ts-4-7-2-1",
           "chunkNumber": 1,
-          "sanskrit": "jyaiṣṭhya̍ñca ma̠ ādhi̍patyañca me ma̠nyuśca̍ me̠ bhāma̍śca̠ me 'ma̍śca̠ me'ṃbha̍śca me je̠mā ca̍ me mahi̠mā ca̍ me vari̠mā ca̍ me prathi̠mā ca̍ me va̠rṣmā ca̍ me drāghu̠yā ca̍ me vṛ̠ddhañca̍ me̠ vṛddhi̍śca me sa̠tyañca̍ me śra̠ddhā ca̍ me̠ jaga̍cca me̠ dhana̍ñca me̠ vaśa̍śca me̠ tviṣi̍śca me krī̠ḍā ca̍ me̠ moda̍śca me jā̠tañca̍ me jani̠ṣyamā̍ṇañca me sū̠ktañca̍ me sukṛ̠tañca̍ me vi̠ttañca̍ me̠ vedya̍ñca me bhū̠tañca̍ me bhavi̠ṣyacca̍ me su̠gañca̍ me su̠patha̍ñca ma ṛ̠ddhañca̍ ma̠ ṛddhi̍ śca me klṛ̠ptañca̍ me̠ klṛpti̍śca me ma̠tiśca̍ me suma̠tiśca̍ me",
+          "sanskrit": "jyaiṣṭhya̍ñca ma̠ ādhi̍patyañca me ma̠nyuśca̍ me̠ bhāma̍śca̠ me 'ma̍śca̠ me'ṃbha̍śca me je̠mā ca̍ me mahi̠mā ca̍ me vari̠mā ca̍ me prathi̠mā ca̍ me va̠rṣmā ca̍ me drāghu̠yā ca̍ me vṛ̠ddhañca̍ me̠ vṛddhi̍śca me sa̠tyañca̍ me śra̠ddhā ca̍ me̠ jaga̍cca",
           "section": 2
+        },
+        {
+          "id": "ts-4-7-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "me̠ dhana̍ñca me̠ vaśa̍śca me̠ tviṣi̍śca me krī̠ḍā ca̍ me̠ moda̍śca me jā̠tañca̍ me jani̠ṣyamā̍ṇañca me sū̠ktañca̍ me sukṛ̠tañca̍ me vi̠ttañca̍ me̠ vedya̍ñca me bhū̠tañca̍ me bhavi̠ṣyacca̍ me su̠gañca̍ me su̠patha̍ñca ma ṛ̠ddhañca̍ ma̠ ṛddhi̍ śca me klṛ̠ptañca̍ me̠ klṛpti̍śca me ma̠tiśca̍ me suma̠tiśca̍ me"
         }
       ]
     },
@@ -916,8 +921,13 @@
         {
           "id": "ts-4-7-3-1",
           "chunkNumber": 1,
-          "sanskrit": "śañca̍ me̠ maya̍śca me pri̠yañca̍ me'nukā̠maśca̍ me̠ kāma̍śca me saumana̠saśca̍ me bha̠drañca̍ me̠ śreya̍śca me̠ vasya̍śca me̠ yaśa̍śca me̠ bhaga̍śca me̠ dravi̍ṇañca me ya̠ntā ca̍ me dha̠rtā ca̍ me̠ khṣema̍śca me̠ dhṛti̍śca me̠ viśva̍ñca me̠ maha̍śca me sa̠vm̐vicca̍ me̠ jñātra̍ñca me̠ sūśca̍ me pra̠sūśca̍ me̠ sīra̍ñca me la̠yaśca̍ ma ṛ̠tañca̍ me̠ 'mṛta̍ñca me'ya̠khṣmañca̠ me'nā̍mayacca me jī̠vātu̍śca me dīrghāyu̠tvañca̍ me'nami̠trañca̠ me'bha̍yañca me su̠gañca̍ me̠ śaya̍nañca me sū̠ṣā ca̍ me su̠dina̍ñca me",
+          "sanskrit": "śañca̍ me̠ maya̍śca me pri̠yañca̍ me'nukā̠maśca̍ me̠ kāma̍śca me saumana̠saśca̍ me bha̠drañca̍ me̠ śreya̍śca me̠ vasya̍śca me̠ yaśa̍śca me̠ bhaga̍śca me̠ dravi̍ṇañca me ya̠ntā ca̍ me dha̠rtā ca̍ me̠ khṣema̍śca me̠ dhṛti̍śca me̠ viśva̍ñca",
           "section": 3
+        },
+        {
+          "id": "ts-4-7-3-2",
+          "chunkNumber": 2,
+          "sanskrit": "me̠ maha̍śca me sa̠vm̐vicca̍ me̠ jñātra̍ñca me̠ sūśca̍ me pra̠sūśca̍ me̠ sīra̍ñca me la̠yaśca̍ ma ṛ̠tañca̍ me̠ 'mṛta̍ñca me'ya̠khṣmañca̠ me'nā̍mayacca me jī̠vātu̍śca me dīrghāyu̠tvañca̍ me'nami̠trañca̠ me'bha̍yañca me su̠gañca̍ me̠ śaya̍nañca me sū̠ṣā ca̍ me su̠dina̍ñca me"
         }
       ]
     },
@@ -955,8 +965,13 @@
         {
           "id": "ts-4-7-6-1",
           "chunkNumber": 1,
-          "sanskrit": "a̠gniśca̍ ma̠ indra̍śca me̠ soma̍śca ma̠ indra̍śca me savi̠tā ca̍ ma̠ indra̍śca me̠ sara̍svatī ca ma̠ indra̍śca me pū̠ṣā ca̍ ma̠ indra̍śca me̠ bṛha̠spati̍śca ma̠ indra̍śca me mi̠traśca̍ ma̠ indra̍śca me̠ varu̍ṇaśca ma̠ indra̍śca me̠ tvaṣṭā̍ ca ma̠ indra̍śca me dhā̠tā ca̍ ma̠ indra̍śca me̠ viṣṇu̍śca ma̠ indra̍śca me̠'śvinau̍ ca ma̠ indra̍śca me ma̠ruta̍śca ma̠ indra̍śca me̠ viśve̍ ca me de̠vā indra̍śca me pṛthi̠vī ca̍ ma̠ indra̍śca me̠'ntari̍khṣañca ma̠ indra̍śca me̠ dyauśca̍ ma̠ indra̍śca me̠ diśa̍śca ma̠ indra̍śca me mū̠rddhā ca̍ ma̠ indra̍śca me pra̠jāpa̍tiśca ma̠ indra̍śca me",
+          "sanskrit": "a̠gniśca̍ ma̠ indra̍śca me̠ soma̍śca ma̠ indra̍śca me savi̠tā ca̍ ma̠ indra̍śca me̠ sara̍svatī ca ma̠ indra̍śca me pū̠ṣā ca̍ ma̠ indra̍śca me̠ bṛha̠spati̍śca ma̠ indra̍śca me mi̠traśca̍ ma̠ indra̍śca me̠ varu̍ṇaśca ma̠ indra̍śca me̠ tvaṣṭā̍ ca",
           "section": 6
+        },
+        {
+          "id": "ts-4-7-6-2",
+          "chunkNumber": 2,
+          "sanskrit": "ma̠ indra̍śca me dhā̠tā ca̍ ma̠ indra̍śca me̠ viṣṇu̍śca ma̠ indra̍śca me̠'śvinau̍ ca ma̠ indra̍śca me ma̠ruta̍śca ma̠ indra̍śca me̠ viśve̍ ca me de̠vā indra̍śca me pṛthi̠vī ca̍ ma̠ indra̍śca me̠'ntari̍khṣañca ma̠ indra̍śca me̠ dyauśca̍ ma̠ indra̍śca me̠ diśa̍śca ma̠ indra̍śca me mū̠rddhā ca̍ ma̠ indra̍śca me pra̠jāpa̍tiśca ma̠ indra̍śca me"
         }
       ]
     },
@@ -1020,8 +1035,13 @@
         {
           "id": "ts-4-7-11-1",
           "chunkNumber": 1,
-          "sanskrit": "ekā̍ ca me ti̠sraśca̍ me̠ pañca̍ ca me sa̠pta ca̍ me̠ nava̍ ca ma̠ ekā̍daśa ca me̠ trayo̍daśa ca me̠ pañca̍daśa ca me sa̠ptada̍śa ca me̠ nava̍daśa ca ma̠ eka̍vigͫśatiśca me̠ trayo̍vigͫśatiśca me̠ pañca̍vigͫśatiśca me sa̠ptavi̍gͫśatiśca me̠ nava̍vigͫśatiśca ma̠ eka̍trigͫśacca me̠ traya̍strigͫśacca me̠ cata̍sraśca me̠'ṣṭau ca̍ me̠ dvāda̍śa ca me̠ ṣoḍa̍śa ca me vigͫśa̠tiśca̍ me̠ catu̍rvigͫśatiśca me̠ 'ṣṭāvi̍gͫśatiśca me̠ dvātri̍gͫśacca me̠ ṣaṭtri̍gͫśacca me catvāri̠g̠ͫśacca̍ me̠ catu̍ścatvārigͫśacca me̠ 'ṣṭāca̍tvārigͫśacca me̠ vāja̍śca prasa̠vaścā̍pi̠jaśca̠ kratu̍śca̠ suva̍śca mū̠rddhā ca̠ vyaśñi̍yaścā ntyāya̠naścāntya̍śca bhauva̠naśca̠ bhuva̍na̠ścādhi̍patiśca",
+          "sanskrit": "ekā̍ ca me ti̠sraśca̍ me̠ pañca̍ ca me sa̠pta ca̍ me̠ nava̍ ca ma̠ ekā̍daśa ca me̠ trayo̍daśa ca me̠ pañca̍daśa ca me sa̠ptada̍śa ca me̠ nava̍daśa ca ma̠ eka̍vigͫśatiśca me̠ trayo̍vigͫśatiśca me̠ pañca̍vigͫśatiśca me sa̠ptavi̍gͫśatiśca me̠ nava̍vigͫśatiśca ma̠ eka̍trigͫśacca me̠ traya̍strigͫśacca",
           "section": 11
+        },
+        {
+          "id": "ts-4-7-11-2",
+          "chunkNumber": 2,
+          "sanskrit": "me̠ cata̍sraśca me̠'ṣṭau ca̍ me̠ dvāda̍śa ca me̠ ṣoḍa̍śa ca me vigͫśa̠tiśca̍ me̠ catu̍rvigͫśatiśca me̠ 'ṣṭāvi̍gͫśatiśca me̠ dvātri̍gͫśacca me̠ ṣaṭtri̍gͫśacca me catvāri̠g̠ͫśacca̍ me̠ catu̍ścatvārigͫśacca me̠ 'ṣṭāca̍tvārigͫśacca me̠ vāja̍śca prasa̠vaścā̍pi̠jaśca̠ kratu̍śca̠ suva̍śca mū̠rddhā ca̠ vyaśñi̍yaścā ntyāya̠naścāntya̍śca bhauva̠naśca̠ bhuva̍na̠ścādhi̍patiśca"
         }
       ]
     },

@@ -21,10 +21,10 @@
       "upstreamUrl": "https://taittiriya.com/samhita/kanda_4_prashna_1",
       "upstreamRef": "2026-11-10",
       "retrievedAt": "2026-11-10",
-      "parser": "taittiriya@2",
+      "parser": "taittiriya@3",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "d203b737d78de9a724eac3889a70143540d1500ea6f973a65d680bd168331470"
+      "sha256": "e25da208e893daf38a409b9a90a399f3715763ae12769aef1d44142b430d4092"
     }
   },
   "sections": [
@@ -194,14 +194,14 @@
       "sectionNumber": 24,
       "title": "Kāṇḍa 4 · Prapāṭhaka 3 · Anuvāka 2",
       "file": "part-3.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-3-3",
       "sectionNumber": 25,
       "title": "Kāṇḍa 4 · Prapāṭhaka 3 · Anuvāka 3",
       "file": "part-3.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-3-4",
@@ -243,7 +243,7 @@
       "sectionNumber": 31,
       "title": "Kāṇḍa 4 · Prapāṭhaka 3 · Anuvāka 9",
       "file": "part-3.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-3-10",
@@ -278,14 +278,14 @@
       "sectionNumber": 36,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 1",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-4-2",
       "sectionNumber": 37,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 2",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-4-3",
@@ -306,7 +306,7 @@
       "sectionNumber": 40,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 5",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-4-6",
@@ -320,7 +320,7 @@
       "sectionNumber": 42,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 7",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-4-8",
@@ -341,14 +341,14 @@
       "sectionNumber": 45,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 10",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-4-11",
       "sectionNumber": 46,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 11",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 3
     },
     {
       "id": "taittiriya-samhita-4-4-12",
@@ -369,56 +369,56 @@
       "sectionNumber": 49,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 2",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-3",
       "sectionNumber": 50,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 3",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-4",
       "sectionNumber": 51,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 4",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-5",
       "sectionNumber": 52,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 5",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-6",
       "sectionNumber": 53,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 6",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-7",
       "sectionNumber": 54,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 7",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-8",
       "sectionNumber": 55,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 8",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-9",
       "sectionNumber": 56,
       "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 9",
       "file": "part-4.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-5-10",
@@ -509,14 +509,14 @@
       "sectionNumber": 69,
       "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 2",
       "file": "part-5.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-7-3",
       "sectionNumber": 70,
       "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 3",
       "file": "part-5.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-7-4",
@@ -537,7 +537,7 @@
       "sectionNumber": 73,
       "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 6",
       "file": "part-5.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-7-7",
@@ -572,7 +572,7 @@
       "sectionNumber": 78,
       "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 11",
       "file": "part-5.json",
-      "chunkCount": 1
+      "chunkCount": 2
     },
     {
       "id": "taittiriya-samhita-4-7-12",

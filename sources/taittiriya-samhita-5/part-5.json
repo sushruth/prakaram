@@ -71,8 +71,18 @@
         {
           "id": "ts-5-6-2-1",
           "chunkNumber": 1,
-          "sanskrit": "a̠pāṅgrahā̎n gṛhṇātye̠tad vāva rā̍ja̠sūya̠ym̐yade̠te grahāḥ̎ sa̠vo̎'gnirva̍ruṇasa̠vo rā̍ja̠sūya̍magnisa̠vaścitya̠ stābhyā̍me̠va sū̍ya̠te'tho̍ u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎'gni̠cita̠ āpo̍ bhava̠ntyāpo̠ vā a̠gner bhrātṛ̍vyā̠ yada̠po̎'gnera̠dhastā̍dupa̠ dadhā̍ti̠ bhrātṛ̍vyābhibhūtyai̠ bhava̍tyā̠tmanā̠ parā̎'sya̠ bhrātṛ̍vyo bhavatya̠mṛta̠ vm̐vā āpa̠stasmā̍da̠dbhirava̍tāntama̠bhi ṣi̍ñcanti̠ nā''rti̠mārccha̍ti̠ sarva̠māyu̍reti̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐vedānna̠vm̐vā āpaḥ̍ pa̠śava̠ āpo'nna̍mpa̠śavo̎'nnā̠daḥ pa̍śu̠mān bha̍vati̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̠ dvāda̍śa bhavanti̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠reṇai̠vāsmā̠ anna̠mava̍ rundhe̠ pātrā̍ṇi bhavanti̠ pātre̠ vā anna̍madyate̠ sayo̎nye̠vānna̠mava̍ rundha̠ ā dvā̍da̠śāt puru̍ṣā̠danna̍ ma̠ttyatho̠ pātrā̠nna chi̍dyate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̍ kuṃ̠bhāśca̍ kuṃ̠bhīśca̍ mithu̠nāni̍ bhavanti mithu̠nasya̠ prajā̎tyai̠ pra pra̠jayā̍ pa̠śubhi̍r mithu̠nair jā̍yate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍",
+          "sanskrit": "a̠pāṅgrahā̎n gṛhṇātye̠tad vāva rā̍ja̠sūya̠ym̐yade̠te grahāḥ̎ sa̠vo̎'gnirva̍ruṇasa̠vo rā̍ja̠sūya̍magnisa̠vaścitya̠ stābhyā̍me̠va sū̍ya̠te'tho̍ u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎'gni̠cita̠ āpo̍ bhava̠ntyāpo̠ vā a̠gner bhrātṛ̍vyā̠ yada̠po̎'gnera̠dhastā̍dupa̠ dadhā̍ti̠ bhrātṛ̍vyābhibhūtyai̠ bhava̍tyā̠tmanā̠ parā̎'sya̠ bhrātṛ̍vyo bhavatya̠mṛta̠",
           "section": 2
+        },
+        {
+          "id": "ts-5-6-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "vm̐vā āpa̠stasmā̍da̠dbhirava̍tāntama̠bhi ṣi̍ñcanti̠ nā''rti̠mārccha̍ti̠ sarva̠māyu̍reti̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐vedānna̠vm̐vā āpaḥ̍ pa̠śava̠ āpo'nna̍mpa̠śavo̎'nnā̠daḥ pa̍śu̠mān bha̍vati̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̠ dvāda̍śa bhavanti̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠reṇai̠vāsmā̠"
+        },
+        {
+          "id": "ts-5-6-2-3",
+          "chunkNumber": 3,
+          "sanskrit": "anna̠mava̍ rundhe̠ pātrā̍ṇi bhavanti̠ pātre̠ vā anna̍madyate̠ sayo̎nye̠vānna̠mava̍ rundha̠ ā dvā̍da̠śāt puru̍ṣā̠danna̍ ma̠ttyatho̠ pātrā̠nna chi̍dyate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̍ kuṃ̠bhāśca̍ kuṃ̠bhīśca̍ mithu̠nāni̍ bhavanti mithu̠nasya̠ prajā̎tyai̠ pra pra̠jayā̍ pa̠śubhi̍r mithu̠nair jā̍yate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍"
         }
       ]
     },
@@ -84,8 +94,13 @@
         {
           "id": "ts-5-6-3-1",
           "chunkNumber": 1,
-          "sanskrit": "bhū̠te̠ṣṭa̠kā upa̍ dadhā̠tyatrā̎tra̠ vai mṛ̠tyur jā̍yate̠ yatra̍yatrai̠va mṛ̠tyur jāya̍te̠ tata̍ e̠vaina̠mava̍ yajate̠ tasmā̍dagni̠cith sarva̠māyu̍reti̠ sarve̠ hya̍sya mṛ̠tyavo've̎ṣṭā̠ stasmā̍dagni̠cinnābhica̍rita̠vai pra̠tyage̍na mabhicā̠raḥ stṛ̍ṇute sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te de̍vasu̠vāme̠tāni̍ ha̠vīgͫṣi̍ bhavantye̠tāva̍nto̠ vai de̠vānā̍gͫ sa̠vāsta e̠vā vai rā̍ja̠sūya̍sya rū̠paym̐ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠ta u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎gni̠cita̠ indra̍sya suṣuvā̠ṇasya̍ daśa̠dhendri̠yavm̐vī̠rya̍mparā̍'pata̠t tadde̠vāḥ sau̎trāma̠ṇyā sama̍bharanth sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te̎'gniñci̠tvā sau̎trāma̠ṇyā ya̍jetendri̠yame̠va vī̠rya̍gͫ saṃ̠bhṛtyā̠''tman dha̍tte",
+          "sanskrit": "bhū̠te̠ṣṭa̠kā upa̍ dadhā̠tyatrā̎tra̠ vai mṛ̠tyur jā̍yate̠ yatra̍yatrai̠va mṛ̠tyur jāya̍te̠ tata̍ e̠vaina̠mava̍ yajate̠ tasmā̍dagni̠cith sarva̠māyu̍reti̠ sarve̠ hya̍sya mṛ̠tyavo've̎ṣṭā̠ stasmā̍dagni̠cinnābhica̍rita̠vai pra̠tyage̍na mabhicā̠raḥ stṛ̍ṇute sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te de̍vasu̠vāme̠tāni̍ ha̠vīgͫṣi̍ bhavantye̠tāva̍nto̠ vai de̠vānā̍gͫ sa̠vāsta e̠vā",
           "section": 3
+        },
+        {
+          "id": "ts-5-6-3-2",
+          "chunkNumber": 2,
+          "sanskrit": "vai rā̍ja̠sūya̍sya rū̠paym̐ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠ta u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎gni̠cita̠ indra̍sya suṣuvā̠ṇasya̍ daśa̠dhendri̠yavm̐vī̠rya̍mparā̍'pata̠t tadde̠vāḥ sau̎trāma̠ṇyā sama̍bharanth sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te̎'gniñci̠tvā sau̎trāma̠ṇyā ya̍jetendri̠yame̠va vī̠rya̍gͫ saṃ̠bhṛtyā̠''tman dha̍tte"
         }
       ]
     },
@@ -97,8 +112,18 @@
         {
           "id": "ts-5-6-4-1",
           "chunkNumber": 1,
-          "sanskrit": "sa̠jūrabdo'yā̍vabhiḥ sa̠jūru̠ṣā aru̍ṇībhiḥ sa̠jūḥ sūrya̠ eta̍śena sa̠joṣā̍va̠śvinā̠ dagͫso̍bhiḥ sa̠jūra̠gnir vai̎śvāna̠ra iḍā̍bhir ghṛ̠tena̠ svāhā̍ savm̐vathsa̠ro vā abdo̠ māsā̠ ayā̍vā u̠ṣā aru̍ṇī̠ sūrya̠ eta̍śa i̠me a̠śvinā̍ savm̐vathsa̠ro̎'gnir vai̎śvāna̠raḥ pa̠śava̠ iḍā̍ pa̠śavo̍ ghṛ̠tagͫ sa̍vm̐vathsa̠rampa̠śavo'nu̠ pra jā̍yante savm̐vathsa̠reṇai̠vāsmai̍ pa̠śūn pra ja̍nayati darbhastaṃ̠be ju̍hoti̠ yad vā a̠syā a̠mṛta̠ym̐yadvī̠rya̍ntadda̠rbhā stasmi̍n juhoti̠ praiva jā̍yate'nnā̠do bha̍vati̠ yasyai̠vañjuhva̍tye̠tā vai de̠vatā̍ a̠gneḥ pu̠rastā̎dbhāgā̠ stā e̠va prī̍ṇā̠tyatho̠ cakhṣu̍re̠vāgneḥ pu̠rastā̠t prati̍ dadhā̠tyana̍ndho bhavati̠ ya e̠vavm̐vedā''po̠ vā i̠damagre̍ sali̠lamā̍sī̠th sa pra̠jāpa̍tiḥ puṣkarapa̠rṇe vāto̍ bhū̠to̍'lelāya̠th sa sa utta̍raḥ pa̠khṣo̍'bhava̠th sodī̍cī̠ digyāmu̠pari̍ṣṭādu̠pāda̍dhā̠t tat pṛ̠ṣṭhama̍bhava̠th sorddhvā digi̠yavm̐vā a̠gniḥ pañce̎ṣṭaka̠stasmā̠dyada̠syāṅkhana̍ntya̠bhīṣṭa̍kāntṛ̠ndantya̠bhi śarka̍rā̠g̠ͫ sarvā̠ vā i̠yavm̐vayo̎bhyo̠ nakta̍ndṛ̠śe dī̎pyate̠ tasmā̍di̠māvm̐vayā̍gͫsi̠ nakta̠nnāddhyā̍sate̠ ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠te pratye̠va",
+          "sanskrit": "sa̠jūrabdo'yā̍vabhiḥ sa̠jūru̠ṣā aru̍ṇībhiḥ sa̠jūḥ sūrya̠ eta̍śena sa̠joṣā̍va̠śvinā̠ dagͫso̍bhiḥ sa̠jūra̠gnir vai̎śvāna̠ra iḍā̍bhir ghṛ̠tena̠ svāhā̍ savm̐vathsa̠ro vā abdo̠ māsā̠ ayā̍vā u̠ṣā aru̍ṇī̠ sūrya̠ eta̍śa i̠me a̠śvinā̍ savm̐vathsa̠ro̎'gnir vai̎śvāna̠raḥ pa̠śava̠ iḍā̍ pa̠śavo̍ ghṛ̠tagͫ sa̍vm̐vathsa̠rampa̠śavo'nu̠ pra jā̍yante savm̐vathsa̠reṇai̠vāsmai̍ pa̠śūn pra ja̍nayati darbhastaṃ̠be ju̍hoti̠ yad",
           "section": 4
+        },
+        {
+          "id": "ts-5-6-4-2",
+          "chunkNumber": 2,
+          "sanskrit": "vā a̠syā a̠mṛta̠ym̐yadvī̠rya̍ntadda̠rbhā stasmi̍n juhoti̠ praiva jā̍yate'nnā̠do bha̍vati̠ yasyai̠vañjuhva̍tye̠tā vai de̠vatā̍ a̠gneḥ pu̠rastā̎dbhāgā̠ stā e̠va prī̍ṇā̠tyatho̠ cakhṣu̍re̠vāgneḥ pu̠rastā̠t prati̍ dadhā̠tyana̍ndho bhavati̠ ya e̠vavm̐vedā''po̠ vā i̠damagre̍ sali̠lamā̍sī̠th sa pra̠jāpa̍tiḥ puṣkarapa̠rṇe vāto̍ bhū̠to̍'lelāya̠th sa"
+        },
+        {
+          "id": "ts-5-6-4-3",
+          "chunkNumber": 3,
+          "sanskrit": "sa utta̍raḥ pa̠khṣo̍'bhava̠th sodī̍cī̠ digyāmu̠pari̍ṣṭādu̠pāda̍dhā̠t tat pṛ̠ṣṭhama̍bhava̠th sorddhvā digi̠yavm̐vā a̠gniḥ pañce̎ṣṭaka̠stasmā̠dyada̠syāṅkhana̍ntya̠bhīṣṭa̍kāntṛ̠ndantya̠bhi śarka̍rā̠g̠ͫ sarvā̠ vā i̠yavm̐vayo̎bhyo̠ nakta̍ndṛ̠śe dī̎pyate̠ tasmā̍di̠māvm̐vayā̍gͫsi̠ nakta̠nnāddhyā̍sate̠ ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠te pratye̠va"
         }
       ]
     },
@@ -110,8 +135,13 @@
         {
           "id": "ts-5-6-5-1",
           "chunkNumber": 1,
-          "sanskrit": "sa̠vm̐va̠thsa̠ramukhya̍mbhṛ̠tvā dvi̠tīye̍ savm̐vathsa̠ra ā̎gne̠yama̠ṣṭāka̍pāla̠nnirva̍pedai̠ndramekā̍daśakapālavm̐vaiśvade̠vandvāda̍śakapālambārhaspa̠tyañca̠ruvm̐vai̎ṣṇa̠vantri̍kapā̠lantṛ̠tīye̍ savm̐vathsa̠re̍'bhi̠jitā̍ yajeta̠ yada̠ṣṭāka̍pālo̠ bhava̍tya̠ṣṭākhṣa̍rā gāya̠tryā̎gne̠yaṅgā̍ya̠tramprā̍tassava̠namprā̍tassava̠name̠va tena̍ dādhāra gāya̠trīñchando̠ yadekā̍daśakapālo̠ bhava̠tyekā̍śākhṣarā tri̠ṣṭugai̠ndrantraiṣṭu̍bha̠mmāddhya̍ndina̠g̠ͫ sava̍na̠mmāddhya̍ndiname̠va sava̍na̠ntena̍ dādhāra tri̠ṣṭubha̠ tena̍ lo̠kagͫͫ spṛ̍ṇoti̠ yad dvi̠tīye̍ savm̐vathsa̠re̎'gniñci̍nu̠te̎'ntari̍khṣame̠va tena̍ spṛṇoti̠ yat tṛ̠tīye̍ savm̐vathsa̠re yaja̍te̠'mume̠va tena̍ lo̠kagͫͫ spṛ̍ṇotye̠tavm̐vai para̍ āṭṇā̠raḥ ka̠khṣīvā̍gͫ auśi̠jo vī̠taha̍vyaḥ śrāya̠sastra̠sada̍syuḥ pauruku̠thsyaḥ pra̠jākā̍mā acinvata̠ tato̠ vai te sa̠hasra̍gͫsahasrampu̠trāna̍vindanta̠ pratha̍te pra̠jayā̍ pa̠śubhi̠stāmmātrā̍māpnoti̠ yānte'ga̍ccha̠n̠ya e̠vavm̐vi̠dvāne̠tama̠gniñci̍nu̠te",
+          "sanskrit": "sa̠vm̐va̠thsa̠ramukhya̍mbhṛ̠tvā dvi̠tīye̍ savm̐vathsa̠ra ā̎gne̠yama̠ṣṭāka̍pāla̠nnirva̍pedai̠ndramekā̍daśakapālavm̐vaiśvade̠vandvāda̍śakapālambārhaspa̠tyañca̠ruvm̐vai̎ṣṇa̠vantri̍kapā̠lantṛ̠tīye̍ savm̐vathsa̠re̍'bhi̠jitā̍ yajeta̠ yada̠ṣṭāka̍pālo̠ bhava̍tya̠ṣṭākhṣa̍rā gāya̠tryā̎gne̠yaṅgā̍ya̠tramprā̍tassava̠namprā̍tassava̠name̠va tena̍ dādhāra gāya̠trīñchando̠ yadekā̍daśakapālo̠ bhava̠tyekā̍śākhṣarā tri̠ṣṭugai̠ndrantraiṣṭu̍bha̠mmāddhya̍ndina̠g̠ͫ sava̍na̠mmāddhya̍ndiname̠va sava̍na̠ntena̍ dādhāra tri̠ṣṭubha̠",
           "section": 5
+        },
+        {
+          "id": "ts-5-6-5-2",
+          "chunkNumber": 2,
+          "sanskrit": "tena̍ lo̠kagͫͫ spṛ̍ṇoti̠ yad dvi̠tīye̍ savm̐vathsa̠re̎'gniñci̍nu̠te̎'ntari̍khṣame̠va tena̍ spṛṇoti̠ yat tṛ̠tīye̍ savm̐vathsa̠re yaja̍te̠'mume̠va tena̍ lo̠kagͫͫ spṛ̍ṇotye̠tavm̐vai para̍ āṭṇā̠raḥ ka̠khṣīvā̍gͫ auśi̠jo vī̠taha̍vyaḥ śrāya̠sastra̠sada̍syuḥ pauruku̠thsyaḥ pra̠jākā̍mā acinvata̠ tato̠ vai te sa̠hasra̍gͫsahasrampu̠trāna̍vindanta̠ pratha̍te pra̠jayā̍ pa̠śubhi̠stāmmātrā̍māpnoti̠ yānte'ga̍ccha̠n̠ya e̠vavm̐vi̠dvāne̠tama̠gniñci̍nu̠te"
         }
       ]
     },
@@ -123,8 +153,13 @@
         {
           "id": "ts-5-6-6-1",
           "chunkNumber": 1,
-          "sanskrit": "pra̠jāpa̍tira̠gnima̍cinuta̠ sa khṣu̠rapa̍vir bhū̠tvā'ti̍ṣṭha̠t tande̠vā bibhya̍to̠ nopā̍''ya̠n te chando̍bhirā̠tmāna̍ñchādayi̠tvopā̍''ya̠n tacchanda̍sāñchanda̠stvambrahma̠ vai chandā̍gͫsi̠ brahma̍ṇa e̠tadrū̠paym̐yat kṛ̍ṣṇāji̠naṃ kārṣṇī̍ upā̠nahā̠vupa̍ muñcate̠ chando̍bhire̠vā''tmāna̍ñchādayi̠tvā'gnimupa̍ caratyā̠tmano'hi̍gͫsāyai devani̠dhir vā e̠ṣa ni dhī̍yate̠ yada̠gni pra̠jāpa̍ti̠rvā atha̍rvā̠'gnire̠va da̠ddhyaṅṅā̍tharva̠ṇa stasyeṣṭa̍kā a̠sthānye̠tagͫ ha̠ vāva tadṛṣi̍ra̠bhyanū̍vā̠cendro̍ dadhī̠co a̠sthabhi̠riti̠ yadiṣṭa̍kābhira̠gniñci̠noti̠ sātmā̍name̠vāgniñci̍nute̠ sātmā̠muṣmi̍lm̐lo̠ke bha̍vati̠ ya e̠vavm̐veda̠ śarī̍ra̠vm̐vā e̠tada̠gner yaccitya̍ ā̠tmā vai̎śvāna̠ro yacci̠te vai̎śvāna̠rañju̠hoti̠ śarī̍rame̠va sa̠g̠ͫͫskṛtyā̠",
+          "sanskrit": "pra̠jāpa̍tira̠gnima̍cinuta̠ sa khṣu̠rapa̍vir bhū̠tvā'ti̍ṣṭha̠t tande̠vā bibhya̍to̠ nopā̍''ya̠n te chando̍bhirā̠tmāna̍ñchādayi̠tvopā̍''ya̠n tacchanda̍sāñchanda̠stvambrahma̠ vai chandā̍gͫsi̠ brahma̍ṇa e̠tadrū̠paym̐yat kṛ̍ṣṇāji̠naṃ kārṣṇī̍ upā̠nahā̠vupa̍ muñcate̠ chando̍bhire̠vā''tmāna̍ñchādayi̠tvā'gnimupa̍ caratyā̠tmano'hi̍gͫsāyai devani̠dhir vā e̠ṣa ni dhī̍yate̠ yada̠gni",
           "section": 6
+        },
+        {
+          "id": "ts-5-6-6-2",
+          "chunkNumber": 2,
+          "sanskrit": "pra̠jāpa̍ti̠rvā atha̍rvā̠'gnire̠va da̠ddhyaṅṅā̍tharva̠ṇa stasyeṣṭa̍kā a̠sthānye̠tagͫ ha̠ vāva tadṛṣi̍ra̠bhyanū̍vā̠cendro̍ dadhī̠co a̠sthabhi̠riti̠ yadiṣṭa̍kābhira̠gniñci̠noti̠ sātmā̍name̠vāgniñci̍nute̠ sātmā̠muṣmi̍lm̐lo̠ke bha̍vati̠ ya e̠vavm̐veda̠ śarī̍ra̠vm̐vā e̠tada̠gner yaccitya̍ ā̠tmā vai̎śvāna̠ro yacci̠te vai̎śvāna̠rañju̠hoti̠ śarī̍rame̠va sa̠g̠ͫͫskṛtyā̠"
         }
       ]
     },
@@ -136,8 +171,18 @@
         {
           "id": "ts-5-6-7-1",
           "chunkNumber": 1,
-          "sanskrit": "a̠gner vai dī̠khṣayā̍ de̠vā vi̠rāja̍māpnuvan ti̠sro rātrī̎r dīkhṣi̠taḥ syā̎t tri̠padā̍ vi̠rāḍ vi̠rāja̍māpnoti̠ ṣaḍrātrī̎r dīkhṣi̠taḥ syā̠th ṣaḍ vā ṛ̠tavaḥ̍ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠ddaśā̎khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ dvāda̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ trayo̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t trayo̍daśa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ pañca̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t pañca̍daśa̠ vā a̍rddhamā̠sasya̠ rātra̍yo'rddhamāsa̠śaḥ sa̍vm̐vathsa̠ra ā̎pyate savm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti sa̠ptada̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̠ pañca̠rtavaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ catu̍rvigͫśati̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̠ccatu̍rvigͫśatirarddhamā̠sāḥ sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti tri̠g̠ͫśata̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̎t tri̠g̠ͫśada̍khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ māsa̍ndīkhṣi̠taḥ syā̠dyo māsaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti ca̠turo̍ mā̠so dī̎khṣi̠taḥ syā̎cca̠turo̠ vā e̠tammā̠so vasa̍vo'bibharu̠ste pṛ̍thi̠vīmā'ja̍yan gāya̠trīñchando̠'ṣṭau ru̠drāste̎'ntari̍khṣa̠mā'ja̍yan tri̠ṣṭubha̠ñchando̠ dvāda̍śā''di̠tyā ste diva̠mā'ja̍ya̠n jaga̍tī̠ñchanda̠stato̠ vai te vyā̠vṛta̍ magaccha̠ñchraiṣṭhya̍nde̠vānā̠ntasmā̠d dvāda̍śa mā̠so bhṛ̠tvā'gniñci̍nvīta̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro̎'gni ścitya̠ stasyā̍horā̠trāṇīṣṭa̍kā ā̠pteṣṭa̍kamenañcinu̠te'tho̎ vyā̠vṛta̍me̠va ga̍cchati̠ śraiṣṭhya̍gͫ samā̠nānā̎m",
+          "sanskrit": "a̠gner vai dī̠khṣayā̍ de̠vā vi̠rāja̍māpnuvan ti̠sro rātrī̎r dīkhṣi̠taḥ syā̎t tri̠padā̍ vi̠rāḍ vi̠rāja̍māpnoti̠ ṣaḍrātrī̎r dīkhṣi̠taḥ syā̠th ṣaḍ vā ṛ̠tavaḥ̍ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠ddaśā̎khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ dvāda̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ trayo̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t trayo̍daśa̠",
           "section": 7
+        },
+        {
+          "id": "ts-5-6-7-2",
+          "chunkNumber": 2,
+          "sanskrit": "māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ pañca̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t pañca̍daśa̠ vā a̍rddhamā̠sasya̠ rātra̍yo'rddhamāsa̠śaḥ sa̍vm̐vathsa̠ra ā̎pyate savm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti sa̠ptada̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̠ pañca̠rtavaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ catu̍rvigͫśati̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̠ccatu̍rvigͫśatirarddhamā̠sāḥ sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti tri̠g̠ͫśata̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̎t"
+        },
+        {
+          "id": "ts-5-6-7-3",
+          "chunkNumber": 3,
+          "sanskrit": "tri̠g̠ͫśada̍khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ māsa̍ndīkhṣi̠taḥ syā̠dyo māsaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti ca̠turo̍ mā̠so dī̎khṣi̠taḥ syā̎cca̠turo̠ vā e̠tammā̠so vasa̍vo'bibharu̠ste pṛ̍thi̠vīmā'ja̍yan gāya̠trīñchando̠'ṣṭau ru̠drāste̎'ntari̍khṣa̠mā'ja̍yan tri̠ṣṭubha̠ñchando̠ dvāda̍śā''di̠tyā ste diva̠mā'ja̍ya̠n jaga̍tī̠ñchanda̠stato̠ vai te vyā̠vṛta̍ magaccha̠ñchraiṣṭhya̍nde̠vānā̠ntasmā̠d dvāda̍śa mā̠so bhṛ̠tvā'gniñci̍nvīta̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro̎'gni ścitya̠ stasyā̍horā̠trāṇīṣṭa̍kā ā̠pteṣṭa̍kamenañcinu̠te'tho̎ vyā̠vṛta̍me̠va ga̍cchati̠ śraiṣṭhya̍gͫ samā̠nānā̎m"
         }
       ]
     },
@@ -149,8 +194,18 @@
         {
           "id": "ts-5-6-8-1",
           "chunkNumber": 1,
-          "sanskrit": "su̠va̠rgāya̠ vā e̠ṣa lo̠kāya̍ cīyate̠ yada̠gnistaym̐yannānvā̠rohe̎th suva̠rgāllo̠kādyaja̍māno hīyeta pṛthi̠vīmā'kra̍miṣamprā̠ṇo mā̠ mā hā̍sīda̠ntari̍khṣa̠mā'kra̍miṣampra̠jā mā̠ mā hā̍sī̠ddiva̠mā'kra̍miṣa̠g̠ͫ suva̍raga̠nmetyā̍hai̠ṣa vā a̠gnera̍nvāro̠hastenai̠vaina̍ma̠nvāro̍hati suva̠rgasya̍ lo̠kasya̠ sama̍ṣṭyai̠ yat pa̠khṣasaṃ̍mitāmminu̠yāt kanī̍yāgͫsaym̐yajñakra̠tumupe̍yā̠t pāpī̍yasyasyā̠''tmanaḥ̍ pra̠jā syā̠dvedi̍sammitāmminoti̠ jyāyā̍gͫsame̠va ya̍jñakra̠tumupai̍ti̠ nāsyā̠''tmanaḥ̠ pāpī̍yasī pra̠jā bha̍vati sāha̠srañci̍nvīta pratha̠maṃ ci̍nvā̠naḥ sa̠hasra̍sammito̠ vā a̠yalm̐lo̠ka i̠mame̠va lo̠kama̠bhi ja̍yati̠ dviṣā̍hasrañcinvīta dvi̠tīyaṃ̍ cinvā̠no dviṣā̍hasra̠vm̐vā a̠ntari̍khṣama̠ntari̍khṣame̠vābhi ja̍yati̠ triṣā̍hasrañcinvīta tṛ̠tīya̍ñcinvā̠na yad dve re̍ta̠ssicā̍vupada̠ddhyādreto̎'sya̠ vi cchi̍ndyāt ti̠sra upa̍ dadhāti̠ reta̍saḥ̠ santa̍tyā i̠yavm̐vāva pra̍tha̠mā re̍ta̠ssig vāg vā i̠yantasmā̠t paśya̍ntī̠māmpaśya̍nti̠ vāca̠vm̐vada̍ntīma̠ntari̍khṣandvi̠tīyā̎ prā̠ṇo vā a̠ntari̍khṣa̠ntasmā̠nnāntari̍khṣa̠mpaśya̍nti̠ na prā̠ṇama̠sau tṛ̠tīyā̠ cakhṣu̠r vā a̠sau tasmā̠t paśya̍ntya̠mūṃ paśya̍nti̠ cakhṣu̠r yaju̍ṣe̠māñcā̠",
+          "sanskrit": "su̠va̠rgāya̠ vā e̠ṣa lo̠kāya̍ cīyate̠ yada̠gnistaym̐yannānvā̠rohe̎th suva̠rgāllo̠kādyaja̍māno hīyeta pṛthi̠vīmā'kra̍miṣamprā̠ṇo mā̠ mā hā̍sīda̠ntari̍khṣa̠mā'kra̍miṣampra̠jā mā̠ mā hā̍sī̠ddiva̠mā'kra̍miṣa̠g̠ͫ suva̍raga̠nmetyā̍hai̠ṣa vā a̠gnera̍nvāro̠hastenai̠vaina̍ma̠nvāro̍hati suva̠rgasya̍ lo̠kasya̠ sama̍ṣṭyai̠ yat pa̠khṣasaṃ̍mitāmminu̠yāt",
           "section": 8
+        },
+        {
+          "id": "ts-5-6-8-2",
+          "chunkNumber": 2,
+          "sanskrit": "kanī̍yāgͫsaym̐yajñakra̠tumupe̍yā̠t pāpī̍yasyasyā̠''tmanaḥ̍ pra̠jā syā̠dvedi̍sammitāmminoti̠ jyāyā̍gͫsame̠va ya̍jñakra̠tumupai̍ti̠ nāsyā̠''tmanaḥ̠ pāpī̍yasī pra̠jā bha̍vati sāha̠srañci̍nvīta pratha̠maṃ ci̍nvā̠naḥ sa̠hasra̍sammito̠ vā a̠yalm̐lo̠ka i̠mame̠va lo̠kama̠bhi ja̍yati̠ dviṣā̍hasrañcinvīta dvi̠tīyaṃ̍ cinvā̠no dviṣā̍hasra̠vm̐vā a̠ntari̍khṣama̠ntari̍khṣame̠vābhi ja̍yati̠ triṣā̍hasrañcinvīta tṛ̠tīya̍ñcinvā̠na"
+        },
+        {
+          "id": "ts-5-6-8-3",
+          "chunkNumber": 3,
+          "sanskrit": "yad dve re̍ta̠ssicā̍vupada̠ddhyādreto̎'sya̠ vi cchi̍ndyāt ti̠sra upa̍ dadhāti̠ reta̍saḥ̠ santa̍tyā i̠yavm̐vāva pra̍tha̠mā re̍ta̠ssig vāg vā i̠yantasmā̠t paśya̍ntī̠māmpaśya̍nti̠ vāca̠vm̐vada̍ntīma̠ntari̍khṣandvi̠tīyā̎ prā̠ṇo vā a̠ntari̍khṣa̠ntasmā̠nnāntari̍khṣa̠mpaśya̍nti̠ na prā̠ṇama̠sau tṛ̠tīyā̠ cakhṣu̠r vā a̠sau tasmā̠t paśya̍ntya̠mūṃ paśya̍nti̠ cakhṣu̠r yaju̍ṣe̠māñcā̠"
         }
       ]
     },
@@ -162,8 +217,13 @@
         {
           "id": "ts-5-6-9-1",
           "chunkNumber": 1,
-          "sanskrit": "sū̠yate̠ vā e̠ṣo̎'gnī̠nāym̐ya u̠khāyā̎mbhri̠yate̠ yada̠dhaḥ sā̠daye̠dgarbhāḥ̎ pra̠pādu̍kāḥ syu̠ratho̠ yathā̍ sa̠vāt pra̍tyava̠roha̍ti tā̠dṛge̠va tadā̍sa̠ndī sā̍dayati̠ garbhā̍ṇā̠ndhṛtyā̠ apra̍pādā̠yātho̍ sa̠vame̠vaina̍ṅkaroti̠ garbho̠ vā e̠ṣa yadukhyo̠ yoniḥ̍ śi̠kya̍ym̐yacchi̠kyā̍du̠khānni̠rūhe̠dyone̠r garbha̠nnirha̍ṇyā̠th ṣaḍu̍dyāmagͫ śi̠kya̍mbhavati ṣoḍhāvihi̠to vai puru̍ṣa ā̠tmā ca̠ śira̍śca ca̠tvāryaṅgā̎nyā̠tmanne̠vaina̍mbibharti pra̠jāpa̍ti̠r vā e̠ṣa yada̠gnistasyo̠khā co̠lūkha̍lañca̠ stanau̠ tāva̍sya pra̠jā upa̍ jīvanti̠ yadu̠khāñco̠lūkha̍lañcopa̠dadhā̍ti̠ tābhyā̍me̠va yaja̍māno̠'muṣmi̍lm̐lo̠ke̎'gnindu̍he savm̐vathsa̠ro vā e̠ṣa yada̠gnistasya̍ tredhāvihi̠tā iṣṭa̍kāḥ prājāpa̠tyā vai̎ṣṇa̠vīr",
+          "sanskrit": "sū̠yate̠ vā e̠ṣo̎'gnī̠nāym̐ya u̠khāyā̎mbhri̠yate̠ yada̠dhaḥ sā̠daye̠dgarbhāḥ̎ pra̠pādu̍kāḥ syu̠ratho̠ yathā̍ sa̠vāt pra̍tyava̠roha̍ti tā̠dṛge̠va tadā̍sa̠ndī sā̍dayati̠ garbhā̍ṇā̠ndhṛtyā̠ apra̍pādā̠yātho̍ sa̠vame̠vaina̍ṅkaroti̠ garbho̠ vā e̠ṣa yadukhyo̠ yoniḥ̍ śi̠kya̍ym̐yacchi̠kyā̍du̠khānni̠rūhe̠dyone̠r garbha̠nnirha̍ṇyā̠th ṣaḍu̍dyāmagͫ śi̠kya̍mbhavati ṣoḍhāvihi̠to vai",
           "section": 9
+        },
+        {
+          "id": "ts-5-6-9-2",
+          "chunkNumber": 2,
+          "sanskrit": "puru̍ṣa ā̠tmā ca̠ śira̍śca ca̠tvāryaṅgā̎nyā̠tmanne̠vaina̍mbibharti pra̠jāpa̍ti̠r vā e̠ṣa yada̠gnistasyo̠khā co̠lūkha̍lañca̠ stanau̠ tāva̍sya pra̠jā upa̍ jīvanti̠ yadu̠khāñco̠lūkha̍lañcopa̠dadhā̍ti̠ tābhyā̍me̠va yaja̍māno̠'muṣmi̍lm̐lo̠ke̎'gnindu̍he savm̐vathsa̠ro vā e̠ṣa yada̠gnistasya̍ tredhāvihi̠tā iṣṭa̍kāḥ prājāpa̠tyā vai̎ṣṇa̠vīr"
         }
       ]
     },

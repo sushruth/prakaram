@@ -8,8 +8,13 @@
         {
           "id": "ts-4-4-1-1",
           "chunkNumber": 1,
-          "sanskrit": "ra̠śmira̍si̠ khṣayā̍ya tvā̠ khṣaya̍ñjinva̠ preti̍rasi̠ dharmā̍ya tvā̠ dharma̍ñji̠nvānvi̍tirasi di̠ve tvā̠ diva̍ñjinva sa̠ndhira̍sya̠ntari̍khṣāya tvā̠'ntari̍khṣañjinva prati̠dhira̍si pṛthi̠vyai tvā̍ pṛthi̠vīñji̍nva viṣṭaṃ̠bho̍'si̠ vṛṣṭyai̎ tvā̠ vṛṣṭi̍ñjinva pra̠vā'syahne̠ tvā'ha̍r jinvānu̠vā'si̠ rātri̍yai tvā̠ rātri̍ñjinvo̠śiga̍si̠ vasu̍bhyastvā̠ vasū̎ñjinva prake̠to̍'si ru̠drebhya̍stvā ru̠drāñji̍nva sudī̠tira̍syādi̠tyebhya̍stvā''di̠tyā ñji̠nvaujo̍'si pi̠tṛbhya̍stvā pi̠tṝñji̍nva̠ tantu̍rasi pra̠jābhya̍stvā pra̠jā ji̍nva pṛtanā̠ṣāḍa̍si pa̠śubhya̍stvā pa̠śūñji̍nva re̠vada̠syoṣa̍dhībhya̠stvauṣa̍dhīr jinvābhi̠jida̍si yu̠ktagrā̠vendrā̍ya̠ tvendraṃ̍ ji̠nvādhi̍patirasi prā̠ṇāya̍",
+          "sanskrit": "ra̠śmira̍si̠ khṣayā̍ya tvā̠ khṣaya̍ñjinva̠ preti̍rasi̠ dharmā̍ya tvā̠ dharma̍ñji̠nvānvi̍tirasi di̠ve tvā̠ diva̍ñjinva sa̠ndhira̍sya̠ntari̍khṣāya tvā̠'ntari̍khṣañjinva prati̠dhira̍si pṛthi̠vyai tvā̍ pṛthi̠vīñji̍nva viṣṭaṃ̠bho̍'si̠ vṛṣṭyai̎ tvā̠ vṛṣṭi̍ñjinva pra̠vā'syahne̠ tvā'ha̍r jinvānu̠vā'si̠ rātri̍yai tvā̠ rātri̍ñjinvo̠śiga̍si̠",
           "section": 1
+        },
+        {
+          "id": "ts-4-4-1-2",
+          "chunkNumber": 2,
+          "sanskrit": "vasu̍bhyastvā̠ vasū̎ñjinva prake̠to̍'si ru̠drebhya̍stvā ru̠drāñji̍nva sudī̠tira̍syādi̠tyebhya̍stvā''di̠tyā ñji̠nvaujo̍'si pi̠tṛbhya̍stvā pi̠tṝñji̍nva̠ tantu̍rasi pra̠jābhya̍stvā pra̠jā ji̍nva pṛtanā̠ṣāḍa̍si pa̠śubhya̍stvā pa̠śūñji̍nva re̠vada̠syoṣa̍dhībhya̠stvauṣa̍dhīr jinvābhi̠jida̍si yu̠ktagrā̠vendrā̍ya̠ tvendraṃ̍ ji̠nvādhi̍patirasi prā̠ṇāya̍"
         }
       ]
     },
@@ -21,8 +26,13 @@
         {
           "id": "ts-4-4-2-1",
           "chunkNumber": 1,
-          "sanskrit": "rājñya̍si̠ prācī̠ digvasa̍vaste de̠vā adhi̍patayo̠'gnirhe̍tī̠nāmpra̍tidha̠rtā̍ tri̠vṛt tvā̠ stomaḥ̍ pṛthi̠vyāgͫͫ śra̍ya̠tvājya̍mu̠kthamavya̍thayath stabhnātu rathanta̠ragͫ sāma̠ prati̍ṣṭhityai vi̠rāḍa̍si dakhṣi̠ṇā dig ru̠drāste̍ de̠vā adhi̍pataya̠ indro̍ hetī̠nāmpra̍tidha̠rtā pa̍ñcada̠śastvā̠ stomaḥ̍ pṛthi̠vyāgͫͫ śra̍yatu̠ prau̍gamu̠kthamavya̍thayath stabhnātu bṛ̠hath sāma̠ prati̍ṣṭhityai sa̠mrāḍa̍si pra̠tīcī̠ di bṛha̠spati̍rhetī̠nāmpra̍tidha̠rtā tri̍ṇavatrayastri̠g̠ͫśau tvā̠ stomau̍ pṛthi̠vyāgͫͫ śra̍yatāvm̐vaiśvadevāgnimāru̠te u̠kthe avya̍thayantī stabhnītāgͫ śākvararaiva̠te sāma̍nī̠ prati̍ṣṭhityā a̠ntari̍khṣā̠yarṣa̍yastvā prathama̠jā de̠veṣu̍ di̠vo mātra̍yā vari̠ṇā pra̍thantu vidha̠rtā cā̠yamadhi̍patiśca̠ te tvā̠ sarve̍ savm̐vidā̠nā nāka̍sya pṛ̠ṣṭhe su̍va̠rge lo̠ke yaja̍mānañca sādayantu",
+          "sanskrit": "rājñya̍si̠ prācī̠ digvasa̍vaste de̠vā adhi̍patayo̠'gnirhe̍tī̠nāmpra̍tidha̠rtā̍ tri̠vṛt tvā̠ stomaḥ̍ pṛthi̠vyāgͫͫ śra̍ya̠tvājya̍mu̠kthamavya̍thayath stabhnātu rathanta̠ragͫ sāma̠ prati̍ṣṭhityai vi̠rāḍa̍si dakhṣi̠ṇā dig ru̠drāste̍ de̠vā adhi̍pataya̠ indro̍ hetī̠nāmpra̍tidha̠rtā pa̍ñcada̠śastvā̠ stomaḥ̍ pṛthi̠vyāgͫͫ śra̍yatu̠ prau̍gamu̠kthamavya̍thayath stabhnātu bṛ̠hath sāma̠ prati̍ṣṭhityai sa̠mrāḍa̍si pra̠tīcī̠ di",
           "section": 2
+        },
+        {
+          "id": "ts-4-4-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "bṛha̠spati̍rhetī̠nāmpra̍tidha̠rtā tri̍ṇavatrayastri̠g̠ͫśau tvā̠ stomau̍ pṛthi̠vyāgͫͫ śra̍yatāvm̐vaiśvadevāgnimāru̠te u̠kthe avya̍thayantī stabhnītāgͫ śākvararaiva̠te sāma̍nī̠ prati̍ṣṭhityā a̠ntari̍khṣā̠yarṣa̍yastvā prathama̠jā de̠veṣu̍ di̠vo mātra̍yā vari̠ṇā pra̍thantu vidha̠rtā cā̠yamadhi̍patiśca̠ te tvā̠ sarve̍ savm̐vidā̠nā nāka̍sya pṛ̠ṣṭhe su̍va̠rge lo̠ke yaja̍mānañca sādayantu"
         }
       ]
     },
@@ -300,8 +310,13 @@
         {
           "id": "ts-4-4-5-1",
           "chunkNumber": 1,
-          "sanskrit": "i̠ndrā̠gnibhyā̎ntvā sa̠yujā̍ yu̠jā yu̍najmyāghā̠rābhyā̠nteja̍sā̠ varca̍so̠kthebhiḥ̠ stome̍bhi̠ śchando̍bhī ra̠yyai poṣā̍ya sajā̠tānā̎mmaddhyama̠stheyā̍ya̠ mayā̎ tvā sa̠yujā̍ yu̠jā yu̍najmyaṃ̠bā du̠lā ni̍ta̠tnira̠bhraya̍ntī me̠ghaya̍ntī va̠r̠ṣaya̍ntī cupu̠ṇīkā̠ nāmā̍si pra̠jāpa̍tinā tvā̠ viśvā̍bhir dhī̠bhirupa̍ dadhāmi pṛthi̠vyu̍dapu̠ramanne̍na vi̠ṣṭā ma̍nu̠ṣyā̎ste go̠ptāro̠'gnir viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā me̠ śarma̍ ca̠ varma̍ cā̠stvadhi̍dyaura̠ntari̍khṣa̠mbrahma̍ṇā vi̠ṣṭā ma̠ruta̍ste go̠ptāro̍ vā̠yur viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā me̠ śarma̍ ca̠ varma̍ cāstu̠ dyaurapa̍rājitā̠'mṛte̍na vi̠ṣṭā''di̠tyāste̍ go̠ptāraḥ̠ sūryo̠ viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā me̠ śarma̍ ca̠ varma̍ cāstu",
+          "sanskrit": "i̠ndrā̠gnibhyā̎ntvā sa̠yujā̍ yu̠jā yu̍najmyāghā̠rābhyā̠nteja̍sā̠ varca̍so̠kthebhiḥ̠ stome̍bhi̠ śchando̍bhī ra̠yyai poṣā̍ya sajā̠tānā̎mmaddhyama̠stheyā̍ya̠ mayā̎ tvā sa̠yujā̍ yu̠jā yu̍najmyaṃ̠bā du̠lā ni̍ta̠tnira̠bhraya̍ntī me̠ghaya̍ntī va̠r̠ṣaya̍ntī cupu̠ṇīkā̠ nāmā̍si pra̠jāpa̍tinā tvā̠ viśvā̍bhir dhī̠bhirupa̍ dadhāmi pṛthi̠vyu̍dapu̠ramanne̍na vi̠ṣṭā ma̍nu̠ṣyā̎ste go̠ptāro̠'gnir viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā",
           "section": 5
+        },
+        {
+          "id": "ts-4-4-5-2",
+          "chunkNumber": 2,
+          "sanskrit": "me̠ śarma̍ ca̠ varma̍ cā̠stvadhi̍dyaura̠ntari̍khṣa̠mbrahma̍ṇā vi̠ṣṭā ma̠ruta̍ste go̠ptāro̍ vā̠yur viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā me̠ śarma̍ ca̠ varma̍ cāstu̠ dyaurapa̍rājitā̠'mṛte̍na vi̠ṣṭā''di̠tyāste̍ go̠ptāraḥ̠ sūryo̠ viya̍tto'syā̠ntāma̠hampra pa̍dye̠ sā me̠ śarma̍ ca̠ varma̍ cāstu"
         }
       ]
     },
@@ -326,8 +341,13 @@
         {
           "id": "ts-4-4-7-1",
           "chunkNumber": 1,
-          "sanskrit": "bhū̠ya̠skṛda̍si variva̠skṛda̍si̠ prācya̍syū̠rddhvā'sya̍ntarikhṣa̠sada̍sya̠ntari̍khṣe sīdāphsu̠ṣada̍si śyena̠sada̍si gṛdhra̠sada̍si suparṇa̠sada̍si nāka̠sada̍si pṛthi̠vyāstvā̠ dravi̍ṇe sādayāmya̠ ntari̍khṣasya tvā̠ dravi̍ṇe sādayāmi di̠vastvā̠ dravi̍ṇe sādayāmi di̠śāntvā̠ dravi̍ṇe sādayāmi draviṇo̠dāṃ tvā̠ dravi̍ṇe sādayāmi prā̠ṇamme̍ pāhyapā̠namme̍ pāhi vyā̠namme̍ pā̠hyāyu̍r me pāhi vi̠śvāyu̍r me pāhi sa̠rvāyu̍r me pā̠hyagne̠ yat te̠ para̠g̠ͫ hṛnnāma̠ tāvehi̠ sagͫ ra̍bhāvahai̠ pāñca̍janye̠ṣvapye̎ddhyagne̠ yāvā̠ ayā̍vā̠ evā̠ ūmāḥ̠ sabdaḥ̠ saga̍raḥ su̠mekaḥ̍",
+          "sanskrit": "bhū̠ya̠skṛda̍si variva̠skṛda̍si̠ prācya̍syū̠rddhvā'sya̍ntarikhṣa̠sada̍sya̠ntari̍khṣe sīdāphsu̠ṣada̍si śyena̠sada̍si gṛdhra̠sada̍si suparṇa̠sada̍si nāka̠sada̍si pṛthi̠vyāstvā̠ dravi̍ṇe sādayāmya̠ ntari̍khṣasya tvā̠ dravi̍ṇe sādayāmi di̠vastvā̠ dravi̍ṇe sādayāmi di̠śāntvā̠ dravi̍ṇe sādayāmi draviṇo̠dāṃ tvā̠ dravi̍ṇe sādayāmi prā̠ṇamme̍ pāhyapā̠namme̍ pāhi vyā̠namme̍",
           "section": 7
+        },
+        {
+          "id": "ts-4-4-7-2",
+          "chunkNumber": 2,
+          "sanskrit": "pā̠hyāyu̍r me pāhi vi̠śvāyu̍r me pāhi sa̠rvāyu̍r me pā̠hyagne̠ yat te̠ para̠g̠ͫ hṛnnāma̠ tāvehi̠ sagͫ ra̍bhāvahai̠ pāñca̍janye̠ṣvapye̎ddhyagne̠ yāvā̠ ayā̍vā̠ evā̠ ūmāḥ̠ sabdaḥ̠ saga̍raḥ su̠mekaḥ̍"
         }
       ]
     },
@@ -365,8 +385,13 @@
         {
           "id": "ts-4-4-10-1",
           "chunkNumber": 1,
-          "sanskrit": "kṛtti̍kā̠ nakhṣa̍trama̠gnir de̠vatā̠'gne rucaḥ̍ stha pra̠jāpa̍ter dhā̠tuḥ soma̍sya̠rce tvā̍ ru̠ce tvā̎ dyu̠te tvā̍ bhā̠se tvā̠ jyoti̍ṣe tvā rohi̠ṇī nakhṣa̍trampra̠jāpa̍tir de̠vatā̍ mṛgaśī̠r̠ṣannakhṣa̍tra̠g̠ͫ somo̍ de̠vatā̠''rdrā nakhṣa̍tragͫ ru̠dro de̠vatā̠ puna̍rvasū̠ nakhṣa̍tra̠madi̍tir de̠vatā̍ ti̠ṣyo̍ nakhṣa̍tra̠mbṛha̠spati̍r de̠vatā̎''śre̠ṣā nakhṣa̍tragͫ sa̠rpā de̠vatā̍ ma̠ghā nakhṣa̍trampi̠taro̍ de̠vatā̠ phalgu̍nī̠ nakhṣa̍tra de̠vatā̍ śa̠tabhi̍ṣa̠ṅ nakhṣa̍tra̠mindro̍ de̠vatā̎ proṣṭhapa̠dā nakhṣa̍trama̠ja eka̍pād de̠vatā̎ proṣṭhapa̠dā nakhṣa̍tra̠mahi̍r bu̠ddhniyo̍ de̠vatā̍ re̠vatī̠ nakhṣa̍trampū̠ṣā de̠vatā̎'śva̠yujau̠ nakhṣa̍trama̠śvinau̍ de̠vatā̍'pa̠bhara̍ṇī̠r nakhṣa̍traym̐ya̠mo de̠vatā̍, pū̠rṇā pa̠ścād>1, yat te̍ de̠vā ada̍dhuḥ >2",
+          "sanskrit": "kṛtti̍kā̠ nakhṣa̍trama̠gnir de̠vatā̠'gne rucaḥ̍ stha pra̠jāpa̍ter dhā̠tuḥ soma̍sya̠rce tvā̍ ru̠ce tvā̎ dyu̠te tvā̍ bhā̠se tvā̠ jyoti̍ṣe tvā rohi̠ṇī nakhṣa̍trampra̠jāpa̍tir de̠vatā̍ mṛgaśī̠r̠ṣannakhṣa̍tra̠g̠ͫ somo̍ de̠vatā̠''rdrā nakhṣa̍tragͫ ru̠dro de̠vatā̠ puna̍rvasū̠ nakhṣa̍tra̠madi̍tir de̠vatā̍ ti̠ṣyo̍ nakhṣa̍tra̠mbṛha̠spati̍r de̠vatā̎''śre̠ṣā nakhṣa̍tragͫ sa̠rpā de̠vatā̍ ma̠ghā nakhṣa̍trampi̠taro̍ de̠vatā̠ phalgu̍nī̠ nakhṣa̍tra",
           "section": 10
+        },
+        {
+          "id": "ts-4-4-10-2",
+          "chunkNumber": 2,
+          "sanskrit": "de̠vatā̍ śa̠tabhi̍ṣa̠ṅ nakhṣa̍tra̠mindro̍ de̠vatā̎ proṣṭhapa̠dā nakhṣa̍trama̠ja eka̍pād de̠vatā̎ proṣṭhapa̠dā nakhṣa̍tra̠mahi̍r bu̠ddhniyo̍ de̠vatā̍ re̠vatī̠ nakhṣa̍trampū̠ṣā de̠vatā̎'śva̠yujau̠ nakhṣa̍trama̠śvinau̍ de̠vatā̍'pa̠bhara̍ṇī̠r nakhṣa̍traym̐ya̠mo de̠vatā̍, pū̠rṇā pa̠ścād>1, yat te̍ de̠vā ada̍dhuḥ >2"
         }
       ]
     },
@@ -378,8 +403,18 @@
         {
           "id": "ts-4-4-11-1",
           "chunkNumber": 1,
-          "sanskrit": "madhu̍śca̠ mādha̍vaśca̠ vāsa̍ntikāvṛ̠tū śu̠kraśca̠ śuci̍śca̠ graiṣmā̍vṛ̠tū nabha̍śca nabha̠sya̍śca̠ vārṣi̍kāvṛ̠tū i̠ṣaśco̠rjaśca̍ śāra̠dāvṛ̠tū saha̍śca saha̠sya̍śca̠ haima̍ntikāvṛ̠tū tapa̍śca tapa̠sya̍śca śaiśi̠rāvṛ̠tū a̠gnera̍ntaḥśle̠ṣo̍'si̠ kalpe̍tā̠ndyāvā̍pṛthi̠vī kalpa̍ntā̠māpa̠ oṣa̍dhīḥ̠ kalpa̍ntāma̠gnayaḥ̠ pṛtha̠ṅ mama̠ jyaiṣṭhyā̍ya̠ savra̍tā̠ ye̎'gnayaḥ̠ sama̍naso'nta̠rā dyāvā̍pṛthi̠vī śai̍śi̠rāvṛ̠tū a̠bhi kalpa̍mānā̠ indra̍miva de̠vā a̠bhi savm̐vi̍śantu sa̠ym̐yacca̠ prace̍tāścā̠gneḥ soma̍sya̠ sūrya̍syo̠grā ca̍ bhī̠mā ca̍ pitṛ̠ṇāym̐ya̠masyendra̍sya dhru̠vā ca̍ pṛthi̠vī ca̍ de̠vasya̍ savi̠tur ma̠rutā̠vm̐varu̍ṇasya dha̠rtrī ca̠ dhari̍trī ca mi̠trāvaru̍ṇayor mi̠trasya̍ dhā̠tuḥ prācī̍ ca pra̠tīcī̍ ca̠ vasū̍nāgͫ ru̠drāṇā̍ ni̠yuta̍ñca pra̠yuta̠ñcārbu̍dañca̠ nya̍rbudañca samu̠draśca̠ maddhya̠ñcānta̍śca parā̠rddhaśce̠mā me̍ agna̠ iṣṭa̍kā dhe̠navaḥ̍ santu ṣa̠ṣṭhiḥ sa̠hasra̍ma̠yuta̠makhṣī̍yamāṇā ṛta̠sthāḥ stha̍rtā̠vṛdho̍ ghṛta̠ścuto̍ madhu̠ścuta̠ ūrja̍svatīḥ svadhā̠vinī̠stā me̍ agna̠ iṣṭa̍kā dhe̠navaḥ̍ santu vi̠rājo̠ nāma̍ kāma̠dughā̍ a̠mutrā̠muṣmi̍lm̐lo̠ke",
+          "sanskrit": "madhu̍śca̠ mādha̍vaśca̠ vāsa̍ntikāvṛ̠tū śu̠kraśca̠ śuci̍śca̠ graiṣmā̍vṛ̠tū nabha̍śca nabha̠sya̍śca̠ vārṣi̍kāvṛ̠tū i̠ṣaśco̠rjaśca̍ śāra̠dāvṛ̠tū saha̍śca saha̠sya̍śca̠ haima̍ntikāvṛ̠tū tapa̍śca tapa̠sya̍śca śaiśi̠rāvṛ̠tū a̠gnera̍ntaḥśle̠ṣo̍'si̠ kalpe̍tā̠ndyāvā̍pṛthi̠vī kalpa̍ntā̠māpa̠ oṣa̍dhīḥ̠ kalpa̍ntāma̠gnayaḥ̠ pṛtha̠ṅ mama̠ jyaiṣṭhyā̍ya̠ savra̍tā̠",
           "section": 11
+        },
+        {
+          "id": "ts-4-4-11-2",
+          "chunkNumber": 2,
+          "sanskrit": "ye̎'gnayaḥ̠ sama̍naso'nta̠rā dyāvā̍pṛthi̠vī śai̍śi̠rāvṛ̠tū a̠bhi kalpa̍mānā̠ indra̍miva de̠vā a̠bhi savm̐vi̍śantu sa̠ym̐yacca̠ prace̍tāścā̠gneḥ soma̍sya̠ sūrya̍syo̠grā ca̍ bhī̠mā ca̍ pitṛ̠ṇāym̐ya̠masyendra̍sya dhru̠vā ca̍ pṛthi̠vī ca̍ de̠vasya̍ savi̠tur ma̠rutā̠vm̐varu̍ṇasya dha̠rtrī ca̠ dhari̍trī ca mi̠trāvaru̍ṇayor mi̠trasya̍ dhā̠tuḥ prācī̍ ca pra̠tīcī̍ ca̠ vasū̍nāgͫ ru̠drāṇā̍"
+        },
+        {
+          "id": "ts-4-4-11-3",
+          "chunkNumber": 3,
+          "sanskrit": "ni̠yuta̍ñca pra̠yuta̠ñcārbu̍dañca̠ nya̍rbudañca samu̠draśca̠ maddhya̠ñcānta̍śca parā̠rddhaśce̠mā me̍ agna̠ iṣṭa̍kā dhe̠navaḥ̍ santu ṣa̠ṣṭhiḥ sa̠hasra̍ma̠yuta̠makhṣī̍yamāṇā ṛta̠sthāḥ stha̍rtā̠vṛdho̍ ghṛta̠ścuto̍ madhu̠ścuta̠ ūrja̍svatīḥ svadhā̠vinī̠stā me̍ agna̠ iṣṭa̍kā dhe̠navaḥ̍ santu vi̠rājo̠ nāma̍ kāma̠dughā̍ a̠mutrā̠muṣmi̍lm̐lo̠ke"
         }
       ]
     },
@@ -652,8 +687,13 @@
         {
           "id": "ts-4-5-2-1",
           "chunkNumber": 1,
-          "sanskrit": "namo̠ hira̍ṇyabāhave senā̠nye̍ di̠śāñca̠ pata̍ye̠ namo̠ namo̍ vṛ̠khṣebhyo̠ hari̍keśebhyaḥ paśū̠nāmpata̍ye̠ namo̠ nama̍ssa̠spiñja̍rāya̠ tviṣī̍mate pathī̠nāmpata̍ye̠ namo̠ namo̍ babhlu̠śāya̍ vivyā̠dhine'nnā̍nā̠mpata̍ye̠ namo̠ namo̠ hari̍keśāyopavī̠tine̍ pu̠ṣṭānā̠mpata̍ye̠ namo̠ namo̍ bha̠vasya̍ he̠tyai jaga̍tā̠mpata̍ye̠ namo̠ namo̍ ru̠drāyā̍tatā̠vine̠ khṣetrā̍ṇā̠mpata̍ye̠ namo̠ namaḥ̍ sū̠tāyāha̍ntyāya̠ vanā̍nā̠mpata̍ye̠ namo̠ namo̠ rohi̍tāya stha̠pata̍ye vṛ̠khṣāṇā̠mpata̍ye̠ namo̠ namo̍ ma̠ntriṇe̍ vāṇi̠jāya̠ kakhṣā̍ṇā̠mpata̍ye̠ namo̠ namo̍ bhuva̠ntaye̍ vārivaskṛ̠tāyauṣa̍dhīnā̠mpata̍ye̠ namo̠ nama̍ u̠ccairgho̍ṣāyā kra̠ndaya̍te pattī̠nāmpata̍ye̠ namo̠ namaḥ̍ kṛthsnavī̠tāya̠ dhāva̍te̠ satva̍nā̠mpata̍ye̠ namaḥ̍",
+          "sanskrit": "namo̠ hira̍ṇyabāhave senā̠nye̍ di̠śāñca̠ pata̍ye̠ namo̠ namo̍ vṛ̠khṣebhyo̠ hari̍keśebhyaḥ paśū̠nāmpata̍ye̠ namo̠ nama̍ssa̠spiñja̍rāya̠ tviṣī̍mate pathī̠nāmpata̍ye̠ namo̠ namo̍ babhlu̠śāya̍ vivyā̠dhine'nnā̍nā̠mpata̍ye̠ namo̠ namo̠ hari̍keśāyopavī̠tine̍ pu̠ṣṭānā̠mpata̍ye̠ namo̠ namo̍ bha̠vasya̍ he̠tyai jaga̍tā̠mpata̍ye̠ namo̠ namo̍ ru̠drāyā̍tatā̠vine̠ khṣetrā̍ṇā̠mpata̍ye̠ namo̠ namaḥ̍ sū̠tāyāha̍ntyāya̠ vanā̍nā̠mpata̍ye̠ namo̠ namo̠",
           "section": 2
+        },
+        {
+          "id": "ts-4-5-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "rohi̍tāya stha̠pata̍ye vṛ̠khṣāṇā̠mpata̍ye̠ namo̠ namo̍ ma̠ntriṇe̍ vāṇi̠jāya̠ kakhṣā̍ṇā̠mpata̍ye̠ namo̠ namo̍ bhuva̠ntaye̍ vārivaskṛ̠tāyauṣa̍dhīnā̠mpata̍ye̠ namo̠ nama̍ u̠ccairgho̍ṣāyā kra̠ndaya̍te pattī̠nāmpata̍ye̠ namo̠ namaḥ̍ kṛthsnavī̠tāya̠ dhāva̍te̠ satva̍nā̠mpata̍ye̠ namaḥ̍"
         }
       ]
     },
@@ -665,8 +705,13 @@
         {
           "id": "ts-4-5-3-1",
           "chunkNumber": 1,
-          "sanskrit": "nama̠ssaha̍mānāya nivyā̠dhina̍ āvyā̠dhinī̍nā̠mpata̍ye̠ namo̠ namaḥ̍ kaku̠bhāya̍ niṣa̠ṅgiṇe̎ ste̠nānā̠mpata̍ye̠ namo̠ namo̍ niṣa̠ṅgiṇa̍ iṣudhi̠mate̠ taska̍rāṇā̠mpata̍ye̠ namo̠ namo̠ vañca̍te pari̠vañca̍te stāyū̠nāmpata̍ye̠ namo̠ namo̍ nice̠rave̍ parica̠rāyāra̍ṇyānā̠mpata̍ye̠ namo̠ namaḥ̍ sṛkā̠vibhyo̠ jighā̍gͫsadbhyo muṣṇa̠tāmpata̍ye̠ namo̠ namo̍'si̠madbhyo̠ nakta̠ñcara̍dbhyaḥ prakṛ̠ntānā̠mpata̍ye̠ namo̠ nama̍ uṣṇī̠ṣiṇe̍ girica̠rāya̍ kulu̠ñcānā̠mpata̍ye̠ namo̠ nama̠ iṣu̍madbhyo dhanvā̠vibhya̍śca vo̠ namo̠ nama̍ ātanvā̠nebhyaḥ̍ prati̠dadhā̍nebhyaśca vo̠ namo̠ nama̍ ā̠yaccha̍dbhyo visṛ̠jadbhya̍śca vo̠ namo̠ namo'sya̍dbhyo̠ viddhya̍dbhyaśca vo̠ namo̠ nama̠ āsī̍nebhya̠śśayā̍nebhyaśca vo̠ namo̠ namaḥ̍ sva̠padbhyo̠ jāgra̍dbhyaśca vo̠ namo̠ nama̠stiṣṭha̍dbhyo̠ dhāva̍dbhyaśca vo̠ namo̠ namaḥ̍ sa̠bhābhyaḥ̍ sa̠bhāpa̍tibhyaśca vo̠ namo̠ namo̠ aśve̠bhyo'śva̍patibhyaśca vo̠ namaḥ̍",
+          "sanskrit": "nama̠ssaha̍mānāya nivyā̠dhina̍ āvyā̠dhinī̍nā̠mpata̍ye̠ namo̠ namaḥ̍ kaku̠bhāya̍ niṣa̠ṅgiṇe̎ ste̠nānā̠mpata̍ye̠ namo̠ namo̍ niṣa̠ṅgiṇa̍ iṣudhi̠mate̠ taska̍rāṇā̠mpata̍ye̠ namo̠ namo̠ vañca̍te pari̠vañca̍te stāyū̠nāmpata̍ye̠ namo̠ namo̍ nice̠rave̍ parica̠rāyāra̍ṇyānā̠mpata̍ye̠ namo̠ namaḥ̍ sṛkā̠vibhyo̠ jighā̍gͫsadbhyo muṣṇa̠tāmpata̍ye̠ namo̠ namo̍'si̠madbhyo̠ nakta̠ñcara̍dbhyaḥ prakṛ̠ntānā̠mpata̍ye̠ namo̠ nama̍ uṣṇī̠ṣiṇe̍ girica̠rāya̍ kulu̠ñcānā̠mpata̍ye̠ namo̠ nama̠",
           "section": 3
+        },
+        {
+          "id": "ts-4-5-3-2",
+          "chunkNumber": 2,
+          "sanskrit": "iṣu̍madbhyo dhanvā̠vibhya̍śca vo̠ namo̠ nama̍ ātanvā̠nebhyaḥ̍ prati̠dadhā̍nebhyaśca vo̠ namo̠ nama̍ ā̠yaccha̍dbhyo visṛ̠jadbhya̍śca vo̠ namo̠ namo'sya̍dbhyo̠ viddhya̍dbhyaśca vo̠ namo̠ nama̠ āsī̍nebhya̠śśayā̍nebhyaśca vo̠ namo̠ namaḥ̍ sva̠padbhyo̠ jāgra̍dbhyaśca vo̠ namo̠ nama̠stiṣṭha̍dbhyo̠ dhāva̍dbhyaśca vo̠ namo̠ namaḥ̍ sa̠bhābhyaḥ̍ sa̠bhāpa̍tibhyaśca vo̠ namo̠ namo̠ aśve̠bhyo'śva̍patibhyaśca vo̠ namaḥ̍"
         }
       ]
     },
@@ -678,8 +723,13 @@
         {
           "id": "ts-4-5-4-1",
           "chunkNumber": 1,
-          "sanskrit": "nama̍ āvyā̠dhinī̎bhyo vi̠viddhya̍ntībhyaśca vo̠ namo̠ nama̠ uga̍ṇābhyastṛgͫha̠tībhya̍śca vo̠ namo̠ namo̍ gṛ̠thsebhyo̍ gṛ̠thsapa̍tibhyaśca vo̠ namo̠ namo̠ vrāte̎bhyo̠ vrāta̍patibhyaśca vo̠ namo̠ namo̍ ga̠ṇebhyo̍ ga̠ṇapa̍tibhyaśca vo̠ namo̠ namo̠ virū̍pebhyo vi̠śvarū̍pebhyaśca vo̠ namo̠ namo̍ ma̠hadbhyaḥ̍ khṣulla̠kebhya̍śca vo̠ namo̠ namo̍ ra̠thibhyo̍'ra̠thebhya̍śca vo̠ namo̠ namo̠ rathe̎bhyo̠ ratha̍patibhyaśca vo̠ namo̠ namaḥ̠ senā̎bhyaḥ senā̠nibhya̍śca vo̠ namo̠ namaḥ̍ khṣa̠ttṛbhyaḥ̍ saṃgrahī̠tṛbhya̍śca vo̠ namo̠ nama̠stakhṣa̍bhyo rathakā̠rebhya̍śca vo̠ namo̠ namaḥ̠ kulā̍lebhyaḥ ka̠rmāre̎bhyaśca vo̠ namo̠ namaḥ̍ pu̠ñjiṣṭe̎bhyo niṣā̠debhya̍śca vo̠ namo̠ nama̍ iṣu̠kṛdbhyo̍ dhanva̠kṛdbhya̍śca vo̠ namo̠ namo̍ mṛga̠yubhyaḥ̍ śva̠nibhya̍śca vo̠ namo̠ namaḥ̠ śvabhyaḥ̠ śvapa̍tibhyaśca vo̠ namaḥ̍",
+          "sanskrit": "nama̍ āvyā̠dhinī̎bhyo vi̠viddhya̍ntībhyaśca vo̠ namo̠ nama̠ uga̍ṇābhyastṛgͫha̠tībhya̍śca vo̠ namo̠ namo̍ gṛ̠thsebhyo̍ gṛ̠thsapa̍tibhyaśca vo̠ namo̠ namo̠ vrāte̎bhyo̠ vrāta̍patibhyaśca vo̠ namo̠ namo̍ ga̠ṇebhyo̍ ga̠ṇapa̍tibhyaśca vo̠ namo̠ namo̠ virū̍pebhyo vi̠śvarū̍pebhyaśca vo̠ namo̠ namo̍ ma̠hadbhyaḥ̍ khṣulla̠kebhya̍śca vo̠ namo̠ namo̍ ra̠thibhyo̍'ra̠thebhya̍śca vo̠ namo̠ namo̠ rathe̎bhyo̠",
           "section": 4
+        },
+        {
+          "id": "ts-4-5-4-2",
+          "chunkNumber": 2,
+          "sanskrit": "ratha̍patibhyaśca vo̠ namo̠ namaḥ̠ senā̎bhyaḥ senā̠nibhya̍śca vo̠ namo̠ namaḥ̍ khṣa̠ttṛbhyaḥ̍ saṃgrahī̠tṛbhya̍śca vo̠ namo̠ nama̠stakhṣa̍bhyo rathakā̠rebhya̍śca vo̠ namo̠ namaḥ̠ kulā̍lebhyaḥ ka̠rmāre̎bhyaśca vo̠ namo̠ namaḥ̍ pu̠ñjiṣṭe̎bhyo niṣā̠debhya̍śca vo̠ namo̠ nama̍ iṣu̠kṛdbhyo̍ dhanva̠kṛdbhya̍śca vo̠ namo̠ namo̍ mṛga̠yubhyaḥ̍ śva̠nibhya̍śca vo̠ namo̠ namaḥ̠ śvabhyaḥ̠ śvapa̍tibhyaśca vo̠ namaḥ̍"
         }
       ]
     },
@@ -691,8 +741,13 @@
         {
           "id": "ts-4-5-5-1",
           "chunkNumber": 1,
-          "sanskrit": "namo̍ bha̠vāya̍ ca ru̠drāya̍ ca̠ namaḥ̍ śa̠rvāya̍ ca paśu̠pata̍ye ca̠ namo̠ nīla̍grīvāya ca śiti̠kaṇṭhā̍ya ca̠ namaḥ̍ kapa̠rdine̍ ca̠ vyu̍ptakeśāya ca̠ namaḥ̍ sahasrā̠khṣāya̍ ca śa̠tadha̍nvane ca̠ namo̍ giri̠śāya̍ ca śipivi̠ṣṭāya̍ ca̠ namo̍ mī̠ḍhuṣṭa̍māya̠ ceṣu̍mate ca̠ namo̎ hra̠svāya̍ ca vāma̠nāya̍ ca̠ namo̍ bṛha̠te ca̠ varṣī̍yase ca̠ namo̍ vṛ̠ddhāya̍ ca sa̠vm̐vṛddhva̍ne ca̠ namo̠ agri̍yāya ca pratha̠māya̍ ca̠ nama̍ ā̠śave̍ cāji̠rāya̍ ca̠ namaḥ̠ śīghri̍yāya ca̠ śībhyā̍ya ca̠ nama̍ ū̠rmyā̍ya cāvasva̠nyā̍ya ca̠ namaḥ̍ srota̠syā̍ya ca̠ dvīpyā̍ya ca",
+          "sanskrit": "namo̍ bha̠vāya̍ ca ru̠drāya̍ ca̠ namaḥ̍ śa̠rvāya̍ ca paśu̠pata̍ye ca̠ namo̠ nīla̍grīvāya ca śiti̠kaṇṭhā̍ya ca̠ namaḥ̍ kapa̠rdine̍ ca̠ vyu̍ptakeśāya ca̠ namaḥ̍ sahasrā̠khṣāya̍ ca śa̠tadha̍nvane ca̠ namo̍ giri̠śāya̍ ca śipivi̠ṣṭāya̍ ca̠ namo̍ mī̠ḍhuṣṭa̍māya̠ ceṣu̍mate ca̠ namo̎ hra̠svāya̍ ca vāma̠nāya̍ ca̠ namo̍ bṛha̠te ca̠ varṣī̍yase ca̠ namo̍ vṛ̠ddhāya̍ ca sa̠vm̐vṛddhva̍ne ca̠",
           "section": 5
+        },
+        {
+          "id": "ts-4-5-5-2",
+          "chunkNumber": 2,
+          "sanskrit": "namo̠ agri̍yāya ca pratha̠māya̍ ca̠ nama̍ ā̠śave̍ cāji̠rāya̍ ca̠ namaḥ̠ śīghri̍yāya ca̠ śībhyā̍ya ca̠ nama̍ ū̠rmyā̍ya cāvasva̠nyā̍ya ca̠ namaḥ̍ srota̠syā̍ya ca̠ dvīpyā̍ya ca"
         }
       ]
     },
@@ -704,8 +759,13 @@
         {
           "id": "ts-4-5-6-1",
           "chunkNumber": 1,
-          "sanskrit": "namo̎ jye̠ṣṭhāya̍ ca kani̠ṣṭhāya̍ ca̠ namaḥ̍ pūrva̠jāya̍ cāpara̠jāya̍ ca̠ namo̍ maddhya̠māya̍ cāpaga̠lbhāya̍ ca̠ namo̍ jagha̠nyā̍ya ca̠ buddhni̍yāya ca̠ namaḥ̍ so̠bhyā̍ya ca pratisa̠ryā̍ya ca̠ namo̠ yāmyā̍ya ca̠ khṣemyā̍ya ca̠ nama̍ urva̠ryā̍ya ca̠ khalyā̍ya ca̠ namaḥ̠ ślokyā̍ya cāvasā̠nyā̍ya ca̠ namo̠ vanyā̍ya ca̠ kakhṣyā̍ya ca̠ namaḥ̍ śra̠vāya̍ ca pratiśra̠vāya̍ ca̠ nama̍ ā̠śuṣe̍ṇāya cā̠śura̍thāya ca̠ namaḥ̠ śūrā̍ya cāvabhinda̠te ca̠ namo̍ va̠rmiṇe̍ ca varū̠thine̍ ca̠ namo̍ bi̠lmine̍ ca kava̠cine̍ ca̠ namaḥ̍ śru̠tāya̍ ca śrutase̠nāya̍ ca",
+          "sanskrit": "namo̎ jye̠ṣṭhāya̍ ca kani̠ṣṭhāya̍ ca̠ namaḥ̍ pūrva̠jāya̍ cāpara̠jāya̍ ca̠ namo̍ maddhya̠māya̍ cāpaga̠lbhāya̍ ca̠ namo̍ jagha̠nyā̍ya ca̠ buddhni̍yāya ca̠ namaḥ̍ so̠bhyā̍ya ca pratisa̠ryā̍ya ca̠ namo̠ yāmyā̍ya ca̠ khṣemyā̍ya ca̠ nama̍ urva̠ryā̍ya ca̠ khalyā̍ya ca̠ namaḥ̠ ślokyā̍ya cāvasā̠nyā̍ya ca̠ namo̠ vanyā̍ya ca̠ kakhṣyā̍ya ca̠ namaḥ̍ śra̠vāya̍ ca pratiśra̠vāya̍ ca̠",
           "section": 6
+        },
+        {
+          "id": "ts-4-5-6-2",
+          "chunkNumber": 2,
+          "sanskrit": "nama̍ ā̠śuṣe̍ṇāya cā̠śura̍thāya ca̠ namaḥ̠ śūrā̍ya cāvabhinda̠te ca̠ namo̍ va̠rmiṇe̍ ca varū̠thine̍ ca̠ namo̍ bi̠lmine̍ ca kava̠cine̍ ca̠ namaḥ̍ śru̠tāya̍ ca śrutase̠nāya̍ ca"
         }
       ]
     },
@@ -717,8 +777,13 @@
         {
           "id": "ts-4-5-7-1",
           "chunkNumber": 1,
-          "sanskrit": "namo̍ dundu̠bhyā̍ya cāhana̠nyā̍ya ca̠ namo̍ dhṛ̠ṣṇave̍ ca pramṛ̠śāya̍ ca̠ namo̍ dū̠tāya̍ ca̠ prahi̍tāya ca̠ namo̍ niṣa̠ṅgiṇe̍ ceṣudhi̠mate̍ ca̠ nama̍ stī̠khṣṇeṣa̍ve cāyu̠dhine̍ ca̠ namaḥ̍ svāyu̠dhāya̍ ca su̠dhanva̍ne ca̠ namaḥ̠ srutyā̍ya ca̠ pathyā̍ya ca̠ namaḥ̍ kā̠ṭyā̍ya ca nī̠pyā̍ya ca̠ namaḥ̠ sūdyā̍ya ca sara̠syā̍ya ca̠ namo̍ nā̠dyāya̍ ca vaiśa̠ntāya̍ ca̠ namaḥ̠ kūpyā̍ya cāva̠ṭyā̍ya ca̠ namo̠ varṣyā̍ya cāva̠rṣyāya̍ ca̠ namo̍ me̠ghyā̍ya ca vidyu̠tyā̍ya ca̠ nama̍ ī̠ddhriyā̍ya cāta̠pyā̍ya ca̠ namo̠ vātyā̍ya ca̠ reṣmi̍yāya ca̠ namo̍ vāsta̠vyā̍ya ca vāstu̠pāya̍ ca",
+          "sanskrit": "namo̍ dundu̠bhyā̍ya cāhana̠nyā̍ya ca̠ namo̍ dhṛ̠ṣṇave̍ ca pramṛ̠śāya̍ ca̠ namo̍ dū̠tāya̍ ca̠ prahi̍tāya ca̠ namo̍ niṣa̠ṅgiṇe̍ ceṣudhi̠mate̍ ca̠ nama̍ stī̠khṣṇeṣa̍ve cāyu̠dhine̍ ca̠ namaḥ̍ svāyu̠dhāya̍ ca su̠dhanva̍ne ca̠ namaḥ̠ srutyā̍ya ca̠ pathyā̍ya ca̠ namaḥ̍ kā̠ṭyā̍ya ca nī̠pyā̍ya ca̠ namaḥ̠ sūdyā̍ya ca sara̠syā̍ya ca̠ namo̍ nā̠dyāya̍ ca vaiśa̠ntāya̍ ca̠",
           "section": 7
+        },
+        {
+          "id": "ts-4-5-7-2",
+          "chunkNumber": 2,
+          "sanskrit": "namaḥ̠ kūpyā̍ya cāva̠ṭyā̍ya ca̠ namo̠ varṣyā̍ya cāva̠rṣyāya̍ ca̠ namo̍ me̠ghyā̍ya ca vidyu̠tyā̍ya ca̠ nama̍ ī̠ddhriyā̍ya cāta̠pyā̍ya ca̠ namo̠ vātyā̍ya ca̠ reṣmi̍yāya ca̠ namo̍ vāsta̠vyā̍ya ca vāstu̠pāya̍ ca"
         }
       ]
     },
@@ -730,8 +795,13 @@
         {
           "id": "ts-4-5-8-1",
           "chunkNumber": 1,
-          "sanskrit": "namaḥ̠ somā̍ya ca ru̠drāya̍ ca̠ nama̍stā̠mrāya̍ cāru̠ṇāya̍ ca̠ namaḥ̍ śa̠ṅgāya̍ ca paśu̠pata̍ye ca̠ nama̍ u̠grāya̍ ca bhī̠māya̍ ca̠ namo̍ agreva̠dhāya̍ ca dūreva̠dhāya̍ ca̠ namo̍ ha̠ntre ca̠ hanī̍yase ca̠ namo̍ vṛ̠khṣebhyo̠ hari̍keśebhyo̠ nama̍stā̠rāya̠ namaḥ̍ śaṃ̠bhave̍ ca mayo̠bhave̍ ca̠ namaḥ̍ śaṅka̠rāya̍ ca mayaska̠rāya̍ ca̠ namaḥ̍ śi̠vāya̍ ca śi̠vata̍rāya ca̠ nama̠stīrthyā̍ya ca̠ kūlyā̍ya ca̠ namaḥ̍ pā̠ryā̍ya cāvā̠ryā̍ya ca̠ namaḥ̍ pra̠tara̍ṇāya co̠ttara̍ṇāya ca̠ nama̍ ātā̠ryā̍ya cālā̠dyā̍ya ca̠ namaḥ̠ śaṣpyā̍ya ca̠ phenyā̍ya ca̠ namaḥ̍ sika̠tyā̍ya ca pravā̠hyā̍ya ca",
+          "sanskrit": "namaḥ̠ somā̍ya ca ru̠drāya̍ ca̠ nama̍stā̠mrāya̍ cāru̠ṇāya̍ ca̠ namaḥ̍ śa̠ṅgāya̍ ca paśu̠pata̍ye ca̠ nama̍ u̠grāya̍ ca bhī̠māya̍ ca̠ namo̍ agreva̠dhāya̍ ca dūreva̠dhāya̍ ca̠ namo̍ ha̠ntre ca̠ hanī̍yase ca̠ namo̍ vṛ̠khṣebhyo̠ hari̍keśebhyo̠ nama̍stā̠rāya̠ namaḥ̍ śaṃ̠bhave̍ ca mayo̠bhave̍ ca̠ namaḥ̍ śaṅka̠rāya̍ ca mayaska̠rāya̍ ca̠ namaḥ̍ śi̠vāya̍ ca śi̠vata̍rāya ca̠",
           "section": 8
+        },
+        {
+          "id": "ts-4-5-8-2",
+          "chunkNumber": 2,
+          "sanskrit": "nama̠stīrthyā̍ya ca̠ kūlyā̍ya ca̠ namaḥ̍ pā̠ryā̍ya cāvā̠ryā̍ya ca̠ namaḥ̍ pra̠tara̍ṇāya co̠ttara̍ṇāya ca̠ nama̍ ātā̠ryā̍ya cālā̠dyā̍ya ca̠ namaḥ̠ śaṣpyā̍ya ca̠ phenyā̍ya ca̠ namaḥ̍ sika̠tyā̍ya ca pravā̠hyā̍ya ca"
         }
       ]
     },
@@ -743,8 +813,13 @@
         {
           "id": "ts-4-5-9-1",
           "chunkNumber": 1,
-          "sanskrit": "nama̍ iri̠ṇyā̍ya ca prapa̠thyā̍ya ca̠ namaḥ̍ kigͫśi̠lāya̍ ca̠ khṣaya̍ṇāya ca̠ namaḥ̍ kapa̠rdine̍ ca pula̠staye̍ ca̠ namo̠ goṣṭhyā̍ya ca̠ gṛhyā̍ya ca̠ nama̠stalpyā̍ya ca̠ gehyā̍ya ca̠ namaḥ̍ kā̠ṭyā̍ya ca gahvare̠ṣṭhāya̍ ca̠ namo̎ hrada̠yyā̍ya ca nive̠ṣpyā̍ya ca̠ namaḥ̍ pāgͫsa̠vyā̍ya ca raja̠syā̍ya ca̠ namaḥ̠ śuṣkyā̍ya ca hari̠tyā̍ya ca̠ namo̠ lopyā̍ya cola̠pyā̍ya ca̠ nama̍ ū̠rvyā̍ya ca sū̠rmyā̍ya ca̠ namaḥ̍ pa̠rṇyā̍ya ca parṇaśa̠dyā̍ya ca̠ namo̍'pagu̠ramā̍ṇāya cābhighna̠te ca̠ nama̍ ākkhida̠te ca̍ prakkhida̠te ca̠ namo̍ vaḥ kiri̠kebhyo̍ de̠vānā̠g̠ͫ hṛda̍yebhyo̠ namo̍ vikhṣīṇa̠kebhyo̠ namo̍ vicinva̠tkebhyo̠ nama̍ ānirha̠tebhyo̠ nama̍ āmīva̠tkebhyaḥ̍",
+          "sanskrit": "nama̍ iri̠ṇyā̍ya ca prapa̠thyā̍ya ca̠ namaḥ̍ kigͫśi̠lāya̍ ca̠ khṣaya̍ṇāya ca̠ namaḥ̍ kapa̠rdine̍ ca pula̠staye̍ ca̠ namo̠ goṣṭhyā̍ya ca̠ gṛhyā̍ya ca̠ nama̠stalpyā̍ya ca̠ gehyā̍ya ca̠ namaḥ̍ kā̠ṭyā̍ya ca gahvare̠ṣṭhāya̍ ca̠ namo̎ hrada̠yyā̍ya ca nive̠ṣpyā̍ya ca̠ namaḥ̍ pāgͫsa̠vyā̍ya ca raja̠syā̍ya ca̠ namaḥ̠ śuṣkyā̍ya ca hari̠tyā̍ya ca̠ namo̠ lopyā̍ya cola̠pyā̍ya ca̠",
           "section": 9
+        },
+        {
+          "id": "ts-4-5-9-2",
+          "chunkNumber": 2,
+          "sanskrit": "nama̍ ū̠rvyā̍ya ca sū̠rmyā̍ya ca̠ namaḥ̍ pa̠rṇyā̍ya ca parṇaśa̠dyā̍ya ca̠ namo̍'pagu̠ramā̍ṇāya cābhighna̠te ca̠ nama̍ ākkhida̠te ca̍ prakkhida̠te ca̠ namo̍ vaḥ kiri̠kebhyo̍ de̠vānā̠g̠ͫ hṛda̍yebhyo̠ namo̍ vikhṣīṇa̠kebhyo̠ namo̍ vicinva̠tkebhyo̠ nama̍ ānirha̠tebhyo̠ nama̍ āmīva̠tkebhyaḥ̍"
         }
       ]
     },
