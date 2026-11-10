@@ -7,22 +7,6 @@ export function splitAtDanda(text: string): string[] {
     .filter(Boolean);
 }
 
-function median(values: number[]): number {
-  const sorted = values.toSorted((a, b) => a - b);
-  return sorted[sorted.length >> 1] ?? 0;
-}
-
-export function splitLong(text: string, target: number): string[] {
-  if (text.length <= target * 1.5) return [text];
-
-  const spaces: number[] = [];
-  for (let i = 0; i < text.length; i++) if (text[i] === ' ') spaces.push(i);
-  if (spaces.length === 0) return [text];
-
-  const cut = spaces.reduce((best, i) => (Math.abs(i - target) < Math.abs(best - target) ? i : best), spaces[0]);
-  return [text.slice(0, cut).trim(), ...splitLong(text.slice(cut).trim(), target)].filter(Boolean);
-}
-
 /** A piece that is only a printed verse number and its daṇḍas (`३ ॥`); it is not chanted, so it stays with the phrase before it. */
 const NUMBER_ONLY = /^[\s।॥0-9\u0966-\u096F]*[0-9\u0966-\u096F][\s।॥0-9\u0966-\u096F]*$/;
 
@@ -41,11 +25,11 @@ export function splitVerseNumber(text: string): [string, string] {
 }
 
 export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
+  // Phrases end only where the text itself pauses, at a daṇḍa; a long passage with none lights up whole.
   const phrases = chunks.map((c) => phrasesOf(c.sanskrit));
-  const target = median(phrases.flat().map((p) => p.length));
 
   return chunks.flatMap((chunk, ci) =>
-    phrases[ci].flatMap((phrase) => splitLong(phrase, target)).map((piece, pi) => ({
+    phrases[ci].map((piece, pi) => ({
       ...chunk,
       id: `${chunk.id}-${pi}`,
       sanskrit: piece,

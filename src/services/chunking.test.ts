@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { splitAtDanda, splitForReading, splitLong, splitVerseNumber } from './chunking';
+import { splitAtDanda, splitForReading, splitVerseNumber } from './chunking';
 import { devanagariToIast, iastToDevanagari } from './transliteration/iastCodec';
 import { MantraChunk } from '../types/mantra';
 
@@ -16,10 +16,9 @@ describe('chunking', () => {
     expect(splitAtDanda('अ आ । इ ई ॥')).toEqual(['अ आ ।', 'इ ई ॥']);
   });
 
-  test('breaks a long phrase near target at a word boundary', () => {
-    const pieces = splitLong('aaaa bbbb cccc dddd eeee ffff gggg', 10);
-    expect(pieces.every((p) => p.length <= 15)).toBe(true);
-    expect(pieces.join(' ')).toBe('aaaa bbbb cccc dddd eeee ffff gggg');
+  test('a long phrase with no daṇḍa stays whole', () => {
+    const long = 'aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii jjjj ।';
+    expect(splitForReading([chunk('x', 'अ ।'), chunk('y', long)]).map((c) => c.sanskrit)).toEqual(['अ ।', long]);
   });
 
   test('pieces keep their kind and only the first piece leads', () => {
