@@ -15,6 +15,7 @@ relicensed. Every generated file repeats its licence in `metadata.provenance.lic
 | `rigveda-1/` … `rigveda-10/` (`rigveda-<m>/`) | DharmicData | **ODbL 1.0** | `LICENSE-ODbL.txt` |
 | `taittiriya-samhita-4/`, `taittiriya-aranyaka-1/` … `-10/` | taittiriya.com | permission not yet confirmed | — |
 | `rigveda-khila-sri/` | sanskritdocuments.org | permission not yet confirmed | — |
+| `saswara-rigveda-1/` … `-10/` | Saswara Rigveda Samhita (Dayananda Aithal) | none stated, permission not yet confirmed | — |
 
 The `rigveda-*` files are a Derivative Database of DharmicData and are licensed ODbL 1.0; each carries
 the ODbL §4.3 notice "Contains information from DharmicData …" and the licence URI, and the licence
@@ -40,6 +41,7 @@ sources/
 | `taittiriya-samhita-4` | `taittiriya-samhita-4.json` | `taittiriya.com/samhita/kanda_4_prashna_<p>` (p = 1…7) |
 | `taittiriya-aranyaka-1` … `-10` | `taittiriya-aranyaka-<p>.json` | `taittiriya.com/aranyaka/prapathaka_<p>` |
 | `rigveda-khila-sri` | `rigveda-khila-sri.json` | `sanskritdocuments.org/doc_veda/s-sukta-accent.html` |
+| `saswara-rigveda-1` … `-10` | `saswara-rigveda-<m>/` | submodule `vendor/saswara-rigveda` (`git submodule update --init`), Devanagari Format 1 maṇḍala pages; marks the dīrgha svarita |
 
 ## Processed file
 

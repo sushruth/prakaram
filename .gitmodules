@@ -1,0 +1,5 @@
+[submodule "vendor/saswara-rigveda"]
+	path = vendor/saswara-rigveda
+	url = https://github.com/daithal/saswara-rigveda.git
+	branch = saswara-pages
+	shallow = true
