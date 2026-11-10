@@ -175,13 +175,6 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
       {doc?.metadata.place && own && <p className="wiki-cite wiki-muted">{cite(doc, section === undefined ? id : `${id}/${section}`)}</p>}
       {!rangeOk && <p className="wiki-muted" role="note">That range is not in this text.</p>}
 
-      {article.sources.length > 0 && (
-        <section className="wiki-sources" aria-labelledby="wiki-sources-title">
-          <h2 id="wiki-sources-title" className="wiki-sources-title">Sources</h2>
-          <SourceList sources={article.sources} />
-        </section>
-      )}
-
       <WikiInfo article={article} doc={doc} own={own} id={id} unconfirmed={unconfirmed} />
 
       {/* Only the section list is windowed: the chrome above stays mounted, the rows below move with the page scroll. */}
@@ -192,6 +185,13 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
         ))}
         {!printing && bottom > 0 && <div className="wiki-spacer" style={{ height: `${bottom}px` }} aria-hidden="true" />}
       </div>
+
+      {article.sources.length > 0 && (
+        <section className="wiki-sources" aria-labelledby="wiki-sources-title">
+          <h2 id="wiki-sources-title" className="wiki-sources-title">Sources</h2>
+          <SourceList sources={article.sources} />
+        </section>
+      )}
     </main>
   );
 }
