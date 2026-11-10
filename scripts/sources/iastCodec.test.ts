@@ -25,13 +25,11 @@ function sanskritStrings(dir: string, out: string[] = []): string[] {
 }
 
 describe('iastCodec', () => {
-  it('round-trips every sanskrit string in sources/ and leaves no Indic character in the IAST', () => {
+  it('stores every sanskrit string in sources/ as IAST that round-trips through Devanagari', () => {
     const strings = sanskritStrings(SOURCES_DIR);
     expect(strings.length).toBeGreaterThan(0);
-    const lossy = strings.filter((s) => iastToDevanagari(devanagariToIast(s)) !== s);
-    const indic = strings.map(devanagariToIast).filter((s) => INDIC.test(s));
-    expect(lossy.slice(0, 5)).toEqual([]);
-    expect(indic.slice(0, 5)).toEqual([]);
+    expect(strings.filter((s) => INDIC.test(s)).slice(0, 5)).toEqual([]);
+    expect(strings.filter((s) => devanagariToIast(iastToDevanagari(s)) !== s).slice(0, 5)).toEqual([]);
   });
 
   it('separates the readings plain IAST cannot tell apart', () => {

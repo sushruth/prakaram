@@ -52,6 +52,6 @@ describe('sri generator', () => {
     ])
       expect(text).not.toContain(gone);
     // The phalaśruti verses themselves are kept.
-    expect(text).toContain('प॒द्मा॒न॒ने');
+    expect(text).toContain('pa̠dmā̠na̠ne');
   });
 });

@@ -32,6 +32,6 @@ describe('rigveda generator', () => {
   it('keeps swara codepoints in the parsed padas', () => {
     const chunks = built.parts.flatMap((p) => p.sections.flatMap((s) => s.chunks));
     expect(chunks.length).toBeGreaterThan(0);
-    for (const c of chunks) expect(/[\u0951\u0952\u1CDA]/.test(c.sanskrit)).toBe(true);
+    for (const c of chunks) expect(/[\u030D\u0320\u030E]/.test(c.sanskrit.normalize('NFD'))).toBe(true);
   });
 });

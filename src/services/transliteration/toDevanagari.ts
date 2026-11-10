@@ -1,4 +1,4 @@
-import { iastToDevanagari } from './iastCodec';
+import { devanagariToIast, iastToDevanagari } from './iastCodec';
 
 /**
  * The renderer and its helpers (swara, mātrās, padya numerals, cite) read Devanagari. Text arrives either
@@ -32,5 +32,14 @@ export function sourceToDevanagari<T>(value: T): T {
   if (!value || typeof value !== 'object') return value;
   return Object.fromEntries(
     Object.entries(value).map(([k, v]) => [k, k === 'sanskrit' && typeof v === 'string' ? sanskritFieldToDevanagari(v) : sourceToDevanagari(v)]),
+  ) as T;
+}
+
+/** A copy of a parsed source with every `sanskrit` string in canonical IAST, the form `sources/` stores (AGENTS.md §3.0). */
+export function sourceToIast<T>(value: T): T {
+  if (Array.isArray(value)) return value.map(sourceToIast) as T;
+  if (!value || typeof value !== 'object') return value;
+  return Object.fromEntries(
+    Object.entries(value).map(([k, v]) => [k, k === 'sanskrit' && typeof v === 'string' ? devanagariToIast(sanskritFieldToDevanagari(v)) : sourceToIast(v)]),
   ) as T;
 }

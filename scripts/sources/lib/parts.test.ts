@@ -127,14 +127,15 @@ describe('budget check', () => {
 });
 
 describe('the real Taittirīya Saṃhitā split', () => {
-  it.skipIf(!HAS_REAL)('writes one part per prapāṭhaka, each within the cap', () => {
+  it.skipIf(!HAS_REAL)('writes the kāṇḍa in a few parts, each within the cap', () => {
     const entry = realTs4Entry();
-    expect(entry.parts).toHaveLength(7);
+    expect(entry.parts.length).toBeLessThanOrEqual(7);
+    const filesOf = new Map<number | undefined, Set<string>>();
     for (const part of entry.parts) {
       expect(part.gzip).toBeLessThanOrEqual(MAX_PART_GZIP);
       const sections = (JSON.parse(readFileSync(join(SOURCES_DIR, part.file), 'utf8')) as { sections: { id: string }[] }).sections;
-      const prapathakas = new Set(sections.map((s) => prapathakaOf(s.id)));
-      expect(prapathakas.size).toBe(1); // a part holds exactly one prapāṭhaka
+      for (const s of sections) filesOf.set(prapathakaOf(s.id), (filesOf.get(prapathakaOf(s.id)) ?? new Set()).add(part.file));
     }
+    for (const files of filesOf.values()) expect(files.size).toBe(1);
   });
 });

@@ -1,3 +1,4 @@
+import { sourceToIast } from '../../../src/services/transliteration/toDevanagari';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
@@ -101,7 +102,8 @@ export function groupSections<T extends PartSection>(sections: T[], divisionKey:
 }
 
 /** Build a document's index and parts: group its sections, then point each index section at its part file. */
-export function buildSource(doc: MantraDocument, prov: Omit<SourceProvenance, 'sha256'>): BuiltSource {
+export function buildSource(source: MantraDocument, prov: Omit<SourceProvenance, 'sha256'>): BuiltSource {
+  const doc = sourceToIast(source);
   const parts = groupSections(doc.sections, (section) => naturalDivisionKey(doc.id, section)).map((sections, i) => ({ file: `part-${i + 1}.json`, sections }));
   const fileOf = new Map<SuktaSection, string>();
   for (const part of parts) for (const section of part.sections) fileOf.set(section, part.file);
