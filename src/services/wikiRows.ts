@@ -1,6 +1,5 @@
 import { ALL_SUKTAMS } from '../data';
 import { findPiece, pieceChunks } from './koshah';
-import { padyas, type Padya } from './padya';
 import type { MantraChunk, MantraDocument } from '../types/mantra';
 import type { Pos } from './nirdesa';
 import type { WikiArticle, WikiSection } from './wiki';
@@ -11,37 +10,31 @@ export interface HeadingRow {
   key: string;
   section: WikiSection;
 }
-/** One pada of a section, with the pieces the line renderer needs. */
-export interface LineRow {
-  type: 'line';
-  key: string;
-  section: number;
+/** One pada inside a section's running text. */
+export interface Pada {
   pos: Pos;
   chunk: MantraChunk;
+}
+/** A section's padas as one paragraph of running text, like a page of the book view. */
+export interface ProseRow {
+  type: 'prose';
+  key: string;
+  section: number;
+  padas: Pada[];
   /** True for a source (padas are numbered and selectable); false for a composition's referenced parts. */
   own: boolean;
-  /** The section's padya level, or null where it has none. */
-  groups: Padya[] | null;
-  /** The padya this pada closes, where it closes one. */
-  endOf: Padya | undefined;
-}
-/** The selection's actions, shown once after the last picked pada. */
-export interface RangeRow {
-  type: 'range';
-  key: string;
 }
 /** A section whose text could not be resolved. */
 export interface MissingRow {
   type: 'missing';
   key: string;
 }
-export type WikiRow = HeadingRow | LineRow | RangeRow | MissingRow;
-
-const cmp = (a: Pos, b: Pos) => a.section - b.section || a.pada - b.pada;
+export type WikiRow = HeadingRow | ProseRow | MissingRow;
 
 /**
- * The article body as one flat list, in document order: a heading per section, a line per pada, the
- * selection's range row after the last picked pada, and a placeholder where a section has no text.
+ * The article body as one flat list, in document order: a heading and a paragraph of running text per
+ * section, and a placeholder where a section has no text. The selection's actions render inside the
+ * paragraph, right after the last picked pada.
  * This is the unit the window scrolls; the article's chrome around it is not windowed. Pure, so the
  * windowing hook can be reasoned about against a plain array.
  */
@@ -49,7 +42,6 @@ export function buildRows(
   article: WikiArticle,
   doc: MantraDocument | undefined,
   own: boolean,
-  hi: Pos | undefined,
 ): WikiRow[] {
   const rows: WikiRow[] = [];
   for (const section of article.sections) {
@@ -59,22 +51,8 @@ export function buildRows(
       rows.push({ type: 'missing', key: `m-${section.id}` });
       continue;
     }
-    const sec = own ? doc?.sections.find((x) => x.sectionNumber === section.number) : undefined;
-    const groups = sec ? padyas(sec) : null;
-    pieceChunks(ALL_SUKTAMS, piece).forEach((chunk, i) => {
-      const pos: Pos = { section: section.number, pada: i + 1 };
-      rows.push({
-        type: 'line',
-        key: `${chunk.id}-${i}`,
-        section: section.number,
-        pos,
-        chunk,
-        own,
-        groups,
-        endOf: groups?.find((g) => g.to === pos.pada),
-      });
-      if (own && hi && cmp(pos, hi) === 0) rows.push({ type: 'range', key: `r-${chunk.id}-${i}` });
-    });
+    const padas = pieceChunks(ALL_SUKTAMS, piece).map((chunk, i): Pada => ({ pos: { section: section.number, pada: i + 1 }, chunk }));
+    rows.push({ type: 'prose', key: `p-${section.id}`, section: section.number, padas, own });
   }
   return rows;
 }

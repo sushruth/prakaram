@@ -5,8 +5,8 @@ import type { Pos } from '../services/nirdesa';
 import type { WikiRow } from '../services/wikiRows';
 import { useVirtualRows } from './useVirtualRows';
 
-/** `.wiki-line`'s own vertical padding in px (0.85rem at a 16px root), on top of its line-height. */
-const LINE_LEAD = 14;
+/** Rows alternate between a short heading and a section's paragraph of running text; guess about five lines each until measured. */
+const LINES_PER_ROW = 5;
 
 export interface ArticleWindow {
   /** The element the rows live in; the hook reads its document offset as the window origin. */
@@ -52,11 +52,10 @@ export function useArticleWindow({
   const rowsRef = useRef(rows);
   rowsRef.current = rows;
 
-  // Resolve the address to a row and pin it. The range row is inserted only after the picked pada, so the
-  // target line (at or before it) keeps its index; reading the current row list here is safe.
+  // Resolve the address to a row and pin it: a section's heading, or the paragraph holding the pada.
   const view = useVirtualRows({
     count: rows.length,
-    estimate: Math.round(fontSize * 1.85) + LINE_LEAD,
+    estimate: Math.round(fontSize * 1.9 * LINES_PER_ROW),
     listRef,
     keys: useMemo(() => rows.map((row) => row.key), [rows]),
     pinned: pin?.index,
@@ -70,7 +69,7 @@ export function useArticleWindow({
     }
     const all = rowsRef.current;
     const index = from
-      ? all.findIndex((r) => r.type === 'line' && r.pos.section === from.section && r.pos.pada === from.pada)
+      ? all.findIndex((r) => r.type === 'prose' && r.section === from.section)
       : all.findIndex((r) => r.type === 'heading' && r.section.number === section);
     setPin(index < 0 ? undefined : { index, domId: from ? lineDomId(from) : sectionDomId(section) });
   }, [id, section, from?.section, from?.pada]);

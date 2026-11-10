@@ -32,7 +32,7 @@ export interface VirtualRowsOptions {
   listRef?: RefObject<HTMLElement | null>;
   /**
    * Stable per-row identity. When given, the measured-height cache is keyed by it, so a row inserted among
-   * the others (a selection's range row) keeps every other row's measurement. Without it the cache is by
+   * the others keeps every other row's measurement. Without it the cache is by
    * index and a count change clears it.
    */
   keys?: ReadonlyArray<RowKey>;

@@ -4,7 +4,8 @@ import { AddToPrakaram } from './WikiAdd';
 import { lineClass } from '../config/lineClass';
 import { articleHash, lineDomId, sectionDomId } from '../services/wikiNav';
 import type { Pos } from '../services/nirdesa';
-import type { HeadingRow, LineRow } from '../services/wikiRows';
+import type { HeadingRow, ProseRow } from '../services/wikiRows';
+import { Fragment, type ComponentChildren } from 'preact';
 
 /** Attaches the windowing hook's `measure(index)` to a row's root element. */
 export type RowRef = (el: HTMLElement | null) => void;
@@ -51,43 +52,38 @@ export function WikiHeadingRow({
   );
 }
 
-/** One pada: its number and padya number (in a source), and the text. */
-export function WikiLineRow({
+/** A section's padas as running text, as in the book view; in a source each pada has a small number to pick ranges with. */
+export function WikiProseRow({
   row,
   fontSize,
   picked,
   tap,
+  after,
   rowRef,
 }: {
-  row: LineRow;
+  row: ProseRow;
   fontSize: number;
   picked: (p: Pos) => boolean;
   tap: (p: Pos) => void;
+  /** The selection's actions, shown right after the pada at `pos`. */
+  after?: { pos: Pos; node: ComponentChildren };
   rowRef: RowRef;
 }) {
-  const { chunk, pos, own, groups, endOf } = row;
   return (
-    <p
-      id={lineDomId(pos)}
-      className={`wiki-line vedic-text ${lineClass(chunk)}`}
-      style={{ fontSize: `${fontSize}px` }}
-      data-numbered={own ? '' : undefined}
-      data-padya={groups ? '' : undefined}
-      ref={rowRef}
-    >
-      {own && (
-        <button type="button" className="wiki-ln" data-in={picked(pos) ? '' : undefined} aria-label={`Pada ${pos.pada}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
-          {pos.pada}
-        </button>
-      )}
-      {endOf && (
-        <button type="button" className="wiki-pn" data-in={picked(pos) ? '' : undefined} aria-label={`Ṛk ${endOf.number}`} onClick={() => tap(pos)}>
-          {endOf.number}
-        </button>
-      )}
-      <span>
-        <Sanskrit text={chunk.sanskrit} />
-      </span>
+    <p className="wiki-prose vedic-text" style={{ fontSize: `${fontSize}px` }} ref={rowRef}>
+      {row.padas.map(({ pos, chunk }) => (
+        <Fragment key={`${chunk.id}-${pos.pada}`}>
+          <span id={lineDomId(pos)} className={`wiki-pada ${lineClass(chunk)}`} data-in={picked(pos) ? '' : undefined}>
+            {row.own && (
+              <button type="button" className="wiki-ln" aria-label={`Pada ${pos.pada}`} aria-pressed={picked(pos)} onClick={() => tap(pos)}>
+                {pos.pada}
+              </button>
+            )}
+            <Sanskrit text={chunk.sanskrit} />
+          </span>{' '}
+          {after && after.pos.section === pos.section && after.pos.pada === pos.pada && after.node}
+        </Fragment>
+      ))}
     </p>
   );
 }
@@ -104,7 +100,6 @@ export function WikiRangeRow({
   byPada,
   onRefine,
   onClear,
-  rowRef,
 }: {
   citeText: string | undefined;
   addr: string;
@@ -116,10 +111,9 @@ export function WikiRangeRow({
   byPada: boolean;
   onRefine: () => void;
   onClear: () => void;
-  rowRef: RowRef;
 }) {
   return (
-    <p className="wiki-range" ref={rowRef}>
+    <span className="wiki-range">
       {citeText && <span className="wiki-range-cite wiki-muted">{citeText}</span>}
       <button type="button" className="wiki-link wiki-range-follow" onClick={() => onRun(addr)}>
         Follow {words}
@@ -136,6 +130,6 @@ export function WikiRangeRow({
       <button type="button" className="wiki-link" onClick={onClear}>
         clear
       </button>
-    </p>
+    </span>
   );
 }

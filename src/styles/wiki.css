@@ -260,11 +260,6 @@
     cursor: pointer;
   }
 
-  .wiki-line {
-    padding: 0.2rem 0 0.65rem;
-    margin: 0;
-    overflow-wrap: anywhere;
-  }
 
   .wiki-article .wiki-muted {
     font-size: inherit;
@@ -365,69 +360,50 @@
 
 /* Pada numbers (nirdeśa padas): quiet muted numerals in a gutter; where a padya level exists the padya number sits in a second gutter column at the padya's last pada. Picked padas take the accent, no box or tint. */
 @layer components {
-  .wiki-line[data-numbered] {
-    --gutter: 1.75rem;
-    display: grid;
-    grid-template-columns: var(--gutter) minmax(0, 1fr);
-    align-items: baseline;
+
+  /* A section's padas run on as one paragraph, as in the book view. */
+  .wiki-prose {
+    margin: 0 0 1rem;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+  }
+
+  .wiki-pada {
     scroll-margin-top: calc(var(--header-h) + var(--fade-h));
   }
 
   .wiki-ln {
+    margin-inline-end: 0.25em;
     padding: 0;
     border: 0;
     background: none;
     box-shadow: none;
-    font: 0.7rem/1 'Geist', system-ui, sans-serif;
+    font: 0.6rem/1 'Geist', system-ui, sans-serif;
     font-variant-numeric: tabular-nums;
+    vertical-align: super;
     color: var(--text-muted);
-    text-align: left;
     cursor: pointer;
   }
 
-  .wiki-line[data-padya] {
-    --gutter: 3.25rem;
-    grid-template-columns: 1.5rem 1.75rem minmax(0, 1fr);
-  }
-
-  .wiki-pn {
-    grid-column: 2;
-    padding: 0;
-    border: 0;
-    background: none;
-    box-shadow: none;
-    font: 600 0.8rem/1 'Geist', system-ui, sans-serif;
-    font-variant-numeric: tabular-nums;
-    color: var(--text-primary);
-    text-align: left;
-    cursor: pointer;
-  }
-
-  .wiki-pn[data-in] {
-    color: var(--accent);
-  }
-
-  .wiki-line[data-padya] > span {
-    grid-column: 3;
-  }
-
-  .wiki-ln[data-in] {
+  .wiki-pada[data-in] .wiki-ln {
     color: var(--accent);
     font-weight: 600;
   }
+
+
+
+
+
 
   .wiki-range {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 0.75rem;
     margin: 0;
-    padding: 0 0 0.75rem 1.75rem;
+    padding: 0 0 0.75rem;
     font: 0.75rem/1.5 'Geist', system-ui, sans-serif;
   }
 
-  .wiki-line[data-padya] + .wiki-range {
-    padding-left: 3.25rem;
-  }
 
   .wiki-range-cite {
     flex: 1 1 100%;

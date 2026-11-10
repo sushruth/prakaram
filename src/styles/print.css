@@ -79,10 +79,6 @@
   }
 
   /* Keep a pada and a verse together, and each heading with what follows. */
-  .wiki-line {
-    break-inside: avoid;
-  }
-
   .book-kriya,
   .wiki-section-title,
   .wiki-sources-title,

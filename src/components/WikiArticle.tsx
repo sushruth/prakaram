@@ -15,7 +15,7 @@ import { ArticleTitle, useTitleText, ArticleSubtitle, useCiteInWords } from './S
 import { SourceList } from './SourceList';
 import { Contents } from './WikiContents';
 import { WikiInfo } from './WikiInfo';
-import { WikiHeadingRow, WikiLineRow, WikiRangeRow } from './WikiRows';
+import { WikiHeadingRow, WikiProseRow, WikiRangeRow } from './WikiRows';
 import { useArticleWindow } from '../hooks/useArticleWindow';
 
 /** Where a reader creates an article that does not exist yet. */
@@ -88,7 +88,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   const snap = sel && doc && own ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a) : undefined;
   const span = sel && doc && own ? (byPada ? selectionNirdesa(doc, sel.a, sel.b ?? sel.a, true) : snap) : undefined;
   const hi = span?.hi;
-  const rows = useMemo(() => (article ? buildRows(article, doc, own, hi) : []), [article, doc, own, hi?.section, hi?.pada, byPada]);
+  const rows = useMemo(() => (article ? buildRows(article, doc, own) : []), [article, doc, own]);
   const { listRef, start, end, top, bottom, measure, printing } = useArticleWindow({ rows, fontSize, id, section, from: range && rangeOk ? range.from : undefined });
 
   if (!article) {
@@ -138,16 +138,18 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
   };
 
   const citeText = doc && addr ? cite(doc, addr) : undefined;
+  const rangeActions = hi && addr ? {
+    pos: hi,
+    node: <WikiRangeRow citeText={citeText} addr={addr} words={words} onRun={onRun} copied={copied} onCopy={copyLink} showRefine={!!snap?.padya} byPada={byPada} onRefine={refine} onClear={() => setSel(undefined)} />,
+  } : undefined;
   const mounted = start <= end ? rows.slice(start, end + 1).map((row, i) => ({ row, index: start + i })) : [];
   const renderRow = (row: WikiRow, index: number) => {
     const rowRef = measure(index);
     switch (row.type) {
       case 'heading':
         return <WikiHeadingRow row={row} sectionCount={article.sections.length} composition={article.kind === 'composition'} editUrl={article.editUrl} onRun={onRun} rowRef={rowRef} />;
-      case 'line':
-        return <WikiLineRow row={row} fontSize={fontSize} picked={picked} tap={tap} rowRef={rowRef} />;
-      case 'range':
-        return <WikiRangeRow citeText={citeText} addr={addr} words={words} onRun={onRun} copied={copied} onCopy={copyLink} showRefine={!!snap?.padya} byPada={byPada} onRefine={refine} onClear={() => setSel(undefined)} rowRef={rowRef} />;
+      case 'prose':
+        return <WikiProseRow row={row} fontSize={fontSize} picked={picked} tap={tap} after={rangeActions} rowRef={rowRef} />;
       case 'missing':
         return <p className="wiki-muted" ref={rowRef}>The text of this section is not available.</p>;
     }
