@@ -37,7 +37,7 @@ SOFTWARE.
 The app's live sources are compiled into `sources/` by `bun run sources:refresh` and served to the app from
 jsDelivr at the commit `SOURCES_PIN` points at (`src/services/vendored.ts`). Parsing lives in `scripts/sources/`;
 there is no proxy. Every processed file carries `metadata.provenance` and stays `status: "draft"` until proofread.
-Three upstreams feed the 22 files.
+Four upstreams feed the 43 sources.
 
 ### Ṛgveda — DharmicData (ODbL 1.0)
 
@@ -54,21 +54,34 @@ re-serialise into a MantraDocument) is the "alteration method" required by ODbL 
 `scripts/sources/parsers/rigveda.ts` and `scripts/sources/generators/`. The text stays at
 `status: "draft"` until it is proofread against a printed edition.
 
-### Taittirīya Saṃhitā (kāṇḍa 4) and Āraṇyaka — taittiriya.com
+### Taittirīya Saṃhitā, Brāhmaṇa and Āraṇyaka — taittiriya.com
 
-`sources/taittiriya-samhita-4/` is compiled from the prashna pages at `taittiriya.com/samhita/kanda_4_prashna_<p>`, and
+`sources/taittiriya-samhita-1/`, `-4/` and `-5/` are compiled from the prashna pages at `taittiriya.com/samhita/kanda_<k>_prashna_<p>`,
+`sources/taittiriya-brahmana-2-1/` … `-2-8/` from its Brāhmaṇa pages, and
 `sources/taittiriya-aranyaka-1/` … `-10/` from the prapāṭhaka pages at `taittiriya.com/aranyaka/prapathaka_<p>`. **Permission to reuse this text has not been confirmed**; the files stay
 `status: "draft"`.
 
 - Edited by Sridhar Iyer; the primary basis is the edition by Mullaivasal Sri Krishnamurthy Sastrigal (Madras Sanskrit College), per taittiriya.com/about.
-- Source: https://taittiriya.com/ (Saṃhitā: `/samhita/`, Āraṇyaka: `/aranyaka/`)
+- Source: https://taittiriya.com/ (Saṃhitā: `/samhita/`, Brāhmaṇa: `/brahmana/`, Āraṇyaka: `/aranyaka/`)
 - Licence: text from taittiriya.com; permission not yet confirmed.
 
-### Śrī Sūkta (Ṛgveda Khila) — sanskritdocuments.org
+### Śrī Sūkta (Ṛgveda Khila) and Nārāyaṇa Upaniṣad — sanskritdocuments.org
 
 `sources/rigveda-khila-sri.json` is compiled from the accented page `sanskritdocuments.org/doc_veda/s-sukta-accent.html`.
 **Permission to reuse this text has not been confirmed**; the file stays `status: "draft"`.
 
-- Encoded by Avinash Sathaye and Anant Upadhyayula, as named on the page.
-- Source: https://sanskritdocuments.org/doc_veda/s-sukta-accent.html
+`sources/narayana-upanishad/` is compiled from `sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html`, under the same terms.
+
+- Śrī Sūkta encoded by Avinash Sathaye and Anant Upadhyayula; Nārāyaṇa Upaniṣad encoded and proofread by Sunder Hattangadi, as named on the pages.
+- Sources: https://sanskritdocuments.org/doc_veda/s-sukta-accent.html, https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html
 - Licence: text from sanskritdocuments.org; permission not yet confirmed.
+
+### Ṛgveda with the dīrgha svarita — Saswara Rigveda Samhita
+
+`sources/saswara-rigveda-1/` … `-10/` are compiled from the Devanagari maṇḍala pages (Format 1) of the Saswara
+Rigveda Samhita, read from the `vendor/saswara-rigveda` submodule at the commit it pins. **The upstream states no
+licence and permission to reuse it has not been confirmed**; the files stay `status: "draft"`.
+
+- Prepared by Dayananda Aithal, who added the dīrgha svarita by program.
+- Source: https://github.com/daithal/saswara-rigveda
+- Licence: none stated; permission not yet confirmed.
