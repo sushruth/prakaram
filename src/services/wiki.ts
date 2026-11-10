@@ -19,6 +19,8 @@ export interface WikiSection {
   lines: number;
   /** `${docId}/${n}` for a section of a multi-section document, or the document id when it has one section. */
   pieceId: string;
+  /** The kriyā's note, on the first part of a kriyā that carries one. */
+  note?: string;
   /** Set when the section comes from another article (a composed work). */
   from?: { id: string; title: string; sanskrit: string; number: number };
 }
@@ -72,6 +74,7 @@ interface Part {
   section: SuktaSection;
   /** Piece id of the section in its own document. */
   pieceId: string;
+  note?: string;
 }
 
 /** The sections an article shows: its own, or the parts it is composed of. Missing references and cycles are skipped. */
@@ -84,7 +87,8 @@ function resolveParts(doc: MantraDocument, docs: MantraDocument[], seen: string[
   return (doc.metadata.parts ?? []).flatMap((ref) => {
     const src = docs.find((d) => d.id === ref.article);
     if (!src || path.includes(src.id)) return [];
-    return resolveParts(src, docs, path).filter((p) => ref.section === undefined || p.section.sectionNumber === ref.section);
+    const found = resolveParts(src, docs, path).filter((p) => ref.section === undefined || p.section.sectionNumber === ref.section);
+    return ref.note && found.length ? [{ ...found[0], note: ref.note }, ...found.slice(1)] : found;
   });
 }
 
@@ -124,7 +128,8 @@ export function prakaraAsDoc(p: Prakara, docs: MantraDocument[]): MantraDocument
   const parts = p.items.flatMap((i) => {
     if (i.type !== 'sukta_ref' || !i.suktaId) return [];
     // A range is described by every section it touches, so a composition lists all its parts.
-    return partsOfNirdesa(i.suktaId, itemNirdesa(i, docs) ?? i.suktaId);
+    const parts = partsOfNirdesa(i.suktaId, itemNirdesa(i, docs) ?? i.suktaId);
+    return i.note && parts.length ? [{ ...parts[0], note: i.note }, ...parts.slice(1)] : parts;
   });
   return {
     id: p.id,
@@ -218,6 +223,7 @@ const toArticle = (doc: MantraDocument, docs: MantraDocument[]): WikiArticle => 
     title: p.section.title,
     lines: p.section.chunks.length,
     pieceId: p.pieceId,
+    ...(p.note ? { note: p.note } : {}),
     ...(composed ? { from: { id: p.doc.id, title: p.doc.title.english, sanskrit: p.doc.title.sanskrit, number: p.section.sectionNumber } } : {}),
   }));
   // A composition is only as reviewed as its least reviewed part.

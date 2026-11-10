@@ -30,6 +30,8 @@ export interface MantraChunk {
   /** Player only: the source document this pada comes from, so the player can cite every source it reads. */
   sourceId?: string;
   tokens?: AksharaToken[];
+  /** Player only: the note of the kriyā this pada opens. */
+  note?: string;
 }
 
 export interface SuktaSection {
@@ -168,6 +170,8 @@ export interface PrakaraItem {
   kriyaName?: string;
   /** Generated from `kriyaName`: '<kriyaName> kariṣye'. */
   sankalpa?: string;
+  /** A note on this kriyā shown behind an asterisk, e.g. where printed editions start a part differently. */
+  note?: string;
 }
 
 export interface Prakara {

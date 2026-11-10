@@ -70,8 +70,8 @@ export const usePrakaraStore = create<PrakaraState>()(
                 if (r.chunks.some((x) => x.id === c.id)) opens.set(c.id, { ...opens.get(c.id), padya: g.number });
               }
             }
-            for (const ch of r.chunks) {
-              chunks.push({ ...ch, ...opens.get(ch.id), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
+            for (const [i, ch] of r.chunks.entries()) {
+              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 && item.note ? { note: item.note } : {}), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({

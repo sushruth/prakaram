@@ -120,7 +120,7 @@ export function normalizePrakara(v: unknown, docs: MantraDocument[] = ALL_SUKTAM
     if (typeof i !== 'object' || i === null || typeof i.id !== 'string' || (i.type !== 'sukta_ref' && i.type !== 'vakya')) return [];
     const { sectionId, nirdesa, ...raw } = i;
     const rest: PrakaraItem = { ...raw };
-    for (const k of ['kriyaName', 'sankalpa'] as const) if (typeof rest[k] !== 'string') delete rest[k];
+    for (const k of ['kriyaName', 'sankalpa', 'note'] as const) if (typeof rest[k] !== 'string') delete rest[k];
     const given = typeof nirdesa === 'string' ? normaliseNirdesa(nirdesa) : undefined;
     const addr = given ?? (typeof sectionId === 'string' ? itemNirdesa(i, docs) : undefined);
     if (!addr || addr === rest.suktaId) return [rest];
