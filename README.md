@@ -153,14 +153,14 @@ bunx wrangler dev
 ---
 
 ## 🙏 Sources and credits
-The texts in the Koshah come from these editions, and we are grateful to the people who typed and proofread them. Full notices are in `THIRD_PARTY_NOTICES.md`.
+The texts in the Koshah come from these editions, and we are grateful to the people who typed and proofread them. Full notices are in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-* **Ṛgveda:** [DharmicData](https://github.com/bhavykhatri/DharmicData) (ODbL 1.0).
-* **Ṛgveda with the dīrgha svarita:** [Saswara Rigveda Samhita](https://github.com/daithal/saswara-rigveda) by Dayananda Aithal.
-* **Taittirīya Saṃhitā, Brāhmaṇa and Āraṇyaka:** [taittiriya.com](https://taittiriya.com/), edited by Sridhar Iyer from the edition of Mullaivasal Sri Krishnamurthy Sastrigal.
+* **Ṛgveda:** [DharmicData](https://github.com/bhavykhatri/DharmicData) by [Bhavy Khatri](https://github.com/bhavykhatri) ([ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/)).
+* **Ṛgveda with the dīrgha svarita:** [Saswara Rigveda Samhita](https://github.com/daithal/saswara-rigveda) by [Dayananda Aithal](https://github.com/daithal).
+* **Taittirīya Saṃhitā, Brāhmaṇa and Āraṇyaka:** [taittiriya.com](https://taittiriya.com/), edited by [Sridhar Iyer](https://taittiriya.com/about) from the edition of Mullaivasal Sri Krishnamurthy Sastrigal.
 * **Śrī Sūkta:** [sanskritdocuments.org](https://sanskritdocuments.org/doc_veda/s-sukta-accent.html), encoded by Avinash Sathaye and Anant Upadhyayula.
 * **Nārāyaṇa Upaniṣad:** [sanskritdocuments.org](https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html), encoded and proofread by Sunder Hattangadi.
 * **Icons:** [Phosphor Icons](https://phosphoricons.com) (MIT).
 
 ## 📜 License
-Everything in the Koshah belongs to the public: we admit only text, translation, commentary, audio and readings dedicated to the public domain (CC0), and nobody owns an edition or a prakaram. The Vedic texts themselves are ancient, but a typed, proofread edition can carry rights, so texts whose permission we cannot confirm stay `draft` until we replace them with our own from the original. Each text's source and licence status is shown in the Koshah and listed in `THIRD_PARTY_NOTICES.md`. Code is released under the MIT License.
+Everything in the Koshah belongs to the public: we admit only text, translation, commentary, audio and readings dedicated to the public domain (CC0), and nobody owns an edition or a prakaram. The Vedic texts themselves are ancient, but a typed, proofread edition can carry rights, so texts whose permission we cannot confirm stay `draft` until we replace them with our own from the original. Each text's source and licence status is shown in the Koshah and listed in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Code is released under the MIT License.
