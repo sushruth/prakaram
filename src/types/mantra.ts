@@ -32,6 +32,8 @@ export interface MantraChunk {
   tokens?: AksharaToken[];
   /** Player only: the note of the kriyā this pada opens. */
   note?: string;
+  /** Player only: the title of the kriyā this pada opens. */
+  kriya?: string;
 }
 
 export interface SuktaSection {

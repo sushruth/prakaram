@@ -5,8 +5,7 @@ import { ALL_SUKTAMS, DEFAULT_PRAKARAS } from '../data';
 import { PIECE_PREFIX, findPiece, itemNirdesa, nirdesaAsPrakara, normalizePrakara, pieceAsPrakara } from '../services/koshah';
 import { padyas } from '../services/padya';
 import { resolveNirdesa } from '../services/nirdesa';
-import { useSettingsStore } from './useSettingsStore';
-import { READING_TRANSFORMS, applyTransforms } from '../services/chunking';
+import { splitForReading } from '../services/chunking';
 
 interface PrakaraState {
   prakaras: Prakara[];
@@ -71,7 +70,7 @@ export const usePrakaraStore = create<PrakaraState>()(
               }
             }
             for (const [i, ch] of r.chunks.entries()) {
-              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 && item.note ? { note: item.note } : {}), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
+              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 ? { kriya: item.customTitle, ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({
@@ -81,12 +80,12 @@ export const usePrakaraStore = create<PrakaraState>()(
               translation: item.customTranslation || item.customTitle || 'Procedural Vakya',
               kind: item.customText?.includes('॥') ? 'shloka' : 'vakya',
               isLead: true,
+              kriya: item.customTitle,
             });
           }
         }
 
-        const mode = useSettingsStore.getState().splitLines ? 'phrase' : 'verse';
-        return applyTransforms(chunks, READING_TRANSFORMS[mode]);
+        return splitForReading(chunks);
       },
 
       addPrakara: (prakara) =>

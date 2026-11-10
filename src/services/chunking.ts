@@ -36,17 +36,7 @@ export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
       section: pi === 0 ? chunk.section : undefined,
       padya: pi === 0 ? chunk.padya : undefined,
       note: pi === 0 ? chunk.note : undefined,
+      kriya: pi === 0 ? chunk.kriya : undefined,
     }))
   );
-}
-
-export type ChunkTransform = (chunks: MantraChunk[]) => MantraChunk[];
-
-export const READING_TRANSFORMS: Record<'verse' | 'phrase', ChunkTransform[]> = {
-  verse: [],
-  phrase: [splitForReading],
-};
-
-export function applyTransforms(chunks: MantraChunk[], transforms: ChunkTransform[]): MantraChunk[] {
-  return transforms.reduce((acc, t) => t(acc), chunks);
 }

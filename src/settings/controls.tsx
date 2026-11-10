@@ -25,12 +25,6 @@ export function FontSizeStepper() {
   );
 }
 
-export function WrapSwitch() {
-  const checked = useSettingsStore((s) => s.wrapLines);
-  const onToggle = useSettingsStore((s) => s.toggleWrapLines);
-  return <Switch checked={checked} onToggle={onToggle} />;
-}
-
 export function PauseAwaySwitch() {
   const checked = useSettingsStore((s) => s.pauseWhenAway);
   const onToggle = useSettingsStore((s) => s.togglePauseWhenAway);
@@ -62,12 +56,6 @@ export function PaceDebugControl() {
       <Switch checked={checked} onToggle={onToggle} />
     </div>
   );
-}
-
-export function SplitSwitch() {
-  const checked = useSettingsStore((s) => s.splitLines);
-  const onToggle = useSettingsStore((s) => s.toggleSplitLines);
-  return <Switch checked={checked} onToggle={onToggle} />;
 }
 
 export function TranslationSwitch() {
