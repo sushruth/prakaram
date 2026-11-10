@@ -2,7 +2,7 @@
   /* A kriyā's note: a small info icon that opens a short line of text. */
   .kriya-note {
     display: inline-block;
-    margin-inline-start: 0.35rem;
+    margin-inline-end: 0.15em;
     font: 500 0.8rem/1.4 'Geist', system-ui, sans-serif;
     color: var(--text-muted);
 
@@ -10,14 +10,19 @@
     & > summary {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-width: 2rem;
+      /* The icon sits at the text's edge; the rest of the 2rem target reaches into the gap after it. */
+      justify-content: flex-start;
+      min-width: 1.75rem;
       min-height: 2rem;
+      margin-inline-end: -0.25rem;
       margin: -0.5rem 0;
       vertical-align: middle;
       cursor: pointer;
       list-style: none;
       color: var(--accent);
+    }
+    & > summary:focus:not(:focus-visible) {
+      outline: none;
     }
     & > summary::-webkit-details-marker {
       display: none;

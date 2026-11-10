@@ -79,6 +79,10 @@
     break-after: avoid;
   }
 
+  .book-kriya .kriya-note {
+    margin-inline-start: 0.35rem;
+  }
+
   .book-kriya:first-child {
     margin-top: 0;
   }
