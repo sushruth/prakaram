@@ -57,7 +57,7 @@ export function parseTaittiriya(pages: PrashnaPage[], kanda: number): MantraDocu
       status: 'draft',
       license: 'Text from taittiriya.com; permission not yet confirmed.',
       categories: ['Yajurveda', 'Krishna Yajurveda', 'Samhitas'],
-      summary: `The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa ${kanda}, from taittiriya.com. The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.`,
+      summary: `The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa ${kanda}, from taittiriya.com.${kanda === 4 ? ' The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.' : ''}`,
     },
     sections,
   };

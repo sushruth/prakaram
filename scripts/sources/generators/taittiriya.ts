@@ -14,9 +14,8 @@ import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'taittiriya-samhita';
 const PARSER = 'taittiriya@2';
-/** Only kāṇḍa 4 is in the vendored table. */
-const KANDA = 4;
-const PRASHNAS = Array.from({ length: 7 }, (_, i) => i + 1);
+/** The kāṇḍas in the vendored table and their prapāṭhaka counts. */
+const KANDAS: Record<number, number> = { 1: 8, 4: 7, 5: 7 };
 const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');
 const LICENSE = 'Text from taittiriya.com; permission not yet confirmed.';
 
@@ -32,26 +31,32 @@ async function upstreamRefFor(urls: string[], fallback: string): Promise<string>
   }
 }
 
-/** Fetch kāṇḍa 4's seven prashna pages, parse them into one document, build and write its index + parts. */
-async function generate(): Promise<ManifestEntry[]> {
-  const retrievedAt = new Date().toISOString().slice(0, 10);
-  const urls = PRASHNAS.map((p) => pageUrl(KANDA, p));
+/** Fetch one kāṇḍa's prashna pages, parse them into one document, build and write its index + parts. */
+async function generateKanda(kanda: number, prashnas: number, retrievedAt: string): Promise<ManifestEntry> {
+  const numbers = Array.from({ length: prashnas }, (_, i) => i + 1);
+  const urls = numbers.map((p) => pageUrl(kanda, p));
   const pages: PrashnaPage[] = [];
-  for (const [i, url] of urls.entries()) pages.push({ prashna: PRASHNAS[i], html: await getText(url) });
-  const doc = parseTaittiriya(pages, KANDA);
+  for (const [i, url] of urls.entries()) pages.push({ prashna: numbers[i], html: await getText(url) });
   const entry = writeSource(
     SOURCES_DIR,
-    buildSource(doc, {
-      upstreamUrl: `https://taittiriya.com/samhita/kanda_${KANDA}_prashna_1`,
+    buildSource(parseTaittiriya(pages, kanda), {
+      upstreamUrl: pageUrl(kanda, 1),
       upstreamRef: await upstreamRefFor(urls, retrievedAt),
       retrievedAt,
       parser: PARSER,
       license: LICENSE,
-      attribution: `Taittirīya Saṃhitā, kāṇḍa ${KANDA} — taittiriya.com, edited by Sridhar Iyer`,
+      attribution: `Taittirīya Saṃhitā, kāṇḍa ${kanda} — taittiriya.com, edited by Sridhar Iyer`,
     }),
   );
   console.log(`[${ID}] wrote ${entry.index} + ${entry.parts.length} part(s)`);
-  return [entry];
+  return entry;
+}
+
+async function generate(): Promise<ManifestEntry[]> {
+  const retrievedAt = new Date().toISOString().slice(0, 10);
+  const entries: ManifestEntry[] = [];
+  for (const [kanda, prashnas] of Object.entries(KANDAS)) entries.push(await generateKanda(Number(kanda), prashnas, retrievedAt));
+  return entries;
 }
 
 export default { id: ID, generate };

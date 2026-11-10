@@ -9,7 +9,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import type { SourceIndex } from '../../src/types/mantra';
-import { writeManifest, type ManifestEntry } from './lib/manifest';
+import { readManifest, writeManifest, type ManifestEntry } from './lib/manifest';
 import { budgetFailures, buildManifestMetrics, MAX_PART_GZIP } from './lib/parts';
 import { sha256Hex } from './lib/hash';
 import { verifyProvenance } from './lib/provenance';
@@ -17,6 +17,8 @@ import { verifyProvenance } from './lib/provenance';
 const GENERATORS_DIR = join(import.meta.dir, 'generators');
 const SOURCES_DIR = join(import.meta.dir, '..', '..', 'sources');
 const WARN_ONLY = process.env.SOURCES_BUDGET_WARN_ONLY === '1';
+// Refresh only these generator ids and keep every other entry from the current manifest, for when an upstream is unreachable.
+const ONLY = process.env.SOURCES_ONLY?.split(',').filter(Boolean);
 
 interface Generator {
   id: string;
@@ -47,9 +49,10 @@ function verifyPart(file: string, sha256: string): boolean {
   return sha256Hex(readFileSync(join(SOURCES_DIR, file), 'utf8')) === sha256;
 }
 
+const generators = (await loadGenerators()).filter((g) => !ONLY || ONLY.includes(g.id));
 const entries: ManifestEntry[] = [];
 const unverified: string[] = [];
-for (const generator of await loadGenerators()) {
+for (const generator of generators) {
   const start = Date.now();
   const produced = await generator.generate();
   entries.push(...produced);
@@ -67,6 +70,12 @@ for (const generator of await loadGenerators()) {
     }
   }
   console.log(`${generator.id}: ${produced.length} docs, ${totalParts} parts, ${bytes} bytes, provenance ${verified}/${produced.length} verified (${Date.now() - start}ms)`);
+}
+
+if (ONLY) {
+  const fresh = new Set(entries.map((e) => e.id));
+  const owned = (id: string) => generators.some((g) => id === g.id || id.startsWith(`${g.id}-`));
+  entries.push(...readManifest().sources.filter((e) => !fresh.has(e.id) && !owned(e.id)));
 }
 
 const metrics = buildManifestMetrics(entries, SOURCES_DIR);
