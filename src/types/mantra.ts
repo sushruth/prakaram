@@ -183,7 +183,7 @@ export interface PrakaraItem {
   section?: string;
   /** A silent reference (a salutation, a dhūpam mantra): it starts on a line of its own, like a new section, but with no heading. */
   silent?: boolean;
-  /** A note on this kriyā shown behind an asterisk, e.g. where printed editions start a part differently. */
+  /** A note on this kriyā shown behind an info icon, e.g. where printed editions start a part differently. */
   note?: string;
 }
 

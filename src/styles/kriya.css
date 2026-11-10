@@ -1,17 +1,23 @@
 @layer components {
-  /* A kriyā's note: a quiet asterisk that opens a short line of text. */
+  /* A kriyā's note: a small info icon that opens a short line of text. */
   .kriya-note {
     display: inline-block;
     margin-inline-start: 0.35rem;
     font: 500 0.8rem/1.4 'Geist', system-ui, sans-serif;
     color: var(--text-muted);
 
+    /* A comfortable touch target around a small icon, sitting on the text's baseline. */
     & > summary {
-      display: inline;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2rem;
+      min-height: 2rem;
+      margin: -0.5rem 0;
+      vertical-align: middle;
       cursor: pointer;
       list-style: none;
       color: var(--accent);
-      font-weight: 700;
     }
     & > summary::-webkit-details-marker {
       display: none;
