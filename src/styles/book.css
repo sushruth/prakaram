@@ -40,6 +40,9 @@
     column-count: var(--pages);
     column-gap: var(--page-gap);
     column-fill: auto;
+    /* keepPadasWhole() decides the breaks; the default 2-line widows and orphans would move lines it already checked. */
+    widows: 1;
+    orphans: 1;
     line-height: 1.9;
     overflow-wrap: break-word;
   }
