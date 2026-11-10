@@ -25,10 +25,10 @@ bun run build      # production build
 
 ### Refresh the sources
 
-Source text is compiled into `sources/` by generators under `scripts/sources/`. The Saswara Ṛgveda is read from a submodule, so fetch it first:
+Source text is compiled into `sources/` by generators under `scripts/sources/`. The Saswara Ṛgveda is read from a 741 MB submodule. It is marked `update = none`, so clones and the Cloudflare build skip it; fetch it by hand before a refresh:
 
 ```bash
-git submodule update --init vendor/saswara-rigveda
+git submodule update --init --checkout vendor/saswara-rigveda
 bun run sources:refresh
 SOURCES_ONLY=saswara-rigveda bun run sources:refresh   # one generator only
 ```

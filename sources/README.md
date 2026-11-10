@@ -41,7 +41,7 @@ sources/
 | `taittiriya-samhita-4` | `taittiriya-samhita-4.json` | `taittiriya.com/samhita/kanda_4_prashna_<p>` (p = 1…7) |
 | `taittiriya-aranyaka-1` … `-10` | `taittiriya-aranyaka-<p>.json` | `taittiriya.com/aranyaka/prapathaka_<p>` |
 | `rigveda-khila-sri` | `rigveda-khila-sri.json` | `sanskritdocuments.org/doc_veda/s-sukta-accent.html` |
-| `saswara-rigveda-1` … `-10` | `saswara-rigveda-<m>/` | submodule `vendor/saswara-rigveda` (`git submodule update --init`), Devanagari Format 1 maṇḍala pages; marks the dīrgha svarita |
+| `saswara-rigveda-1` … `-10` | `saswara-rigveda-<m>/` | submodule `vendor/saswara-rigveda` (`git submodule update --init --checkout vendor/saswara-rigveda`; it has `update = none`, so builds skip it), Devanagari Format 1 maṇḍala pages; marks the dīrgha svarita |
 
 ## Processed file
 

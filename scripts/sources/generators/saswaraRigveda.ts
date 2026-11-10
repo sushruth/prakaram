@@ -1,6 +1,6 @@
 /**
  * Generator for Dayananda Aithal's Saswara Rigveda Samhita, read from the `vendor/saswara-rigveda` submodule
- * (`git submodule update --init vendor/saswara-rigveda`). The submodule commit is the upstream ref.
+ * (`git submodule update --init --checkout vendor/saswara-rigveda`). The submodule commit is the upstream ref.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
