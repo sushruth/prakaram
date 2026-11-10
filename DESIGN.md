@@ -62,8 +62,8 @@ Do not add new hues. If a new state needs color, derive it from `--accent` at lo
 | Role | Face | Notes |
 | :--- | :--- | :--- |
 | UI and titles | Geist (400, 500, 600) | Titles at 600, tracking `-0.01em`. Uppercase only for small kind labels (Shloka, Vakya) and section captions. |
-| Devanagari | Noto Sans Devanagari | Sans only. Serif Indic faces are not used. |
-| Telugu, Kannada, Tamil, Malayalam | Noto Sans (matching script) | Same rules as Devanagari. |
+| Devanagari | Noto Serif Devanagari | Serif for the text, like a printed book. Noto Sans Devanagari is loaded at one weight only as the fallback for Vedic marks. |
+| Telugu, Kannada, Tamil, Malayalam | Noto Serif (matching script) | Same rules as Devanagari. IAST uses Noto Serif. |
 
 **Font features.** Apply globally: `"kern"`, `"liga"`, `"calt"`. Indic text additionally uses `"mark"` and `"mkmk"` for correct combining marks (see `AGENTS.md` §3B for Tamil cluster order). Numeric readouts (BPM, confidence) should use `font-variant-numeric: tabular-nums` so they don't jitter while changing.
 
