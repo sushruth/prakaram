@@ -12,22 +12,22 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'ns-1',
         type: 'sukta_ref',
-        suktaId: 'rigveda-8',
-        nirdesa: 'rigveda-8/81',
+        suktaId: 'saswara-rigveda-8',
+        nirdesa: 'saswara-rigveda-8/81',
         customTitle: 'Ganesha Suktam · ā tū na indra'
       },
       {
         id: 'ns-2',
         type: 'sukta_ref',
-        suktaId: 'rigveda-2',
-        nirdesa: 'rigveda-2/23.p1',
+        suktaId: 'saswara-rigveda-2',
+        nirdesa: 'saswara-rigveda-2/23.p1',
         customTitle: 'Ganesha Suktam · gaṇānāṃ tvā'
       },
       {
         id: 'ns-3',
         type: 'sukta_ref',
-        suktaId: 'rigveda-10',
-        nirdesa: 'rigveda-10/112.p9-p10',
+        suktaId: 'saswara-rigveda-10',
+        nirdesa: 'saswara-rigveda-10/112.p9-p10',
         customTitle: 'Ganesha Suktam · ni ṣu sīda'
       },
       {
@@ -103,8 +103,8 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       {
         id: 'ns-v2',
         type: 'sukta_ref',
-        suktaId: 'rigveda-1',
-        nirdesa: 'rigveda-1/22.31-22.42',
+        suktaId: 'saswara-rigveda-1',
+        nirdesa: 'saswara-rigveda-1/22.p16-p21',
         customTitle: 'Vishnu Suktam · ato devā',
         note: 'From the Ṛgveda (1.22.16–21): no Taittirīya source in the library has these verses, so the accents follow the Ṛgveda.'
       },

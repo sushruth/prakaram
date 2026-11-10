@@ -23,6 +23,12 @@ const rigvedaMandala = (n: number): VendoredSource => ({
   label: `Ṛgveda, Maṇḍala ${n}`,
   sanskrit: `ऋग्वेद, मण्डलम् ${devanagari(n)}`,
 });
+const saswaraMandala = (n: number): VendoredSource => ({
+  id: `saswara-rigveda-${n}`,
+  index: `saswara-rigveda-${n}/index.json`,
+  label: `Ṛgveda (Saswara), Maṇḍala ${n}`,
+  sanskrit: `Ṛgveda, Maṇḍalam ${n}`,
+});
 const aranyakaPrapathaka = (n: number): VendoredSource => ({
   id: `taittiriya-aranyaka-${n}`,
   index: `taittiriya-aranyaka-${n}/index.json`,
@@ -39,6 +45,7 @@ const brahmanaPrapathaka = (a: number, p: number): VendoredSource => ({
 
 export const VENDORED_SOURCES: VendoredSource[] = [
   ...Array.from({ length: 10 }, (_, i) => rigvedaMandala(i + 1)),
+  ...Array.from({ length: 10 }, (_, i) => saswaraMandala(i + 1)),
   { id: 'taittiriya-samhita-1', index: 'taittiriya-samhita-1/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 1', sanskrit: 'Taittirīya Saṃhitā, Kāṇḍaḥ 1' },
   { id: 'taittiriya-samhita-4', index: 'taittiriya-samhita-4/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 4', sanskrit: 'तैत्तिरीय संहिता, काण्डः ४' },
   { id: 'taittiriya-samhita-5', index: 'taittiriya-samhita-5/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 5', sanskrit: 'Taittirīya Saṃhitā, Kāṇḍaḥ 5' },
