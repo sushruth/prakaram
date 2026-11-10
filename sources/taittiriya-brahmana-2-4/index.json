@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-brahmana-2-4",
   "title": {
-    "sanskrit": "Taittirīya Brāhmaṇa",
+    "sanskrit": "taittirīya brāhmaṇa",
     "transliteration": "Taittirīya Brāhmaṇa",
     "english": "Taittirīya Brāhmaṇa, Aṣṭaka 2, Prapāṭhaka 4"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 4.",
     "place": {
       "work": {
-        "sanskrit": "Taittirīya Brāhmaṇa",
+        "sanskrit": "taittirīya brāhmaṇa",
         "english": "Taittirīya Brāhmaṇa"
       },
       "divisions": [
@@ -42,7 +42,7 @@
       "parser": "brahmana@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "d43b5ca8c3c17d402567449b7dec61e2f594a4d7cb8cb448775ca81b015bb31d"
+      "sha256": "91acd0b979703549784c33aa7772e40d811f9b00ea02daa4039ce525c87558a6"
     }
   },
   "sections": [
@@ -99,7 +99,7 @@
       "id": "taittiriya-brahmana-2-4-8",
       "sectionNumber": 8,
       "title": "Aṣṭaka 2 · Prapāṭhaka 4 · Anuvāka 8",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 68
     }
   ]

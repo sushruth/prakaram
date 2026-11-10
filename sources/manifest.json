@@ -1,11 +1,11 @@
 {
   "pin": "local",
-  "generatedAt": "2026-11-10T00:05:08.733Z",
+  "generatedAt": "2026-11-10T00:11:16.885Z",
   "sources": [
     {
       "id": "rigveda-1",
       "index": "rigveda-1/index.json",
-      "sha256": "c6251e291764556594172e6ec7b5ffee907e96ac98ecf80fbcf787f7e233156e",
+      "sha256": "2794cc58594e0199ad141843a2d1d4388757337495d1b2f11da059e603829e55",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_1.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -13,75 +13,69 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 1 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "c6251e291764556594172e6ec7b5ffee907e96ac98ecf80fbcf787f7e233156e"
+        "sha256": "2794cc58594e0199ad141843a2d1d4388757337495d1b2f11da059e603829e55"
       },
       "parts": [
         {
           "file": "rigveda-1/part-1.json",
-          "sha256": "8ee2829dbc2db203fbc9530e67337872a54c1289ae043146957d4e99efe75466",
-          "bytes": 142674,
-          "gzip": 20385
+          "sha256": "7f6354d4330ef3f78b3977d0ba3ba9294e32c65ad0a817283e2090cba00c6063",
+          "bytes": 116843,
+          "gzip": 19474
         },
         {
           "file": "rigveda-1/part-2.json",
-          "sha256": "96b8c5f935386f766c8d1ee32e661fc948a99fb44b6cce0399fc3b01092d86db",
-          "bytes": 128876,
-          "gzip": 20407
+          "sha256": "25e38d79c983f30b8440d65bd6590e0aefaf199015fa84696209232caa9949b2",
+          "bytes": 106102,
+          "gzip": 20399
         },
         {
           "file": "rigveda-1/part-3.json",
-          "sha256": "e395b1d5625a5ccdad4b093ba3d178a6351cc5e216cf35a78ecaf5017c7650cb",
-          "bytes": 119384,
-          "gzip": 20116
+          "sha256": "a6081fa2f1ecb3857b76dc719c3380954fc73f110fea3e4799d9103f6326e70b",
+          "bytes": 95671,
+          "gzip": 20205
         },
         {
           "file": "rigveda-1/part-4.json",
-          "sha256": "8449e0900c25d9c3893c8f953fcd4ed684ea20f44294e607b99ced7f4af7e6bc",
-          "bytes": 125968,
-          "gzip": 20358
+          "sha256": "45965043cf2a7134a1266d5e5fa142450bec3dcd5921d2892446a4f79a4554ce",
+          "bytes": 105794,
+          "gzip": 20450
         },
         {
           "file": "rigveda-1/part-5.json",
-          "sha256": "ff6f0a79c30e67f3a019927d0da37e572075488643e455477cd42955405d1f40",
-          "bytes": 120540,
-          "gzip": 18449
+          "sha256": "66276825a4031b2a9753a96fc3c895a2b6aea803cce2e3b582a29bf5135c89cc",
+          "bytes": 103649,
+          "gzip": 20218
         },
         {
           "file": "rigveda-1/part-6.json",
-          "sha256": "83ea97850f26f612f5b8eca7e8745674aabb1da413b94c8745f7fa907612d413",
-          "bytes": 126166,
-          "gzip": 20331
+          "sha256": "81f03d864b373bdc348c30457642f5a27a075c371e9efc04895d8972bf2b779e",
+          "bytes": 96690,
+          "gzip": 19905
         },
         {
           "file": "rigveda-1/part-7.json",
-          "sha256": "0e2f411d827e70805a9cf3a7a608d140da1dba2667375bbd1f4ca899a4d0a438",
-          "bytes": 123671,
-          "gzip": 20409
+          "sha256": "b2fdb3c0b6f88249fb76379c1b9d67e2ad4e756cc022444786e777220fcc7ece",
+          "bytes": 83951,
+          "gzip": 17811
         },
         {
           "file": "rigveda-1/part-8.json",
-          "sha256": "58e49af343914f1b7293c12b0352d60e2e111238e3f504825f4124524bc9ead6",
-          "bytes": 84374,
-          "gzip": 14522
+          "sha256": "97f729fc02de02ec279a646813dac99742cebf6be6f06a90a5c40d40ca23ecf5",
+          "bytes": 98053,
+          "gzip": 20260
         },
         {
           "file": "rigveda-1/part-9.json",
-          "sha256": "efc35d39c481831323b8be6429a7431cae14c957e47ef1c7bf9cda966a039967",
-          "bytes": 117618,
-          "gzip": 19784
-        },
-        {
-          "file": "rigveda-1/part-10.json",
-          "sha256": "8d862e761c34572874174167cf26950dfdba86f94247460f3dd3e1a269a538cc",
-          "bytes": 54540,
-          "gzip": 9021
+          "sha256": "e886fbb0eb51fd1e74466bc6e1dace5809864e6baa5584687d32cf8f096f7627",
+          "bytes": 26180,
+          "gzip": 5518
         }
       ]
     },
     {
       "id": "rigveda-10",
       "index": "rigveda-10/index.json",
-      "sha256": "72583c229dccebbb1349e551a9a993ab5cd85ef49b9ccb0b706c1711c24628e3",
+      "sha256": "8ff209a13fb709ced5593421f0e116b4fd02adb4cf3679727a706a98ab95303e",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_10.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -89,69 +83,63 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 10 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "72583c229dccebbb1349e551a9a993ab5cd85ef49b9ccb0b706c1711c24628e3"
+        "sha256": "8ff209a13fb709ced5593421f0e116b4fd02adb4cf3679727a706a98ab95303e"
       },
       "parts": [
         {
           "file": "rigveda-10/part-1.json",
-          "sha256": "43e6f59b9fb9eee2af5aaeaf023233fc7a9a3e51d595dde1b80b561578b1d8ff",
-          "bytes": 118646,
-          "gzip": 19464
+          "sha256": "9cf626b78eb6b3cc26691406279ec2fbe0fcf05b0342e46c1d1fc23a97f75fa2",
+          "bytes": 101560,
+          "gzip": 20431
         },
         {
           "file": "rigveda-10/part-2.json",
-          "sha256": "f2f09d96782de42a0754061a0b846db5f649ceccb6d3c48cf56a5faa521b0a68",
-          "bytes": 116102,
-          "gzip": 19264
+          "sha256": "110e620b9ab48308390f6873cdeb4fc7153955f287c639605d2acce724ef5771",
+          "bytes": 95930,
+          "gzip": 20005
         },
         {
           "file": "rigveda-10/part-3.json",
-          "sha256": "ae9c076b19f03491016d9879cf70991e2ef1c1569dbca43df33b0121a9dbdd03",
-          "bytes": 126104,
-          "gzip": 20273
+          "sha256": "c40b9f640b73e5584c5f6db86cdd822ca87c30949655c2aa7a573e3e82a9e68b",
+          "bytes": 100192,
+          "gzip": 20249
         },
         {
           "file": "rigveda-10/part-4.json",
-          "sha256": "92ba946f0129a3541ffbef4e8374058f98dafd7cefa92b96c88f8271b58ad102",
-          "bytes": 118967,
-          "gzip": 19843
+          "sha256": "81d63f522eb70dcb35bbaddc517afd03133d303f6ea3a29474380b01a734f0a7",
+          "bytes": 94715,
+          "gzip": 20038
         },
         {
           "file": "rigveda-10/part-5.json",
-          "sha256": "ae1f725417a6560a6fbaad1a6d01a404d7dc032633ced70ba4a2fbcd01469f83",
-          "bytes": 117518,
-          "gzip": 19440
+          "sha256": "b891d2cd5436185fa5aaf3b50511ed349e8bb1fb0f9e07d61fabffc8a0046f06",
+          "bytes": 95441,
+          "gzip": 19669
         },
         {
           "file": "rigveda-10/part-6.json",
-          "sha256": "a2776ac414aba17509bde7ac60bf7df00f4b5df423f18b7aa2149e0abf0e946a",
-          "bytes": 118849,
-          "gzip": 19969
+          "sha256": "d9d36c5db1f7e277c5c4cd4cbc3e8d75dcab00bbc3ce5b8a0424c1a8fc99d47c",
+          "bytes": 99278,
+          "gzip": 20379
         },
         {
           "file": "rigveda-10/part-7.json",
-          "sha256": "2c90df6c7404943536ccb1b27ae964cd1e26846efe46adf3ebf3d4074e3058aa",
-          "bytes": 122760,
-          "gzip": 20236
+          "sha256": "ca8c0c2d46d1405f771776eaba6aa723d123c54796271b50c4121ff644783cb5",
+          "bytes": 106115,
+          "gzip": 20254
         },
         {
           "file": "rigveda-10/part-8.json",
-          "sha256": "c142b6f113ff0bd45904177b13cc0fe9c77438f6c599a70176724004abeba2a3",
-          "bytes": 128488,
-          "gzip": 20255
-        },
-        {
-          "file": "rigveda-10/part-9.json",
-          "sha256": "6a449531a50faa8d60ccee08b9d804feebafa3bf727ef37671d94f84c892b359",
-          "bytes": 65983,
-          "gzip": 10237
+          "sha256": "6fa77a196512b96dbd31f154ace8752005d5dd9ef7bbb9470b348097422c333a",
+          "bytes": 54333,
+          "gzip": 10111
         }
       ]
     },
     {
       "id": "rigveda-2",
       "index": "rigveda-2/index.json",
-      "sha256": "1d6579180edee88170535bb2151599725746df3fe24a57fe93e89bb53e08fe06",
+      "sha256": "dcdfeca24a4956796d9db1dde6d4e3cfd3c821fab3adef6c972f41e5c7ad2e53",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_2.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -159,33 +147,27 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 2 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "1d6579180edee88170535bb2151599725746df3fe24a57fe93e89bb53e08fe06"
+        "sha256": "dcdfeca24a4956796d9db1dde6d4e3cfd3c821fab3adef6c972f41e5c7ad2e53"
       },
       "parts": [
         {
           "file": "rigveda-2/part-1.json",
-          "sha256": "6a7245d487046a59c88d3ecc89563a7562e591af1e5429d1c33824087869f4f6",
-          "bytes": 126505,
-          "gzip": 20173
+          "sha256": "9fa1bf676d0bc8d1a733f2f9fc1e34d4253a773ea76d7a51701fbff115da4a21",
+          "bytes": 100980,
+          "gzip": 20342
         },
         {
           "file": "rigveda-2/part-2.json",
-          "sha256": "7925c270977ecc7b23b1926252d82a235a3180d9ffbd7323e559a97704fc144d",
-          "bytes": 118709,
-          "gzip": 20113
-        },
-        {
-          "file": "rigveda-2/part-3.json",
-          "sha256": "32af2fc33fe702833260fb326c59c1a5fdfd1efda433b8c22eb889651dd3fd78",
-          "bytes": 13490,
-          "gzip": 2696
+          "sha256": "bcb1f8235db6a9cd594e4ed11a798f6cf010f8aa652892f9da06765ffd89dbfd",
+          "bytes": 84115,
+          "gzip": 17707
         }
       ]
     },
     {
       "id": "rigveda-3",
       "index": "rigveda-3/index.json",
-      "sha256": "321ca76b101c141de3d75bb252e100689f4cb3fa95c51df56d020ee63d59ca88",
+      "sha256": "d7739e09ab0d8ef7dc43bbdfbd2dd0db031a24357328bbb1be8fa5f2de4b2d89",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_3.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -193,33 +175,33 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 3 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "321ca76b101c141de3d75bb252e100689f4cb3fa95c51df56d020ee63d59ca88"
+        "sha256": "d7739e09ab0d8ef7dc43bbdfbd2dd0db031a24357328bbb1be8fa5f2de4b2d89"
       },
       "parts": [
         {
           "file": "rigveda-3/part-1.json",
-          "sha256": "7d3386435add6246540c0dd1c8ec913a1816695dff20bce9208466e4e91b8cfc",
-          "bytes": 129049,
-          "gzip": 20333
+          "sha256": "ba2e544e1927da4d32c0c5d0a676f6a261ad3fb3e7834e6a9b4be23a5a63b075",
+          "bytes": 100944,
+          "gzip": 19292
         },
         {
           "file": "rigveda-3/part-2.json",
-          "sha256": "6a9363819d43eaded8af1a08a8f5f82b3ea8b0cd6b76428ad0387594eee7cad8",
-          "bytes": 127226,
-          "gzip": 20054
+          "sha256": "6100c77ef482b4319404db0270eebec700a71087a48035e2784d5c2f7bacfed2",
+          "bytes": 101946,
+          "gzip": 19842
         },
         {
           "file": "rigveda-3/part-3.json",
-          "sha256": "aa91ff9326ed18c1a811dc3b7ecb2674e7dde37f5d9ec0801abd0176eaf5af1f",
-          "bytes": 100502,
-          "gzip": 16435
+          "sha256": "2ac055d1045518b0a5bc7c15b3af54b8ddbba9b820ba811ef683dcb3b1d04a73",
+          "bytes": 55212,
+          "gzip": 11571
         }
       ]
     },
     {
       "id": "rigveda-4",
       "index": "rigveda-4/index.json",
-      "sha256": "105e7a756b2ea17ab18365a5a6da0034265022b2bec9c865f1296847ec29713e",
+      "sha256": "ba5c64bfb3901e6f7275b2e8147e4cc5b7b50ec11c3e25fea16e34b29793594b",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_4.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -227,33 +209,33 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 4 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "105e7a756b2ea17ab18365a5a6da0034265022b2bec9c865f1296847ec29713e"
+        "sha256": "ba5c64bfb3901e6f7275b2e8147e4cc5b7b50ec11c3e25fea16e34b29793594b"
       },
       "parts": [
         {
           "file": "rigveda-4/part-1.json",
-          "sha256": "04a1850ffe527434aa4e9eeb98479c37ab790a3c7fc34e560bf8e41110808d41",
-          "bytes": 119372,
-          "gzip": 19748
+          "sha256": "6a4d680a8d8cc54dc8717e218e3a0e35ccfb5f8792f482b7bdbd46a11322b01a",
+          "bytes": 96466,
+          "gzip": 19813
         },
         {
           "file": "rigveda-4/part-2.json",
-          "sha256": "8a551421620e567448276ba1a3ca546b893e852af1bb3105aa0b8748a94ee2d2",
-          "bytes": 123294,
-          "gzip": 19653
+          "sha256": "13f8cd14fe18c8575eac827fe271453e73b66994769f58b6e7e7f8a92583f6a3",
+          "bytes": 101561,
+          "gzip": 20066
         },
         {
           "file": "rigveda-4/part-3.json",
-          "sha256": "d6e3d0a5d13656ab2dbef1e0b897c4ebab22187ae2053db1613d9950aa8210d8",
-          "bytes": 94899,
-          "gzip": 15433
+          "sha256": "7a123f3dceb4ebe1d3d782f05d901f8a9d7319e2e3dac188fd4110ea0c46bf15",
+          "bytes": 47316,
+          "gzip": 9570
         }
       ]
     },
     {
       "id": "rigveda-5",
       "index": "rigveda-5/index.json",
-      "sha256": "bc5bc13d832982eb3bedb028b70472da5b480804e1b1d5533bb5dc3ee64cdaea",
+      "sha256": "5096568eb5c847b582fd404b6581df4696c9cb48e9f64a714ba7061b45dd1002",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_5.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -261,39 +243,33 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 5 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "bc5bc13d832982eb3bedb028b70472da5b480804e1b1d5533bb5dc3ee64cdaea"
+        "sha256": "5096568eb5c847b582fd404b6581df4696c9cb48e9f64a714ba7061b45dd1002"
       },
       "parts": [
         {
           "file": "rigveda-5/part-1.json",
-          "sha256": "f451114ffda994e16ef4546496838a3b0554fb2f94e81e8356afef16f7939e18",
-          "bytes": 126830,
-          "gzip": 20041
+          "sha256": "d7648467ba6ffb408fb21b4aa99cef9c59694a71729903c8a6f0fecde2b0dad8",
+          "bytes": 103599,
+          "gzip": 20086
         },
         {
           "file": "rigveda-5/part-2.json",
-          "sha256": "a3396487f5fc3c79d08fd6cf29040b8bc872f7f6c1afa42f4d2c61c54edb4423",
-          "bytes": 122028,
-          "gzip": 20288
+          "sha256": "00631309990a827ef6de452928693ddac6bcfb2c03a683f2c137c56a310954a9",
+          "bytes": 96508,
+          "gzip": 19805
         },
         {
           "file": "rigveda-5/part-3.json",
-          "sha256": "5f41449f6f82189c876a66dd2ed6d0a07bdb4fbff532f9358bbe94cfc3912dce",
-          "bytes": 129530,
-          "gzip": 20125
-        },
-        {
-          "file": "rigveda-5/part-4.json",
-          "sha256": "bf706d4164abd1a709d3491224eb543ac7b50ab252538e7d48bdfa6d8cff50e8",
-          "bytes": 33011,
-          "gzip": 5930
+          "sha256": "23214e45aa04962c2914374dc8044a0f2b59bbc74a6a9782d3e05e4f9f89cfab",
+          "bytes": 100684,
+          "gzip": 19094
         }
       ]
     },
     {
       "id": "rigveda-6",
       "index": "rigveda-6/index.json",
-      "sha256": "b2baf5e35c013005f4d26fa7442a93042d21fa7be1a0a10615d906ae65e37117",
+      "sha256": "2a5c24016bf63bd1094ddde202c00cfaf2eb48c5d554a6d1afc8f7a514177ac8",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_6.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -301,39 +277,39 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 6 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "b2baf5e35c013005f4d26fa7442a93042d21fa7be1a0a10615d906ae65e37117"
+        "sha256": "2a5c24016bf63bd1094ddde202c00cfaf2eb48c5d554a6d1afc8f7a514177ac8"
       },
       "parts": [
         {
           "file": "rigveda-6/part-1.json",
-          "sha256": "cdd272df9c411f05a761db06457ed3694a83ca05e649f79334cdf0e69f22bc6d",
-          "bytes": 122512,
-          "gzip": 20041
+          "sha256": "d35669c9cb285524fde9eaa0aa00c9fafbe725b47f671603f47178c0a0043377",
+          "bytes": 99405,
+          "gzip": 20207
         },
         {
           "file": "rigveda-6/part-2.json",
-          "sha256": "67bd4f81ed1d05cef691475ac6c484510c26b5dd47c4eb99b03276ecb0481086",
-          "bytes": 113721,
-          "gzip": 18978
+          "sha256": "768a72ffef58100038f3af2db408ca154a9135b1dace856ddc85f35652bedcec",
+          "bytes": 100228,
+          "gzip": 20339
         },
         {
           "file": "rigveda-6/part-3.json",
-          "sha256": "2b564de9119ad44a840a7b1482563d7da00428d072587ce59f64a8ac31c464e4",
-          "bytes": 121538,
-          "gzip": 19655
+          "sha256": "bb71fa4515d3e5deb80dc3c6fb341d2137e2a4e1bc342e6e119cf923da2fc50a",
+          "bytes": 100686,
+          "gzip": 20130
         },
         {
           "file": "rigveda-6/part-4.json",
-          "sha256": "1e49974faf0085809bf2d8b39bf5977c6c0988a540b5cb8085a34c9f6f45cae6",
-          "bytes": 78715,
-          "gzip": 13478
+          "sha256": "dac1713c25a20a7bd7767e69a894623ad4ec0a3f0d9aaf831c4190dbd2434902",
+          "bytes": 16176,
+          "gzip": 3939
         }
       ]
     },
     {
       "id": "rigveda-7",
       "index": "rigveda-7/index.json",
-      "sha256": "f949893de521d0983ac450c35992f1f9722571d1f767576b21276e5306675937",
+      "sha256": "fbd755d0a1b024de23f2e7b68215186f3cdca955975ec957157ebabb22ffb9b4",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_7.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -341,39 +317,39 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 7 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "f949893de521d0983ac450c35992f1f9722571d1f767576b21276e5306675937"
+        "sha256": "fbd755d0a1b024de23f2e7b68215186f3cdca955975ec957157ebabb22ffb9b4"
       },
       "parts": [
         {
           "file": "rigveda-7/part-1.json",
-          "sha256": "60ccd7162ccefe10e9822f93dcee2d1b683c45f16a5b689c1594bd18c918d1f5",
-          "bytes": 123663,
-          "gzip": 20006
+          "sha256": "e3519fc5f88dd5858c59cbcf16df23d9d897a52d791f7f9562fab63dbbb9407f",
+          "bytes": 103408,
+          "gzip": 20432
         },
         {
           "file": "rigveda-7/part-2.json",
-          "sha256": "67a2639a20eafd0d72056f38e9d44d89736a33335acbd1152b05b30ecd35cd58",
-          "bytes": 128754,
-          "gzip": 20367
+          "sha256": "97a7ca9d81c82143dfcb64f1c38c88b9ed178074ac828d20af7b5ac2cfd34157",
+          "bytes": 101710,
+          "gzip": 20280
         },
         {
           "file": "rigveda-7/part-3.json",
-          "sha256": "a6ff4462de2613adea38a102963d0ab05dd4e1779f8f36f55258f4ff9de7166b",
-          "bytes": 124149,
-          "gzip": 19485
+          "sha256": "4414951f91eb976362bbdeca07e3005dcbf4247d51841d98b5d38a166a2b3219",
+          "bytes": 108138,
+          "gzip": 20362
         },
         {
           "file": "rigveda-7/part-4.json",
-          "sha256": "ce6ae784744d02f66bebc43d81e3d76931b5b4faa30faaa3b7b7034f14cdcfb2",
-          "bytes": 109203,
-          "gzip": 17662
+          "sha256": "0869839181790870694d79f72d3001db2756f2507492817c7d9f296fb7e1c215",
+          "bytes": 37666,
+          "gzip": 8247
         }
       ]
     },
     {
       "id": "rigveda-8",
       "index": "rigveda-8/index.json",
-      "sha256": "94849ac8a0c53f0f6932acd51facfd991fcdca9ef3e143a4131bd31a1d1a0455",
+      "sha256": "0094fe1584e7626bdfedb25d965a2885df48a473deee75e6646a1d15ffc1e756",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_8.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -381,57 +357,51 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 8 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "94849ac8a0c53f0f6932acd51facfd991fcdca9ef3e143a4131bd31a1d1a0455"
+        "sha256": "0094fe1584e7626bdfedb25d965a2885df48a473deee75e6646a1d15ffc1e756"
       },
       "parts": [
         {
           "file": "rigveda-8/part-1.json",
-          "sha256": "a12a217acf9ee5781e42d0f575246d234c175aa1420d42aa58adaed377023d5a",
-          "bytes": 127375,
-          "gzip": 19514
+          "sha256": "4c7688deed9fe34ac2fb73d177839aa29e598e6b0f861dbfe243b6efad46c773",
+          "bytes": 109931,
+          "gzip": 19854
         },
         {
           "file": "rigveda-8/part-2.json",
-          "sha256": "131d8cb280c0ad68d1d0bfef911d0cac2663506d750a2f357966a526f6076c92",
-          "bytes": 127148,
-          "gzip": 19315
+          "sha256": "916506c4482d03309aeebb7e4d32ed80b0a79fd9e536dd14b39ab5da7020503c",
+          "bytes": 110341,
+          "gzip": 19984
         },
         {
           "file": "rigveda-8/part-3.json",
-          "sha256": "a5a2ee7ac17cf8978b2ef164f6458d505990c19c95bb6128892f6f7c8d6aea64",
-          "bytes": 142760,
-          "gzip": 20297
+          "sha256": "b6ab5756b23ee3eb69341952e9c70bc89ad9c2bb771aac1cb0c52c8e9c8912d7",
+          "bytes": 110222,
+          "gzip": 18974
         },
         {
           "file": "rigveda-8/part-4.json",
-          "sha256": "3a6c405a39e6f7fa228248c1e1ec14d720ee7b4f05adb49e1c4213bd049843db",
-          "bytes": 133143,
-          "gzip": 20031
+          "sha256": "0136ed9bcd321f5a6ea5c7b6ce8032797416f5afea73a6d5812dbfd661d34130",
+          "bytes": 104413,
+          "gzip": 19739
         },
         {
           "file": "rigveda-8/part-5.json",
-          "sha256": "77916707289e3b497c5f9b65ead768728f0b89bb7f1dfdfca4f8784d7f88b112",
-          "bytes": 131266,
-          "gzip": 20160
+          "sha256": "e9f35acc188da7dbe3134ca0a34388128ec9c6e2e1db752301a72bbfaa430ca4",
+          "bytes": 117068,
+          "gzip": 20466
         },
         {
           "file": "rigveda-8/part-6.json",
-          "sha256": "32a4fa1db8412de86635c39483032e615be0d6e0c756480fb53c9ffb7466bf64",
-          "bytes": 133041,
-          "gzip": 19932
-        },
-        {
-          "file": "rigveda-8/part-7.json",
-          "sha256": "cc624397d53a20a593c40d1958e06528992a06bbbe879d6e88da665c9751ad9d",
-          "bytes": 43365,
-          "gzip": 7485
+          "sha256": "6a1bad3719986ac8bfa0d4cb66116fde5cb4e6c9b3f2e6403967f85db4fba64d",
+          "bytes": 77895,
+          "gzip": 14634
         }
       ]
     },
     {
       "id": "rigveda-9",
       "index": "rigveda-9/index.json",
-      "sha256": "e53d2a81ba5576969fb9fc386e3ff639f7a11def8169b5f0de1db7fdb1188d0d",
+      "sha256": "cc2e87a72ae2201ad0746ed3a43e6c1a18c8fd9745aa8b309852aead9735b315",
       "provenance": {
         "upstreamUrl": "https://cdn.jsdelivr.net/gh/bhavykhatri/DharmicData@96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Rigveda/rigveda_mandala_9.json",
         "upstreamRef": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
@@ -439,45 +409,39 @@
         "parser": "rigveda@1",
         "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
         "attribution": "Ṛgveda, maṇḍala 9 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-        "sha256": "e53d2a81ba5576969fb9fc386e3ff639f7a11def8169b5f0de1db7fdb1188d0d"
+        "sha256": "cc2e87a72ae2201ad0746ed3a43e6c1a18c8fd9745aa8b309852aead9735b315"
       },
       "parts": [
         {
           "file": "rigveda-9/part-1.json",
-          "sha256": "6331501fdebccc5ccf274e8ed8f2d7e213996e66af165db60d726229aa8beaa2",
-          "bytes": 158840,
-          "gzip": 20302
+          "sha256": "8402341de9e8d49ec66ef9ef68f7225d7dac60fae086dde651544a6c3415e97f",
+          "bytes": 139520,
+          "gzip": 20333
         },
         {
           "file": "rigveda-9/part-2.json",
-          "sha256": "af42c0e9065b307bb9a4112f4bc1ad4d06501a0a9e8611f4d3f7d2fa838484d3",
-          "bytes": 144858,
-          "gzip": 20234
+          "sha256": "7cda6896536e294641ca5414a92cfe25ef12f9db1709737ef5b8c7bc102b8ac6",
+          "bytes": 116098,
+          "gzip": 20080
         },
         {
           "file": "rigveda-9/part-3.json",
-          "sha256": "43740314e8e1f0297c447143968635cd746e41d54a9e10078a1b390d491caea8",
-          "bytes": 50920,
-          "gzip": 8919
+          "sha256": "59d8e8a80e29f15a4564b87e7713f098efe2dcb7e82827d934891524db54d59e",
+          "bytes": 73060,
+          "gzip": 15290
         },
         {
           "file": "rigveda-9/part-4.json",
-          "sha256": "164d48cf06eaa37bf53a1dd13f87ffb26cb09ed1cfe1d4392a3d32020aeff02c",
-          "bytes": 79082,
-          "gzip": 13433
-        },
-        {
-          "file": "rigveda-9/part-5.json",
-          "sha256": "57f0621df2ca46cda70f9b6516f71af8e6d031abdb68aa09edb21f6382097a69",
-          "bytes": 126030,
-          "gzip": 19673
+          "sha256": "386ca829ce7b52040cff1489e5e4a473bfc94bd38241979e30a27cfcfeb1668f",
+          "bytes": 92696,
+          "gzip": 17608
         }
       ]
     },
     {
       "id": "rigveda-khila-sri",
       "index": "rigveda-khila-sri/index.json",
-      "sha256": "d7d540a163c92b2a6ab4980adfc943cc978dd9210b0672af90a1ce67f717933d",
+      "sha256": "4cf682b1c73d827524cc1e3dd53d1e7a387647367b5a73c212bf2f307cd3d064",
       "provenance": {
         "upstreamUrl": "https://sanskritdocuments.org/doc_veda/s-sukta-accent.html",
         "upstreamRef": "2025-11-06",
@@ -485,21 +449,21 @@
         "parser": "sri@1",
         "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
         "attribution": "Śrī Sūkta (Ṛgveda Khila 2.6) — sanskritdocuments.org, encoded by Avinash Sathaye and Anant Upadhyayula",
-        "sha256": "d7d540a163c92b2a6ab4980adfc943cc978dd9210b0672af90a1ce67f717933d"
+        "sha256": "4cf682b1c73d827524cc1e3dd53d1e7a387647367b5a73c212bf2f307cd3d064"
       },
       "parts": [
         {
           "file": "rigveda-khila-sri/part-1.json",
-          "sha256": "d847c1e9c8e8fbafa72b55f97bd7dea1c62e27f86ded0a2b73f59c01e9d42409",
-          "bytes": 21618,
-          "gzip": 3944
+          "sha256": "063057b7b3d6be627f76d99da220747ff0f4e48a08d9d0862a2dafabcdceeedf",
+          "bytes": 15864,
+          "gzip": 3563
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-1",
       "index": "taittiriya-aranyaka-1/index.json",
-      "sha256": "b39bc24551a88cc580a934204692936b4b8668bd420230fa98d2595d180b4b24",
+      "sha256": "05e2d28dfd24f51c2eb40f749e4c15acdaa16721b93e3a1ad6cd65ccd83cab7e",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_1",
         "upstreamRef": "2026-10-14",
@@ -507,27 +471,27 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 1 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "b39bc24551a88cc580a934204692936b4b8668bd420230fa98d2595d180b4b24"
+        "sha256": "05e2d28dfd24f51c2eb40f749e4c15acdaa16721b93e3a1ad6cd65ccd83cab7e"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-1/part-1.json",
-          "sha256": "153ef6d847d4ed2d47283c29f3feb523712c4b3638c84779fba2c8d59391e919",
-          "bytes": 167280,
-          "gzip": 20260
+          "sha256": "1f6b411d4bc6cb60c3667ed7bd20c7978f5b8277b1ef6ce544b5e2073c516dac",
+          "bytes": 142876,
+          "gzip": 19921
         },
         {
           "file": "taittiriya-aranyaka-1/part-2.json",
-          "sha256": "7a8b9351e2007fd86269a2baefe042887683449a781af531935b33e699c00f41",
-          "bytes": 76286,
-          "gzip": 10012
+          "sha256": "d468a9cc1fc0b35fe39ebaddb5b510f504ba5f74c4658b97855b3d2a34aa6ea5",
+          "bytes": 49100,
+          "gzip": 7593
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-10",
       "index": "taittiriya-aranyaka-10/index.json",
-      "sha256": "150529a583541d87465c3241aefb6ef77c65617382f29b17697719cc4df8b1eb",
+      "sha256": "ee7a4252da56624be5aa319bc32c446b7aec24e99ecac8b6eb2666b66eea81d9",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_10",
         "upstreamRef": "2026-10-14",
@@ -535,27 +499,27 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "150529a583541d87465c3241aefb6ef77c65617382f29b17697719cc4df8b1eb"
+        "sha256": "ee7a4252da56624be5aa319bc32c446b7aec24e99ecac8b6eb2666b66eea81d9"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-10/part-1.json",
-          "sha256": "0ac959d3771dcd58f3af67e153e4b4b80789ebf715543cfb330cbd2d9edd50ca",
-          "bytes": 134051,
-          "gzip": 20337
+          "sha256": "bbb51c74ee3ca032ca20bb2c58110e2bce0ba8f7af740243e9b01554286ba055",
+          "bytes": 112904,
+          "gzip": 20298
         },
         {
           "file": "taittiriya-aranyaka-10/part-2.json",
-          "sha256": "2f05a52914cc9d3862aa384024db55e4471c4c5b6a734b26b0fd3674ac3d14b6",
-          "bytes": 48161,
-          "gzip": 7194
+          "sha256": "bb197692298e8d590bc39a2a090c1a67a37c44cf63bf4e7c97c327daa720a0a4",
+          "bytes": 18685,
+          "gzip": 4373
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-2",
       "index": "taittiriya-aranyaka-2/index.json",
-      "sha256": "b127c21fb4874dfff3b7bd4c65b311a625e0f35effa54106ee0cdde11b81995c",
+      "sha256": "17dffd9b4030f7b833ff2e8f15ddb31005091b565d6699dd3bfee4c868d1bb94",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_2",
         "upstreamRef": "2026-10-14",
@@ -563,21 +527,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 2 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "b127c21fb4874dfff3b7bd4c65b311a625e0f35effa54106ee0cdde11b81995c"
+        "sha256": "17dffd9b4030f7b833ff2e8f15ddb31005091b565d6699dd3bfee4c868d1bb94"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-2/part-1.json",
-          "sha256": "ca58e591bc70e838792b48d06d9693b85342f91436801788261961c333aaa30d",
-          "bytes": 64703,
-          "gzip": 11658
+          "sha256": "fd5e3022d04a045a1064171146e424daf61717b800d836caa7b045af8b8d9a26",
+          "bytes": 40594,
+          "gzip": 10340
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-3",
       "index": "taittiriya-aranyaka-3/index.json",
-      "sha256": "6fabf05d80967dca31b5d21791eb05c396285b77140f0c6ef07d802bd2326187",
+      "sha256": "feaf5e67a5115ea66b5a60796cb953d62ad37a8d840d5bcd084e66a8481e0327",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_3",
         "upstreamRef": "2026-10-14",
@@ -585,21 +549,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "6fabf05d80967dca31b5d21791eb05c396285b77140f0c6ef07d802bd2326187"
+        "sha256": "feaf5e67a5115ea66b5a60796cb953d62ad37a8d840d5bcd084e66a8481e0327"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-3/part-1.json",
-          "sha256": "be20f5c3a022b6ef9e30b5ed786ec78368be8d3c7afa8cc280b8cef4cd9aed3c",
-          "bytes": 92582,
-          "gzip": 11633
+          "sha256": "6b5cfb25950391884f91cdf30fb9eab862018e8dd438c44d1d823a9e98c53fac",
+          "bytes": 72696,
+          "gzip": 10571
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-4",
       "index": "taittiriya-aranyaka-4/index.json",
-      "sha256": "809a28ed825cf9462236b41eae79e9127e371cd1ed36c705c5a78fe762596243",
+      "sha256": "38b280ae7fd6cdd33eb62f685823f44e5e2dc4268e1e38f0256a2db6c01b0f0c",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_4",
         "upstreamRef": "2026-10-14",
@@ -607,21 +571,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "809a28ed825cf9462236b41eae79e9127e371cd1ed36c705c5a78fe762596243"
+        "sha256": "38b280ae7fd6cdd33eb62f685823f44e5e2dc4268e1e38f0256a2db6c01b0f0c"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-4/part-1.json",
-          "sha256": "266503ca500203a252af0abab1b2efe759062076d18f5f7d00d62dcab4f8e4c8",
-          "bytes": 153624,
-          "gzip": 18787
+          "sha256": "4569fd836cc7f26df8248abb8259850b317efb9587dd7191c3450a8b306b44c3",
+          "bytes": 118540,
+          "gzip": 16727
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-5",
       "index": "taittiriya-aranyaka-5/index.json",
-      "sha256": "2d723ad8f9cce42e858a5c13e0c1bea27f17682f21104ae74118bfd5eb025ef6",
+      "sha256": "97f4455ab64774304c88fceb43ac95c2e8aa2a50bd8f8af03d755e81899e5032",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_5",
         "upstreamRef": "2026-10-14",
@@ -629,27 +593,27 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 5 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "2d723ad8f9cce42e858a5c13e0c1bea27f17682f21104ae74118bfd5eb025ef6"
+        "sha256": "97f4455ab64774304c88fceb43ac95c2e8aa2a50bd8f8af03d755e81899e5032"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-5/part-1.json",
-          "sha256": "96d1269bc3c89eb0e4b6736536da5f4f52db03dfe4853266890843b35480a15b",
-          "bytes": 157423,
-          "gzip": 18113
+          "sha256": "c11ce2bf94e4effdd96a35718faa6fd56fe16f48e3af5e070267f7561f48bda2",
+          "bytes": 151704,
+          "gzip": 20231
         },
         {
           "file": "taittiriya-aranyaka-5/part-2.json",
-          "sha256": "959c122430867d5f9f2def8024ec3c7d977891453cc0f120bf48baadc9114a80",
-          "bytes": 48267,
-          "gzip": 6304
+          "sha256": "fc42ea73aecf32e5b2a19c571902eb6bbee2acecbeb551fdb66f52895757cefd",
+          "bytes": 4331,
+          "gzip": 866
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-6",
       "index": "taittiriya-aranyaka-6/index.json",
-      "sha256": "e1dd40f24097b04c395074bdda9e4d9f26064832034721f069781b7e2b80e534",
+      "sha256": "400d4da38acf02f3d86c581fcc0219fa913a374795e867ab6d716533cd6b2608",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_6",
         "upstreamRef": "2026-10-14",
@@ -657,21 +621,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 6 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "e1dd40f24097b04c395074bdda9e4d9f26064832034721f069781b7e2b80e534"
+        "sha256": "400d4da38acf02f3d86c581fcc0219fa913a374795e867ab6d716533cd6b2608"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-6/part-1.json",
-          "sha256": "3fe598bf58a3f80a943a389bf85f3ea6b4aa039f9c0d9f21aeb7e4a6c720deee",
-          "bytes": 73338,
-          "gzip": 11587
+          "sha256": "b0b899b8c8b8ac62f663bab56fcc859392f0f782651aca6a0e87bb9175b5a12d",
+          "bytes": 51958,
+          "gzip": 10298
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-7",
       "index": "taittiriya-aranyaka-7/index.json",
-      "sha256": "b6678a712437b2b33c3919616021569af6bb118a4b49b9f9be9b9dbcde9570c8",
+      "sha256": "ea79821cc9e86629baeb654e253d2827af45c471dcdd6780a7e459d5c089a393",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_7",
         "upstreamRef": "2026-10-14",
@@ -679,21 +643,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 7 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "b6678a712437b2b33c3919616021569af6bb118a4b49b9f9be9b9dbcde9570c8"
+        "sha256": "ea79821cc9e86629baeb654e253d2827af45c471dcdd6780a7e459d5c089a393"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-7/part-1.json",
-          "sha256": "ed0f04b97c917a79dde5f31530c6e13abb3cada69511c68bf3027ab01c6ed95e",
-          "bytes": 44018,
-          "gzip": 5509
+          "sha256": "243ae3caeb3e31b2e3c8c9d06327048b0f769fe4f6cd71d58844e4f41ad5149e",
+          "bytes": 35038,
+          "gzip": 4978
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-8",
       "index": "taittiriya-aranyaka-8/index.json",
-      "sha256": "232346dd3f6cb34c5ae0bdf441c426bb89688e5327a32581bc64a98eed2a52a4",
+      "sha256": "414bc97ed615859288c4e6c14481441b49c245a7cc1e7b683ecd7ae4f0098732",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_8",
         "upstreamRef": "2026-10-14",
@@ -701,21 +665,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "232346dd3f6cb34c5ae0bdf441c426bb89688e5327a32581bc64a98eed2a52a4"
+        "sha256": "414bc97ed615859288c4e6c14481441b49c245a7cc1e7b683ecd7ae4f0098732"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-8/part-1.json",
-          "sha256": "d3a5bef009da009a7d17c57518b46e7bed67b9ddd8b12ecb9a5338ab398eb591",
-          "bytes": 37999,
-          "gzip": 4846
+          "sha256": "09b1e2265c62829596c8bf60ae018e7a47b79371ca995abbfa85537ecc31726a",
+          "bytes": 30374,
+          "gzip": 4409
         }
       ]
     },
     {
       "id": "taittiriya-aranyaka-9",
       "index": "taittiriya-aranyaka-9/index.json",
-      "sha256": "b5fd8724c6e8f2690b84315111c41ae2fc5e597117a1c44771759178dd318a23",
+      "sha256": "eabb5e687a523df294511059394f436dc1c33a4002b8394e70b881f2c00d71ab",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/aranyaka/prapathaka_9",
         "upstreamRef": "2026-10-14",
@@ -723,21 +687,21 @@
         "parser": "aranyaka@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 9 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "b5fd8724c6e8f2690b84315111c41ae2fc5e597117a1c44771759178dd318a23"
+        "sha256": "eabb5e687a523df294511059394f436dc1c33a4002b8394e70b881f2c00d71ab"
       },
       "parts": [
         {
           "file": "taittiriya-aranyaka-9/part-1.json",
-          "sha256": "d3cdeeab3ef91ebcaa0d2fa2a3263e24e419781ef4edb51e09e8d97eab6237cc",
-          "bytes": 28708,
-          "gzip": 3221
+          "sha256": "4c54d52e8b25f8b29e1a8b2e968238ced62c780315bf5741e38509f2f0b033d1",
+          "bytes": 22289,
+          "gzip": 2904
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-1",
       "index": "taittiriya-brahmana-2-1/index.json",
-      "sha256": "4e631f974015358a028f85efc0ae1858456e7bca9ccae35496b51b1d21b704f1",
+      "sha256": "9f143b9327dcdf11b3abf76b7fbb411fa4a9e2c145eeb7cd446b5b992b798c4a",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_1",
         "upstreamRef": "2026-11-10",
@@ -745,21 +709,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 1 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "4e631f974015358a028f85efc0ae1858456e7bca9ccae35496b51b1d21b704f1"
+        "sha256": "9f143b9327dcdf11b3abf76b7fbb411fa4a9e2c145eeb7cd446b5b992b798c4a"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-1/part-1.json",
-          "sha256": "ac6e2eb301528c93540a763a46c47b9e89b0d16dffcace5d05be9cac72b91fce",
-          "bytes": 109030,
-          "gzip": 12599
+          "sha256": "0949b7e9dda529b521112c604be83bd331280c88b7baff0894997321b2400e9a",
+          "bytes": 84845,
+          "gzip": 11308
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-2",
       "index": "taittiriya-brahmana-2-2/index.json",
-      "sha256": "d122605488396f7616fcd239fae597ececb6d6a5b90ef8b961301182aa3b0514",
+      "sha256": "1dd82ae7dd9db88ec2d9ed30ea43dcb6b703cf00fa7e43abcb86ce1541365470",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_2",
         "upstreamRef": "2026-11-10",
@@ -767,21 +731,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 2 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "d122605488396f7616fcd239fae597ececb6d6a5b90ef8b961301182aa3b0514"
+        "sha256": "1dd82ae7dd9db88ec2d9ed30ea43dcb6b703cf00fa7e43abcb86ce1541365470"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-2/part-1.json",
-          "sha256": "a06eb98fe6e8b2dc4b502da813124599666f879ffa06e8229f5a69bfd8a78eda",
-          "bytes": 135636,
-          "gzip": 14532
+          "sha256": "25f94bd3f120cf6d47add694b0317d8b09f8de364ad0809a418adcc5130a0cba",
+          "bytes": 105611,
+          "gzip": 13021
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-3",
       "index": "taittiriya-brahmana-2-3/index.json",
-      "sha256": "27b87a6555c404edb19071d3f1c0b75ecadbd87fd9502729313a3820e979ece0",
+      "sha256": "131ef22431b17473fc4eeb436ffe4b82f0012bb344b9dcc62e74861ec5309697",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_3",
         "upstreamRef": "2026-11-10",
@@ -789,21 +753,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 3 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "27b87a6555c404edb19071d3f1c0b75ecadbd87fd9502729313a3820e979ece0"
+        "sha256": "131ef22431b17473fc4eeb436ffe4b82f0012bb344b9dcc62e74861ec5309697"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-3/part-1.json",
-          "sha256": "6185e8687c2999f2414b2e6dad75e0301789e55efceaa270f4a6b39aa0ea7bac",
-          "bytes": 100318,
-          "gzip": 10153
+          "sha256": "fc35ee751b00d76f455fab848b8397689aa1aa2ea7e464ae3d0fd368c0a13293",
+          "bytes": 77345,
+          "gzip": 9149
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-4",
       "index": "taittiriya-brahmana-2-4/index.json",
-      "sha256": "d43b5ca8c3c17d402567449b7dec61e2f594a4d7cb8cb448775ca81b015bb31d",
+      "sha256": "91acd0b979703549784c33aa7772e40d811f9b00ea02daa4039ce525c87558a6",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_4",
         "upstreamRef": "2026-11-10",
@@ -811,27 +775,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "d43b5ca8c3c17d402567449b7dec61e2f594a4d7cb8cb448775ca81b015bb31d"
+        "sha256": "91acd0b979703549784c33aa7772e40d811f9b00ea02daa4039ce525c87558a6"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-4/part-1.json",
-          "sha256": "9cdfe54a2825e119baeb1fb73f68eb8d407686f85952c61a2f4bcb7ea4fbb4aa",
-          "bytes": 133725,
-          "gzip": 19044
-        },
-        {
-          "file": "taittiriya-brahmana-2-4/part-2.json",
-          "sha256": "452da9e26a98e7f8cf45e6650e537ab2213530d65607c1074240b6b0edb02328",
-          "bytes": 12854,
-          "gzip": 2347
+          "sha256": "a20d2ff3e27083de3dfe6114d2cd86207a40bbd3c32cb2e59d2f80b7d87c5ca5",
+          "bytes": 114593,
+          "gzip": 18576
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-5",
       "index": "taittiriya-brahmana-2-5/index.json",
-      "sha256": "f0a8c630bc3f59292b0476f55fba752a084cb2784e26917a304fcf79ef6b2df9",
+      "sha256": "7da8dd8a4d4edbda2936ac8c451222007d5bc90df6fa85ae317f841fbfa9736b",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_5",
         "upstreamRef": "2026-11-10",
@@ -839,21 +797,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 5 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "f0a8c630bc3f59292b0476f55fba752a084cb2784e26917a304fcf79ef6b2df9"
+        "sha256": "7da8dd8a4d4edbda2936ac8c451222007d5bc90df6fa85ae317f841fbfa9736b"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-5/part-1.json",
-          "sha256": "d03a88c2e1201c1e320bd3e88fb16518414e8f2953232e8fe35f2d92519bb8b1",
-          "bytes": 88810,
-          "gzip": 12944
+          "sha256": "2f36a148fd6319ec39d7e9c7822e8acdd3396f064a32e095583e112a7c869fe7",
+          "bytes": 68631,
+          "gzip": 11680
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-6",
       "index": "taittiriya-brahmana-2-6/index.json",
-      "sha256": "fec30b5c89a8cc6c2f635b2cf4a82c733d6e43e3541515951edf682cdfc4b05c",
+      "sha256": "6031a90525e52346e404913adff09b466358c90e7fb55d1218eb6c535376ff30",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_6",
         "upstreamRef": "2026-11-10",
@@ -861,21 +819,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 6 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "fec30b5c89a8cc6c2f635b2cf4a82c733d6e43e3541515951edf682cdfc4b05c"
+        "sha256": "6031a90525e52346e404913adff09b466358c90e7fb55d1218eb6c535376ff30"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-6/part-1.json",
-          "sha256": "17f3adb6d05d99534735d9da6ebda5e4b70e90fa03558f04974b830b28cf0b3d",
-          "bytes": 174011,
-          "gzip": 19362
+          "sha256": "9fc396343245c1d6d7c05fe8a02e9e2014c7fb67e38833e8ffaae61fec3a8480",
+          "bytes": 135780,
+          "gzip": 17449
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-7",
       "index": "taittiriya-brahmana-2-7/index.json",
-      "sha256": "8d4fb6c1c5966dd0bc4fc2463d57b94682f16594461f07d75d82ba841ba5529c",
+      "sha256": "410a530b95c40ba91276639c11cec3f8df758bf506baca83ffc960d69dbdabd0",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_7",
         "upstreamRef": "2026-11-10",
@@ -883,21 +841,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 7 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "8d4fb6c1c5966dd0bc4fc2463d57b94682f16594461f07d75d82ba841ba5529c"
+        "sha256": "410a530b95c40ba91276639c11cec3f8df758bf506baca83ffc960d69dbdabd0"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-7/part-1.json",
-          "sha256": "c102439b25e07e21c0c4172f03bff43fbe058a551a9ce22e4c06aadbd38dc2f4",
-          "bytes": 128277,
-          "gzip": 15904
+          "sha256": "15bdaaa20f93e987327f92900b5c6972bdaa3ea7646214cfad203b80a0b86031",
+          "bytes": 100425,
+          "gzip": 14357
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-8",
       "index": "taittiriya-brahmana-2-8/index.json",
-      "sha256": "abd1885cf2804f916885c075f54378a2a525781d58644e0d5701736721d96a1c",
+      "sha256": "96d8d605347c52ec4db5d585c34fe2e77499d146c6f71cf7347af92d74004048",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_8",
         "upstreamRef": "2026-11-10",
@@ -905,27 +863,21 @@
         "parser": "brahmana@1",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "abd1885cf2804f916885c075f54378a2a525781d58644e0d5701736721d96a1c"
+        "sha256": "96d8d605347c52ec4db5d585c34fe2e77499d146c6f71cf7347af92d74004048"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-8/part-1.json",
-          "sha256": "222de2f21f5a0f53ba652bb729c92c85c9cc222f8e7de96063d3bcf8929d816a",
-          "bytes": 136692,
-          "gzip": 19654
-        },
-        {
-          "file": "taittiriya-brahmana-2-8/part-2.json",
-          "sha256": "ddbee0243d0bf3e40da1c02dce0e1cc2e3376ead094ddc2bc0d0e483b241d1e3",
-          "bytes": 17491,
-          "gzip": 3240
+          "sha256": "47ce3c0271065731cd0eab32437f8c1fff31a09e86a2a78d9986cd6dec6544b2",
+          "bytes": 118553,
+          "gzip": 19894
         }
       ]
     },
     {
       "id": "taittiriya-samhita-1",
       "index": "taittiriya-samhita-1/index.json",
-      "sha256": "9b1aee0f7fd47017ec15dd1b74a970da64a78d0a3017ad54e3fe72dcedeb6119",
+      "sha256": "353b63e730aa18d9efbacdbc2c6c4e813b5357a1d0ec2bbdd525f99122548be6",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/samhita/kanda_1_prashna_1",
         "upstreamRef": "2026-11-10",
@@ -933,63 +885,63 @@
         "parser": "taittiriya@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Saṃhitā, kāṇḍa 1 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "9b1aee0f7fd47017ec15dd1b74a970da64a78d0a3017ad54e3fe72dcedeb6119"
+        "sha256": "353b63e730aa18d9efbacdbc2c6c4e813b5357a1d0ec2bbdd525f99122548be6"
       },
       "parts": [
         {
           "file": "taittiriya-samhita-1/part-1.json",
-          "sha256": "0c0641dfcbefa2475c546ca07d8208a604959183d727be772ad46df181e991ba",
-          "bytes": 28545,
-          "gzip": 5642
+          "sha256": "0b10224fc345c8d9a809e1b944c245538f3cbd05f50c07750b82a134df1aa7d8",
+          "bytes": 17669,
+          "gzip": 4934
         },
         {
           "file": "taittiriya-samhita-1/part-2.json",
-          "sha256": "47a11e0d8f6bcc390785e508931191534f50efa54a5e57d055054c9069c24a39",
-          "bytes": 31741,
-          "gzip": 6553
+          "sha256": "6e5a2ede15d5849d9cd228f3bbffe30d31ebac259e694b57b698269d69cec625",
+          "bytes": 19472,
+          "gzip": 5757
         },
         {
           "file": "taittiriya-samhita-1/part-3.json",
-          "sha256": "33d726ed347ba79050455f3d42fb8d6d9b966e63d2bb6e1cd68a46e00adf8800",
-          "bytes": 32693,
-          "gzip": 6508
+          "sha256": "f650e947a545eeb936f163b90a71c6fd11e487ad05be75078153d0f74071ab9a",
+          "bytes": 20425,
+          "gzip": 5686
         },
         {
           "file": "taittiriya-samhita-1/part-4.json",
-          "sha256": "aed2e73da9f854866dfb8a40d9be86ed5b8792afe6cd0df98c43d04ab4a9ff90",
-          "bytes": 56415,
-          "gzip": 8543
+          "sha256": "d70781245415fc22cd6509a0865b413c39118f54e8204adb17233284250f0a33",
+          "bytes": 40052,
+          "gzip": 7652
         },
         {
           "file": "taittiriya-samhita-1/part-5.json",
-          "sha256": "61ff0041deff1485b4ffcae08c0110ba040f3610dff212001b13e1b716c676dc",
-          "bytes": 53748,
-          "gzip": 9581
+          "sha256": "c206384823f20dc2d77ad5f0cf2d45153628aa8354ff9db24add32cf6bfad761",
+          "bytes": 34424,
+          "gzip": 8485
         },
         {
           "file": "taittiriya-samhita-1/part-6.json",
-          "sha256": "1db3d3a96a589b4d459e684e7089aab5ea311185e23d7a1710fd147ac66a78c9",
-          "bytes": 30879,
-          "gzip": 5872
+          "sha256": "2e997afb913ef901e5dedf699d81896e336f655bf1ac720ce28d10b8ab125657",
+          "bytes": 18757,
+          "gzip": 5130
         },
         {
           "file": "taittiriya-samhita-1/part-7.json",
-          "sha256": "36e3206756ddff9f7a032b596497a660591dbf1c5f4f8be9f35208bcd9ce96aa",
-          "bytes": 43905,
-          "gzip": 8175
+          "sha256": "3c9c2bc01800febff8b4b349895fc9cff6115e20af10ff63a79a2c431f20bdf6",
+          "bytes": 26799,
+          "gzip": 7214
         },
         {
           "file": "taittiriya-samhita-1/part-8.json",
-          "sha256": "36f30b068d567f435a9b35ae6efab0cc27e1ec6ece7919d8257da365c80b20c3",
-          "bytes": 47859,
-          "gzip": 8396
+          "sha256": "ef18d81305ab572703f7205489de2c762031bd446b1910548c06c1391a7f2670",
+          "bytes": 29977,
+          "gzip": 7407
         }
       ]
     },
     {
       "id": "taittiriya-samhita-4",
       "index": "taittiriya-samhita-4/index.json",
-      "sha256": "82eda48817073f7b4f3014e4ace21df460bf50a8ecbd0c59296848158bc6c53b",
+      "sha256": "d203b737d78de9a724eac3889a70143540d1500ea6f973a65d680bd168331470",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/samhita/kanda_4_prashna_1",
         "upstreamRef": "2026-11-10",
@@ -997,57 +949,45 @@
         "parser": "taittiriya@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "82eda48817073f7b4f3014e4ace21df460bf50a8ecbd0c59296848158bc6c53b"
+        "sha256": "d203b737d78de9a724eac3889a70143540d1500ea6f973a65d680bd168331470"
       },
       "parts": [
         {
           "file": "taittiriya-samhita-4/part-1.json",
-          "sha256": "e111461754669ce87c5f0b6ab2739226e068bd91f3551e89e018c8da735239f6",
-          "bytes": 51956,
-          "gzip": 8605
+          "sha256": "89fc9f566716f9058e8d8cf9b38ced2690d1f3d7095e063ef2fe4c0a6167d67f",
+          "bytes": 36637,
+          "gzip": 7635
         },
         {
           "file": "taittiriya-samhita-4/part-2.json",
-          "sha256": "4a43d3021f6cf7cb1d274ce279a8f226d9664030e73194850191100c8019439b",
-          "bytes": 57185,
-          "gzip": 9512
+          "sha256": "37bf7733cf9df56c71740825cef005161393f2a275fd6a36195c45e9f562db27",
+          "bytes": 40738,
+          "gzip": 8473
         },
         {
           "file": "taittiriya-samhita-4/part-3.json",
-          "sha256": "786c066a1d250886d5538a5100e98b3abec4fc8a9d7964ccb4ca8d5dcf0f62e3",
-          "bytes": 40010,
-          "gzip": 7127
+          "sha256": "1089e6d63b0d50930d6969bcc2458ed245c03479d95269ad0d16b6b0f0da1199",
+          "bytes": 25239,
+          "gzip": 6309
         },
         {
           "file": "taittiriya-samhita-4/part-4.json",
-          "sha256": "540b6544b3d61489a458ba33a2e7191b8410d64f6ad2b1319ec8ac6596856782",
-          "bytes": 38528,
-          "gzip": 7172
+          "sha256": "155b5b9634ea20ee282a587305b137fdc81d09508a93127da1cbf902fa1b7a4d",
+          "bytes": 44943,
+          "gzip": 10571
         },
         {
           "file": "taittiriya-samhita-4/part-5.json",
-          "sha256": "a79506ac8477c2dfef80d5020cc84893a8f0b80d303d4bd169acf4f16e7a68ab",
-          "bytes": 30777,
-          "gzip": 5294
-        },
-        {
-          "file": "taittiriya-samhita-4/part-6.json",
-          "sha256": "07c9a747c0eaff53c273a3bdfbe19f9d7273f261f6dde5756565c4f8171c0c11",
-          "bytes": 46575,
-          "gzip": 8326
-        },
-        {
-          "file": "taittiriya-samhita-4/part-7.json",
-          "sha256": "89d5a111548e0b4b5dc8774b28f593dbec8a64d50a4e0c2fdad5b3b9a8b72e65",
-          "bytes": 33045,
-          "gzip": 5615
+          "sha256": "b09f9c0ab64a971a029bc8f0893d3096d98d45e490537653bd426697743fb0be",
+          "bytes": 54824,
+          "gzip": 11855
         }
       ]
     },
     {
       "id": "taittiriya-samhita-5",
       "index": "taittiriya-samhita-5/index.json",
-      "sha256": "90bc22f6972aea28fe18615f012600d53de86fa917b2f491b76676a25b7b3ac0",
+      "sha256": "e153cd163d74e2e51db702bc0d02a698017549fa1e0c30a15b3347e03aac29d8",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/samhita/kanda_5_prashna_1",
         "upstreamRef": "2026-11-10",
@@ -1055,69 +995,63 @@
         "parser": "taittiriya@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Saṃhitā, kāṇḍa 5 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "90bc22f6972aea28fe18615f012600d53de86fa917b2f491b76676a25b7b3ac0"
+        "sha256": "e153cd163d74e2e51db702bc0d02a698017549fa1e0c30a15b3347e03aac29d8"
       },
       "parts": [
         {
           "file": "taittiriya-samhita-5/part-1.json",
-          "sha256": "a6de98219a4de1468608c1d5ea8f18e7444b1205528da157095f0d84dbadf6dd",
-          "bytes": 38398,
-          "gzip": 7452
+          "sha256": "71c10cc8b9637020d5e2ed95a570d76f8d49b078ed827664deea580030d3529c",
+          "bytes": 21311,
+          "gzip": 6468
         },
         {
           "file": "taittiriya-samhita-5/part-2.json",
-          "sha256": "0d2f09042f127e806026792956992061f551d86016a371f34e07059ba13d6e77",
-          "bytes": 46884,
-          "gzip": 8557
+          "sha256": "3f8e8f472f03b1888989626ad18ed048b79952fc004c28b45ee666f6e4d67241",
+          "bytes": 42315,
+          "gzip": 11192
         },
         {
           "file": "taittiriya-samhita-5/part-3.json",
-          "sha256": "95335aaaf62c86fe7bbbb59e257aa928d851302d23e28739c84efb6823cfc7d1",
-          "bytes": 29271,
-          "gzip": 5435
+          "sha256": "6fc1dde8d9ea83f857fc5e4f0e5f54d85f90c97c8f03afb07da3458f25a82d68",
+          "bytes": 16526,
+          "gzip": 5243
         },
         {
           "file": "taittiriya-samhita-5/part-4.json",
-          "sha256": "b4b2c117d2bd34bd68f2e117e682e01a6a75340a2475ffa4d285de8cd76eba2a",
-          "bytes": 29857,
-          "gzip": 6052
+          "sha256": "2d74a4f5c147b70b860f23a8591a9340fca21c04c21ae979a63fce31ddb7aa41",
+          "bytes": 25667,
+          "gzip": 7169
         },
         {
           "file": "taittiriya-samhita-5/part-5.json",
-          "sha256": "1a96a85108c091b797b50366666538748443edd7ed322d1a6fe3f051be27ddad",
-          "bytes": 44217,
-          "gzip": 8219
+          "sha256": "68f482c7301286af8bfc1d7e765fb98300d814bafb881a64e22d9818b5e69c8b",
+          "bytes": 24080,
+          "gzip": 6381
         },
         {
           "file": "taittiriya-samhita-5/part-6.json",
-          "sha256": "b86937ddbf79408e025ff4b4faf9f60e688f010196d4a3f41330b4d5167e3010",
-          "bytes": 40429,
-          "gzip": 7266
-        },
-        {
-          "file": "taittiriya-samhita-5/part-7.json",
-          "sha256": "be83db2b6f5ab8b763ca58fc7e2a91ff8db460526250d2941004749c0cae62d6",
-          "bytes": 41917,
-          "gzip": 7913
+          "sha256": "e89c9a560fc1dfe24be1f77b2e816963e738c2bc76d7364c1700c5424470f10e",
+          "bytes": 26685,
+          "gzip": 6976
         }
       ]
     }
   ],
   "metrics": {
     "total": {
-      "raw": 9297126,
-      "gzip": 1421939
+      "raw": 6882621,
+      "gzip": 1269698
     },
     "largestPart": {
-      "file": "rigveda-1/part-7.json",
-      "gzip": 20409
+      "file": "rigveda-8/part-5.json",
+      "gzip": 20466
     },
     "works": [
       {
         "id": "rudram",
         "label": "Śrī Rudram",
         "parts": 2,
-        "gzip": 10909,
+        "gzip": 22426,
         "budget": 25600,
         "maxParts": 3,
         "ok": true

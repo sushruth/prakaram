@@ -1,314 +1,351 @@
 {
   "sections": [
     {
-      "id": "taittiriya-samhita-5-5-1",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 1",
-      "sectionNumber": 48,
+      "id": "taittiriya-samhita-5-6-1",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 1",
+      "sectionNumber": 72,
       "chunks": [
         {
-          "id": "ts-5-5-1-1",
+          "id": "ts-5-6-1-1",
           "chunkNumber": 1,
-          "sanskrit": "यदेके॑न सꣴस्था॒पय॑ति य॒ज्ञस्य॒ सन्त॑त्या॒ अवि॑च्छेदायै॒न्द्राः प॒शवो॒ ये मु॑ष्क॒रा यदै॒न्द्राः सन्तो॒ऽग्निभ्य॑ आल॒भ्यन्ते॑ दे॒वता᳚भ्यः स॒मद॑न्दधात्या ग्ने॒यी स्त्रि॒ष्टुभो॑ याज्यानुवा॒क्याः᳚ कुर्या॒द् यदा᳚ग्ने॒यीस्तेना᳚ऽऽ*ग्ने॒या यत् त्रि॒ष्टुभ॒स्तेनै॒न्द्राः समृ॑द्ध्यै॒ न दे॒वता᳚भ्यः स॒मद॑न्दधाति वा॒यवे॑ नि॒युत्व॑ते तूप॒रमा ल॑भते॒ तेजो॒ऽग्नेर् वा॒यु स्तेज॑स ए॒ष आ ल॑भ्यते॒ तस्मा᳚द्य॒द्रिय॑ङ् वा॒युर् वाति॑ त॒द्रिय॑ङ्ङ॒ग्निर् द॑हति॒ स्वमे॒व तत् तेजोऽन्वे॑ति॒ यन्न नि॒युत्व॑ते॒ स्यादुन्मा᳚द्ये॒द्यज॑मानो नि॒युत्व॑ते भवति॒ यज॑मान॒स्याऽनु॑न्मादाय वायु॒मती᳚ श्वे॒तव॑ती याज्यानुवा॒क्ये॑ भवतः सतेज॒स्त्वाय॑ हिरण्यग॒र्भः सम॑वर्त॒ताग्र॒ इत्या॑घा॒रमा घा॑रयति प्र॒जाप॑ति॒र् वै हि॑रण्यग॒र्भः प्र॒जाप॑तेरनुरूप॒त्वाय॒ सर्वा॑णि॒ वा ए॒ष रू॒पाणि॑ पशू॒नाम्प्रत्या ल॑भ्यते॒ यच्छ्म॑श्रु॒ण स्तत् पुरु॑षाणाꣳ रू॒पय्ँयत् तू॑प॒र स्तदश्वा॑ना॒य्ँयद॒न्यतो॑द॒न् तद्गवा॒य्ँयदव्या॑ इव श॒फा स्तदवी॑ना॒य्ँयद॒ज स्तद॒जाना᳚व्ँवा॒युर् वै प॑शू॒नाम्प्रि॒यन्धाम॒ यद्वा॑य॒व्यो॑ भव॑त्ये॒तमे॒वैन॑म॒भि सं॑जाना॒नाः प॒शव॒ उप॑ तिष्ठन्ते वाय॒व्यः॑ का॒र्या(३)ः प्रा॑जाप॒त्या(३) इत्या॑हु॒र् यद्वा॑य॒व्य॑ङ्कु॒र्यात् प्र॒जाप॑तेरिया॒द् यत् प्रा॑जाप॒त्यङ्कु॒र्याद्वा॒यो ए॒वोभ॒यतः॑ परि॒गृह्य॒ यज॑मा॒नोऽव॑ रुन्धे पुरो॒डाशे॑न॒ वै दे॒वा अ॒मुष्मि॑ल्ँलो॒क आ᳚र्द्ध्नुवन् च॒रुणा॒ऽस्मिन्यः का॒मये॑ता॒ऽमुष्मि॑ल्ँलो॒क ऋ॑द्ध्नुया॒मिति॒ स पु॑रो॒डाश॑ङ्कुर्वीता॒ऽमुष्मि॑न्ने॒व लो॒क ऋ॑द्ध्नोति॒ यद॒ष्टाक॑पाल॒ स्तेना᳚ऽऽग्ने॒यो यत् त्रि॑कपा॒लस्तेन॑ वैष्ण॒वः समृ॑द्ध्यै॒ यः का॒मये॑ता॒स्मिल्ँलो॒क ऋ॑द्ध्नुया॒मिति॒ स च॒रुङ्कु॑र्वीता॒ग्नेर् घृ॒तव्ँविष्णो᳚स्तण्डु॒लास्तस्मा᳚ का॒ल आग॑ते वि॒जाय॑त ए॒वमे॒व स॑व्ँवथ्स॒रमा॒प्त्वा का॒ल आग॑ते॒ऽग्निञ्चि॑नुते॒ नाऽऽर्ति॒मार्च्छ॑त्ये॒षा वा अ॒ग्नेः प्रि॒या त॒नूर्यद्वै᳚श्वान॒रः प्रि॒यामे॒वास्य॑ त॒नुव॒मव॑ रुन्धे॒ त्रीण्ये॒तानि॑ ह॒वीꣳषि॑ भवन्ति॒ त्रय॑ इ॒मे लो॒का ए॒षाल्ँलो॒काना॒ꣳ॒ रोहा॑य",
+          "sanskrit": "hira̍ṇyavarṇāḥ̠ śuca̍yaḥ pāva̠kā yāsu̍ jā̠taḥ ka̠śyapo̠ yāsvindraḥ̍|",
           "section": 1
+        },
+        {
+          "id": "ts-5-6-1-2",
+          "chunkNumber": 2,
+          "sanskrit": "a̠gniym̐yā garbha̍ndadhi̠re virū̍pā̠stā na̠ āpaḥ̠ śagͫͫ syo̠nā bha̍vantu||"
+        },
+        {
+          "id": "ts-5-6-1-3",
+          "chunkNumber": 3,
+          "sanskrit": "yāsā̠g̠ͫ rājā̠ varu̍ṇo̠ yāti̠ maddhye̍ satyānṛ̠te a̍va̠paśya̠n janā̍nām|"
+        },
+        {
+          "id": "ts-5-6-1-4",
+          "chunkNumber": 4,
+          "sanskrit": "ma̠dhu̠ścutaḥ̠ śuca̍yo̠ yāḥ pā̍va̠kāstā na̠ āpaḥ̠ śagͫͫ syo̠nā bha̍vantu||"
+        },
+        {
+          "id": "ts-5-6-1-5",
+          "chunkNumber": 5,
+          "sanskrit": "yāsā̎nde̠vā di̠vi kṛ̠ṇvanti̍ bha̠khṣaym̐yā a̠ntari̍khṣe bahu̠dhā bhava̍nti|"
+        },
+        {
+          "id": "ts-5-6-1-6",
+          "chunkNumber": 6,
+          "sanskrit": "yāḥ pṛ̍thi̠vīmpaya̍so̠ndanti̍ śu̠krāstā na̠ āpaḥ̠ śagͫͫ syo̠nā bha̍vantu||"
+        },
+        {
+          "id": "ts-5-6-1-7",
+          "chunkNumber": 7,
+          "sanskrit": "śi̠vena̍ mā̠ cakhṣu̍ṣā paśyatā''paḥ śi̠vayā̍ ta̠nuvopa̍ spṛśata̠ tvaca̍mme|"
+        },
+        {
+          "id": "ts-5-6-1-8",
+          "chunkNumber": 8,
+          "sanskrit": "sarvā̍gͫ a̠gnīgͫra̍phsu̠ṣado̍ huve vo̠ mayi̠ varco̠ bala̠mojo̠ ni dha̍tta||"
+        },
+        {
+          "id": "ts-5-6-1-9",
+          "chunkNumber": 9,
+          "sanskrit": "yada̠daḥ saṃ̍praya̠tīrahā̠vana̍datā ha̠te|"
+        },
+        {
+          "id": "ts-5-6-1-10",
+          "chunkNumber": 10,
+          "sanskrit": "tasmā̠dā na̠dyo̍ nāma̍ stha̠ tā vo̠ nāmā̍ni sindhavaḥ||"
+        },
+        {
+          "id": "ts-5-6-1-11",
+          "chunkNumber": 11,
+          "sanskrit": "yat preṣi̍tā̠ varu̍ṇena̠ tāḥ śībha̍gͫ sa̠mava̍lgata"
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-2",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 2",
-      "sectionNumber": 49,
+      "id": "taittiriya-samhita-5-6-2",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 2",
+      "sectionNumber": 73,
       "chunks": [
         {
-          "id": "ts-5-5-2-1",
+          "id": "ts-5-6-2-1",
           "chunkNumber": 1,
-          "sanskrit": "प्र॒जाप॑तिः प्र॒जाः सृ॒ष्ट्वा प्रे॒णाऽनु॒ प्रावि॑श॒त् ताभ्यः॒ पुनः॒ संभ॑वितु॒न्नाश॑क्नो॒थ् सो᳚ऽब्रवीदृ॒द्ध्नव॒दिथ् स यो मे॒तः पुनः॑ संचि॒नव॒दिति॒ तन्दे॒वाः सम॑चिन्व॒न् ततो॒ वै त आ᳚र्द्ध्नुव॒न्॒यथ् स॒मचि॑न्व॒न् तच्चित्य॑स्य चित्य॒त्वय्ँय ए॒वव्ँवि॒द्वान॒ग्निञ्चि॑नु॒त ऋ॒द्ध्नोत्ये॒व कस्मै॒ कम॒ग्निश्ची॑यत॒ इत्या॑हुरग्नि॒वा स पापी॑यान् भविष्य॒सीति॒ सो᳚ऽब्रवी॒त् तथा॒ वा अ॒हङ्क॑रिष्यामि॒ यथा᳚ त्वा॒ नाति॑ध॒ख्ष्यतीति॒ स इ॒माम॒भ्य॑मृशत् प्र॒जाप॑तिस्त्वा सादयतु॒ तया॑ दे॒वत॑याऽङ्गिर॒स्वद् ध्रु॒वा सी॒देती॒मामे॒वेष्ट॑काङ्कृ॒त्वोपा॑ध॒त्तान॑तिदाहाय॒ यत् प्रत्य॒ग्निञ्चि॑न्वी॒त तद॒भि मृ॑शेत् प्र॒जाप॑तिस्त्वा सादयतु॒ तया॑ दे॒वत॑याऽङ्गिर॒स्वद् ध्रु॒वा सी॒दे त्रीणि॑ च श॒तान्यसृ॑जन्त॒ त्रय॑स्त्रिꣳशतञ्च॒ तस्मा᳚त् त्र्य॒हम्भा॒र्यः॑ प्रैव जा॑यते॒ तान् रु॒द्रा अ॑ब्रुव॒न् प्र यू॒यम॑जनिढ्वव्ँव॒यम्प्र जा॑यामहा॒ इति॒ तꣳ रु॒द्रेभ्यः॒ प्राय॑च्छ॒न् तꣳ षडहा᳚न्यबिभरु॒ स्तेन॒ त्रीणि॑ च श॒तान्यसृ॑जन्त॒ त्रय॑स्त्रिꣳशतञ्च॒ तस्मा᳚थ् षड॒हम्भा॒र्यः॑ प्रैव जा॑यते॒ ताना॑दि॒त्या अ॑ब्रुव॒न् प्र यू॒यम॑जनिढ्वव्ँव॒यं प्र जा॑यामहा॒ इति॒ तमा॑दि॒त्येभ्यः॒ प्राय॑च्छ॒न् तन्द्वाद॒शाहा᳚न्यबिभरु॒ स्तेन॒ त्रीणि॑ च श॒तान्यसृ॑जन्त॒ त्रय॑स्त्रिꣳशतञ्च॒ तस्मा᳚द् द्वादशा॒हम्भा॒र्यः॑ प्रैव जा॑यते॒ तेन॒ वै ते स॒हस्र॑मसृजन्तो॒खाꣳ स॑हस्रत॒मीय्ँय ए॒वमुख्य॑ꣳ साह॒स्रव्ँवेद॒ प्र स॒हस्र॑म्प॒शूना᳚प्नोति",
+          "sanskrit": "a̠pāṅgrahā̎n gṛhṇātye̠tad vāva rā̍ja̠sūya̠ym̐yade̠te grahāḥ̎ sa̠vo̎'gnirva̍ruṇasa̠vo rā̍ja̠sūya̍magnisa̠vaścitya̠ stābhyā̍me̠va sū̍ya̠te'tho̍ u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎'gni̠cita̠ āpo̍ bhava̠ntyāpo̠ vā a̠gner bhrātṛ̍vyā̠ yada̠po̎'gnera̠dhastā̍dupa̠ dadhā̍ti̠ bhrātṛ̍vyābhibhūtyai̠ bhava̍tyā̠tmanā̠ parā̎'sya̠ bhrātṛ̍vyo bhavatya̠mṛta̠ vm̐vā āpa̠stasmā̍da̠dbhirava̍tāntama̠bhi ṣi̍ñcanti̠ nā''rti̠mārccha̍ti̠ sarva̠māyu̍reti̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐vedānna̠vm̐vā āpaḥ̍ pa̠śava̠ āpo'nna̍mpa̠śavo̎'nnā̠daḥ pa̍śu̠mān bha̍vati̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̠ dvāda̍śa bhavanti̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠reṇai̠vāsmā̠ anna̠mava̍ rundhe̠ pātrā̍ṇi bhavanti̠ pātre̠ vā anna̍madyate̠ sayo̎nye̠vānna̠mava̍ rundha̠ ā dvā̍da̠śāt puru̍ṣā̠danna̍ ma̠ttyatho̠ pātrā̠nna chi̍dyate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍ cainā e̠vavm̐veda̍ kuṃ̠bhāśca̍ kuṃ̠bhīśca̍ mithu̠nāni̍ bhavanti mithu̠nasya̠ prajā̎tyai̠ pra pra̠jayā̍ pa̠śubhi̍r mithu̠nair jā̍yate̠ yasyai̠tā u̍padhī̠yante̠ ya u̍",
           "section": 2
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-3",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 3",
-      "sectionNumber": 50,
+      "id": "taittiriya-samhita-5-6-3",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 3",
+      "sectionNumber": 74,
       "chunks": [
         {
-          "id": "ts-5-5-3-1",
+          "id": "ts-5-6-3-1",
           "chunkNumber": 1,
-          "sanskrit": "यजु॑षा॒ वा ए॒षा क्रि॑यते॒ यजु॑षा पच्यते॒ यजु॑षा॒ वि मु॑च्यते॒ यदु॒खा सा वा ए॒षैतर्हि॑ या॒तया᳚म्नी॒ सा न पुनः॑ प्र॒युज्येत्या॑हु॒रग्ने॑ यु॒ख्ष्वा हि ये तव॑ यु॒ख्ष्वा हि दे॑व॒हूत॑मा॒ꣳ॒ इत्यु॒खाया᳚ञ्जुहोति॒ तेनै॒वैना॒म्पुनः॒ प्र यु॑ङ्क्ते॒ तेनाया॑तयाम्नी॒ यो वा अ॒ग्निय्ँयोग॒ आग॑ते यु॒नक्ति॑ यु॒ङ्क्ते यु॑ञ्जा॒नेष्वग्ने॑ यु॒ख्ष्वा हि ये तव॑ यु॒ख्ष्वा हि दे॑व॒हूत॑मा॒ꣳ॒ इत्या॑है॒ष वा अ॒ग्नेर् योग॒स्तेनै॒वैन॑य्ँयुनक्ति यु॒ङ्क्ते यु॑ञ्जा॒नेषु॑ ब्रह्मवा॒दिनो॑ वदन्ति॒ न्य॑ङ्ङ॒ग्निश्चे॑त॒व्या(३) उ॑त्ता॒ना(३) इति॒ वय॑सा॒व्ँवा ए॒ष प्र॑ति॒मया॑ चीयते॒ यद॒ग्निर्यन्न्य॑ञ्चञ्चिनु॒यात् पृ॑ष्टि॒त ए॑न॒माहु॑तय ऋच्छेयु॒र् यदु॑त्ता॒नन्न पति॑तुꣳ शक्नुया॒दसु॑वर्ग्योऽस्य स्यात् प्रा॒चीन॑मुत्ता॒नं",
+          "sanskrit": "bhū̠te̠ṣṭa̠kā upa̍ dadhā̠tyatrā̎tra̠ vai mṛ̠tyur jā̍yate̠ yatra̍yatrai̠va mṛ̠tyur jāya̍te̠ tata̍ e̠vaina̠mava̍ yajate̠ tasmā̍dagni̠cith sarva̠māyu̍reti̠ sarve̠ hya̍sya mṛ̠tyavo've̎ṣṭā̠ stasmā̍dagni̠cinnābhica̍rita̠vai pra̠tyage̍na mabhicā̠raḥ stṛ̍ṇute sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te de̍vasu̠vāme̠tāni̍ ha̠vīgͫṣi̍ bhavantye̠tāva̍nto̠ vai de̠vānā̍gͫ sa̠vāsta e̠vā vai rā̍ja̠sūya̍sya rū̠paym̐ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠ta u̠bhāve̠va lo̠kāva̠bhi ja̍yati̠ yaśca̍ rāja̠sūye̍nejā̠nasya̠ yaścā̎gni̠cita̠ indra̍sya suṣuvā̠ṇasya̍ daśa̠dhendri̠yavm̐vī̠rya̍mparā̍'pata̠t tadde̠vāḥ sau̎trāma̠ṇyā sama̍bharanth sū̠yate̠ vā e̠ṣa yo̎'gniñci̍nu̠te̎'gniñci̠tvā sau̎trāma̠ṇyā ya̍jetendri̠yame̠va vī̠rya̍gͫ saṃ̠bhṛtyā̠''tman dha̍tte",
           "section": 3
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-4",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 4",
-      "sectionNumber": 51,
+      "id": "taittiriya-samhita-5-6-4",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 4",
+      "sectionNumber": 75,
       "chunks": [
         {
-          "id": "ts-5-5-4-1",
+          "id": "ts-5-6-4-1",
           "chunkNumber": 1,
-          "sanskrit": "आपो॒ वरु॑णस्य॒ पत्न॑य आस॒न् ता अ॒ग्निर॒भ्य॑द्ध्याय॒त् ताः सम॑भव॒त् तस्य॒ रेतः॒ परा॑ऽपत॒त् तदि॒यम॑भव॒द्यद् द्वि॒तीय॑म्प॒राप॑त॒त् तद॒साव॑भवदि॒यव्ँवै वि॒राड॒सौ स्व॒राड् यद्वि॒राजा॑वुप॒दधा॑ती॒मे ए॒वोप॑ धत्ते॒ यद्वा अ॒सौ रेतः॑ सि॒ञ्चति॒ तद॒स्याम्प्रति॑ तिष्ठति॒ तत् प्र जा॑यते॒ ता ओष॑धयो वी॒रुधो॑ भवन्ति॒ ता अ॒ग्निर॑त्ति॒ य ए॒वव्ँवेद॒ प्रैव जा॑यतेऽन्ना॒दो भ॑वति॒ यो रे॑त॒स्वी स्यात् प्र॑थ॒माया॒न्तस्य॒ चित्या॑मु॒भे उप॑ दद्ध्यादि॒मे ए॒वास्मै॑ स॒मीची॒ रेतः॑ सिञ्चतो॒ यः सि॒क्तरे॑ताः॒ स्यात् प्र॑थ॒माया॒न्तस्य॒ चित्या॑म॒न्यामुप॑ दद्ध्यादुत्त॒माया॑म॒न्याꣳ रेत॑ ए॒वास्य॑ सि॒क्तमा॒भ्यामु॑भ॒यतः॒ परि॑ गृह्णाति सव्ँवथ्स॒रन्न क",
+          "sanskrit": "sa̠jūrabdo'yā̍vabhiḥ sa̠jūru̠ṣā aru̍ṇībhiḥ sa̠jūḥ sūrya̠ eta̍śena sa̠joṣā̍va̠śvinā̠ dagͫso̍bhiḥ sa̠jūra̠gnir vai̎śvāna̠ra iḍā̍bhir ghṛ̠tena̠ svāhā̍ savm̐vathsa̠ro vā abdo̠ māsā̠ ayā̍vā u̠ṣā aru̍ṇī̠ sūrya̠ eta̍śa i̠me a̠śvinā̍ savm̐vathsa̠ro̎'gnir vai̎śvāna̠raḥ pa̠śava̠ iḍā̍ pa̠śavo̍ ghṛ̠tagͫ sa̍vm̐vathsa̠rampa̠śavo'nu̠ pra jā̍yante savm̐vathsa̠reṇai̠vāsmai̍ pa̠śūn pra ja̍nayati darbhastaṃ̠be ju̍hoti̠ yad vā a̠syā a̠mṛta̠ym̐yadvī̠rya̍ntadda̠rbhā stasmi̍n juhoti̠ praiva jā̍yate'nnā̠do bha̍vati̠ yasyai̠vañjuhva̍tye̠tā vai de̠vatā̍ a̠gneḥ pu̠rastā̎dbhāgā̠ stā e̠va prī̍ṇā̠tyatho̠ cakhṣu̍re̠vāgneḥ pu̠rastā̠t prati̍ dadhā̠tyana̍ndho bhavati̠ ya e̠vavm̐vedā''po̠ vā i̠damagre̍ sali̠lamā̍sī̠th sa pra̠jāpa̍tiḥ puṣkarapa̠rṇe vāto̍ bhū̠to̍'lelāya̠th sa sa utta̍raḥ pa̠khṣo̍'bhava̠th sodī̍cī̠ digyāmu̠pari̍ṣṭādu̠pāda̍dhā̠t tat pṛ̠ṣṭhama̍bhava̠th sorddhvā digi̠yavm̐vā a̠gniḥ pañce̎ṣṭaka̠stasmā̠dyada̠syāṅkhana̍ntya̠bhīṣṭa̍kāntṛ̠ndantya̠bhi śarka̍rā̠g̠ͫ sarvā̠ vā i̠yavm̐vayo̎bhyo̠ nakta̍ndṛ̠śe dī̎pyate̠ tasmā̍di̠māvm̐vayā̍gͫsi̠ nakta̠nnāddhyā̍sate̠ ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠te pratye̠va",
           "section": 4
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-5",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 5",
-      "sectionNumber": 52,
+      "id": "taittiriya-samhita-5-6-5",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 5",
+      "sectionNumber": 76,
       "chunks": [
         {
-          "id": "ts-5-5-5-1",
+          "id": "ts-5-6-5-1",
           "chunkNumber": 1,
-          "sanskrit": "वि॒श्वक॑र्मा दि॒शाम्पतिः॒ स नः॑ प॒शून् पा॑तु॒ सो᳚ऽस्मान् पा॑तु॒ तस्मै॒ नमः॑ प्र॒जाप॑ती रु॒द्रो वरु॑णो॒ऽग्निर् दि॒शाम्पतिः॒ स नः॑ प॒शून् पा॑तु॒ सो᳚ऽस्मान् पा॑तु॒ तस्मै॒ नम॑ ए॒ता वै दे॒वता॑ ए॒तेषा᳚म्पशू॒नामधि॑पतय॒ स्ताभ्यो॒ वा ए॒ष आ वृ॑श्च्यते॒ यः प॑शुशी॒र्॒षाण्यु॑प॒दधा॑ति हिरण्येष्ट॒का उप॑ दधात्ये॒ताभ्य॑ ए॒व दे॒वता᳚भ्यो॒ नम॑स्करोति ब्रह्मवा॒दिनो॑ द्वि॒तीया॑मुप॒धाय॑ व्या॒नेनै॒व व्या॒नꣳ सम॑र्द्धय॒त्यपा᳚न्यात् तृ॒तीया॑मुप॒धाया॑पा॒नेनै॒वापा॒नꣳ सम॑र्द्धय॒त्यथो᳚ प्रा॒णैरे॒वैन॒ꣳ॒ समि॑न्धे॒ भूर् भुवः॒ सुव॒रिति॑ स्वयमातृ॒ण्णा उप॑ दधाती॒मे वै लो॒काः स्व॑यमातृ॒ण्णा ए॒ताभिः॒ खलु॒ वै व्याहृ॑तीभिः प्र॒जाप॑तिः॒ प्राजा॑यत॒ यदे॒ताभि॒र् व्याहृ॑तीभिः स्वयमातृ॒ण्णा उ॑प॒दधा॑ती॒माने॒व लो॒कानु॑प॒धायै॒षु लो॒केष्वधि॒ प्र जा॑यते प्रा॒णाय॑ व्या॒नाया॑पा॒नाय॑ वा॒चे त्वा॒ चख्षु॑षे त्वा॒ तया॑ दे॒वत॑याऽङ्गिर॒स्वद् ध्रु॒वा सी॑दा॒ग्निना॒ वै दे॒वाः सु॑व॒र्गल्ँलो॒कम॑जिगाꣳस॒न् तेन॒ पति॑तु॒न्नाश॑क्नुव॒न् त ए॒ताश्चत॑स्रः स्वयमातृ॒ण्णा अ॑पश्य॒न् ता दि॒ख्षूपा॑दधत॒ तेन॑ स॒र्वत॑श्चख्षुषा सुव॒र्गल्ँलो॒कमा॑य॒न्॒यच्चत॑स्रः स्वयमातृ॒ण्णा दि॒ख्षू॑प॒दधा॑ति स॒र्वत॑श्चख्षुषै॒व तद॒ग्निना॒ यज॑मानः सुव॒र्गल्ँलो॒कमे॑ति",
+          "sanskrit": "sa̠vm̐va̠thsa̠ramukhya̍mbhṛ̠tvā dvi̠tīye̍ savm̐vathsa̠ra ā̎gne̠yama̠ṣṭāka̍pāla̠nnirva̍pedai̠ndramekā̍daśakapālavm̐vaiśvade̠vandvāda̍śakapālambārhaspa̠tyañca̠ruvm̐vai̎ṣṇa̠vantri̍kapā̠lantṛ̠tīye̍ savm̐vathsa̠re̍'bhi̠jitā̍ yajeta̠ yada̠ṣṭāka̍pālo̠ bhava̍tya̠ṣṭākhṣa̍rā gāya̠tryā̎gne̠yaṅgā̍ya̠tramprā̍tassava̠namprā̍tassava̠name̠va tena̍ dādhāra gāya̠trīñchando̠ yadekā̍daśakapālo̠ bhava̠tyekā̍śākhṣarā tri̠ṣṭugai̠ndrantraiṣṭu̍bha̠mmāddhya̍ndina̠g̠ͫ sava̍na̠mmāddhya̍ndiname̠va sava̍na̠ntena̍ dādhāra tri̠ṣṭubha̠ tena̍ lo̠kagͫͫ spṛ̍ṇoti̠ yad dvi̠tīye̍ savm̐vathsa̠re̎'gniñci̍nu̠te̎'ntari̍khṣame̠va tena̍ spṛṇoti̠ yat tṛ̠tīye̍ savm̐vathsa̠re yaja̍te̠'mume̠va tena̍ lo̠kagͫͫ spṛ̍ṇotye̠tavm̐vai para̍ āṭṇā̠raḥ ka̠khṣīvā̍gͫ auśi̠jo vī̠taha̍vyaḥ śrāya̠sastra̠sada̍syuḥ pauruku̠thsyaḥ pra̠jākā̍mā acinvata̠ tato̠ vai te sa̠hasra̍gͫsahasrampu̠trāna̍vindanta̠ pratha̍te pra̠jayā̍ pa̠śubhi̠stāmmātrā̍māpnoti̠ yānte'ga̍ccha̠n̠ya e̠vavm̐vi̠dvāne̠tama̠gniñci̍nu̠te",
           "section": 5
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-6",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 6",
-      "sectionNumber": 53,
+      "id": "taittiriya-samhita-5-6-6",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 6",
+      "sectionNumber": 77,
       "chunks": [
         {
-          "id": "ts-5-5-6-1",
+          "id": "ts-5-6-6-1",
           "chunkNumber": 1,
-          "sanskrit": "अग्न॒ आ या॑हि वी॒तय॒ इत्या॒हाह्व॑तै॒वैन॑म॒ग्निन्दू॒तव्ँवृ॑णीमह॒ इत्या॑ह हू॒त्वैवैन॑व्ँवृणीते॒ऽग्निना॒ऽग्निः समि॑द्ध्यत॒ इत्या॑ह॒ समि॑न्ध ए॒वैन॑म॒ग्निर् वृ॒त्राणि॑ जङ्घन॒दित्या॑ह॒ समि॑द्ध ए॒वास्मि॑न्निन्द्रि॒यन्द॑धात्य॒ग्नेः स्तोम॑म्मनामह॒ इत्या॑ह मनु॒त ए॒वैन॑मे॒तानि॒ वा अह्ना॑ꣳ रू॒पाण्य॑ इत्या॑ह॒ तस्मा॒त् परु॑षिपरुषि॒ रसः॒ सोम॑ꣴ श्रीणन्ति॒ पृश्ञ॑य॒ इत्या॒हान्न॒व्ँवै पृश्ञन्न॑मे॒वाव॑ रुन्धे॒ऽर्को वा अ॒ग्निर॒र्कोऽन्न॒मन्न॑मे॒वाव॑ रुन्धे॒ जन्म॑न् दे॒वाना॒व्ँविश॑ स्त्रि॒ष्वा रो॑च॒ने दि॒व इत्या॑हे॒माने॒वास्मै॑ लो॒कान् ज्योति॑ष्मतः करोति॒ यो वा इष्ट॑कानाम्प्रति॒ष्ठाव्ँवेद॒ प्रत्ये॒व ति॑ष्ठति॒ तया॑ दे॒वत॑याऽङ्गिर॒स्वद् ध्रु॒वा सी॒देत्या॑है॒षा वा इष्ट॑कानाम्प्रति॒ष्ठा य ए॒वव्ँवेद॒ प्रत्ये॒व ति॑ष्ठति",
+          "sanskrit": "pra̠jāpa̍tira̠gnima̍cinuta̠ sa khṣu̠rapa̍vir bhū̠tvā'ti̍ṣṭha̠t tande̠vā bibhya̍to̠ nopā̍''ya̠n te chando̍bhirā̠tmāna̍ñchādayi̠tvopā̍''ya̠n tacchanda̍sāñchanda̠stvambrahma̠ vai chandā̍gͫsi̠ brahma̍ṇa e̠tadrū̠paym̐yat kṛ̍ṣṇāji̠naṃ kārṣṇī̍ upā̠nahā̠vupa̍ muñcate̠ chando̍bhire̠vā''tmāna̍ñchādayi̠tvā'gnimupa̍ caratyā̠tmano'hi̍gͫsāyai devani̠dhir vā e̠ṣa ni dhī̍yate̠ yada̠gni pra̠jāpa̍ti̠rvā atha̍rvā̠'gnire̠va da̠ddhyaṅṅā̍tharva̠ṇa stasyeṣṭa̍kā a̠sthānye̠tagͫ ha̠ vāva tadṛṣi̍ra̠bhyanū̍vā̠cendro̍ dadhī̠co a̠sthabhi̠riti̠ yadiṣṭa̍kābhira̠gniñci̠noti̠ sātmā̍name̠vāgniñci̍nute̠ sātmā̠muṣmi̍lm̐lo̠ke bha̍vati̠ ya e̠vavm̐veda̠ śarī̍ra̠vm̐vā e̠tada̠gner yaccitya̍ ā̠tmā vai̎śvāna̠ro yacci̠te vai̎śvāna̠rañju̠hoti̠ śarī̍rame̠va sa̠g̠ͫͫskṛtyā̠",
           "section": 6
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-7",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 7",
-      "sectionNumber": 54,
+      "id": "taittiriya-samhita-5-6-7",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 7",
+      "sectionNumber": 78,
       "chunks": [
         {
-          "id": "ts-5-5-7-1",
+          "id": "ts-5-6-7-1",
           "chunkNumber": 1,
-          "sanskrit": "सु॒व॒र्गाय॒ वा ए॒ष लो॒काय॑ चीयते॒ यद॒ग्निर् वज्र॑ एकाद॒शिनी॒ यद॒ग्नावे॑काद॒शिनी᳚म्मिनु॒याद्वज्रे॑णैनꣳ सुव॒र्गाल्लो॒काद॒न्तर् द॑द्ध्या॒द्यन्न मि॑नु॒याथ् स्वरु॑भिः प॒शून् व्य॑र्द्धयेदेकयू॒पम्मि॑नोति॒ नैन॒व्ँवज्रे॑ण सुव॒र्गा ल्लो॒काद॑न्त॒र्दधा॑ति॒ न स्वरु॑भिः प॒शून् व्य॑र्द्धयति॒ वि वा ए॒ष इ॑न्द्रि॒येण॑ वी॒र्ये॑णर्द्ध्यते॒ यो᳚ऽग्निञ्चि॒न्व न्न॑धि॒क्राम॑त्यैन्द्रि॒य धनु॒ स्तद्वातो॒ अनु॑ वातु ते॒ तस्मै॑ ते रुद्र सव्ँवथ्स॒रेण॒ नम॑ स्करोमि॒ यत् ते॑ रुद्र दख्षि॒णा धनु॒ स्तद्वातो॒ अनु॑ वातु ते॒ तस्मै॑ ते रुद्र परिवथ्स॒रेण॒ नम॑ स्करोमि॒ यत् ते॑ रुद्र प॒श्चाद्धनु॒ स्तद्वातो॒ अनु॑ वातु ते॒ तस्मै॑ ते रुद्रेदावथ्स॒रेण॒ नम॑ स्करोमि॒ यत् ते॑ रुद्रोत्त॒राद्धनु॒ स्तद् वातो॒ अनु॑ वातु ते॒ तस्मै॑ ते रुद्रेदुवथ्स॒रेण॒ नम॑ स्करोमि॒ यत् ते॑ रुद्रो॒परि॒ धनु॒ स्तद्वातो॒ अनु॑ वातु ते॒ तस्मै॑ ते रुद्र वथ्स॒रेण॒ नम॑ स्करोमि रु॒द्रो वा ए॒ष यद॒ग्निः स यथा᳚ व्या॒घ्रः क्रु॒द्ध स्तिष्ठ॑त्ये॒वव्ँवा ए॒ष ए॒तर्हि॒ सञ्चि॑तमे॒तैरुप॑ तिष्ठते नमस्का॒रैरे॒वैन॑ꣳ शमयति॒ ये᳚ऽग्नयः॑",
+          "sanskrit": "a̠gner vai dī̠khṣayā̍ de̠vā vi̠rāja̍māpnuvan ti̠sro rātrī̎r dīkhṣi̠taḥ syā̎t tri̠padā̍ vi̠rāḍ vi̠rāja̍māpnoti̠ ṣaḍrātrī̎r dīkhṣi̠taḥ syā̠th ṣaḍ vā ṛ̠tavaḥ̍ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠ddaśā̎khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ dvāda̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ trayo̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t trayo̍daśa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ pañca̍daśa̠ rātrī̎r dīkhṣi̠taḥ syā̠t pañca̍daśa̠ vā a̍rddhamā̠sasya̠ rātra̍yo'rddhamāsa̠śaḥ sa̍vm̐vathsa̠ra ā̎pyate savm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti sa̠ptada̍śa̠ rātrī̎r dīkhṣi̠taḥ syā̠d dvāda̍śa̠ māsāḥ̠ pañca̠rtavaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti̠ catu̍rvigͫśati̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̠ccatu̍rvigͫśatirarddhamā̠sāḥ sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti tri̠g̠ͫśata̠g̠ͫ rātrī̎r dīkhṣi̠taḥ syā̎t tri̠g̠ͫśada̍khṣarā vi̠rāḍ vi̠rāja̍māpnoti̠ māsa̍ndīkhṣi̠taḥ syā̠dyo māsaḥ̠ sa sa̍vm̐vathsa̠raḥ sa̍vm̐vathsa̠ro vi̠rāḍ vi̠rāja̍māpnoti ca̠turo̍ mā̠so dī̎khṣi̠taḥ syā̎cca̠turo̠ vā e̠tammā̠so vasa̍vo'bibharu̠ste pṛ̍thi̠vīmā'ja̍yan gāya̠trīñchando̠'ṣṭau ru̠drāste̎'ntari̍khṣa̠mā'ja̍yan tri̠ṣṭubha̠ñchando̠ dvāda̍śā''di̠tyā ste diva̠mā'ja̍ya̠n jaga̍tī̠ñchanda̠stato̠ vai te vyā̠vṛta̍ magaccha̠ñchraiṣṭhya̍nde̠vānā̠ntasmā̠d dvāda̍śa mā̠so bhṛ̠tvā'gniñci̍nvīta̠ dvāda̍śa̠ māsāḥ̎ savm̐vathsa̠raḥ sa̍vm̐vathsa̠ro̎'gni ścitya̠ stasyā̍horā̠trāṇīṣṭa̍kā ā̠pteṣṭa̍kamenañcinu̠te'tho̎ vyā̠vṛta̍me̠va ga̍cchati̠ śraiṣṭhya̍gͫ samā̠nānā̎m",
           "section": 7
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-8",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 8",
-      "sectionNumber": 55,
+      "id": "taittiriya-samhita-5-6-8",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 8",
+      "sectionNumber": 79,
       "chunks": [
         {
-          "id": "ts-5-5-8-1",
+          "id": "ts-5-6-8-1",
           "chunkNumber": 1,
-          "sanskrit": "गा॒य॒त्रेण॑ पु॒रस्ता॒दुप॑ तिष्ठते प्रा॒णमे॒वास्मि॑न् दधाति बृहद्रथन्त॒राभ्या᳚म्प॒ख्षावोज॑ ए॒वास्मि॑न् दधात्यृतु॒स्थाय॑ज्ञाय॒ज्ञिये॑न॒ पुच्छ॑मृ॒तुष्वे॒व प्रति॑ तिष्ठति पृ॒ष्ठैरुप॑ तिष्ठते॒ तेजो॒ वै पृ॒ष्ठानि॒ तेज॑ ए॒वास्मि॑न् दधाति प्र॒जाप॑तिर॒ग्निम॑सृजत॒ सो᳚ऽस्माथ् सृ॒ष्टः परा॑ङै॒त् तव्ँवा॑रव॒न्तीये॑नावारयत॒ तद्वा॑रव॒न्तीय॑स्य वारवन्तीय॒त्वꣴ श्यै॒तेन॑ श्ये॒ती अ॑कुरुत॒ तच्छ्यै॒तस्य॑ शैत॒त्व जाग॑तेन॒ छन्द॑सा सवि॒त्रा दे॒वत॑या॒ऽग्नेः पुच्छे॑ना॒ग्नेः पुच्छ॒मुप॑ दधा॒म्युदी᳚च्या त्वा दि॒शा सा॑दया॒म्यानु॑ष्टुभेन॒ छन्द॑सा मि॒त्रावरु॑णाभ्यान्दे॒वत॑या॒ऽग्नेः प॒ख्षेणा॒ग्नेः प॒ख्षमुप॑ दधाम्यू॒र्द्ध्वया᳚ त्वा दि॒शा सा॑दयामि॒ पाङ्क्ते॑न॒ छन्द॑सा॒ बृह॒स्पति॑ना दे॒वत॑या॒ऽग्नेः पृ॒ष्ठेना॒ग्नेः पृ॒ष्ठमुप॑ दधामि॒ यो वा अपा᳚त्मानम॒ग्निञ्चि॑नु॒तेऽपा᳚त्मा॒ऽमुष्मि॑ल्ँलो॒के भ॑वति॒ यः सात्मा॑नञ्चिनु॒ते सात्मा॒ऽमुष्मि॑ल्ँलो॒के भ॑वत्यात्मेष्ट॒का उप॑ दधात्ये॒ष वा अ॒ग्नेरा॒त्मा सात्मा॑नमे॒वाग्निञ्चि॑नुते॒ सात्मा॒ऽमुष्मि॑ल्ँलो॒के भ॑वति॒ य ए॒वव्ँवेद॑",
+          "sanskrit": "su̠va̠rgāya̠ vā e̠ṣa lo̠kāya̍ cīyate̠ yada̠gnistaym̐yannānvā̠rohe̎th suva̠rgāllo̠kādyaja̍māno hīyeta pṛthi̠vīmā'kra̍miṣamprā̠ṇo mā̠ mā hā̍sīda̠ntari̍khṣa̠mā'kra̍miṣampra̠jā mā̠ mā hā̍sī̠ddiva̠mā'kra̍miṣa̠g̠ͫ suva̍raga̠nmetyā̍hai̠ṣa vā a̠gnera̍nvāro̠hastenai̠vaina̍ma̠nvāro̍hati suva̠rgasya̍ lo̠kasya̠ sama̍ṣṭyai̠ yat pa̠khṣasaṃ̍mitāmminu̠yāt kanī̍yāgͫsaym̐yajñakra̠tumupe̍yā̠t pāpī̍yasyasyā̠''tmanaḥ̍ pra̠jā syā̠dvedi̍sammitāmminoti̠ jyāyā̍gͫsame̠va ya̍jñakra̠tumupai̍ti̠ nāsyā̠''tmanaḥ̠ pāpī̍yasī pra̠jā bha̍vati sāha̠srañci̍nvīta pratha̠maṃ ci̍nvā̠naḥ sa̠hasra̍sammito̠ vā a̠yalm̐lo̠ka i̠mame̠va lo̠kama̠bhi ja̍yati̠ dviṣā̍hasrañcinvīta dvi̠tīyaṃ̍ cinvā̠no dviṣā̍hasra̠vm̐vā a̠ntari̍khṣama̠ntari̍khṣame̠vābhi ja̍yati̠ triṣā̍hasrañcinvīta tṛ̠tīya̍ñcinvā̠na yad dve re̍ta̠ssicā̍vupada̠ddhyādreto̎'sya̠ vi cchi̍ndyāt ti̠sra upa̍ dadhāti̠ reta̍saḥ̠ santa̍tyā i̠yavm̐vāva pra̍tha̠mā re̍ta̠ssig vāg vā i̠yantasmā̠t paśya̍ntī̠māmpaśya̍nti̠ vāca̠vm̐vada̍ntīma̠ntari̍khṣandvi̠tīyā̎ prā̠ṇo vā a̠ntari̍khṣa̠ntasmā̠nnāntari̍khṣa̠mpaśya̍nti̠ na prā̠ṇama̠sau tṛ̠tīyā̠ cakhṣu̠r vā a̠sau tasmā̠t paśya̍ntya̠mūṃ paśya̍nti̠ cakhṣu̠r yaju̍ṣe̠māñcā̠",
           "section": 8
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-9",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 9",
-      "sectionNumber": 56,
+      "id": "taittiriya-samhita-5-6-9",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 9",
+      "sectionNumber": 80,
       "chunks": [
         {
-          "id": "ts-5-5-9-1",
+          "id": "ts-5-6-9-1",
           "chunkNumber": 1,
-          "sanskrit": "अग्न॑ उदधे॒ या त॒ इषु॑र् यु॒वा नाम॒ तया॑ नो मृड॒ तस्या᳚ स्ते॒ नम॒ स्तस्या᳚ स्त॒ उप॒ जीव॑न्तो भूया॒स्माग्ने॑ दुध्र गह्य किꣳशिल वन्य॒ या त॒ इषु॑र् यु॒वा नाम॒ तया॑ नो मृड॒ तस्या᳚ स्ते॒ नम॒ स्तस्या᳚ स्त॒ उप॒ जीव॑न्तो भूयास्म॒ पञ्च॒ वा ए॒ते᳚ऽग्नयो॒ यच्चित॑य उद॒धिरे॒व नाम॑ प्रथ॒मो दु॒ध्रो द्वि॒तीयो॒ गह्य॑ स्तृ॒तीयः॑ किꣳशि॒ल श्च॑तु॒र्थो वन्यः॑ पञ्च॒म स्तेभ्यो॒ यदाहु॑ती॒र् न जु॑हु॒याद॑द्ध्व॒र्युञ्च॒ यज॑मानञ्च॒ प्र द॑हेयु॒र्यदे॒ता आहु॑तीर् जु॒होति॑ भाग॒धेये॑नै॒वैना᳚ञ्छमयति॒ नाऽऽर्ति॒मार्च्छ॑त्यद्ध्व॒र्युर् न यज॑मानो॒ वाङ्म॑ आ॒सन् न॒सोः प्रा॒णो᳚ऽख्ष्यो श्चख्षुः॒ कर्ण॑योः॒ श्रोत्र॑म्बाहु॒वोर् बल॑मूरु॒वोरोजोऽरि॑ष्टा॒ विश्वा॒न्यङ्गा॑नि त॒नू अ॒न्ये श॑तरु॒द्रीय॑ꣳ हु॒त्वा गा॑वीधु॒कञ्च॒रुमे॒तेन॒ यजु॑षा चर॒माया॒मिष्ट॑काया॒न्नि द॑द्ध्याद् भाग॒धेये॑नै॒वैन॑ꣳ शमयति॒ तस्य॒ त्वै श॑तरु॒द्रीय॑ꣳ हु॒तमित्या॑हु॒र् यस्यै॒तद॒ग्नौ क्रि॒यत॒ इति॒ वस॑वस्त्वा रु॒द्रैः पु॒रस्ता᳚त् पान्तु पि॒तर॑स्त्वा य॒मरा॑जानः पि॒तृभि॑र् दख्षिण॒तः पा᳚न्त्वादि॒त्यास्त्वा॒ विश्वै᳚र् दे॒वैः प॒श्चात् पा᳚न्तु द्युता॒न स्त्वा॑ मारु॒तो म॒रुद्भि॑रुत्तर॒तः पा॑तु दे॒वास्त्वेन्द्र॑ज्येष्ठा॒ वरु॑णराजानो॒ऽधस्ता᳚च्चो॒परि॑ष्टाच्च पान्तु॒ न वा ए॒तेन॑ पू॒तो न मेद्ध्यो॒ न प्रोख्षि॑तो॒ यदे॑न॒मतः॑ प्रा॒चीन॑म्प्रो॒ख्षति॒ यथ् सञ्चि॑त॒माज्ये॑न प्रो॒ख्षति॒ तेन॑ पू॒तस्तेन॒ मेद्ध्य॒स्तेन॒ प्रोख्षि॑तः",
+          "sanskrit": "sū̠yate̠ vā e̠ṣo̎'gnī̠nāym̐ya u̠khāyā̎mbhri̠yate̠ yada̠dhaḥ sā̠daye̠dgarbhāḥ̎ pra̠pādu̍kāḥ syu̠ratho̠ yathā̍ sa̠vāt pra̍tyava̠roha̍ti tā̠dṛge̠va tadā̍sa̠ndī sā̍dayati̠ garbhā̍ṇā̠ndhṛtyā̠ apra̍pādā̠yātho̍ sa̠vame̠vaina̍ṅkaroti̠ garbho̠ vā e̠ṣa yadukhyo̠ yoniḥ̍ śi̠kya̍ym̐yacchi̠kyā̍du̠khānni̠rūhe̠dyone̠r garbha̠nnirha̍ṇyā̠th ṣaḍu̍dyāmagͫ śi̠kya̍mbhavati ṣoḍhāvihi̠to vai puru̍ṣa ā̠tmā ca̠ śira̍śca ca̠tvāryaṅgā̎nyā̠tmanne̠vaina̍mbibharti pra̠jāpa̍ti̠r vā e̠ṣa yada̠gnistasyo̠khā co̠lūkha̍lañca̠ stanau̠ tāva̍sya pra̠jā upa̍ jīvanti̠ yadu̠khāñco̠lūkha̍lañcopa̠dadhā̍ti̠ tābhyā̍me̠va yaja̍māno̠'muṣmi̍lm̐lo̠ke̎'gnindu̍he savm̐vathsa̠ro vā e̠ṣa yada̠gnistasya̍ tredhāvihi̠tā iṣṭa̍kāḥ prājāpa̠tyā vai̎ṣṇa̠vīr",
           "section": 9
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-10",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 10",
-      "sectionNumber": 57,
+      "id": "taittiriya-samhita-5-6-10",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 10",
+      "sectionNumber": 81,
       "chunks": [
         {
-          "id": "ts-5-5-10-1",
+          "id": "ts-5-6-10-1",
           "chunkNumber": 1,
-          "sanskrit": "स॒मीची॒ नामा॑सि॒ प्राची॒ दिक् तस्या᳚ स्ते॒ऽग्निरधि॑पतिरसि॒तो र॑ख्षि॒ता यश्चाधि॑पति॒र् यश्च॑ गो॒प्ता ताभ्या॒न्नम॒ स्तौ नो॑ मृडयता॒न्ते यन्द्वि॒ष्मो यश्च॑ नो॒ द्वेष्टि॒ तव्ँवा॒ञ्जंभे॑ दधाम्योज॒स्विनी॒ नामा॑सि दख्षि॒णा दिक् तस्या᳚ स्त॒ इन्द्रोऽधि॑पतिः॒ पृदा॑कुः॒ प्राची॒ नामा॑सि प्र॒तीची॒ दिक् तस्या᳚ स्ते॒ सोमोऽधि॑पतिः स्व॒जो॑ऽव॒स्थावा॒ नामा॒स्युदी॑ची॒ दिक् तस्या᳚ स्ते॒ वरु॒णोऽधि॑पतिस्ति॒रश्च॑राजि॒रधि॑पत्नी॒ नामा॑सि बृह॒ती दिक् तस्या᳚ स्ते॒ बृह॒स्पति॒रधि॑पतिः श्वि॒त्रो व॒शिनी॒ नामा॑सी॒यन्दिक् तस्या᳚ स्ते य॒मोऽधि॑पतिः क॒ल्माष॑ग्रीवो रख्षि॒ता यश्चाधि॑पति॒र् यश्च॑ गो॒प्ता ताभ्या॒न्नम॒स्तौ नो॑ मृडयता॒न्ते यन्द्वि॒ष्मो यश्च॑ नो॒ द्वेष्टि॒ तव्ँवा॒ञ्जंभे॑ दधाम्ये॒ता वै दे॒वता॑ अ॒ग्निञ्चि॒तꣳ र॑ख्षन्ति॒ ताभ्यो॒ यदाहु॑ती॒र् न जु॑हु॒याद॑द्ध्व॒र्युञ्च॒ यज॑मानञ्च ध्यायेयु॒र् यदे॒ता आहु॑तीर् जु॒होति॑ भाग॒धेये॑नै॒वैना᳚ञ्छमयति॒ नाऽऽर्ति॒मार्च्छ॑त्यद्ध्व॒र्युर् न यज॑मानो हे॒तयो॒ नाम॑ स्थ॒ तेषा᳚व्ँवः पु॒रो गृ॒हा अ॒ग्निर् व॒ इष॑वः सलि॒लो नि॑लिं॒पा नाम॑ स्थ॒ तेषा᳚व्ँवो दख्षि॒णा गृ॒हाः पि॒तरो॑ व॒ इष॑वः॒ सग॑रो व॒ज्रिणो॒ नाम॑ स्थ॒ तेषा᳚व्ँवः प॒श्चाद् गृ॒हाः स्वप्नो॑ व॒ इष॑वो॒ गह्व॑रोऽव॒स्थावा॑नो॒ नाम॑ स्थ॒ तेषा᳚व्ँव उत्त॒राद् गृ॒हा आपो॑ व॒ इष॑वः समु॒द्रोऽधि॑पतयो॒ नाम॑ स्थ॒ तेषा᳚व्ँव उ॒परि॑ गृ॒हा व॒र्॒षव्ँव॒ इष॒वोऽव॑स्वान् क्र॒व्या नाम॑ स्थ॒ पार्थि॑वा॒स्तेषा᳚व्ँव इ॒ह गृ॒हा अन्न॑व्ँव॒ इष॑वोऽनिमि॒षो वा॑तना॒मन्तेभ्यो॑ वो॒ नम॒स्ते नो॑ मृडयत॒ ते यन्द्वि॒ष्मो यश्च॑ नो॒ द्वेष्टि॒ तव्ँवो॒ जंभे॑ दधामि हु॒तादो॒ वा अ॒न्ये दे॒वा अ॑हु॒तादो॒ऽन्ये तान॑ग्नि॒चिदे॒वोभया᳚न् प्रीणाति द॒द्ध्ना म॑धुमि॒श्रेणै॒ता आहु॑तीर् जुहोति भाग॒धेये॑नै॒वैना᳚न् प्रीणा॒त्यथो॒ खल्वा॑हु॒रिष्ट॑का॒ वै दे॒वा अ॑हु॒ताद॒ इत्य॑",
+          "sanskrit": "pra̠jāpa̍tira̠gnima̍cinuta̠rtubhiḥ̍ savm̐vathsa̠ravm̐va̍sa̠ntenai̠vāsya̍ pūrvā̠rddhama̍cinuta grī̠ṣmeṇa̠ dakhṣi̍ṇampa̠khṣavm̐va̠r̠ṣābhiḥ̠ puccha̍gͫ śa̠radotta̍rampa̠khṣagͫ he̍ma̠ntena̠ maddhya̠mbrahma̍ṇā̠ vā a̍sya̠ tat pū̎rvā̠rddhama̍cinuta khṣa̠treṇa̠ dakhṣi̍ṇampa̠khṣampa̠śubhiḥ̠ puccha̍vm̐vi̠śotta̍rampa̠khṣamā̠śayā̠ maddhya̠ym̐ya e̠vavm̐vi̠dvāna̠gniñci̍nu̠ta ṛ̠tubhi̍re̠vaina̍ñcinu̠te'tho̍ e̠tade̠va sarva̠mava̍",
           "section": 10
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-11",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 11",
-      "sectionNumber": 58,
+      "id": "taittiriya-samhita-5-6-11",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 11",
+      "sectionNumber": 82,
       "chunks": [
         {
-          "id": "ts-5-5-11-1",
+          "id": "ts-5-6-11-1",
           "chunkNumber": 1,
-          "sanskrit": "इन्द्रा॑य॒ राज्ञे॑ सूक॒रो वरु॑णाय॒ राज्ञे॒ कृष्णो॑ य॒माय॒ राज्ञ॒ ऋश्य॑ ऋष॒भाय॒ राज्ञे॑ गव॒यः शा᳚र्दू॒लाय॒ राज्ञे॑ गौ॒रः पु॑रुषरा॒जाय॑ म॒र्कटः॑ ख्षिप्रश्ये॒नस्य॒ वर्ति॑का॒ नील॑ङ्गोः॒ क्रिमिः॒ सोम॑स्य॒ राज्ञः॑ कुलु॒ङ्गः सिन्धोः᳚ शिꣳशु॒मारो॑ हि॒मव॑तो ह॒स्ती",
+          "sanskrit": "rohi̍to dhū̠mraro̍hitaḥ ka̠rkandhu̍rohita̠ste prā̍jāpa̠tyā ba̠bhrura̍ru̠ṇaba̍bhruḥ̠ śuka̍babhru̠ste rau̠drāḥ śyetaḥ̍ śyetā̠khṣaḥ śyeta̍grīva̠ste pi̍tṛdeva̠tyā̎sti̠sraḥ kṛ̠ṣṇā va̠śā vā̍ru̠ṇya̍sti̠sraḥ śve̠tā va̠śāḥ sau̠ryo̍ maitrābārhaspa̠tyā dhū̠mrala̍lāmāstūpa̠rāḥ",
           "section": 11
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-12",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 12",
-      "sectionNumber": 59,
+      "id": "taittiriya-samhita-5-6-12",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 12",
+      "sectionNumber": 83,
       "chunks": [
         {
-          "id": "ts-5-5-12-1",
+          "id": "ts-5-6-12-1",
           "chunkNumber": 1,
-          "sanskrit": "म॒युः प्रा॑जाप॒त्य ऊ॒लो हली᳚ख्ष्णो वृषद॒ꣳ॒श स्ते धा॒तुः सर॑स्वत्यै॒ शारिः॑ श्ये॒ता पु॑रुष॒वाख् सर॑स्वते॒ शुकः॑ श्ये॒तः पु॑रुष॒वागा॑र॒ण्यो॑ऽजो न॑कु॒लः शका॒ ते पौ॒ष्णा वा॒चे क्रौ॒ञ्चः",
+          "sanskrit": "pṛśñi̍stira̠ścīna̍pṛśñirū̠rddhvapṛ̍śñi̠ste mā̍ru̠tāḥ pha̠lgūr lo̍hito̠rṇī ba̍la̠khṣī tāḥ sā̍rasva̠tyaḥ̍ pṛṣa̍tī sthū̠lapṛ̍ṣatī khṣu̠drapṛ̍ṣatī̠ tā vai̎śvade̠vya̍sti̠sraḥ śyā̠mā va̠śāḥ pau̠ṣṇiya̍sti̠sro rohi̍ṇīr va̠śā mai̠triya̍ aindrābārhaspa̠tyā a̍ru̠ṇala̍lāmā stūpa̠rāḥ",
           "section": 12
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-13",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 13",
-      "sectionNumber": 60,
+      "id": "taittiriya-samhita-5-6-13",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 13",
+      "sectionNumber": 84,
       "chunks": [
         {
-          "id": "ts-5-5-13-1",
+          "id": "ts-5-6-13-1",
           "chunkNumber": 1,
-          "sanskrit": "अ॒पान्नप्त्रे॑ ज॒षो ना॒क्रो मक॑रः कुली॒कय॒स्तेऽकू॑पारस्य वा॒चे पै᳚ङ्गरा॒जो भगा॑य कु॒षीत॑क आ॒ती वा॑ह॒सो दर्वि॑दा॒ ते वा॑य॒व्या॑ दि॒ग्भ्यश्च॑क्रवा॒कः",
+          "sanskrit": "śi̠ti̠bā̠hura̠nyata̍śśitibāhuḥ sama̠ntaśi̍tibāhu̠sta ai̎ndravāya̠vāḥ śi̍ti̠randhro̠' nyata̍śśitirandhraḥ sama̠ntaśi̍tirandhra̠ste mai̎trāvaru̠ṇāḥ śu̠ddhavā̍laḥ sa̠rvaśu̍ddhavālo ma̠ṇivā̍la̠sta ā̎śvi̠nāsti̠sraḥ śi̠lpā va̠śā vai̎śvade̠vya̍sti̠sraḥ śyenīḥ̎ parame̠ṣṭhine̍ somāpau̠ṣṇāḥ śyā̠mala̍lāmā stūpa̠rāḥ",
           "section": 13
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-14",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 14",
-      "sectionNumber": 61,
+      "id": "taittiriya-samhita-5-6-14",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 14",
+      "sectionNumber": 85,
       "chunks": [
         {
-          "id": "ts-5-5-14-1",
+          "id": "ts-5-6-14-1",
           "chunkNumber": 1,
-          "sanskrit": "बला॑याजग॒र आ॒खुः सृ॑ज॒या श॒यण्ड॑क॒स्ते मै॒त्रा मृ॒त्यवे॑ऽसि॒तो म॒न्यवे᳚ स्व॒जः कुं॑भी॒नसः॑ पुष्करसा॒दो लो॑हिता॒हिस्ते त्वा॒ष्ट्राः प्र॑ति॒श्रुत्का॑यै वाह॒सः",
+          "sanskrit": "u̠nna̠ta ṛ̍ṣa̠bho vā̍ma̠nasta ai̎ndrāvaru̠ṇāḥ śiti̍kakucchitipṛ̠ṣṭhaḥ śiti̍bhasa̠t ta ai̎ndrābārhaspa̠tyāḥ śi̍ti̠pācchi̠tyoṣṭhaḥ̍ śiti̠bhrusta ai̎ndrāvaiṣṇa̠vāsti̠sraḥ si̠ddhmā va̠śā vai̎śvakarma̠ṇya̍sti̠sro dhā̠tre pṛ̍ṣoda̠rā ai̎ndrāpau̠ṣṇāḥ śyeta̍lalāmā stūpa̠rāḥ",
           "section": 14
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-15",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 15",
-      "sectionNumber": 62,
+      "id": "taittiriya-samhita-5-6-15",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 15",
+      "sectionNumber": 86,
       "chunks": [
         {
-          "id": "ts-5-5-15-1",
+          "id": "ts-5-6-15-1",
           "chunkNumber": 1,
-          "sanskrit": "पु॒रु॒ष॒मृ॒गश्च॒न्द्रम॑से गो॒धा काल॑का दार्वाघा॒टस्ते वन॒स्पती॑नामे॒ण्यह्ने॒ कृष्णो॒ रात्रि॑यै पि॒कः ख्ष्विङ्का॒ नील॑शीर्ष्णी॒ ते᳚ऽर्यं॒णे धा॒तुः क॑त्क॒टः",
+          "sanskrit": "ka̠rṇā strayo̍ yā̠māḥ sau̠myā strayaḥ̍ śviti̠ṅgā a̠gnaye̠ yavi̍ṣṭhāya̠ trayo̍ naku̠lā sti̠sro rohi̍ṇī̠ stryavya̠ stā vasū̍nānti̠sro̍'ru̠ṇā di̍tyau̠hya̍ stā ru̠drāṇā̍gͫ somai̠ndrā ba̠bhrula̍lāmā stūpa̠rāḥ",
           "section": 15
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-16",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 16",
-      "sectionNumber": 63,
+      "id": "taittiriya-samhita-5-6-16",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 16",
+      "sectionNumber": 87,
       "chunks": [
         {
-          "id": "ts-5-5-16-1",
+          "id": "ts-5-6-16-1",
           "chunkNumber": 1,
-          "sanskrit": "सौ॒री ब॒लाकर्श्यो॑ म॒यूरः॑ श्ये॒नस्ते ग॑न्ध॒र्वाणा॒व्ँवसू॑नाङ्क॒पिञ्ज॑लो रु॒द्राणा᳚न्तित्ति॒री रो॒हित् कु॑ण्डृ॒णाची॑ गो॒लत्ति॑का॒ ता अ॑फ्स॒रसा॒मर॑ण्याय सृम॒रः",
+          "sanskrit": "śu̠ṇṭhā strayo̍ vaiṣṇa̠vā a̍dhīlodha̠karṇā̠ strayo̠ viṣṇa̍va urukra̠māya̍ laphsu̠dina̠ strayo̠ viṣṇa̍va urugā̠yāya̠ pañcā̍vī sti̠sra ā̍di̠tyānā̎ntriva̠thsā sti̠sro'ṅgi̍rasāmaindrāvaiṣṇa̠vā gau̠rala̍lāmā stūpa̠rāḥ",
           "section": 16
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-17",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 17",
-      "sectionNumber": 64,
+      "id": "taittiriya-samhita-5-6-17",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 17",
+      "sectionNumber": 88,
       "chunks": [
         {
-          "id": "ts-5-5-17-1",
+          "id": "ts-5-6-17-1",
           "chunkNumber": 1,
-          "sanskrit": "पृ॒ष॒तो वै᳚श्वदे॒वः पि॒त्वो न्यङ्कुः॒ कश॒ स्तेऽनु॑मत्या अन्यवा॒पो᳚ऽर्द्धमा॒साना᳚म्मा॒साङ्क॒श्यपः॒ क्वयिः॑ कु॒टरु॑र् दात्यौ॒हस्ते सि॑नीवा॒ल्यै बृह॒स्पत॑ये शित्पु॒टः",
+          "sanskrit": "indrā̍ya̠ rājñe̠ trayaḥ̍ śitipṛ̠ṣṭhā indrā̍yādhirā̠jāya̠ trayaḥ̠ śiti̍kakuda̠ indrā̍ya sva̠rājñe̠ trayaḥ̠ śiti̍bhasadasti̠sra stu̍ryau̠hyaḥ̍ sā̠ddhyānā̎nti̠sraḥ pa̍ṣṭhau̠hyo̍ viśve̍ṣānde̠vānā̍māgne̠ndrāḥ kṛ̠ṣṇala̍lāmā stūpa̠rāḥ",
           "section": 17
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-18",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 18",
-      "sectionNumber": 65,
+      "id": "taittiriya-samhita-5-6-18",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 18",
+      "sectionNumber": 89,
       "chunks": [
         {
-          "id": "ts-5-5-18-1",
+          "id": "ts-5-6-18-1",
           "chunkNumber": 1,
-          "sanskrit": "शका॑ भौ॒मी पा॒न्त्रः कशो॑ मान्थी॒लव॒स्ते पि॑तृ॒णामृ॑तू॒नाञ्जह॑का सव्ँवथ्स॒राय॒ लोपा॑ क॒पोत॒ उलू॑कः श॒शस्ते नै॑र्ऋ॒ताः कृ॑क॒वाकुः॑ सावि॒त्रः",
+          "sanskrit": "adi̍tyai̠ trayo̍ rohitai̠tā i̍ndrā̠ṇyai trayaḥ̍ kṛṣṇai̠tāḥ ku̠hvai̎ trayo̍'ruṇai̠tā sti̠sro dhe̠navo̍ rā̠kāyai̠ trayo̍'na̠ḍvāhaḥ̍ sinīvā̠lyā ā̎gnāvaiṣṇa̠vā rohi̍talalāmāstūpa̠rāḥ",
           "section": 18
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-19",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 19",
-      "sectionNumber": 66,
+      "id": "taittiriya-samhita-5-6-19",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 19",
+      "sectionNumber": 90,
       "chunks": [
         {
-          "id": "ts-5-5-19-1",
+          "id": "ts-5-6-19-1",
           "chunkNumber": 1,
-          "sanskrit": "रुरू॑ रौ॒द्रः कृ॑कला॒सः श॒कुनिः॒ पिप्प॑का॒ ते श॑र॒व्या॑यै हरि॒णो मा॑रु॒तो ब्रह्म॑णे शा॒र्गस्त॒रख्षुः॑ कृ॒ष्णः श्वा च॑तुर॒ख्षो ग॑र्द॒भस्त इ॑तरज॒नाना॑म॒ग्नये॒ धूङ्ख्ष्णा᳚",
+          "sanskrit": "sau̠myā strayaḥ̍ pi̠śaṃgāḥ̠ somā̍ya̠ rājñe̠ trayaḥ̍ sā̠raṅgāḥ̎ pārja̠nyā nabho̍rūpā sti̠sro̍'jā ma̠l̠hā i̍ndrā̠ṇyai ti̠sro me̠ṣya̍ ādi̠tyā dyā̍vāpṛthi̠vyā̍ mā̠laṅgā̎ stūpa̠rāḥ",
           "section": 19
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-20",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 20",
-      "sectionNumber": 67,
+      "id": "taittiriya-samhita-5-6-20",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 20",
+      "sectionNumber": 91,
       "chunks": [
         {
-          "id": "ts-5-5-20-1",
+          "id": "ts-5-6-20-1",
           "chunkNumber": 1,
-          "sanskrit": "अ॒ल॒ज आ᳚न्तरि॒ख्ष उ॒द्रो म॒द्गुः प्ल॒व स्ते॑ऽपामदि॑त्यै हꣳस॒साचि॑रिन्द्रा॒ण्यै कीर्शा॒ गृध्रः॑ शितिक॒ख्षी वा᳚र्द्ध्राण॒सस्ते दि॒व्या द्या॑वापृथि॒व्या᳚ श्वा॒वित्",
+          "sanskrit": "vā̠ru̠ṇā strayaḥ̍ kṛ̠ṣṇala̍lāmā̠ varu̍ṇāya̠ rājñe̠ trayo̠ rohi̍talalāmā̠ varu̍ṇāya ri̠śāda̍se̠ trayo̍'ru̠ṇala̍lāmāḥ śi̠lpā strayo̍ vaiśvade̠vā strayaḥ̠ pṛśña̍yaḥ sarvadeva̠tyā̍ aindrāsū̠rāḥ śyeta̍lalāmā stūpa̠rāḥ",
           "section": 20
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-21",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 21",
-      "sectionNumber": 68,
+      "id": "taittiriya-samhita-5-6-21",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 21",
+      "sectionNumber": 92,
       "chunks": [
         {
-          "id": "ts-5-5-21-1",
+          "id": "ts-5-6-21-1",
           "chunkNumber": 1,
-          "sanskrit": "सु॒प॒र्णः पा᳚र्ज॒न्यो ह॒ꣳ॒सो वृको॑ वृषद॒ꣳ॒शस्त ऐ॒न्द्रा अ॒पामु॒द्रो᳚ऽर्यं॒णे लो॑पा॒शः सि॒ꣳ॒हो न॑कु॒लो व्या॒घ्रस्ते म॑हे॒न्द्राय॒ कामा॑य॒ पर॑स्वान्",
+          "sanskrit": "somā̍ya sva̠rājñe̍'novā̠hāva̍na̠ḍvāhā̍vindrā̠gnibhyā̍mojo̠dābhyā̠muṣṭā̍rāvindrā̠gnibhyāṃ̎ bala̠dābhyā̍gͫ sīravā̠hāvavī̠ dve dhe̠nū bhau̠mī di̠gbhyo vaḍa̍be̠ dve dhe̠nū bhau̠mī vai̍rā̠jī pu̍ru̠ṣī dve dhe̠nū bhau̠mī vā̠yava̍ ārohaṇavā̠hāva̍na̠ḍvāhau̍ vāru̠ṇī kṛ̠ṣṇe va̠śe a̍rā̠ḍyau̍ di̠vyāvṛ̍ṣa̠bhau pa̍rima̠rau",
           "section": 21
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-22",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 22",
-      "sectionNumber": 69,
+      "id": "taittiriya-samhita-5-6-22",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 22",
+      "sectionNumber": 93,
       "chunks": [
         {
-          "id": "ts-5-5-22-1",
+          "id": "ts-5-6-22-1",
           "chunkNumber": 1,
-          "sanskrit": "आ॒ग्ने॒यः कृ॒ष्णग्री॑वः सारस्व॒ती मे॒षी ब॒भ्रुः सौ॒म्यः पौ॒ष्णः श्या॒मः शि॑तिपृ॒ष्ठो बा॑र्हस्प॒त्यः शि॒ल्पो वै᳚श्वदे॒व ऐ॒न्द्रो॑ऽरु॒णो मा॑रु॒तः क॒ल्माष॑ ऐन्द्रा॒ग्नः स॑ꣳहि॒तो॑ऽधोरा॑मः सावि॒त्रो वा॑रु॒णः पेत्वः॑",
+          "sanskrit": "ekā̍daśa prā̠tar ga̠vyāḥ pa̠śava̠ ā la̍bhyante chaga̠laḥ ka̠lmāṣaḥ̍ kikidī̠vir vi̍dī̠gaya̠ ste tvā̠ṣṭrāḥ sau̠rīr nava̍ śve̠tā va̠śā a̍nūba̠ndhyā̍ bhavantyāgne̠ya ai̎ndrā̠gna ā̎śvi̠na ste vi̍śālayū̠pa ā la̍bhyante",
           "section": 22
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-5-5-23",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 23",
-      "sectionNumber": 70,
+      "id": "taittiriya-samhita-5-6-23",
+      "title": "Kāṇḍa 5 · Prapāṭhaka 6 · Anuvāka 23",
+      "sectionNumber": 94,
       "chunks": [
         {
-          "id": "ts-5-5-23-1",
+          "id": "ts-5-6-23-1",
           "chunkNumber": 1,
-          "sanskrit": "अश्व॑स्तूप॒रो गो॑मृ॒गस्ते प्रा॑जाप॒त्या आ᳚ग्ने॒यौ कृ॒ष्णग्री॑वौ त्वा॒ष्ट्रौ लो॑मशस॒क्थौ शि॑तिपृ॒ष्ठौ बा॑र्हस्प॒त्यौ धा॒त्रे पृ॑षोद॒रः सौ॒र्यो ब॒लख्षः॒ पेत्वः॑",
+          "sanskrit": "pi̠śaṅgā̠ strayo̍ vāsa̠ntāḥ sā̠raṅgā̠ strayo̠ graiṣmāḥ̠ pṛṣa̍nta̠ strayo̠ vārṣi̍kāḥ̠ pṛśña̍ya̠ strayaḥ̍ śāra̠dāḥ pṛ̍śñisa̠kthā strayo̠ haima̍ntikā avali̠ptā strayaḥ̍ śaiśi̠rāḥ sa̍vm̐vathsa̠rāya̠ niva̍khṣasaḥ",
           "section": 23
-        }
-      ]
-    },
-    {
-      "id": "taittiriya-samhita-5-5-24",
-      "title": "Kāṇḍa 5 · Prapāṭhaka 5 · Anuvāka 24",
-      "sectionNumber": 71,
-      "chunks": [
-        {
-          "id": "ts-5-5-24-1",
-          "chunkNumber": 1,
-          "sanskrit": "अ॒ग्नयेऽनी॑कवते॒ रोहि॑ताञ्जिरन॒ड्वान॒धोरा॑मौ सावि॒त्रौ पौ॒ष्णौ र॑ज॒तना॑भी वैश्वदे॒वौ पि॒शङ्गौ॑ तूप॒रौ मा॑रु॒तः क॒ल्माष॑ आग्ने॒यः कृ॒ष्णो॑ऽजः सा॑रस्व॒ती मे॒षी वा॑रु॒णः कृ॒ष्ण एक॑शितिपा॒त् पेत्वः॑",
-          "section": 24
         }
       ]
     }

@@ -1,425 +1,1379 @@
 {
   "sections": [
     {
-      "id": "taittiriya-samhita-4-5-1",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 1",
-      "sectionNumber": 48,
+      "id": "taittiriya-samhita-4-6-1",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 1",
+      "sectionNumber": 59,
       "chunks": [
         {
-          "id": "ts-4-5-1-1",
+          "id": "ts-4-6-1-1",
           "chunkNumber": 1,
-          "sanskrit": "नम॑स्ते रुद्र म॒न्यव॑ उ॒तो त॒ इष॑वे॒ नमः॑।",
+          "sanskrit": "aśma̠nnūrja̠mparva̍te śiśriyā̠ṇāvm̐vāte̍ pa̠rjanye̠ varu̍ṇasya̠ śuṣme̎|",
           "section": 1
         },
         {
-          "id": "ts-4-5-1-2",
+          "id": "ts-4-6-1-2",
           "chunkNumber": 2,
-          "sanskrit": "नम॑स्ते अस्तु॒ धन्व॑ने बा॒हुभ्या॑मु॒त ते॒ नमः॑॥"
+          "sanskrit": "a̠dbhya oṣa̍dhībhyo̠ vana̠spati̠bhyo'dhi̠ saṃbhṛ̍tā̠ntānna̠ iṣa̠mūrja̍ndhatta marutaḥ sagͫrarā̠ṇāḥ||"
         },
         {
-          "id": "ts-4-5-1-3",
+          "id": "ts-4-6-1-3",
           "chunkNumber": 3,
-          "sanskrit": "या त॒ इषु॑श्शि॒वत॑मा शि॒वम्ब॒भूव॑ ते॒ धनुः॑।"
+          "sanskrit": "aśma̍gͫͫste̠ khṣuda̠munte̠ śugṛ̍cchatu̠ yandvi̠ṣmaḥ||"
         },
         {
-          "id": "ts-4-5-1-4",
+          "id": "ts-4-6-1-4",
           "chunkNumber": 4,
-          "sanskrit": "शि॒वा श॑र॒व्या॑ या तव॒ तया॑ नो रुद्र मृडय॥"
+          "sanskrit": "sa̠mu̠drasya̍ tvā̠'*vāka̠yā'gne̠ pari̍ vyayāmasi|"
         },
         {
-          "id": "ts-4-5-1-5",
+          "id": "ts-4-6-1-5",
           "chunkNumber": 5,
-          "sanskrit": "या ते॑ रुद्र शि॒वा त॒नूरघो॒राऽपा॑पकाशिनी।"
+          "sanskrit": "pā̠va̠ko a̠smabhya̍gͫ śi̠vo bha̍va||"
         },
         {
-          "id": "ts-4-5-1-6",
+          "id": "ts-4-6-1-6",
           "chunkNumber": 6,
-          "sanskrit": "तया॑ नस्त॒नुवा॒ शन्त॑मया॒ गिरि॑शन्ता॒भि चा॑कशीहि॥"
+          "sanskrit": "hi̠masya̍ tvā ja̠rāyu̠ṇā'gne̠ pari̍ vyayāmasi|"
         },
         {
-          "id": "ts-4-5-1-7",
+          "id": "ts-4-6-1-7",
           "chunkNumber": 7,
-          "sanskrit": "यामिषु॑ङ्गिरिशन्त॒ हस्ते॒ बिभ॒र्ष्यस्त॑वे।"
+          "sanskrit": "pā̠va̠ko a̠smabhya̍gͫ śi̠vo bha̍va||"
         },
         {
-          "id": "ts-4-5-1-8",
+          "id": "ts-4-6-1-8",
           "chunkNumber": 8,
-          "sanskrit": "शि॒वाङ्गि॑रित्र॒ ताङ्कु॑रु॒ मा हि॑ꣳसीः॒ पुरु॑ष॒ञ्जग॑त्॥"
+          "sanskrit": "upa̠ jmannupa̍ veta̠se'va̍ttaranna̠dīṣvā|"
         },
         {
-          "id": "ts-4-5-1-9",
+          "id": "ts-4-6-1-9",
           "chunkNumber": 9,
-          "sanskrit": "शि॒वेन॒ वच॑सा त्वा॒ गिरि॒शाच्छा॑ वदामसि।"
+          "sanskrit": "agne̍ pi̠ttama̠pāma̍si||"
         },
         {
-          "id": "ts-4-5-1-10",
+          "id": "ts-4-6-1-10",
           "chunkNumber": 10,
-          "sanskrit": "यथा॑ न॒स्सर्व॒मिज्जग॑दय॒ख्ष्मꣳ सु॒मना॒ अस॑त्॥"
+          "sanskrit": "maṇḍū̍ki̠ tābhi̠rā ga̍hi̠ semanno̍ ya̠jñam|"
         },
         {
-          "id": "ts-4-5-1-11",
+          "id": "ts-4-6-1-11",
           "chunkNumber": 11,
-          "sanskrit": "अद्ध्य॑वोचदधिव॒क्ता प्र॑थ॒मो दैव्यो॑ भि॒षक्।"
+          "sanskrit": "pā̠va̠kava̍rṇagͫ śi̠vaṅkṛ̍dhi||"
         },
         {
-          "id": "ts-4-5-1-12",
+          "id": "ts-4-6-1-12",
           "chunkNumber": 12,
-          "sanskrit": "अही॑ꣴश्च॒ सर्वा᳚न् जं॒भय॒न्थ्सर्वा᳚श्च यातुधा॒न्यः॑॥"
+          "sanskrit": "pā̠va̠ka ā ci̠taya̍ntyā kṛ̠pā|"
         },
         {
-          "id": "ts-4-5-1-13",
+          "id": "ts-4-6-1-13",
           "chunkNumber": 13,
-          "sanskrit": "अ॒सौ यस्ता॒म्रो अ॑रु॒ण उ॒त ब॒भ्रुस्सु॑म॒ङ्गलः॑।"
+          "sanskrit": "khṣāma̍n ruru̠ca u̠ṣaso̠ na bhā̠nunā̎||"
         },
         {
-          "id": "ts-4-5-1-14",
+          "id": "ts-4-6-1-14",
           "chunkNumber": 14,
-          "sanskrit": "ये चे॒माꣳ रु॒द्रा अ॒भितो॑ दि॒ख्षु श्रि॒तास्स॑हस्र॒शोऽवै॑षा॒ꣳ॒ हेड॑ ईमहे॥"
+          "sanskrit": "tūrva̠n na yāma̠nneta̍śasya̠ nū raṇa̠ ā yo ghṛ̠ṇe|"
         },
         {
-          "id": "ts-4-5-1-15",
+          "id": "ts-4-6-1-15",
           "chunkNumber": 15,
-          "sanskrit": "अ॒सौ यो॑ऽव॒सर्प॑ति॒ नील॑ग्रीवो॒ विलो॑हितः।"
+          "sanskrit": "na ta̍tṛṣā̠ṇo a̠jaraḥ̍||"
         },
         {
-          "id": "ts-4-5-1-16",
+          "id": "ts-4-6-1-16",
           "chunkNumber": 16,
-          "sanskrit": "उ॒तैन॑ङ्गो॒पा अ॑दृश॒न्नदृ॑शन्नुदहा॒र्यः॑।"
+          "sanskrit": "agne̍ pāvaka ro̠ciṣā̍ ma̠ndrayā̍ deva ji̠hvayā̎|"
         },
         {
-          "id": "ts-4-5-1-17",
+          "id": "ts-4-6-1-17",
           "chunkNumber": 17,
-          "sanskrit": "उ॒तैन॒व्ँविश्वा॑ भू॒तानि॒ स दृ॒ष्टो मृ॑डयाति नः॥"
-        },
-        {
-          "id": "ts-4-5-1-18",
-          "chunkNumber": 18,
-          "sanskrit": "नमो॑ अस्तु॒ नील॑ग्रीवाय सहस्रा॒ख्षाय॑ मी॒ढुषे᳚।"
-        },
-        {
-          "id": "ts-4-5-1-19",
-          "chunkNumber": 19,
-          "sanskrit": "अथो॒ ये अ॑स्य॒ सत्वा॑नो॒ऽहन्तेभ्यो॑ऽकर॒न्नमः॑॥"
-        },
-        {
-          "id": "ts-4-5-1-20",
-          "chunkNumber": 20,
-          "sanskrit": "प्र मु॑ञ्च॒ धन्व॑न॒स्त्वमु॒भयो॒रार्त्नि॑यो॒र्ज्याम्।"
-        },
-        {
-          "id": "ts-4-5-1-21",
-          "chunkNumber": 21,
-          "sanskrit": "याश्च॑ ते॒ हस्त॒ इष॑वः॒ परा॒ ता भ॑गवो वप॥"
-        },
-        {
-          "id": "ts-4-5-1-22",
-          "chunkNumber": 22,
-          "sanskrit": "अ॒व॒तत्य॒ धनु॒स्त्वꣳ सह॑स्राख्ष॒ शते॑षुधे।"
-        },
-        {
-          "id": "ts-4-5-1-23",
-          "chunkNumber": 23,
-          "sanskrit": "नि॒शीर्य॑ श॒ल्याना॒म्मुखा॑ शि॒वो न॑स्सु॒मना॑ भव॥"
-        },
-        {
-          "id": "ts-4-5-1-24",
-          "chunkNumber": 24,
-          "sanskrit": "विज्य॒न्धनुः॑ कप॒र्दिनो॒ विश॑ल्यो॒ बाण॑वाꣳ उ॒त।"
-        },
-        {
-          "id": "ts-4-5-1-25",
-          "chunkNumber": 25,
-          "sanskrit": "अने॑शन्न॒स्येष॑व आ॒भुर॑स्य निष॒ङ्गथिः॑॥"
-        },
-        {
-          "id": "ts-4-5-1-26",
-          "chunkNumber": 26,
-          "sanskrit": "या ते॑ हे॒तिर् मी॑ढुष्टम॒ हस्ते॑ ब॒भूव॑ ते॒ धनुः॑।"
-        },
-        {
-          "id": "ts-4-5-1-27",
-          "chunkNumber": 27,
-          "sanskrit": "तया॒ऽस्मान् वि॒श्वत॒स्त्वम॑य॒ख्ष्मया॒ परि॑ब्भुज॥"
-        },
-        {
-          "id": "ts-4-5-1-28",
-          "chunkNumber": 28,
-          "sanskrit": "नम॑स्ते अ॒स्त्वायु॑धा॒याना॑तताय धृ॒ष्णवे᳚।"
-        },
-        {
-          "id": "ts-4-5-1-29",
-          "chunkNumber": 29,
-          "sanskrit": "उ॒भाभ्या॑ मु॒त ते॒ नमो॑ बा॒हुभ्या॒न्तव॒ धन्व॑ने॥"
-        },
-        {
-          "id": "ts-4-5-1-30",
-          "chunkNumber": 30,
-          "sanskrit": "परि॑ ते॒ धन्व॑नो हे॒तिर॒स्मान् वृ॑णक्तु वि॒श्वतः॑।"
-        },
-        {
-          "id": "ts-4-5-1-31",
-          "chunkNumber": 31,
-          "sanskrit": "अथो॒ य इ॑षु॒धिस्तवा॒रे अ॒स्मन्निधे॑हि॒ तम्"
+          "sanskrit": "ā de̠vān"
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-2",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 2",
-      "sectionNumber": 49,
+      "id": "taittiriya-samhita-4-6-2",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 2",
+      "sectionNumber": 60,
       "chunks": [
         {
-          "id": "ts-4-5-2-1",
+          "id": "ts-4-6-2-1",
           "chunkNumber": 1,
-          "sanskrit": "नमो॒ हिर॑ण्यबाहवे सेना॒न्ये॑ दि॒शाञ्च॒ पत॑ये॒ नमो॒ नमो॑ वृ॒ख्षेभ्यो॒ हरि॑केशेभ्यः पशू॒नाम्पत॑ये॒ नमो॒ नम॑स्स॒स्पिञ्ज॑राय॒ त्विषी॑मते पथी॒नाम्पत॑ये॒ नमो॒ नमो॑ बभ्लु॒शाय॑ विव्या॒धिनेऽन्ना॑ना॒म्पत॑ये॒ नमो॒ नमो॒ हरि॑केशायोपवी॒तिने॑ पु॒ष्टाना॒म्पत॑ये॒ नमो॒ नमो॑ भ॒वस्य॑ हे॒त्यै जग॑ता॒म्पत॑ये॒ नमो॒ नमो॑ रु॒द्राया॑तता॒विने॒ ख्षेत्रा॑णा॒म्पत॑ये॒ नमो॒ नमः॑ सू॒तायाह॑न्त्याय॒ वना॑ना॒म्पत॑ये॒ नमो॒ नमो॒ रोहि॑ताय स्थ॒पत॑ये वृ॒ख्षाणा॒म्पत॑ये॒ नमो॒ नमो॑ म॒न्त्रिणे॑ वाणि॒जाय॒ कख्षा॑णा॒म्पत॑ये॒ नमो॒ नमो॑ भुव॒न्तये॑ वारिवस्कृ॒तायौष॑धीना॒म्पत॑ये॒ नमो॒ नम॑ उ॒च्चैर्घो॑षाया क्र॒न्दय॑ते पत्ती॒नाम्पत॑ये॒ नमो॒ नमः॑ कृथ्स्नवी॒ताय॒ धाव॑ते॒ सत्व॑ना॒म्पत॑ये॒ नमः॑",
+          "sanskrit": "ya i̠mā viśvā̠ bhuva̍nāni̠ juhva̠dṛṣi̠r̠hotā̍ niṣa̠sādā̍ pi̠tā naḥ̍|",
+          "section": 2
+        },
+        {
+          "id": "ts-4-6-2-2",
+          "chunkNumber": 2,
+          "sanskrit": "sa ā̠śiṣā̠ dravi̍ṇami̠cchamā̍naḥ parama̠cchado̠ vara̠ ā vi̍veśa||"
+        },
+        {
+          "id": "ts-4-6-2-3",
+          "chunkNumber": 3,
+          "sanskrit": "vi̠śvaka̍rmā̠ mana̍sā̠ yad vihā̍yā dhā̠tā vi̍dhā̠tā pa̍ra̠mota sa̠ndṛk|"
+        },
+        {
+          "id": "ts-4-6-2-4",
+          "chunkNumber": 4,
+          "sanskrit": "teṣā̍mi̠ṣṭāni̠ sami̠ṣā ma̍danti̠ yatra̍ sapta̠r̠ṣīn pa̠ra eka̍mā̠huḥ||"
+        },
+        {
+          "id": "ts-4-6-2-5",
+          "chunkNumber": 5,
+          "sanskrit": "yo naḥ̍ pi̠tā ja̍ni̠tā yo vi̍dhā̠tā yo naḥ̍ sa̠to a̠bhyā sajja̠jāna̍ yo de̠vānā̎nnāma̠dhā eka̍ e̠va tagͫ saṃ̍pra̠śñambhuva̍nā yantya̠nyā||"
+        },
+        {
+          "id": "ts-4-6-2-6",
+          "chunkNumber": 6,
+          "sanskrit": "ta ā'ya̍janta̠ dravi̍ṇa̠g̠ͫ sama̍smā̠ ṛṣa̍yaḥ̠ pūrve̍ jari̠tāro̠ na bhū̠nā|"
+        },
+        {
+          "id": "ts-4-6-2-7",
+          "chunkNumber": 7,
+          "sanskrit": "a̠sūrtā̠ sūrtā̠ raja̍so vi̠māne̠ ye bhū̠tāni̍ sa̠makṛ̍ṇvanni̠māni̍||"
+        },
+        {
+          "id": "ts-4-6-2-8",
+          "chunkNumber": 8,
+          "sanskrit": "na tavm̐vi̍dātha̠ ya i̠dañja̠jānā̠nyad yu̠ṣmāka̠manta̍rambhavāti|"
+        },
+        {
+          "id": "ts-4-6-2-9",
+          "chunkNumber": 9,
+          "sanskrit": "nī̠hā̠reṇa̠ prāvṛ̍tā̠ jalpyā̍ cāsu̠tṛpa̍ uktha̠śāsa̍ścaranti||"
+        },
+        {
+          "id": "ts-4-6-2-10",
+          "chunkNumber": 10,
+          "sanskrit": "pa̠ro di̠vā pa̠ra e̠nā vi̠śvaka̍rmā̠ vi dyāmaurṇo̎n mahi̠nā vi̠śvaca̍khṣāḥ||"
+        },
+        {
+          "id": "ts-4-6-2-11",
+          "chunkNumber": 11,
+          "sanskrit": "kigͫͫ svi̠dvana̠ṅka u̠ sa vṛ̠khṣa ā̍sī̠dyato̠ dyāvā̍pṛthi̠vī ni̍ṣṭata̠khṣuḥ|"
+        },
+        {
+          "id": "ts-4-6-2-12",
+          "chunkNumber": 12,
+          "sanskrit": "manī̍ṣiṇo̠ mana̍sā pṛ̠cchatedu̠ tadyada̠ddhyati̍ṣṭha̠d bhuva̍nāni dhā̠raya̍nn||"
+        },
+        {
+          "id": "ts-4-6-2-13",
+          "chunkNumber": 13,
+          "sanskrit": "yā te̠ dhāmā̍ni para̠māṇi̠ yā'va̠mā yā ma̍ddhya̠mā vi̍śvakarmannu̠temā|"
+        },
+        {
+          "id": "ts-4-6-2-14",
+          "chunkNumber": 14,
+          "sanskrit": "śikhṣā̠ sakhi̍bhyo ha̠viṣi̍ svadhāvaḥ sva̠yaym̐ya̍jasva ta̠nuva̍ñjuṣā̠ṇaḥ||"
+        },
+        {
+          "id": "ts-4-6-2-15",
+          "chunkNumber": 15,
+          "sanskrit": "vā̠caspati̍vm̐vi̠śvaka̍rmāṇamū̠taye̍"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-3",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 3",
+      "sectionNumber": 61,
+      "chunks": [
+        {
+          "id": "ts-4-6-3-1",
+          "chunkNumber": 1,
+          "sanskrit": "ude̍namutta̠rānna̠yāgne̍ ghṛtenā''huta|",
+          "section": 3
+        },
+        {
+          "id": "ts-4-6-3-2",
+          "chunkNumber": 2,
+          "sanskrit": "rā̠yaspoṣe̍ṇa̠ sagͫ sṛ̍ja pra̠jayā̍ ca̠ dhane̍na ca||"
+        },
+        {
+          "id": "ts-4-6-3-3",
+          "chunkNumber": 3,
+          "sanskrit": "indre̠mampra̍ta̠rāṅkṛ̍dhi sajā̠tānā̍masadva̠śī|"
+        },
+        {
+          "id": "ts-4-6-3-4",
+          "chunkNumber": 4,
+          "sanskrit": "same̍na̠vm̐varca̍sā sṛja de̠vebhyo̍ bhāga̠dhā a̍sat||"
+        },
+        {
+          "id": "ts-4-6-3-5",
+          "chunkNumber": 5,
+          "sanskrit": "yasya̍ ku̠rmo ha̠vir gṛ̠he tama̍gne varddhayā̠ tvam|"
+        },
+        {
+          "id": "ts-4-6-3-6",
+          "chunkNumber": 6,
+          "sanskrit": "tasmai̍ de̠vā adhi̍ bravanna̠yañca̠ brahma̍ṇa̠spatiḥ̍||"
+        },
+        {
+          "id": "ts-4-6-3-7",
+          "chunkNumber": 7,
+          "sanskrit": "udu̍ tvā̠ viśve̍ de̠vā agne̠ bhara̍ntu̠ citti̍bhiḥ|"
+        },
+        {
+          "id": "ts-4-6-3-8",
+          "chunkNumber": 8,
+          "sanskrit": "sa no̍ bhava śi̠vata̍maḥ su̠pratī̍ko vi̠bhāva̍suḥ||"
+        },
+        {
+          "id": "ts-4-6-3-9",
+          "chunkNumber": 9,
+          "sanskrit": "pañca̠ diśo̠ daivī̎r ya̠jñama̍vantu de̠vīrapāma̍tindurma̠timbādha̍mānāḥ|"
+        },
+        {
+          "id": "ts-4-6-3-10",
+          "chunkNumber": 10,
+          "sanskrit": "rā̠yaspoṣe̍ ya̠jñapa̍timā̠bhaja̍ntīḥ||"
+        },
+        {
+          "id": "ts-4-6-3-11",
+          "chunkNumber": 11,
+          "sanskrit": "rā̠yaspoṣe̠ adhi̍ ya̠jño a̍sthā̠th sami̍ddhe a̠gnāvadhi̍ māmahā̠naḥ|"
+        },
+        {
+          "id": "ts-4-6-3-12",
+          "chunkNumber": 12,
+          "sanskrit": "u̠kthapa̍tra̠ īḍyo̍ gṛbhī̠tasta̠ptaṅgha̠rmampa̍ri̠gṛhyā̍yajanta||"
+        },
+        {
+          "id": "ts-4-6-3-13",
+          "chunkNumber": 13,
+          "sanskrit": "ū̠rjā yadya̠jñamaśa̍manta de̠vā daivyā̍ya dha̠rtre joṣṭre̎|"
+        },
+        {
+          "id": "ts-4-6-3-14",
+          "chunkNumber": 14,
+          "sanskrit": "de̠va̠śrīḥ śrīma̍ṇāḥ śa̠tapa̍yāḥ"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-4",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 4",
+      "sectionNumber": 62,
+      "chunks": [
+        {
+          "id": "ts-4-6-4-1",
+          "chunkNumber": 1,
+          "sanskrit": "ā̠śuḥ śiśā̍no vṛṣa̠bho na yu̠ddhmo gha̍nāgha̠naḥ khṣobha̍ṇaścarṣaṇī̠nām|",
+          "section": 4
+        },
+        {
+          "id": "ts-4-6-4-2",
+          "chunkNumber": 2,
+          "sanskrit": "saṃ̠kranda̍no'nimi̠ṣa e̍kavī̠raḥ śa̠tagͫ senā̍ ajayath sā̠kamindraḥ̍||"
+        },
+        {
+          "id": "ts-4-6-4-3",
+          "chunkNumber": 3,
+          "sanskrit": "saṃ̠kranda̍nenā nimi̠ṣeṇa̍ ji̠ṣṇunā̍ yutkā̠reṇa̍ duścyava̠nena̍ dhṛ̠ṣṇunā̎|"
+        },
+        {
+          "id": "ts-4-6-4-4",
+          "chunkNumber": 4,
+          "sanskrit": "tadindre̍ṇa jayata̠ tath sa̍haddhva̠ym̐yudho̍ nara̠ iṣu̍hastena̠ vṛṣṇā̎||"
+        },
+        {
+          "id": "ts-4-6-4-5",
+          "chunkNumber": 5,
+          "sanskrit": "sa iṣu̍hastaiḥ̠ sa ni̍ṣaṃ̠gibhi̍r va̠śī sagͫͫsra̍ṣṭā̠ sa yudha̠ indro̍ ga̠ṇena̍|"
+        },
+        {
+          "id": "ts-4-6-4-6",
+          "chunkNumber": 6,
+          "sanskrit": "sa̠g̠ͫsṛ̠ṣṭa̠jith so̍ma̠pā bā̍huśa̠rddhyū̎rddhvadha̍nvā̠ prati̍hitābhi̠rastā̎||"
+        },
+        {
+          "id": "ts-4-6-4-7",
+          "chunkNumber": 7,
+          "sanskrit": "bṛha̍spate̠ pari̍ dīyā̠ rathe̍na rakhṣo̠hā'mitrā̍gͫ apa̠bādha̍mānaḥ|"
+        },
+        {
+          "id": "ts-4-6-4-8",
+          "chunkNumber": 8,
+          "sanskrit": "pra̠bha̠ñjanth senāḥ̎ pramṛ̠ṇo yu̠dhā jaya̍nna̠smāka̍meddhyavi̠tā rathā̍nām||"
+        },
+        {
+          "id": "ts-4-6-4-9",
+          "chunkNumber": 9,
+          "sanskrit": "go̠tra̠bhida̍ṅgo̠vida̠vm̐vajra̍bāhu̠ñjaya̍nta̠majma̍ pramṛ̠ṇanta̠moja̍sā|"
+        },
+        {
+          "id": "ts-4-6-4-10",
+          "chunkNumber": 10,
+          "sanskrit": "i̠magͫ sa̍jātā̠ anu̍ vīrayaddhva̠mindra̍gͫ sakhā̠yo'nu̠ sagͫ ra̍bhaddhvam||"
+        },
+        {
+          "id": "ts-4-6-4-11",
+          "chunkNumber": 11,
+          "sanskrit": "ba̠la̠vi̠jñā̠yaḥ sthavi̍raḥ̠ pravī̍raḥ̠ saha̍svānvā̠jī saha̍māna u̠graḥ|"
+        },
+        {
+          "id": "ts-4-6-4-12",
+          "chunkNumber": 12,
+          "sanskrit": "a̠bhivī̍ro a̠bhisa̍tvā saho̠jā jaitra̍mindra̠ ratha̠māti̍ṣṭha go̠vit||"
+        },
+        {
+          "id": "ts-4-6-4-13",
+          "chunkNumber": 13,
+          "sanskrit": "a̠bhi go̠trāṇi̠ saha̍sā̠ gāha̍māno'dā̠yo vī̠raḥ śa̠tama̍nyu̠rindraḥ̍|"
+        },
+        {
+          "id": "ts-4-6-4-14",
+          "chunkNumber": 14,
+          "sanskrit": "du̠ścya̠va̠naḥ pṛ̍tanā̠ṣāḍa̍yu̠ddhyo̎smāka̠g̠ͫ senā̍ avatu̠ pra yu̠thsu||"
+        },
+        {
+          "id": "ts-4-6-4-15",
+          "chunkNumber": 15,
+          "sanskrit": "indra̍ āsānne̠tā bṛha̠spati̠r dakhṣi̍ṇā ya̠jñaḥ pu̠ra e̍tu̠ somaḥ̍|"
+        },
+        {
+          "id": "ts-4-6-4-16",
+          "chunkNumber": 16,
+          "sanskrit": "de̠va̠se̠nānā̍mabhibhañjatī̠nāñjaya̍ntīnāmma̠ruto̍ ya̠ntvagre̎||"
+        },
+        {
+          "id": "ts-4-6-4-17",
+          "chunkNumber": 17,
+          "sanskrit": "indra̍sya̠ vṛṣṇo̠ varu̍ṇasya̠ rājña̍ ādi̠tyānā̎mma̠rutā̠g̠ͫ śarddha̍ u̠gram|"
+        },
+        {
+          "id": "ts-4-6-4-18",
+          "chunkNumber": 18,
+          "sanskrit": "ma̠hāma̍nasāmbhuvanacya̠vānā̠ṅghoṣo̍ de̠vānā̠ñjaya̍tā̠ muda̍sthāt||"
+        },
+        {
+          "id": "ts-4-6-4-19",
+          "chunkNumber": 19,
+          "sanskrit": "a̠smāka̠mindraḥ̠ samṛ̍teṣu dhva̠jeṣva̠smāka̠ym̐yā iṣa̍va̠stā ja̍yantu a̠smāka̍vm̐vī̠rā utta̍re bhavantva̠smānu̍ devā avatā̠ have̍ṣu||"
+        },
+        {
+          "id": "ts-4-6-4-20",
+          "chunkNumber": 20,
+          "sanskrit": "uddha̍rṣaya maghava̠nnāyu̍dhā̠nyuth satva̍nāmmāma̠kānā̠mmahā̍gͫsi|"
+        },
+        {
+          "id": "ts-4-6-4-21",
+          "chunkNumber": 21,
+          "sanskrit": "udvṛ̍trahan vā̠jinā̠vm̐vāji̍nā̠nyudrathā̍nā̠ñjaya̍tāmetu̠ ghoṣaḥ̍||"
+        },
+        {
+          "id": "ts-4-6-4-22",
+          "chunkNumber": 22,
+          "sanskrit": "upa̠ preta̠ jaya̍tā naraḥ sthi̠rā vaḥ̍ santu bā̠havaḥ̍|"
+        },
+        {
+          "id": "ts-4-6-4-23",
+          "chunkNumber": 23,
+          "sanskrit": "indro̍ vaḥ̠ śarma̍ yacchatvanādhṛ̠ṣyā yathā'sa̍tha||"
+        },
+        {
+          "id": "ts-4-6-4-24",
+          "chunkNumber": 24,
+          "sanskrit": "ava̍sṛṣṭā̠ parā̍ pata̠ śara̍vye̠ brahma̍sagͫśitā|"
+        },
+        {
+          "id": "ts-4-6-4-25",
+          "chunkNumber": 25,
+          "sanskrit": "gacchā̠mitrā̠n pra"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-5",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 5",
+      "sectionNumber": 63,
+      "chunks": [
+        {
+          "id": "ts-4-6-5-1",
+          "chunkNumber": 1,
+          "sanskrit": "prācī̠manu̍ pra̠diśa̠mprehi̍ vi̠dvāna̠gnera̍gne pu̠roa̍gnir bhave̠ha|",
+          "section": 5
+        },
+        {
+          "id": "ts-4-6-5-2",
+          "chunkNumber": 2,
+          "sanskrit": "viśvā̠ āśā̠ dīdyā̍no̠ vi bhā̠hyūrja̍nno dhehi dvi̠pade̠ catu̍ṣpade||"
+        },
+        {
+          "id": "ts-4-6-5-3",
+          "chunkNumber": 3,
+          "sanskrit": "krama̍ddhvama̠gninā̠ nāka̠mukhya̠g̠ͫ haste̍ṣu̠ bibhra̍taḥ|"
+        },
+        {
+          "id": "ts-4-6-5-4",
+          "chunkNumber": 4,
+          "sanskrit": "di̠vaḥ pṛ̠ṣṭhagͫ suva̍r ga̠tvā mi̠śrā de̠vebhi̍rāddhvam||"
+        },
+        {
+          "id": "ts-4-6-5-5",
+          "chunkNumber": 5,
+          "sanskrit": "pṛ̠thi̠vyā a̠hamuda̠ntari̍khṣa̠mā'ru̍hama̠ntari̍khṣā̠d diva̠mā'ru̍ham|"
+        },
+        {
+          "id": "ts-4-6-5-6",
+          "chunkNumber": 6,
+          "sanskrit": "di̠vo nāka̍sya pṛ̠ṣṭhāth suva̠rjyoti̍ragā yaja̍mānaśca sīdata||"
+        },
+        {
+          "id": "ts-4-6-5-7",
+          "chunkNumber": 7,
+          "sanskrit": "preddho̍ agne dīdihi pu̠ro no'ja̍srayā sū̠rmyā̍ yaviṣṭha|"
+        },
+        {
+          "id": "ts-4-6-5-8",
+          "chunkNumber": 8,
+          "sanskrit": "tvāgͫ śaśva̍nta̠ upa̍ yanti̠ vājāḥ̎||"
+        },
+        {
+          "id": "ts-4-6-5-9",
+          "chunkNumber": 9,
+          "sanskrit": "vi̠dhema̍ te para̠me janma̍nnagne vi̠dhema̠ stomai̠rava̍re sa̠dhasthe̎|"
+        },
+        {
+          "id": "ts-4-6-5-10",
+          "chunkNumber": 10,
+          "sanskrit": "yasmā̠dyone̍ru̠dāri̍thā̠ yaje̠ tampra tve ha̠vīgͫṣi̍ juhure̠ sami̍ddhe||"
+        },
+        {
+          "id": "ts-4-6-5-11",
+          "chunkNumber": 11,
+          "sanskrit": "tāgͫ sa̍vi̠tur vare̎ṇyasya ci̠trāmā'havm̐vṛ̍ṇe suma̠tivm̐vi̠śvaja̍nyām|"
+        },
+        {
+          "id": "ts-4-6-5-12",
+          "chunkNumber": 12,
+          "sanskrit": "yāma̍sya̠ kaṇvo̠ adu̍ha̠t prapī̍nāgͫ sa̠hasra̍dhārāṃ̠ paya̍sā ma̠hīṅgām||"
+        },
+        {
+          "id": "ts-4-6-5-13",
+          "chunkNumber": 13,
+          "sanskrit": "sa̠pta te̍ agne sa̠midhaḥ̍ sa̠pta ji̠hvāḥ sa̠ptarṣa̍yaḥ sa̠pta dhāma̍ pri̠yāṇi̍|"
+        },
+        {
+          "id": "ts-4-6-5-14",
+          "chunkNumber": 14,
+          "sanskrit": "sa̠pta hotrāḥ̎ sapta̠dhā tvā̍ yajanti sa̠pta yonī̠rā pṛ̍ṇasvā ghṛ̠tena̍||"
+        },
+        {
+          "id": "ts-4-6-5-15",
+          "chunkNumber": 15,
+          "sanskrit": "ī̠dṛṅ cā̎nyā̠dṛṅ cai̍tā̠dṛṅ ca̍ prati̠dṛṅ ca̍ mi̠taśca̠ saṃmi̍taśca̠ sabha̍rāḥ||"
+        },
+        {
+          "id": "ts-4-6-5-16",
+          "chunkNumber": 16,
+          "sanskrit": "śu̠krajyo̍tiśca ci̠trajyo̍tiśca sa̠tyajyo̍tiśca̠ jyoti̍ṣmāgͫͫśca sa̠tyaśca̍rta̠pāścātya̍gͫhāḥ ṛ̠ta̠jicca̍ satya̠jicca̍ sena̠jicca̍ su̠ṣeṇa̠ścāntya̍mitraśca dū̠rea̍mitraśca ga̠ṇaḥ||"
+        },
+        {
+          "id": "ts-4-6-5-17",
+          "chunkNumber": 17,
+          "sanskrit": "ṛ̠taśca̍ sa̠tyaśca̍ dhru̠vaśca̍ dha̠ruṇa̍śca dha̠rtā ca̍ vidha̠rtā ca̍ vidhāra̠yaḥ||"
+        },
+        {
+          "id": "ts-4-6-5-18",
+          "chunkNumber": 18,
+          "sanskrit": "ī̠dṛkhṣā̍sa etā̠dṛkhṣā̍sa ū̠ ṣu ṇaḥ̍ sa̠dṛkhṣā̍saḥ̠ prati̍sadṛkhṣāsa̠ eta̍na|"
+        },
+        {
+          "id": "ts-4-6-5-19",
+          "chunkNumber": 19,
+          "sanskrit": "mi̠tāsa̍śca̠ saṃmi̍tāsaśca na ū̠taye̠ sabha̍raso maruto ya̠jñe a̠sminnindra̠ndaivī̠r viśo̍ ma̠ruto'nu̍vartmāno̠ yathendra̠ndaivī̠r viśo̍ ma̠ruto'nu̍vartmāna e̠vami̠maym̐yaja̍māna̠ndaivī̎śca̠ viśo̠ mānu̍ṣī̠ścānu̍vartmāno bhavantu"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-6",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 6",
+      "sectionNumber": 64,
+      "chunks": [
+        {
+          "id": "ts-4-6-6-1",
+          "chunkNumber": 1,
+          "sanskrit": "jī̠mūta̍syeva bhavati̠ pratī̍ka̠ym̐yadva̠rmī yāti̍ sa̠madā̍mu̠pasthe̎|",
+          "section": 6
+        },
+        {
+          "id": "ts-4-6-6-2",
+          "chunkNumber": 2,
+          "sanskrit": "anā̍viddhayā ta̠nuvā̍ jaya̠ tvagͫ sa tvā̠ varma̍ṇo mahi̠mā pi̍partu||"
+        },
+        {
+          "id": "ts-4-6-6-3",
+          "chunkNumber": 3,
+          "sanskrit": "dhanva̍nā̠ gā dhanva̍nā̠''jiñja̍yema̠ dhanva̍nā tī̠vrāḥ sa̠mado̍ jayema|"
+        },
+        {
+          "id": "ts-4-6-6-4",
+          "chunkNumber": 4,
+          "sanskrit": "dhanuḥ̠ śatro̍rapakā̠maṅkṛ̍ṇoti̠ dhanva̍nā̠ sarvāḥ̎ pra̠diśo̍ jayema||"
+        },
+        {
+          "id": "ts-4-6-6-5",
+          "chunkNumber": 5,
+          "sanskrit": "va̠khṣyantī̠vedā ga̍nīganti̠ karṇa̍mpri̠yagͫ sakhā̍yampariṣasvajā̠nā|"
+        },
+        {
+          "id": "ts-4-6-6-6",
+          "chunkNumber": 6,
+          "sanskrit": "yoṣe̍va śiṅkte̠ vita̠tā'dhi̠ dhanva̠n jyā i̠yagͫ sama̍ne pā̠raya̍ntī||"
+        },
+        {
+          "id": "ts-4-6-6-7",
+          "chunkNumber": 7,
+          "sanskrit": "te ā̠cara̍ntī̠ sama̍neva̠ yoṣā̍ mā̠teva̍ pu̠trambi̍bhṛtāmu̠pasthe̎|"
+        },
+        {
+          "id": "ts-4-6-6-8",
+          "chunkNumber": 8,
+          "sanskrit": "apa̠ śatrū̍nviddhyatāgͫ savm̐vidā̠ne ārtnī̍ i̠me vi̍ṣphu̠rantī̍ a̠mitrā̍n||"
+        },
+        {
+          "id": "ts-4-6-6-9",
+          "chunkNumber": 9,
+          "sanskrit": "ba̠hvī̠nāmpi̠tā ba̠hura̍sya pu̠traści̠ścā kṛ̍ṇoti̠ sama̍nā'va̠gatya̍|"
+        },
+        {
+          "id": "ts-4-6-6-10",
+          "chunkNumber": 10,
+          "sanskrit": "i̠ṣu̠dhiḥ saṅkāḥ̠ pṛta̍nāśca̠ sarvāḥ̎ pṛ̠ṣṭhe nina̍ddho jayati̠ prasū̍taḥ||"
+        },
+        {
+          "id": "ts-4-6-6-11",
+          "chunkNumber": 11,
+          "sanskrit": "rathe̠ tiṣṭha̍n nayati vā̠jinaḥ̍ pu̠ro yatra̍yatra kā̠maya̍te suṣāra̠thiḥ|"
+        },
+        {
+          "id": "ts-4-6-6-12",
+          "chunkNumber": 12,
+          "sanskrit": "a̠bhīśū̍nāmmahi̠mānaṃ̍ pita̍raḥ̠ somyā̍saḥ śi̠ve no̠ dyāvā̍pṛthi̠vī a̍ne̠hasā̎|"
+        },
+        {
+          "id": "ts-4-6-6-13",
+          "chunkNumber": 13,
+          "sanskrit": "pū̠ṣā naḥ̍ pātu duri̠tādṛ̍tāvṛdho̠ rakhṣā̠ māki̍r no a̠ghaśa̍gͫsa īśata||"
+        },
+        {
+          "id": "ts-4-6-6-14",
+          "chunkNumber": 14,
+          "sanskrit": "su̠pa̠rṇavm̐va̍ste mṛ̠go a̍syā̠ danto̠ gobhiḥ̠ sanna̍ddhā patati̠ prasū̍tā|"
+        },
+        {
+          "id": "ts-4-6-6-15",
+          "chunkNumber": 15,
+          "sanskrit": "yatrā̠ naraḥ̠ sañca̠ vi ca̠ drava̍nti̠ tatrā̠smabhya̠miṣa̍vaḥ̠ śarma̍ yagͫsann||"
+        },
+        {
+          "id": "ts-4-6-6-16",
+          "chunkNumber": 16,
+          "sanskrit": "ṛjī̍te̠ pari̍ vṛṅgdhi̠ no'śmā̍ bhavatu nasta̠nūḥ|"
+        },
+        {
+          "id": "ts-4-6-6-17",
+          "chunkNumber": 17,
+          "sanskrit": "somo̠ adhi̍ bravītu̠ no'di̍tiḥ̠ śarma̍ yacchatu||"
+        },
+        {
+          "id": "ts-4-6-6-18",
+          "chunkNumber": 18,
+          "sanskrit": "ā ja̍ṅghanti̠ sānve̍ṣāñja̠ghanā̠g̠ͫ upa̍ jighnate|"
+        },
+        {
+          "id": "ts-4-6-6-19",
+          "chunkNumber": 19,
+          "sanskrit": "aśvā̍jani̠ prace̍ta̠so'śvā̎nth sa̠mathsu̍ codaya||"
+        },
+        {
+          "id": "ts-4-6-6-20",
+          "chunkNumber": 20,
+          "sanskrit": "ahi̍riva bho̠gaiḥ parye̍ti bā̠huñjyāyā̍ he̠timpa̍ri̠bādha̍mānaḥ|"
+        },
+        {
+          "id": "ts-4-6-6-21",
+          "chunkNumber": 21,
+          "sanskrit": "ha̠sta̠ghno viśvā̍ va̠yunā̍ni vi̠dvān pumā̠n pumā̍gͫsa̠mpari̍ pātu vi̠śvataḥ̍||"
+        },
+        {
+          "id": "ts-4-6-6-22",
+          "chunkNumber": 22,
+          "sanskrit": "vana̍spate vī̠ḍva̍ṅgo̠ hi bhū̠yā a̠smathsa̍khā pra̠tara̍ṇaḥ su̠vīraḥ̍|"
+        },
+        {
+          "id": "ts-4-6-6-23",
+          "chunkNumber": 23,
+          "sanskrit": "gobhiḥ̠ sanna̍ddho asi vī̠ḍaya̍svā''sthā̠tā te̍ jayatu̠ jetvā̍ni||"
+        },
+        {
+          "id": "ts-4-6-6-24",
+          "chunkNumber": 24,
+          "sanskrit": "di̠vaḥ pṛ̍thi̠vyāḥ paryo"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-7",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 7",
+      "sectionNumber": 65,
+      "chunks": [
+        {
+          "id": "ts-4-6-7-1",
+          "chunkNumber": 1,
+          "sanskrit": "yadakra̍ndaḥ pratha̠mañjāya̍māna u̠dyanth sa̍mu̠drādu̠ta vā̠ purī̍ṣāt|",
+          "section": 7
+        },
+        {
+          "id": "ts-4-6-7-2",
+          "chunkNumber": 2,
+          "sanskrit": "śye̠nasya̍ pa̠khṣā ha̍ri̠ṇasya̍ bā̠hū u̍pa̠stutya̠mmahi̍ jā̠tante̍ arvann||"
+        },
+        {
+          "id": "ts-4-6-7-3",
+          "chunkNumber": 3,
+          "sanskrit": "ya̠mena̍ da̠ttantri̠ta e̍namāyuna̠gindra̍ eṇampratha̠mo addhya̍tiṣṭhat|"
+        },
+        {
+          "id": "ts-4-6-7-4",
+          "chunkNumber": 4,
+          "sanskrit": "ga̠ndha̠rvo a̍sya raśa̠nāma̍gṛbhṇā̠th sūrā̠daśva̍vm̐vasavo̠ nira̍taṣṭa||"
+        },
+        {
+          "id": "ts-4-6-7-5",
+          "chunkNumber": 5,
+          "sanskrit": "asi̍ ya̠mo asyā̍di̠tyo a̍rva̠nnasi̍ tri̠to guhye̍na vra̠tena̍|"
+        },
+        {
+          "id": "ts-4-6-7-6",
+          "chunkNumber": 6,
+          "sanskrit": "asi̠ some̍na sa̠mayā̠ vipṛ̍kta ā̠huste̠ trīṇi̍ di̠vi bandha̍nāni||"
+        },
+        {
+          "id": "ts-4-6-7-7",
+          "chunkNumber": 7,
+          "sanskrit": "trīṇi̍ ta āhur di̠vi bandha̍nāni̠ trīṇya̠phsu trīṇya̠ntaḥ sa̍mu̠dre|"
+        },
+        {
+          "id": "ts-4-6-7-8",
+          "chunkNumber": 8,
+          "sanskrit": "u̠teva̍ me̠ varu̍ṇa śchanthsyarva̠n̠yatrā̍ ta ā̠huḥ pa̍ra̠mañja̠nitra̎m||"
+        },
+        {
+          "id": "ts-4-6-7-9",
+          "chunkNumber": 9,
+          "sanskrit": "i̠mā te̍ vājinnava̠mārja̍nānī̠mā śa̠phānā̍gͫ sani̠tur ni̠dhānā̎|"
+        },
+        {
+          "id": "ts-4-6-7-10",
+          "chunkNumber": 10,
+          "sanskrit": "atrā̍ te bha̠drā ra̍śa̠nā a̍paśyamṛ̠tasya̠ yā a̍bhi̠rakhṣa̍nti go̠pāḥ||"
+        },
+        {
+          "id": "ts-4-6-7-11",
+          "chunkNumber": 11,
+          "sanskrit": "ā̠tmāna̍nte̠ mana̍sā̠''rāda̍jānāma̠vo di̠vā pa̠taya̍ntampata̠ṅgam|"
+        },
+        {
+          "id": "ts-4-6-7-12",
+          "chunkNumber": 12,
+          "sanskrit": "śiro̍ apaśyampa̠thibhiḥ̍ su̠gebhi̍rare̠ṇubhi̠r jeha̍mānampata̠tri||"
+        },
+        {
+          "id": "ts-4-6-7-13",
+          "chunkNumber": 13,
+          "sanskrit": "atrā̍ te rū̠pamu̍tta̠mama̍paśya̠ñjigī̍ṣamāṇami̠ṣa ā pa̠de goḥ|"
+        },
+        {
+          "id": "ts-4-6-7-14",
+          "chunkNumber": 14,
+          "sanskrit": "ya̠dā te̠ marto̠ anu̠ bhoga̠māna̠ḍādid grasi̍ṣṭha̠ oṣa̍dhīrajīgaḥ||"
+        },
+        {
+          "id": "ts-4-6-7-15",
+          "chunkNumber": 15,
+          "sanskrit": "anu̍ tvā̠ ratho̠ anu̠ maryo̍ arva̠nnanu̠ gāvo'nu̠ bhagaḥ̍ ka̠nīnā̎m|"
+        },
+        {
+          "id": "ts-4-6-7-16",
+          "chunkNumber": 16,
+          "sanskrit": "anu̠ vrātā̍sa̠stava̍ sa̠khyamī̍yu̠ranu̍ de̠vā ma̍mire vī̠rya̍ prāgā̠cchasa̍navm̐vā̠jyarvā̍ deva̠drīcā̠ mana̍sā̠ dīddhyā̍naḥ|"
+        },
+        {
+          "id": "ts-4-6-7-17",
+          "chunkNumber": 17,
+          "sanskrit": "a̠jaḥ pu̠ro nī̍yate̠ nābhi̍ra̠syānu̍ pa̠ścāt ka̠vayo̍ yanti re̠bhāḥ||"
+        },
+        {
+          "id": "ts-4-6-7-18",
+          "chunkNumber": 18,
+          "sanskrit": "upa̠ prāgā̎t para̠maym̐yath sa̠dhastha̠marvā̠g̠ͫ acchā̍ pi̠tara̍mmā̠tara̍ñca|"
+        },
+        {
+          "id": "ts-4-6-7-19",
+          "chunkNumber": 19,
+          "sanskrit": "a̠dyā de̠vān juṣṭa̍tamo̠ hi ga̠myā athā''śā̎ste dā̠śuṣe̠ vāryā̍ṇi"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-8",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 8",
+      "sectionNumber": 66,
+      "chunks": [
+        {
+          "id": "ts-4-6-8-1",
+          "chunkNumber": 1,
+          "sanskrit": "mā no̍ mi̠tro varu̍ṇo arya̠mā''yurindra̍ ṛbhu̠khṣā ma̠rutaḥ̠ pari̍ khyann|",
+          "section": 8
+        },
+        {
+          "id": "ts-4-6-8-2",
+          "chunkNumber": 2,
+          "sanskrit": "yadvā̠jino̍ de̠vajā̍tasya̠ sapteḥ̎ prava̠khṣyāmo̍ vi̠dathe̍ vī̠ryā̍ṇi||"
+        },
+        {
+          "id": "ts-4-6-8-3",
+          "chunkNumber": 3,
+          "sanskrit": "yanni̠rṇijā̠ rekṇa̍sā̠ prāvṛ̍tasya rā̠tiṅgṛ̍bhī̠tāmmu̍kha̠to naya̍nti|"
+        },
+        {
+          "id": "ts-4-6-8-4",
+          "chunkNumber": 4,
+          "sanskrit": "suprā̍ṅa̠jo memya̍d vi̠śvarū̍pa indrāpū̠ṣṇoḥ pri̠yamapye̍ti̠ pāthaḥ̍||"
+        },
+        {
+          "id": "ts-4-6-8-5",
+          "chunkNumber": 5,
+          "sanskrit": "e̠ṣa cchāgaḥ̍ pu̠ro aśve̍na vā̠jinā̍ pū̠ṣṇo bhā̠go nī̍yate vi̠śvade̎vyaḥ|"
+        },
+        {
+          "id": "ts-4-6-8-6",
+          "chunkNumber": 6,
+          "sanskrit": "a̠bhi̠priya̠ym̐yat pu̍ro̠ḍāśa̠marva̍tā̠ tvaṣṭe teṣā̍ma̠bhigū̎rtir na invatu||"
+        },
+        {
+          "id": "ts-4-6-8-7",
+          "chunkNumber": 7,
+          "sanskrit": "upa̠ prāgā̎th su̠manme̍'dhāyi̠ manma̍ de̠vānā̠māśā̠ upa̍ vī̠tapṛ̍ṣṭhaḥ|"
+        },
+        {
+          "id": "ts-4-6-8-8",
+          "chunkNumber": 8,
+          "sanskrit": "anve̍na̠vm̐viprā̠ ṛṣa̍yo madanti de̠vānā̎mpu̠ṣṭe ca̍kṛmā su̠bandhu̎m||"
+        },
+        {
+          "id": "ts-4-6-8-9",
+          "chunkNumber": 9,
+          "sanskrit": "yadvā̠jino̠ dāma̍ sa̠ndā̠marva̍to̠ yā śī̍rṣa̠ṇyā̍ raśa̠nā rajju̍rasya|"
+        },
+        {
+          "id": "ts-4-6-8-10",
+          "chunkNumber": 10,
+          "sanskrit": "yadvā̍ ghāsya̠ prabhṛ̍tamā̠sye̍ tṛṇa̠g̠ͫ sarvā̠ tā te̠ api̍ de̠veṣva̍stu||"
+        },
+        {
+          "id": "ts-4-6-8-11",
+          "chunkNumber": 11,
+          "sanskrit": "yadaśva̍sya kra̠viṣo̠ makhṣi̠kā''śa̠ yadvā̠ svarau̠ svadhi̍tau ri̠ptamasti̍|"
+        },
+        {
+          "id": "ts-4-6-8-12",
+          "chunkNumber": 12,
+          "sanskrit": "yaddhasta̍yoḥ śami̠tur yanna̠kheṣu̠ sarvā̠ tā te̠ api̍ de̠veṣva̍stu||"
+        },
+        {
+          "id": "ts-4-6-8-13",
+          "chunkNumber": 13,
+          "sanskrit": "yadūva̍ddhyamu̠dara̍syāpa̠vāti̠ ya ā̠masya̍ kra̠viṣo̍ ga̠ndho asti̍|"
+        },
+        {
+          "id": "ts-4-6-8-14",
+          "chunkNumber": 14,
+          "sanskrit": "su̠kṛ̠tā taccha̍mi̠tāraḥ̍ kṛṇvantū̠ta medha̍gͫ śṛta̠pāka̍mpacantu||"
+        },
+        {
+          "id": "ts-4-6-8-15",
+          "chunkNumber": 15,
+          "sanskrit": "yat te̠ gātrā̍da̠gninā̍ pa̠cyamā̍nāda̠bhi śūla̠nniha̍tasyāva̠dhāva̍ti|"
+        },
+        {
+          "id": "ts-4-6-8-16",
+          "chunkNumber": 16,
+          "sanskrit": "mā tadbhūmyā̠mā śri̍ṣa̠ nmā tṛṇe̍ṣu de̠vebhya̠stadu̠śadbhyo̍ rā̠tama̍stu"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-6-9",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 9",
+      "sectionNumber": 67,
+      "chunks": [
+        {
+          "id": "ts-4-6-9-1",
+          "chunkNumber": 1,
+          "sanskrit": "ye vā̠jina̍mpari̠paśya̍nti pa̠kvaym̐ya ī̍mā̠huḥ su̍ra̠bhir nir ha̠reti̍|",
+          "section": 9
+        },
+        {
+          "id": "ts-4-6-9-2",
+          "chunkNumber": 2,
+          "sanskrit": "ye cārva̍to māgͫsabhi̠khṣāmu̠pāsa̍ta u̠to teṣā̍ma̠bhigū̎rtir na invatu||"
+        },
+        {
+          "id": "ts-4-6-9-3",
+          "chunkNumber": 3,
+          "sanskrit": "yannīkhṣa̍ṇammā̠g̠ͫͫspaca̍nyā u̠khāyā̠ yā pātrā̍ṇi yū̠ṣṇa ā̠seca̍nāni|"
+        },
+        {
+          "id": "ts-4-6-9-4",
+          "chunkNumber": 4,
+          "sanskrit": "ū̠ṣma̠ṇyā̍'pi̠dhānā̍ carū̠ṇāma̠ṅkāḥ sū̠nāḥ pari̍ bhūṣa̠ntyaśva̎m||"
+        },
+        {
+          "id": "ts-4-6-9-5",
+          "chunkNumber": 5,
+          "sanskrit": "ni̠krama̍ṇanni̠ṣada̍navm̐vi̠varta̍na̠ym̐yacca̠ paḍbī̍śa̠marva̍taḥ|"
+        },
+        {
+          "id": "ts-4-6-9-6",
+          "chunkNumber": 6,
+          "sanskrit": "yacca̍ pa̠pau yacca̍ ghā̠si pri̠ya ā̠tmā'pi̠yanta̠mmā svadhi̍tista̠nuva̠ ā ti̍ṣṭhipat te|"
+        },
+        {
+          "id": "ts-4-6-9-7",
+          "chunkNumber": 7,
+          "sanskrit": "mā te̍ gṛ̠dhnura̍viśa̠stā'ti̠hāya̍ chi̠drā gātrā̎ṇya̠sinā̠ mithū̍ kaḥ||"
+        },
+        {
+          "id": "ts-4-6-9-8",
+          "chunkNumber": 8,
+          "sanskrit": "na vā u̍ve̠tanmri̍yase̠ na ri̍ṣyasi de̠vāgͫ ide̍ṣi pa̠thibhiḥ̍ su̠gebhiḥ̍|"
+        },
+        {
+          "id": "ts-4-6-9-9",
+          "chunkNumber": 9,
+          "sanskrit": "harī̍ te̠ yuñjā̠ pṛṣa̍tī abhūtā̠mupā̎sthādvā̠jī dhu̠ri rāsa̍bhasya||"
+        },
+        {
+          "id": "ts-4-6-9-10",
+          "chunkNumber": 10,
+          "sanskrit": "su̠gavya̍nno vā̠jī svaśvi̍yampu̠g̠ͫsaḥ pu̠trāgͫ u̠ta vi̍śvā̠puṣa̍gͫ ra̠yiṃ|"
+        },
+        {
+          "id": "ts-4-6-9-11",
+          "chunkNumber": 11,
+          "sanskrit": "a̠nā̠gā̠stvanno̠ adi̍tiḥ kṛṇotu khṣa̠tranno̠ aśvo̍ vanatāgͫ ha̠viṣmā̍n"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-1",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 1",
+      "sectionNumber": 68,
+      "chunks": [
+        {
+          "id": "ts-4-7-1-1",
+          "chunkNumber": 1,
+          "sanskrit": "agnā̍viṣṇū sa̠joṣa̍se̠mā va̍rddhantu vā̠ṅgiraḥ̍|",
+          "section": 1
+        },
+        {
+          "id": "ts-4-7-1-2",
+          "chunkNumber": 2,
+          "sanskrit": "dyu̠mnair vāje̍bhi̠rā ga̍tam||"
+        },
+        {
+          "id": "ts-4-7-1-3",
+          "chunkNumber": 3,
+          "sanskrit": "vāja̍śca me prasa̠vaśca̍ me̠ praya̍tiśca me̠ prasi̍tiśca me dhī̠tiśca̍ me̠ kratu̍śca me̠ svara̍śca me̠ śloka̍śca me śrā̠vaśca̍ me̠ śruti̍śca me̠ jyoti̍śca me̠ suva̍śca me prā̠ṇaśca̍ me'pā̠na"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-2",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 2",
+      "sectionNumber": 69,
+      "chunks": [
+        {
+          "id": "ts-4-7-2-1",
+          "chunkNumber": 1,
+          "sanskrit": "jyaiṣṭhya̍ñca ma̠ ādhi̍patyañca me ma̠nyuśca̍ me̠ bhāma̍śca̠ me 'ma̍śca̠ me'ṃbha̍śca me je̠mā ca̍ me mahi̠mā ca̍ me vari̠mā ca̍ me prathi̠mā ca̍ me va̠rṣmā ca̍ me drāghu̠yā ca̍ me vṛ̠ddhañca̍ me̠ vṛddhi̍śca me sa̠tyañca̍ me śra̠ddhā ca̍ me̠ jaga̍cca me̠ dhana̍ñca me̠ vaśa̍śca me̠ tviṣi̍śca me krī̠ḍā ca̍ me̠ moda̍śca me jā̠tañca̍ me jani̠ṣyamā̍ṇañca me sū̠ktañca̍ me sukṛ̠tañca̍ me vi̠ttañca̍ me̠ vedya̍ñca me bhū̠tañca̍ me bhavi̠ṣyacca̍ me su̠gañca̍ me su̠patha̍ñca ma ṛ̠ddhañca̍ ma̠ ṛddhi̍ śca me klṛ̠ptañca̍ me̠ klṛpti̍śca me ma̠tiśca̍ me suma̠tiśca̍ me",
           "section": 2
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-3",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 3",
-      "sectionNumber": 50,
+      "id": "taittiriya-samhita-4-7-3",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 3",
+      "sectionNumber": 70,
       "chunks": [
         {
-          "id": "ts-4-5-3-1",
+          "id": "ts-4-7-3-1",
           "chunkNumber": 1,
-          "sanskrit": "नम॒स्सह॑मानाय निव्या॒धिन॑ आव्या॒धिनी॑ना॒म्पत॑ये॒ नमो॒ नमः॑ ककु॒भाय॑ निष॒ङ्गिणे᳚ स्ते॒नाना॒म्पत॑ये॒ नमो॒ नमो॑ निष॒ङ्गिण॑ इषुधि॒मते॒ तस्क॑राणा॒म्पत॑ये॒ नमो॒ नमो॒ वञ्च॑ते परि॒वञ्च॑ते स्तायू॒नाम्पत॑ये॒ नमो॒ नमो॑ निचे॒रवे॑ परिच॒रायार॑ण्याना॒म्पत॑ये॒ नमो॒ नमः॑ सृका॒विभ्यो॒ जिघा॑ꣳसद्भ्यो मुष्ण॒ताम्पत॑ये॒ नमो॒ नमो॑ऽसि॒मद्भ्यो॒ नक्त॒ञ्चर॑द्भ्यः प्रकृ॒न्ताना॒म्पत॑ये॒ नमो॒ नम॑ उष्णी॒षिणे॑ गिरिच॒राय॑ कुलु॒ञ्चाना॒म्पत॑ये॒ नमो॒ नम॒ इषु॑मद्भ्यो धन्वा॒विभ्य॑श्च वो॒ नमो॒ नम॑ आतन्वा॒नेभ्यः॑ प्रति॒दधा॑नेभ्यश्च वो॒ नमो॒ नम॑ आ॒यच्छ॑द्भ्यो विसृ॒जद्भ्य॑श्च वो॒ नमो॒ नमोऽस्य॑द्भ्यो॒ विद्ध्य॑द्भ्यश्च वो॒ नमो॒ नम॒ आसी॑नेभ्य॒श्शया॑नेभ्यश्च वो॒ नमो॒ नमः॑ स्व॒पद्भ्यो॒ जाग्र॑द्भ्यश्च वो॒ नमो॒ नम॒स्तिष्ठ॑द्भ्यो॒ धाव॑द्भ्यश्च वो॒ नमो॒ नमः॑ स॒भाभ्यः॑ स॒भाप॑तिभ्यश्च वो॒ नमो॒ नमो॒ अश्वे॒भ्योऽश्व॑पतिभ्यश्च वो॒ नमः॑",
+          "sanskrit": "śañca̍ me̠ maya̍śca me pri̠yañca̍ me'nukā̠maśca̍ me̠ kāma̍śca me saumana̠saśca̍ me bha̠drañca̍ me̠ śreya̍śca me̠ vasya̍śca me̠ yaśa̍śca me̠ bhaga̍śca me̠ dravi̍ṇañca me ya̠ntā ca̍ me dha̠rtā ca̍ me̠ khṣema̍śca me̠ dhṛti̍śca me̠ viśva̍ñca me̠ maha̍śca me sa̠vm̐vicca̍ me̠ jñātra̍ñca me̠ sūśca̍ me pra̠sūśca̍ me̠ sīra̍ñca me la̠yaśca̍ ma ṛ̠tañca̍ me̠ 'mṛta̍ñca me'ya̠khṣmañca̠ me'nā̍mayacca me jī̠vātu̍śca me dīrghāyu̠tvañca̍ me'nami̠trañca̠ me'bha̍yañca me su̠gañca̍ me̠ śaya̍nañca me sū̠ṣā ca̍ me su̠dina̍ñca me",
           "section": 3
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-4",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 4",
-      "sectionNumber": 51,
+      "id": "taittiriya-samhita-4-7-4",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 4",
+      "sectionNumber": 71,
       "chunks": [
         {
-          "id": "ts-4-5-4-1",
+          "id": "ts-4-7-4-1",
           "chunkNumber": 1,
-          "sanskrit": "नम॑ आव्या॒धिनी᳚भ्यो वि॒विद्ध्य॑न्तीभ्यश्च वो॒ नमो॒ नम॒ उग॑णाभ्यस्तृꣳह॒तीभ्य॑श्च वो॒ नमो॒ नमो॑ गृ॒थ्सेभ्यो॑ गृ॒थ्सप॑तिभ्यश्च वो॒ नमो॒ नमो॒ व्राते᳚भ्यो॒ व्रात॑पतिभ्यश्च वो॒ नमो॒ नमो॑ ग॒णेभ्यो॑ ग॒णप॑तिभ्यश्च वो॒ नमो॒ नमो॒ विरू॑पेभ्यो वि॒श्वरू॑पेभ्यश्च वो॒ नमो॒ नमो॑ म॒हद्भ्यः॑ ख्षुल्ल॒केभ्य॑श्च वो॒ नमो॒ नमो॑ र॒थिभ्यो॑ऽर॒थेभ्य॑श्च वो॒ नमो॒ नमो॒ रथे᳚भ्यो॒ रथ॑पतिभ्यश्च वो॒ नमो॒ नमः॒ सेना᳚भ्यः सेना॒निभ्य॑श्च वो॒ नमो॒ नमः॑ ख्ष॒त्तृभ्यः॑ संग्रही॒तृभ्य॑श्च वो॒ नमो॒ नम॒स्तख्ष॑भ्यो रथका॒रेभ्य॑श्च वो॒ नमो॒ नमः॒ कुला॑लेभ्यः क॒र्मारे᳚भ्यश्च वो॒ नमो॒ नमः॑ पु॒ञ्जिष्टे᳚भ्यो निषा॒देभ्य॑श्च वो॒ नमो॒ नम॑ इषु॒कृद्भ्यो॑ धन्व॒कृद्भ्य॑श्च वो॒ नमो॒ नमो॑ मृग॒युभ्यः॑ श्व॒निभ्य॑श्च वो॒ नमो॒ नमः॒ श्वभ्यः॒ श्वप॑तिभ्यश्च वो॒ नमः॑",
+          "sanskrit": "ūrk ca̍ me sū̠nṛtā̍ ca me̠ paya̍śca me̠ rasa̍śca me ghṛ̠tañca̍ me̠ madhu̍ ca me̠ sagdhi̍śca me̠ sapī̍tiśca me kṛ̠ṣiśca̍ me̠ vṛṣṭi̍śca me̠ jaitra̍ñca ma̠ audbhi̍dyañca me ra̠yiśca̍ me̠ rāya̍śca me pu̠ṣṭañca̍ me̠ puṣṭi̍śca me vi̠bhu ca̍",
           "section": 4
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-5",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 5",
-      "sectionNumber": 52,
+      "id": "taittiriya-samhita-4-7-5",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 5",
+      "sectionNumber": 72,
       "chunks": [
         {
-          "id": "ts-4-5-5-1",
+          "id": "ts-4-7-5-1",
           "chunkNumber": 1,
-          "sanskrit": "नमो॑ भ॒वाय॑ च रु॒द्राय॑ च॒ नमः॑ श॒र्वाय॑ च पशु॒पत॑ये च॒ नमो॒ नील॑ग्रीवाय च शिति॒कण्ठा॑य च॒ नमः॑ कप॒र्दिने॑ च॒ व्यु॑प्तकेशाय च॒ नमः॑ सहस्रा॒ख्षाय॑ च श॒तध॑न्वने च॒ नमो॑ गिरि॒शाय॑ च शिपिवि॒ष्टाय॑ च॒ नमो॑ मी॒ढुष्ट॑माय॒ चेषु॑मते च॒ नमो᳚ ह्र॒स्वाय॑ च वाम॒नाय॑ च॒ नमो॑ बृह॒ते च॒ वर्षी॑यसे च॒ नमो॑ वृ॒द्धाय॑ च स॒व्ँवृद्ध्व॑ने च॒ नमो॒ अग्रि॑याय च प्रथ॒माय॑ च॒ नम॑ आ॒शवे॑ चाजि॒राय॑ च॒ नमः॒ शीघ्रि॑याय च॒ शीभ्या॑य च॒ नम॑ ऊ॒र्म्या॑य चावस्व॒न्या॑य च॒ नमः॑ स्रोत॒स्या॑य च॒ द्वीप्या॑य च",
+          "sanskrit": "aśmā̍ ca me̠ mṛtti̍kā ca me gi̠raya̍śca me̠ parva̍tāśca me̠ sika̍tāśca me̠ vana̠spata̍yaśca me̠ hira̍ṇyañca̠ me 'ya̍śca me̠ sīsa̍ñca me̠ trapu̍śca me śyā̠mañca̍ me lo̠hañca̍ me̠'gniśca̍ ma̠ āpa̍śca me vī̠rudha̍śca ma̠ oṣa̍dhayaśca me kṛṣṭapa̠cyañca̍",
           "section": 5
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-6",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 6",
-      "sectionNumber": 53,
+      "id": "taittiriya-samhita-4-7-6",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 6",
+      "sectionNumber": 73,
       "chunks": [
         {
-          "id": "ts-4-5-6-1",
+          "id": "ts-4-7-6-1",
           "chunkNumber": 1,
-          "sanskrit": "नमो᳚ ज्ये॒ष्ठाय॑ च कनि॒ष्ठाय॑ च॒ नमः॑ पूर्व॒जाय॑ चापर॒जाय॑ च॒ नमो॑ मद्ध्य॒माय॑ चापग॒ल्भाय॑ च॒ नमो॑ जघ॒न्या॑य च॒ बुद्ध्नि॑याय च॒ नमः॑ सो॒भ्या॑य च प्रतिस॒र्या॑य च॒ नमो॒ याम्या॑य च॒ ख्षेम्या॑य च॒ नम॑ उर्व॒र्या॑य च॒ खल्या॑य च॒ नमः॒ श्लोक्या॑य चावसा॒न्या॑य च॒ नमो॒ वन्या॑य च॒ कख्ष्या॑य च॒ नमः॑ श्र॒वाय॑ च प्रतिश्र॒वाय॑ च॒ नम॑ आ॒शुषे॑णाय चा॒शुर॑थाय च॒ नमः॒ शूरा॑य चावभिन्द॒ते च॒ नमो॑ व॒र्मिणे॑ च वरू॒थिने॑ च॒ नमो॑ बि॒ल्मिने॑ च कव॒चिने॑ च॒ नमः॑ श्रु॒ताय॑ च श्रुतसे॒नाय॑ च",
+          "sanskrit": "a̠gniśca̍ ma̠ indra̍śca me̠ soma̍śca ma̠ indra̍śca me savi̠tā ca̍ ma̠ indra̍śca me̠ sara̍svatī ca ma̠ indra̍śca me pū̠ṣā ca̍ ma̠ indra̍śca me̠ bṛha̠spati̍śca ma̠ indra̍śca me mi̠traśca̍ ma̠ indra̍śca me̠ varu̍ṇaśca ma̠ indra̍śca me̠ tvaṣṭā̍ ca ma̠ indra̍śca me dhā̠tā ca̍ ma̠ indra̍śca me̠ viṣṇu̍śca ma̠ indra̍śca me̠'śvinau̍ ca ma̠ indra̍śca me ma̠ruta̍śca ma̠ indra̍śca me̠ viśve̍ ca me de̠vā indra̍śca me pṛthi̠vī ca̍ ma̠ indra̍śca me̠'ntari̍khṣañca ma̠ indra̍śca me̠ dyauśca̍ ma̠ indra̍śca me̠ diśa̍śca ma̠ indra̍śca me mū̠rddhā ca̍ ma̠ indra̍śca me pra̠jāpa̍tiśca ma̠ indra̍śca me",
           "section": 6
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-7",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 7",
-      "sectionNumber": 54,
+      "id": "taittiriya-samhita-4-7-7",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 7",
+      "sectionNumber": 74,
       "chunks": [
         {
-          "id": "ts-4-5-7-1",
+          "id": "ts-4-7-7-1",
           "chunkNumber": 1,
-          "sanskrit": "नमो॑ दुन्दु॒भ्या॑य चाहन॒न्या॑य च॒ नमो॑ धृ॒ष्णवे॑ च प्रमृ॒शाय॑ च॒ नमो॑ दू॒ताय॑ च॒ प्रहि॑ताय च॒ नमो॑ निष॒ङ्गिणे॑ चेषुधि॒मते॑ च॒ नम॑ स्ती॒ख्ष्णेष॑वे चायु॒धिने॑ च॒ नमः॑ स्वायु॒धाय॑ च सु॒धन्व॑ने च॒ नमः॒ स्रुत्या॑य च॒ पथ्या॑य च॒ नमः॑ का॒ट्या॑य च नी॒प्या॑य च॒ नमः॒ सूद्या॑य च सर॒स्या॑य च॒ नमो॑ ना॒द्याय॑ च वैश॒न्ताय॑ च॒ नमः॒ कूप्या॑य चाव॒ट्या॑य च॒ नमो॒ वर्ष्या॑य चाव॒र्ष्याय॑ च॒ नमो॑ मे॒घ्या॑य च विद्यु॒त्या॑य च॒ नम॑ ई॒द्ध्रिया॑य चात॒प्या॑य च॒ नमो॒ वात्या॑य च॒ रेष्मि॑याय च॒ नमो॑ वास्त॒व्या॑य च वास्तु॒पाय॑ च",
+          "sanskrit": "a̠g̠ͫśuśca̍ me ra̠śmiśca̠ me'dā̎bhyaśca̠ me'dhi̍patiśca ma upā̠g̠ͫśuśca̍ me'ntaryā̠maśca̍ ma aindravāya̠vaśca̍ me maitrāvaru̠ṇaśca̍ ma āśvi̠naśca̍ me pratipra̠sthāna̍śca me śu̠kraśca̍ me ma̠nthī ca̍ ma āgraya̠ṇaśca̍ me vaiśvade̠vaśca̍ me dhru̠vaśca̍ me vaiśvāna̠raśca̍ ma ṛtugra̠hāśca̍ [ ] 13",
           "section": 7
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-8",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 8",
-      "sectionNumber": 55,
+      "id": "taittiriya-samhita-4-7-8",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 8",
+      "sectionNumber": 75,
       "chunks": [
         {
-          "id": "ts-4-5-8-1",
+          "id": "ts-4-7-8-1",
           "chunkNumber": 1,
-          "sanskrit": "नमः॒ सोमा॑य च रु॒द्राय॑ च॒ नम॑स्ता॒म्राय॑ चारु॒णाय॑ च॒ नमः॑ श॒ङ्गाय॑ च पशु॒पत॑ये च॒ नम॑ उ॒ग्राय॑ च भी॒माय॑ च॒ नमो॑ अग्रेव॒धाय॑ च दूरेव॒धाय॑ च॒ नमो॑ ह॒न्त्रे च॒ हनी॑यसे च॒ नमो॑ वृ॒ख्षेभ्यो॒ हरि॑केशेभ्यो॒ नम॑स्ता॒राय॒ नमः॑ शं॒भवे॑ च मयो॒भवे॑ च॒ नमः॑ शङ्क॒राय॑ च मयस्क॒राय॑ च॒ नमः॑ शि॒वाय॑ च शि॒वत॑राय च॒ नम॒स्तीर्थ्या॑य च॒ कूल्या॑य च॒ नमः॑ पा॒र्या॑य चावा॒र्या॑य च॒ नमः॑ प्र॒तर॑णाय चो॒त्तर॑णाय च॒ नम॑ आता॒र्या॑य चाला॒द्या॑य च॒ नमः॒ शष्प्या॑य च॒ फेन्या॑य च॒ नमः॑ सिक॒त्या॑य च प्रवा॒ह्या॑य च",
+          "sanskrit": "i̠dhmaśca̍ me ba̠r̠hiśca̍ me̠ vedi̍śca me̠ dhiṣṇi̍yāśca me̠ sruca̍śca me cama̠sāśca̍ me̠ grāvā̍ṇaśca me̠ svara̍vaśca ma upara̠vāśca̍ me'dhi̠ṣava̍ṇe ca me droṇakala̠śaśca̍ me vāya̠vyā̍ni ca me pūta̠bhṛcca̍ ma ādhava̠nīya̍śca ma̠ āgnī̎dhrañca me havi̠rddhāna̍ñca me gṛ̠hāśca̍ me̠ sada̍śca me puro̠ḍāśā̎śca me paca̠tāśca̍ me'vabhṛ̠thaśca̍ me svagākā̠raśca̍ me",
           "section": 8
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-9",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 9",
-      "sectionNumber": 56,
+      "id": "taittiriya-samhita-4-7-9",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 9",
+      "sectionNumber": 76,
       "chunks": [
         {
-          "id": "ts-4-5-9-1",
+          "id": "ts-4-7-9-1",
           "chunkNumber": 1,
-          "sanskrit": "नम॑ इरि॒ण्या॑य च प्रप॒थ्या॑य च॒ नमः॑ किꣳशि॒लाय॑ च॒ ख्षय॑णाय च॒ नमः॑ कप॒र्दिने॑ च पुल॒स्तये॑ च॒ नमो॒ गोष्ठ्या॑य च॒ गृह्या॑य च॒ नम॒स्तल्प्या॑य च॒ गेह्या॑य च॒ नमः॑ का॒ट्या॑य च गह्वरे॒ष्ठाय॑ च॒ नमो᳚ ह्रद॒य्या॑य च निवे॒ष्प्या॑य च॒ नमः॑ पाꣳस॒व्या॑य च रज॒स्या॑य च॒ नमः॒ शुष्क्या॑य च हरि॒त्या॑य च॒ नमो॒ लोप्या॑य चोल॒प्या॑य च॒ नम॑ ऊ॒र्व्या॑य च सू॒र्म्या॑य च॒ नमः॑ प॒र्ण्या॑य च पर्णश॒द्या॑य च॒ नमो॑ऽपगु॒रमा॑णाय चाभिघ्न॒ते च॒ नम॑ आक्खिद॒ते च॑ प्रक्खिद॒ते च॒ नमो॑ वः किरि॒केभ्यो॑ दे॒वाना॒ꣳ॒ हृद॑येभ्यो॒ नमो॑ विख्षीण॒केभ्यो॒ नमो॑ विचिन्व॒त्केभ्यो॒ नम॑ आनिर्ह॒तेभ्यो॒ नम॑ आमीव॒त्केभ्यः॑",
+          "sanskrit": "a̠gniśca̍ me gha̠rmaśca̍ me̠'rkaśca̍ me̠ sūrya̍śca me prā̠ṇaśca̍ me'śvame̠dhaśca̍ me pṛthi̠vī ca̠ me'di̍tiśca me̠ diti̍śca me̠ dyauśca̍ me̠ śakva̍rīra̠ṅgula̍yo̠ diśa̍śca me ya̠jñena̍ kalpantā̠mṛk ca̍ me̠ sāma̍ ca me̠ stoma̍śca me̠ yaju̍śca me dī̠khṣā ca̍ me̠ tapa̍śca ma ṛ̠tuśca̍ me vra̠tañca̍ me'horā̠trayo̎r vṛ̠ṣṭyā bṛ̍hadrathanta̠re ca̍ me ya̠jñena̍ kalpetām",
           "section": 9
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-10",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 10",
-      "sectionNumber": 57,
+      "id": "taittiriya-samhita-4-7-10",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 10",
+      "sectionNumber": 77,
       "chunks": [
         {
-          "id": "ts-4-5-10-1",
+          "id": "ts-4-7-10-1",
           "chunkNumber": 1,
-          "sanskrit": "द्रापे॒ अन्ध॑सस्पते॒ दरि॑द्र॒न्नील॑लोहित।",
+          "sanskrit": "garbhā̎śca me va̠thsāśca̍ me̠ tyravi̍śca me tyra̠vī ca̍ me ditya̠vāṭ ca̍ me dityau̠hī ca̍ me̠ pañcā̍viśca me pañcā̠vī ca̍ me triva̠thsaśca̍ me triva̠thsā ca̍ me turya̠vāṭ ca̍ me turyau̠hī ca̍ me paṣṭha̠vāc ca̍ me paṣṭhau̠hī ca̍ ma u̠khṣā ca̍ me va̠śā ca̍ ma ṛṣa̠bhaśca̍",
           "section": 10
-        },
-        {
-          "id": "ts-4-5-10-2",
-          "chunkNumber": 2,
-          "sanskrit": "ए॒षाम्पुरु॑षाणामे॒षाम्प॑शू॒नाम्मा भेर् माऽरो॒ मो ए॑षा॒ङ्किञ्च॒नाम॑मत्॥"
-        },
-        {
-          "id": "ts-4-5-10-3",
-          "chunkNumber": 3,
-          "sanskrit": "या ते॑ रुद्र शि॒वा त॒नूः शि॒वा वि॒श्वाह॑भेषजी।"
-        },
-        {
-          "id": "ts-4-5-10-4",
-          "chunkNumber": 4,
-          "sanskrit": "शि॒वा रु॒द्रस्य॑ भेष॒जी तया॑ नो मृड जी॒वसे᳚॥"
-        },
-        {
-          "id": "ts-4-5-10-5",
-          "chunkNumber": 5,
-          "sanskrit": "इ॒माꣳ रु॒द्राय॑ त॒वसे॑ कप॒र्दिने᳚ ख्ष॒यद्वी॑राय॒ प्र भ॑रामहे म॒तिम्।"
-        },
-        {
-          "id": "ts-4-5-10-6",
-          "chunkNumber": 6,
-          "sanskrit": "यथा॑ नः॒ शमस॑द् द्वि॒पदे॒ चतु॑ष्पदे॒ विश्व॑म्पु॒ष्टङ्ग्रामे॑ अ॒स्मि श्रु॒तङ्ग॑र्त्त॒सद॒य्ँयुवा॑नम्मृ॒गन्न भी॒ममु॑पह॒त्नुमु॒ग्रम्।"
-        },
-        {
-          "id": "ts-4-5-10-7",
-          "chunkNumber": 7,
-          "sanskrit": "मृ॒डा ज॑रि॒त्रे रु॑द्र॒ स्तवा॑नो अ॒न्यन्ते॑ अ॒स्मन्निव॑पन्तु॒ सेनाः᳚॥"
-        },
-        {
-          "id": "ts-4-5-10-8",
-          "chunkNumber": 8,
-          "sanskrit": "परि॑ णो रु॒द्रस्य॑ हे॒तिर् वृ॑णक्तु॒ परि॑ त्वे॒षस्य॑ दुर्म॒तिर॑घा॒योः।"
-        },
-        {
-          "id": "ts-4-5-10-9",
-          "chunkNumber": 9,
-          "sanskrit": "अव॑ स्थि॒रा म॒घव॑द्भ्यस्तनुष्व॒ मीढ्व॑स्तो॒काय॒ तन॑याय मृडय॥"
-        },
-        {
-          "id": "ts-4-5-10-10",
-          "chunkNumber": 10,
-          "sanskrit": "मीढु॑ष्टम॒ शिव॑तम शि॒वो नः॑ सु॒मना॑ भव।"
-        },
-        {
-          "id": "ts-4-5-10-11",
-          "chunkNumber": 11,
-          "sanskrit": "प॒र॒मे वृ॒ख्ष आयु॑धन्नि॒धाय॒ कृत्ति॒व्ँवसा॑न॒ आ च॑र॒ पिना॑कं॒ बिभ्र॒दा ग॑हि॥"
-        },
-        {
-          "id": "ts-4-5-10-12",
-          "chunkNumber": 12,
-          "sanskrit": "विकि॑रिद॒ विलो॑हित॒ नम॑स्ते अस्तु भगवः।"
-        },
-        {
-          "id": "ts-4-5-10-13",
-          "chunkNumber": 13,
-          "sanskrit": "यास्ते॑ स॒हस्र॑ꣳ हे॒तयो॒ऽन्यम॒स्मन्नि व॑पन्तु॒ ताः॥"
-        },
-        {
-          "id": "ts-4-5-10-14",
-          "chunkNumber": 14,
-          "sanskrit": "स॒हस्रा॑णि सहस्र॒धा बा॑हु॒वोस्तव॑ हे॒तयः॑।"
-        },
-        {
-          "id": "ts-4-5-10-15",
-          "chunkNumber": 15,
-          "sanskrit": "तासा॒मीशा॑नो भगवः परा॒चीना॒ मुखा॑ कृधि"
         }
       ]
     },
     {
-      "id": "taittiriya-samhita-4-5-11",
-      "title": "Kāṇḍa 4 · Prapāṭhaka 5 · Anuvāka 11",
-      "sectionNumber": 58,
+      "id": "taittiriya-samhita-4-7-11",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 11",
+      "sectionNumber": 78,
       "chunks": [
         {
-          "id": "ts-4-5-11-1",
+          "id": "ts-4-7-11-1",
           "chunkNumber": 1,
-          "sanskrit": "स॒हस्रा॑णि सहस्र॒शो ये रु॒द्रा अधि॒ भूम्या᳚म्।",
+          "sanskrit": "ekā̍ ca me ti̠sraśca̍ me̠ pañca̍ ca me sa̠pta ca̍ me̠ nava̍ ca ma̠ ekā̍daśa ca me̠ trayo̍daśa ca me̠ pañca̍daśa ca me sa̠ptada̍śa ca me̠ nava̍daśa ca ma̠ eka̍vigͫśatiśca me̠ trayo̍vigͫśatiśca me̠ pañca̍vigͫśatiśca me sa̠ptavi̍gͫśatiśca me̠ nava̍vigͫśatiśca ma̠ eka̍trigͫśacca me̠ traya̍strigͫśacca me̠ cata̍sraśca me̠'ṣṭau ca̍ me̠ dvāda̍śa ca me̠ ṣoḍa̍śa ca me vigͫśa̠tiśca̍ me̠ catu̍rvigͫśatiśca me̠ 'ṣṭāvi̍gͫśatiśca me̠ dvātri̍gͫśacca me̠ ṣaṭtri̍gͫśacca me catvāri̠g̠ͫśacca̍ me̠ catu̍ścatvārigͫśacca me̠ 'ṣṭāca̍tvārigͫśacca me̠ vāja̍śca prasa̠vaścā̍pi̠jaśca̠ kratu̍śca̠ suva̍śca mū̠rddhā ca̠ vyaśñi̍yaścā ntyāya̠naścāntya̍śca bhauva̠naśca̠ bhuva̍na̠ścādhi̍patiśca",
           "section": 11
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-12",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 12",
+      "sectionNumber": 79,
+      "chunks": [
+        {
+          "id": "ts-4-7-12-1",
+          "chunkNumber": 1,
+          "sanskrit": "vājo̍ naḥ sa̠pta pra̠diśa̠ścata̍sro vā parā̠vataḥ̍|",
+          "section": 12
         },
         {
-          "id": "ts-4-5-11-2",
+          "id": "ts-4-7-12-2",
           "chunkNumber": 2,
-          "sanskrit": "तेषा॑ꣳ सहस्रयोज॒नेऽव॒धन्वा॑नि तन्मसि॥"
+          "sanskrit": "vājo̍ no̠ viśvai̎r de̠vair dhana̍sātāvi̠hāva̍tu||"
         },
         {
-          "id": "ts-4-5-11-3",
+          "id": "ts-4-7-12-3",
           "chunkNumber": 3,
-          "sanskrit": "अ॒स्मिन्म॑ह॒त्य॑र्ण॒वे᳚ऽन्तरि॑ख्षे भ॒वा अधि॑॥"
+          "sanskrit": "viśve̍ a̠dya ma̠ruto̠ viśva̍ ū̠tī viśve̍ bhavantva̠gnayaḥ̠ sami̍ddhāḥ|"
         },
         {
-          "id": "ts-4-5-11-4",
+          "id": "ts-4-7-12-4",
           "chunkNumber": 4,
-          "sanskrit": "नील॑ग्रीवाः शिति॒कण्ठाः᳚ श॒र्वा अ॒धः ख्ष॑माच॒राः॥"
+          "sanskrit": "viśve̍ no de̠vā ava̠sā''ga̍mantu̠ viśva̍mastu̠ dravi̍ṇa̠vm̐vājo̍ a̠sme||"
         },
         {
-          "id": "ts-4-5-11-5",
+          "id": "ts-4-7-12-5",
           "chunkNumber": 5,
-          "sanskrit": "नील॑ग्रीवाः शिति॒कण्ठा॒ दिव॑ꣳ रु॒द्रा उप॑श्रिताः॥"
+          "sanskrit": "vāja̍sya prasa̠vande̍vā̠ rathai̎r yātā hira̠ṇyayaiḥ̎|"
         },
         {
-          "id": "ts-4-5-11-6",
+          "id": "ts-4-7-12-6",
           "chunkNumber": 6,
-          "sanskrit": "ये वृ॒ख्षेषु॑ स॒स्पिञ्ज॑रा॒ नील॑ग्रीवा॒ विलो॑हिताः॥"
+          "sanskrit": "a̠gnirindro̠ bṛha̠spati̍r ma̠rutaḥ̠ soma̍pītaye||"
         },
         {
-          "id": "ts-4-5-11-7",
+          "id": "ts-4-7-12-7",
           "chunkNumber": 7,
-          "sanskrit": "ये भू॒ताना॒मधि॑पतयो विशि॒खासः॑ कप॒र्दिनः॑॥"
+          "sanskrit": "vāje̍vāje'vata vājino no̠ dhane̍ṣu oṣa̍dhībhiḥ|"
         },
         {
-          "id": "ts-4-5-11-8",
+          "id": "ts-4-7-12-8",
           "chunkNumber": 8,
-          "sanskrit": "ये अन्ने॑षु वि॒विद्ध्य॑न्ति॒ पात्रे॑षु॒ पिब॑तो॒ जना॑न्॥"
+          "sanskrit": "so̍'havm̐vāja̍gͫ saneyamagne||"
         },
         {
-          "id": "ts-4-5-11-9",
+          "id": "ts-4-7-12-9",
           "chunkNumber": 9,
-          "sanskrit": "ये प॒थाम्प॑थि॒रख्ष॑य ऐलबृ॒दा य॒व्युधः॑॥"
+          "sanskrit": "nakto̠ṣāsā̠ sama̍nasā̠ virū̍pe dhā̠paye̍te̠ śiśu̠meka̍gͫ samī̠cī|"
         },
         {
-          "id": "ts-4-5-11-10",
+          "id": "ts-4-7-12-10",
           "chunkNumber": 10,
-          "sanskrit": "ये ती॒र्त्थानि॑ प्र॒चर॑न्ति सृ॒काव॑न्तो निष॒ङ्गिणः॑॥"
+          "sanskrit": "dyāvā̠ khṣāmā̍ ru̠kmo a̠ntar vi bhā̍ti de̠vā a̠gnindhā̍rayan draviṇo̠dāḥ||"
         },
         {
-          "id": "ts-4-5-11-11",
+          "id": "ts-4-7-12-11",
           "chunkNumber": 11,
-          "sanskrit": "य ए॒ताव॑न्तश्च॒ भूया॑ꣳसश्च॒ दिशो॑ रु॒द्रा वि॑तस्थि॒रे॥"
+          "sanskrit": "sa̠mu̠dro̍'si̠ nabha̍svānā̠rdradā̍nuḥ śaṃ̠bhūr ma̍yo̠bhūra̠bhi mā̍ vāhi̠ svāhā̍ māru̠to̍'si ma̠rutā̎ṅga̠ṇaḥ śaṃ̠bhūr ma̍yo̠bhūra̠bhi mā̍ vāhi̠ svāhā̍'va̠syura̍si̠ duva̍svāñchaṃ̠bhūr ma̍yo̠bhūrabhi mā̍ vāhi̠ svāhā̎"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-13",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 13",
+      "sectionNumber": 80,
+      "chunks": [
+        {
+          "id": "ts-4-7-13-1",
+          "chunkNumber": 1,
+          "sanskrit": "a̠gniym̐yu̍najmi̠ śava̍sā ghṛ̠tena̍ di̠vyagͫ su̍pa̠rṇavm̐vaya̍sā bṛ̠hanta̎m|",
+          "section": 13
         },
         {
-          "id": "ts-4-5-11-12",
+          "id": "ts-4-7-13-2",
+          "chunkNumber": 2,
+          "sanskrit": "tena̍ va̠yampa̍tema bra̠dhnasya̍ vi̠ṣṭapa̠g̠ͫ suvo̠ ruhā̍ṇā̠ adhi̠ nāka̍ utta̠me||"
+        },
+        {
+          "id": "ts-4-7-13-3",
+          "chunkNumber": 3,
+          "sanskrit": "i̠mau te̍ pa̠khṣāva̠jarau̍ pata̠triṇo̠ yābhyā̠g̠ͫ rakhṣā̍gͫͫsyapa̠hagͫͫsya̍gne|"
+        },
+        {
+          "id": "ts-4-7-13-4",
+          "chunkNumber": 4,
+          "sanskrit": "tābhyā̎mpatema su̠kṛtā̍mu lo̠kaym̐yatrarṣa̍yaḥ prathama̠jā ye pu̍rā̠ṇāḥ||"
+        },
+        {
+          "id": "ts-4-7-13-5",
+          "chunkNumber": 5,
+          "sanskrit": "cida̍si samu̠drayo̍ni̠rindu̠r dakhṣaḥ̍ śye̠na ṛ̠tāvā̎|"
+        },
+        {
+          "id": "ts-4-7-13-6",
+          "chunkNumber": 6,
+          "sanskrit": "hira̍ṇyapakhṣaḥ śaku̠no bhu̍ra̠ṇyur ma̠hānth sa̠dhasthe̎ dhru̠va ā niṣa̍ttaḥ||"
+        },
+        {
+          "id": "ts-4-7-13-7",
+          "chunkNumber": 7,
+          "sanskrit": "nama̍ste astu̠ mā mā̍ higͫsī̠r viśva̍sya mū̠rddhannadhi̍ tiṣṭhasi śri̠taḥ|"
+        },
+        {
+          "id": "ts-4-7-13-8",
+          "chunkNumber": 8,
+          "sanskrit": "sa̠mu̠dre te̠ hṛda̍yama̠ntarāyu̠r dyāvā̍pṛthi̠vī bhuva̍ne̠ṣvarpi̍te||"
+        },
+        {
+          "id": "ts-4-7-13-9",
+          "chunkNumber": 9,
+          "sanskrit": "u̠dno da̍ttoda̠dhimbhi̍nta di̠vaḥ pa̠rjanyā̍da̠ntari̍khṣāt pṛthi̠vyāstato̍ no̠ vṛṣṭyā̍vata|"
+        },
+        {
+          "id": "ts-4-7-13-10",
+          "chunkNumber": 10,
+          "sanskrit": "di̠vo mū̠rddhā'si̍ pṛthi̠vyā nābhi̠rūrga̠pāmoṣa̍dhīnām|"
+        },
+        {
+          "id": "ts-4-7-13-11",
+          "chunkNumber": 11,
+          "sanskrit": "vi̠śvāyuḥ̠ śarma̍ sa̠prathā̠ nama̍spa̠the||"
+        },
+        {
+          "id": "ts-4-7-13-12",
           "chunkNumber": 12,
-          "sanskrit": "तेषा॑ꣳ सहस्रयोज॒नेऽव॒ धन्वा॑नि तन्मसि॥"
+          "sanskrit": "yenarṣa̍ya̠stapa̍sā sa̠tra ye pṛ̍ta̠nyavaḥ̍||"
         },
         {
-          "id": "ts-4-5-11-13",
+          "id": "ts-4-7-13-13",
           "chunkNumber": 13,
-          "sanskrit": "नमो॑ रु॒द्रेभ्यो॒ ये पृ॑थि॒व्याय्ँये᳚ऽन्तरि॑ख्षे॒ ये दि॒वि येषा॒मन्न॒व्ँवातो॑ व॒र्॒षमिष॑व॒स्तेभ्यो॒ दश॒ प्राची॒र् दश॑ दख्षि॒णा दश॑ प्र॒तीची॒र् दशोदी॑ची॒र् दशो॒र्द्ध्वास्तेभ्यो॒ नम॒स्ते नो॑ मृडयन्तु॒ ते यन्द्वि॒ष्मो यश्च॑ नो॒ द्वेष्टि॒ तव्ँवो॒ जंभे॑ दधामि"
+          "sanskrit": "a̠yama̠gnir vī̠rata̍mo vayo̠dhāḥ sa̍ha̠sriyo̍ dīpyatā̠mapra̍yucchann|"
+        },
+        {
+          "id": "ts-4-7-13-14",
+          "chunkNumber": 14,
+          "sanskrit": "vi̠bhrāja̍mānaḥ sari̠rasya̠ maddhya̠ upa̠ pra yā̍ta di̠vyāni̠ dhāma̍||"
+        },
+        {
+          "id": "ts-4-7-13-15",
+          "chunkNumber": 15,
+          "sanskrit": "sampra cya̍vaddhva̠manu̠ sampra yā̠tāgne̍ pa̠tho de̍va̠yānā̎n kṛṇuddhvam|"
+        },
+        {
+          "id": "ts-4-7-13-16",
+          "chunkNumber": 16,
+          "sanskrit": "a̠sminth sa̠dhasthe̠ addhyutta̍rasmi̠n viśve̍ devā̠ yaja̍mānaśca sīdata||"
+        },
+        {
+          "id": "ts-4-7-13-17",
+          "chunkNumber": 17,
+          "sanskrit": "yenā̍ sa̠hasra̠vm̐vaha̍si̠ yenā̎gne sarvaveda̠sam|"
+        },
+        {
+          "id": "ts-4-7-13-18",
+          "chunkNumber": 18,
+          "sanskrit": "tene̠maym̐ya̠jñanno̍ vaha deva̠yāno̠ ya"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-14",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 14",
+      "sectionNumber": 81,
+      "chunks": [
+        {
+          "id": "ts-4-7-14-1",
+          "chunkNumber": 1,
+          "sanskrit": "mamā̎gne̠ varco̍ viha̠veṣva̍stu va̠yantvendhā̍nā sta̠nuva̍mpuṣema|",
+          "section": 14
+        },
+        {
+          "id": "ts-4-7-14-2",
+          "chunkNumber": 2,
+          "sanskrit": "mahya̍nnamantāmpra̠diśa̠ścata̍sra̠ stvayā'ddhya̍khṣeṇa̠ pṛta̍nā jayema||"
+        },
+        {
+          "id": "ts-4-7-14-3",
+          "chunkNumber": 3,
+          "sanskrit": "mama̍ de̠vā vi̍ha̠ve sa̍ntu̠ sarva̠ indrā̍vanto ma̠ruto̠ viṣṇu̍ra̠gniḥ|"
+        },
+        {
+          "id": "ts-4-7-14-4",
+          "chunkNumber": 4,
+          "sanskrit": "mamā̠ntari̍khṣamu̠ru go̠pama̍stu̠ mahya̠vm̐vātaḥ̍ pavatā̠ṅkāme̍ a̠sminn||"
+        },
+        {
+          "id": "ts-4-7-14-5",
+          "chunkNumber": 5,
+          "sanskrit": "mayi̍ de̠vā dravi̍ṇa̠mā ya̍jantā̠mmayyā̠śīra̍stu̠ mayi̍ de̠vahū̍tiḥ|"
+        },
+        {
+          "id": "ts-4-7-14-6",
+          "chunkNumber": 6,
+          "sanskrit": "daivyā̠ hotā̍rā vaniṣanta̠ pūrve'ri̍ṣṭāḥ syāma ta̠nuvā̍ su̠vīrāḥ̎||"
+        },
+        {
+          "id": "ts-4-7-14-7",
+          "chunkNumber": 7,
+          "sanskrit": "mahya̍ym̐yajantu̠ mama̠ yāni̍ ha̠vyā''kū̍tiḥ sa̠tyā mana̍so me astu|"
+        },
+        {
+          "id": "ts-4-7-14-8",
+          "chunkNumber": 8,
+          "sanskrit": "eno̠ mā ni gā̎ṅkata̠macca̠nāhavm̐viśve̍ devāso̠ adhi̍ vocatā me||"
+        },
+        {
+          "id": "ts-4-7-14-9",
+          "chunkNumber": 9,
+          "sanskrit": "devīḥ̎ ṣaḍurvīru̠ru ṇaḥ̍ kṛṇota̠ viśve̍ devāsa i̠ha vī̍rayaddhvam|"
+        },
+        {
+          "id": "ts-4-7-14-10",
+          "chunkNumber": 10,
+          "sanskrit": "mā hā̎smahi pra̠jayā̠ mā ta̠nūbhi̠r mā ra̍dhāma dviṣa̠te so̍ma rājann||"
+        },
+        {
+          "id": "ts-4-7-14-11",
+          "chunkNumber": 11,
+          "sanskrit": "a̠gnir ma̠nyumpra̍tinu̠dan pu̠rastā̠"
+        }
+      ]
+    },
+    {
+      "id": "taittiriya-samhita-4-7-15",
+      "title": "Kāṇḍa 4 · Prapāṭhaka 7 · Anuvāka 15",
+      "sectionNumber": 82,
+      "chunks": [
+        {
+          "id": "ts-4-7-15-1",
+          "chunkNumber": 1,
+          "sanskrit": "a̠gner ma̍nve pratha̠masya̠ prace̍taso̠ yampāñca̍janyamba̠havaḥ̍ sami̠ndhate̎|",
+          "section": 15
+        },
+        {
+          "id": "ts-4-7-15-2",
+          "chunkNumber": 2,
+          "sanskrit": "viśva̍syāvm̐vi̠śi pra̍viviśi̠vāgͫsa̍mīmahe̠ sa no̍ muñca̠tvagͫha̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-3",
+          "chunkNumber": 3,
+          "sanskrit": "yasye̠damprā̠ṇanni̍mi̠ṣad yadeja̍ti̠ yasya̍ jā̠tañjana̍mānañca̠ keva̍lam|"
+        },
+        {
+          "id": "ts-4-7-15-4",
+          "chunkNumber": 4,
+          "sanskrit": "staumya̠gninnā̍thi̠to jo̍havīmi̠ sa no̍ muñca̠tvagͫha̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-5",
+          "chunkNumber": 5,
+          "sanskrit": "indra̍sya manye pratha̠masya̠ prace̍taso vṛtra̠ghnaḥ stomā̠ upa̠māmu̠pāguḥ̍|"
+        },
+        {
+          "id": "ts-4-7-15-6",
+          "chunkNumber": 6,
+          "sanskrit": "yo dā̠śuṣaḥ̍ su̠kṛto̠ hava̠mupa̠ gantā̠ sa no̍ muñca̠tvagͫha̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-7",
+          "chunkNumber": 7,
+          "sanskrit": "yaḥ saṃ̍grā̠mannaya̍ti̠ savm̐va̠śī yu̠dhe yaḥ pu̠ṣṭāni̍ sagͫsṛ̠jati̍ tra̠yāṇi̍|"
+        },
+        {
+          "id": "ts-4-7-15-8",
+          "chunkNumber": 8,
+          "sanskrit": "staumīndra̍nnāthi̠to jo̍havīmi̠ sa no̍ muñca̠tvagͫha̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-9",
+          "chunkNumber": 9,
+          "sanskrit": "ma̠nve vā̎mmitrāvaruṇā̠ tasya̍ vitta̠g̠ͫ satyau̍jasā dṛgͫhaṇā̠ yannu̠dethe̎|"
+        },
+        {
+          "id": "ts-4-7-15-10",
+          "chunkNumber": 10,
+          "sanskrit": "yā rājā̍nagͫ sa̠ratha̍ym̐yā̠tha u̍grā̠ tā no̍ muñcata̠māga̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-11",
+          "chunkNumber": 11,
+          "sanskrit": "yo vā̠g̠ͫ ratha̍ ṛ̠jura̍śmiḥ sa̠tyadha̍rmā̠ mithu̠ścara̍ntamupa̠yāti̍ dū̠ṣaya̍n|"
+        },
+        {
+          "id": "ts-4-7-15-12",
+          "chunkNumber": 12,
+          "sanskrit": "staumi̍ mi̠trāvaru̍ṇā nāthi̠to jo̍havīmi̠ tau no̍ muñcata̠māga̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-13",
+          "chunkNumber": 13,
+          "sanskrit": "vā̠yoḥ sa̍vi̠tur vi̠dathā̍ni manmahe̠ yāvā̎tma̠nvadbi̍bhṛ̠to yau ca̠ rakhṣa̍taḥ|"
+        },
+        {
+          "id": "ts-4-7-15-14",
+          "chunkNumber": 14,
+          "sanskrit": "yau viśva̍sya pari̠bhū ba̍bhū̠vatu̠stau no̍ muñcata̠māga̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-15",
+          "chunkNumber": 15,
+          "sanskrit": "upa̠ śreṣṭhā̍ na ā̠śiṣo̍ de̠vayo̠r dharme̍ asthirann|"
+        },
+        {
+          "id": "ts-4-7-15-16",
+          "chunkNumber": 16,
+          "sanskrit": "staumi̍ vā̠yugͫ sa̍vi̠tāra̍nnāthi̠to jo̍havīmi̠ tau no̍ muñcata̠māga̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-17",
+          "chunkNumber": 17,
+          "sanskrit": "ra̠thīta̍mau rathī̠nāma̍hva ū̠taye̠ śubha̠ṅgami̍ṣṭhau su̠yame̍bhi̠raśvaiḥ̎|"
+        },
+        {
+          "id": "ts-4-7-15-18",
+          "chunkNumber": 18,
+          "sanskrit": "yayo̎r pṛta̍nāsu ji̠ṣṇu|"
+        },
+        {
+          "id": "ts-4-7-15-19",
+          "chunkNumber": 19,
+          "sanskrit": "staumi̍ de̠vān ma̠ruto̍ nāthi̠to jo̍havīmi̠ te no̍ muñca̠ntvena̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-20",
+          "chunkNumber": 20,
+          "sanskrit": "de̠vānā̎mmanve̠ adhi̍ no bruvantu̠ premāvm̐vācaṃ̠ viśvā̍mavantu̠ viśve̎|"
+        },
+        {
+          "id": "ts-4-7-15-21",
+          "chunkNumber": 21,
+          "sanskrit": "ā̠śūnhu̍ve su̠yamā̍nū̠taye̠ te no̍ muñca̠ntvena̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-22",
+          "chunkNumber": 22,
+          "sanskrit": "yadi̠dammā̍'bhi̠śoca̍ti̠ pauru̍ṣeyeṇa̠ daivye̍na|"
+        },
+        {
+          "id": "ts-4-7-15-23",
+          "chunkNumber": 23,
+          "sanskrit": "staumi̠ viśvā̎n de̠vān nā̍thi̠to jo̍havīmi̠ te no̍ muñca̠ntvena̍saḥ||"
+        },
+        {
+          "id": "ts-4-7-15-24",
+          "chunkNumber": 24,
+          "sanskrit": "anu̍ no̠'dyānu̍mati̠ >1, ranvi"
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
   "id": "rigveda-2",
   "title": {
-    "sanskrit": "ऋग्वेद",
+    "sanskrit": "ṛgveda",
     "transliteration": "Ṛgveda, Maṇḍala 2",
     "english": "Ṛgveda, Maṇḍala 2"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Ṛgveda, maṇḍala 2, from DharmicData (ODbL).",
     "place": {
       "work": {
-        "sanskrit": "ऋग्वेद",
+        "sanskrit": "ṛgveda",
         "english": "Ṛgveda"
       },
       "divisions": [
@@ -37,7 +37,7 @@
       "parser": "rigveda@1",
       "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
       "attribution": "Ṛgveda, maṇḍala 2 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-      "sha256": "1d6579180edee88170535bb2151599725746df3fe24a57fe93e89bb53e08fe06"
+      "sha256": "dcdfeca24a4956796d9db1dde6d4e3cfd3c821fab3adef6c972f41e5c7ad2e53"
     }
   },
   "sections": [
@@ -192,14 +192,14 @@
       "id": "rigveda-2-22",
       "sectionNumber": 22,
       "title": "Maṇḍala 2 · Sūkta 22",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 9
     },
     {
       "id": "rigveda-2-23",
       "sectionNumber": 23,
       "title": "Maṇḍala 2 · Sūkta 23",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 38
     },
     {
@@ -325,21 +325,21 @@
       "id": "rigveda-2-41",
       "sectionNumber": 41,
       "title": "Maṇḍala 2 · Sūkta 41",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 42
     },
     {
       "id": "rigveda-2-42",
       "sectionNumber": 42,
       "title": "Maṇḍala 2 · Sūkta 42",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 6
     },
     {
       "id": "rigveda-2-43",
       "sectionNumber": 43,
       "title": "Maṇḍala 2 · Sūkta 43",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 6
     }
   ]

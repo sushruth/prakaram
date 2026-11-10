@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-brahmana-2-1",
   "title": {
-    "sanskrit": "Taittirīya Brāhmaṇa",
+    "sanskrit": "taittirīya brāhmaṇa",
     "transliteration": "Taittirīya Brāhmaṇa",
     "english": "Taittirīya Brāhmaṇa, Aṣṭaka 2, Prapāṭhaka 1"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 1.",
     "place": {
       "work": {
-        "sanskrit": "Taittirīya Brāhmaṇa",
+        "sanskrit": "taittirīya brāhmaṇa",
         "english": "Taittirīya Brāhmaṇa"
       },
       "divisions": [
@@ -42,7 +42,7 @@
       "parser": "brahmana@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 1 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "4e631f974015358a028f85efc0ae1858456e7bca9ccae35496b51b1d21b704f1"
+      "sha256": "9f143b9327dcdf11b3abf76b7fbb411fa4a9e2c145eeb7cd446b5b992b798c4a"
     }
   },
   "sections": [

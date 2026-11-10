@@ -1,414 +1,6 @@
 {
   "sections": [
     {
-      "id": "taittiriya-aranyaka-1-23",
-      "title": "Prapāṭhaka 1 · Anuvāka 23",
-      "sectionNumber": 23,
-      "chunks": [
-        {
-          "id": "ta-1-23-1",
-          "chunkNumber": 1,
-          "sanskrit": "आपो॒ वा इ॒दमा॑सन्थ् सलि॒लमे॒व।",
-          "section": 23
-        },
-        {
-          "id": "ta-1-23-2",
-          "chunkNumber": 2,
-          "sanskrit": "स प्र॒जाप॑ति॒रेकः॑ पुष्करप॒र्णे सम॑भवत्।"
-        },
-        {
-          "id": "ta-1-23-3",
-          "chunkNumber": 3,
-          "sanskrit": "तस्यान्त॒र् मन॑सि कामः॒ सम॑वर्तत।"
-        },
-        {
-          "id": "ta-1-23-4",
-          "chunkNumber": 4,
-          "sanskrit": "इ॒दꣳ सृ॑जेय॒मिति॑।"
-        },
-        {
-          "id": "ta-1-23-5",
-          "chunkNumber": 5,
-          "sanskrit": "तस्मा॒द्यत् पुरु॑षो॒ मन॑साऽभि॒गच्छ॑ति।"
-        },
-        {
-          "id": "ta-1-23-6",
-          "chunkNumber": 6,
-          "sanskrit": "तद्वा॒चा व॑दति।"
-        },
-        {
-          "id": "ta-1-23-7",
-          "chunkNumber": 7,
-          "sanskrit": "तत्कर्म॑णा करोति।"
-        },
-        {
-          "id": "ta-1-23-8",
-          "chunkNumber": 8,
-          "sanskrit": "तदे॒षा ऽभ्यनू᳚क्ता॥"
-        },
-        {
-          "id": "ta-1-23-9",
-          "chunkNumber": 9,
-          "sanskrit": "काम॒स्तदग्रे॒ सम॑वर्त॒ताधि॑।"
-        },
-        {
-          "id": "ta-1-23-10",
-          "chunkNumber": 10,
-          "sanskrit": "मन॑सो॒ रेतः॑ प्रथ॒मय्ँयदासी᳚त् स॒तो बन्धु॒मस॑ति॒ निर॑विन्दन्न्।"
-        },
-        {
-          "id": "ta-1-23-11",
-          "chunkNumber": 11,
-          "sanskrit": "हृ॒दि प्र॒तीष्या॑ क॒वयो॑ मनी॒षेति॑॥"
-        },
-        {
-          "id": "ta-1-23-12",
-          "chunkNumber": 12,
-          "sanskrit": "उपै॑न॒न्तदुप॑नमति।"
-        },
-        {
-          "id": "ta-1-23-13",
-          "chunkNumber": 13,
-          "sanskrit": "यत् का॑मो॒ भव॑ति।"
-        },
-        {
-          "id": "ta-1-23-14",
-          "chunkNumber": 14,
-          "sanskrit": "य ए॒वव्ँवेद॑॥"
-        },
-        {
-          "id": "ta-1-23-15",
-          "chunkNumber": 15,
-          "sanskrit": "स तपो॑ऽतप्यत।"
-        },
-        {
-          "id": "ta-1-23-16",
-          "chunkNumber": 16,
-          "sanskrit": "स तप॑स्त॒प्त्वा।"
-        },
-        {
-          "id": "ta-1-23-17",
-          "chunkNumber": 17,
-          "sanskrit": "शरी॑रमधूनुत।"
-        },
-        {
-          "id": "ta-1-23-18",
-          "chunkNumber": 18,
-          "sanskrit": "तस्य॒ यन् मा॒ꣳ॒समासी᳚त्।"
-        },
-        {
-          "id": "ta-1-23-19",
-          "chunkNumber": 19,
-          "sanskrit": "ततो॑ऽरु॒णाः के॒तवो॒ वात॑रश॒ना ऋष॑य॒ उद॑तिष्ठन्न् ये नखाः᳚।"
-        },
-        {
-          "id": "ta-1-23-20",
-          "chunkNumber": 20,
-          "sanskrit": "ते वै॑खान॒साः।"
-        },
-        {
-          "id": "ta-1-23-21",
-          "chunkNumber": 21,
-          "sanskrit": "ये वालाः᳚।"
-        },
-        {
-          "id": "ta-1-23-22",
-          "chunkNumber": 22,
-          "sanskrit": "ते वा॑लखि॒ल्याः।"
-        },
-        {
-          "id": "ta-1-23-23",
-          "chunkNumber": 23,
-          "sanskrit": "यो रसः॑।"
-        },
-        {
-          "id": "ta-1-23-24",
-          "chunkNumber": 24,
-          "sanskrit": "सो॑ऽपाम्॥"
-        },
-        {
-          "id": "ta-1-23-25",
-          "chunkNumber": 25,
-          "sanskrit": "अ॒न्त॒र॒तः कू॒र्मं भू॒तꣳ सर्प॑न्तम्।"
-        },
-        {
-          "id": "ta-1-23-26",
-          "chunkNumber": 26,
-          "sanskrit": "तम॑ब्रवीत्।"
-        },
-        {
-          "id": "ta-1-23-27",
-          "chunkNumber": 27,
-          "sanskrit": "मम॒ वै त्वङ्मा॒ꣳ॒सा।"
-        },
-        {
-          "id": "ta-1-23-28",
-          "chunkNumber": 28,
-          "sanskrit": "सम॑भूत् नेत्य॑ब्रवीत्।"
-        },
-        {
-          "id": "ta-1-23-29",
-          "chunkNumber": 29,
-          "sanskrit": "पूर्व॑मे॒वाहमि॒हास॒मिति॑।"
-        },
-        {
-          "id": "ta-1-23-30",
-          "chunkNumber": 30,
-          "sanskrit": "तत्पुरु॑षस्य पुरुष॒त्वम्।"
-        },
-        {
-          "id": "ta-1-23-31",
-          "chunkNumber": 31,
-          "sanskrit": "स स॒हस्र॑शीर्षा॒ पुरु॑षः।"
-        },
-        {
-          "id": "ta-1-23-32",
-          "chunkNumber": 32,
-          "sanskrit": "स॒ह॒स्रा॒ख्षः स॒हस्र॑पात्।"
-        },
-        {
-          "id": "ta-1-23-33",
-          "chunkNumber": 33,
-          "sanskrit": "भू॒त्वोद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-34",
-          "chunkNumber": 34,
-          "sanskrit": "तम॑ब्रवीत्।"
-        },
-        {
-          "id": "ta-1-23-35",
-          "chunkNumber": 35,
-          "sanskrit": "त्वव्ँवै पूर्व॑ꣳ सम॑भूः।"
-        },
-        {
-          "id": "ta-1-23-36",
-          "chunkNumber": 36,
-          "sanskrit": "त्वमि॒दं पूर्वः॑ कुरु॒ष्वेति॑॥"
-        },
-        {
-          "id": "ta-1-23-37",
-          "chunkNumber": 37,
-          "sanskrit": "स इ॒त आ॒दायापः॑ अ॒ञ्ज॒लिना॑ पु॒रस्ता॑दु॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-38",
-          "chunkNumber": 38,
-          "sanskrit": "ए॒वा ह्ये॒वेति॑।"
-        },
-        {
-          "id": "ta-1-23-39",
-          "chunkNumber": 39,
-          "sanskrit": "तत॑ आदि॒त्य उद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-40",
-          "chunkNumber": 40,
-          "sanskrit": "सा प्राची॒ दिक्॥"
-        },
-        {
-          "id": "ta-1-23-41",
-          "chunkNumber": 41,
-          "sanskrit": "अथा॑रु॒णः के॒तुर्द॑ख्षिण॒त उ॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-42",
-          "chunkNumber": 42,
-          "sanskrit": "ए॒वा ह्यग्न॒ इति॑।"
-        },
-        {
-          "id": "ta-1-23-43",
-          "chunkNumber": 43,
-          "sanskrit": "ततो॒ वा अ॒ग्निरुद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-44",
-          "chunkNumber": 44,
-          "sanskrit": "सा द॑ख्षि॒णा दिक्।"
-        },
-        {
-          "id": "ta-1-23-45",
-          "chunkNumber": 45,
-          "sanskrit": "अथा॑रु॒णः के॒तुः प॒श्चादु॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-46",
-          "chunkNumber": 46,
-          "sanskrit": "ए॒वा हि वायो॒ इति॑ ततो॑ वा॒युरुद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-47",
-          "chunkNumber": 47,
-          "sanskrit": "सा प्र॒तीची॒ दिक्।"
-        },
-        {
-          "id": "ta-1-23-48",
-          "chunkNumber": 48,
-          "sanskrit": "अथा॑रु॒णः के॒तुरु॑त्तर॒त उ॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-49",
-          "chunkNumber": 49,
-          "sanskrit": "ए॒वा हीन्द्रेति॑।"
-        },
-        {
-          "id": "ta-1-23-50",
-          "chunkNumber": 50,
-          "sanskrit": "ततो॒ वा इन्द्र॒ उद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-51",
-          "chunkNumber": 51,
-          "sanskrit": "सोदी॑ची॒ दिक्।"
-        },
-        {
-          "id": "ta-1-23-52",
-          "chunkNumber": 52,
-          "sanskrit": "अथा॑रु॒णः के॒तुर्मद्ध्य॑ उ॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-53",
-          "chunkNumber": 53,
-          "sanskrit": "ए॒वा हि पूष॒न्निति॑।"
-        },
-        {
-          "id": "ta-1-23-54",
-          "chunkNumber": 54,
-          "sanskrit": "ततो॒ वै पू॒षोद॑तिष्ठत्।"
-        },
-        {
-          "id": "ta-1-23-55",
-          "chunkNumber": 55,
-          "sanskrit": "सेयन्दिक् अथा॑रु॒णः के॒तुरु॒परि॑ष्टादु॒पाद॑धात्।"
-        },
-        {
-          "id": "ta-1-23-56",
-          "chunkNumber": 56,
-          "sanskrit": "ए॒वा हि देवा॒ इति॑।"
-        },
-        {
-          "id": "ta-1-23-57",
-          "chunkNumber": 57,
-          "sanskrit": "ततो॑ देव मनु॒ष्याः पि॒तरः॑।"
-        },
-        {
-          "id": "ta-1-23-58",
-          "chunkNumber": 58,
-          "sanskrit": "ग॒न्ध॒र्वा॒फ्स॒रस॒ श्चोद॑तिष्ठन्न्।"
-        },
-        {
-          "id": "ta-1-23-59",
-          "chunkNumber": 59,
-          "sanskrit": "सोद्र्ध्वा दिक्॥"
-        },
-        {
-          "id": "ta-1-23-60",
-          "chunkNumber": 60,
-          "sanskrit": "या वि॒प्रुषो॑ वि॒परा॑पतन्न्।"
-        },
-        {
-          "id": "ta-1-23-61",
-          "chunkNumber": 61,
-          "sanskrit": "ताभ्योऽसु॑रा॒ रख्षा॑ꣳसि पिशा॒चाश्चोद॑तिष्ठन्न्।"
-        },
-        {
-          "id": "ta-1-23-62",
-          "chunkNumber": 62,
-          "sanskrit": "तस्मा॒त्ते परा॑भवन्न्।"
-        },
-        {
-          "id": "ta-1-23-63",
-          "chunkNumber": 63,
-          "sanskrit": "वि॒प्रुड्भ्यो॒ हि ते सम॑भवन्न्॥"
-        },
-        {
-          "id": "ta-1-23-64",
-          "chunkNumber": 64,
-          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता आपो॑ ह॒ यद् बृ॑ह॒तीर् गर्भ॒माय॑न्न्।"
-        },
-        {
-          "id": "ta-1-23-65",
-          "chunkNumber": 65,
-          "sanskrit": "दख्षं॒ दधा॑ना ज॒नय॑न्तीः स्वय॒म्भुम्।"
-        },
-        {
-          "id": "ta-1-23-66",
-          "chunkNumber": 66,
-          "sanskrit": "तत॑ इ॒मेऽद्ध्यसृ॑ज्यन्त॒ सर्गाः᳚।"
-        },
-        {
-          "id": "ta-1-23-67",
-          "chunkNumber": 67,
-          "sanskrit": "अद्भ्यो॒ वा इ॒दꣳ सम॑भूत्।"
-        },
-        {
-          "id": "ta-1-23-68",
-          "chunkNumber": 68,
-          "sanskrit": "तस्मा॑दि॒दꣳ सर्वं॒ ब्रह्म॑ स्वय॒भ्विंति॑॥"
-        },
-        {
-          "id": "ta-1-23-69",
-          "chunkNumber": 69,
-          "sanskrit": "तस्मा॑दि॒दꣳ सर्व॒ꣳ॒ शिथि॑लमि॒वा ध्रुव॑मिवाभवत्॥"
-        },
-        {
-          "id": "ta-1-23-70",
-          "chunkNumber": 70,
-          "sanskrit": "प्र॒जाप॑ति॒र् वाव तत्।"
-        },
-        {
-          "id": "ta-1-23-71",
-          "chunkNumber": 71,
-          "sanskrit": "आ॒त्मना॒ऽऽत्मान॑व्ँवि॒धाय॑।"
-        },
-        {
-          "id": "ta-1-23-72",
-          "chunkNumber": 72,
-          "sanskrit": "तदे॒वानु॒ प्रावि॑शत्॥"
-        },
-        {
-          "id": "ta-1-23-73",
-          "chunkNumber": 73,
-          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता वि॒धाय॑ लो॒कान्वि॒धाय॑ भू॒तानि॑।"
-        },
-        {
-          "id": "ta-1-23-74",
-          "chunkNumber": 74,
-          "sanskrit": "वि॒धाय॒ सर्वाः᳚ प्र॒दिशो॒ दिश॑श्च।"
-        },
-        {
-          "id": "ta-1-23-75",
-          "chunkNumber": 75,
-          "sanskrit": "प्र॒जाप॑तिः प्रथम॒जा ऋ॒तस्य॑।"
-        },
-        {
-          "id": "ta-1-23-76",
-          "chunkNumber": 76,
-          "sanskrit": "आ॒त्मना॒ऽऽत्मान॑म॒भिसव्ँवि॑वे॒शेति॑॥"
-        },
-        {
-          "id": "ta-1-23-77",
-          "chunkNumber": 77,
-          "sanskrit": "सर्व॑मे॒वेदमा॒प्त्वा।"
-        },
-        {
-          "id": "ta-1-23-78",
-          "chunkNumber": 78,
-          "sanskrit": "सर्व॑मव॒रुद्ध्य॑।"
-        },
-        {
-          "id": "ta-1-23-79",
-          "chunkNumber": 79,
-          "sanskrit": "तदे॒वानु॒ प्रवि॑शति।"
-        },
-        {
-          "id": "ta-1-23-80",
-          "chunkNumber": 80,
-          "sanskrit": "य ए॒वव्ँवेद॑"
-        }
-      ]
-    },
-    {
       "id": "taittiriya-aranyaka-1-24",
       "title": "Prapāṭhaka 1 · Anuvāka 24",
       "sectionNumber": 24,
@@ -416,228 +8,228 @@
         {
           "id": "ta-1-24-1",
           "chunkNumber": 1,
-          "sanskrit": "चतु॑ष्टय्य॒ आपो॑ गृह्णाति।",
+          "sanskrit": "catu̍ṣṭayya̠ āpo̍ gṛhṇāti|",
           "section": 24
         },
         {
           "id": "ta-1-24-2",
           "chunkNumber": 2,
-          "sanskrit": "च॒त्वारि॒ वा अ॒पाꣳ रू॒पाणि॑।"
+          "sanskrit": "ca̠tvāri̠ vā a̠pāgͫ rū̠pāṇi̍|"
         },
         {
           "id": "ta-1-24-3",
           "chunkNumber": 3,
-          "sanskrit": "मेघो॑ वि॒द्युत्।"
+          "sanskrit": "megho̍ vi̠dyut|"
         },
         {
           "id": "ta-1-24-4",
           "chunkNumber": 4,
-          "sanskrit": "स्त॒न॒यि॒त्नुर्वृ॒ष्टिः।"
+          "sanskrit": "sta̠na̠yi̠tnurvṛ̠ṣṭiḥ|"
         },
         {
           "id": "ta-1-24-5",
           "chunkNumber": 5,
-          "sanskrit": "तान्ये॒वा व॑रुन्धे॥"
+          "sanskrit": "tānye̠vā va̍rundhe||"
         },
         {
           "id": "ta-1-24-6",
           "chunkNumber": 6,
-          "sanskrit": "आ॒तप॑ति॒ वर्ष्या॑ गृह्णाति।"
+          "sanskrit": "ā̠tapa̍ti̠ varṣyā̍ gṛhṇāti|"
         },
         {
           "id": "ta-1-24-7",
           "chunkNumber": 7,
-          "sanskrit": "ताः पु॒रस्ता॒दुप॑दधाति।"
+          "sanskrit": "tāḥ pu̠rastā̠dupa̍dadhāti|"
         },
         {
           "id": "ta-1-24-8",
           "chunkNumber": 8,
-          "sanskrit": "ए॒ता वै ब्र॑ह्मवर्च॒स्या आपः॑।"
+          "sanskrit": "e̠tā vai bra̍hmavarca̠syā āpaḥ̍|"
         },
         {
           "id": "ta-1-24-9",
           "chunkNumber": 9,
-          "sanskrit": "मु॒ख॒त ए॒व ब्र॑ह्मवर्च॒समव॑रुन्धे।"
+          "sanskrit": "mu̠kha̠ta e̠va bra̍hmavarca̠samava̍rundhe|"
         },
         {
           "id": "ta-1-24-10",
           "chunkNumber": 10,
-          "sanskrit": "तस्मा᳚न्मुख॒तो ब्र॑ह्मवर्च॒सित॑रः कूप्या॑ गृह्णाति।"
+          "sanskrit": "tasmā̎nmukha̠to bra̍hmavarca̠sita̍raḥ kūpyā̍ gṛhṇāti|"
         },
         {
           "id": "ta-1-24-11",
           "chunkNumber": 11,
-          "sanskrit": "ता द॑ख्षिण॒त उप॑दधाति।"
+          "sanskrit": "tā da̍khṣiṇa̠ta upa̍dadhāti|"
         },
         {
           "id": "ta-1-24-12",
           "chunkNumber": 12,
-          "sanskrit": "ए॒ता वै ते॑ज॒स्विनी॒रापः॑।"
+          "sanskrit": "e̠tā vai te̍ja̠svinī̠rāpaḥ̍|"
         },
         {
           "id": "ta-1-24-13",
           "chunkNumber": 13,
-          "sanskrit": "तेज॑ ए॒वास्य॑ दख्षिण॒तो द॑धाति।"
+          "sanskrit": "teja̍ e̠vāsya̍ dakhṣiṇa̠to da̍dhāti|"
         },
         {
           "id": "ta-1-24-14",
           "chunkNumber": 14,
-          "sanskrit": "तस्मा॒द् दख्षि॒णोद्र्ध॑ ऽस्तेज॒स्वित॑रः॥"
+          "sanskrit": "tasmā̠d dakhṣi̠ṇodrdha̍ 'steja̠svita̍raḥ||"
         },
         {
           "id": "ta-1-24-15",
           "chunkNumber": 15,
-          "sanskrit": "स्था॒व॒रा गृ॑ह्णाति।"
+          "sanskrit": "sthā̠va̠rā gṛ̍hṇāti|"
         },
         {
           "id": "ta-1-24-16",
           "chunkNumber": 16,
-          "sanskrit": "ताः प॒श्चादुप॑दधाति।"
+          "sanskrit": "tāḥ pa̠ścādupa̍dadhāti|"
         },
         {
           "id": "ta-1-24-17",
           "chunkNumber": 17,
-          "sanskrit": "प्रति॑ष्ठिता॒ वै स्था॑व॒राः।"
+          "sanskrit": "prati̍ṣṭhitā̠ vai sthā̍va̠rāḥ|"
         },
         {
           "id": "ta-1-24-18",
           "chunkNumber": 18,
-          "sanskrit": "प॒श्चादे॒व प्रति॑तिष्ठति॥"
+          "sanskrit": "pa̠ścāde̠va prati̍tiṣṭhati||"
         },
         {
           "id": "ta-1-24-19",
           "chunkNumber": 19,
-          "sanskrit": "वह॑न्तीर् गृह्णाति ता उ॑त्तर॒त उप॑दधाति।"
+          "sanskrit": "vaha̍ntīr gṛhṇāti tā u̍ttara̠ta upa̍dadhāti|"
         },
         {
           "id": "ta-1-24-20",
           "chunkNumber": 20,
-          "sanskrit": "ओज॑सा॒ वा ए॒ता वह॑न्तीरि॒वोद्ग॑तीरि॒व आकूज॑तीरि॒व धाव॑न्तीः।"
+          "sanskrit": "oja̍sā̠ vā e̠tā vaha̍ntīri̠vodga̍tīri̠va ākūja̍tīri̠va dhāva̍ntīḥ|"
         },
         {
           "id": "ta-1-24-21",
           "chunkNumber": 21,
-          "sanskrit": "ओज॑ ए॒वास्यो᳚त्तर॒तो द॑धाति।"
+          "sanskrit": "oja̍ e̠vāsyo̎ttara̠to da̍dhāti|"
         },
         {
           "id": "ta-1-24-22",
           "chunkNumber": 22,
-          "sanskrit": "तस्मा॒दुत्त॒रोऽद्ध॑ ओज॒स्वित॑रः॥"
+          "sanskrit": "tasmā̠dutta̠ro'ddha̍ oja̠svita̍raḥ||"
         },
         {
           "id": "ta-1-24-23",
           "chunkNumber": 23,
-          "sanskrit": "स॒भां॒र्या गृ॑ह्णाति।"
+          "sanskrit": "sa̠bhāṃ̠ryā gṛ̍hṇāti|"
         },
         {
           "id": "ta-1-24-24",
           "chunkNumber": 24,
-          "sanskrit": "ता मद्ध्य॒ उप॑दधाति।"
+          "sanskrit": "tā maddhya̠ upa̍dadhāti|"
         },
         {
           "id": "ta-1-24-25",
           "chunkNumber": 25,
-          "sanskrit": "इ॒यव्ँवै स॑भां॒र्याः।"
+          "sanskrit": "i̠yavm̐vai sa̍bhāṃ̠ryāḥ|"
         },
         {
           "id": "ta-1-24-26",
           "chunkNumber": 26,
-          "sanskrit": "अ॒स्यामे॒व प्रति॑तिष्ठति॥"
+          "sanskrit": "a̠syāme̠va prati̍tiṣṭhati||"
         },
         {
           "id": "ta-1-24-27",
           "chunkNumber": 27,
-          "sanskrit": "प॒ल्व॒ल्या गृ॑ह्णाति।"
+          "sanskrit": "pa̠lva̠lyā gṛ̍hṇāti|"
         },
         {
           "id": "ta-1-24-28",
           "chunkNumber": 28,
-          "sanskrit": "ता उ॒परि॑ष्टादु॒पाद॑धाति अ॒सौ वै प॑ल्व॒ल्याः।"
+          "sanskrit": "tā u̠pari̍ṣṭādu̠pāda̍dhāti a̠sau vai pa̍lva̠lyāḥ|"
         },
         {
           "id": "ta-1-24-29",
           "chunkNumber": 29,
-          "sanskrit": "अ॒मुष्या॑मे॒व प्रति॑तिष्ठति॥"
+          "sanskrit": "a̠muṣyā̍me̠va prati̍tiṣṭhati||"
         },
         {
           "id": "ta-1-24-30",
           "chunkNumber": 30,
-          "sanskrit": "दि॒ख्षूप॑दधाति।"
+          "sanskrit": "di̠khṣūpa̍dadhāti|"
         },
         {
           "id": "ta-1-24-31",
           "chunkNumber": 31,
-          "sanskrit": "दि॒ख्षु वा आपः॑।"
+          "sanskrit": "di̠khṣu vā āpaḥ̍|"
         },
         {
           "id": "ta-1-24-32",
           "chunkNumber": 32,
-          "sanskrit": "अन्न॒व्ँवा आपः॑।"
+          "sanskrit": "anna̠vm̐vā āpaḥ̍|"
         },
         {
           "id": "ta-1-24-33",
           "chunkNumber": 33,
-          "sanskrit": "अ॒द्भ्यो वा अन्न॑ञ्जायते।"
+          "sanskrit": "a̠dbhyo vā anna̍ñjāyate|"
         },
         {
           "id": "ta-1-24-34",
           "chunkNumber": 34,
-          "sanskrit": "यदे॒वाद्भ्योऽन्नं॒ जाय॑ते।"
+          "sanskrit": "yade̠vādbhyo'nnaṃ̠ jāya̍te|"
         },
         {
           "id": "ta-1-24-35",
           "chunkNumber": 35,
-          "sanskrit": "तदव॑रुन्धे॥"
+          "sanskrit": "tadava̍rundhe||"
         },
         {
           "id": "ta-1-24-36",
           "chunkNumber": 36,
-          "sanskrit": "तव्ँवा ए॒तम॑रु॒णाः के॒तवो॒ वात॑रश॒ना ऋष॑योऽचिन्वन्न्।"
+          "sanskrit": "tavm̐vā e̠tama̍ru̠ṇāḥ ke̠tavo̠ vāta̍raśa̠nā ṛṣa̍yo'cinvann|"
         },
         {
           "id": "ta-1-24-37",
           "chunkNumber": 37,
-          "sanskrit": "तस्मा॑दारुण के॒तुकः॑॥"
+          "sanskrit": "tasmā̍dāruṇa ke̠tukaḥ̍||"
         },
         {
           "id": "ta-1-24-38",
           "chunkNumber": 38,
-          "sanskrit": "तदे॒षाऽभ्यनू᳚क्ता॥"
+          "sanskrit": "tade̠ṣā'bhyanū̎ktā||"
         },
         {
           "id": "ta-1-24-39",
           "chunkNumber": 39,
-          "sanskrit": "के॒तवो॒ अरु॑णासश्च।"
+          "sanskrit": "ke̠tavo̠ aru̍ṇāsaśca|"
         },
         {
           "id": "ta-1-24-40",
           "chunkNumber": 40,
-          "sanskrit": "ऋ॒ष॒यो वात॑रश॒नाः।"
+          "sanskrit": "ṛ̠ṣa̠yo vāta̍raśa̠nāḥ|"
         },
         {
           "id": "ta-1-24-41",
           "chunkNumber": 41,
-          "sanskrit": "प्र॒ति॒ष्ठाꣳ श॒तधा॑ हि।"
+          "sanskrit": "pra̠ti̠ṣṭhāgͫ śa̠tadhā̍ hi|"
         },
         {
           "id": "ta-1-24-42",
           "chunkNumber": 42,
-          "sanskrit": "स॒माहि॑तासो सहस्र॒धाय॑स॒मिति॑॥"
+          "sanskrit": "sa̠māhi̍tāso sahasra̠dhāya̍sa̠miti̍||"
         },
         {
           "id": "ta-1-24-43",
           "chunkNumber": 43,
-          "sanskrit": "श॒तश॑श्चै॒व ऽस॒हस्र॑शश्च॒ प्रति॑तिष्ठति।"
+          "sanskrit": "śa̠taśa̍ścai̠va 'sa̠hasra̍śaśca̠ prati̍tiṣṭhati|"
         },
         {
           "id": "ta-1-24-44",
           "chunkNumber": 44,
-          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+          "sanskrit": "ya e̠tama̠gniñci̍nu̠te|"
         },
         {
           "id": "ta-1-24-45",
           "chunkNumber": 45,
-          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+          "sanskrit": "ya u̍cainame̠vavm̐veda̍"
         }
       ]
     },
@@ -649,173 +241,173 @@
         {
           "id": "ta-1-25-1",
           "chunkNumber": 1,
-          "sanskrit": "जा॒नु॒द॒घ्नीमु॑त्तरवे॒दीङ्खा॒त्वा।",
+          "sanskrit": "jā̠nu̠da̠ghnīmu̍ttarave̠dīṅkhā̠tvā|",
           "section": 25
         },
         {
           "id": "ta-1-25-2",
           "chunkNumber": 2,
-          "sanskrit": "अ॒पां पू॑रयति।"
+          "sanskrit": "a̠pāṃ pū̍rayati|"
         },
         {
           "id": "ta-1-25-3",
           "chunkNumber": 3,
-          "sanskrit": "अ॒पाꣳ स॑र्व॒त्वाय॑।"
+          "sanskrit": "a̠pāgͫ sa̍rva̠tvāya̍|"
         },
         {
           "id": "ta-1-25-4",
           "chunkNumber": 4,
-          "sanskrit": "पु॒ष्क॒र॒प॒र्णꣳ रु॒क्मं पुरु॑ष॒मित्युप॑दधाति।"
+          "sanskrit": "pu̠ṣka̠ra̠pa̠rṇagͫ ru̠kmaṃ puru̍ṣa̠mityupa̍dadhāti|"
         },
         {
           "id": "ta-1-25-5",
           "chunkNumber": 5,
-          "sanskrit": "तपो॒ वै पु॑ष्करप॒र्णम्।"
+          "sanskrit": "tapo̠ vai pu̍ṣkarapa̠rṇam|"
         },
         {
           "id": "ta-1-25-6",
           "chunkNumber": 6,
-          "sanskrit": "स॒त्यꣳ रु॒क्मः।"
+          "sanskrit": "sa̠tyagͫ ru̠kmaḥ|"
         },
         {
           "id": "ta-1-25-7",
           "chunkNumber": 7,
-          "sanskrit": "अ॒मृतं॒ पुरु॑षः।"
+          "sanskrit": "a̠mṛtaṃ̠ puru̍ṣaḥ|"
         },
         {
           "id": "ta-1-25-8",
           "chunkNumber": 8,
-          "sanskrit": "ए॒ताव॒द्वा वा᳚स्ति।"
+          "sanskrit": "e̠tāva̠dvā vā̎sti|"
         },
         {
           "id": "ta-1-25-9",
           "chunkNumber": 9,
-          "sanskrit": "याव॑दे॒तत्।"
+          "sanskrit": "yāva̍de̠tat|"
         },
         {
           "id": "ta-1-25-10",
           "chunkNumber": 10,
-          "sanskrit": "याव॑दे॒वास्ति॑ तदव॑रुन्धे॥"
+          "sanskrit": "yāva̍de̠vāsti̍ tadava̍rundhe||"
         },
         {
           "id": "ta-1-25-11",
           "chunkNumber": 11,
-          "sanskrit": "कू॒र्ममुप॑दधाति।"
+          "sanskrit": "kū̠rmamupa̍dadhāti|"
         },
         {
           "id": "ta-1-25-12",
           "chunkNumber": 12,
-          "sanskrit": "अ॒पामे॒व मेध॒मव॑रुन्धे।"
+          "sanskrit": "a̠pāme̠va medha̠mava̍rundhe|"
         },
         {
           "id": "ta-1-25-13",
           "chunkNumber": 13,
-          "sanskrit": "अथो᳚ स्व॒र्गस्य॑ लो॒कस्य॒ सम॑ष्ट्यै॥"
+          "sanskrit": "atho̎ sva̠rgasya̍ lo̠kasya̠ sama̍ṣṭyai||"
         },
         {
           "id": "ta-1-25-14",
           "chunkNumber": 14,
-          "sanskrit": "आप॑मापाम॒पः सर्वाः᳚।"
+          "sanskrit": "āpa̍māpāma̠paḥ sarvāḥ̎|"
         },
         {
           "id": "ta-1-25-15",
           "chunkNumber": 15,
-          "sanskrit": "अ॒स्माद॒स्मा दि॒तोऽमुतः॑।"
+          "sanskrit": "a̠smāda̠smā di̠to'mutaḥ̍|"
         },
         {
           "id": "ta-1-25-16",
           "chunkNumber": 16,
-          "sanskrit": "अ॒ग्निर्वा॒युश्च॒ सूर्य॑श्च।"
+          "sanskrit": "a̠gnirvā̠yuśca̠ sūrya̍śca|"
         },
         {
           "id": "ta-1-25-17",
           "chunkNumber": 17,
-          "sanskrit": "स॒ह स॑ञ्चस्क॒रर्द्धि॑या॒ इति॑।"
+          "sanskrit": "sa̠ha sa̍ñcaska̠rarddhi̍yā̠ iti̍|"
         },
         {
           "id": "ta-1-25-18",
           "chunkNumber": 18,
-          "sanskrit": "वा॒य्वश्वा॑ रश्मि॒पत॑यः§11॥"
+          "sanskrit": "vā̠yvaśvā̍ raśmi̠pata̍yaḥ§·11·||"
         },
         {
           "id": "ta-1-25-19",
           "chunkNumber": 19,
-          "sanskrit": "लो॒कं पृ॑णच्छि॒द्रं पृ॑ण यास्ति॒स्रः प॑रम॒जाः॥"
+          "sanskrit": "lo̠kaṃ pṛ̍ṇacchi̠draṃ pṛ̍ṇa yāsti̠sraḥ pa̍rama̠jāḥ||"
         },
         {
           "id": "ta-1-25-20",
           "chunkNumber": 20,
-          "sanskrit": "इ॒न्द्र॒घो॒षा वो॒ वसु॑भि§12 रे॒वा ह्ये॒वे§13 ति॑॥"
+          "sanskrit": "i̠ndra̠gho̠ṣā vo̠ vasu̍bhi§·12· re̠vā hye̠ve§·13· ti̍||"
         },
         {
           "id": "ta-1-25-21",
           "chunkNumber": 21,
-          "sanskrit": "पञ्च॒ चित॑य॒ उप॑दधाति।"
+          "sanskrit": "pañca̠ cita̍ya̠ upa̍dadhāti|"
         },
         {
           "id": "ta-1-25-22",
           "chunkNumber": 22,
-          "sanskrit": "पाङ्क्त॒ऽग्निः।"
+          "sanskrit": "pāṅkta̠'gniḥ|"
         },
         {
           "id": "ta-1-25-23",
           "chunkNumber": 23,
-          "sanskrit": "यावा॑ने॒वाग्निः।"
+          "sanskrit": "yāvā̍ne̠vāgniḥ|"
         },
         {
           "id": "ta-1-25-24",
           "chunkNumber": 24,
-          "sanskrit": "तञ्चि॑नुते॥"
+          "sanskrit": "tañci̍nute||"
         },
         {
           "id": "ta-1-25-25",
           "chunkNumber": 25,
-          "sanskrit": "लो॒कं पृ॑णया द्वि॒तीया॒मुप॑दधाति।"
+          "sanskrit": "lo̠kaṃ pṛ̍ṇayā dvi̠tīyā̠mupa̍dadhāti|"
         },
         {
           "id": "ta-1-25-26",
           "chunkNumber": 26,
-          "sanskrit": "पञ्च॑पदा॒ वै वि॒राट्।"
+          "sanskrit": "pañca̍padā̠ vai vi̠rāṭ|"
         },
         {
           "id": "ta-1-25-27",
           "chunkNumber": 27,
-          "sanskrit": "तस्या॒ वा इ॒यं पादः॑।"
+          "sanskrit": "tasyā̠ vā i̠yaṃ pādaḥ̍|"
         },
         {
           "id": "ta-1-25-28",
           "chunkNumber": 28,
-          "sanskrit": "अ॒न्तरि॑ख्षं॒ पादः॑।"
+          "sanskrit": "a̠ntari̍khṣaṃ̠ pādaḥ̍|"
         },
         {
           "id": "ta-1-25-29",
           "chunkNumber": 29,
-          "sanskrit": "द्यौः पादः॑।"
+          "sanskrit": "dyauḥ pādaḥ̍|"
         },
         {
           "id": "ta-1-25-30",
           "chunkNumber": 30,
-          "sanskrit": "दिशः॒ पादः॑।"
+          "sanskrit": "diśaḥ̠ pādaḥ̍|"
         },
         {
           "id": "ta-1-25-31",
           "chunkNumber": 31,
-          "sanskrit": "प॒रोर॑जाः॒ पादः॑॥"
+          "sanskrit": "pa̠rora̍jāḥ̠ pādaḥ̍||"
         },
         {
           "id": "ta-1-25-32",
           "chunkNumber": 32,
-          "sanskrit": "वि॒राज्ये॒व प्रति॑तिष्ठति।"
+          "sanskrit": "vi̠rājye̠va prati̍tiṣṭhati|"
         },
         {
           "id": "ta-1-25-33",
           "chunkNumber": 33,
-          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+          "sanskrit": "ya e̠tama̠gniñci̍nu̠te|"
         },
         {
           "id": "ta-1-25-34",
           "chunkNumber": 34,
-          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+          "sanskrit": "ya u̍cainame̠vavm̐veda̍"
         }
       ]
     },
@@ -827,343 +419,343 @@
         {
           "id": "ta-1-26-1",
           "chunkNumber": 1,
-          "sanskrit": "अ॒ग्निं प्र॒णीयो॑पसमा॒धाय॑।",
+          "sanskrit": "a̠gniṃ pra̠ṇīyo̍pasamā̠dhāya̍|",
           "section": 26
         },
         {
           "id": "ta-1-26-2",
           "chunkNumber": 2,
-          "sanskrit": "तम॒भित॑ ए॒ता अ॒बीष्ट॑का॒ उप॑दधाति।"
+          "sanskrit": "tama̠bhita̍ e̠tā a̠bīṣṭa̍kā̠ upa̍dadhāti|"
         },
         {
           "id": "ta-1-26-3",
           "chunkNumber": 3,
-          "sanskrit": "अ॒ग्नि॒हो॒त्रे द॑र्शपूर्णमा॒सयोः᳚।"
+          "sanskrit": "a̠gni̠ho̠tre da̍rśapūrṇamā̠sayoḥ̎|"
         },
         {
           "id": "ta-1-26-4",
           "chunkNumber": 4,
-          "sanskrit": "प॒शु॒ब॒न्धे चा॑तुर्मा॒स्येषु॑।"
+          "sanskrit": "pa̠śu̠ba̠ndhe cā̍turmā̠syeṣu̍|"
         },
         {
           "id": "ta-1-26-5",
           "chunkNumber": 5,
-          "sanskrit": "अथो॑ आहुः।"
+          "sanskrit": "atho̍ āhuḥ|"
         },
         {
           "id": "ta-1-26-6",
           "chunkNumber": 6,
-          "sanskrit": "सर्वे॑षु यज्ञक्र॒तुष्विति॑॥"
+          "sanskrit": "sarve̍ṣu yajñakra̠tuṣviti̍||"
         },
         {
           "id": "ta-1-26-7",
           "chunkNumber": 7,
-          "sanskrit": "अथ॑ हस्मा हारु॒णः स्वा॑य॒म्भुवः॑।"
+          "sanskrit": "atha̍ hasmā hāru̠ṇaḥ svā̍ya̠mbhuvaḥ̍|"
         },
         {
           "id": "ta-1-26-8",
           "chunkNumber": 8,
-          "sanskrit": "सा॒वि॒त्रः सर्वो॒ऽग्निरित्यन॑नुषङ्गं मन्यामहे।"
+          "sanskrit": "sā̠vi̠traḥ sarvo̠'gnirityana̍nuṣaṅgaṃ manyāmahe|"
         },
         {
           "id": "ta-1-26-9",
           "chunkNumber": 9,
-          "sanskrit": "नाना॒ वा ए॒तेषा᳚व्ँवी॒र्या॑णि॥"
+          "sanskrit": "nānā̠ vā e̠teṣā̎vm̐vī̠ryā̍ṇi||"
         },
         {
           "id": "ta-1-26-10",
           "chunkNumber": 10,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते स॒त्रि॒य म॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "kama̠gniñci̍nute sa̠tri̠ya ma̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-11",
           "chunkNumber": 11,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+          "sanskrit": "kama̠gniñci̍nute|"
         },
         {
           "id": "ta-1-26-12",
           "chunkNumber": 12,
-          "sanskrit": "सा॒वि॒त्र म॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "sā̠vi̠tra ma̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-13",
           "chunkNumber": 13,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+          "sanskrit": "kama̠gniñci̍nute|"
         },
         {
           "id": "ta-1-26-14",
           "chunkNumber": 14,
-          "sanskrit": "ना॒चि॒के॒त म॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "nā̠ci̠ke̠ta ma̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-15",
           "chunkNumber": 15,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+          "sanskrit": "kama̠gniñci̍nute|"
         },
         {
           "id": "ta-1-26-16",
           "chunkNumber": 16,
-          "sanskrit": "चा॒तु॒र्॒हो॒त्रि॒यम॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "cā̠tu̠r̠ho̠tri̠yama̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-17",
           "chunkNumber": 17,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+          "sanskrit": "kama̠gniñci̍nute|"
         },
         {
           "id": "ta-1-26-18",
           "chunkNumber": 18,
-          "sanskrit": "वै॒श्व॒सृ॒ज म॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "vai̠śva̠sṛ̠ja ma̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-19",
           "chunkNumber": 19,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते उ॒पा॒नु॒वा॒क्य॑मा॒शु म॒ग्निञ्चि॑न्वा॒नः।"
+          "sanskrit": "kama̠gniñci̍nute u̠pā̠nu̠vā̠kya̍mā̠śu ma̠gniñci̍nvā̠naḥ|"
         },
         {
           "id": "ta-1-26-20",
           "chunkNumber": 20,
-          "sanskrit": "कम॒ग्निञ्चि॑नुते।"
+          "sanskrit": "kama̠gniñci̍nute|"
         },
         {
           "id": "ta-1-26-21",
           "chunkNumber": 21,
-          "sanskrit": "इ॒ममा॑रुणकेतुक म॒ग्निञ्चि॑न्वा॒न इति॑॥"
+          "sanskrit": "i̠mamā̍ruṇaketuka ma̠gniñci̍nvā̠na iti̍||"
         },
         {
           "id": "ta-1-26-22",
           "chunkNumber": 22,
-          "sanskrit": "वृषा॒ वा अ॒ग्निः।"
+          "sanskrit": "vṛṣā̠ vā a̠gniḥ|"
         },
         {
           "id": "ta-1-26-23",
           "chunkNumber": 23,
-          "sanskrit": "वृषा॑णौ॒ सꣴस्फा॑लयेत्।"
+          "sanskrit": "vṛṣā̍ṇau̠ sagͫͫsphā̍layet|"
         },
         {
           "id": "ta-1-26-24",
           "chunkNumber": 24,
-          "sanskrit": "ह॒न्येता᳚स्य य॒ज्ञः।"
+          "sanskrit": "ha̠nyetā̎sya ya̠jñaḥ|"
         },
         {
           "id": "ta-1-26-25",
           "chunkNumber": 25,
-          "sanskrit": "तस्मा॒न्नानु॒षज्यः॑॥"
+          "sanskrit": "tasmā̠nnānu̠ṣajyaḥ̍||"
         },
         {
           "id": "ta-1-26-26",
           "chunkNumber": 26,
-          "sanskrit": "सोत्त॑रवे॒दिषु॑ क्र॒तुषु॑ चिन्वीत।"
+          "sanskrit": "sotta̍rave̠diṣu̍ kra̠tuṣu̍ cinvīta|"
         },
         {
           "id": "ta-1-26-27",
           "chunkNumber": 27,
-          "sanskrit": "उ॒त्त॒र॒वे॒द्याꣴ ह्य॑ग्निश्ची॒यते᳚॥"
+          "sanskrit": "u̠tta̠ra̠ve̠dyāgͫͫ hya̍gniścī̠yate̎||"
         },
         {
           "id": "ta-1-26-28",
           "chunkNumber": 28,
-          "sanskrit": "प्र॒जाका॑मश्चिन्वीत प्रा॒जा॒प॒त्यो वा ए॒षो᳚ऽग्निः।"
+          "sanskrit": "pra̠jākā̍maścinvīta prā̠jā̠pa̠tyo vā e̠ṣo̎'gniḥ|"
         },
         {
           "id": "ta-1-26-29",
           "chunkNumber": 29,
-          "sanskrit": "प्रा॒जा॒प॒त्याः प्र॒जाः।"
+          "sanskrit": "prā̠jā̠pa̠tyāḥ pra̠jāḥ|"
         },
         {
           "id": "ta-1-26-30",
           "chunkNumber": 30,
-          "sanskrit": "प्र॒जावा᳚न् भवति।"
+          "sanskrit": "pra̠jāvā̎n bhavati|"
         },
         {
           "id": "ta-1-26-31",
           "chunkNumber": 31,
-          "sanskrit": "य ए॒वव्ँवेद॑॥"
+          "sanskrit": "ya e̠vavm̐veda̍||"
         },
         {
           "id": "ta-1-26-32",
           "chunkNumber": 32,
-          "sanskrit": "प॒शुका॑मश्चिन्वीत।"
+          "sanskrit": "pa̠śukā̍maścinvīta|"
         },
         {
           "id": "ta-1-26-33",
           "chunkNumber": 33,
-          "sanskrit": "सं॒ज्ञान॒व्ँवा ए॒तत् प॑शू॒नाम्।"
+          "sanskrit": "saṃ̠jñāna̠vm̐vā e̠tat pa̍śū̠nām|"
         },
         {
           "id": "ta-1-26-34",
           "chunkNumber": 34,
-          "sanskrit": "यदापः॑।"
+          "sanskrit": "yadāpaḥ̍|"
         },
         {
           "id": "ta-1-26-35",
           "chunkNumber": 35,
-          "sanskrit": "प॒शू॒नामे॒व स॒ज्ञांने॒ ऽग्निञ्चि॑नुते।"
+          "sanskrit": "pa̠śū̠nāme̠va sa̠jñāṃne̠ 'gniñci̍nute|"
         },
         {
           "id": "ta-1-26-36",
           "chunkNumber": 36,
-          "sanskrit": "प॒शु॒मान् भ॑वति।"
+          "sanskrit": "pa̠śu̠mān bha̍vati|"
         },
         {
           "id": "ta-1-26-37",
           "chunkNumber": 37,
-          "sanskrit": "य ए॒वव्ँवेद॑ वृष्टि॑कामश्चिन्वीत।"
+          "sanskrit": "ya e̠vavm̐veda̍ vṛṣṭi̍kāmaścinvīta|"
         },
         {
           "id": "ta-1-26-38",
           "chunkNumber": 38,
-          "sanskrit": "आपो॒ वै वृष्टिः॑।"
+          "sanskrit": "āpo̠ vai vṛṣṭiḥ̍|"
         },
         {
           "id": "ta-1-26-39",
           "chunkNumber": 39,
-          "sanskrit": "प॒र्जन्यो॒ वर्षु॑को भवति।"
+          "sanskrit": "pa̠rjanyo̠ varṣu̍ko bhavati|"
         },
         {
           "id": "ta-1-26-40",
           "chunkNumber": 40,
-          "sanskrit": "य ए॒वव्ँवेद॑॥"
+          "sanskrit": "ya e̠vavm̐veda̍||"
         },
         {
           "id": "ta-1-26-41",
           "chunkNumber": 41,
-          "sanskrit": "आ॒म॒या॒वी चि॑न्वीत।"
+          "sanskrit": "ā̠ma̠yā̠vī ci̍nvīta|"
         },
         {
           "id": "ta-1-26-42",
           "chunkNumber": 42,
-          "sanskrit": "आपो॒ वै भे॑ष॒जम्।"
+          "sanskrit": "āpo̠ vai bhe̍ṣa̠jam|"
         },
         {
           "id": "ta-1-26-43",
           "chunkNumber": 43,
-          "sanskrit": "भे॒ष॒जमे॒वास्मै॑ करोति।"
+          "sanskrit": "bhe̠ṣa̠jame̠vāsmai̍ karoti|"
         },
         {
           "id": "ta-1-26-44",
           "chunkNumber": 44,
-          "sanskrit": "सर्व॒मायु॑रेति॥"
+          "sanskrit": "sarva̠māyu̍reti||"
         },
         {
           "id": "ta-1-26-45",
           "chunkNumber": 45,
-          "sanskrit": "अ॒भि॒चर॑ꣴ श्चिन्वीत।"
+          "sanskrit": "a̠bhi̠cara̍gͫͫ ścinvīta|"
         },
         {
           "id": "ta-1-26-46",
           "chunkNumber": 46,
-          "sanskrit": "वज्रो॒ वा आपः॑ वज्र॑मे॒व भ्रातृ॑व्येभ्यः॒ प्रह॑रति।"
+          "sanskrit": "vajro̠ vā āpaḥ̍ vajra̍me̠va bhrātṛ̍vyebhyaḥ̠ praha̍rati|"
         },
         {
           "id": "ta-1-26-47",
           "chunkNumber": 47,
-          "sanskrit": "स्तृ॒णु॒त ए॑नम्॥"
+          "sanskrit": "stṛ̠ṇu̠ta e̍nam||"
         },
         {
           "id": "ta-1-26-48",
           "chunkNumber": 48,
-          "sanskrit": "तेज॑स्कामो॒ यश॑स्कामः।"
+          "sanskrit": "teja̍skāmo̠ yaśa̍skāmaḥ|"
         },
         {
           "id": "ta-1-26-49",
           "chunkNumber": 49,
-          "sanskrit": "ब्र॒ह्म॒व॒र्च॒सका॑मः स्व॒र्गका॑मश्चिन्वीत।"
+          "sanskrit": "bra̠hma̠va̠rca̠sakā̍maḥ sva̠rgakā̍maścinvīta|"
         },
         {
           "id": "ta-1-26-50",
           "chunkNumber": 50,
-          "sanskrit": "ए॒ता व॒द्वा वा᳚स्ति।"
+          "sanskrit": "e̠tā va̠dvā vā̎sti|"
         },
         {
           "id": "ta-1-26-51",
           "chunkNumber": 51,
-          "sanskrit": "याव॑दे॒तत्।"
+          "sanskrit": "yāva̍de̠tat|"
         },
         {
           "id": "ta-1-26-52",
           "chunkNumber": 52,
-          "sanskrit": "याव॑दे॒वास्ति॑।"
+          "sanskrit": "yāva̍de̠vāsti̍|"
         },
         {
           "id": "ta-1-26-53",
           "chunkNumber": 53,
-          "sanskrit": "तदव॑रुन्धे॥"
+          "sanskrit": "tadava̍rundhe||"
         },
         {
           "id": "ta-1-26-54",
           "chunkNumber": 54,
-          "sanskrit": "तस्यै॒ तद्व्र॒तम्।"
+          "sanskrit": "tasyai̠ tadvra̠tam|"
         },
         {
           "id": "ta-1-26-55",
           "chunkNumber": 55,
-          "sanskrit": "वर्ष॑ति॒ न धा॑वेत् अ॒मृत॒व्ँवा आपः॑।"
+          "sanskrit": "varṣa̍ti̠ na dhā̍vet a̠mṛta̠vm̐vā āpaḥ̍|"
         },
         {
           "id": "ta-1-26-56",
           "chunkNumber": 56,
-          "sanskrit": "अ॒मृत॒स्यान॑न्तरित्यै॥"
+          "sanskrit": "a̠mṛta̠syāna̍ntarityai||"
         },
         {
           "id": "ta-1-26-57",
           "chunkNumber": 57,
-          "sanskrit": "नाफ्सुमूत्र॑पुरी॒षङ्कु॑र्यात्।"
+          "sanskrit": "nāphsumūtra̍purī̠ṣaṅku̍ryāt|"
         },
         {
           "id": "ta-1-26-58",
           "chunkNumber": 58,
-          "sanskrit": "न निष्ठी॑वेत्।"
+          "sanskrit": "na niṣṭhī̍vet|"
         },
         {
           "id": "ta-1-26-59",
           "chunkNumber": 59,
-          "sanskrit": "न वि॒वस॑नः स्नायात्।"
+          "sanskrit": "na vi̠vasa̍naḥ snāyāt|"
         },
         {
           "id": "ta-1-26-60",
           "chunkNumber": 60,
-          "sanskrit": "गुह्यो॒ वा ए॒षो᳚ऽग्निः।"
+          "sanskrit": "guhyo̠ vā e̠ṣo̎'gniḥ|"
         },
         {
           "id": "ta-1-26-61",
           "chunkNumber": 61,
-          "sanskrit": "ए॒तस्या॒ग्ने रन॑ति दाहाय॥"
+          "sanskrit": "e̠tasyā̠gne rana̍ti dāhāya||"
         },
         {
           "id": "ta-1-26-62",
           "chunkNumber": 62,
-          "sanskrit": "न पु॑ष्करप॒र्णानि॒ हिर॑ण्य॒व्ँवाऽधि॒तिष्ठे᳚त्।"
+          "sanskrit": "na pu̍ṣkarapa̠rṇāni̠ hira̍ṇya̠vm̐vā'dhi̠tiṣṭhe̎t|"
         },
         {
           "id": "ta-1-26-63",
           "chunkNumber": 63,
-          "sanskrit": "ए॒तस्या॒ग्नेरन॑भ्यारोहाय॥"
+          "sanskrit": "e̠tasyā̠gnerana̍bhyārohāya||"
         },
         {
           "id": "ta-1-26-64",
           "chunkNumber": 64,
-          "sanskrit": "न कूर्म॒स्याश्नी॑यात्।"
+          "sanskrit": "na kūrma̠syāśnī̍yāt|"
         },
         {
           "id": "ta-1-26-65",
           "chunkNumber": 65,
-          "sanskrit": "नोद॒कस्या॒घातु॑का॒न्येन॑मोद॒कानि॑ भवन्ति।"
+          "sanskrit": "noda̠kasyā̠ghātu̍kā̠nyena̍moda̠kāni̍ bhavanti|"
         },
         {
           "id": "ta-1-26-66",
           "chunkNumber": 66,
-          "sanskrit": "अ॒घातु॑का॒ आपः॑।"
+          "sanskrit": "a̠ghātu̍kā̠ āpaḥ̍|"
         },
         {
           "id": "ta-1-26-67",
           "chunkNumber": 67,
-          "sanskrit": "य ए॒तम॒ग्निञ्चि॑नु॒ते।"
+          "sanskrit": "ya e̠tama̠gniñci̍nu̠te|"
         },
         {
           "id": "ta-1-26-68",
           "chunkNumber": 68,
-          "sanskrit": "य उ॑चैनमे॒वव्ँवेद॑"
+          "sanskrit": "ya u̍cainame̠vavm̐veda̍"
         }
       ]
     },
@@ -1175,318 +767,318 @@
         {
           "id": "ta-1-27-1",
           "chunkNumber": 1,
-          "sanskrit": "इ॒मा नु॑कं॒ भुव॑ना सीषधेम।",
+          "sanskrit": "i̠mā nu̍kaṃ̠ bhuva̍nā sīṣadhema|",
           "section": 27
         },
         {
           "id": "ta-1-27-2",
           "chunkNumber": 2,
-          "sanskrit": "इन्द्र॑श्च॒ विश्वे॑च दे॒वाः॥"
+          "sanskrit": "indra̍śca̠ viśve̍ca de̠vāḥ||"
         },
         {
           "id": "ta-1-27-3",
           "chunkNumber": 3,
-          "sanskrit": "य॒ज्ञञ्च॑ नस्त॒न्वञ्च॑ प्र॒जाञ्च॑।"
+          "sanskrit": "ya̠jñañca̍ nasta̠nvañca̍ pra̠jāñca̍|"
         },
         {
           "id": "ta-1-27-4",
           "chunkNumber": 4,
-          "sanskrit": "आ॒दि॒त्यैरिन्दः॑ स॒ह सी॑षधातु॥"
+          "sanskrit": "ā̠di̠tyairindaḥ̍ sa̠ha sī̍ṣadhātu||"
         },
         {
           "id": "ta-1-27-5",
           "chunkNumber": 5,
-          "sanskrit": "आ॒दि॒त्यैरिन्द्रः॒ सग॑णोम॒रुद्भिः॑।"
+          "sanskrit": "ā̠di̠tyairindraḥ̠ saga̍ṇoma̠rudbhiḥ̍|"
         },
         {
           "id": "ta-1-27-6",
           "chunkNumber": 6,
-          "sanskrit": "अ॒स्माकं॑ भूत्ववि॒ता त॒नूना᳚म्॥"
+          "sanskrit": "a̠smākaṃ̍ bhūtvavi̠tā ta̠nūnā̎m||"
         },
         {
           "id": "ta-1-27-7",
           "chunkNumber": 7,
-          "sanskrit": "आप्ल॑वस्व॒ प्रप्ल॑वस्व।"
+          "sanskrit": "āpla̍vasva̠ prapla̍vasva|"
         },
         {
           "id": "ta-1-27-8",
           "chunkNumber": 8,
-          "sanskrit": "आ॒ण्डी भ॑व ज॒ मा मु॒हुः।"
+          "sanskrit": "ā̠ṇḍī bha̍va ja̠ mā mu̠huḥ|"
         },
         {
           "id": "ta-1-27-9",
           "chunkNumber": 9,
-          "sanskrit": "सुखादीन्दुः॑ खनि॒धनाम्।"
+          "sanskrit": "sukhādīnduḥ̍ khani̠dhanām|"
         },
         {
           "id": "ta-1-27-10",
           "chunkNumber": 10,
-          "sanskrit": "प्रति॑मुञ्चस्व॒ स्वां पु॒रम् मरी॑चयः स्वायंभु॒वाः।"
+          "sanskrit": "prati̍muñcasva̠ svāṃ pu̠ram marī̍cayaḥ svāyaṃbhu̠vāḥ|"
         },
         {
           "id": "ta-1-27-11",
           "chunkNumber": 11,
-          "sanskrit": "ये श॑री॒राण्य॑ कल्पयन्न्।"
+          "sanskrit": "ye śa̍rī̠rāṇya̍ kalpayann|"
         },
         {
           "id": "ta-1-27-12",
           "chunkNumber": 12,
-          "sanskrit": "ते ते॑ दे॒हङ्क॑ल्पयन्तु।"
+          "sanskrit": "te te̍ de̠haṅka̍lpayantu|"
         },
         {
           "id": "ta-1-27-13",
           "chunkNumber": 13,
-          "sanskrit": "मा च॑ ते॒ ख्या स्म॑ तीरिषत्॥"
+          "sanskrit": "mā ca̍ te̠ khyā sma̍ tīriṣat||"
         },
         {
           "id": "ta-1-27-14",
           "chunkNumber": 14,
-          "sanskrit": "उत्ति॑ष्ठत॒ मा स्व॑प्त।"
+          "sanskrit": "utti̍ṣṭhata̠ mā sva̍pta|"
         },
         {
           "id": "ta-1-27-15",
           "chunkNumber": 15,
-          "sanskrit": "अ॒ग्निमि॑च्छद्ध्वं॒ भार॑ताः।"
+          "sanskrit": "a̠gnimi̍cchaddhvaṃ̠ bhāra̍tāḥ|"
         },
         {
           "id": "ta-1-27-16",
           "chunkNumber": 16,
-          "sanskrit": "राज्ञः॒ सोम॑स्य तृ॒प्तासः॑।"
+          "sanskrit": "rājñaḥ̠ soma̍sya tṛ̠ptāsaḥ̍|"
         },
         {
           "id": "ta-1-27-17",
           "chunkNumber": 17,
-          "sanskrit": "सूर्ये॑ण स॒युजो॑षसः॥"
+          "sanskrit": "sūrye̍ṇa sa̠yujo̍ṣasaḥ||"
         },
         {
           "id": "ta-1-27-18",
           "chunkNumber": 18,
-          "sanskrit": "युवा॑ सु॒वासाः᳚§14॥"
+          "sanskrit": "yuvā̍ su̠vāsāḥ̎§·14·||"
         },
         {
           "id": "ta-1-27-19",
           "chunkNumber": 19,
-          "sanskrit": "अ॒ष्टाच॑क्रा॒ नव॑द्वारा दे॒वानां॒ पूर॑यो॒द्ध्या।"
+          "sanskrit": "a̠ṣṭāca̍krā̠ nava̍dvārā de̠vānāṃ̠ pūra̍yo̠ddhyā|"
         },
         {
           "id": "ta-1-27-20",
           "chunkNumber": 20,
-          "sanskrit": "तस्या॑ꣳ हिरण्म॑यः को॒शः।"
+          "sanskrit": "tasyā̍gͫ hiraṇma̍yaḥ ko̠śaḥ|"
         },
         {
           "id": "ta-1-27-21",
           "chunkNumber": 21,
-          "sanskrit": "स्व॒र्गो लो॒को ज्योति॒षा ऽऽवृ॑तः॥"
+          "sanskrit": "sva̠rgo lo̠ko jyoti̠ṣā ''vṛ̍taḥ||"
         },
         {
           "id": "ta-1-27-22",
           "chunkNumber": 22,
-          "sanskrit": "यो वै तां᳚ ब्रह्म॑णो वे॒द।"
+          "sanskrit": "yo vai tāṃ̎ brahma̍ṇo ve̠da|"
         },
         {
           "id": "ta-1-27-23",
           "chunkNumber": 23,
-          "sanskrit": "अ॒मृते॑नावृ॒तां पु॑रीम्।"
+          "sanskrit": "a̠mṛte̍nāvṛ̠tāṃ pu̍rīm|"
         },
         {
           "id": "ta-1-27-24",
           "chunkNumber": 24,
-          "sanskrit": "तस्मै᳚ ब्रह्म च॑ ब्रह्मा॒ च।"
+          "sanskrit": "tasmai̎ brahma ca̍ brahmā̠ ca|"
         },
         {
           "id": "ta-1-27-25",
           "chunkNumber": 25,
-          "sanskrit": "आ॒युः कीर्तिं॑ प्र॒जान्द॑दुः॥"
+          "sanskrit": "ā̠yuḥ kīrtiṃ̍ pra̠jānda̍duḥ||"
         },
         {
           "id": "ta-1-27-26",
           "chunkNumber": 26,
-          "sanskrit": "वि॒भ्राज॑माना॒ꣳ॒ हरि॑णीम्।"
+          "sanskrit": "vi̠bhrāja̍mānā̠g̠ͫ hari̍ṇīm|"
         },
         {
           "id": "ta-1-27-27",
           "chunkNumber": 27,
-          "sanskrit": "य॒शसा॑ संप॒रीवृ॑ताम्।"
+          "sanskrit": "ya̠śasā̍ saṃpa̠rīvṛ̍tām|"
         },
         {
           "id": "ta-1-27-28",
           "chunkNumber": 28,
-          "sanskrit": "पुर॑ꣳ हिरण्म॑यीं ब्र॒ह्मा वि॒वेशा॑प॒राजि॑ता॥"
+          "sanskrit": "pura̍gͫ hiraṇma̍yīṃ bra̠hmā vi̠veśā̍pa̠rāji̍tā||"
         },
         {
           "id": "ta-1-27-29",
           "chunkNumber": 29,
-          "sanskrit": "पराङ्गेत्य॑ (पराङत्य॑) ज्याम॒यी।"
+          "sanskrit": "parāṅgetya̍ (parāṅatya̍) jyāma̠yī|"
         },
         {
           "id": "ta-1-27-30",
           "chunkNumber": 30,
-          "sanskrit": "पराङ्गेत्य॑ (पराङत्य॑) नाश॒की।"
+          "sanskrit": "parāṅgetya̍ (parāṅatya̍) nāśa̠kī|"
         },
         {
           "id": "ta-1-27-31",
           "chunkNumber": 31,
-          "sanskrit": "इ॒ह चा॑मुत्र॑ चान्वे॒ति।"
+          "sanskrit": "i̠ha cā̍mutra̍ cānve̠ti|"
         },
         {
           "id": "ta-1-27-32",
           "chunkNumber": 32,
-          "sanskrit": "वि॒द्वान् दे॑वासु॒रानु॑भ॒यान्॥"
+          "sanskrit": "vi̠dvān de̍vāsu̠rānu̍bha̠yān||"
         },
         {
           "id": "ta-1-27-33",
           "chunkNumber": 33,
-          "sanskrit": "यत्कु॑मा॒री म॒न्द्रय॑ते।"
+          "sanskrit": "yatku̍mā̠rī ma̠ndraya̍te|"
         },
         {
           "id": "ta-1-27-34",
           "chunkNumber": 34,
-          "sanskrit": "य॒द्यो॒षिद्यत्प॑ति॒व्रता᳚।"
+          "sanskrit": "ya̠dyo̠ṣidyatpa̍ti̠vratā̎|"
         },
         {
           "id": "ta-1-27-35",
           "chunkNumber": 35,
-          "sanskrit": "अरि॑ष्ट॒य्ँयत्किञ्च॑ क्रि॒यते᳚।"
+          "sanskrit": "ari̍ṣṭa̠ym̐yatkiñca̍ kri̠yate̎|"
         },
         {
           "id": "ta-1-27-36",
           "chunkNumber": 36,
-          "sanskrit": "अ॒ग्निस्तदनु॑ वेधति॥"
+          "sanskrit": "a̠gnistadanu̍ vedhati||"
         },
         {
           "id": "ta-1-27-37",
           "chunkNumber": 37,
-          "sanskrit": "अ॒शृता॑सः शृ॑तास॒श्च य॒ज्वानो॒ येऽप्य॑य॒ज्वनः॑।"
+          "sanskrit": "a̠śṛtā̍saḥ śṛ̍tāsa̠śca ya̠jvāno̠ ye'pya̍ya̠jvanaḥ̍|"
         },
         {
           "id": "ta-1-27-38",
           "chunkNumber": 38,
-          "sanskrit": "स्व॑र्यन्तो॒ नापे᳚ख्षन्ते।"
+          "sanskrit": "sva̍ryanto̠ nāpe̎khṣante|"
         },
         {
           "id": "ta-1-27-39",
           "chunkNumber": 39,
-          "sanskrit": "इन्द्र॑म॒ग्निञ्च॑ ये वि॒दुः॥"
+          "sanskrit": "indra̍ma̠gniñca̍ ye vi̠duḥ||"
         },
         {
           "id": "ta-1-27-40",
           "chunkNumber": 40,
-          "sanskrit": "सिक॑ता इव स॒य्ँयन्ति॑।"
+          "sanskrit": "sika̍tā iva sa̠ym̐yanti̍|"
         },
         {
           "id": "ta-1-27-41",
           "chunkNumber": 41,
-          "sanskrit": "र॒श्मिभिः॑समु॒दीरि॑ताः।"
+          "sanskrit": "ra̠śmibhiḥ̍samu̠dīri̍tāḥ|"
         },
         {
           "id": "ta-1-27-42",
           "chunkNumber": 42,
-          "sanskrit": "अ॒स्माल्लो॒काद॑मुष्मा॒च्च।"
+          "sanskrit": "a̠smāllo̠kāda̍muṣmā̠cca|"
         },
         {
           "id": "ta-1-27-43",
           "chunkNumber": 43,
-          "sanskrit": "ऋ॒षिभि॑रदात्पृ॒श्निभिः॑॥"
+          "sanskrit": "ṛ̠ṣibhi̍radātpṛ̠śnibhiḥ̍||"
         },
         {
           "id": "ta-1-27-44",
           "chunkNumber": 44,
-          "sanskrit": "अपे॑त॒ वीत॒ वि च॑ सर्प॒तातः॑।"
+          "sanskrit": "ape̍ta̠ vīta̠ vi ca̍ sarpa̠tātaḥ̍|"
         },
         {
           "id": "ta-1-27-45",
           "chunkNumber": 45,
-          "sanskrit": "येऽत्र॒ स्थ पु॑रा॒णा ये च॒ नूत॑नाः।"
+          "sanskrit": "ye'tra̠ stha pu̍rā̠ṇā ye ca̠ nūta̍nāḥ|"
         },
         {
           "id": "ta-1-27-46",
           "chunkNumber": 46,
-          "sanskrit": "अहो॑भिर॒द्भिर॒क्तुभि॒र्व्य॑क्तम् य॒मो द॑दात्वव॒सान॑मस्मै॥"
+          "sanskrit": "aho̍bhira̠dbhira̠ktubhi̠rvya̍ktam ya̠mo da̍dātvava̠sāna̍masmai||"
         },
         {
           "id": "ta-1-27-47",
           "chunkNumber": 47,
-          "sanskrit": "नृ मु॑णन्तु नृ पा॒त्वर्यः॑।"
+          "sanskrit": "nṛ mu̍ṇantu nṛ pā̠tvaryaḥ̍|"
         },
         {
           "id": "ta-1-27-48",
           "chunkNumber": 48,
-          "sanskrit": "अ॒कृ॒ष्टा ये च॒ कृष्ट॑जाः।"
+          "sanskrit": "a̠kṛ̠ṣṭā ye ca̠ kṛṣṭa̍jāḥ|"
         },
         {
           "id": "ta-1-27-49",
           "chunkNumber": 49,
-          "sanskrit": "कु॒मारी॑षु क॒नीनी॑षु।"
+          "sanskrit": "ku̠mārī̍ṣu ka̠nīnī̍ṣu|"
         },
         {
           "id": "ta-1-27-50",
           "chunkNumber": 50,
-          "sanskrit": "जा॒रिणी॑षु च॒ ये हि॒ताः॥"
+          "sanskrit": "jā̠riṇī̍ṣu ca̠ ye hi̠tāḥ||"
         },
         {
           "id": "ta-1-27-51",
           "chunkNumber": 51,
-          "sanskrit": "रेतः॑ पीता॒ आण्ड॑पीताः।"
+          "sanskrit": "retaḥ̍ pītā̠ āṇḍa̍pītāḥ|"
         },
         {
           "id": "ta-1-27-52",
           "chunkNumber": 52,
-          "sanskrit": "अङ्गा॑रेषु च॒ ये हु॒ताः।"
+          "sanskrit": "aṅgā̍reṣu ca̠ ye hu̠tāḥ|"
         },
         {
           "id": "ta-1-27-53",
           "chunkNumber": 53,
-          "sanskrit": "उ॒भया᳚न् पुत्र॑ पौत्र॒कान्।"
+          "sanskrit": "u̠bhayā̎n putra̍ pautra̠kān|"
         },
         {
           "id": "ta-1-27-54",
           "chunkNumber": 54,
-          "sanskrit": "यु॒वे॒ऽहय्ँय॒मराज॑गान्॥"
+          "sanskrit": "yu̠ve̠'haym̐ya̠marāja̍gān||"
         },
         {
           "id": "ta-1-27-55",
           "chunkNumber": 55,
-          "sanskrit": "श॒तमिन्नु श॒रदः॑§15॥"
+          "sanskrit": "śa̠taminnu śa̠radaḥ̍§·15·||"
         },
         {
           "id": "ta-1-27-56",
           "chunkNumber": 56,
-          "sanskrit": "अदो॒ यद्ब्रह्म॑ विल॒बम्।"
+          "sanskrit": "ado̠ yadbrahma̍ vila̠bam|"
         },
         {
           "id": "ta-1-27-57",
           "chunkNumber": 57,
-          "sanskrit": "पि॒तृ॒णाञ्च॑ य॒मस्य॑ च।"
+          "sanskrit": "pi̠tṛ̠ṇāñca̍ ya̠masya̍ ca|"
         },
         {
           "id": "ta-1-27-58",
           "chunkNumber": 58,
-          "sanskrit": "वरु॑ण॒स्याश्वि॑नोर॒ग्नेः।"
+          "sanskrit": "varu̍ṇa̠syāśvi̍nora̠gneḥ|"
         },
         {
           "id": "ta-1-27-59",
           "chunkNumber": 59,
-          "sanskrit": "म॒रुता᳚ञ्च वि॒हाय॑साम्॥"
+          "sanskrit": "ma̠rutā̎ñca vi̠hāya̍sām||"
         },
         {
           "id": "ta-1-27-60",
           "chunkNumber": 60,
-          "sanskrit": "का॒म॒प्र॒यव॑णं मे अस्तु।"
+          "sanskrit": "kā̠ma̠pra̠yava̍ṇaṃ me astu|"
         },
         {
           "id": "ta-1-27-61",
           "chunkNumber": 61,
-          "sanskrit": "स ह्ये॑वास्मि॑ स॒नात॑नः।"
+          "sanskrit": "sa hye̍vāsmi̍ sa̠nāta̍naḥ|"
         },
         {
           "id": "ta-1-27-62",
           "chunkNumber": 62,
-          "sanskrit": "इति नाको ब्रह्मिश्रवो॑ रायो॒ धनम्।"
+          "sanskrit": "iti nāko brahmiśravo̍ rāyo̠ dhanam|"
         },
         {
           "id": "ta-1-27-63",
           "chunkNumber": 63,
-          "sanskrit": "पु॒त्रानापो॑ दे॒वीरि॒हाहि॑ता"
+          "sanskrit": "pu̠trānāpo̍ de̠vīri̠hāhi̍tā"
         }
       ]
     },
@@ -1498,53 +1090,53 @@
         {
           "id": "ta-1-28-1",
           "chunkNumber": 1,
-          "sanskrit": "विशी᳚र्ष्णीं॒ गृद्ध्र॑शीर्ष्णीञ्च।",
+          "sanskrit": "viśī̎rṣṇīṃ̠ gṛddhra̍śīrṣṇīñca|",
           "section": 28
         },
         {
           "id": "ta-1-28-2",
           "chunkNumber": 2,
-          "sanskrit": "अपेतो॑ निर्ऋ॒तिꣳ ह॑थः।"
+          "sanskrit": "apeto̍ nir·ṛ̠tigͫ ha̍thaḥ|"
         },
         {
           "id": "ta-1-28-3",
           "chunkNumber": 3,
-          "sanskrit": "परिबाधꣴ श्वे॑तकु॒ख्षम्।"
+          "sanskrit": "paribādhagͫͫ śve̍taku̠khṣam|"
         },
         {
           "id": "ta-1-28-4",
           "chunkNumber": 4,
-          "sanskrit": "नि॒जङ्घ॑ꣳ शब॒लोद॑रम्॥"
+          "sanskrit": "ni̠jaṅgha̍gͫ śaba̠loda̍ram||"
         },
         {
           "id": "ta-1-28-5",
           "chunkNumber": 5,
-          "sanskrit": "स॒ तान्वा॒च्याय॑या स॒ह।"
+          "sanskrit": "sa̠ tānvā̠cyāya̍yā sa̠ha|"
         },
         {
           "id": "ta-1-28-6",
           "chunkNumber": 6,
-          "sanskrit": "अग्ने॒ नाश॑य स॒न्दृशः॑।"
+          "sanskrit": "agne̠ nāśa̍ya sa̠ndṛśaḥ̍|"
         },
         {
           "id": "ta-1-28-7",
           "chunkNumber": 7,
-          "sanskrit": "ई॒र्ष्या॒सू॒ये बु॑भु॒ख्षाम्।"
+          "sanskrit": "ī̠rṣyā̠sū̠ye bu̍bhu̠khṣām|"
         },
         {
           "id": "ta-1-28-8",
           "chunkNumber": 8,
-          "sanskrit": "म॒न्युं कृ॒त्यां च॑ दीधिरे।"
+          "sanskrit": "ma̠nyuṃ kṛ̠tyāṃ ca̍ dīdhire|"
         },
         {
           "id": "ta-1-28-9",
           "chunkNumber": 9,
-          "sanskrit": "रथे॑न किꣳशु॒काव॑ता।"
+          "sanskrit": "rathe̍na kigͫśu̠kāva̍tā|"
         },
         {
           "id": "ta-1-28-10",
           "chunkNumber": 10,
-          "sanskrit": "अग्ने॒ नाश॑य स॒न्दृशः॑"
+          "sanskrit": "agne̠ nāśa̍ya sa̠ndṛśaḥ̍"
         }
       ]
     },
@@ -1556,53 +1148,53 @@
         {
           "id": "ta-1-29-1",
           "chunkNumber": 1,
-          "sanskrit": "प॒र्जन्या॑य॒ प्रगा॑यत।",
+          "sanskrit": "pa̠rjanyā̍ya̠ pragā̍yata|",
           "section": 29
         },
         {
           "id": "ta-1-29-2",
           "chunkNumber": 2,
-          "sanskrit": "दि॒वस्पु॒त्राय॑ मी॒ढुषे᳚।"
+          "sanskrit": "di̠vaspu̠trāya̍ mī̠ḍhuṣe̎|"
         },
         {
           "id": "ta-1-29-3",
           "chunkNumber": 3,
-          "sanskrit": "स नो॑ य॒वस॑मिच्छतु॥"
+          "sanskrit": "sa no̍ ya̠vasa̍micchatu||"
         },
         {
           "id": "ta-1-29-4",
           "chunkNumber": 4,
-          "sanskrit": "इ॒दव्ँवचः॑ प॒र्जन्या॑य स्व॒राजे᳚।"
+          "sanskrit": "i̠davm̐vacaḥ̍ pa̠rjanyā̍ya sva̠rāje̎|"
         },
         {
           "id": "ta-1-29-5",
           "chunkNumber": 5,
-          "sanskrit": "हृ॒दो अ॒स्त्वन्त॑र॒न्तद्यु॑योत।"
+          "sanskrit": "hṛ̠do a̠stvanta̍ra̠ntadyu̍yota|"
         },
         {
           "id": "ta-1-29-6",
           "chunkNumber": 6,
-          "sanskrit": "म॒यो॒भूर्वातो॑ वि॒श्वकृ॑ष्टयः सन्त्व॒स्मे।"
+          "sanskrit": "ma̠yo̠bhūrvāto̍ vi̠śvakṛ̍ṣṭayaḥ santva̠sme|"
         },
         {
           "id": "ta-1-29-7",
           "chunkNumber": 7,
-          "sanskrit": "सु॒पि॒प्प॒ला ओष॑धीर् दे॒वगो॑पाः॥"
+          "sanskrit": "su̠pi̠ppa̠lā oṣa̍dhīr de̠vago̍pāḥ||"
         },
         {
           "id": "ta-1-29-8",
           "chunkNumber": 8,
-          "sanskrit": "यो गर्भ॒मोष॑धीनाम्।"
+          "sanskrit": "yo garbha̠moṣa̍dhīnām|"
         },
         {
           "id": "ta-1-29-9",
           "chunkNumber": 9,
-          "sanskrit": "गवा᳚ङ्कृ॒णोत्यर्व॑ताम्।"
+          "sanskrit": "gavā̎ṅkṛ̠ṇotyarva̍tām|"
         },
         {
           "id": "ta-1-29-10",
           "chunkNumber": 10,
-          "sanskrit": "प॒र्जन्यः॑ पुरु॒षीणा᳚म्"
+          "sanskrit": "pa̠rjanyaḥ̍ puru̠ṣīṇā̎m"
         }
       ]
     },
@@ -1614,63 +1206,63 @@
         {
           "id": "ta-1-30-1",
           "chunkNumber": 1,
-          "sanskrit": "पुन॑र्मामैत्विन्द्रि॒यम्।",
+          "sanskrit": "puna̍rmāmaitvindri̠yam|",
           "section": 30
         },
         {
           "id": "ta-1-30-2",
           "chunkNumber": 2,
-          "sanskrit": "पुन॒रायुः॒ पुन॒र्भगः॑।"
+          "sanskrit": "puna̠rāyuḥ̠ puna̠rbhagaḥ̍|"
         },
         {
           "id": "ta-1-30-3",
           "chunkNumber": 3,
-          "sanskrit": "पुन॒र् ब्राह्म॑णमैतु मा।"
+          "sanskrit": "puna̠r brāhma̍ṇamaitu mā|"
         },
         {
           "id": "ta-1-30-4",
           "chunkNumber": 4,
-          "sanskrit": "पुन॒र् द्रवि॑ण मैतु मा॥"
+          "sanskrit": "puna̠r dravi̍ṇa maitu mā||"
         },
         {
           "id": "ta-1-30-5",
           "chunkNumber": 5,
-          "sanskrit": "यन्मे॒ऽद्य रेतः॑ पृथि॒वीमस्का॑न्।"
+          "sanskrit": "yanme̠'dya retaḥ̍ pṛthi̠vīmaskā̍n|"
         },
         {
           "id": "ta-1-30-6",
           "chunkNumber": 6,
-          "sanskrit": "यदोष॑धीर॒प्यस॑र॒द्यदापः॑।"
+          "sanskrit": "yadoṣa̍dhīra̠pyasa̍ra̠dyadāpaḥ̍|"
         },
         {
           "id": "ta-1-30-7",
           "chunkNumber": 7,
-          "sanskrit": "इ॒दन्तत् पुन॒राद॑दे।"
+          "sanskrit": "i̠dantat puna̠rāda̍de|"
         },
         {
           "id": "ta-1-30-8",
           "chunkNumber": 8,
-          "sanskrit": "दी॒र्घा॒यु॒त्वाय॒ वर्च॑से॥"
+          "sanskrit": "dī̠rghā̠yu̠tvāya̠ varca̍se||"
         },
         {
           "id": "ta-1-30-9",
           "chunkNumber": 9,
-          "sanskrit": "यन्मे॒ रेतः॒ प्रसि॑च्यते।"
+          "sanskrit": "yanme̠ retaḥ̠ prasi̍cyate|"
         },
         {
           "id": "ta-1-30-10",
           "chunkNumber": 10,
-          "sanskrit": "यन्म॒ आजा॑यते॒ पुनः॑।"
+          "sanskrit": "yanma̠ ājā̍yate̠ punaḥ̍|"
         },
         {
           "id": "ta-1-30-11",
           "chunkNumber": 11,
-          "sanskrit": "तेन॑ माम॒मृतं॑ कुरु।"
+          "sanskrit": "tena̍ māma̠mṛtaṃ̍ kuru|"
         },
         {
           "id": "ta-1-30-12",
           "chunkNumber": 12,
-          "sanskrit": "तेन॑ सुप्र॒जस॑ङ्कुरु"
+          "sanskrit": "tena̍ supra̠jasa̍ṅkuru"
         }
       ]
     },
@@ -1682,313 +1274,313 @@
         {
           "id": "ta-1-31-1",
           "chunkNumber": 1,
-          "sanskrit": "अ॒द्भ्यस्तिरो॒धा जा॑यत।",
+          "sanskrit": "a̠dbhyastiro̠dhā jā̍yata|",
           "section": 31
         },
         {
           "id": "ta-1-31-2",
           "chunkNumber": 2,
-          "sanskrit": "तव॑ वैश्रव॒णः स॑दा।"
+          "sanskrit": "tava̍ vaiśrava̠ṇaḥ sa̍dā|"
         },
         {
           "id": "ta-1-31-3",
           "chunkNumber": 3,
-          "sanskrit": "तिरो॑ धेहि सप॒त्नान्नः॑।"
+          "sanskrit": "tiro̍ dhehi sapa̠tnānnaḥ̍|"
         },
         {
           "id": "ta-1-31-4",
           "chunkNumber": 4,
-          "sanskrit": "ये अपो॒ऽश्नन्ति॑ केच॒न॥"
+          "sanskrit": "ye apo̠'śnanti̍ keca̠na||"
         },
         {
           "id": "ta-1-31-5",
           "chunkNumber": 5,
-          "sanskrit": "त्वा॒ष्ट्रीं मा॒याव्ँव᳚श्रव॒णः।"
+          "sanskrit": "tvā̠ṣṭrīṃ mā̠yāvm̐va̎śrava̠ṇaḥ|"
         },
         {
           "id": "ta-1-31-6",
           "chunkNumber": 6,
-          "sanskrit": "रथ॑ꣳ सहस्र॒ वन्धु॑रम्।"
+          "sanskrit": "ratha̍gͫ sahasra̠ vandhu̍ram|"
         },
         {
           "id": "ta-1-31-7",
           "chunkNumber": 7,
-          "sanskrit": "पु॒रु॒श्च॒क्रꣳ सह॑स्राश्वम्।"
+          "sanskrit": "pu̠ru̠śca̠kragͫ saha̍srāśvam|"
         },
         {
           "id": "ta-1-31-8",
           "chunkNumber": 8,
-          "sanskrit": "आस्था॒ याया॑हि नो ब॒लिम्॥"
+          "sanskrit": "āsthā̠ yāyā̍hi no ba̠lim||"
         },
         {
           "id": "ta-1-31-9",
           "chunkNumber": 9,
-          "sanskrit": "यस्मै॑ भू॒तानि॑ ब॒लिमाव॑हन्ति।"
+          "sanskrit": "yasmai̍ bhū̠tāni̍ ba̠limāva̍hanti|"
         },
         {
           "id": "ta-1-31-10",
           "chunkNumber": 10,
-          "sanskrit": "धन॒ङ्गावो॒ हस्ति॒ हिर॑ण्य॒मश्वा॑न् असा॑म सुम॒तौ य॒ज्ञिय॑स्य।"
+          "sanskrit": "dhana̠ṅgāvo̠ hasti̠ hira̍ṇya̠maśvā̍n asā̍ma suma̠tau ya̠jñiya̍sya|"
         },
         {
           "id": "ta-1-31-11",
           "chunkNumber": 11,
-          "sanskrit": "श्रियं॒ बिभ्र॒तो ऽन्न॑मुखीव्ँवि॒राज᳚म्॥"
+          "sanskrit": "śriyaṃ̠ bibhra̠to 'nna̍mukhīvm̐vi̠rāja̎m||"
         },
         {
           "id": "ta-1-31-12",
           "chunkNumber": 12,
-          "sanskrit": "सु॒द॒र्॒श॒ने च॑ क्रौ॒ञ्चे च॑।"
+          "sanskrit": "su̠da̠r̠śa̠ne ca̍ krau̠ñce ca̍|"
         },
         {
           "id": "ta-1-31-13",
           "chunkNumber": 13,
-          "sanskrit": "मै॒ना॒गे च॑ म॒हागि॑रौ।"
+          "sanskrit": "mai̠nā̠ge ca̍ ma̠hāgi̍rau|"
         },
         {
           "id": "ta-1-31-14",
           "chunkNumber": 14,
-          "sanskrit": "श॒तद्वा॒ट्टर॑गम॒न्ता (स॒तद्वा॒ट्टर॑गम॒न्ता)।"
+          "sanskrit": "śa̠tadvā̠ṭṭara̍gama̠ntā (sa̠tadvā̠ṭṭara̍gama̠ntā)|"
         },
         {
           "id": "ta-1-31-15",
           "chunkNumber": 15,
-          "sanskrit": "स॒ꣳ॒हार्यं॒ नग॑रं॒ तव॑॥"
+          "sanskrit": "sa̠g̠ͫhāryaṃ̠ naga̍raṃ̠ tava̍||"
         },
         {
           "id": "ta-1-31-16",
           "chunkNumber": 16,
-          "sanskrit": "इति मन्त्राः᳚।"
+          "sanskrit": "iti mantrāḥ̎|"
         },
         {
           "id": "ta-1-31-17",
           "chunkNumber": 17,
-          "sanskrit": "कल्पो॑ऽत ऊ॒द्र्ध्वम्॥"
+          "sanskrit": "kalpo̍'ta ū̠drdhvam||"
         },
         {
           "id": "ta-1-31-18",
           "chunkNumber": 18,
-          "sanskrit": "यदि॒ बलि॒ꣳ॒ हरे᳚त्।"
+          "sanskrit": "yadi̠ bali̠g̠ͫ hare̎t|"
         },
         {
           "id": "ta-1-31-19",
           "chunkNumber": 19,
-          "sanskrit": "हि॒र॒ण्य॒ना॒भये॑ वितु॒दये॑ कौबे॒राया॒यं ब॑लिः सर्वभूताधिपतये न॑म इ॒ति।"
+          "sanskrit": "hi̠ra̠ṇya̠nā̠bhaye̍ vitu̠daye̍ kaube̠rāyā̠yaṃ ba̍liḥ sarvabhūtādhipataye na̍ma i̠ti|"
         },
         {
           "id": "ta-1-31-20",
           "chunkNumber": 20,
-          "sanskrit": "अथ बलिꣳ हृत्वोप॑तिष्ठे॒त॥"
+          "sanskrit": "atha baligͫ hṛtvopa̍tiṣṭhe̠ta||"
         },
         {
           "id": "ta-1-31-21",
           "chunkNumber": 21,
-          "sanskrit": "ख्ष॒त्रं ख्ष॒त्रव्ँवै᳚श्रव॒णः।"
+          "sanskrit": "khṣa̠traṃ khṣa̠travm̐vai̎śrava̠ṇaḥ|"
         },
         {
           "id": "ta-1-31-22",
           "chunkNumber": 22,
-          "sanskrit": "ब्राह्मणा॑ वय॒ꣴ॒ स्मः।"
+          "sanskrit": "brāhmaṇā̍ vaya̠g̠ͫͫ smaḥ|"
         },
         {
           "id": "ta-1-31-23",
           "chunkNumber": 23,
-          "sanskrit": "नम॑स्ते अस्तु॒ मा मा॑ हिꣳसीः।"
+          "sanskrit": "nama̍ste astu̠ mā mā̍ higͫsīḥ|"
         },
         {
           "id": "ta-1-31-24",
           "chunkNumber": 24,
-          "sanskrit": "अस्मात् प्रविश्यान्न॑मद्धी॒ति॥"
+          "sanskrit": "asmāt praviśyānna̍maddhī̠ti||"
         },
         {
           "id": "ta-1-31-25",
           "chunkNumber": 25,
-          "sanskrit": "अथ तमग्निमा॑दधी॒त।"
+          "sanskrit": "atha tamagnimā̍dadhī̠ta|"
         },
         {
           "id": "ta-1-31-26",
           "chunkNumber": 26,
-          "sanskrit": "यस्मिन्ने तत्कर्म प्र॑युञ्जी॒त॥"
+          "sanskrit": "yasminne tatkarma pra̍yuñjī̠ta||"
         },
         {
           "id": "ta-1-31-27",
           "chunkNumber": 27,
-          "sanskrit": "ति॒रोधा॒ भूः।"
+          "sanskrit": "ti̠rodhā̠ bhūḥ|"
         },
         {
           "id": "ta-1-31-28",
           "chunkNumber": 28,
-          "sanskrit": "ति॒रोधा॒ भुवः॑ ति॒रोधाः॒ स्वः॑।"
+          "sanskrit": "ti̠rodhā̠ bhuvaḥ̍ ti̠rodhāḥ̠ svaḥ̍|"
         },
         {
           "id": "ta-1-31-29",
           "chunkNumber": 29,
-          "sanskrit": "ति॒रोधा॒ भूर्भुव॒स्स्वः॑।"
+          "sanskrit": "ti̠rodhā̠ bhūrbhuva̠ssvaḥ̍|"
         },
         {
           "id": "ta-1-31-30",
           "chunkNumber": 30,
-          "sanskrit": "सर्वेषाल्ँलोकानामाधिपत्ये॑ सीदे॒ति॥"
+          "sanskrit": "sarveṣālm̐lokānāmādhipatye̍ sīde̠ti||"
         },
         {
           "id": "ta-1-31-31",
           "chunkNumber": 31,
-          "sanskrit": "अथ तमग्नि॑मिन्धी॒त।"
+          "sanskrit": "atha tamagni̍mindhī̠ta|"
         },
         {
           "id": "ta-1-31-32",
           "chunkNumber": 32,
-          "sanskrit": "यस्मिन्ने तत्कर्म प्र॑युञ्जी॒त॥"
+          "sanskrit": "yasminne tatkarma pra̍yuñjī̠ta||"
         },
         {
           "id": "ta-1-31-33",
           "chunkNumber": 33,
-          "sanskrit": "ति॒रोधा॒ भूः स्वाहा᳚।"
+          "sanskrit": "ti̠rodhā̠ bhūḥ svāhā̎|"
         },
         {
           "id": "ta-1-31-34",
           "chunkNumber": 34,
-          "sanskrit": "ति॒रोधा॒ भुवः॒ स्वाहा᳚।"
+          "sanskrit": "ti̠rodhā̠ bhuvaḥ̠ svāhā̎|"
         },
         {
           "id": "ta-1-31-35",
           "chunkNumber": 35,
-          "sanskrit": "ति॒रोधाः॒ स्वः॑ स्वाहा᳚।"
+          "sanskrit": "ti̠rodhāḥ̠ svaḥ̍ svāhā̎|"
         },
         {
           "id": "ta-1-31-36",
           "chunkNumber": 36,
-          "sanskrit": "ति॒रोधा॒ भूर्भुव॒स्स्व॑स्स्वाहा᳚॥"
+          "sanskrit": "ti̠rodhā̠ bhūrbhuva̠ssva̍ssvāhā̎||"
         },
         {
           "id": "ta-1-31-37",
           "chunkNumber": 37,
-          "sanskrit": "यस्मिन्नस्य काले सर्वा आहुतीर्हुता॑ भवे॒युः अपि ब्राह्मण॑मुखी॒नाः।"
+          "sanskrit": "yasminnasya kāle sarvā āhutīrhutā̍ bhave̠yuḥ api brāhmaṇa̍mukhī̠nāḥ|"
         },
         {
           "id": "ta-1-31-38",
           "chunkNumber": 38,
-          "sanskrit": "तस्मिन्नह्नः काले प्र॑युञ्जी॒त।"
+          "sanskrit": "tasminnahnaḥ kāle pra̍yuñjī̠ta|"
         },
         {
           "id": "ta-1-31-39",
           "chunkNumber": 39,
-          "sanskrit": "परः॑ सु॒प्तज॑नाद्वे॒पि॥"
+          "sanskrit": "paraḥ̍ su̠ptaja̍nādve̠pi||"
         },
         {
           "id": "ta-1-31-40",
           "chunkNumber": 40,
-          "sanskrit": "मा स्म प्रमाद्यन्त॑ माद्ध्या॒पयेत्।"
+          "sanskrit": "mā sma pramādyanta̍ māddhyā̠payet|"
         },
         {
           "id": "ta-1-31-41",
           "chunkNumber": 41,
-          "sanskrit": "सर्वार्थाः᳚ सिद्ध्य॒न्ते।"
+          "sanskrit": "sarvārthāḥ̎ siddhya̠nte|"
         },
         {
           "id": "ta-1-31-42",
           "chunkNumber": 42,
-          "sanskrit": "य ए॑वव्ँवे॒द।"
+          "sanskrit": "ya e̍vavm̐ve̠da|"
         },
         {
           "id": "ta-1-31-43",
           "chunkNumber": 43,
-          "sanskrit": "ख्षुद्ध्यन्निद॑मजा॒नताम्।"
+          "sanskrit": "khṣuddhyannida̍majā̠natām|"
         },
         {
           "id": "ta-1-31-44",
           "chunkNumber": 44,
-          "sanskrit": "सर्वार्था न॑ सिद्ध्य॒न्ते॥"
+          "sanskrit": "sarvārthā na̍ siddhya̠nte||"
         },
         {
           "id": "ta-1-31-45",
           "chunkNumber": 45,
-          "sanskrit": "यस्ते॑ वि॒घातु॑को भ्रा॒ता।"
+          "sanskrit": "yaste̍ vi̠ghātu̍ko bhrā̠tā|"
         },
         {
           "id": "ta-1-31-46",
           "chunkNumber": 46,
-          "sanskrit": "ममान्तर्हृ॑दये॒ श्रितः तस्मा॑ इ॒ममग्र॒ पिण्ड॑ञ्जुहोमि।"
+          "sanskrit": "mamāntarhṛ̍daye̠ śritaḥ tasmā̍ i̠mamagra̠ piṇḍa̍ñjuhomi|"
         },
         {
           "id": "ta-1-31-47",
           "chunkNumber": 47,
-          "sanskrit": "स मे᳚ऽर्था॒न् मा विव॑धीत्।"
+          "sanskrit": "sa me̎'rthā̠n mā viva̍dhīt|"
         },
         {
           "id": "ta-1-31-48",
           "chunkNumber": 48,
-          "sanskrit": "मयि॒ स्वाहा᳚॥"
+          "sanskrit": "mayi̠ svāhā̎||"
         },
         {
           "id": "ta-1-31-49",
           "chunkNumber": 49,
-          "sanskrit": "रा॒जा॒धि॒रा॒जाय॑ प्रसह्य सा॒हिने᳚।"
+          "sanskrit": "rā̠jā̠dhi̠rā̠jāya̍ prasahya sā̠hine̎|"
         },
         {
           "id": "ta-1-31-50",
           "chunkNumber": 50,
-          "sanskrit": "नमो॑ व॒यव्ँवै᳚श्रव॒णाय॑ कुर्महे।"
+          "sanskrit": "namo̍ va̠yavm̐vai̎śrava̠ṇāya̍ kurmahe|"
         },
         {
           "id": "ta-1-31-51",
           "chunkNumber": 51,
-          "sanskrit": "स मे॒ कामा॒न् काम॒ कामा॑य॒ मह्य᳚म्।"
+          "sanskrit": "sa me̠ kāmā̠n kāma̠ kāmā̍ya̠ mahya̎m|"
         },
         {
           "id": "ta-1-31-52",
           "chunkNumber": 52,
-          "sanskrit": "का॒मे॒श्व॒रो वै᳚श्रव॒णो द॑दातु।"
+          "sanskrit": "kā̠me̠śva̠ro vai̎śrava̠ṇo da̍dātu|"
         },
         {
           "id": "ta-1-31-53",
           "chunkNumber": 53,
-          "sanskrit": "कु॒बे॒राय॑ वैश्रव॒णाय॑।"
+          "sanskrit": "ku̠be̠rāya̍ vaiśrava̠ṇāya̍|"
         },
         {
           "id": "ta-1-31-54",
           "chunkNumber": 54,
-          "sanskrit": "म॒हा॒रा॒जाय॒ नमः॑।"
+          "sanskrit": "ma̠hā̠rā̠jāya̠ namaḥ̍|"
         },
         {
           "id": "ta-1-31-55",
           "chunkNumber": 55,
-          "sanskrit": "के॒तवो॒ अरु॑णासश्च।"
+          "sanskrit": "ke̠tavo̠ aru̍ṇāsaśca|"
         },
         {
           "id": "ta-1-31-56",
           "chunkNumber": 56,
-          "sanskrit": "ऋ॒ष॒यो वात॑रश॒नाः।"
+          "sanskrit": "ṛ̠ṣa̠yo vāta̍raśa̠nāḥ|"
         },
         {
           "id": "ta-1-31-57",
           "chunkNumber": 57,
-          "sanskrit": "प्र॒ति॒ष्ठाꣳ श॒तधा॑ हि।"
+          "sanskrit": "pra̠ti̠ṣṭhāgͫ śa̠tadhā̍ hi|"
         },
         {
           "id": "ta-1-31-58",
           "chunkNumber": 58,
-          "sanskrit": "स॒माहि॑तासो सहस्र॒धाय॑सम्।"
+          "sanskrit": "sa̠māhi̍tāso sahasra̠dhāya̍sam|"
         },
         {
           "id": "ta-1-31-59",
           "chunkNumber": 59,
-          "sanskrit": "शि॒वा नः॒ शन्त॑मा भवन्तु।"
+          "sanskrit": "śi̠vā naḥ̠ śanta̍mā bhavantu|"
         },
         {
           "id": "ta-1-31-60",
           "chunkNumber": 60,
-          "sanskrit": "दि॒व्या आप॒ ओष॑धयः।"
+          "sanskrit": "di̠vyā āpa̠ oṣa̍dhayaḥ|"
         },
         {
           "id": "ta-1-31-61",
           "chunkNumber": 61,
-          "sanskrit": "सु॒मृ॒डी॒का सर॑स्वति।"
+          "sanskrit": "su̠mṛ̠ḍī̠kā sara̍svati|"
         },
         {
           "id": "ta-1-31-62",
           "chunkNumber": 62,
-          "sanskrit": "मा ते॒ व्यो॑म स॒न्दृशि॑"
+          "sanskrit": "mā te̠ vyo̍ma sa̠ndṛśi̍"
         }
       ]
     },
@@ -2000,153 +1592,153 @@
         {
           "id": "ta-1-32-1",
           "chunkNumber": 1,
-          "sanskrit": "सव्ँवथ्सरमेत॑द् व्रत॒ञ्चरेत्।",
+          "sanskrit": "savm̐vathsarameta̍d vrata̠ñcaret|",
           "section": 32
         },
         {
           "id": "ta-1-32-2",
           "chunkNumber": 2,
-          "sanskrit": "द्वौ॑ वा मा॒सौ॥"
+          "sanskrit": "dvau̍ vā mā̠sau||"
         },
         {
           "id": "ta-1-32-3",
           "chunkNumber": 3,
-          "sanskrit": "नियमः स॑मासे॒न॥"
+          "sanskrit": "niyamaḥ sa̍māse̠na||"
         },
         {
           "id": "ta-1-32-4",
           "chunkNumber": 4,
-          "sanskrit": "तस्मिन् नियम॑ विशे॒षाः।"
+          "sanskrit": "tasmin niyama̍ viśe̠ṣāḥ|"
         },
         {
           "id": "ta-1-32-5",
           "chunkNumber": 5,
-          "sanskrit": "त्रिषवणमुदको॑पस्प॒र्॒शी।"
+          "sanskrit": "triṣavaṇamudako̍paspa̠r̠śī|"
         },
         {
           "id": "ta-1-32-6",
           "chunkNumber": 6,
-          "sanskrit": "चतुर्थ कालपान॑भक्तः॒ स्यात्।"
+          "sanskrit": "caturtha kālapāna̍bhaktaḥ̠ syāt|"
         },
         {
           "id": "ta-1-32-7",
           "chunkNumber": 7,
-          "sanskrit": "अहरहर्वा भैख्ष॑मश्न॒यात्।"
+          "sanskrit": "aharaharvā bhaikhṣa̍maśna̠yāt|"
         },
         {
           "id": "ta-1-32-8",
           "chunkNumber": 8,
-          "sanskrit": "औदुम्बरीभिः समिद्भिरग्निं॑ परि॒चरेत्।"
+          "sanskrit": "audumbarībhiḥ samidbhiragniṃ̍ pari̠caret|"
         },
         {
           "id": "ta-1-32-9",
           "chunkNumber": 9,
-          "sanskrit": "पुनर्मा मैत्विन्द्रियमित्येतेनाऽनु॑वाके॒न।"
+          "sanskrit": "punarmā maitvindriyamityetenā'nu̍vāke̠na|"
         },
         {
           "id": "ta-1-32-10",
           "chunkNumber": 10,
-          "sanskrit": "उद्धृत परिपूताभिरद्भिः कार्यं॑ कुर्वी॒त अ॑सञ्च॒यवान्।"
+          "sanskrit": "uddhṛta paripūtābhiradbhiḥ kāryaṃ̍ kurvī̠ta a̍sañca̠yavān|"
         },
         {
           "id": "ta-1-32-11",
           "chunkNumber": 11,
-          "sanskrit": "अग्नये वायवे॑ सूर्या॒य।"
+          "sanskrit": "agnaye vāyave̍ sūryā̠ya|"
         },
         {
           "id": "ta-1-32-12",
           "chunkNumber": 12,
-          "sanskrit": "ब्रह्मणे प्र॑जाप॒तये।"
+          "sanskrit": "brahmaṇe pra̍jāpa̠taye|"
         },
         {
           "id": "ta-1-32-13",
           "chunkNumber": 13,
-          "sanskrit": "चन्द्रमसे न॑ख्षत्रे॒भ्यः।"
+          "sanskrit": "candramase na̍khṣatre̠bhyaḥ|"
         },
         {
           "id": "ta-1-32-14",
           "chunkNumber": 14,
-          "sanskrit": "ऋतुभ्यः सव्ँव॑थ्सरा॒य।"
+          "sanskrit": "ṛtubhyaḥ savm̐va̍thsarā̠ya|"
         },
         {
           "id": "ta-1-32-15",
           "chunkNumber": 15,
-          "sanskrit": "वरुणायारुणायेति व्र॑तहो॒माः।"
+          "sanskrit": "varuṇāyāruṇāyeti vra̍taho̠māḥ|"
         },
         {
           "id": "ta-1-32-16",
           "chunkNumber": 16,
-          "sanskrit": "प्र॒व॒र्ग्यव॑दादे॒शः।"
+          "sanskrit": "pra̠va̠rgyava̍dāde̠śaḥ|"
         },
         {
           "id": "ta-1-32-17",
           "chunkNumber": 17,
-          "sanskrit": "अरुणाः का᳚ण्ड ऋ॒षयः॥"
+          "sanskrit": "aruṇāḥ kā̎ṇḍa ṛ̠ṣayaḥ||"
         },
         {
           "id": "ta-1-32-18",
           "chunkNumber": 18,
-          "sanskrit": "अरण्ये॑ऽधीयी॒रन्न्।"
+          "sanskrit": "araṇye̍'dhīyī̠rann|"
         },
         {
           "id": "ta-1-32-19",
           "chunkNumber": 19,
-          "sanskrit": "भद्रंकर्णेभिरिति द्वे॑ जपि॒त्वा महानाम्नीभिरुदकꣳ स॑ꣴस्प॒र्श्य।"
+          "sanskrit": "bhadraṃkarṇebhiriti dve̍ japi̠tvā mahānāmnībhirudakagͫ sa̍gͫͫspa̠rśya|"
         },
         {
           "id": "ta-1-32-20",
           "chunkNumber": 20,
-          "sanskrit": "तमाचा᳚र्यो द॒द्यात्।"
+          "sanskrit": "tamācā̎ryo da̠dyāt|"
         },
         {
           "id": "ta-1-32-21",
           "chunkNumber": 21,
-          "sanskrit": "शिवानः शन्तमेत्योषधी॑राल॒भते।"
+          "sanskrit": "śivānaḥ śantametyoṣadhī̍rāla̠bhate|"
         },
         {
           "id": "ta-1-32-22",
           "chunkNumber": 22,
-          "sanskrit": "सुमृडीके॑ति भू॒मिम्।"
+          "sanskrit": "sumṛḍīke̍ti bhū̠mim|"
         },
         {
           "id": "ta-1-32-23",
           "chunkNumber": 23,
-          "sanskrit": "एवम॑पव॒र्गे।"
+          "sanskrit": "evama̍pava̠rge|"
         },
         {
           "id": "ta-1-32-24",
           "chunkNumber": 24,
-          "sanskrit": "धे॑नुर् द॒ख्षिणा।"
+          "sanskrit": "dhe̍nur da̠khṣiṇā|"
         },
         {
           "id": "ta-1-32-25",
           "chunkNumber": 25,
-          "sanskrit": "कꣳ सव्ँवास॑श्च ख्षौ॒मम्।"
+          "sanskrit": "kagͫ savm̐vāsa̍śca khṣau̠mam|"
         },
         {
           "id": "ta-1-32-26",
           "chunkNumber": 26,
-          "sanskrit": "अन्य॑द्वा शु॒क्लम्।"
+          "sanskrit": "anya̍dvā śu̠klam|"
         },
         {
           "id": "ta-1-32-27",
           "chunkNumber": 27,
-          "sanskrit": "य॑था श॒क्ति वा।"
+          "sanskrit": "ya̍thā śa̠kti vā|"
         },
         {
           "id": "ta-1-32-28",
           "chunkNumber": 28,
-          "sanskrit": "एवꣴ स्वाद्ध्याय॑ धर्मे॒ण।"
+          "sanskrit": "evagͫͫ svāddhyāya̍ dharme̠ṇa|"
         },
         {
           "id": "ta-1-32-29",
           "chunkNumber": 29,
-          "sanskrit": "अरण्ये॑ऽधीयी॒त।"
+          "sanskrit": "araṇye̍'dhīyī̠ta|"
         },
         {
           "id": "ta-1-32-30",
           "chunkNumber": 30,
-          "sanskrit": "तपस्वी पुण्यो भवति तपस्वी पु॑ण्यो भ॒वति"
+          "sanskrit": "tapasvī puṇyo bhavati tapasvī pu̍ṇyo bha̠vati"
         }
       ]
     }

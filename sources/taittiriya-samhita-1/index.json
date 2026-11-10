@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-samhita-1",
   "title": {
-    "sanskrit": "तैत्तिरीय संहिता",
+    "sanskrit": "taittirīya saṃhitā",
     "transliteration": "Taittirīya Saṃhitā",
     "english": "Taittirīya Saṃhitā"
   },
@@ -24,7 +24,7 @@
       "parser": "taittiriya@2",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Saṃhitā, kāṇḍa 1 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "9b1aee0f7fd47017ec15dd1b74a970da64a78d0a3017ad54e3fe72dcedeb6119"
+      "sha256": "353b63e730aa18d9efbacdbc2c6c4e813b5357a1d0ec2bbdd525f99122548be6"
     }
   },
   "sections": [

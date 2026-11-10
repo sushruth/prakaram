@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-aranyaka-8",
   "title": {
-    "sanskrit": "तैत्तिरीय आरण्यक",
+    "sanskrit": "taittirīya āraṇyaka",
     "transliteration": "Taittirīya Āraṇyaka",
     "english": "Taittirīya Āraṇyaka, Prapāṭhaka 8"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 8.",
     "place": {
       "work": {
-        "sanskrit": "तैत्तिरीय आरण्यक",
+        "sanskrit": "taittirīya āraṇyaka",
         "english": "Taittirīya Āraṇyaka"
       },
       "divisions": [
@@ -38,7 +38,7 @@
       "parser": "aranyaka@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "232346dd3f6cb34c5ae0bdf441c426bb89688e5327a32581bc64a98eed2a52a4"
+      "sha256": "414bc97ed615859288c4e6c14481441b49c245a7cc1e7b683ecd7ae4f0098732"
     }
   },
   "sections": [

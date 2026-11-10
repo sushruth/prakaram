@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-aranyaka-10",
   "title": {
-    "sanskrit": "तैत्तिरीय आरण्यक",
+    "sanskrit": "taittirīya āraṇyaka",
     "transliteration": "Taittirīya Āraṇyaka",
     "english": "Taittirīya Āraṇyaka, Prapāṭhaka 10"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 10.",
     "place": {
       "work": {
-        "sanskrit": "तैत्तिरीय आरण्यक",
+        "sanskrit": "taittirīya āraṇyaka",
         "english": "Taittirīya Āraṇyaka"
       },
       "divisions": [
@@ -38,7 +38,7 @@
       "parser": "aranyaka@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 10 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "150529a583541d87465c3241aefb6ef77c65617382f29b17697719cc4df8b1eb"
+      "sha256": "ee7a4252da56624be5aa319bc32c446b7aec24e99ecac8b6eb2666b66eea81d9"
     }
   },
   "sections": [
@@ -480,42 +480,42 @@
       "id": "taittiriya-aranyaka-10-63",
       "sectionNumber": 63,
       "title": "Prapāṭhaka 10 · Anuvāka 63",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 5
     },
     {
       "id": "taittiriya-aranyaka-10-64",
       "sectionNumber": 64,
       "title": "Prapāṭhaka 10 · Anuvāka 64",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 7
     },
     {
       "id": "taittiriya-aranyaka-10-65",
       "sectionNumber": 65,
       "title": "Prapāṭhaka 10 · Anuvāka 65",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 5
     },
     {
       "id": "taittiriya-aranyaka-10-66",
       "sectionNumber": 66,
       "title": "Prapāṭhaka 10 · Anuvāka 66",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 15
     },
     {
       "id": "taittiriya-aranyaka-10-67",
       "sectionNumber": 67,
       "title": "Prapāṭhaka 10 · Anuvāka 67",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 38
     },
     {
       "id": "taittiriya-aranyaka-10-68",
       "sectionNumber": 68,
       "title": "Prapāṭhaka 10 · Anuvāka 68",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 9
     },
     {

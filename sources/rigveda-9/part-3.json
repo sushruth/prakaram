@@ -1,535 +1,6 @@
 {
   "sections": [
     {
-      "id": "rigveda-9-73",
-      "title": "Maṇḍala 9 · Sūkta 73",
-      "sectionNumber": 73,
-      "chunks": [
-        {
-          "id": "rv-9-73-1",
-          "chunkNumber": 1,
-          "sanskrit": "स्रक्वे॑ द्र॒प्सस्य॒ धम॑त॒: सम॑स्वरन्नृ॒तस्य॒ योना॒ सम॑रन्त॒ नाभ॑यः ।",
-          "section": 73,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-73-2",
-          "chunkNumber": 2,
-          "sanskrit": "त्रीन्त्स मू॒र्ध्नो असु॑रश्चक्र आ॒रभे॑ स॒त्यस्य॒ नाव॑: सु॒कृत॑मपीपरन् ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-73-3",
-          "chunkNumber": 3,
-          "sanskrit": "स॒म्यक्स॒म्यञ्चो॑ महि॒षा अ॑हेषत॒ सिन्धो॑रू॒र्मावधि॑ वे॒ना अ॑वीविपन् ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-73-4",
-          "chunkNumber": 4,
-          "sanskrit": "मधो॒र्धारा॑भिर्ज॒नय॑न्तो अ॒र्कमित्प्रि॒यामिन्द्र॑स्य त॒न्व॑मवीवृधन् ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-73-5",
-          "chunkNumber": 5,
-          "sanskrit": "प॒वित्र॑वन्त॒: परि॒ वाच॑मासते पि॒तैषां॑ प्र॒त्नो अ॒भि र॑क्षति व्र॒तम् ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-73-6",
-          "chunkNumber": 6,
-          "sanskrit": "म॒हः स॑मु॒द्रं वरु॑णस्ति॒रो द॑धे॒ धीरा॒ इच्छे॑कुर्ध॒रुणे॑ष्वा॒रभ॑म् ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-73-7",
-          "chunkNumber": 7,
-          "sanskrit": "स॒हस्र॑धा॒रेऽव॒ ते सम॑स्वरन्दि॒वो नाके॒ मधु॑जिह्वा अस॒श्चत॑: ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-73-8",
-          "chunkNumber": 8,
-          "sanskrit": "अस्य॒ स्पशो॒ न नि मि॑षन्ति॒ भूर्ण॑यः प॒देप॑दे पा॒शिन॑: सन्ति॒ सेत॑वः ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-73-9",
-          "chunkNumber": 9,
-          "sanskrit": "पि॒तुर्मा॒तुरध्या ये स॒मस्व॑रन्नृ॒चा शोच॑न्तः सं॒दह॑न्तो अव्र॒तान् ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-73-10",
-          "chunkNumber": 10,
-          "sanskrit": "इन्द्र॑द्विष्टा॒मप॑ धमन्ति मा॒यया॒ त्वच॒मसि॑क्नीं॒ भूम॑नो दि॒वस्परि॑ ॥ ५ ॥"
-        },
-        {
-          "id": "rv-9-73-11",
-          "chunkNumber": 11,
-          "sanskrit": "प्र॒त्नान्माना॒दध्या ये स॒मस्व॑र॒ञ्छ्लोक॑यन्त्रासो रभ॒सस्य॒ मन्त॑वः ।",
-          "padya": 6
-        },
-        {
-          "id": "rv-9-73-12",
-          "chunkNumber": 12,
-          "sanskrit": "अपा॑न॒क्षासो॑ बधि॒रा अ॑हासत ऋ॒तस्य॒ पन्थां॒ न त॑रन्ति दु॒ष्कृत॑: ॥ ६ ॥"
-        },
-        {
-          "id": "rv-9-73-13",
-          "chunkNumber": 13,
-          "sanskrit": "स॒हस्र॑धारे॒ वित॑ते प॒वित्र॒ आ वाचं॑ पुनन्ति क॒वयो॑ मनी॒षिण॑: ।",
-          "padya": 7
-        },
-        {
-          "id": "rv-9-73-14",
-          "chunkNumber": 14,
-          "sanskrit": "रु॒द्रास॑ एषामिषि॒रासो॑ अ॒द्रुह॒: स्पश॒: स्वञ्च॑: सु॒दृशो॑ नृ॒चक्ष॑सः ॥ ७ ॥"
-        },
-        {
-          "id": "rv-9-73-15",
-          "chunkNumber": 15,
-          "sanskrit": "ऋ॒तस्य॑ गो॒पा न दभा॑य सु॒क्रतु॒स्त्री ष प॒वित्रा॑ हृ॒द्य१न्तरा द॑धे ।",
-          "padya": 8
-        },
-        {
-          "id": "rv-9-73-16",
-          "chunkNumber": 16,
-          "sanskrit": "वि॒द्वान्त्स विश्वा॒ भुव॑ना॒भि प॑श्य॒त्यवाजु॑ष्टान्विध्यति क॒र्ते अ॑व्र॒तान् ॥ ८ ॥"
-        },
-        {
-          "id": "rv-9-73-17",
-          "chunkNumber": 17,
-          "sanskrit": "ऋ॒तस्य॒ तन्तु॒र्वित॑तः प॒वित्र॒ आ जि॒ह्वाया॒ अग्रे॒ वरु॑णस्य मा॒यया॑ ।",
-          "padya": 9
-        },
-        {
-          "id": "rv-9-73-18",
-          "chunkNumber": 18,
-          "sanskrit": "धीरा॑श्चि॒त्तत्स॒मिन॑क्षन्त आश॒ताऽत्रा॑ क॒र्तमव॑ पदा॒त्यप्र॑भुः ॥ ९ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-74",
-      "title": "Maṇḍala 9 · Sūkta 74",
-      "sectionNumber": 74,
-      "chunks": [
-        {
-          "id": "rv-9-74-1",
-          "chunkNumber": 1,
-          "sanskrit": "शिशु॒र्न जा॒तोऽव॑ चक्रद॒द्वने॒ स्व१र्यद्वा॒ज्य॑रु॒षः सिषा॑सति ।",
-          "section": 74,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-74-2",
-          "chunkNumber": 2,
-          "sanskrit": "दि॒वो रेत॑सा सचते पयो॒वृधा॒ तमी॑महे सुम॒ती शर्म॑ स॒प्रथ॑: ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-74-3",
-          "chunkNumber": 3,
-          "sanskrit": "दि॒वो यः स्क॒म्भो ध॒रुण॒: स्वा॑तत॒ आपू॑र्णो अं॒शुः प॒र्येति॑ वि॒श्वत॑: ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-74-4",
-          "chunkNumber": 4,
-          "sanskrit": "सेमे म॒ही रोद॑सी यक्षदा॒वृता॑ समीची॒ने दा॑धार॒ समिष॑: क॒विः ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-74-5",
-          "chunkNumber": 5,
-          "sanskrit": "महि॒ प्सर॒: सुकृ॑तं सो॒म्यं मधू॒र्वी गव्यू॑ति॒रदि॑तेॠ॒तं य॒ते ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-74-6",
-          "chunkNumber": 6,
-          "sanskrit": "ईशे॒ यो वृ॒ष्टेरि॒त उ॒स्रियो॒ वृषा॒ऽपां ने॒ता य इ॒तऊ॑तिॠ॒ग्मिय॑: ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-74-7",
-          "chunkNumber": 7,
-          "sanskrit": "आ॒त्म॒न्वन्नभो॑ दुह्यते घृ॒तं पय॑ ऋ॒तस्य॒ नाभि॑र॒मृतं॒ वि जा॑यते ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-74-8",
-          "chunkNumber": 8,
-          "sanskrit": "स॒मी॒ची॒नाः सु॒दान॑वः प्रीणन्ति॒ तं नरो॑ हि॒तमव॑ मेहन्ति॒ पेर॑वः ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-74-9",
-          "chunkNumber": 9,
-          "sanskrit": "अरा॑वीदं॒शुः सच॑मान ऊ॒र्मिणा॑ देवा॒व्यं१ मनु॑षे पिन्वति॒ त्वच॑म् ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-74-10",
-          "chunkNumber": 10,
-          "sanskrit": "दधा॑ति॒ गर्भ॒मदि॑तेरु॒पस्थ॒ आ येन॑ तो॒कं च॒ तन॑यं च॒ धाम॑हे ॥ ५ ॥"
-        },
-        {
-          "id": "rv-9-74-11",
-          "chunkNumber": 11,
-          "sanskrit": "स॒हस्र॑धा॒रेऽव॒ ता अ॑स॒श्चत॑स्तृ॒तीये॑ सन्तु॒ रज॑सि प्र॒जाव॑तीः ।",
-          "padya": 6
-        },
-        {
-          "id": "rv-9-74-12",
-          "chunkNumber": 12,
-          "sanskrit": "चत॑स्रो॒ नाभो॒ निहि॑ता अ॒वो दि॒वो ह॒विर्भ॑रन्त्य॒मृतं॑ घृत॒श्चुत॑: ॥ ६ ॥"
-        },
-        {
-          "id": "rv-9-74-13",
-          "chunkNumber": 13,
-          "sanskrit": "श्वे॒तं रू॒पं कृ॑णुते॒ यत्सिषा॑सति॒ सोमो॑ मी॒ढ्वाँ असु॑रो वेद॒ भूम॑नः ।",
-          "padya": 7
-        },
-        {
-          "id": "rv-9-74-14",
-          "chunkNumber": 14,
-          "sanskrit": "धि॒या शमी॑ सचते॒ सेम॒भि प्र॒वद्दि॒वस्कव॑न्ध॒मव॑ दर्षदु॒द्रिण॑म् ॥ ७ ॥"
-        },
-        {
-          "id": "rv-9-74-15",
-          "chunkNumber": 15,
-          "sanskrit": "अध॑ श्वे॒तं क॒लशं॒ गोभि॑र॒क्तं कार्ष्म॒न्ना वा॒ज्य॑क्रमीत्सस॒वान् ।",
-          "padya": 8
-        },
-        {
-          "id": "rv-9-74-16",
-          "chunkNumber": 16,
-          "sanskrit": "आ हि॑न्विरे॒ मन॑सा देव॒यन्त॑: क॒क्षीव॑ते श॒तहि॑माय॒ गोना॑म् ॥ ८ ॥"
-        },
-        {
-          "id": "rv-9-74-17",
-          "chunkNumber": 17,
-          "sanskrit": "अ॒द्भिः सो॑म पपृचा॒नस्य॑ ते॒ रसोऽव्यो॒ वारं॒ वि प॑वमान धावति ।",
-          "padya": 9
-        },
-        {
-          "id": "rv-9-74-18",
-          "chunkNumber": 18,
-          "sanskrit": "स मृ॒ज्यमा॑नः क॒विभि॑र्मदिन्तम॒ स्वद॒स्वेन्द्रा॑य पवमान पी॒तये॑ ॥ ९ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-75",
-      "title": "Maṇḍala 9 · Sūkta 75",
-      "sectionNumber": 75,
-      "chunks": [
-        {
-          "id": "rv-9-75-1",
-          "chunkNumber": 1,
-          "sanskrit": "अ॒भि प्रि॒याणि॑ पवते॒ चनो॑हितो॒ नामा॑नि य॒ह्वो अधि॒ येषु॒ वर्ध॑ते ।",
-          "section": 75,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-75-2",
-          "chunkNumber": 2,
-          "sanskrit": "आ सूर्य॑स्य बृह॒तो बृ॒हन्नधि॒ रथं॒ विष्व॑ञ्चमरुहद्विचक्ष॒णः ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-75-3",
-          "chunkNumber": 3,
-          "sanskrit": "ऋ॒तस्य॑ जि॒ह्वा प॑वते॒ मधु॑ प्रि॒यं व॒क्ता पति॑र्धि॒यो अ॒स्या अदा॑भ्यः ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-75-4",
-          "chunkNumber": 4,
-          "sanskrit": "दधा॑ति पु॒त्रः पि॒त्रोर॑पी॒च्यं१ नाम॑ तृ॒तीय॒मधि॑ रोच॒ने दि॒वः ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-75-5",
-          "chunkNumber": 5,
-          "sanskrit": "अव॑ द्युता॒नः क॒लशाँ॑ अचिक्रद॒न्नृभि॑र्येमा॒नः कोश॒ आ हि॑र॒ण्यये॑ ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-75-6",
-          "chunkNumber": 6,
-          "sanskrit": "अ॒भीमृ॒तस्य॑ दो॒हना॑ अनूष॒ताऽधि॑ त्रिपृ॒ष्ठ उ॒षसो॒ वि रा॑जति ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-75-7",
-          "chunkNumber": 7,
-          "sanskrit": "अद्रि॑भिः सु॒तो म॒तिभि॒श्चनो॑हितः प्ररो॒चय॒न्रोद॑सी मा॒तरा॒ शुचि॑: ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-75-8",
-          "chunkNumber": 8,
-          "sanskrit": "रोमा॒ण्यव्या॑ स॒मया॒ वि धा॑वति॒ मधो॒र्धारा॒ पिन्व॑माना दि॒वेदि॑वे ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-75-9",
-          "chunkNumber": 9,
-          "sanskrit": "परि॑ सोम॒ प्र ध॑न्वा स्व॒स्तये॒ नृभि॑: पुना॒नो अ॒भि वा॑सया॒शिर॑म् ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-75-10",
-          "chunkNumber": 10,
-          "sanskrit": "ये ते॒ मदा॑ आह॒नसो॒ विहा॑यस॒स्तेभि॒रिन्द्रं॑ चोदय॒ दात॑वे म॒घम् ॥ ५ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-76",
-      "title": "Maṇḍala 9 · Sūkta 76",
-      "sectionNumber": 76,
-      "chunks": [
-        {
-          "id": "rv-9-76-1",
-          "chunkNumber": 1,
-          "sanskrit": "ध॒र्ता दि॒वः प॑वते॒ कृत्व्यो॒ रसो॒ दक्षो॑ दे॒वाना॑मनु॒माद्यो॒ नृभि॑: ।",
-          "section": 76,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-76-2",
-          "chunkNumber": 2,
-          "sanskrit": "हरि॑: सृजा॒नो अत्यो॒ न सत्व॑भि॒र्वृथा॒ पाजां॑सि कृणुते न॒दीष्वा ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-76-3",
-          "chunkNumber": 3,
-          "sanskrit": "शूरो॒ न ध॑त्त॒ आयु॑धा॒ गभ॑स्त्यो॒: स्व१: सिषा॑सन्रथि॒रो गवि॑ष्टिषु ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-76-4",
-          "chunkNumber": 4,
-          "sanskrit": "इन्द्र॑स्य॒ शुष्म॑मी॒रय॑न्नप॒स्युभि॒रिन्दु॑र्हिन्वा॒नो अ॑ज्यते मनी॒षिभि॑: ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-76-5",
-          "chunkNumber": 5,
-          "sanskrit": "इन्द्र॑स्य सोम॒ पव॑मान ऊ॒र्मिणा॑ तवि॒ष्यमा॑णो ज॒ठरे॒ष्वा वि॑श ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-76-6",
-          "chunkNumber": 6,
-          "sanskrit": "प्र ण॑: पिन्व वि॒द्युद॒भ्रेव॒ रोद॑सी धि॒या न वाजाँ॒ उप॑ मासि॒ शश्व॑तः ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-76-7",
-          "chunkNumber": 7,
-          "sanskrit": "विश्व॑स्य॒ राजा॑ पवते स्व॒र्दृश॑ ऋ॒तस्य॑ धी॒तिमृ॑षि॒षाळ॑वीवशत् ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-76-8",
-          "chunkNumber": 8,
-          "sanskrit": "यः सूर्य॒स्यासि॑रेण मृ॒ज्यते॑ पि॒ता म॑ती॒नामस॑मष्टकाव्यः ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-76-9",
-          "chunkNumber": 9,
-          "sanskrit": "वृषे॑व यू॒था परि॒ कोश॑मर्षस्य॒पामु॒पस्थे॑ वृष॒भः कनि॑क्रदत् ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-76-10",
-          "chunkNumber": 10,
-          "sanskrit": "स इन्द्रा॑य पवसे मत्स॒रिन्त॑मो॒ यथा॒ जेषा॑म समि॒थे त्वोत॑यः ॥ ५ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-77",
-      "title": "Maṇḍala 9 · Sūkta 77",
-      "sectionNumber": 77,
-      "chunks": [
-        {
-          "id": "rv-9-77-1",
-          "chunkNumber": 1,
-          "sanskrit": "ए॒ष प्र कोशे॒ मधु॑माँ अचिक्रद॒दिन्द्र॑स्य॒ वज्रो॒ वपु॑षो॒ वपु॑ष्टरः ।",
-          "section": 77,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-77-2",
-          "chunkNumber": 2,
-          "sanskrit": "अ॒भीमृ॒तस्य॑ सु॒दुघा॑ घृत॒श्चुतो॑ वा॒श्रा अ॑र्षन्ति॒ पय॑सेव धे॒नव॑: ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-77-3",
-          "chunkNumber": 3,
-          "sanskrit": "स पू॒र्व्यः प॑वते॒ यं दि॒वस्परि॑ श्ये॒नो म॑था॒यदि॑षि॒तस्ति॒रो रज॑: ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-77-4",
-          "chunkNumber": 4,
-          "sanskrit": "स मध्व॒ आ यु॑वते॒ वेवि॑जान॒ इत्कृ॒शानो॒रस्तु॒र्मन॒साह॑ बि॒भ्युषा॑ ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-77-5",
-          "chunkNumber": 5,
-          "sanskrit": "ते न॒: पूर्वा॑स॒ उप॑रास॒ इन्द॑वो म॒हे वाजा॑य धन्वन्तु॒ गोम॑ते ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-77-6",
-          "chunkNumber": 6,
-          "sanskrit": "ई॒क्षे॒ण्या॑सो अ॒ह्यो॒३ न चार॑वो॒ ब्रह्म॑ब्रह्म॒ ये जु॑जु॒षुर्ह॒विर्ह॑विः ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-77-7",
-          "chunkNumber": 7,
-          "sanskrit": "अ॒यं नो॑ वि॒द्वान्व॑नवद्वनुष्य॒त इन्दु॑: स॒त्राचा॒ मन॑सा पुरुष्टु॒तः ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-77-8",
-          "chunkNumber": 8,
-          "sanskrit": "इ॒नस्य॒ यः सद॑ने॒ गर्भ॑माद॒धे गवा॑मुरु॒ब्जम॒भ्यर्ष॑ति व्र॒जम् ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-77-9",
-          "chunkNumber": 9,
-          "sanskrit": "चक्रि॑र्दि॒वः प॑वते॒ कृत्व्यो॒ रसो॑ म॒हाँ अद॑ब्धो॒ वरु॑णो हु॒रुग्य॒ते ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-77-10",
-          "chunkNumber": 10,
-          "sanskrit": "असा॑वि मि॒त्रो वृ॒जने॑षु य॒ज्ञियोऽत्यो॒ न यू॒थे वृ॑ष॒युः कनि॑क्रदत् ॥ ५ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-78",
-      "title": "Maṇḍala 9 · Sūkta 78",
-      "sectionNumber": 78,
-      "chunks": [
-        {
-          "id": "rv-9-78-1",
-          "chunkNumber": 1,
-          "sanskrit": "प्र राजा॒ वाचं॑ ज॒नय॑न्नसिष्यदद॒पो वसा॑नो अ॒भि गा इ॑यक्षति ।",
-          "section": 78,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-78-2",
-          "chunkNumber": 2,
-          "sanskrit": "गृ॒भ्णाति॑ रि॒प्रमवि॑रस्य॒ तान्वा॑ शु॒द्धो दे॒वाना॒मुप॑ याति निष्कृ॒तम् ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-78-3",
-          "chunkNumber": 3,
-          "sanskrit": "इन्द्रा॑य सोम॒ परि॑ षिच्यसे॒ नृभि॑र्नृ॒चक्षा॑ ऊ॒र्मिः क॒विर॑ज्यसे॒ वने॑ ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-78-4",
-          "chunkNumber": 4,
-          "sanskrit": "पू॒र्वीर्हि ते॑ स्रु॒तय॒: सन्ति॒ यात॑वे स॒हस्र॒मश्वा॒ हर॑यश्चमू॒षद॑: ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-78-5",
-          "chunkNumber": 5,
-          "sanskrit": "स॒मु॒द्रिया॑ अप्स॒रसो॑ मनी॒षिण॒मासी॑ना अ॒न्तर॒भि सोम॑मक्षरन् ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-78-6",
-          "chunkNumber": 6,
-          "sanskrit": "ता ईं॑ हिन्वन्ति ह॒र्म्यस्य॑ स॒क्षणिं॒ याच॑न्ते सु॒म्नं पव॑मान॒मक्षि॑तम् ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-78-7",
-          "chunkNumber": 7,
-          "sanskrit": "गो॒जिन्न॒:  सोमो॑ रथ॒जिद्धि॑रण्य॒जित्स्व॒र्जिद॒ब्जित्प॑वते सहस्र॒जित् ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-78-8",
-          "chunkNumber": 8,
-          "sanskrit": "यं दे॒वास॑श्चक्रि॒रे पी॒तये॒ मदं॒ स्वादि॑ष्ठं द्र॒प्सम॑रु॒णं म॑यो॒भुव॑म् ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-78-9",
-          "chunkNumber": 9,
-          "sanskrit": "ए॒तानि॑ सोम॒ पव॑मानो अस्म॒युः स॒त्यानि॑ कृ॒ण्वन्द्रवि॑णान्यर्षसि ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-78-10",
-          "chunkNumber": 10,
-          "sanskrit": "ज॒हि शत्रु॑मन्ति॒के दू॑र॒के च॒ य उ॒र्वीं गव्यू॑ति॒मभ॑यं च नस्कृधि ॥ ५ ॥"
-        }
-      ]
-    },
-    {
-      "id": "rigveda-9-79",
-      "title": "Maṇḍala 9 · Sūkta 79",
-      "sectionNumber": 79,
-      "chunks": [
-        {
-          "id": "rv-9-79-1",
-          "chunkNumber": 1,
-          "sanskrit": "अ॒चो॒दसो॑ नो धन्व॒न्त्विन्द॑व॒: प्र सु॑वा॒नासो॑ बृ॒हद्दि॑वेषु॒ हर॑यः ।",
-          "section": 79,
-          "padya": 1
-        },
-        {
-          "id": "rv-9-79-2",
-          "chunkNumber": 2,
-          "sanskrit": "वि च॒ नश॑न्न इ॒षो अरा॑तयो॒ऽर्यो न॑शन्त॒ सनि॑षन्त नो॒ धिय॑: ॥ १ ॥"
-        },
-        {
-          "id": "rv-9-79-3",
-          "chunkNumber": 3,
-          "sanskrit": "प्र णो॑ धन्व॒न्त्विन्द॑वो मद॒च्युतो॒ धना॑ वा॒ येभि॒रर्व॑तो जुनी॒मसि॑ ।",
-          "padya": 2
-        },
-        {
-          "id": "rv-9-79-4",
-          "chunkNumber": 4,
-          "sanskrit": "ति॒रो मर्त॑स्य॒ कस्य॑ चि॒त्परि॑ह्वृतिं व॒यं धना॑नि वि॒श्वधा॑ भरेमहि ॥ २ ॥"
-        },
-        {
-          "id": "rv-9-79-5",
-          "chunkNumber": 5,
-          "sanskrit": "उ॒त स्वस्या॒ अरा॑त्या अ॒रिर्हि ष उ॒तान्यस्या॒ अरा॑त्या॒ वृको॒ हि षः ।",
-          "padya": 3
-        },
-        {
-          "id": "rv-9-79-6",
-          "chunkNumber": 6,
-          "sanskrit": "धन्व॒न्न तृष्णा॒ सम॑रीत॒ ताँ अ॒भि सोम॑ ज॒हि प॑वमान दुरा॒ध्य॑: ॥ ३ ॥"
-        },
-        {
-          "id": "rv-9-79-7",
-          "chunkNumber": 7,
-          "sanskrit": "दि॒वि ते॒ नाभा॑ पर॒मो य आ॑द॒दे पृ॑थि॒व्यास्ते॑ रुरुहु॒: सान॑वि॒ क्षिप॑: ।",
-          "padya": 4
-        },
-        {
-          "id": "rv-9-79-8",
-          "chunkNumber": 8,
-          "sanskrit": "अद्र॑यस्त्वा बप्सति॒ गोरधि॑ त्व॒च्य१प्सु त्वा॒ हस्तै॑र्दुदुहुर्मनी॒षिण॑: ॥ ४ ॥"
-        },
-        {
-          "id": "rv-9-79-9",
-          "chunkNumber": 9,
-          "sanskrit": "ए॒वा त॑ इन्दो सु॒भ्वं॑ सु॒पेश॑सं॒ रसं॑ तुञ्जन्ति प्रथ॒मा अ॑भि॒श्रिय॑: ।",
-          "padya": 5
-        },
-        {
-          "id": "rv-9-79-10",
-          "chunkNumber": 10,
-          "sanskrit": "निदं॑निदं पवमान॒ नि ता॑रिष आ॒विस्ते॒ शुष्मो॑ भवतु प्रि॒यो मद॑: ॥ ५ ॥"
-        }
-      ]
-    },
-    {
       "id": "rigveda-9-80",
       "title": "Maṇḍala 9 · Sūkta 80",
       "sectionNumber": 80,
@@ -537,58 +8,58 @@
         {
           "id": "rv-9-80-1",
           "chunkNumber": 1,
-          "sanskrit": "सोम॑स्य॒ धारा॑ पवते नृ॒चक्ष॑स ऋ॒तेन॑ दे॒वान्ह॑वते दि॒वस्परि॑ ।",
+          "sanskrit": "soma̍sya̠ dhārā̍ pavate nṛ̠cakṣa̍sa ṛ̠tena̍ de̠vānha̍vate di̠vaspari̍ |",
           "section": 80,
           "padya": 1
         },
         {
           "id": "rv-9-80-2",
           "chunkNumber": 2,
-          "sanskrit": "बृह॒स्पते॑ र॒वथे॑ना॒ वि दि॑द्युते समु॒द्रासो॒ न सव॑नानि विव्यचुः ॥ १ ॥"
+          "sanskrit": "bṛha̠spate̍ ra̠vathe̍nā̠ vi di̍dyute samu̠drāso̠ na sava̍nāni vivyacuḥ || 1 ||"
         },
         {
           "id": "rv-9-80-3",
           "chunkNumber": 3,
-          "sanskrit": "यं त्वा॑ वाजिन्न॒घ्न्या अ॒भ्यनू॑ष॒ताऽयो॑हतं॒ योनि॒मा रो॑हसि द्यु॒मान् ।",
+          "sanskrit": "yaṃ tvā̍ vājinna̠ghnyā a̠bhyanū̍ṣa̠tā'yo̍hataṃ̠ yoni̠mā ro̍hasi dyu̠mān |",
           "padya": 2
         },
         {
           "id": "rv-9-80-4",
           "chunkNumber": 4,
-          "sanskrit": "म॒घोना॒मायु॑: प्रति॒रन्महि॒ श्रव॒ इन्द्रा॑य सोम पवसे॒ वृषा॒ मद॑: ॥ २ ॥"
+          "sanskrit": "ma̠ghonā̠māyu̍: prati̠ranmahi̠ śrava̠ indrā̍ya soma pavase̠ vṛṣā̠ mada̍: || 2 ||"
         },
         {
           "id": "rv-9-80-5",
           "chunkNumber": 5,
-          "sanskrit": "एन्द्र॑स्य कु॒क्षा प॑वते म॒दिन्त॑म॒ ऊर्जं॒ वसा॑न॒: श्रव॑से सुम॒ङ्गल॑: ।",
+          "sanskrit": "endra̍sya ku̠kṣā pa̍vate ma̠dinta̍ma̠ ūrjaṃ̠ vasā̍na̠: śrava̍se suma̠ṅgala̍: |",
           "padya": 3
         },
         {
           "id": "rv-9-80-6",
           "chunkNumber": 6,
-          "sanskrit": "प्र॒त्यङ्स विश्वा॒ भुव॑ना॒भि प॑प्रथे॒ क्रीळ॒न्हरि॒रत्य॑: स्यन्दते॒ वृषा॑ ॥ ३ ॥"
+          "sanskrit": "pra̠tyaṅsa viśvā̠ bhuva̍nā̠bhi pa̍prathe̠ krīḷa̠nhari̠ratya̍: syandate̠ vṛṣā̍ || 3 ||"
         },
         {
           "id": "rv-9-80-7",
           "chunkNumber": 7,
-          "sanskrit": "तं त्वा॑ दे॒वेभ्यो॒ मधु॑मत्तमं॒ नर॑: स॒हस्र॑धारं दुहते॒ दश॒ क्षिप॑: ।",
+          "sanskrit": "taṃ tvā̍ de̠vebhyo̠ madhu̍mattamaṃ̠ nara̍: sa̠hasra̍dhāraṃ duhate̠ daśa̠ kṣipa̍: |",
           "padya": 4
         },
         {
           "id": "rv-9-80-8",
           "chunkNumber": 8,
-          "sanskrit": "नृभि॑: सोम॒ प्रच्यु॑तो॒ ग्राव॑भिः सु॒तो विश्वा॑न्दे॒वाँ आ प॑वस्वा सहस्रजित् ॥ ४ ॥"
+          "sanskrit": "nṛbhi̍: soma̠ pracyu̍to̠ grāva̍bhiḥ su̠to viśvā̍nde̠vām̐ ā pa̍vasvā sahasrajit || 4 ||"
         },
         {
           "id": "rv-9-80-9",
           "chunkNumber": 9,
-          "sanskrit": "तं त्वा॑ ह॒स्तिनो॒ मधु॑मन्त॒मद्रि॑भिर्दु॒हन्त्य॒प्सु वृ॑ष॒भं दश॒ क्षिप॑: ।",
+          "sanskrit": "taṃ tvā̍ ha̠stino̠ madhu̍manta̠madri̍bhirdu̠hantya̠psu vṛ̍ṣa̠bhaṃ daśa̠ kṣipa̍: |",
           "padya": 5
         },
         {
           "id": "rv-9-80-10",
           "chunkNumber": 10,
-          "sanskrit": "इन्द्रं॑ सोम मा॒दय॒न्दैव्यं॒ जनं॒ सिन्धो॑रिवो॒र्मिः पव॑मानो अर्षसि ॥ ५ ॥"
+          "sanskrit": "indraṃ̍ soma mā̠daya̠ndaivyaṃ̠ janaṃ̠ sindho̍rivo̠rmiḥ pava̍māno arṣasi || 5 ||"
         }
       ]
     },
@@ -600,58 +71,58 @@
         {
           "id": "rv-9-81-1",
           "chunkNumber": 1,
-          "sanskrit": "प्र सोम॑स्य॒ पव॑मानस्यो॒र्मय॒ इन्द्र॑स्य यन्ति ज॒ठरं॑ सु॒पेश॑सः ।",
+          "sanskrit": "pra soma̍sya̠ pava̍mānasyo̠rmaya̠ indra̍sya yanti ja̠ṭharaṃ̍ su̠peśa̍saḥ |",
           "section": 81,
           "padya": 1
         },
         {
           "id": "rv-9-81-2",
           "chunkNumber": 2,
-          "sanskrit": "द॒ध्ना यदी॒मुन्नी॑ता य॒शसा॒ गवां॑ दा॒नाय॒ शूर॑मु॒दम॑न्दिषुः सु॒ताः ॥ १ ॥"
+          "sanskrit": "da̠dhnā yadī̠munnī̍tā ya̠śasā̠ gavāṃ̍ dā̠nāya̠ śūra̍mu̠dama̍ndiṣuḥ su̠tāḥ || 1 ||"
         },
         {
           "id": "rv-9-81-3",
           "chunkNumber": 3,
-          "sanskrit": "अच्छा॒ हि सोम॑: क॒लशाँ॒ असि॑ष्यद॒दत्यो॒ न वोळ्हा॑ र॒घुव॑र्तनि॒र्वृषा॑ ।",
+          "sanskrit": "acchā̠ hi soma̍: ka̠laśām̠̐ asi̍ṣyada̠datyo̠ na voḷhā̍ ra̠ghuva̍rtani̠rvṛṣā̍ |",
           "padya": 2
         },
         {
           "id": "rv-9-81-4",
           "chunkNumber": 4,
-          "sanskrit": "अथा॑ दे॒वाना॑मु॒भय॑स्य॒ जन्म॑नो वि॒द्वाँ अ॑श्नोत्य॒मुत॑ इ॒तश्च॒ यत् ॥ २ ॥"
+          "sanskrit": "athā̍ de̠vānā̍mu̠bhaya̍sya̠ janma̍no vi̠dvām̐ a̍śnotya̠muta̍ i̠taśca̠ yat || 2 ||"
         },
         {
           "id": "rv-9-81-5",
           "chunkNumber": 5,
-          "sanskrit": "आ न॑: सोम॒ पव॑मानः किरा॒ वस्विन्दो॒ भव॑ म॒घवा॒ राध॑सो म॒हः ।",
+          "sanskrit": "ā na̍: soma̠ pava̍mānaḥ kirā̠ vasvindo̠ bhava̍ ma̠ghavā̠ rādha̍so ma̠haḥ |",
           "padya": 3
         },
         {
           "id": "rv-9-81-6",
           "chunkNumber": 6,
-          "sanskrit": "शिक्षा॑ वयोधो॒ वस॑वे॒ सु चे॒तुना॒ मा नो॒ गय॑मा॒रे अ॒स्मत्परा॑ सिचः ॥ ३ ॥"
+          "sanskrit": "śikṣā̍ vayodho̠ vasa̍ve̠ su ce̠tunā̠ mā no̠ gaya̍mā̠re a̠smatparā̍ sicaḥ || 3 ||"
         },
         {
           "id": "rv-9-81-7",
           "chunkNumber": 7,
-          "sanskrit": "आ न॑: पू॒षा पव॑मानः सुरा॒तयो॑ मि॒त्रो ग॑च्छन्तु॒ वरु॑णः स॒जोष॑सः ।",
+          "sanskrit": "ā na̍: pū̠ṣā pava̍mānaḥ surā̠tayo̍ mi̠tro ga̍cchantu̠ varu̍ṇaḥ sa̠joṣa̍saḥ |",
           "padya": 4
         },
         {
           "id": "rv-9-81-8",
           "chunkNumber": 8,
-          "sanskrit": "बृह॒स्पति॑र्म॒रुतो॑ वा॒युर॒श्विना॒ त्वष्टा॑ सवि॒ता सु॒यमा॒ सर॑स्वती ॥ ४ ॥"
+          "sanskrit": "bṛha̠spati̍rma̠ruto̍ vā̠yura̠śvinā̠ tvaṣṭā̍ savi̠tā su̠yamā̠ sara̍svatī || 4 ||"
         },
         {
           "id": "rv-9-81-9",
           "chunkNumber": 9,
-          "sanskrit": "उ॒भे द्यावा॑पृथि॒वी वि॑श्वमि॒न्वे अ॑र्य॒मा दे॒वो अदि॑तिर्विधा॒ता ।",
+          "sanskrit": "u̠bhe dyāvā̍pṛthi̠vī vi̍śvami̠nve a̍rya̠mā de̠vo adi̍tirvidhā̠tā |",
           "padya": 5
         },
         {
           "id": "rv-9-81-10",
           "chunkNumber": 10,
-          "sanskrit": "भगो॒ नृशंस॑ उ॒र्व१न्तरि॑क्षं॒ विश्वे॑ दे॒वाः पव॑मानं जुषन्त ॥ ५ ॥"
+          "sanskrit": "bhago̠ nṛśaṃsa̍ u̠rva1ntari̍kṣaṃ̠ viśve̍ de̠vāḥ pava̍mānaṃ juṣanta || 5 ||"
         }
       ]
     },
@@ -663,58 +134,58 @@
         {
           "id": "rv-9-82-1",
           "chunkNumber": 1,
-          "sanskrit": "असा॑वि॒ सोमो॑ अरु॒षो वृषा॒ हरी॒ राजे॑व द॒स्मो अ॒भि गा अ॑चिक्रदत् ।",
+          "sanskrit": "asā̍vi̠ somo̍ aru̠ṣo vṛṣā̠ harī̠ rāje̍va da̠smo a̠bhi gā a̍cikradat |",
           "section": 82,
           "padya": 1
         },
         {
           "id": "rv-9-82-2",
           "chunkNumber": 2,
-          "sanskrit": "पु॒ना॒नो वारं॒ पर्ये॑त्य॒व्ययं॑ श्ये॒नो न योनिं॑ घृ॒तव॑न्तमा॒सद॑म् ॥ १ ॥"
+          "sanskrit": "pu̠nā̠no vāraṃ̠ parye̍tya̠vyayaṃ̍ śye̠no na yoniṃ̍ ghṛ̠tava̍ntamā̠sada̍m || 1 ||"
         },
         {
           "id": "rv-9-82-3",
           "chunkNumber": 3,
-          "sanskrit": "क॒विर्वे॑ध॒स्या पर्ये॑षि॒ माहि॑न॒मत्यो॒ न मृ॒ष्टो अ॒भि वाज॑मर्षसि ।",
+          "sanskrit": "ka̠virve̍dha̠syā parye̍ṣi̠ māhi̍na̠matyo̠ na mṛ̠ṣṭo a̠bhi vāja̍marṣasi |",
           "padya": 2
         },
         {
           "id": "rv-9-82-4",
           "chunkNumber": 4,
-          "sanskrit": "अ॒प॒सेध॑न्दुरि॒ता सो॑म मृळय घृ॒तं वसा॑न॒: परि॑ यासि नि॒र्णिज॑म् ॥ २ ॥"
+          "sanskrit": "a̠pa̠sedha̍nduri̠tā so̍ma mṛḷaya ghṛ̠taṃ vasā̍na̠: pari̍ yāsi ni̠rṇija̍m || 2 ||"
         },
         {
           "id": "rv-9-82-5",
           "chunkNumber": 5,
-          "sanskrit": "प॒र्जन्य॑: पि॒ता म॑हि॒षस्य॑ प॒र्णिनो॒ नाभा॑ पृथि॒व्या गि॒रिषु॒ क्षयं॑ दधे ।",
+          "sanskrit": "pa̠rjanya̍: pi̠tā ma̍hi̠ṣasya̍ pa̠rṇino̠ nābhā̍ pṛthi̠vyā gi̠riṣu̠ kṣayaṃ̍ dadhe |",
           "padya": 3
         },
         {
           "id": "rv-9-82-6",
           "chunkNumber": 6,
-          "sanskrit": "स्वसा॑र॒ आपो॑ अ॒भि गा उ॒तास॑र॒न्त्सं ग्राव॑भिर्नसते वी॒ते अ॑ध्व॒रे ॥ ३ ॥"
+          "sanskrit": "svasā̍ra̠ āpo̍ a̠bhi gā u̠tāsa̍ra̠ntsaṃ grāva̍bhirnasate vī̠te a̍dhva̠re || 3 ||"
         },
         {
           "id": "rv-9-82-7",
           "chunkNumber": 7,
-          "sanskrit": "जा॒येव॒ पत्या॒वधि॒ शेव॑ मंहसे॒ पज्रा॑या गर्भ शृणु॒हि ब्रवी॑मि ते ।",
+          "sanskrit": "jā̠yeva̠ patyā̠vadhi̠ śeva̍ maṃhase̠ pajrā̍yā garbha śṛṇu̠hi bravī̍mi te |",
           "padya": 4
         },
         {
           "id": "rv-9-82-8",
           "chunkNumber": 8,
-          "sanskrit": "अ॒न्तर्वाणी॑षु॒ प्र च॑रा॒ सु जी॒वसे॑ऽनि॒न्द्यो वृ॒जने॑ सोम जागृहि ॥ ४ ॥"
+          "sanskrit": "a̠ntarvāṇī̍ṣu̠ pra ca̍rā̠ su jī̠vase̍'ni̠ndyo vṛ̠jane̍ soma jāgṛhi || 4 ||"
         },
         {
           "id": "rv-9-82-9",
           "chunkNumber": 9,
-          "sanskrit": "यथा॒ पूर्वे॑भ्यः शत॒सा अमृ॑ध्रः सहस्र॒साः प॒र्यया॒ वाज॑मिन्दो ।",
+          "sanskrit": "yathā̠ pūrve̍bhyaḥ śata̠sā amṛ̍dhraḥ sahasra̠sāḥ pa̠ryayā̠ vāja̍mindo |",
           "padya": 5
         },
         {
           "id": "rv-9-82-10",
           "chunkNumber": 10,
-          "sanskrit": "ए॒वा प॑वस्व सुवि॒ताय॒ नव्य॑से॒ तव॑ व्र॒तमन्वाप॑: सचन्ते ॥ ५ ॥"
+          "sanskrit": "e̠vā pa̍vasva suvi̠tāya̠ navya̍se̠ tava̍ vra̠tamanvāpa̍: sacante || 5 ||"
         }
       ]
     },
@@ -726,58 +197,58 @@
         {
           "id": "rv-9-83-1",
           "chunkNumber": 1,
-          "sanskrit": "प॒वित्रं॑ ते॒ वित॑तं ब्रह्मणस्पते प्र॒भुर्गात्रा॑णि॒ पर्ये॑षि वि॒श्वत॑: ।",
+          "sanskrit": "pa̠vitraṃ̍ te̠ vita̍taṃ brahmaṇaspate pra̠bhurgātrā̍ṇi̠ parye̍ṣi vi̠śvata̍: |",
           "section": 83,
           "padya": 1
         },
         {
           "id": "rv-9-83-2",
           "chunkNumber": 2,
-          "sanskrit": "अत॑प्ततनू॒र्न तदा॒मो अ॑श्नुते शृ॒तास॒ इद्वह॑न्त॒स्तत्समा॑शत ॥ १ ॥"
+          "sanskrit": "ata̍ptatanū̠rna tadā̠mo a̍śnute śṛ̠tāsa̠ idvaha̍nta̠statsamā̍śata || 1 ||"
         },
         {
           "id": "rv-9-83-3",
           "chunkNumber": 3,
-          "sanskrit": "तपो॑ष्प॒वित्रं॒ वित॑तं दि॒वस्प॒दे शोच॑न्तो अस्य॒ तन्त॑वो॒ व्य॑स्थिरन् ।",
+          "sanskrit": "tapo̍ṣpa̠vitraṃ̠ vita̍taṃ di̠vaspa̠de śoca̍nto asya̠ tanta̍vo̠ vya̍sthiran |",
           "padya": 2
         },
         {
           "id": "rv-9-83-4",
           "chunkNumber": 4,
-          "sanskrit": "अव॑न्त्यस्य पवी॒तार॑मा॒शवो॑ दि॒वस्पृ॒ष्ठमधि॑ तिष्ठन्ति॒ चेत॑सा ॥ २ ॥"
+          "sanskrit": "ava̍ntyasya pavī̠tāra̍mā̠śavo̍ di̠vaspṛ̠ṣṭhamadhi̍ tiṣṭhanti̠ ceta̍sā || 2 ||"
         },
         {
           "id": "rv-9-83-5",
           "chunkNumber": 5,
-          "sanskrit": "अरू॑रुचदु॒षस॒: पृश्नि॑रग्रि॒य उ॒क्षा बि॑भर्ति॒ भुव॑नानि वाज॒युः ।",
+          "sanskrit": "arū̍rucadu̠ṣasa̠: pṛśni̍ragri̠ya u̠kṣā bi̍bharti̠ bhuva̍nāni vāja̠yuḥ |",
           "padya": 3
         },
         {
           "id": "rv-9-83-6",
           "chunkNumber": 6,
-          "sanskrit": "मा॒या॒विनो॑ ममिरे अस्य मा॒यया॑ नृ॒चक्ष॑सः पि॒तरो॒ गर्भ॒मा द॑धुः ॥ ३ ॥"
+          "sanskrit": "mā̠yā̠vino̍ mamire asya mā̠yayā̍ nṛ̠cakṣa̍saḥ pi̠taro̠ garbha̠mā da̍dhuḥ || 3 ||"
         },
         {
           "id": "rv-9-83-7",
           "chunkNumber": 7,
-          "sanskrit": "ग॒न्ध॒र्व इ॒त्था प॒दम॑स्य रक्षति॒ पाति॑ दे॒वानां॒ जनि॑मा॒न्यद्भु॑तः ।",
+          "sanskrit": "ga̠ndha̠rva i̠tthā pa̠dama̍sya rakṣati̠ pāti̍ de̠vānāṃ̠ jani̍mā̠nyadbhu̍taḥ |",
           "padya": 4
         },
         {
           "id": "rv-9-83-8",
           "chunkNumber": 8,
-          "sanskrit": "गृ॒भ्णाति॑ रि॒पुं नि॒धया॑ नि॒धाप॑तिः सु॒कृत्त॑मा॒ मधु॑नो भ॒क्षमा॑शत ॥ ४ ॥"
+          "sanskrit": "gṛ̠bhṇāti̍ ri̠puṃ ni̠dhayā̍ ni̠dhāpa̍tiḥ su̠kṛtta̍mā̠ madhu̍no bha̠kṣamā̍śata || 4 ||"
         },
         {
           "id": "rv-9-83-9",
           "chunkNumber": 9,
-          "sanskrit": "ह॒विर्ह॑विष्मो॒ महि॒ सद्म॒ दैव्यं॒ नभो॒ वसा॑न॒: परि॑ यास्यध्व॒रम् ।",
+          "sanskrit": "ha̠virha̍viṣmo̠ mahi̠ sadma̠ daivyaṃ̠ nabho̠ vasā̍na̠: pari̍ yāsyadhva̠ram |",
           "padya": 5
         },
         {
           "id": "rv-9-83-10",
           "chunkNumber": 10,
-          "sanskrit": "राजा॑ प॒वित्र॑रथो॒ वाज॒मारु॑हः स॒हस्र॑भृष्टिर्जयसि॒ श्रवो॑ बृ॒हत् ॥ ५ ॥"
+          "sanskrit": "rājā̍ pa̠vitra̍ratho̠ vāja̠māru̍haḥ sa̠hasra̍bhṛṣṭirjayasi̠ śravo̍ bṛ̠hat || 5 ||"
         }
       ]
     },
@@ -789,58 +260,58 @@
         {
           "id": "rv-9-84-1",
           "chunkNumber": 1,
-          "sanskrit": "पव॑स्व देव॒माद॑नो॒ विच॑र्षणिर॒प्सा इन्द्रा॑य॒ वरु॑णाय वा॒यवे॑ ।",
+          "sanskrit": "pava̍sva deva̠māda̍no̠ vica̍rṣaṇira̠psā indrā̍ya̠ varu̍ṇāya vā̠yave̍ |",
           "section": 84,
           "padya": 1
         },
         {
           "id": "rv-9-84-2",
           "chunkNumber": 2,
-          "sanskrit": "कृ॒धी नो॑ अ॒द्य वरि॑वः स्वस्ति॒मदु॑रुक्षि॒तौ गृ॑णीहि॒ दैव्यं॒ जन॑म् ॥ १ ॥"
+          "sanskrit": "kṛ̠dhī no̍ a̠dya vari̍vaḥ svasti̠madu̍rukṣi̠tau gṛ̍ṇīhi̠ daivyaṃ̠ jana̍m || 1 ||"
         },
         {
           "id": "rv-9-84-3",
           "chunkNumber": 3,
-          "sanskrit": "आ यस्त॒स्थौ भुव॑ना॒न्यम॑र्त्यो॒ विश्वा॑नि॒ सोम॒: परि॒ तान्य॑र्षति ।",
+          "sanskrit": "ā yasta̠sthau bhuva̍nā̠nyama̍rtyo̠ viśvā̍ni̠ soma̠: pari̠ tānya̍rṣati |",
           "padya": 2
         },
         {
           "id": "rv-9-84-4",
           "chunkNumber": 4,
-          "sanskrit": "कृ॒ण्वन्त्सं॒चृतं॑ वि॒चृत॑म॒भिष्ट॑य॒ इन्दु॑: सिषक्त्यु॒षसं॒ न सूर्य॑: ॥ २ ॥"
+          "sanskrit": "kṛ̠ṇvantsaṃ̠cṛtaṃ̍ vi̠cṛta̍ma̠bhiṣṭa̍ya̠ indu̍: siṣaktyu̠ṣasaṃ̠ na sūrya̍: || 2 ||"
         },
         {
           "id": "rv-9-84-5",
           "chunkNumber": 5,
-          "sanskrit": "आ यो गोभि॑: सृ॒ज्यत॒ ओष॑धी॒ष्वा दे॒वानां॑ सु॒म्न इ॒षय॒न्नुपा॑वसुः ।",
+          "sanskrit": "ā yo gobhi̍: sṛ̠jyata̠ oṣa̍dhī̠ṣvā de̠vānāṃ̍ su̠mna i̠ṣaya̠nnupā̍vasuḥ |",
           "padya": 3
         },
         {
           "id": "rv-9-84-6",
           "chunkNumber": 6,
-          "sanskrit": "आ वि॒द्युता॑ पवते॒ धार॑या सु॒त इन्द्रं॒ सोमो॑ मा॒दय॒न्दैव्यं॒ जन॑म् ॥ ३ ॥"
+          "sanskrit": "ā vi̠dyutā̍ pavate̠ dhāra̍yā su̠ta indraṃ̠ somo̍ mā̠daya̠ndaivyaṃ̠ jana̍m || 3 ||"
         },
         {
           "id": "rv-9-84-7",
           "chunkNumber": 7,
-          "sanskrit": "ए॒ष स्य सोम॑: पवते सहस्र॒जिद्धि॑न्वा॒नो वाच॑मिषि॒रामु॑ष॒र्बुध॑म् ।",
+          "sanskrit": "e̠ṣa sya soma̍: pavate sahasra̠jiddhi̍nvā̠no vāca̍miṣi̠rāmu̍ṣa̠rbudha̍m |",
           "padya": 4
         },
         {
           "id": "rv-9-84-8",
           "chunkNumber": 8,
-          "sanskrit": "इन्दु॑: समु॒द्रमुदि॑यर्ति वा॒युभि॒रेन्द्र॑स्य॒ हार्दि॑ क॒लशे॑षु सीदति ॥ ४ ॥"
+          "sanskrit": "indu̍: samu̠dramudi̍yarti vā̠yubhi̠rendra̍sya̠ hārdi̍ ka̠laśe̍ṣu sīdati || 4 ||"
         },
         {
           "id": "rv-9-84-9",
           "chunkNumber": 9,
-          "sanskrit": "अ॒भि त्यं गाव॒: पय॑सा पयो॒वृधं॒ सोमं॑ श्रीणन्ति म॒तिभि॑: स्व॒र्विद॑म् ।",
+          "sanskrit": "a̠bhi tyaṃ gāva̠: paya̍sā payo̠vṛdhaṃ̠ somaṃ̍ śrīṇanti ma̠tibhi̍: sva̠rvida̍m |",
           "padya": 5
         },
         {
           "id": "rv-9-84-10",
           "chunkNumber": 10,
-          "sanskrit": "ध॒नं॒ज॒यः प॑वते॒ कृत्व्यो॒ रसो॒ विप्र॑: क॒विः काव्ये॑ना॒ स्व॑र्चनाः ॥ ५ ॥"
+          "sanskrit": "dha̠naṃ̠ja̠yaḥ pa̍vate̠ kṛtvyo̠ raso̠ vipra̍: ka̠viḥ kāvye̍nā̠ sva̍rcanāḥ || 5 ||"
         }
       ]
     },
@@ -852,135 +323,1642 @@
         {
           "id": "rv-9-85-1",
           "chunkNumber": 1,
-          "sanskrit": "इन्द्रा॑य सोम॒ सुषु॑त॒: परि॑ स्र॒वाऽपामी॑वा भवतु॒ रक्ष॑सा स॒ह ।",
+          "sanskrit": "indrā̍ya soma̠ suṣu̍ta̠: pari̍ sra̠vā'pāmī̍vā bhavatu̠ rakṣa̍sā sa̠ha |",
           "section": 85,
           "padya": 1
         },
         {
           "id": "rv-9-85-2",
           "chunkNumber": 2,
-          "sanskrit": "मा ते॒ रस॑स्य मत्सत द्वया॒विनो॒ द्रवि॑णस्वन्त इ॒ह स॒न्त्विन्द॑वः ॥ १ ॥"
+          "sanskrit": "mā te̠ rasa̍sya matsata dvayā̠vino̠ dravi̍ṇasvanta i̠ha sa̠ntvinda̍vaḥ || 1 ||"
         },
         {
           "id": "rv-9-85-3",
           "chunkNumber": 3,
-          "sanskrit": "अ॒स्मान्त्स॑म॒र्ये प॑वमान चोदय॒ दक्षो॑ दे॒वाना॒मसि॒ हि प्रि॒यो मद॑: ।",
+          "sanskrit": "a̠smāntsa̍ma̠rye pa̍vamāna codaya̠ dakṣo̍ de̠vānā̠masi̠ hi pri̠yo mada̍: |",
           "padya": 2
         },
         {
           "id": "rv-9-85-4",
           "chunkNumber": 4,
-          "sanskrit": "ज॒हि शत्रूँ॑र॒भ्या भ॑न्दनाय॒तः पिबे॑न्द्र॒ सोम॒मव॑ नो॒ मृधो॑ जहि ॥ २ ॥"
+          "sanskrit": "ja̠hi śatrūm̐̍ra̠bhyā bha̍ndanāya̠taḥ pibe̍ndra̠ soma̠mava̍ no̠ mṛdho̍ jahi || 2 ||"
         },
         {
           "id": "rv-9-85-5",
           "chunkNumber": 5,
-          "sanskrit": "अद॑ब्ध इन्दो पवसे म॒दिन्त॑म आ॒त्मेन्द्र॑स्य भवसि धा॒सिरु॑त्त॒मः ।",
+          "sanskrit": "ada̍bdha indo pavase ma̠dinta̍ma ā̠tmendra̍sya bhavasi dhā̠siru̍tta̠maḥ |",
           "padya": 3
         },
         {
           "id": "rv-9-85-6",
           "chunkNumber": 6,
-          "sanskrit": "अ॒भि स्व॑रन्ति ब॒हवो॑ मनी॒षिणो॒ राजा॑नम॒स्य भुव॑नस्य निंसते ॥ ३ ॥"
+          "sanskrit": "a̠bhi sva̍ranti ba̠havo̍ manī̠ṣiṇo̠ rājā̍nama̠sya bhuva̍nasya niṃsate || 3 ||"
         },
         {
           "id": "rv-9-85-7",
           "chunkNumber": 7,
-          "sanskrit": "स॒हस्र॑णीथः श॒तधा॑रो॒ अद्भु॑त॒ इन्द्रा॒येन्दु॑: पवते॒ काम्यं॒ मधु॑ ।",
+          "sanskrit": "sa̠hasra̍ṇīthaḥ śa̠tadhā̍ro̠ adbhu̍ta̠ indrā̠yendu̍: pavate̠ kāmyaṃ̠ madhu̍ |",
           "padya": 4
         },
         {
           "id": "rv-9-85-8",
           "chunkNumber": 8,
-          "sanskrit": "जय॒न्क्षेत्र॑म॒भ्य॑र्षा॒ जय॑न्न॒प उ॒रुं नो॑ गा॒तुं कृ॑णु सोम मीढ्वः ॥ ४ ॥"
+          "sanskrit": "jaya̠nkṣetra̍ma̠bhya̍rṣā̠ jaya̍nna̠pa u̠ruṃ no̍ gā̠tuṃ kṛ̍ṇu soma mīḍhvaḥ || 4 ||"
         },
         {
           "id": "rv-9-85-9",
           "chunkNumber": 9,
-          "sanskrit": "कनि॑क्रदत्क॒लशे॒ गोभि॑रज्यसे॒ व्य१व्ययं॑ स॒मया॒ वार॑मर्षसि ।",
+          "sanskrit": "kani̍kradatka̠laśe̠ gobhi̍rajyase̠ vya1vyayaṃ̍ sa̠mayā̠ vāra̍marṣasi |",
           "padya": 5
         },
         {
           "id": "rv-9-85-10",
           "chunkNumber": 10,
-          "sanskrit": "म॒र्मृ॒ज्यमा॑नो॒ अत्यो॒ न सा॑न॒सिरिन्द्र॑स्य सोम ज॒ठरे॒ सम॑क्षरः ॥ ५ ॥"
+          "sanskrit": "ma̠rmṛ̠jyamā̍no̠ atyo̠ na sā̍na̠sirindra̍sya soma ja̠ṭhare̠ sama̍kṣaraḥ || 5 ||"
         },
         {
           "id": "rv-9-85-11",
           "chunkNumber": 11,
-          "sanskrit": "स्वा॒दुः प॑वस्व दि॒व्याय॒ जन्म॑ने स्वा॒दुरिन्द्रा॑य सु॒हवी॑तुनाम्ने ।",
+          "sanskrit": "svā̠duḥ pa̍vasva di̠vyāya̠ janma̍ne svā̠durindrā̍ya su̠havī̍tunāmne |",
           "padya": 6
         },
         {
           "id": "rv-9-85-12",
           "chunkNumber": 12,
-          "sanskrit": "स्वा॒दुर्मि॒त्राय॒ वरु॑णाय वा॒यवे॒ बृह॒स्पत॑ये॒ मधु॑माँ॒ अदा॑भ्यः ॥ ६ ॥"
+          "sanskrit": "svā̠durmi̠trāya̠ varu̍ṇāya vā̠yave̠ bṛha̠spata̍ye̠ madhu̍mām̠̐ adā̍bhyaḥ || 6 ||"
         },
         {
           "id": "rv-9-85-13",
           "chunkNumber": 13,
-          "sanskrit": "अत्यं॑ मृजन्ति क॒लशे॒ दश॒ क्षिप॒: प्र विप्रा॑णां म॒तयो॒ वाच॑ ईरते ।",
+          "sanskrit": "atyaṃ̍ mṛjanti ka̠laśe̠ daśa̠ kṣipa̠: pra viprā̍ṇāṃ ma̠tayo̠ vāca̍ īrate |",
           "padya": 7
         },
         {
           "id": "rv-9-85-14",
           "chunkNumber": 14,
-          "sanskrit": "पव॑माना अ॒भ्य॑र्षन्ति सुष्टु॒तिमेन्द्रं॑ विशन्ति मदि॒रास॒ इन्द॑वः ॥ ७ ॥"
+          "sanskrit": "pava̍mānā a̠bhya̍rṣanti suṣṭu̠timendraṃ̍ viśanti madi̠rāsa̠ inda̍vaḥ || 7 ||"
         },
         {
           "id": "rv-9-85-15",
           "chunkNumber": 15,
-          "sanskrit": "पव॑मानो अ॒भ्य॑र्षा सु॒वीर्य॑मु॒र्वीं गव्यू॑तिं॒ महि॒ शर्म॑ स॒प्रथ॑: ।",
+          "sanskrit": "pava̍māno a̠bhya̍rṣā su̠vīrya̍mu̠rvīṃ gavyū̍tiṃ̠ mahi̠ śarma̍ sa̠pratha̍: |",
           "padya": 8
         },
         {
           "id": "rv-9-85-16",
           "chunkNumber": 16,
-          "sanskrit": "माकि॑र्नो अ॒स्य परि॑षूतिरीश॒तेन्दो॒ जये॑म॒ त्वया॒ धनं॑धनम् ॥ ८ ॥"
+          "sanskrit": "māki̍rno a̠sya pari̍ṣūtirīśa̠tendo̠ jaye̍ma̠ tvayā̠ dhanaṃ̍dhanam || 8 ||"
         },
         {
           "id": "rv-9-85-17",
           "chunkNumber": 17,
-          "sanskrit": "अधि॒ द्याम॑स्थाद्वृष॒भो वि॑चक्ष॒णोऽरू॑रुच॒द्वि दि॒वो रो॑च॒ना क॒विः ।",
+          "sanskrit": "adhi̠ dyāma̍sthādvṛṣa̠bho vi̍cakṣa̠ṇo'rū̍ruca̠dvi di̠vo ro̍ca̠nā ka̠viḥ |",
           "padya": 9
         },
         {
           "id": "rv-9-85-18",
           "chunkNumber": 18,
-          "sanskrit": "राजा॑ प॒वित्र॒मत्ये॑ति॒ रोरु॑वद्दि॒वः पी॒यूषं॑ दुहते नृ॒चक्ष॑सः ॥ ९ ॥"
+          "sanskrit": "rājā̍ pa̠vitra̠matye̍ti̠ roru̍vaddi̠vaḥ pī̠yūṣaṃ̍ duhate nṛ̠cakṣa̍saḥ || 9 ||"
         },
         {
           "id": "rv-9-85-19",
           "chunkNumber": 19,
-          "sanskrit": "दि॒वो नाके॒ मधु॑जिह्वा अस॒श्चतो॑ वे॒ना दु॑हन्त्यु॒क्षणं॑ गिरि॒ष्ठाम् ।",
+          "sanskrit": "di̠vo nāke̠ madhu̍jihvā asa̠ścato̍ ve̠nā du̍hantyu̠kṣaṇaṃ̍ giri̠ṣṭhām |",
           "padya": 10
         },
         {
           "id": "rv-9-85-20",
           "chunkNumber": 20,
-          "sanskrit": "अ॒प्सु द्र॒प्सं वा॑वृधा॒नं स॑मु॒द्र आ सिन्धो॑रू॒र्मा मधु॑मन्तं प॒वित्र॒ आ ॥ १० ॥"
+          "sanskrit": "a̠psu dra̠psaṃ vā̍vṛdhā̠naṃ sa̍mu̠dra ā sindho̍rū̠rmā madhu̍mantaṃ pa̠vitra̠ ā || 10 ||"
         },
         {
           "id": "rv-9-85-21",
           "chunkNumber": 21,
-          "sanskrit": "नाके॑ सुप॒र्णमु॑पपप्ति॒वांसं॒ गिरो॑ वे॒नाना॑मकृपन्त पू॒र्वीः ।",
+          "sanskrit": "nāke̍ supa̠rṇamu̍papapti̠vāṃsaṃ̠ giro̍ ve̠nānā̍makṛpanta pū̠rvīḥ |",
           "padya": 11
         },
         {
           "id": "rv-9-85-22",
           "chunkNumber": 22,
-          "sanskrit": "शिशुं॑ रिहन्ति म॒तय॒: पनि॑प्नतं हिर॒ण्ययं॑ शकु॒नं क्षाम॑णि॒ स्थाम् ॥ ११ ॥"
+          "sanskrit": "śiśuṃ̍ rihanti ma̠taya̠: pani̍pnataṃ hira̠ṇyayaṃ̍ śaku̠naṃ kṣāma̍ṇi̠ sthām || 11 ||"
         },
         {
           "id": "rv-9-85-23",
           "chunkNumber": 23,
-          "sanskrit": "ऊ॒र्ध्वो ग॑न्ध॒र्वो अधि॒ नाके॑ अस्था॒द्विश्वा॑ रू॒पा प्र॑ति॒चक्षा॑णो अस्य ।",
+          "sanskrit": "ū̠rdhvo ga̍ndha̠rvo adhi̠ nāke̍ asthā̠dviśvā̍ rū̠pā pra̍ti̠cakṣā̍ṇo asya |",
           "padya": 12
         },
         {
           "id": "rv-9-85-24",
           "chunkNumber": 24,
-          "sanskrit": "भा॒नुः शु॒क्रेण॑ शो॒चिषा॒ व्य॑द्यौ॒त्प्रारू॑रुच॒द्रोद॑सी मा॒तरा॒ शुचि॑: ॥ १२ ॥"
+          "sanskrit": "bhā̠nuḥ śu̠kreṇa̍ śo̠ciṣā̠ vya̍dyau̠tprārū̍ruca̠droda̍sī mā̠tarā̠ śuci̍: || 12 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-86",
+      "title": "Maṇḍala 9 · Sūkta 86",
+      "sectionNumber": 86,
+      "chunks": [
+        {
+          "id": "rv-9-86-1",
+          "chunkNumber": 1,
+          "sanskrit": "pra ta̍ ā̠śava̍: pavamāna dhī̠javo̠ madā̍ arṣanti raghu̠jā i̍va̠ tmanā̍ |",
+          "section": 86,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-86-2",
+          "chunkNumber": 2,
+          "sanskrit": "di̠vyāḥ su̍pa̠rṇā madhu̍manta̠ inda̍vo ma̠dinta̍māsa̠: pari̠ kośa̍māsate || 1 ||"
+        },
+        {
+          "id": "rv-9-86-3",
+          "chunkNumber": 3,
+          "sanskrit": "pra te̠ madā̍so madi̠rāsa̍ ā̠śavo'sṛ̍kṣata̠ rathyā̍so̠ yathā̠ pṛtha̍k |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-86-4",
+          "chunkNumber": 4,
+          "sanskrit": "dhe̠nurna va̠tsaṃ paya̍sā̠bhi va̠jriṇa̠mindra̠minda̍vo̠ madhu̍manta ū̠rmaya̍: || 2 ||"
+        },
+        {
+          "id": "rv-9-86-5",
+          "chunkNumber": 5,
+          "sanskrit": "atyo̠ na hi̍yā̠no a̠bhi vāja̍marṣa sva̠rvitkośaṃ̍ di̠vo adri̍mātaram |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-86-6",
+          "chunkNumber": 6,
+          "sanskrit": "vṛṣā̍ pa̠vitre̠ adhi̠ sāno̍ a̠vyaye̠ soma̍: punā̠na i̍ndri̠yāya̠ dhāya̍se || 3 ||"
+        },
+        {
+          "id": "rv-9-86-7",
+          "chunkNumber": 7,
+          "sanskrit": "pra ta̠ āśvi̍nīḥ pavamāna dhī̠juvo̍ di̠vyā a̍sṛgra̠npaya̍sā̠ dharī̍maṇi |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-86-8",
+          "chunkNumber": 8,
+          "sanskrit": "prāntaṝṣa̍ya̠: sthāvi̍rīrasṛkṣata̠ ye tvā̍ mṛ̠jantyṛ̍ṣiṣāṇa ve̠dhasa̍: || 4 ||"
+        },
+        {
+          "id": "rv-9-86-9",
+          "chunkNumber": 9,
+          "sanskrit": "viśvā̠ dhāmā̍ni viśvacakṣa̠ ṛbhva̍saḥ pra̠bhoste̍ sa̠taḥ pari̍ yanti ke̠tava̍: |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-86-10",
+          "chunkNumber": 10,
+          "sanskrit": "vyā̠na̠śiḥ pa̍vase soma̠ dharma̍bhi̠: pati̠rviśva̍sya̠ bhuva̍nasya rājasi || 5 ||"
+        },
+        {
+          "id": "rv-9-86-11",
+          "chunkNumber": 11,
+          "sanskrit": "u̠bha̠yata̠: pava̍mānasya ra̠śmayo̍ dhru̠vasya̍ sa̠taḥ pari̍ yanti ke̠tava̍: |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-86-12",
+          "chunkNumber": 12,
+          "sanskrit": "yadī̍ pa̠vitre̠ adhi̍ mṛ̠jyate̠ hari̠: sattā̠ ni yonā̍ ka̠laśe̍ṣu sīdati || 6 ||"
+        },
+        {
+          "id": "rv-9-86-13",
+          "chunkNumber": 13,
+          "sanskrit": "ya̠jñasya̍ ke̠tuḥ pa̍vate svadhva̠raḥ somo̍ de̠vānā̠mupa̍ yāti niṣkṛ̠tam |",
+          "padya": 7
+        },
+        {
+          "id": "rv-9-86-14",
+          "chunkNumber": 14,
+          "sanskrit": "sa̠hasra̍dhāra̠: pari̠ kośa̍marṣati̠ vṛṣā̍ pa̠vitra̠matye̍ti̠ roru̍vat || 7 ||"
+        },
+        {
+          "id": "rv-9-86-15",
+          "chunkNumber": 15,
+          "sanskrit": "rājā̍ samu̠draṃ na̠dyo̠3 vi gā̍hate̠'pāmū̠rmiṃ sa̍cate̠ sindhu̍ṣu śri̠taḥ |",
+          "padya": 8
+        },
+        {
+          "id": "rv-9-86-16",
+          "chunkNumber": 16,
+          "sanskrit": "adhya̍sthā̠tsānu̠ pava̍māno a̠vyayaṃ̠ nābhā̍ pṛthi̠vyā dha̠ruṇo̍ ma̠ho di̠vaḥ || 8 ||"
+        },
+        {
+          "id": "rv-9-86-17",
+          "chunkNumber": 17,
+          "sanskrit": "di̠vo na sānu̍ sta̠naya̍nnacikrada̠ddyauśca̠ yasya̍ pṛthi̠vī ca̠ dharma̍bhiḥ |",
+          "padya": 9
+        },
+        {
+          "id": "rv-9-86-18",
+          "chunkNumber": 18,
+          "sanskrit": "indra̍sya sa̠khyaṃ pa̍vate vi̠vevi̍da̠tsoma̍: punā̠naḥ ka̠laśe̍ṣu sīdati || 9 ||"
+        },
+        {
+          "id": "rv-9-86-19",
+          "chunkNumber": 19,
+          "sanskrit": "jyoti̍rya̠jñasya̍ pavate̠ madhu̍ pri̠yaṃ pi̠tā de̠vānāṃ̍ jani̠tā vi̠bhūva̍suḥ |",
+          "padya": 10
+        },
+        {
+          "id": "rv-9-86-20",
+          "chunkNumber": 20,
+          "sanskrit": "dadhā̍ti̠ ratnaṃ̍ sva̠dhayo̍rapī̠cyaṃ̍ ma̠dinta̍mo matsa̠ra i̍ndri̠yo rasa̍: || 10 ||"
+        },
+        {
+          "id": "rv-9-86-21",
+          "chunkNumber": 21,
+          "sanskrit": "a̠bhi̠kranda̍nka̠laśaṃ̍ vā̠jya̍rṣati̠ pati̍rdi̠vaḥ śa̠tadhā̍ro vicakṣa̠ṇaḥ |",
+          "padya": 11
+        },
+        {
+          "id": "rv-9-86-22",
+          "chunkNumber": 22,
+          "sanskrit": "hari̍rmi̠trasya̠ sada̍neṣu sīdati marmṛjā̠no'vi̍bhi̠: sindhu̍bhi̠rvṛṣā̍ || 11 ||"
+        },
+        {
+          "id": "rv-9-86-23",
+          "chunkNumber": 23,
+          "sanskrit": "agre̠ sindhū̍nāṃ̠ pava̍māno arṣa̠tyagre̍ vā̠co a̍gri̠yo goṣu̍ gacchati |",
+          "padya": 12
+        },
+        {
+          "id": "rv-9-86-24",
+          "chunkNumber": 24,
+          "sanskrit": "agre̠ vāja̍sya bhajate mahādha̠naṃ svā̍yu̠dhaḥ so̠tṛbhi̍: pūyate̠ vṛṣā̍ || 12 ||"
+        },
+        {
+          "id": "rv-9-86-25",
+          "chunkNumber": 25,
+          "sanskrit": "a̠yaṃ ma̠tavā̍ñchaku̠no yathā̍ hi̠to'vye̍ sasāra̠ pava̍māna ū̠rmiṇā̍ |",
+          "padya": 13
+        },
+        {
+          "id": "rv-9-86-26",
+          "chunkNumber": 26,
+          "sanskrit": "tava̠ kratvā̠ roda̍sī anta̠rā ka̍ve̠ śuci̍rdhi̠yā pa̍vate̠ soma̍ indra te || 13 ||"
+        },
+        {
+          "id": "rv-9-86-27",
+          "chunkNumber": 27,
+          "sanskrit": "drā̠piṃ vasā̍no yaja̠to di̍vi̠spṛśa̍mantarikṣa̠prā bhuva̍ne̠ṣvarpi̍taḥ |",
+          "padya": 14
+        },
+        {
+          "id": "rv-9-86-28",
+          "chunkNumber": 28,
+          "sanskrit": "sva̍rjajñā̠no nabha̍sā̠bhya̍kramītpra̠tnama̍sya pi̠tara̠mā vi̍vāsati || 14 ||"
+        },
+        {
+          "id": "rv-9-86-29",
+          "chunkNumber": 29,
+          "sanskrit": "so a̍sya vi̠śe mahi̠ śarma̍ yacchati̠ yo a̍sya̠ dhāma̍ pratha̠maṃ vyā̍na̠śe |",
+          "padya": 15
+        },
+        {
+          "id": "rv-9-86-30",
+          "chunkNumber": 30,
+          "sanskrit": "pa̠daṃ yada̍sya para̠me vyo̍ma̠nyato̠ viśvā̍ a̠bhi saṃ yā̍ti saṃ̠yata̍: || 15 ||"
+        },
+        {
+          "id": "rv-9-86-31",
+          "chunkNumber": 31,
+          "sanskrit": "pro a̍yāsī̠dindu̠rindra̍sya niṣkṛ̠taṃ sakhā̠ sakhyu̠rna pra mi̍nāti saṃ̠gira̍m |",
+          "padya": 16
+        },
+        {
+          "id": "rv-9-86-32",
+          "chunkNumber": 32,
+          "sanskrit": "marya̍ iva yuva̠tibhi̠: sama̍rṣati̠ soma̍: ka̠laśe̍ śa̠tayā̍mnā pa̠thā || 16 ||"
+        },
+        {
+          "id": "rv-9-86-33",
+          "chunkNumber": 33,
+          "sanskrit": "pra vo̠ dhiyo̍ mandra̠yuvo̍ vipa̠nyuva̍: pana̠syuva̍: saṃ̠vasa̍neṣvakramuḥ |",
+          "padya": 17
+        },
+        {
+          "id": "rv-9-86-34",
+          "chunkNumber": 34,
+          "sanskrit": "somaṃ̍ manī̠ṣā a̠bhya̍nūṣata̠ stubho̠'bhi dhe̠nava̠: paya̍semaśiśrayuḥ || 17 ||"
+        },
+        {
+          "id": "rv-9-86-35",
+          "chunkNumber": 35,
+          "sanskrit": "ā na̍: soma saṃ̠yataṃ̍ pi̠pyuṣī̠miṣa̠mindo̠ pava̍sva̠ pava̍māno a̠sridha̍m |",
+          "padya": 18
+        },
+        {
+          "id": "rv-9-86-36",
+          "chunkNumber": 36,
+          "sanskrit": "yā no̠ doha̍te̠ triraha̠nnasa̍ścuṣī kṣu̠madvāja̍va̠nmadhu̍matsu̠vīrya̍m || 18 ||"
+        },
+        {
+          "id": "rv-9-86-37",
+          "chunkNumber": 37,
+          "sanskrit": "vṛṣā̍ matī̠nāṃ pa̍vate vicakṣa̠ṇaḥ somo̠ ahna̍: pratarī̠toṣaso̍ di̠vaḥ |",
+          "padya": 19
+        },
+        {
+          "id": "rv-9-86-38",
+          "chunkNumber": 38,
+          "sanskrit": "krā̠ṇā sindhū̍nāṃ ka̠laśām̐̍ avīvaśa̠dindra̍sya̠ hārdyā̍vi̠śanma̍nī̠ṣibhi̍: || 19 ||"
+        },
+        {
+          "id": "rv-9-86-39",
+          "chunkNumber": 39,
+          "sanskrit": "ma̠nī̠ṣibhi̍: pavate pū̠rvyaḥ ka̠virnṛbhi̍rya̠taḥ pari̠ kośām̐̍ acikradat |",
+          "padya": 20
+        },
+        {
+          "id": "rv-9-86-40",
+          "chunkNumber": 40,
+          "sanskrit": "tri̠tasya̠ nāma̍ ja̠naya̠nmadhu̍ kṣara̠dindra̍sya vā̠yoḥ sa̠khyāya̠ karta̍ve || 20 ||"
+        },
+        {
+          "id": "rv-9-86-41",
+          "chunkNumber": 41,
+          "sanskrit": "a̠yaṃ pu̍nā̠na u̠ṣaso̠ vi ro̍cayada̠yaṃ sindhu̍bhyo abhavadu loka̠kṛt |",
+          "padya": 21
+        },
+        {
+          "id": "rv-9-86-42",
+          "chunkNumber": 42,
+          "sanskrit": "a̠yaṃ triḥ sa̠pta du̍duhā̠na ā̠śiraṃ̠ somo̍ hṛ̠de pa̍vate̠ cāru̍ matsa̠raḥ || 21 ||"
+        },
+        {
+          "id": "rv-9-86-43",
+          "chunkNumber": 43,
+          "sanskrit": "pava̍sva soma di̠vyeṣu̠ dhāma̍su sṛjā̠na i̍ndo ka̠laśe̍ pa̠vitra̠ ā |",
+          "padya": 22
+        },
+        {
+          "id": "rv-9-86-44",
+          "chunkNumber": 44,
+          "sanskrit": "sīda̠nnindra̍sya ja̠ṭhare̠ kani̍krada̠nnṛbhi̍rya̠taḥ sūrya̠māro̍hayo di̠vi || 22 ||"
+        },
+        {
+          "id": "rv-9-86-45",
+          "chunkNumber": 45,
+          "sanskrit": "adri̍bhiḥ su̠taḥ pa̍vase pa̠vitra̠ ām̐ inda̠vindra̍sya ja̠ṭhare̍ṣvāvi̠śan |",
+          "padya": 23
+        },
+        {
+          "id": "rv-9-86-46",
+          "chunkNumber": 46,
+          "sanskrit": "tvaṃ nṛ̠cakṣā̍ abhavo vicakṣaṇa̠ soma̍ go̠tramaṅgi̍robhyo'vṛṇo̠rapa̍ || 23 ||"
+        },
+        {
+          "id": "rv-9-86-47",
+          "chunkNumber": 47,
+          "sanskrit": "tvāṃ so̍ma̠ pava̍mānaṃ svā̠dhyo'nu̠ viprā̍so amadannava̠syava̍: |",
+          "padya": 24
+        },
+        {
+          "id": "rv-9-86-48",
+          "chunkNumber": 48,
+          "sanskrit": "tvāṃ su̍pa̠rṇa ābha̍raddi̠vasparīndo̠ viśvā̍bhirma̠tibhi̠: pari̍ṣkṛtam || 24 ||"
+        },
+        {
+          "id": "rv-9-86-49",
+          "chunkNumber": 49,
+          "sanskrit": "avye̍ punā̠naṃ pari̠ vāra̍ ū̠rmiṇā̠ hariṃ̍ navante a̠bhi sa̠pta dhe̠nava̍: |",
+          "padya": 25
+        },
+        {
+          "id": "rv-9-86-50",
+          "chunkNumber": 50,
+          "sanskrit": "a̠pāmu̠pasthe̠ adhyā̠yava̍: ka̠vimṛ̠tasya̠ yonā̍ mahi̠ṣā a̍heṣata || 25 ||"
+        },
+        {
+          "id": "rv-9-86-51",
+          "chunkNumber": 51,
+          "sanskrit": "indu̍: punā̠no ati̍ gāhate̠ mṛdho̠ viśvā̍ni kṛ̠ṇvantsu̠pathā̍ni̠ yajya̍ve |",
+          "padya": 26
+        },
+        {
+          "id": "rv-9-86-52",
+          "chunkNumber": 52,
+          "sanskrit": "gāḥ kṛ̍ṇvā̠no ni̠rṇijaṃ̍ harya̠taḥ ka̠viratyo̠ na krīḷa̠npari̠ vāra̍marṣati || 26 ||"
+        },
+        {
+          "id": "rv-9-86-53",
+          "chunkNumber": 53,
+          "sanskrit": "a̠sa̠ścata̍: śa̠tadhā̍rā abhi̠śriyo̠ hariṃ̍ nava̠nte'va̠ tā u̍da̠nyuva̍: |",
+          "padya": 27
+        },
+        {
+          "id": "rv-9-86-54",
+          "chunkNumber": 54,
+          "sanskrit": "kṣipo̍ mṛjanti̠ pari̠ gobhi̠rāvṛ̍taṃ tṛ̠tīye̍ pṛ̠ṣṭhe adhi̍ roca̠ne di̠vaḥ || 27 ||"
+        },
+        {
+          "id": "rv-9-86-55",
+          "chunkNumber": 55,
+          "sanskrit": "tave̠māḥ pra̠jā di̠vyasya̠ reta̍sa̠stvaṃ viśva̍sya̠ bhuva̍nasya rājasi |",
+          "padya": 28
+        },
+        {
+          "id": "rv-9-86-56",
+          "chunkNumber": 56,
+          "sanskrit": "athe̠daṃ viśvaṃ̍ pavamāna te̠ vaśe̠ tvami̍ndo pratha̠mo dhā̍ma̠dhā a̍si || 28 ||"
+        },
+        {
+          "id": "rv-9-86-57",
+          "chunkNumber": 57,
+          "sanskrit": "tvaṃ sa̍mu̠dro a̍si viśva̠vitka̍ve̠ tave̠māḥ pañca̍ pra̠diśo̠ vidha̍rmaṇi |",
+          "padya": 29
+        },
+        {
+          "id": "rv-9-86-58",
+          "chunkNumber": 58,
+          "sanskrit": "tvaṃ dyāṃ ca̍ pṛthi̠vīṃ cāti̍ jabhriṣe̠ tava̠ jyotīṃ̍ṣi pavamāna̠ sūrya̍: || 29 ||"
+        },
+        {
+          "id": "rv-9-86-59",
+          "chunkNumber": 59,
+          "sanskrit": "tvaṃ pa̠vitre̠ raja̍so̠ vidha̍rmaṇi de̠vebhya̍: soma pavamāna pūyase |",
+          "padya": 30
+        },
+        {
+          "id": "rv-9-86-60",
+          "chunkNumber": 60,
+          "sanskrit": "tvāmu̠śija̍: pratha̠mā a̍gṛbhṇata̠ tubhye̠mā viśvā̠ bhuva̍nāni yemire || 30 ||"
+        },
+        {
+          "id": "rv-9-86-61",
+          "chunkNumber": 61,
+          "sanskrit": "pra re̠bha e̠tyati̠ vāra̍ma̠vyayaṃ̠ vṛṣā̠ vane̠ṣvava̍ cakrada̠ddhari̍: |",
+          "padya": 31
+        },
+        {
+          "id": "rv-9-86-62",
+          "chunkNumber": 62,
+          "sanskrit": "saṃ dhī̠tayo̍ vāvaśā̠nā a̍nūṣata̠ śiśuṃ̍ rihanti ma̠taya̠: pani̍pnatam || 31 ||"
+        },
+        {
+          "id": "rv-9-86-63",
+          "chunkNumber": 63,
+          "sanskrit": "sa sūrya̍sya ra̠śmibhi̠: pari̍ vyata̠ tantuṃ̍ tanvā̠nastri̠vṛtaṃ̠ yathā̍ vi̠de |",
+          "padya": 32
+        },
+        {
+          "id": "rv-9-86-64",
+          "chunkNumber": 64,
+          "sanskrit": "naya̍nnṛ̠tasya̍ pra̠śiṣo̠ navī̍yasī̠: pati̠rjanī̍nā̠mupa̍ yāti niṣkṛ̠tam || 32 ||"
+        },
+        {
+          "id": "rv-9-86-65",
+          "chunkNumber": 65,
+          "sanskrit": "rājā̠ sindhū̍nāṃ pavate̠ pati̍rdi̠va ṛ̠tasya̍ yāti pa̠thibhi̠: kani̍kradat |",
+          "padya": 33
+        },
+        {
+          "id": "rv-9-86-66",
+          "chunkNumber": 66,
+          "sanskrit": "sa̠hasra̍dhāra̠: pari̍ ṣicyate̠ hari̍: punā̠no vācaṃ̍ ja̠naya̠nnupā̍vasuḥ || 33 ||"
+        },
+        {
+          "id": "rv-9-86-67",
+          "chunkNumber": 67,
+          "sanskrit": "pava̍māna̠ mahyarṇo̠ vi dhā̍vasi̠ sūro̠ na ci̠tro avya̍yāni̠ pavya̍yā |",
+          "padya": 34
+        },
+        {
+          "id": "rv-9-86-68",
+          "chunkNumber": 68,
+          "sanskrit": "gabha̍stipūto̠ nṛbhi̠radri̍bhiḥ su̠to ma̠he vājā̍ya̠ dhanyā̍ya dhanvasi || 34 ||"
+        },
+        {
+          "id": "rv-9-86-69",
+          "chunkNumber": 69,
+          "sanskrit": "iṣa̠mūrjaṃ̍ pavamānā̠bhya̍rṣasi śye̠no na vaṃsu̍ ka̠laśe̍ṣu sīdasi |",
+          "padya": 35
+        },
+        {
+          "id": "rv-9-86-70",
+          "chunkNumber": 70,
+          "sanskrit": "indrā̍ya̠ madvā̠ madyo̠ mada̍: su̠to di̠vo vi̍ṣṭa̠mbha u̍pa̠mo vi̍cakṣa̠ṇaḥ || 35 ||"
+        },
+        {
+          "id": "rv-9-86-71",
+          "chunkNumber": 71,
+          "sanskrit": "sa̠pta svasā̍ro a̠bhi mā̠tara̠: śiśuṃ̠ navaṃ̍ jajñā̠naṃ jenyaṃ̍ vipa̠ścita̍m |",
+          "padya": 36
+        },
+        {
+          "id": "rv-9-86-72",
+          "chunkNumber": 72,
+          "sanskrit": "a̠pāṃ ga̍ndha̠rvaṃ di̠vyaṃ nṛ̠cakṣa̍saṃ̠ somaṃ̠ viśva̍sya̠ bhuva̍nasya rā̠jase̍ || 36 ||"
+        },
+        {
+          "id": "rv-9-86-73",
+          "chunkNumber": 73,
+          "sanskrit": "ī̠śā̠na i̠mā bhuva̍nāni̠ vīya̍se yujā̠na i̍ndo ha̠rita̍: supa̠rṇya̍: |",
+          "padya": 37
+        },
+        {
+          "id": "rv-9-86-74",
+          "chunkNumber": 74,
+          "sanskrit": "tāste̍ kṣarantu̠ madhu̍madghṛ̠taṃ paya̠stava̍ vra̠te so̍ma tiṣṭhantu kṛ̠ṣṭaya̍: || 37 ||"
+        },
+        {
+          "id": "rv-9-86-75",
+          "chunkNumber": 75,
+          "sanskrit": "tvaṃ nṛ̠cakṣā̍ asi soma vi̠śvata̠: pava̍māna vṛṣabha̠ tā vi dhā̍vasi |",
+          "padya": 38
+        },
+        {
+          "id": "rv-9-86-76",
+          "chunkNumber": 76,
+          "sanskrit": "sa na̍: pavasva̠ vasu̍ma̠ddhira̍ṇyavadva̠yaṃ syā̍ma̠ bhuva̍neṣu jī̠vase̍ || 38 ||"
+        },
+        {
+          "id": "rv-9-86-77",
+          "chunkNumber": 77,
+          "sanskrit": "go̠vitpa̍vasva vasu̠viddhi̍raṇya̠vidre̍to̠dhā i̍ndo̠ bhuva̍ne̠ṣvarpi̍taḥ |",
+          "padya": 39
+        },
+        {
+          "id": "rv-9-86-78",
+          "chunkNumber": 78,
+          "sanskrit": "tvaṃ su̠vīro̍ asi soma viśva̠vittaṃ tvā̠ viprā̠ upa̍ gi̠rema ā̍sate || 39 ||"
+        },
+        {
+          "id": "rv-9-86-79",
+          "chunkNumber": 79,
+          "sanskrit": "unmadhva̍ ū̠rmirva̠nanā̍ atiṣṭhipada̠po vasā̍no mahi̠ṣo vi gā̍hate |",
+          "padya": 40
+        },
+        {
+          "id": "rv-9-86-80",
+          "chunkNumber": 80,
+          "sanskrit": "rājā̍ pa̠vitra̍ratho̠ vāja̠māru̍hatsa̠hasra̍bhṛṣṭirjayati̠ śravo̍ bṛ̠hat || 40 ||"
+        },
+        {
+          "id": "rv-9-86-81",
+          "chunkNumber": 81,
+          "sanskrit": "sa bha̠ndanā̠ udi̍yarti pra̠jāva̍tīrvi̠śvāyu̠rviśvā̍: su̠bharā̠ aha̍rdivi |",
+          "padya": 41
+        },
+        {
+          "id": "rv-9-86-82",
+          "chunkNumber": 82,
+          "sanskrit": "brahma̍ pra̠jāva̍dra̠yimaśva̍pastyaṃ pī̠ta i̍nda̠vindra̍ma̠smabhyaṃ̍ yācatāt || 41 ||"
+        },
+        {
+          "id": "rv-9-86-83",
+          "chunkNumber": 83,
+          "sanskrit": "so agre̠ ahnāṃ̠ hari̍rharya̠to mada̠: pra ceta̍sā cetayata̠ta anu̠ dyubhi̍: |",
+          "padya": 42
+        },
+        {
+          "id": "rv-9-86-84",
+          "chunkNumber": 84,
+          "sanskrit": "dvā janā̍ yā̠taya̍nna̠ntarī̍yate̠ narā̍ ca̠ śaṃsaṃ̠ daivyaṃ̍ ca dha̠rtari̍ || 42 ||"
+        },
+        {
+          "id": "rv-9-86-85",
+          "chunkNumber": 85,
+          "sanskrit": "a̠ñjate̠ vya̍ñjate̠ sama̍ñjate̠ kratuṃ̍ rihanti̠ madhu̍nā̠bhya̍ñjate |",
+          "padya": 43
+        },
+        {
+          "id": "rv-9-86-86",
+          "chunkNumber": 86,
+          "sanskrit": "sindho̍rucchvā̠se pa̠taya̍ntamu̠kṣaṇaṃ̍ hiraṇyapā̠vāḥ pa̠śumā̍su gṛbhṇate || 43 ||"
+        },
+        {
+          "id": "rv-9-86-87",
+          "chunkNumber": 87,
+          "sanskrit": "vi̠pa̠ścite̠ pava̍mānāya gāyata ma̠hī na dhārātyandho̍ arṣati |",
+          "padya": 44
+        },
+        {
+          "id": "rv-9-86-88",
+          "chunkNumber": 88,
+          "sanskrit": "ahi̠rna jū̠rṇāmati̍ sarpati̠ tvaca̠matyo̠ na krīḷa̍nnasara̠dvṛṣā̠ hari̍: || 44 ||"
+        },
+        {
+          "id": "rv-9-86-89",
+          "chunkNumber": 89,
+          "sanskrit": "a̠gre̠go rājāpya̍staviṣyate vi̠māno̠ ahnāṃ̠ bhuva̍ne̠ṣvarpi̍taḥ |",
+          "padya": 45
+        },
+        {
+          "id": "rv-9-86-90",
+          "chunkNumber": 90,
+          "sanskrit": "hari̍rghṛ̠tasnu̍: su̠dṛśī̍ko arṇa̠vo jyo̠tīra̍thaḥ pavate rā̠ya o̠kya̍: || 45 ||"
+        },
+        {
+          "id": "rv-9-86-91",
+          "chunkNumber": 91,
+          "sanskrit": "asa̍rji ska̠mbho di̠va udya̍to̠ mada̠: pari̍ tri̠dhātu̠rbhuva̍nānyarṣati |",
+          "padya": 46
+        },
+        {
+          "id": "rv-9-86-92",
+          "chunkNumber": 92,
+          "sanskrit": "aṃ̠śuṃ ri̍hanti ma̠taya̠: pani̍pnataṃ gi̠rā yadi̍ ni̠rṇija̍mṛ̠gmiṇo̍ ya̠yuḥ || 46 ||"
+        },
+        {
+          "id": "rv-9-86-93",
+          "chunkNumber": 93,
+          "sanskrit": "pra te̠ dhārā̠ atyaṇvā̍ni me̠ṣya̍: punā̠nasya̍ saṃ̠yato̍ yanti̠ raṃha̍yaḥ |",
+          "padya": 47
+        },
+        {
+          "id": "rv-9-86-94",
+          "chunkNumber": 94,
+          "sanskrit": "yadgobhi̍rindo ca̠mvo̍: sama̠jyasa̠ ā su̍vā̠naḥ so̍ma ka̠laśe̍ṣu sīdasi || 47 ||"
+        },
+        {
+          "id": "rv-9-86-95",
+          "chunkNumber": 95,
+          "sanskrit": "pava̍sva soma kratu̠vinna̍ u̠kthyo'vyo̠ vāre̠ pari̍ dhāva̠ madhu̍ pri̠yam |",
+          "padya": 48
+        },
+        {
+          "id": "rv-9-86-96",
+          "chunkNumber": 96,
+          "sanskrit": "ja̠hi viśvā̍nra̠kṣasa̍ indo a̠triṇo̍ bṛ̠hadva̍dema vi̠dathe̍ su̠vīrā̍: || 48 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-87",
+      "title": "Maṇḍala 9 · Sūkta 87",
+      "sectionNumber": 87,
+      "chunks": [
+        {
+          "id": "rv-9-87-1",
+          "chunkNumber": 1,
+          "sanskrit": "pra tu dra̍va̠ pari̠ kośaṃ̠ ni ṣī̍da̠ nṛbhi̍: punā̠no a̠bhi vāja̍marṣa |",
+          "section": 87,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-87-2",
+          "chunkNumber": 2,
+          "sanskrit": "aśvaṃ̠ na tvā̍ vā̠jinaṃ̍ ma̠rjaya̠nto'cchā̍ ba̠rhī ra̍śa̠nābhi̍rnayanti || 1 ||"
+        },
+        {
+          "id": "rv-9-87-3",
+          "chunkNumber": 3,
+          "sanskrit": "svā̠yu̠dhaḥ pa̍vate de̠va indu̍raśasti̠hā vṛ̠janaṃ̠ rakṣa̍māṇaḥ |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-87-4",
+          "chunkNumber": 4,
+          "sanskrit": "pi̠tā de̠vānāṃ̍ jani̠tā su̠dakṣo̍ viṣṭa̠mbho di̠vo dha̠ruṇa̍: pṛthi̠vyāḥ || 2 ||"
+        },
+        {
+          "id": "rv-9-87-5",
+          "chunkNumber": 5,
+          "sanskrit": "ṛṣi̠rvipra̍: purae̠tā janā̍nāmṛ̠bhurdhīra̍ u̠śanā̠ kāvye̍na |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-87-6",
+          "chunkNumber": 6,
+          "sanskrit": "sa ci̍dviveda̠ nihi̍taṃ̠ yadā̍sāmapī̠cyaṃ1 guhyaṃ̠ nāma̠ gonā̍m || 3 ||"
+        },
+        {
+          "id": "rv-9-87-7",
+          "chunkNumber": 7,
+          "sanskrit": "e̠ṣa sya te̠ madhu̍mām̐ indra̠ somo̠ vṛṣā̠ vṛṣṇe̠ pari̍ pa̠vitre̍ akṣāḥ |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-87-8",
+          "chunkNumber": 8,
+          "sanskrit": "sa̠ha̠sra̠sāḥ śa̍ta̠sā bhū̍ri̠dāvā̍ śaśvatta̠maṃ ba̠rhirā vā̠jya̍sthāt || 4 ||"
+        },
+        {
+          "id": "rv-9-87-9",
+          "chunkNumber": 9,
+          "sanskrit": "e̠te somā̍ a̠bhi ga̠vyā sa̠hasrā̍ ma̠he vājā̍yā̠mṛtā̍ya̠ śravāṃ̍si |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-87-10",
+          "chunkNumber": 10,
+          "sanskrit": "pa̠vitre̍bhi̠: pava̍mānā asṛgrañchrava̠syavo̠ na pṛ̍ta̠nājo̠ atyā̍: || 5 ||"
+        },
+        {
+          "id": "rv-9-87-11",
+          "chunkNumber": 11,
+          "sanskrit": "pari̠ hi ṣmā̍ puruhū̠to janā̍nāṃ̠ viśvāsa̍ra̠dbhoja̍nā pū̠yamā̍naḥ |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-87-12",
+          "chunkNumber": 12,
+          "sanskrit": "athā bha̍ra śyenabhṛta̠ prayāṃ̍si ra̠yiṃ tuñjā̍no a̠bhi vāja̍marṣa || 6 ||"
+        },
+        {
+          "id": "rv-9-87-13",
+          "chunkNumber": 13,
+          "sanskrit": "e̠ṣa su̍vā̠naḥ pari̠ soma̍: pa̠vitre̠ sargo̠ na sṛ̠ṣṭo a̍dadhāva̠darvā̍ |",
+          "padya": 7
+        },
+        {
+          "id": "rv-9-87-14",
+          "chunkNumber": 14,
+          "sanskrit": "ti̠gme śiśā̍no mahi̠ṣo na śṛṅge̠ gā ga̠vyanna̠bhi śūro̠ na satvā̍ || 7 ||"
+        },
+        {
+          "id": "rv-9-87-15",
+          "chunkNumber": 15,
+          "sanskrit": "e̠ṣā ya̍yau para̠māda̠ntaradre̠: kūci̍tsa̠tīrū̠rve gā vi̍veda |",
+          "padya": 8
+        },
+        {
+          "id": "rv-9-87-16",
+          "chunkNumber": 16,
+          "sanskrit": "di̠vo na vi̠dyutsta̠naya̍ntya̠bhraiḥ soma̍sya te pavata indra̠ dhārā̍ || 8 ||"
+        },
+        {
+          "id": "rv-9-87-17",
+          "chunkNumber": 17,
+          "sanskrit": "u̠ta sma̍ rā̠śiṃ pari̍ yāsi̠ gonā̠mindre̍ṇa soma sa̠rathaṃ̍ punā̠naḥ |",
+          "padya": 9
+        },
+        {
+          "id": "rv-9-87-18",
+          "chunkNumber": 18,
+          "sanskrit": "pū̠rvīriṣo̍ bṛha̠tīrjī̍radāno̠ śikṣā̍ śacīva̠stava̠ tā u̍pa̠ṣṭut || 9 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-88",
+      "title": "Maṇḍala 9 · Sūkta 88",
+      "sectionNumber": 88,
+      "chunks": [
+        {
+          "id": "rv-9-88-1",
+          "chunkNumber": 1,
+          "sanskrit": "a̠yaṃ soma̍ indra̠ tubhyaṃ̍ sunve̠ tubhyaṃ̍ pavate̠ tvama̍sya pāhi |",
+          "section": 88,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-88-2",
+          "chunkNumber": 2,
+          "sanskrit": "tvaṃ ha̠ yaṃ ca̍kṛ̠ṣe tvaṃ va̍vṛ̠ṣa induṃ̠ madā̍ya̠ yujyā̍ya̠ soma̍m || 1 ||"
+        },
+        {
+          "id": "rv-9-88-3",
+          "chunkNumber": 3,
+          "sanskrit": "sa īṃ̠ ratho̠ na bhu̍ri̠ṣāḷa̍yoji ma̠haḥ pu̠rūṇi̍ sā̠taye̠ vasū̍ni |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-88-4",
+          "chunkNumber": 4,
+          "sanskrit": "ādīṃ̠ viśvā̍ nahu̠ṣyā̍ṇi jā̠tā sva̍rṣātā̠ vana̍ ū̠rdhvā na̍vanta || 2 ||"
+        },
+        {
+          "id": "rv-9-88-5",
+          "chunkNumber": 5,
+          "sanskrit": "vā̠yurna yo ni̠yutvām̐̍ i̠ṣṭayā̍mā̠ nāsa̍tyeva̠ hava̠ ā śambha̍viṣṭhaḥ |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-88-6",
+          "chunkNumber": 6,
+          "sanskrit": "vi̠śvavā̍ro draviṇo̠dā i̍va̠ tmanpū̠ṣeva̍ dhī̠java̍no'si soma || 3 ||"
+        },
+        {
+          "id": "rv-9-88-7",
+          "chunkNumber": 7,
+          "sanskrit": "indro̠ na yo ma̠hā karmā̍ṇi̠ cakri̍rha̠ntā vṛ̠trāṇā̍masi soma pū̠rbhit |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-88-8",
+          "chunkNumber": 8,
+          "sanskrit": "pai̠dvo na hi tvamahi̍nāmnāṃ ha̠ntā viśva̍syāsi soma̠ dasyo̍: || 4 ||"
+        },
+        {
+          "id": "rv-9-88-9",
+          "chunkNumber": 9,
+          "sanskrit": "a̠gnirna yo vana̠ ā sṛ̠jyamā̍no̠ vṛthā̠ pājāṃ̍si kṛṇute na̠dīṣu̍ |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-88-10",
+          "chunkNumber": 10,
+          "sanskrit": "jano̠ na yudhvā̍ maha̠ta u̍pa̠bdiriya̍rti̠ soma̠: pava̍māna ū̠rmim || 5 ||"
+        },
+        {
+          "id": "rv-9-88-11",
+          "chunkNumber": 11,
+          "sanskrit": "e̠te somā̠ ati̠ vārā̠ṇyavyā̍ di̠vyā na kośā̍so a̠bhrava̍rṣāḥ |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-88-12",
+          "chunkNumber": 12,
+          "sanskrit": "vṛthā̍ samu̠draṃ sindha̍vo̠ na nīcī̍: su̠tāso̍ a̠bhi ka̠laśām̐̍ asṛgran || 6 ||"
+        },
+        {
+          "id": "rv-9-88-13",
+          "chunkNumber": 13,
+          "sanskrit": "śu̠ṣmī śardho̠ na māru̍taṃ pava̠svāna̍bhiśastā di̠vyā yathā̠ viṭ |",
+          "padya": 7
+        },
+        {
+          "id": "rv-9-88-14",
+          "chunkNumber": 14,
+          "sanskrit": "āpo̠ na ma̠kṣū su̍ma̠tirbha̍vā naḥ sa̠hasrā̍psāḥ pṛtanā̠ṣāṇna ya̠jñaḥ || 7 ||"
+        },
+        {
+          "id": "rv-9-88-15",
+          "chunkNumber": 15,
+          "sanskrit": "rājño̠ nu te̠ varu̍ṇasya vra̠tāni̍ bṛ̠hadga̍bhī̠raṃ tava̍ soma̠ dhāma̍ |",
+          "padya": 8
+        },
+        {
+          "id": "rv-9-88-16",
+          "chunkNumber": 16,
+          "sanskrit": "śuci̠ṣṭvama̍si pri̠yo na mi̠tro da̠kṣāyyo̍ arya̠mevā̍si soma || 8 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-89",
+      "title": "Maṇḍala 9 · Sūkta 89",
+      "sectionNumber": 89,
+      "chunks": [
+        {
+          "id": "rv-9-89-1",
+          "chunkNumber": 1,
+          "sanskrit": "pro sya vahni̍: pa̠thyā̍bhirasyāndi̠vo na vṛ̠ṣṭiḥ pava̍māno akṣāḥ |",
+          "section": 89,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-89-2",
+          "chunkNumber": 2,
+          "sanskrit": "sa̠hasra̍dhāro asada̠nnya1sme mā̠turu̠pasthe̠ vana̠ ā ca̠ soma̍: || 1 ||"
+        },
+        {
+          "id": "rv-9-89-3",
+          "chunkNumber": 3,
+          "sanskrit": "rājā̠ sindhū̍nāmavasiṣṭa̠ vāsa̍ ṛ̠tasya̠ nāva̠māru̍ha̠draji̍ṣṭhām |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-89-4",
+          "chunkNumber": 4,
+          "sanskrit": "a̠psu dra̠pso vā̍vṛdhe śye̠najū̍to du̠ha īṃ̍ pi̠tā du̠ha īṃ̍ pi̠turjām || 2 ||"
+        },
+        {
+          "id": "rv-9-89-5",
+          "chunkNumber": 5,
+          "sanskrit": "siṃ̠haṃ na̍santa̠ madhvo̍ a̠yāsaṃ̠ hari̍maru̠ṣaṃ di̠vo a̠sya pati̍m |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-89-6",
+          "chunkNumber": 6,
+          "sanskrit": "śūro̍ yu̠tsu pra̍tha̠maḥ pṛ̍cchate̠ gā asya̠ cakṣa̍sā̠ pari̍ pātyu̠kṣā || 3 ||"
+        },
+        {
+          "id": "rv-9-89-7",
+          "chunkNumber": 7,
+          "sanskrit": "madhu̍pṛṣṭhaṃ gho̠rama̠yāsa̠maśvaṃ̠ rathe̍ yuñjantyuruca̠kra ṛ̠ṣvam |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-89-8",
+          "chunkNumber": 8,
+          "sanskrit": "svasā̍ra īṃ jā̠mayo̍ marjayanti̠ sanā̍bhayo vā̠jina̍mūrjayanti || 4 ||"
+        },
+        {
+          "id": "rv-9-89-9",
+          "chunkNumber": 9,
+          "sanskrit": "cata̍sra īṃ ghṛta̠duha̍: sacante samā̠ne a̠ntardha̠ruṇe̠ niṣa̍ttāḥ |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-89-10",
+          "chunkNumber": 10,
+          "sanskrit": "tā ī̍marṣanti̠ nama̍sā punā̠nāstā īṃ̍ vi̠śvata̠: pari̍ ṣanti pū̠rvīḥ || 5 ||"
+        },
+        {
+          "id": "rv-9-89-11",
+          "chunkNumber": 11,
+          "sanskrit": "vi̠ṣṭa̠mbho di̠vo dha̠ruṇa̍: pṛthi̠vyā viśvā̍ u̠ta kṣi̠tayo̠ haste̍ asya |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-89-12",
+          "chunkNumber": 12,
+          "sanskrit": "asa̍tta̠ utso̍ gṛṇa̠te ni̠yutvā̠nmadhvo̍ aṃ̠śuḥ pa̍vata indri̠yāya̍ || 6 ||"
+        },
+        {
+          "id": "rv-9-89-13",
+          "chunkNumber": 13,
+          "sanskrit": "va̠nvannavā̍to a̠bhi de̠vavī̍ti̠mindrā̍ya soma vṛtra̠hā pa̍vasva |",
+          "padya": 7
+        },
+        {
+          "id": "rv-9-89-14",
+          "chunkNumber": 14,
+          "sanskrit": "śa̠gdhi ma̠haḥ pu̍ruśca̠ndrasya̍ rā̠yaḥ su̠vīrya̍sya̠ pata̍yaḥ syāma || 7 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-90",
+      "title": "Maṇḍala 9 · Sūkta 90",
+      "sectionNumber": 90,
+      "chunks": [
+        {
+          "id": "rv-9-90-1",
+          "chunkNumber": 1,
+          "sanskrit": "pra hi̍nvā̠no ja̍ni̠tā roda̍syo̠ ratho̠ na vājaṃ̍ sani̠ṣyanna̍yāsīt |",
+          "section": 90,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-90-2",
+          "chunkNumber": 2,
+          "sanskrit": "indraṃ̠ gaccha̠nnāyu̍dhā saṃ̠śiśā̍no̠ viśvā̠ vasu̠ hasta̍yorā̠dadhā̍naḥ || 1 ||"
+        },
+        {
+          "id": "rv-9-90-3",
+          "chunkNumber": 3,
+          "sanskrit": "a̠bhi tri̍pṛ̠ṣṭhaṃ vṛṣa̍ṇaṃ vayo̠dhāmā̍ṅgū̠ṣāṇā̍mavāvaśanta̠ vāṇī̍: |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-90-4",
+          "chunkNumber": 4,
+          "sanskrit": "vanā̠ vasā̍no̠ varu̍ṇo̠ na sindhū̠nvi ra̍tna̠dhā da̍yate̠ vāryā̍ṇi || 2 ||"
+        },
+        {
+          "id": "rv-9-90-5",
+          "chunkNumber": 5,
+          "sanskrit": "śūra̍grāma̠: sarva̍vīra̠: sahā̍vā̠ñjetā̍ pavasva̠ sani̍tā̠ dhanā̍ni |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-90-6",
+          "chunkNumber": 6,
+          "sanskrit": "ti̠gmāyu̍dhaḥ kṣi̠pradha̍nvā sa̠matsvaṣā̍ḷhaḥ sā̠hvānpṛta̍nāsu̠ śatrū̍n || 3 ||"
+        },
+        {
+          "id": "rv-9-90-7",
+          "chunkNumber": 7,
+          "sanskrit": "u̠ruga̍vyūti̠rabha̍yāni kṛ̠ṇvantsa̍mīcī̠ne ā pa̍vasvā̠ puraṃ̍dhī |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-90-8",
+          "chunkNumber": 8,
+          "sanskrit": "a̠paḥ siṣā̍sannu̠ṣasa̠: sva1rgāḥ saṃ ci̍krado ma̠ho a̠smabhyaṃ̠ vājā̍n || 4 ||"
+        },
+        {
+          "id": "rv-9-90-9",
+          "chunkNumber": 9,
+          "sanskrit": "matsi̍ soma̠ varu̍ṇaṃ̠ matsi̍ mi̠traṃ matsīndra̍mindo pavamāna̠ viṣṇu̍m |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-90-10",
+          "chunkNumber": 10,
+          "sanskrit": "matsi̠ śardho̠ māru̍taṃ̠ matsi̍ de̠vānmatsi̍ ma̠hāmindra̍mindo̠ madā̍ya || 5 ||"
+        },
+        {
+          "id": "rv-9-90-11",
+          "chunkNumber": 11,
+          "sanskrit": "e̠vā rāje̍va̠ kratu̍mām̠̐ ame̍na̠ viśvā̠ ghani̍ghnadduri̠tā pa̍vasva |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-90-12",
+          "chunkNumber": 12,
+          "sanskrit": "indo̍ sū̠ktāya̠ vaca̍se̠ vayo̍ dhā yū̠yaṃ pā̍ta sva̠stibhi̠: sadā̍ naḥ || 6 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-91",
+      "title": "Maṇḍala 9 · Sūkta 91",
+      "sectionNumber": 91,
+      "chunks": [
+        {
+          "id": "rv-9-91-1",
+          "chunkNumber": 1,
+          "sanskrit": "asa̍rji̠ vakvā̠ rathye̠ yathā̠jau dhi̠yā ma̠notā̍ pratha̠mo ma̍nī̠ṣī |",
+          "section": 91,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-91-2",
+          "chunkNumber": 2,
+          "sanskrit": "daśa̠ svasā̍ro̠ adhi̠ sāno̠ avye'ja̍nti̠ vahniṃ̠ sada̍nā̠nyaccha̍ || 1 ||"
+        },
+        {
+          "id": "rv-9-91-3",
+          "chunkNumber": 3,
+          "sanskrit": "vī̠tī jana̍sya di̠vyasya̍ ka̠vyairadhi̍ suvā̠no na̍hu̠ṣye̍bhi̠rindu̍: |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-91-4",
+          "chunkNumber": 4,
+          "sanskrit": "pra yo nṛbhi̍ra̠mṛto̠ martye̍bhirmarmṛjā̠no'vi̍bhi̠rgobhi̍ra̠dbhiḥ || 2 ||"
+        },
+        {
+          "id": "rv-9-91-5",
+          "chunkNumber": 5,
+          "sanskrit": "vṛṣā̠ vṛṣṇe̠ roru̍vadaṃ̠śura̍smai̠ pava̍māno̠ ruśa̍dīrte̠ payo̠ goḥ |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-91-6",
+          "chunkNumber": 6,
+          "sanskrit": "sa̠hasra̠mṛkvā̍ pa̠thibhi̍rvaco̠vida̍dhva̠smabhi̠: sūro̠ aṇvaṃ̠ vi yā̍ti || 3 ||"
+        },
+        {
+          "id": "rv-9-91-7",
+          "chunkNumber": 7,
+          "sanskrit": "ru̠jā dṛ̠ḷhā ci̍dra̠kṣasa̠: sadāṃ̍si punā̠na i̍nda ūrṇuhi̠ vi vājā̍n |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-91-8",
+          "chunkNumber": 8,
+          "sanskrit": "vṛ̠ścopari̍ṣṭāttuja̠tā va̠dhena̠ ye anti̍ dū̠rādu̍panā̠yame̍ṣām || 4 ||"
+        },
+        {
+          "id": "rv-9-91-9",
+          "chunkNumber": 9,
+          "sanskrit": "sa pra̍tna̠vannavya̍se viśvavāra sū̠ktāya̍ pa̠thaḥ kṛ̍ṇuhi̠ prāca̍: |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-91-10",
+          "chunkNumber": 10,
+          "sanskrit": "ye du̠:ṣahā̍so va̠nuṣā̍ bṛ̠hanta̠stām̐ste̍ aśyāma purukṛtpurukṣo || 5 ||"
+        },
+        {
+          "id": "rv-9-91-11",
+          "chunkNumber": 11,
+          "sanskrit": "e̠vā pu̍nā̠no a̠paḥ sva1rgā a̠smabhyaṃ̍ to̠kā tana̍yāni̠ bhūri̍ |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-91-12",
+          "chunkNumber": 12,
+          "sanskrit": "śaṃ na̠: kṣetra̍mu̠ru jyotīṃ̍ṣi soma̠ jyoṅna̠: sūryaṃ̍ dṛ̠śaye̍ rirīhi || 6 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-92",
+      "title": "Maṇḍala 9 · Sūkta 92",
+      "sectionNumber": 92,
+      "chunks": [
+        {
+          "id": "rv-9-92-1",
+          "chunkNumber": 1,
+          "sanskrit": "pari̍ suvā̠no hari̍raṃ̠śuḥ pa̠vitre̠ ratho̠ na sa̍rji sa̠naye̍ hiyā̠naḥ |",
+          "section": 92,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-92-2",
+          "chunkNumber": 2,
+          "sanskrit": "āpa̠cchloka̍mindri̠yaṃ pū̠yamā̍na̠: prati̍ de̠vām̐ a̍juṣata̠ prayo̍bhiḥ || 1 ||"
+        },
+        {
+          "id": "rv-9-92-3",
+          "chunkNumber": 3,
+          "sanskrit": "acchā̍ nṛ̠cakṣā̍ asaratpa̠vitre̠ nāma̠ dadhā̍naḥ ka̠vira̍sya̠ yonau̍ |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-92-4",
+          "chunkNumber": 4,
+          "sanskrit": "sīda̠nhote̍va̠ sada̍ne ca̠mūṣūpe̍magma̠nnṛṣa̍yaḥ sa̠pta viprā̍: || 2 ||"
+        },
+        {
+          "id": "rv-9-92-5",
+          "chunkNumber": 5,
+          "sanskrit": "pra su̍me̠dhā gā̍tu̠vidvi̠śvade̍va̠: soma̍: punā̠naḥ sada̍ eti̠ nitya̍m |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-92-6",
+          "chunkNumber": 6,
+          "sanskrit": "bhuva̠dviśve̍ṣu̠ kāvye̍ṣu̠ rantā'nu̠ janā̍nyatate̠ pañca̠ dhīra̍: || 3 ||"
+        },
+        {
+          "id": "rv-9-92-7",
+          "chunkNumber": 7,
+          "sanskrit": "tava̠ tye so̍ma pavamāna ni̠ṇye viśve̍ de̠vāstraya̍ ekāda̠śāsa̍: |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-92-8",
+          "chunkNumber": 8,
+          "sanskrit": "daśa̍ sva̠dhābhi̠radhi̠ sāno̠ avye̍ mṛ̠janti̍ tvā na̠dya̍: sa̠pta ya̠hvīḥ || 4 ||"
+        },
+        {
+          "id": "rv-9-92-9",
+          "chunkNumber": 9,
+          "sanskrit": "tannu sa̠tyaṃ pava̍mānasyāstu̠ yatra̠ viśve̍ kā̠rava̍: saṃ̠nasa̍nta |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-92-10",
+          "chunkNumber": 10,
+          "sanskrit": "jyoti̠ryadahne̠ akṛ̍ṇodu lo̠kaṃ prāva̠nmanuṃ̠ dasya̍ve kara̠bhīka̍m || 5 ||"
+        },
+        {
+          "id": "rv-9-92-11",
+          "chunkNumber": 11,
+          "sanskrit": "pari̠ sadme̍va paśu̠mānti̠ hotā̠ rājā̠ na sa̠tyaḥ sami̍tīriyā̠naḥ |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-92-12",
+          "chunkNumber": 12,
+          "sanskrit": "soma̍: punā̠naḥ ka̠laśām̐̍ ayāsī̠tsīda̍nmṛ̠go na ma̍hi̠ṣo vane̍ṣu || 6 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-93",
+      "title": "Maṇḍala 9 · Sūkta 93",
+      "sectionNumber": 93,
+      "chunks": [
+        {
+          "id": "rv-9-93-1",
+          "chunkNumber": 1,
+          "sanskrit": "sā̠ka̠mukṣo̍ marjayanta̠ svasā̍ro̠ daśa̠ dhīra̍sya dhī̠tayo̠ dhanu̍trīḥ |",
+          "section": 93,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-93-2",
+          "chunkNumber": 2,
+          "sanskrit": "hari̠: parya̍drava̠jjāḥ sūrya̍sya̠ droṇaṃ̍ nanakṣe̠ atyo̠ na vā̠jī || 1 ||"
+        },
+        {
+          "id": "rv-9-93-3",
+          "chunkNumber": 3,
+          "sanskrit": "saṃ mā̠tṛbhi̠rna śiśu̍rvāvaśā̠no vṛṣā̍ dadhanve puru̠vāro̍ a̠dbhiḥ |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-93-4",
+          "chunkNumber": 4,
+          "sanskrit": "maryo̠ na yoṣā̍ma̠bhi ni̍ṣkṛ̠taṃ yantsaṃ ga̍cchate ka̠laśa̍ u̠sriyā̍bhiḥ || 2 ||"
+        },
+        {
+          "id": "rv-9-93-5",
+          "chunkNumber": 5,
+          "sanskrit": "u̠ta pra pi̍pya̠ ūdha̠raghnyā̍yā̠ indu̠rdhārā̍bhiḥ sacate sume̠dhāḥ |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-93-6",
+          "chunkNumber": 6,
+          "sanskrit": "mū̠rdhānaṃ̠ gāva̠: paya̍sā ca̠mūṣva̠bhi śrī̍ṇanti̠ vasu̍bhi̠rna ni̠ktaiḥ || 3 ||"
+        },
+        {
+          "id": "rv-9-93-7",
+          "chunkNumber": 7,
+          "sanskrit": "sa no̍ de̠vebhi̍: pavamāna ra̠dendo̍ ra̠yima̠śvinaṃ̍ vāvaśā̠naḥ |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-93-8",
+          "chunkNumber": 8,
+          "sanskrit": "ra̠thi̠rā̠yatā̍muśa̠tī puraṃ̍dhirasma̠drya1gā dā̠vane̠ vasū̍nām || 4 ||"
+        },
+        {
+          "id": "rv-9-93-9",
+          "chunkNumber": 9,
+          "sanskrit": "nū no̍ ra̠yimupa̍ māsva nṛ̠vantaṃ̍ punā̠no vā̠tāpyaṃ̍ vi̠śvaśca̍ndram |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-93-10",
+          "chunkNumber": 10,
+          "sanskrit": "pra va̍ndi̠turi̍ndo tā̠ryāyu̍: prā̠tarma̠kṣū dhi̠yāva̍surjagamyāt || 5 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-94",
+      "title": "Maṇḍala 9 · Sūkta 94",
+      "sectionNumber": 94,
+      "chunks": [
+        {
+          "id": "rv-9-94-1",
+          "chunkNumber": 1,
+          "sanskrit": "adhi̠ yada̍sminvā̠jinī̍va̠ śubha̠: spardha̍nte̠ dhiya̠: sūrye̠ na viśa̍: |",
+          "section": 94,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-94-2",
+          "chunkNumber": 2,
+          "sanskrit": "a̠po vṛ̍ṇā̠naḥ pa̍vate kavī̠yanvra̠jaṃ na pa̍śu̠vardha̍nāya̠ manma̍ || 1 ||"
+        },
+        {
+          "id": "rv-9-94-3",
+          "chunkNumber": 3,
+          "sanskrit": "dvi̠tā vyū̠rṇvanna̠mṛta̍sya̠ dhāma̍ sva̠rvide̠ bhuva̍nāni prathanta |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-94-4",
+          "chunkNumber": 4,
+          "sanskrit": "dhiya̍: pinvā̠nāḥ svasa̍re̠ na gāva̍ ṛtā̠yantī̍ra̠bhi vā̍vaśra̠ indu̍m || 2 ||"
+        },
+        {
+          "id": "rv-9-94-5",
+          "chunkNumber": 5,
+          "sanskrit": "pari̠ yatka̠viḥ kāvyā̠ bhara̍te̠ śūro̠ na ratho̠ bhuva̍nāni̠ viśvā̍ |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-94-6",
+          "chunkNumber": 6,
+          "sanskrit": "de̠veṣu̠ yaśo̠ martā̍ya̠ bhūṣa̠ndakṣā̍ya rā̠yaḥ pu̍ru̠bhūṣu̠ navya̍: || 3 ||"
+        },
+        {
+          "id": "rv-9-94-7",
+          "chunkNumber": 7,
+          "sanskrit": "śri̠ye jā̠taḥ śri̠ya ā niri̍yāya̠ śriyaṃ̠ vayo̍ jari̠tṛbhyo̍ dadhāti |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-94-8",
+          "chunkNumber": 8,
+          "sanskrit": "śriyaṃ̠ vasā̍nā amṛta̠tvamā̍ya̠nbhava̍nti sa̠tyā sa̍mi̠thā mi̠tadrau̍ || 4 ||"
+        },
+        {
+          "id": "rv-9-94-9",
+          "chunkNumber": 9,
+          "sanskrit": "iṣa̠mūrja̍ma̠bhya1rṣāśvaṃ̠ gāmu̠ru jyoti̍: kṛṇuhi̠ matsi̍ de̠vān |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-94-10",
+          "chunkNumber": 10,
+          "sanskrit": "viśvā̍ni̠ hi su̠ṣahā̠ tāni̠ tubhyaṃ̠ pava̍māna̠ bādha̍se soma̠ śatrū̍n || 5 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-95",
+      "title": "Maṇḍala 9 · Sūkta 95",
+      "sectionNumber": 95,
+      "chunks": [
+        {
+          "id": "rv-9-95-1",
+          "chunkNumber": 1,
+          "sanskrit": "kani̍kranti̠ hari̠rā sṛ̠jyamā̍na̠: sīda̠nvana̍sya ja̠ṭhare̍ punā̠naḥ |",
+          "section": 95,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-95-2",
+          "chunkNumber": 2,
+          "sanskrit": "nṛbhi̍rya̠taḥ kṛ̍ṇute ni̠rṇijaṃ̠ gā ato̍ ma̠tīrja̍nayata sva̠dhābhi̍: || 1 ||"
+        },
+        {
+          "id": "rv-9-95-3",
+          "chunkNumber": 3,
+          "sanskrit": "hari̍: sṛjā̠naḥ pa̠thyā̍mṛ̠tasyeya̍rti̠ vāca̍mari̠teva̠ nāva̍m |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-95-4",
+          "chunkNumber": 4,
+          "sanskrit": "de̠vo de̠vānāṃ̠ guhyā̍ni̠ nāmā̠''viṣkṛ̍ṇoti ba̠rhiṣi̍ pra̠vāce̍ || 2 ||"
+        },
+        {
+          "id": "rv-9-95-5",
+          "chunkNumber": 5,
+          "sanskrit": "a̠pāmi̠vedū̠rmaya̠startu̍rāṇā̠: pra ma̍nī̠ṣā ī̍rate̠ soma̠maccha̍ |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-95-6",
+          "chunkNumber": 6,
+          "sanskrit": "na̠ma̠syantī̠rupa̍ ca̠ yanti̠ saṃ cā ''ca̍ viśantyuśa̠tīru̠śanta̍m || 3 ||"
+        },
+        {
+          "id": "rv-9-95-7",
+          "chunkNumber": 7,
+          "sanskrit": "taṃ ma̍rmṛjā̠naṃ ma̍hi̠ṣaṃ na sānā̍vaṃ̠śuṃ du̍hantyu̠kṣaṇaṃ̍ giri̠ṣṭhām |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-95-8",
+          "chunkNumber": 8,
+          "sanskrit": "taṃ vā̍vaśā̠naṃ ma̠taya̍: sacante tri̠to bi̍bharti̠ varu̍ṇaṃ samu̠dre || 4 ||"
+        },
+        {
+          "id": "rv-9-95-9",
+          "chunkNumber": 9,
+          "sanskrit": "iṣya̠nvāca̍mupava̠kteva̠ hotu̍: punā̠na i̍ndo̠ vi ṣyā̍ manī̠ṣām |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-95-10",
+          "chunkNumber": 10,
+          "sanskrit": "indra̍śca̠ yatkṣaya̍tha̠: saubha̍gāya su̠vīrya̍sya̠ pata̍yaḥ syāma || 5 ||"
+        }
+      ]
+    },
+    {
+      "id": "rigveda-9-96",
+      "title": "Maṇḍala 9 · Sūkta 96",
+      "sectionNumber": 96,
+      "chunks": [
+        {
+          "id": "rv-9-96-1",
+          "chunkNumber": 1,
+          "sanskrit": "pra se̍nā̠nīḥ śūro̠ agre̠ rathā̍nāṃ ga̠vyanne̍ti̠ harṣa̍te asya̠ senā̍ |",
+          "section": 96,
+          "padya": 1
+        },
+        {
+          "id": "rv-9-96-2",
+          "chunkNumber": 2,
+          "sanskrit": "bha̠drānkṛ̠ṇvanni̍ndraha̠vāntsakhi̍bhya̠ ā somo̠ vastrā̍ rabha̠sāni̍ datte || 1 ||"
+        },
+        {
+          "id": "rv-9-96-3",
+          "chunkNumber": 3,
+          "sanskrit": "sama̍sya̠ hariṃ̠ hara̍yo mṛjantyaśvaha̠yairani̍śitaṃ̠ namo̍bhiḥ |",
+          "padya": 2
+        },
+        {
+          "id": "rv-9-96-4",
+          "chunkNumber": 4,
+          "sanskrit": "ā ti̍ṣṭhati̠ ratha̠mindra̍sya̠ sakhā̍ vi̠dvām̐ e̍nā suma̠tiṃ yā̠tyaccha̍ || 2 ||"
+        },
+        {
+          "id": "rv-9-96-5",
+          "chunkNumber": 5,
+          "sanskrit": "sa no̍ deva de̠vatā̍te pavasva ma̠he so̍ma̠ psara̍sa indra̠pāna̍: |",
+          "padya": 3
+        },
+        {
+          "id": "rv-9-96-6",
+          "chunkNumber": 6,
+          "sanskrit": "kṛ̠ṇvanna̠po va̠rṣaya̠ndyāmu̠temāmu̠rorā no̍ varivasyā punā̠naḥ || 3 ||"
+        },
+        {
+          "id": "rv-9-96-7",
+          "chunkNumber": 7,
+          "sanskrit": "ajī̍ta̠ye'ha̍taye pavasva sva̠staye̍ sa̠rvatā̍taye bṛha̠te |",
+          "padya": 4
+        },
+        {
+          "id": "rv-9-96-8",
+          "chunkNumber": 8,
+          "sanskrit": "tadu̍śanti̠ viśva̍ i̠me sakhā̍ya̠stada̠haṃ va̍śmi pavamāna soma || 4 ||"
+        },
+        {
+          "id": "rv-9-96-9",
+          "chunkNumber": 9,
+          "sanskrit": "soma̍: pavate jani̠tā ma̍tī̠nāṃ ja̍ni̠tā di̠vo ja̍ni̠tā pṛ̍thi̠vyāḥ |",
+          "padya": 5
+        },
+        {
+          "id": "rv-9-96-10",
+          "chunkNumber": 10,
+          "sanskrit": "ja̠ni̠tāgnerja̍ni̠tā sūrya̍sya jani̠tendra̍sya jani̠tota viṣṇo̍: || 5 ||"
+        },
+        {
+          "id": "rv-9-96-11",
+          "chunkNumber": 11,
+          "sanskrit": "bra̠hmā de̠vānāṃ̍ pada̠vīḥ ka̍vī̠nāmṛṣi̠rviprā̍ṇāṃ mahi̠ṣo mṛ̠gāṇā̍m |",
+          "padya": 6
+        },
+        {
+          "id": "rv-9-96-12",
+          "chunkNumber": 12,
+          "sanskrit": "śye̠no gṛdhrā̍ṇāṃ̠ svadhi̍ti̠rvanā̍nāṃ̠ soma̍: pa̠vitra̠matye̍ti̠ rebha̍n || 6 ||"
+        },
+        {
+          "id": "rv-9-96-13",
+          "chunkNumber": 13,
+          "sanskrit": "prāvī̍vipadvā̠ca ū̠rmiṃ na sindhu̠rgira̠: soma̠: pava̍māno manī̠ṣāḥ |",
+          "padya": 7
+        },
+        {
+          "id": "rv-9-96-14",
+          "chunkNumber": 14,
+          "sanskrit": "a̠ntaḥ paśya̍nvṛ̠jane̠māva̍rā̠ṇyā ti̍ṣṭhati vṛṣa̠bho goṣu̍ jā̠nan || 7 ||"
+        },
+        {
+          "id": "rv-9-96-15",
+          "chunkNumber": 15,
+          "sanskrit": "sa ma̍tsa̠raḥ pṛ̠tsu va̠nvannavā̍taḥ sa̠hasra̍retā a̠bhi vāja̍marṣa |",
+          "padya": 8
+        },
+        {
+          "id": "rv-9-96-16",
+          "chunkNumber": 16,
+          "sanskrit": "indrā̍yendo̠ pava̍māno manī̠ṣyaṃ1śorū̠rmimī̍raya̠ gā i̍ṣa̠ṇyan || 8 ||"
+        },
+        {
+          "id": "rv-9-96-17",
+          "chunkNumber": 17,
+          "sanskrit": "pari̍ pri̠yaḥ ka̠laśe̍ de̠vavā̍ta̠ indrā̍ya̠ somo̠ raṇyo̠ madā̍ya |",
+          "padya": 9
+        },
+        {
+          "id": "rv-9-96-18",
+          "chunkNumber": 18,
+          "sanskrit": "sa̠hasra̍dhāraḥ śa̠tavā̍ja̠ indu̍rvā̠jī na sapti̠: sama̍nā jigāti || 9 ||"
+        },
+        {
+          "id": "rv-9-96-19",
+          "chunkNumber": 19,
+          "sanskrit": "sa pū̠rvyo va̍su̠vijjāya̍māno mṛjā̠no a̠psu du̍duhā̠no adrau̍ |",
+          "padya": 10
+        },
+        {
+          "id": "rv-9-96-20",
+          "chunkNumber": 20,
+          "sanskrit": "a̠bhi̠śa̠sti̠pā bhuva̍nasya̠ rājā̍ vi̠dadgā̠tuṃ brahma̍ṇe pū̠yamā̍naḥ || 10 ||"
+        },
+        {
+          "id": "rv-9-96-21",
+          "chunkNumber": 21,
+          "sanskrit": "tvayā̠ hi na̍: pi̠tara̍: soma̠ pūrve̠ karmā̍ṇi ca̠kruḥ pa̍vamāna̠ dhīrā̍: |",
+          "padya": 11
+        },
+        {
+          "id": "rv-9-96-22",
+          "chunkNumber": 22,
+          "sanskrit": "va̠nvannavā̍taḥ pari̠dhīm̐rapo̍rṇu vī̠rebhi̠raśvai̍rma̠ghavā̍ bhavā naḥ || 11 ||"
+        },
+        {
+          "id": "rv-9-96-23",
+          "chunkNumber": 23,
+          "sanskrit": "yathāpa̍vathā̠ mana̍ve vayo̠dhā a̍mitra̠hā va̍rivo̠viddha̠viṣmā̍n |",
+          "padya": 12
+        },
+        {
+          "id": "rv-9-96-24",
+          "chunkNumber": 24,
+          "sanskrit": "e̠vā pa̍vasva̠ dravi̍ṇaṃ̠ dadhā̍na̠ indre̠ saṃ ti̍ṣṭha ja̠nayāyu̍dhāni || 12 ||"
+        },
+        {
+          "id": "rv-9-96-25",
+          "chunkNumber": 25,
+          "sanskrit": "pava̍sva soma̠ madhu̍mām̐ ṛ̠tāvā̠'po vasā̍no̠ adhi̠ sāno̠ avye̍ |",
+          "padya": 13
+        },
+        {
+          "id": "rv-9-96-26",
+          "chunkNumber": 26,
+          "sanskrit": "ava̠ droṇā̍ni ghṛ̠tavā̍nti sīda ma̠dinta̍mo matsa̠ra i̍ndra̠pāna̍: || 13 ||"
+        },
+        {
+          "id": "rv-9-96-27",
+          "chunkNumber": 27,
+          "sanskrit": "vṛ̠ṣṭiṃ di̠vaḥ śa̠tadhā̍raḥ pavasva sahasra̠sā vā̍ja̠yurde̠vavī̍tau |",
+          "padya": 14
+        },
+        {
+          "id": "rv-9-96-28",
+          "chunkNumber": 28,
+          "sanskrit": "saṃ sindhu̍bhiḥ ka̠laśe̍ vāvaśā̠naḥ samu̠sriyā̍bhiḥ prati̠ranna̠ āyu̍: || 14 ||"
+        },
+        {
+          "id": "rv-9-96-29",
+          "chunkNumber": 29,
+          "sanskrit": "e̠ṣa sya somo̍ ma̠tibhi̍: punā̠no'tyo̠ na vā̠jī tara̠tīdarā̍tīḥ |",
+          "padya": 15
+        },
+        {
+          "id": "rv-9-96-30",
+          "chunkNumber": 30,
+          "sanskrit": "payo̠ na du̠gdhamadi̍teriṣi̠ramu̠rvi̍va gā̠tuḥ su̠yamo̠ na voḷhā̍ || 15 ||"
+        },
+        {
+          "id": "rv-9-96-31",
+          "chunkNumber": 31,
+          "sanskrit": "svā̠yu̠dhaḥ so̠tṛbhi̍: pū̠yamā̍no̠'bhya̍rṣa̠ guhyaṃ̠ cāru̠ nāma̍ |",
+          "padya": 16
+        },
+        {
+          "id": "rv-9-96-32",
+          "chunkNumber": 32,
+          "sanskrit": "a̠bhi vājaṃ̠ sapti̍riva śrava̠syā'bhi vā̠yuma̠bhi gā de̍va soma || 16 ||"
+        },
+        {
+          "id": "rv-9-96-33",
+          "chunkNumber": 33,
+          "sanskrit": "śiśuṃ̍ jajñā̠naṃ ha̍rya̠taṃ mṛ̍janti śu̠mbhanti̠ vahniṃ̍ ma̠ruto̍ ga̠ṇena̍ |",
+          "padya": 17
+        },
+        {
+          "id": "rv-9-96-34",
+          "chunkNumber": 34,
+          "sanskrit": "ka̠virgī̠rbhiḥ kāvye̍nā ka̠viḥ santsoma̍: pa̠vitra̠matye̍ti̠ rebha̍n || 17 ||"
+        },
+        {
+          "id": "rv-9-96-35",
+          "chunkNumber": 35,
+          "sanskrit": "ṛṣi̍manā̠ ya ṛ̍ṣi̠kṛtsva̠rṣāḥ sa̠hasra̍ṇīthaḥ pada̠vīḥ ka̍vī̠nām |",
+          "padya": 18
+        },
+        {
+          "id": "rv-9-96-36",
+          "chunkNumber": 36,
+          "sanskrit": "tṛ̠tīyaṃ̠ dhāma̍ mahi̠ṣaḥ siṣā̍sa̠ntsomo̍ vi̠rāja̠manu̍ rājati̠ ṣṭup || 18 ||"
+        },
+        {
+          "id": "rv-9-96-37",
+          "chunkNumber": 37,
+          "sanskrit": "ca̠mū̠ṣacchye̠naḥ śa̍ku̠no vi̠bhṛtvā̍ govi̠ndurdra̠psa āyu̍dhāni̠ bibhra̍t |",
+          "padya": 19
+        },
+        {
+          "id": "rv-9-96-38",
+          "chunkNumber": 38,
+          "sanskrit": "a̠pāmū̠rmiṃ saca̍mānaḥ samu̠draṃ tu̠rīyaṃ̠ dhāma̍ mahi̠ṣo vi̍vakti || 19 ||"
+        },
+        {
+          "id": "rv-9-96-39",
+          "chunkNumber": 39,
+          "sanskrit": "maryo̠ na śu̠bhrasta̠nvaṃ̍ mṛjā̠no'tyo̠ na sṛtvā̍ sa̠naye̠ dhanā̍nām |",
+          "padya": 20
+        },
+        {
+          "id": "rv-9-96-40",
+          "chunkNumber": 40,
+          "sanskrit": "vṛṣe̍va yū̠thā pari̠ kośa̠marṣa̠nkani̍kradacca̠mvo̠3rā vi̍veśa || 20 ||"
+        },
+        {
+          "id": "rv-9-96-41",
+          "chunkNumber": 41,
+          "sanskrit": "pava̍svendo̠ pava̍māno̠ maho̍bhi̠: kani̍krada̠tpari̠ vārā̍ṇyarṣa |",
+          "padya": 21
+        },
+        {
+          "id": "rv-9-96-42",
+          "chunkNumber": 42,
+          "sanskrit": "krīḷa̍ñca̠mvo̠3rā vi̍śa pū̠yamā̍na̠ indraṃ̍ te̠ raso̍ madi̠ro ma̍mattu || 21 ||"
+        },
+        {
+          "id": "rv-9-96-43",
+          "chunkNumber": 43,
+          "sanskrit": "prāsya̠ dhārā̍ bṛha̠tīra̍sṛgranna̠kto gobhi̍: ka̠laśām̠̐ ā\n\nvi̍veśa |",
+          "padya": 22
+        },
+        {
+          "id": "rv-9-96-44",
+          "chunkNumber": 44,
+          "sanskrit": "sāma̍ kṛ̠ṇvantsā̍ma̠nyo̍ vipa̠ścitkranda̍nnetya̠bhi sakhyu̠rna jā̠mim || 22 ||"
+        },
+        {
+          "id": "rv-9-96-45",
+          "chunkNumber": 45,
+          "sanskrit": "a̠pa̠ghnanne̍ṣi pavamāna̠ śatrū̍npri̠yāṃ na jā̠ro a̠bhigī̍ta̠ indu̍: |",
+          "padya": 23
+        },
+        {
+          "id": "rv-9-96-46",
+          "chunkNumber": 46,
+          "sanskrit": "sīda̠nvane̍ṣu śaku̠no na patvā̠ soma̍: punā̠naḥ ka̠laśe̍ṣu̠ sattā̍ || 23 ||"
+        },
+        {
+          "id": "rv-9-96-47",
+          "chunkNumber": 47,
+          "sanskrit": "ā te̠ ruca̠: pava̍mānasya soma̠ yoṣe̍va yanti su̠dughā̍: sudhā̠rāḥ |",
+          "padya": 24
+        },
+        {
+          "id": "rv-9-96-48",
+          "chunkNumber": 48,
+          "sanskrit": "hari̠rānī̍taḥ puru̠vāro̍ a̠psvaci̍kradatka̠laśe̍ devayū̠nām || 24 ||"
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
   "id": "rigveda-4",
   "title": {
-    "sanskrit": "ऋग्वेद",
+    "sanskrit": "ṛgveda",
     "transliteration": "Ṛgveda, Maṇḍala 4",
     "english": "Ṛgveda, Maṇḍala 4"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Ṛgveda, maṇḍala 4, from DharmicData (ODbL).",
     "place": {
       "work": {
-        "sanskrit": "ऋग्वेद",
+        "sanskrit": "ṛgveda",
         "english": "Ṛgveda"
       },
       "divisions": [
@@ -37,7 +37,7 @@
       "parser": "rigveda@1",
       "license": "ODbL 1.0 — Contains information from DharmicData (https://github.com/bhavykhatri/DharmicData), which is made available here under the Open Database License (ODbL). Licence text: https://opendatacommons.org/licenses/odbl/1-0/",
       "attribution": "Ṛgveda, maṇḍala 4 — DharmicData (https://github.com/bhavykhatri/DharmicData), commit 96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7, ODbL 1.0",
-      "sha256": "105e7a756b2ea17ab18365a5a6da0034265022b2bec9c865f1296847ec29713e"
+      "sha256": "ba5c64bfb3901e6f7275b2e8147e4cc5b7b50ec11c3e25fea16e34b29793594b"
     }
   },
   "sections": [
@@ -164,14 +164,14 @@
       "id": "rigveda-4-18",
       "sectionNumber": 18,
       "title": "Maṇḍala 4 · Sūkta 18",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 26
     },
     {
       "id": "rigveda-4-19",
       "sectionNumber": 19,
       "title": "Maṇḍala 4 · Sūkta 19",
-      "file": "part-2.json",
+      "file": "part-1.json",
       "chunkCount": 22
     },
     {
@@ -304,42 +304,42 @@
       "id": "rigveda-4-38",
       "sectionNumber": 38,
       "title": "Maṇḍala 4 · Sūkta 38",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 20
     },
     {
       "id": "rigveda-4-39",
       "sectionNumber": 39,
       "title": "Maṇḍala 4 · Sūkta 39",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 12
     },
     {
       "id": "rigveda-4-40",
       "sectionNumber": 40,
       "title": "Maṇḍala 4 · Sūkta 40",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 10
     },
     {
       "id": "rigveda-4-41",
       "sectionNumber": 41,
       "title": "Maṇḍala 4 · Sūkta 41",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 22
     },
     {
       "id": "rigveda-4-42",
       "sectionNumber": 42,
       "title": "Maṇḍala 4 · Sūkta 42",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 20
     },
     {
       "id": "rigveda-4-43",
       "sectionNumber": 43,
       "title": "Maṇḍala 4 · Sūkta 43",
-      "file": "part-3.json",
+      "file": "part-2.json",
       "chunkCount": 14
     },
     {

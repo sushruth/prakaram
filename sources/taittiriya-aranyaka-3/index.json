@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-aranyaka-3",
   "title": {
-    "sanskrit": "तैत्तिरीय आरण्यक",
+    "sanskrit": "taittirīya āraṇyaka",
     "transliteration": "Taittirīya Āraṇyaka",
     "english": "Taittirīya Āraṇyaka, Prapāṭhaka 3"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 3.",
     "place": {
       "work": {
-        "sanskrit": "तैत्तिरीय आरण्यक",
+        "sanskrit": "taittirīya āraṇyaka",
         "english": "Taittirīya Āraṇyaka"
       },
       "divisions": [
@@ -38,7 +38,7 @@
       "parser": "aranyaka@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 3 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "6fabf05d80967dca31b5d21791eb05c396285b77140f0c6ef07d802bd2326187"
+      "sha256": "feaf5e67a5115ea66b5a60796cb953d62ad37a8d840d5bcd084e66a8481e0327"
     }
   },
   "sections": [

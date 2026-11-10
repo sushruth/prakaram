@@ -1,7 +1,7 @@
 {
   "id": "taittiriya-aranyaka-4",
   "title": {
-    "sanskrit": "तैत्तिरीय आरण्यक",
+    "sanskrit": "taittirīya āraṇyaka",
     "transliteration": "Taittirīya Āraṇyaka",
     "english": "Taittirīya Āraṇyaka, Prapāṭhaka 4"
   },
@@ -11,7 +11,7 @@
     "vedaNote": "Krishna Yajurveda, Taittirīya Āraṇyaka, prapāṭhaka 4.",
     "place": {
       "work": {
-        "sanskrit": "तैत्तिरीय आरण्यक",
+        "sanskrit": "taittirīya āraṇyaka",
         "english": "Taittirīya Āraṇyaka"
       },
       "divisions": [
@@ -38,7 +38,7 @@
       "parser": "aranyaka@1",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Āraṇyaka, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "809a28ed825cf9462236b41eae79e9127e371cd1ed36c705c5a78fe762596243"
+      "sha256": "38b280ae7fd6cdd33eb62f685823f44e5e2dc4268e1e38f0256a2db6c01b0f0c"
     }
   },
   "sections": [
@@ -152,7 +152,7 @@
       "sectionNumber": 14,
       "title": "Prapāṭhaka 4 · Anuvāka 14",
       "file": "part-1.json",
-      "chunkCount": 11
+      "chunkCount": 7
     },
     {
       "id": "taittiriya-aranyaka-4-18",
