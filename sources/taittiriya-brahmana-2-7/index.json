@@ -39,10 +39,10 @@
       "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_7",
       "upstreamRef": "2026-11-10",
       "retrievedAt": "2026-11-10",
-      "parser": "brahmana@1",
+      "parser": "brahmana@2",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 7 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "410a530b95c40ba91276639c11cec3f8df758bf506baca83ffc960d69dbdabd0"
+      "sha256": "63eb08cba1ede55d6c2e5cd96b9e2e969f57b3a9031073e9cd208c431cb381e8"
     }
   },
   "sections": [
@@ -100,7 +100,7 @@
       "sectionNumber": 8,
       "title": "Aṣṭaka 2 · Prapāṭhaka 7 · Anuvāka 8",
       "file": "part-1.json",
-      "chunkCount": 20
+      "chunkCount": 21
     },
     {
       "id": "taittiriya-brahmana-2-7-9",
@@ -156,7 +156,7 @@
       "sectionNumber": 16,
       "title": "Aṣṭaka 2 · Prapāṭhaka 7 · Anuvāka 16",
       "file": "part-1.json",
-      "chunkCount": 44
+      "chunkCount": 48
     },
     {
       "id": "taittiriya-brahmana-2-7-17",

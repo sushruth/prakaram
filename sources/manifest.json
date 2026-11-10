@@ -1,6 +1,6 @@
 {
   "pin": "local",
-  "generatedAt": "2026-11-10T00:28:23.145Z",
+  "generatedAt": "2026-11-10T00:38:33.592Z",
   "sources": [
     {
       "id": "rigveda-1",
@@ -701,15 +701,15 @@
     {
       "id": "taittiriya-brahmana-2-1",
       "index": "taittiriya-brahmana-2-1/index.json",
-      "sha256": "9f143b9327dcdf11b3abf76b7fbb411fa4a9e2c145eeb7cd446b5b992b798c4a",
+      "sha256": "2dd5cc50df702f805ff8e2ea052933a4813a4dfe847ed23901be1283fddbda78",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_1",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 1 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "9f143b9327dcdf11b3abf76b7fbb411fa4a9e2c145eeb7cd446b5b992b798c4a"
+        "sha256": "2dd5cc50df702f805ff8e2ea052933a4813a4dfe847ed23901be1283fddbda78"
       },
       "parts": [
         {
@@ -723,15 +723,15 @@
     {
       "id": "taittiriya-brahmana-2-2",
       "index": "taittiriya-brahmana-2-2/index.json",
-      "sha256": "1dd82ae7dd9db88ec2d9ed30ea43dcb6b703cf00fa7e43abcb86ce1541365470",
+      "sha256": "0f7fdd1fdf8f62366cb8efb427996f9f4260b21872c0adc00784fe5df143c434",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_2",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 2 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "1dd82ae7dd9db88ec2d9ed30ea43dcb6b703cf00fa7e43abcb86ce1541365470"
+        "sha256": "0f7fdd1fdf8f62366cb8efb427996f9f4260b21872c0adc00784fe5df143c434"
       },
       "parts": [
         {
@@ -745,15 +745,15 @@
     {
       "id": "taittiriya-brahmana-2-3",
       "index": "taittiriya-brahmana-2-3/index.json",
-      "sha256": "131ef22431b17473fc4eeb436ffe4b82f0012bb344b9dcc62e74861ec5309697",
+      "sha256": "f4313185d25442321a1f09c70030789edc1251dfb0e6da0719a34a73fc629c16",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_3",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 3 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "131ef22431b17473fc4eeb436ffe4b82f0012bb344b9dcc62e74861ec5309697"
+        "sha256": "f4313185d25442321a1f09c70030789edc1251dfb0e6da0719a34a73fc629c16"
       },
       "parts": [
         {
@@ -767,110 +767,116 @@
     {
       "id": "taittiriya-brahmana-2-4",
       "index": "taittiriya-brahmana-2-4/index.json",
-      "sha256": "91acd0b979703549784c33aa7772e40d811f9b00ea02daa4039ce525c87558a6",
+      "sha256": "5574d984984eb07a64ad54f149583e1e47073d4d3c00bcd14d9ae9cbb18369b4",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_4",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 4 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "91acd0b979703549784c33aa7772e40d811f9b00ea02daa4039ce525c87558a6"
+        "sha256": "5574d984984eb07a64ad54f149583e1e47073d4d3c00bcd14d9ae9cbb18369b4"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-4/part-1.json",
-          "sha256": "a20d2ff3e27083de3dfe6114d2cd86207a40bbd3c32cb2e59d2f80b7d87c5ca5",
-          "bytes": 114593,
-          "gzip": 18576
+          "sha256": "0f4b4cde325e6a72f3ce6506c41bd827855825aa15667d96e7564fe41ee968c6",
+          "bytes": 114856,
+          "gzip": 18588
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-5",
       "index": "taittiriya-brahmana-2-5/index.json",
-      "sha256": "7da8dd8a4d4edbda2936ac8c451222007d5bc90df6fa85ae317f841fbfa9736b",
+      "sha256": "32d9c5d836127d5cb6f644d5b3638720867f3a6570b12fd46d1cae961124e799",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_5",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 5 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "7da8dd8a4d4edbda2936ac8c451222007d5bc90df6fa85ae317f841fbfa9736b"
+        "sha256": "32d9c5d836127d5cb6f644d5b3638720867f3a6570b12fd46d1cae961124e799"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-5/part-1.json",
-          "sha256": "2f36a148fd6319ec39d7e9c7822e8acdd3396f064a32e095583e112a7c869fe7",
-          "bytes": 68631,
-          "gzip": 11680
+          "sha256": "62d22c2ffe78a995d8065a729685dcca667ffee27e412f1d1caf70acf04f3490",
+          "bytes": 69804,
+          "gzip": 11839
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-6",
       "index": "taittiriya-brahmana-2-6/index.json",
-      "sha256": "6031a90525e52346e404913adff09b466358c90e7fb55d1218eb6c535376ff30",
+      "sha256": "22ed22b7baf6ab2e1e75faf92da29d44ed41e9dcb3516bdaf7b8be6b55637242",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_6",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 6 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "6031a90525e52346e404913adff09b466358c90e7fb55d1218eb6c535376ff30"
+        "sha256": "22ed22b7baf6ab2e1e75faf92da29d44ed41e9dcb3516bdaf7b8be6b55637242"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-6/part-1.json",
-          "sha256": "9fc396343245c1d6d7c05fe8a02e9e2014c7fb67e38833e8ffaae61fec3a8480",
-          "bytes": 135780,
-          "gzip": 17449
+          "sha256": "071e4b290af779e85a0f1af100521e056647110b59282cd7a1733e758880b783",
+          "bytes": 139186,
+          "gzip": 17989
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-7",
       "index": "taittiriya-brahmana-2-7/index.json",
-      "sha256": "410a530b95c40ba91276639c11cec3f8df758bf506baca83ffc960d69dbdabd0",
+      "sha256": "63eb08cba1ede55d6c2e5cd96b9e2e969f57b3a9031073e9cd208c431cb381e8",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_7",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 7 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "410a530b95c40ba91276639c11cec3f8df758bf506baca83ffc960d69dbdabd0"
+        "sha256": "63eb08cba1ede55d6c2e5cd96b9e2e969f57b3a9031073e9cd208c431cb381e8"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-7/part-1.json",
-          "sha256": "15bdaaa20f93e987327f92900b5c6972bdaa3ea7646214cfad203b80a0b86031",
-          "bytes": 100425,
-          "gzip": 14357
+          "sha256": "60b228c00d672ffed78ae3f0af8454889b4403976d531fc983dda66d05abf9e3",
+          "bytes": 101430,
+          "gzip": 14584
         }
       ]
     },
     {
       "id": "taittiriya-brahmana-2-8",
       "index": "taittiriya-brahmana-2-8/index.json",
-      "sha256": "96d8d605347c52ec4db5d585c34fe2e77499d146c6f71cf7347af92d74004048",
+      "sha256": "e0285c8e5280e34aaf71c4440de5002c10a7ca7317397cc11910f79c4e9e9a68",
       "provenance": {
         "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_8",
         "upstreamRef": "2026-11-10",
         "retrievedAt": "2026-11-10",
-        "parser": "brahmana@1",
+        "parser": "brahmana@2",
         "license": "Text from taittiriya.com; permission not yet confirmed.",
         "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
-        "sha256": "96d8d605347c52ec4db5d585c34fe2e77499d146c6f71cf7347af92d74004048"
+        "sha256": "e0285c8e5280e34aaf71c4440de5002c10a7ca7317397cc11910f79c4e9e9a68"
       },
       "parts": [
         {
           "file": "taittiriya-brahmana-2-8/part-1.json",
-          "sha256": "47ce3c0271065731cd0eab32437f8c1fff31a09e86a2a78d9986cd6dec6544b2",
-          "bytes": 118553,
-          "gzip": 19894
+          "sha256": "966adfa629ac575828367e7d0b5db8f8cb0e8bfad6be74a68b2988918753d695",
+          "bytes": 103929,
+          "gzip": 18099
+        },
+        {
+          "file": "taittiriya-brahmana-2-8/part-2.json",
+          "sha256": "bc8bb4308ba878c3f91db08d72aaf05d08caf4498c1ae7f4e8140686fed9d5f6",
+          "bytes": 34460,
+          "gzip": 6560
         }
       ]
     },
@@ -1039,8 +1045,8 @@
   ],
   "metrics": {
     "total": {
-      "raw": 6902321,
-      "gzip": 1271523
+      "raw": 6928004,
+      "gzip": 1277221
     },
     "largestPart": {
       "file": "rigveda-8/part-5.json",

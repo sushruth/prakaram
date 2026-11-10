@@ -1235,81 +1235,86 @@
         {
           "id": "tb-2-7-8-5",
           "chunkNumber": 5,
-          "sanskrit": "a̠ṅkau nya̠ṅkāva̠bhita̠§·27· āti̍ṣṭha vṛtraha̠nratha̎m§·28·||"
+          "sanskrit": "a̠ṅkaunya̠ṅkā va̠bhito̠ ratha̠ym̐yau dhvā̠ntavm̐vā̍tā̠gramanu̍ sa̠caṃra̍ntau dū̠re he̍tirindri̠yāvā̎n pata̠trī te no̠'gnayaḥ̠ papra̍yaḥ pārayantu||"
         },
         {
           "id": "tb-2-7-8-6",
           "chunkNumber": 6,
-          "sanskrit": "ā̠tiṣṭha̍ntaṃ̠ pari̠ viśve̍ abhūṣann|"
+          "sanskrit": "(ālso same appearing above, in ṭbh.2.7.16.1 ) āti̍ṣṭha vṛtraha̠nratha̎m ||"
         },
         {
           "id": "tb-2-7-8-7",
           "chunkNumber": 7,
-          "sanskrit": "śriya̠vm̐vasā̍naścarati̠ svaro̍cāḥ|"
+          "sanskrit": "ā̠tiṣṭha̍ntaṃ̠ pari̠ viśve̍ abhūṣann|"
         },
         {
           "id": "tb-2-7-8-8",
           "chunkNumber": 8,
-          "sanskrit": "ma̠hattada̠syāsu̍rasya̠ nāma̍|"
+          "sanskrit": "śriya̠vm̐vasā̍naścarati̠ svaro̍cāḥ|"
         },
         {
           "id": "tb-2-7-8-9",
           "chunkNumber": 9,
-          "sanskrit": "ā vi̠śvarū̍po a̠mṛtā̍ni tasthau||"
+          "sanskrit": "ma̠hattada̠syāsu̍rasya̠ nāma̍|"
         },
         {
           "id": "tb-2-7-8-10",
           "chunkNumber": 10,
-          "sanskrit": "anu̠ tvendro̍ mada̠tvanu̠ bṛha̠spatiḥ̍ anu̠ somo̠ anva̠gnirā̍vīt|"
+          "sanskrit": "ā vi̠śvarū̍po a̠mṛtā̍ni tasthau||"
         },
         {
           "id": "tb-2-7-8-11",
           "chunkNumber": 11,
-          "sanskrit": "anu̍ tvā̠ viśve̍ de̠vā a̍vantu|"
+          "sanskrit": "anu̠ tvendro̍ mada̠tvanu̠ bṛha̠spatiḥ̍ anu̠ somo̠ anva̠gnirā̍vīt|"
         },
         {
           "id": "tb-2-7-8-12",
           "chunkNumber": 12,
-          "sanskrit": "anu̍ sa̠pta rājā̍no̠ ya u̠tābhiṣi̍ktāḥ||"
+          "sanskrit": "anu̍ tvā̠ viśve̍ de̠vā a̍vantu|"
         },
         {
           "id": "tb-2-7-8-13",
           "chunkNumber": 13,
-          "sanskrit": "anu̍ tvā mi̠trāvaru̍ṇāvi̠hāva̍tam|"
+          "sanskrit": "anu̍ sa̠pta rājā̍no̠ ya u̠tābhiṣi̍ktāḥ||"
         },
         {
           "id": "tb-2-7-8-14",
           "chunkNumber": 14,
-          "sanskrit": "anu̠ dyāvā̍pṛthi̠vī vi̠śvaśa̍bhūm|"
+          "sanskrit": "anu̍ tvā mi̠trāvaru̍ṇāvi̠hāva̍tam|"
         },
         {
           "id": "tb-2-7-8-15",
           "chunkNumber": 15,
-          "sanskrit": "sūryo̠ aho̍bhi̠ranu̍ tvā'vatu|"
+          "sanskrit": "anu̠ dyāvā̍pṛthi̠vī vi̠śvaśa̍bhūm|"
         },
         {
           "id": "tb-2-7-8-16",
           "chunkNumber": 16,
-          "sanskrit": "ca̠ndramā̠ nakhṣa̍trai̠ranu̍ tvā'vatu||"
+          "sanskrit": "sūryo̠ aho̍bhi̠ranu̍ tvā'vatu|"
         },
         {
           "id": "tb-2-7-8-17",
           "chunkNumber": 17,
-          "sanskrit": "dyauśca̍ tvā pṛthi̠vī ca̠ prace̍tasā|"
+          "sanskrit": "ca̠ndramā̠ nakhṣa̍trai̠ranu̍ tvā'vatu||"
         },
         {
           "id": "tb-2-7-8-18",
           "chunkNumber": 18,
-          "sanskrit": "śu̠kro bṛ̠haddakhṣi̍ṇā tvā pipartu|"
+          "sanskrit": "dyauśca̍ tvā pṛthi̠vī ca̠ prace̍tasā|"
         },
         {
           "id": "tb-2-7-8-19",
           "chunkNumber": 19,
-          "sanskrit": "anu̍ sva̠dhā ci̍kitā̠g̠ͫ somo̍ a̠gniḥ|"
+          "sanskrit": "śu̠kro bṛ̠haddakhṣi̍ṇā tvā pipartu|"
         },
         {
           "id": "tb-2-7-8-20",
           "chunkNumber": 20,
+          "sanskrit": "anu̍ sva̠dhā ci̍kitā̠g̠ͫ somo̍ a̠gniḥ|"
+        },
+        {
+          "id": "tb-2-7-8-21",
+          "chunkNumber": 21,
           "sanskrit": "ā'yaṃ pṛ̍ṇaktu̠ raja̍sī u̠pastha̎m"
         }
       ]
@@ -2844,12 +2849,12 @@
         {
           "id": "tb-2-7-16-14",
           "chunkNumber": 14,
-          "sanskrit": "āti̍ṣṭha vṛtrahan §·29·, nā̠tiṣṭha̍ntaṃ̠ pari̍ §·30·|"
+          "sanskrit": "āti̍ṣṭha vṛtrahan , nā̠tiṣṭha̍ntaṃ̠ pari̍ |"
         },
         {
           "id": "tb-2-7-16-15",
           "chunkNumber": 15,
-          "sanskrit": "anu̠ tvendro̍ mada̠ {31]. tvanu̍ tvā mi̠trāvaru̍ṇau §·32·||"
+          "sanskrit": "anu̠ tvendro̍ mada̠ {31]. tvanu̍ tvā mi̠trāvaru̍ṇau ||"
         },
         {
           "id": "tb-2-7-16-16",
@@ -2924,76 +2929,96 @@
         {
           "id": "tb-2-7-16-30",
           "chunkNumber": 30,
-          "sanskrit": "ava̍te̠ heḍa̠ §·33·, udu̍tta̠mam §·34·||"
+          "sanskrit": "ava̍ te̠ heḍo̍ varuṇa̠ namo̍bhi̠rava̍ ya̠jñebhi̍rīmahe ha̠virbhiḥ̍|"
         },
         {
           "id": "tb-2-7-16-31",
           "chunkNumber": 31,
-          "sanskrit": "e̠nā vyā̠ghraṃ pa̍riṣasvajā̠nāḥ|"
+          "sanskrit": "khṣaya̍nna̠smabhya̍masura praceto̠ rāja̠nnenā̍gͫsi śiśrathaḥ kṛ̠tāni̍||"
         },
         {
           "id": "tb-2-7-16-32",
           "chunkNumber": 32,
-          "sanskrit": "si̠g̠ͫhagͫ hi̍nvanti maha̠te saubha̍gāya|"
+          "sanskrit": "udu̍tta̠mavm̐va̍ruṇa̠ pāśa̍ma̠smadavā̍'dha̠mavm̐vima̍dhya̠magͫͫ śra̍thāya|"
         },
         {
           "id": "tb-2-7-16-33",
           "chunkNumber": 33,
-          "sanskrit": "sa̠mu̠draṃ na su̠havaṃ̍ tasthi̠vāgͫsa̎m|"
+          "sanskrit": "athā̍ va̠yamā̍ditya vra̠te tavā'nā̍gaso̠ adi̍taye syāma||"
         },
         {
           "id": "tb-2-7-16-34",
           "chunkNumber": 34,
-          "sanskrit": "ma̠rmṛ̠jyante̎ dvī̠pina̍ma̠phsva̍ntaḥ||"
+          "sanskrit": ", udu̍tta̠mam ||"
         },
         {
           "id": "tb-2-7-16-35",
           "chunkNumber": 35,
-          "sanskrit": "uda̠sāve̍tu̠ sūryaḥ̍|"
+          "sanskrit": "e̠nā vyā̠ghraṃ pa̍riṣasvajā̠nāḥ|"
         },
         {
           "id": "tb-2-7-16-36",
           "chunkNumber": 36,
-          "sanskrit": "udi̠daṃ mā̍ma̠kavm̐vacaḥ̍|"
+          "sanskrit": "si̠g̠ͫhagͫ hi̍nvanti maha̠te saubha̍gāya|"
         },
         {
           "id": "tb-2-7-16-37",
           "chunkNumber": 37,
-          "sanskrit": "udi̍hi deva sūrya|"
+          "sanskrit": "sa̠mu̠draṃ na su̠havaṃ̍ tasthi̠vāgͫsa̎m|"
         },
         {
           "id": "tb-2-7-16-38",
           "chunkNumber": 38,
-          "sanskrit": "sa̠ha va̠gnunā̠ mama̍|"
+          "sanskrit": "ma̠rmṛ̠jyante̎ dvī̠pina̍ma̠phsva̍ntaḥ||"
         },
         {
           "id": "tb-2-7-16-39",
           "chunkNumber": 39,
-          "sanskrit": "a̠havm̐vā̠co vi̠vāca̍nam|"
+          "sanskrit": "uda̠sāve̍tu̠ sūryaḥ̍|"
         },
         {
           "id": "tb-2-7-16-40",
           "chunkNumber": 40,
-          "sanskrit": "mayi̠ vāga̍stu dharṇa̠siḥ|"
+          "sanskrit": "udi̠daṃ mā̍ma̠kavm̐vacaḥ̍|"
         },
         {
           "id": "tb-2-7-16-41",
           "chunkNumber": 41,
-          "sanskrit": "yantu̍ na̠dayo̠ varṣa̍ntu pa̠rjanyāḥ̎|"
+          "sanskrit": "udi̍hi deva sūrya|"
         },
         {
           "id": "tb-2-7-16-42",
           "chunkNumber": 42,
-          "sanskrit": "su̠pi̠ppa̠lā oṣa̍dhayo bhavantu||"
+          "sanskrit": "sa̠ha va̠gnunā̠ mama̍|"
         },
         {
           "id": "tb-2-7-16-43",
           "chunkNumber": 43,
-          "sanskrit": "anna̍vatāmoda̠nava̍tāmā̠mikhṣa̍vatām|"
+          "sanskrit": "a̠havm̐vā̠co vi̠vāca̍nam|"
         },
         {
           "id": "tb-2-7-16-44",
           "chunkNumber": 44,
+          "sanskrit": "mayi̠ vāga̍stu dharṇa̠siḥ|"
+        },
+        {
+          "id": "tb-2-7-16-45",
+          "chunkNumber": 45,
+          "sanskrit": "yantu̍ na̠dayo̠ varṣa̍ntu pa̠rjanyāḥ̎|"
+        },
+        {
+          "id": "tb-2-7-16-46",
+          "chunkNumber": 46,
+          "sanskrit": "su̠pi̠ppa̠lā oṣa̍dhayo bhavantu||"
+        },
+        {
+          "id": "tb-2-7-16-47",
+          "chunkNumber": 47,
+          "sanskrit": "anna̍vatāmoda̠nava̍tāmā̠mikhṣa̍vatām|"
+        },
+        {
+          "id": "tb-2-7-16-48",
+          "chunkNumber": 48,
           "sanskrit": "e̠ṣāgͫ rājā̍ bhūyāsam"
         }
       ]
