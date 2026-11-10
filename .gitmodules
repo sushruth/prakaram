@@ -3,3 +3,4 @@
 	url = https://github.com/daithal/saswara-rigveda.git
 	branch = saswara-pages
 	shallow = true
+	update = none
