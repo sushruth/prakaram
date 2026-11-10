@@ -1,5 +1,8 @@
 import { DEFAULT_PRAKARAS } from '../data';
 import { countAksharas, truncateAksharas } from './aksharas';
+import { displayToDevanagari } from './transliteration/toDevanagari';
+
+const sanskritPart = (title: string): string => displayToDevanagari(splitTitle(title).sanskrit);
 
 export interface TitleParts {
   sanskrit: string;
@@ -15,9 +18,9 @@ export function splitTitle(title: string): TitleParts {
 export const mixedTitle = (t: { sanskrit: string; english: string }) => (t.sanskrit ? `${t.sanskrit} (${t.english})` : t.english);
 
 export const TITLE_AKSHARA_LIMIT = Math.max(
-  ...DEFAULT_PRAKARAS.map((p) => countAksharas(splitTitle(p.title).sanskrit)),
+  ...DEFAULT_PRAKARAS.map((p) => countAksharas(sanskritPart(p.title))),
 );
 
 export function displayTitle(title: string): string {
-  return truncateAksharas(splitTitle(title).sanskrit, TITLE_AKSHARA_LIMIT);
+  return truncateAksharas(sanskritPart(title), TITLE_AKSHARA_LIMIT);
 }

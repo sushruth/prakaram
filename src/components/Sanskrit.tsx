@@ -4,6 +4,7 @@
 import { useMemo, useRef } from 'preact/hooks';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { transliterateVedic } from '../services/transliteration';
+import { displayToDevanagari } from '../services/transliteration/toDevanagari';
 import { vedicText } from '../services/swaraRanges';
 import { displayTitle, splitTitle } from '../services/titles';
 import { citeInWords } from '../services/cite';
@@ -17,7 +18,7 @@ const usePrintedNasals = () => useSettingsStore((s) => s.printedNasals);
 export function useSanskritText(): (text: string) => string {
   const script = useScript();
   const printedNasals = usePrintedNasals();
-  return (text) => transliterateVedic(text, script, printedNasals);
+  return (text) => transliterateVedic(displayToDevanagari(text), script, printedNasals);
 }
 
 /** Citation in words (see services/cite.ts) as plain text in the selected script; follows a script change. */
@@ -36,11 +37,11 @@ export function useTitleText(): (title: string, opts?: { short?: boolean; full?:
   };
 }
 
-/** Devanagari source text in the selected script, swara syllables coloured through the CSS Custom Highlight API. */
+/** Source text (Devanagari, or IAST written in code) in the selected script, swara syllables coloured through the CSS Custom Highlight API. */
 export function Sanskrit({ text }: { text: string }) {
   const script = useScript();
   const printedNasals = usePrintedNasals();
-  const { text: line, ranges } = useMemo(() => vedicText(text, script, printedNasals), [text, script, printedNasals]);
+  const { text: line, ranges } = useMemo(() => vedicText(displayToDevanagari(text), script, printedNasals), [text, script, printedNasals]);
   const ref = useRef<HTMLSpanElement>(null);
   useSwaraHighlight(ref, ranges);
   return <span className="vedic" ref={ref}>{line}</span>;

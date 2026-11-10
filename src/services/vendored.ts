@@ -2,6 +2,7 @@ import type { MantraDocument, SourceIndex, SourcePart, SourceProvenance } from '
 import { mergeDocument } from '../data';
 import { VENDORED_SOURCES } from '../data/vendoredSources';
 import { rebuildCorpus } from './wiki';
+import { sourceToDevanagari } from './transliteration/toDevanagari';
 
 /**
  * The commit the vendored `sources/` files are pinned to. Injected at build time by `vite.config.ts`
@@ -81,15 +82,16 @@ export function fetchSourcePart(id: string, file: string): Promise<SourcePart | 
  * failure; never throws.
  */
 export async function loadSource(id: string, sections?: number[]): Promise<MantraDocument | undefined> {
-  const index = await fetchSourceIndex(id);
-  if (!index) return undefined;
+  const fetchedIndex = await fetchSourceIndex(id);
+  if (!fetchedIndex) return undefined;
+  const index = sourceToDevanagari(fetchedIndex);
   const wanted = sections === undefined ? undefined : new Set(sections);
   const files = [...new Set(index.sections.filter((s) => !wanted || wanted.has(s.sectionNumber)).map((s) => s.file))];
   const fetched = await Promise.all(files.map((file) => fetchSourcePart(id, file)));
   if (fetched.some((part) => part === undefined)) return undefined;
   const order = new Map(index.sections.map((s, i) => [s.sectionNumber, i]));
   const loaded = fetched
-    .flatMap((part) => part!.sections)
+    .flatMap((part) => sourceToDevanagari(part!).sections)
     .sort((a, b) => (order.get(a.sectionNumber) ?? Number.MAX_SAFE_INTEGER) - (order.get(b.sectionNumber) ?? Number.MAX_SAFE_INTEGER));
   const doc: MantraDocument = { id: index.id, title: index.title, metadata: index.metadata, sections: loaded };
   const stored = mergeDocument(doc);
