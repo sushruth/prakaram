@@ -5,7 +5,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     id: 'nava-sukta',
     title: 'Śrī Kṛṣṇa Vṛndāvana Prayāṇam',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
-    description: 'As in the Saswara Veda Mantraḥ book. Vishnu Suktam and Narayanopanishat are not in the library yet.',
+    description: 'As in the Saswara Veda Mantraḥ book. Narayanopanishat is not in the library yet.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
     items: [
@@ -92,6 +92,29 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/1.96-97',
         customTitle: 'Narayana Gāyatrī'
+      },
+      {
+        id: 'ns-v1',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-brahmana-2-8',
+        nirdesa: 'taittiriya-brahmana-2-8/3.18-3.38',
+        customTitle: 'Vishnu Suktam'
+      },
+      {
+        id: 'ns-v2',
+        type: 'sukta_ref',
+        suktaId: 'rigveda-1',
+        nirdesa: 'rigveda-1/22.31-22.42',
+        customTitle: 'Vishnu Suktam · ato devā',
+        note: 'From the Ṛgveda (1.22.16–21): no Taittirīya source in the library has these verses, so the accents follow the Ṛgveda.'
+      },
+      {
+        id: 'ns-v3',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-5',
+        nirdesa: 'taittiriya-samhita-5/47.3',
+        customTitle: 'Vishnu Suktam · paryāptyā',
+        note: 'Saswara Veda Mantrāḥ and vignanam start at “paryāptyā”. This line of the Saṃhitā (5.4.12) has 27 more words of aśvamedha prose before it, from “yata īśvaro” to “sarvatvāya”.'
       },
       {
         id: 'ns-13',

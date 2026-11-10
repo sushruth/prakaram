@@ -1,3 +1,4 @@
+import { KriyaNote } from './KriyaNote';
 import { useEffect, useMemo, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
 import { isAutoRunning, isLearning, useCadenceStore } from '../stores/useCadenceStore';
@@ -184,6 +185,7 @@ export function ZenMantraReader() {
               {chunk.section !== undefined && (
                 <h2 className="chunk-heading" onClick={(e) => e.stopPropagation()}><Term id="anuvaka" /> {chunk.section}</h2>
               )}
+              <KriyaNote note={chunk.note} />
               {chunk.padya !== undefined && <span className="chunk-padya" onClick={(e) => e.stopPropagation()}><Term id="padya" /> {chunk.padya}</span>}
               {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
                 <span className="kind-label">{kindLabel(chunk.kind)}</span>

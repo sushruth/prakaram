@@ -1,3 +1,4 @@
+import { KriyaNote } from './KriyaNote';
 import { Sanskrit, ArticleTitle } from './Sanskrit';
 import { AddToPrakaram } from './WikiAdd';
 import { lineClass } from '../config/lineClass';
@@ -28,6 +29,7 @@ export function WikiHeadingRow({
   return (
     <h2 id={sectionDomId(s.number)} tabIndex={-1} className="wiki-section-title" ref={rowRef}>
       {s.number}. {s.title}
+      <KriyaNote note={s.note} />
       {s.from && (
         <span className="wiki-from">
           {' '}

@@ -1,0 +1,30 @@
+@layer components {
+  /* A kriyā's note: a quiet asterisk that opens a short line of text. */
+  .kriya-note {
+    display: inline-block;
+    margin-inline-start: 0.35rem;
+    font: 500 0.8rem/1.4 'Geist', system-ui, sans-serif;
+    color: var(--text-muted);
+
+    & > summary {
+      display: inline;
+      cursor: pointer;
+      list-style: none;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    & > summary::-webkit-details-marker {
+      display: none;
+    }
+    & > p {
+      margin: 0.25rem 0 0.4rem;
+      max-width: 60ch;
+      background: var(--accent-light);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+    }
+    &[open] {
+      display: block;
+    }
+  }
+}
