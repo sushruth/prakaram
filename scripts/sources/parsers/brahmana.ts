@@ -1,16 +1,20 @@
 import type { MantraChunk, MantraDocument } from '../../../src/types/mantra';
 import { anuvakaNumber, devanagariText, splitSections } from './aranyaka';
 import { splitAtDanda } from './danda';
+import { expandBlock, parseExpansions } from './expansions';
 
 export const brahmanaUrl = (ashtaka: number, prapathaka: number) => `https://taittiriya.com/brahmana/ashtaka_${ashtaka}_prapathaka_${prapathaka}`;
 
 /** One prapāṭhaka of the Taittirīya Brāhmaṇa from taittiriya.com: one section per anuvāka, one pada per daṇḍa. */
 export function parseBrahmana(html: string, ashtaka: number, prapathaka: number): MantraDocument {
   const id = `taittiriya-brahmana-${ashtaka}-${prapathaka}`;
+  const expansions = parseExpansions(html);
   const sections = splitSections(html)
     .map((s, i) => {
       const number = anuvakaNumber(s.html, s.key, i + 1);
-      const chunks: MantraChunk[] = splitAtDanda(devanagariText(s.html)).map((sanskrit, j) => ({
+      const chunks: MantraChunk[] = splitAtDanda(devanagariText(s.html, (block) => expandBlock(block, expansions)))
+        .filter((pada) => /[^\s।॥]/.test(pada))
+        .map((sanskrit, j) => ({
         id: `tb-${ashtaka}-${prapathaka}-${number}-${j + 1}`,
         chunkNumber: j + 1,
         sanskrit,

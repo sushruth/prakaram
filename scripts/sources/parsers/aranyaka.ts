@@ -60,11 +60,11 @@ export function splitSections(html: string): { key: string; html: string }[] {
  * entities decoded, zero-width characters dropped. The other four scripts, the anuvāka/pancashati number
  * markers and the korvai passages carry no `sentence` spans and are left out. Swara is kept exactly.
  */
-export function devanagariText(sectionHtml: string): string {
+export function devanagariText(sectionHtml: string, expand?: (blockHtml: string) => string): string {
   const parts: string[] = [];
   for (const m of sectionHtml.matchAll(DEVANAGARI_BLOCK)) {
     if (!/class="?sentence\b/.test(m[1])) continue;
-    const text = decodeEntities(m[1].replace(TAGS, '')).replace(ZERO_WIDTH, '').replace(/\s+/g, ' ').trim();
+    const text = expand ? expand(m[1]) : decodeEntities(m[1].replace(TAGS, '')).replace(ZERO_WIDTH, '').replace(/\s+/g, ' ').trim();
     if (text) parts.push(text);
   }
   return parts.join(' ');
