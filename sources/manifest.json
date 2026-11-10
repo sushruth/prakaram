@@ -1,7 +1,29 @@
 {
   "pin": "local",
-  "generatedAt": "2026-11-10T00:43:37.968Z",
+  "generatedAt": "2026-11-10T00:56:46.908Z",
   "sources": [
+    {
+      "id": "narayana-upanishad",
+      "index": "narayana-upanishad/index.json",
+      "sha256": "08b9f517fc2e08b439f3b619d700b151d3265a658e9b340e319b45eb31d1c8e4",
+      "provenance": {
+        "upstreamUrl": "https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html",
+        "upstreamRef": "2025-02-26",
+        "retrievedAt": "2026-11-10",
+        "parser": "narayana@1",
+        "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+        "attribution": "Nārāyaṇa Upaniṣad — sanskritdocuments.org, encoded and proofread by Sunder Hattangadi",
+        "sha256": "08b9f517fc2e08b439f3b619d700b151d3265a658e9b340e319b45eb31d1c8e4"
+      },
+      "parts": [
+        {
+          "file": "narayana-upanishad/part-1.json",
+          "sha256": "104157ff1ad86ca231ae0631794530e23e51096f5049b903232dffc14f7300aa",
+          "bytes": 11751,
+          "gzip": 1696
+        }
+      ]
+    },
     {
       "id": "rigveda-1",
       "index": "rigveda-1/index.json",
@@ -1045,8 +1067,8 @@
   ],
   "metrics": {
     "total": {
-      "raw": 6930214,
-      "gzip": 1277363
+      "raw": 6944069,
+      "gzip": 1279811
     },
     "largestPart": {
       "file": "rigveda-8/part-5.json",

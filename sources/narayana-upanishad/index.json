@@ -1,0 +1,62 @@
+{
+  "id": "narayana-upanishad",
+  "title": {
+    "sanskrit": "nārāyaṇopaniṣat",
+    "transliteration": "Nārāyaṇopaniṣat",
+    "english": "Nārāyaṇa Upaniṣad"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Nārāyaṇa Upaniṣad, also called the Nārāyaṇa Atharvaśiras; the page heads it as Krishna Yajurveda.",
+    "source": "sanskritdocuments.org (nArAyaNopaniShat.html), encoded and proofread by Sunder Hattangadi",
+    "status": "draft",
+    "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+    "deity": "Narayana",
+    "categories": [
+      "Upanishads",
+      "Krishna Yajurveda"
+    ],
+    "summary": "The short Nārāyaṇa Upaniṣad (Nārāyaṇa Atharvaśiras) in four khaṇḍas, with its opening and closing śānti. The upstream page has no swara marks.",
+    "remoteUrl": "https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html",
+    "provenance": {
+      "upstreamUrl": "https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html",
+      "upstreamRef": "2025-02-26",
+      "retrievedAt": "2026-11-10",
+      "parser": "narayana@1",
+      "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+      "attribution": "Nārāyaṇa Upaniṣad — sanskritdocuments.org, encoded and proofread by Sunder Hattangadi",
+      "sha256": "08b9f517fc2e08b439f3b619d700b151d3265a658e9b340e319b45eb31d1c8e4"
+    }
+  },
+  "sections": [
+    {
+      "id": "narayana-upanishad-1",
+      "sectionNumber": 1,
+      "title": "Khaṇḍa 1",
+      "file": "part-1.json",
+      "chunkCount": 17
+    },
+    {
+      "id": "narayana-upanishad-2",
+      "sectionNumber": 2,
+      "title": "Khaṇḍa 2",
+      "file": "part-1.json",
+      "chunkCount": 17
+    },
+    {
+      "id": "narayana-upanishad-3",
+      "sectionNumber": 3,
+      "title": "Khaṇḍa 3",
+      "file": "part-1.json",
+      "chunkCount": 12
+    },
+    {
+      "id": "narayana-upanishad-4",
+      "sectionNumber": 4,
+      "title": "Khaṇḍa 4",
+      "file": "part-1.json",
+      "chunkCount": 26
+    }
+  ]
+}
