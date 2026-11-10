@@ -28,7 +28,7 @@ function useBreaks(index: number): (number[] | undefined)[] {
   const [breaks, setBreaks] = useState<(number[] | undefined)[]>([]);
   useEffect(() => {
     const measure = () => {
-      const els = document.querySelectorAll('.chunk-row .vedic-text');
+      const els = document.querySelectorAll('.book-text .pada');
       const next = WINDOW.map((d) => (els[index + d] ? measureLines(els[index + d]) : undefined));
       setBreaks((prev) => (JSON.stringify(prev) === JSON.stringify(next) ? prev : next));
     };

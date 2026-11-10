@@ -1,7 +1,8 @@
 import { KriyaNote } from './KriyaNote';
-import { useEffect, useMemo, useRef } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
-import { isAutoRunning, isLearning, useCadenceStore } from '../stores/useCadenceStore';
+import { isAutoRunning, useCadenceStore } from '../stores/useCadenceStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { useRoomStore } from '../stores/useRoomStore';
@@ -14,7 +15,9 @@ import { useChunkTranslations } from '../hooks/useChunkTranslations';
 
 import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
-import { Sanskrit } from './Sanskrit';
+import { Sanskrit, SanskritTitle } from './Sanskrit';
+import { PageNav } from './PageNav';
+import { showActivePage, snapToPage } from '../services/bookPages';
 import { Term } from './Term';
 import { SourceList } from './SourceList';
 import { SUKTA_MAP } from '../data';
@@ -23,7 +26,6 @@ import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
   const fontSize = useSettingsStore((s) => s.fontSize);
-  const wrapLines = useSettingsStore((s) => s.wrapLines);
   // Off unless the translation experiment is explicitly enabled (src/config/features.ts).
   const showTranslation = TRANSLATION_ENABLED && useSettingsStore((s) => s.showTranslation);
 
@@ -34,23 +36,17 @@ export function ZenMantraReader() {
   const prevChunk = useMantraStore((s) => s.prevChunk);
   const nextChunk = useMantraStore((s) => s.nextChunk);
 
-  const phase = useCadenceStore((s) => s.phase);
   const autoRunning = useCadenceStore(isAutoRunning);
   const frozen = useFrozen();
   const guest = useGuest();
   const frozenRef = useRef(frozen);
   frozenRef.current = frozen;
-  const setHolding = useMantraStore((s) => s.setHolding);
-  const pressed = useRef(false);
-  const suppressClick = useRef(false);
-  const resetLearning = useCadenceStore((s) => s.resetLearning);
   const msPerMatra = useCadenceStore((s) => s.msPerMatra);
 
   const getActivePrakara = usePrakaraStore((s) => s.getActivePrakara);
   const isHost = useRoomStore((s) => s.isHost);
   const isInRoom = useRoomStore((s) => s.isInRoom);
 
-  const activeChunkRef = useRef<HTMLDivElement | null>(null);
   const activePrakara = getActivePrakara();
   const chunks = useChunks();
   const { containerRef, translations } = useChunkTranslations(chunks, showTranslation);
@@ -63,9 +59,22 @@ export function ZenMantraReader() {
     if (chunks.length > 0 && activeChunkIndex >= chunks.length) setActiveChunkIndex(0);
   }, [chunks.length, activeChunkIndex, setActiveChunkIndex]);
 
-  useEffect(() => {
-    activeChunkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, [activeChunkIndex]);
+  useEffect(() => showActivePage('smooth'), [activeChunkIndex]);
+  // A new prakaram, text size or screen size re-cuts the pages; jump straight to the highlight's page.
+  useLayoutEffect(() => {
+    showActivePage('instant');
+    const el = document.querySelector('.book');
+    if (!el) return;
+    const observer = new ResizeObserver(() => showActivePage('instant'));
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [chunks, fontSize]);
+
+  const settle = useRef<ReturnType<typeof setTimeout>>();
+  const onBookScroll = () => {
+    clearTimeout(settle.current);
+    settle.current = setTimeout(snapToPage, 150);
+  };
 
   useEffect(() => {
     if (isInRoom && isHost) {
@@ -118,22 +127,6 @@ export function ZenMantraReader() {
     };
   }, [autoRunning, frozen, activeChunkIndex, msPerMatra, chunks, nextChunk]);
 
-  const learning = isLearning(phase);
-  const handleChunkClick = (index: number) => {
-    if (guest) return;
-    if (suppressClick.current) {
-      suppressClick.current = false;
-      return;
-    }
-    const isNextLine = index === activeChunkIndex + 1;
-    if (index === activeChunkIndex || (learning && isNextLine)) {
-      advanceChunk(chunks);
-      return;
-    }
-    if (learning) resetLearning();
-    setActiveChunkIndex(index);
-  };
-
   // Every source this prakaram reads, in order of first appearance, so the player cites them all at the end.
   const sources = useMemo(() => {
     const out: ArticleSource[] = [];
@@ -148,74 +141,37 @@ export function ZenMantraReader() {
     return out;
   }, [chunks]);
 
-  const kindLabel = (kind: string) => (kind === 'shloka' ? 'Shloka' : 'Vakya');
   return (
-    <div className="main-content">
-      <div className={`chunks-container ${showTranslation ? 'with-translation' : ''}`} ref={containerRef}>
-        {chunks.map((chunk, idx) => {
-          const isActive = idx === activeChunkIndex;
-          const bundled = chunk.translation;
-          const translation = bundled ?? translations[idx];
-          const pending = showTranslation && !bundled && !(idx in translations);
-          return (
-            <div
-              key={`${chunk.id}-${idx}`}
-              ref={isActive ? activeChunkRef : null}
-              data-translation-row={idx}
-              className={`chunk-row ${isActive ? 'active' : ''} ${Math.abs(idx - activeChunkIndex) === 1 ? 'is-near' : ''}`}
-              onClick={() => handleChunkClick(idx)}
-              onPointerDown={() => {
-                if (!isActive || guest) return;
-                // Touching the current line pauses at once. In auto modes the touch does not advance; in Learn it still counts as a tap.
-                pressed.current = true;
-                suppressClick.current = isAutoRunning(useCadenceStore.getState());
-                setHolding(true);
-              }}
-              onPointerUp={() => {
-                if (!pressed.current) return;
-                pressed.current = false;
-                setHolding(false);
-              }}
-              onPointerLeave={() => {
-                if (!pressed.current) return;
-                pressed.current = false;
-                setHolding(false);
-              }}
-            >
-              {chunk.section !== undefined && (
-                <h2 className="chunk-heading" onClick={(e) => e.stopPropagation()}><Term id="anuvaka" /> {chunk.section}</h2>
-              )}
-              <KriyaNote note={chunk.note} />
-              {chunk.padya !== undefined && <span className="chunk-padya" onClick={(e) => e.stopPropagation()}><Term id="padya" /> {chunk.padya}</span>}
-              {chunk.isLead !== false && chunk.kind && chunk.kind !== 'mantra' && (
-                <span className="kind-label">{kindLabel(chunk.kind)}</span>
-              )}
-              <div
-                className={`vedic-text ${lineClass(chunk)}`}
-                style={{
-                  fontSize: `${fontSize}px`,
-                  whiteSpace: wrapLines ? 'normal' : 'nowrap',
-                  overflowX: wrapLines ? 'visible' : 'auto',
-                }}
-              >
-                <Sanskrit text={chunk.sanskrit} />
-              </div>
-              {showTranslation && (translation || pending) && (
-                <p className="chunk-translation">
-                  {pending ? <span className="chunk-translation-pending">…</span> : translation}
-                </p>
-              )}
-            </div>
-          );
-        })}
+    <div className="main-content book-main">
+      <PageNav chunks={chunks} />
+      <div className="book" style={{ fontSize: `${fontSize}px` }} onScroll={onBookScroll}>
+        <div className={`book-text ${showTranslation ? 'with-translation' : ''}`} ref={containerRef}>
+          {chunks.map((chunk, idx) => {
+            const translation = chunk.translation ?? translations[idx];
+            return (
+              <Fragment key={`${chunk.id}-${idx}`}>
+                {chunk.kriya && <h2 className="book-kriya"><SanskritTitle title={chunk.kriya} full /></h2>}
+                <KriyaNote note={chunk.note} />
+                {chunk.section !== undefined && (
+                  <span className="book-anuvaka"><Term id="anuvaka" /> {chunk.section}</span>
+                )}
+                <span data-translation-row={idx} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`}>
+                  <Sanskrit text={chunk.sanskrit} />
+                </span>
+                {showTranslation && translation && <span className="pada-translation">{translation}</span>}{' '}
+              </Fragment>
+            );
+          })}
+          {sources.length > 0 && (
+            <footer className="player-sources">
+              <h2 className="player-sources-title">Sources</h2>
+              <SourceList sources={sources} />
+              <p className="player-sources-note">Text is fetched live from the pinned upstream and never stored here.</p>
+            </footer>
+          )}
+          <div className="book-tail" aria-hidden="true" />
+        </div>
       </div>
-      {sources.length > 0 && (
-        <footer className="player-sources">
-          <h2 className="player-sources-title">Sources</h2>
-          <SourceList sources={sources} />
-          <p className="player-sources-note">Text is fetched live from the pinned upstream and never stored here.</p>
-        </footer>
-      )}
     </div>
   );
 }

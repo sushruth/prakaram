@@ -1,40 +1,35 @@
 import { useEffect, useState } from 'preact/hooks';
 import { useMantraStore } from '../stores/useMantraStore';
+import { activeSide, showActivePage } from '../services/bookPages';
 import { Icon } from './Icon';
 
+/** Shown after a swipe has taken the highlighted pada off the pages in view; slides back to it. */
 export function LocateLine() {
   const activeChunkIndex = useMantraStore((s) => s.activeChunkIndex);
-  const [side, setSide] = useState<'up' | 'down' | null>(null);
+  const [side, setSide] = useState<'before' | 'after' | null>(null);
 
   useEffect(() => {
-    const check = () => {
-      const row = document.querySelector<HTMLElement>('.chunk-row.active');
-      if (!row) return setSide(null);
-      const { top, bottom } = row.getBoundingClientRect();
-      setSide(bottom < 0 ? 'up' : top > window.innerHeight ? 'down' : null);
-    };
+    const book = document.querySelector('.book');
+    const check = () => setSide(activeSide());
     check();
-    window.addEventListener('scroll', check, { passive: true });
+    book?.addEventListener('scroll', check, { passive: true });
     window.addEventListener('resize', check);
     return () => {
-      window.removeEventListener('scroll', check);
+      book?.removeEventListener('scroll', check);
       window.removeEventListener('resize', check);
     };
   }, [activeChunkIndex]);
-
-  const locate = () =>
-    document.querySelector<HTMLElement>('.chunk-row.active')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   return (
     <button
       className="locate-line"
       data-visible={side !== null}
-      onClick={locate}
-      aria-label="Back to the highlighted line"
-      title="Back to the highlighted line"
+      onClick={() => showActivePage('smooth')}
+      aria-label="Back to the highlighted pada"
+      title="Back to the highlighted pada"
       tabIndex={side ? 0 : -1}
     >
-      <Icon name={side === 'down' ? 'arrow-down' : 'arrow-up'} size={24} />
+      <Icon name={side === 'before' ? 'arrow-left' : 'arrow-right'} size={24} />
     </button>
   );
 }
