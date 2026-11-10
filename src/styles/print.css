@@ -55,7 +55,8 @@
     mask-image: none !important;
   }
 
-  .pada {
+  .pada,
+  .pada-number {
     opacity: 1 !important;
     filter: none !important;
   }

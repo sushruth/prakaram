@@ -169,9 +169,7 @@ export function ZenMantraReader() {
                 {chunk.section !== undefined && !chunk.kriya && (
                   <span className="book-anuvaka"><Term id="anuvaka" /> {chunk.section}</span>
                 )}
-                <span data-translation-row={idx} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`}>
-                  <PadaText text={chunk.sanskrit} />
-                </span>
+                <PadaText text={chunk.sanskrit} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`} index={idx} />
                 {showTranslation && translation && <span className="pada-translation">{translation}</span>}{' '}
               </Fragment>
             );
@@ -190,12 +188,17 @@ export function ZenMantraReader() {
   );
 }
 
-/** A pada's chanted text, with its printed verse number unlit: only what is said aloud is highlighted. */
-function PadaText({ text }: { text: string }) {
+/**
+ * A pada's chanted text, with its printed verse number beside it, outside the highlighted span: only what is said
+ * aloud lights up, and the number never takes part in the highlight's fade.
+ */
+function PadaText({ text, className, index }: { text: string; className: string; index: number }) {
   const [said, number] = splitVerseNumber(text);
   return (
     <>
-      <Sanskrit text={said} />
+      <span data-translation-row={index} className={className}>
+        <Sanskrit text={said} />
+      </span>
       {number && <span className="pada-number"><Sanskrit text={number} /></span>}
     </>
   );

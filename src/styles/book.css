@@ -59,8 +59,8 @@
     filter: none;
   }
 
-  /* A printed verse number is read, not said, so it stays unlit with the highlighted pada. */
-  .pada.active .pada-number {
+  /* A printed verse number is read, not said: it sits outside the pada span and is always unlit. */
+  .pada-number {
     opacity: 0.32;
     filter: grayscale(1);
   }
