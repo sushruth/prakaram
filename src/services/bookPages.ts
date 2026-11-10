@@ -47,6 +47,22 @@ export function keepPadasWhole(): void {
   }
 }
 
+/** The index of the first pada that starts on the page `delta` pages from the highlighted pada's page, if any. */
+export function padaOnPage(delta: number): number | null {
+  const el = book();
+  const t = el && text(el);
+  const g = el && geometry(el);
+  const page = el && g && activePage(el, g.step);
+  if (!t || !g || page === null) return null;
+  const left = t.getBoundingClientRect().left;
+  const target = Math.max(0, page + delta);
+  for (const pada of t.querySelectorAll<HTMLElement>('.pada')) {
+    const first = pada.getClientRects()[0];
+    if (first && Math.floor((first.left - left + 1) / g.step) === target) return Number(pada.dataset.translationRow);
+  }
+  return null;
+}
+
 /** Slide so the highlighted pada's page is the first one showing. */
 export function showActivePage(behavior: ScrollBehavior = 'smooth'): void {
   const el = book();
