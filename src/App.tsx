@@ -26,7 +26,7 @@ import { adapterFor, ensureDocument, ensureDocumentSections, hasDocument } from 
 import { pendingSourceParts } from './services/liveLoading';
 import { SUKTA_MAP } from './data';
 import { liveSourceLabel } from './data/liveSources';
-import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute } from './services/wikiNav';
+import { HOME_HASH, type Route, articleHash, legacyHash, parseRoute, playHash } from './services/wikiNav';
 
 type DropKind = 'settings' | 'details' | 'cadence' | 'room';
 
@@ -84,6 +84,8 @@ export function App() {
         history.replaceState(null, '', window.location.pathname + window.location.search);
       }
       const next = readRoute();
+      // A player permalink names the prakaram to open, so a reload or a shared link lands back on it.
+      if (next.kind === 'player' && next.id) usePrakaraStore.getState().selectPrakara(next.id);
       if (next.kind !== 'article' || next.section === undefined) window.scrollTo(0, 0);
       setRoute(next);
       setDrop(null);
@@ -248,10 +250,15 @@ export function App() {
     handleUrlState();
   }, [addPrakara, setMsPerMatra]);
 
+  // While playing, the address always names the open prakaram (replaced, not pushed, so Back still leaves the player).
+  useEffect(() => {
+    if (playing && window.location.hash !== playHash(activePrakaraId)) history.replaceState(null, '', playHash(activePrakaraId));
+  }, [playing, activePrakaraId]);
+
   // Running a piece makes it the active prakara, then leaves the wiki for the player.
   const runPiece = (pieceId: string) => {
     usePrakaraStore.getState().runPiece(pieceId);
-    window.location.hash = '';
+    window.location.hash = playHash(usePrakaraStore.getState().activePrakaraId);
   };
 
   return (

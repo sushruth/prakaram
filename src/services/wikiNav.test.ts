@@ -1,7 +1,7 @@
 import { afterAll, expect, test } from 'bun:test';
 import { ALL_SUKTAMS, SUKTA_MAP, registerDocument } from '../data';
 import type { MantraDocument } from '../types/mantra';
-import { articleHash, categoryHash, legacyHash, nirdesaHash, parseRoute, routeRangeOk, searchHash } from './wikiNav';
+import { articleHash, categoryHash, legacyHash, nirdesaHash, parseRoute, playHash, routeRangeOk, searchHash } from './wikiNav';
 
 // A fixture standing in for the live corpus: nothing is bundled in `src/data` any more, so the linked-range
 // check (which resolves against the default corpus) gets this registered for the file.
@@ -70,4 +70,9 @@ test('linked ranges must resolve: out-of-range and reversed ones are rejected', 
   expect(ok('#/wiki/rudram-namakam/3.9-2')).toBe(false);
   expect(ok('#/wiki/rudram-namakam/999.1')).toBe(false);
   expect(ok('#/wiki/rudram-namakam/3')).toBe(true);
+});
+
+test('the player permalink names the prakaram to open, pieces included', () => {
+  expect(parseRoute(playHash('sri-krishna-vrundavana-prayanam'))).toEqual({ kind: 'player', id: 'sri-krishna-vrundavana-prayanam' });
+  expect(parseRoute(playHash('piece:rigveda-1/22.p16-p21'))).toEqual({ kind: 'player', id: 'piece:rigveda-1/22.p16-p21' });
 });

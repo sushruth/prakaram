@@ -4,7 +4,7 @@ import { useRoomStore } from '../stores/useRoomStore';
 import { usePrakaraStore } from '../stores/usePrakaraStore';
 import { searchArticles } from '../services/wiki';
 import { useBasketStore } from '../stores/useBasketStore';
-import { COMPOSE_HASH, HOME_HASH, PLAYER_HASH, REPO_URL, articleHash, nirdesaHash, searchHash } from '../services/wikiNav';
+import { COMPOSE_HASH, HOME_HASH, REPO_URL, playHash, articleHash, nirdesaHash, searchHash } from '../services/wikiNav';
 import { resolveNirdesa } from '../services/nirdesa';
 import { ArticleTitle, SanskritTitle, useTitleText } from './Sanskrit';
 import { FlameMark } from './FlameMark';
@@ -79,6 +79,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
   const { isInRoom, isHost, peerCount } = useRoomStore();
   const roomTitle = isInRoom ? `Parāyaṇam room (${isHost ? 'host' : 'follower'}, ${peerCount} peers)` : 'Parāyaṇam room';
   const basketCount = useBasketStore((s) => s.items.length);
+  const activePrakaraId = usePrakaraStore((s) => s.activePrakaraId);
   const [text, setText] = useState(query);
   const [open, setOpen] = useState(false);
   useEffect(() => setText(query), [query]);
@@ -144,7 +145,7 @@ export function WikiTopBar({ query, onOpenSettings, settingsOpen, onOpenRoom }: 
           <Icon name="users-three" size={20} />
           {isInRoom && <span className="icon-dot" />}
         </button>
-        <a className="icon-btn" href={PLAYER_HASH} aria-label="Back to the player" title="Player">
+        <a className="icon-btn" href={playHash(activePrakaraId)} aria-label="Back to the player" title="Player">
           <Icon name="play" size={20} />
         </a>
       </nav>

@@ -1,12 +1,14 @@
 
 export const HOME_HASH = '#/wiki';
 export const PLAYER_HASH = '#/player';
+/** The player's permalink for one prakaram (or a piece, `piece:<nirdeśa>`), so a reload lands back on it. */
+export const playHash = (prakaraId: string) => `#/play/${encodeURIComponent(prakaraId)}`;
 export const REPO_URL = 'https://github.com/sushruth/prakaram';
 
 import { formatNirdesa, parseNirdesa, resolveNirdesa, type Pos } from './nirdesa';
 
 export type Route =
-  | { kind: 'player' }
+  | { kind: 'player'; id?: string }
   | { kind: 'home' }
   | { kind: 'article'; id: string; section?: number; /** Padas to mark, from `<s>.<a>-<b>`, `<s>.<l>` or a padya address (`<s>.p<n>`, resolved to its padas). */ range?: { from: Pos; to: Pos } }
   | { kind: 'category'; name: string }
@@ -25,6 +27,8 @@ const dec = (s: string) => {
 /** Maps a location hash to a wiki page. `#/player` (and anything else outside `#/wiki`) is the player. */
 export function parseRoute(hash: string): Route {
   if (hash === PLAYER_HASH) return { kind: 'player' };
+  const play = hash.match(/^#\/play\/(.+)$/);
+  if (play) return { kind: 'player', id: dec(play[1]) };
   const m = hash.match(/^#\/wiki(?:\/(.*))?$/);
   if (!m) return { kind: 'player' };
   const rest = m[1] ?? '';

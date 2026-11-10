@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { partWords, resolveNirdesa } from '../services/nirdesa';
 import { sankalpaOf } from '../services/basket';
 import { getArticle } from '../services/wiki';
-import { articleHash } from '../services/wikiNav';
+import { articleHash, playHash } from '../services/wikiNav';
 import { basketToPrakara } from '../services/basket';
 import { ArticleTitle, useCiteInWords } from './Sanskrit';
 import { Term } from './Term';
@@ -30,7 +30,7 @@ export function WikiCompose() {
   const finish = (followNow: boolean) => {
     usePrakaraStore.getState().addPrakara(basketToPrakara(items, name, Date.now(), names));
     clear();
-    if (followNow) window.location.hash = '';
+    if (followNow) window.location.hash = playHash(usePrakaraStore.getState().activePrakaraId);
     else setName('');
   };
 

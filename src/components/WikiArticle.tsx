@@ -4,7 +4,7 @@ import { ALL_SUKTAMS } from '../data';
 import { getArticle } from '../services/wiki';
 import { buildRows, type WikiRow } from '../services/wikiRows';
 import { useSettingsStore } from '../stores/useSettingsStore';
-import { HOME_HASH, categoryHash, nirdesaHash, routeRangeOk, type Route } from '../services/wikiNav';
+import { HOME_HASH, categoryHash, nirdesaHash, playHash, routeRangeOk, type Route } from '../services/wikiNav';
 import { type Pos, parseNirdesa, rangeWords, selectionNirdesa } from '../services/nirdesa';
 import { mixedTitle } from '../services/titles';
 import { basketToPrakara } from '../services/basket';
@@ -134,7 +134,7 @@ export function WikiArticle({ id, section, range, onRun }: WikiArticleProps) {
     const store = usePrakaraStore.getState();
     if (store.prakaras.some((p) => p.id === id)) store.selectPrakara(id);
     else store.addPrakara(basketToPrakara(article.sections.map((x) => x.pieceId), mixedTitle(article.title)));
-    window.location.hash = '';
+    window.location.hash = playHash(usePrakaraStore.getState().activePrakaraId);
   };
 
   const citeText = doc && addr ? cite(doc, addr) : undefined;
