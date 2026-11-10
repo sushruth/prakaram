@@ -19,12 +19,12 @@
     "summary": "The Taittirīya Saṃhitā of the Krishna Yajurveda, kāṇḍa 4, from taittiriya.com. The Rudram (Namakam, TS 4.5, and Chamakam, TS 4.7) is a range inside it.",
     "provenance": {
       "upstreamUrl": "https://taittiriya.com/samhita/kanda_4_prashna_1",
-      "upstreamRef": "2026-10-14",
-      "retrievedAt": "2026-10-14",
+      "upstreamRef": "2026-11-10",
+      "retrievedAt": "2026-11-10",
       "parser": "taittiriya@2",
       "license": "Text from taittiriya.com; permission not yet confirmed.",
       "attribution": "Taittirīya Saṃhitā, kāṇḍa 4 — taittiriya.com, edited by Sridhar Iyer",
-      "sha256": "70d5c869da02becad104635d42cff0ec759c505dbcb9868b28ebd854775bc9b4"
+      "sha256": "82eda48817073f7b4f3014e4ace21df460bf50a8ecbd0c59296848158bc6c53b"
     }
   },
   "sections": [
@@ -292,7 +292,7 @@
       "sectionNumber": 38,
       "title": "Kāṇḍa 4 · Prapāṭhaka 4 · Anuvāka 3",
       "file": "part-4.json",
-      "chunkCount": 3
+      "chunkCount": 1
     },
     {
       "id": "taittiriya-samhita-4-4-4",
@@ -495,7 +495,7 @@
       "sectionNumber": 67,
       "title": "Kāṇḍa 4 · Prapāṭhaka 6 · Anuvāka 9",
       "file": "part-6.json",
-      "chunkCount": 16
+      "chunkCount": 11
     },
     {
       "id": "taittiriya-samhita-4-7-1",

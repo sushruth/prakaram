@@ -1,0 +1,113 @@
+{
+  "id": "taittiriya-brahmana-2-8",
+  "title": {
+    "sanskrit": "Taittirīya Brāhmaṇa",
+    "transliteration": "Taittirīya Brāhmaṇa",
+    "english": "Taittirīya Brāhmaṇa, Aṣṭaka 2, Prapāṭhaka 8"
+  },
+  "metadata": {
+    "kind": "source",
+    "veda": "yajurveda",
+    "vedaNote": "Krishna Yajurveda, Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8.",
+    "place": {
+      "work": {
+        "sanskrit": "Taittirīya Brāhmaṇa",
+        "english": "Taittirīya Brāhmaṇa"
+      },
+      "divisions": [
+        {
+          "kind": "aṣṭaka",
+          "n": 2
+        },
+        {
+          "kind": "prapāṭhaka",
+          "n": 8
+        }
+      ]
+    },
+    "source": "taittiriya.com (Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8), edited by Sridhar Iyer",
+    "status": "draft",
+    "license": "Text from taittiriya.com; permission not yet confirmed.",
+    "categories": [
+      "Yajurveda",
+      "Krishna Yajurveda",
+      "Brahmanas"
+    ],
+    "summary": "The Taittirīya Brāhmaṇa of the Krishna Yajurveda, aṣṭaka 2, prapāṭhaka 8, from taittiriya.com. Each section is an anuvāka and each line a pada.",
+    "remoteUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_8",
+    "provenance": {
+      "upstreamUrl": "https://taittiriya.com/brahmana/ashtaka_2_prapathaka_8",
+      "upstreamRef": "2026-11-10",
+      "retrievedAt": "2026-11-10",
+      "parser": "brahmana@1",
+      "license": "Text from taittiriya.com; permission not yet confirmed.",
+      "attribution": "Taittirīya Brāhmaṇa, aṣṭaka 2, prapāṭhaka 8 — taittiriya.com, edited by Sridhar Iyer",
+      "sha256": "abd1885cf2804f916885c075f54378a2a525781d58644e0d5701736721d96a1c"
+    }
+  },
+  "sections": [
+    {
+      "id": "taittiriya-brahmana-2-8-1",
+      "sectionNumber": 1,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 1",
+      "file": "part-1.json",
+      "chunkCount": 59
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-2",
+      "sectionNumber": 2,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 2",
+      "file": "part-1.json",
+      "chunkCount": 75
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-3",
+      "sectionNumber": 3,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 3",
+      "file": "part-1.json",
+      "chunkCount": 76
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-4",
+      "sectionNumber": 4,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 4",
+      "file": "part-1.json",
+      "chunkCount": 78
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-5",
+      "sectionNumber": 5,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 5",
+      "file": "part-1.json",
+      "chunkCount": 81
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-6",
+      "sectionNumber": 6,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 6",
+      "file": "part-1.json",
+      "chunkCount": 84
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-7",
+      "sectionNumber": 7,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 7",
+      "file": "part-1.json",
+      "chunkCount": 91
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-8",
+      "sectionNumber": 8,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 8",
+      "file": "part-1.json",
+      "chunkCount": 115
+    },
+    {
+      "id": "taittiriya-brahmana-2-8-9",
+      "sectionNumber": 9,
+      "title": "Aṣṭaka 2 · Prapāṭhaka 8 · Anuvāka 9",
+      "file": "part-2.json",
+      "chunkCount": 83
+    }
+  ]
+}

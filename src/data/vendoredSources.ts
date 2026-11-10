@@ -30,9 +30,19 @@ const aranyakaPrapathaka = (n: number): VendoredSource => ({
   sanskrit: `तैत्तिरीय आरण्यक, प्रपाठकः ${devanagari(n)}`,
 });
 
+const brahmanaPrapathaka = (a: number, p: number): VendoredSource => ({
+  id: `taittiriya-brahmana-${a}-${p}`,
+  index: `taittiriya-brahmana-${a}-${p}/index.json`,
+  label: `Taittirīya Brāhmaṇa, Aṣṭaka ${a}, Prapāṭhaka ${p}`,
+  sanskrit: `Taittirīya Brāhmaṇa, Aṣṭakaḥ ${a}, Prapāṭhakaḥ ${p}`,
+});
+
 export const VENDORED_SOURCES: VendoredSource[] = [
   ...Array.from({ length: 10 }, (_, i) => rigvedaMandala(i + 1)),
+  { id: 'taittiriya-samhita-1', index: 'taittiriya-samhita-1/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 1', sanskrit: 'Taittirīya Saṃhitā, Kāṇḍaḥ 1' },
   { id: 'taittiriya-samhita-4', index: 'taittiriya-samhita-4/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 4', sanskrit: 'तैत्तिरीय संहिता, काण्डः ४' },
+  { id: 'taittiriya-samhita-5', index: 'taittiriya-samhita-5/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 5', sanskrit: 'Taittirīya Saṃhitā, Kāṇḍaḥ 5' },
+  ...Array.from({ length: 8 }, (_, i) => brahmanaPrapathaka(2, i + 1)),
   ...Array.from({ length: 10 }, (_, i) => aranyakaPrapathaka(i + 1)),
   { id: 'rigveda-khila-sri', index: 'rigveda-khila-sri/index.json', label: 'Śrī Sūkta (Ṛgveda Khila)', sanskrit: 'श्री सूक्तम् (ऋग्वेद खिलम्)' },
 ];
