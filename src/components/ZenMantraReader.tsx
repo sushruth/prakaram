@@ -163,12 +163,12 @@ export function ZenMantraReader() {
                     <KriyaNote note={chunk.note} />
                   </h2>
                 )}
-                {/* A kriyā with no heading of its own (a silent reference) keeps its note as an asterisk before its text. */}
-                {!chunk.kriya && <KriyaNote note={chunk.note} />}
                 {/* A kriyā's heading already says where it starts; only a new anuvāka inside it gets a marker. */}
                 {chunk.section !== undefined && !chunk.kriya && (
                   <span className="book-anuvaka"><Term id="anuvaka" /> {chunk.section}</span>
                 )}
+                {/* A kriyā with no heading of its own (a silent reference) keeps its note as an asterisk before its text. */}
+                {!chunk.kriya && <KriyaNote note={chunk.note} />}
                 <PadaText text={chunk.sanskrit} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`} index={idx} />
                 {showTranslation && translation && <span className="pada-translation">{translation}</span>}{' '}
               </Fragment>
