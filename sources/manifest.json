@@ -1,7 +1,29 @@
 {
   "pin": "local",
-  "generatedAt": "2026-11-10T01:14:21.320Z",
+  "generatedAt": "2026-11-10T06:29:16.429Z",
   "sources": [
+    {
+      "id": "namaste-astu-bhagavan",
+      "index": "namaste-astu-bhagavan/index.json",
+      "sha256": "0fa1a984c140870221fd9d7dbef3b272d0857a9adeb4ee9d6878f7ac878379e4",
+      "provenance": {
+        "upstreamUrl": "https://sanskritdocuments.org/doc_shiva/rudram.html",
+        "upstreamRef": "2026-11-10",
+        "retrievedAt": "2026-11-10",
+        "parser": "namaste-astu@1",
+        "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+        "attribution": "Namaste astu bhagavan — sanskritdocuments.org, Rudram without svara (doc_shiva/rudram.html)",
+        "sha256": "0fa1a984c140870221fd9d7dbef3b272d0857a9adeb4ee9d6878f7ac878379e4"
+      },
+      "parts": [
+        {
+          "file": "namaste-astu-bhagavan/part-1.json",
+          "sha256": "aee86604acaca72b10c3cdd728e570ee9b85b066a752caacc381ac850568f170",
+          "bytes": 522,
+          "gzip": 275
+        }
+      ]
+    },
     {
       "id": "narayana-upanishad",
       "index": "narayana-upanishad/index.json",
@@ -1503,8 +1525,8 @@
   ],
   "metrics": {
     "total": {
-      "raw": 11492507,
-      "gzip": 2142578
+      "raw": 11494703,
+      "gzip": 2143590
     },
     "largestPart": {
       "file": "saswara-rigveda-1/part-8.json",

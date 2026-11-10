@@ -1,0 +1,39 @@
+{
+  "id": "namaste-astu-bhagavan",
+  "title": {
+    "sanskrit": "namaste astu bhagavan",
+    "transliteration": "Namaste astu bhagavan",
+    "english": "Namaste astu bhagavan"
+  },
+  "metadata": {
+    "kind": "source",
+    "vedaNote": "Not in the Veda: a salutation chanted after the first anuvāka of the Rudram.",
+    "source": "sanskritdocuments.org (doc_shiva/rudram.html, the Rudram without svara), between 1.15 and 2.1",
+    "status": "draft",
+    "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+    "deity": "Shiva",
+    "categories": [
+      "Stotras"
+    ],
+    "summary": "A salutation to Śiva chanted after the first anuvāka of the Śrī Rudram. It is not in the Taittirīya Saṃhitā and has no svara. The Śivarahasya sets it between the first and second anuvākas, and Nīlakaṇṭha Dīkṣita (17th century) calls its names \"known from śruti\" without naming one.",
+    "remoteUrl": "https://sanskritdocuments.org/doc_shiva/rudram.html",
+    "provenance": {
+      "upstreamUrl": "https://sanskritdocuments.org/doc_shiva/rudram.html",
+      "upstreamRef": "2026-11-10",
+      "retrievedAt": "2026-11-10",
+      "parser": "namaste-astu@1",
+      "license": "Text from sanskritdocuments.org; permission not yet confirmed.",
+      "attribution": "Namaste astu bhagavan — sanskritdocuments.org, Rudram without svara (doc_shiva/rudram.html)",
+      "sha256": "0fa1a984c140870221fd9d7dbef3b272d0857a9adeb4ee9d6878f7ac878379e4"
+    }
+  },
+  "sections": [
+    {
+      "id": "namaste-astu-bhagavan-1",
+      "sectionNumber": 1,
+      "title": "Namaste astu bhagavan",
+      "file": "part-1.json",
+      "chunkCount": 1
+    }
+  ]
+}
