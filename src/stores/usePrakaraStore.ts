@@ -70,7 +70,7 @@ export const usePrakaraStore = create<PrakaraState>()(
               }
             }
             for (const [i, ch] of r.chunks.entries()) {
-              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 ? { kriya: item.customTitle, ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: 'mantra', isLead: true, sourceId: doc.id });
+              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 ? { kriya: item.customTitle, ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: doc.metadata.veda ? 'mantra' : 'uncategorized', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({

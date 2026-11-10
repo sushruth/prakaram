@@ -40,7 +40,8 @@
     --swara-down: #1d4ed8;
     --swara-double: #b91c1c;
     --shloka: #3d7a55;
-    --vakya: #6e6c85;
+    --vakya: #6f6852;
+    --uncategorized: #9a5b00;
     --flame-core: #7cc8ff;
     --flame-mid: #ffd976;
     --flame-tip: #ff9a5c;
@@ -82,7 +83,8 @@
       --swara-down: #60a5fa;
       --swara-double: #f05252;
       --shloka: #92d3aa;
-      --vakya: #a7a4bf;
+      --vakya: #bdb497;
+      --uncategorized: #e8a957;
     }
   }
 
@@ -112,6 +114,7 @@
     --swara-down: #60a5fa;
     --swara-double: #f05252;
     --shloka: #92d3aa;
-    --vakya: #a7a4bf;
+    --vakya: #bdb497;
+    --uncategorized: #e8a957;
   }
 }

@@ -44,7 +44,8 @@ Defined on `:root` / `[data-theme="light"]` (light base) and `[data-theme="dark"
 | `--swara-down` | `#1d4ed8` (dark `#60a5fa`) | Anudatta, U+0952 (down): blue |
 | `--swara-double` | `#b91c1c` (dark `#f05252`) | Dirgha svarita, U+1CDA (double up): red |
 | `--shloka` | `#3d7a55` | Shloka lines (green tint) |
-| `--vakya` | `#6e6c85` | Vakya lines (purplish grey) |
+| `--vakya` | `#6f6852` | Vakya lines (khaki grey, clear of the svarita purple) |
+| `--uncategorized` | `#9a5b00` | Text from outside the Vedas, such as a traditional salutation (amber) |
 | `--flame-core/mid/tip` | blue, yellow, orange | Glow for active icons and choices (`--flame`) |
 | `--locate` | `#16a34a` (dark `#4ade80`) | Back-to-line arrow and its glow. The only green in the UI |
 | `--accent-light` | `#e8f0f6` | Selected-state tint |
@@ -114,7 +115,8 @@ The reader is a page, not a set of cards.
 | :--- | :--- | :--- |
 | Mantra | Primary ink, regular weight. A swara syllable takes its direct colour: up purple, down blue, double up red | Sukta line. Colour is per syllable, so conjuncts stay whole |
 | Shloka | Green tint `--shloka`, medium weight, small "Shloka" label | Custom verse ending in `॥` |
-| Vakya | Purplish grey `--vakya`, italic, small "Vakya" label | Other procedural text |
+| Vakya | Khaki grey `--vakya`, italic | Other procedural text |
+| Uncategorized | Amber `--uncategorized` | Text from a source outside the Vedas (no `veda` in its metadata), such as namaste astu bhagavan; no svara |
 
 The swara and line-kind colours are provisional. Other kinds may get colours later; add them here first.
 

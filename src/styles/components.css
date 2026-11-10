@@ -230,6 +230,11 @@
     font-style: italic;
   }
 
+  /* Text from outside the Vedas (a traditional salutation), with no svara. */
+  .line-uncategorized {
+    color: var(--uncategorized);
+  }
+
   /* Swara syllables are coloured through the CSS Custom Highlight API, not per-syllable spans. */
   ::highlight(swara-up) {
     color: var(--swara-up);

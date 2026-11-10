@@ -12,7 +12,8 @@ export interface AksharaToken {
   swara?: 'anudatta' | 'svarita' | 'dirgha_svarita' | 'none';
 }
 
-export type ChunkKind = 'mantra' | 'shloka' | 'vakya';
+/** `uncategorized`: text from a source outside the Vedas, such as a traditional salutation; it has no svara. */
+export type ChunkKind = 'mantra' | 'shloka' | 'vakya' | 'uncategorized';
 
 export interface MantraChunk {
   id: string;
