@@ -35,6 +35,8 @@ export interface MantraChunk {
   note?: string;
   /** Player only: the title of the kriyā this pada opens. */
   kriya?: string;
+  /** Player only: this pada opens a silent kriyā, which starts on a line of its own with no heading. */
+  breakBefore?: boolean;
 }
 
 export interface SuktaSection {
@@ -179,6 +181,8 @@ export interface PrakaraItem {
    * that names no sections at all shows each kriyā's `customTitle` instead.
    */
   section?: string;
+  /** A silent reference (a salutation, a dhūpam mantra): it starts on a line of its own, like a new section, but with no heading. */
+  silent?: boolean;
   /** A note on this kriyā shown behind an asterisk, e.g. where printed editions start a part differently. */
   note?: string;
 }

@@ -41,6 +41,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-namaste',
+        silent: true,
         type: 'sukta_ref',
         suktaId: 'namaste-astu-bhagavan',
         nirdesa: 'namaste-astu-bhagavan/1',
@@ -296,6 +297,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'rts-namaste',
+        silent: true,
         type: 'sukta_ref',
         suktaId: 'namaste-astu-bhagavan',
         nirdesa: 'namaste-astu-bhagavan/1',

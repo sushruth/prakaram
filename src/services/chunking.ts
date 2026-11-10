@@ -54,6 +54,7 @@ export function splitForReading(chunks: MantraChunk[]): MantraChunk[] {
       padya: pi === 0 ? chunk.padya : undefined,
       note: pi === 0 ? chunk.note : undefined,
       kriya: pi === 0 ? chunk.kriya : undefined,
+      breakBefore: pi === 0 ? chunk.breakBefore : undefined,
     }))
   );
 }

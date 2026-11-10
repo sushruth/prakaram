@@ -83,6 +83,12 @@
     margin-top: 0;
   }
 
+  /* A silent kriyā starts on a line of its own, with the air of a new section but no heading. */
+  .book-break {
+    display: block;
+    height: 0.9em;
+  }
+
   .book-anuvaka {
     display: block;
     margin-top: 0.6em;
