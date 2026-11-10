@@ -3,6 +3,7 @@ import { Header, WikiTopBar, WikiFooter } from './components/Header';
 import { CadenceStrip } from './components/CadenceStrip';
 import { ZenMantraReader } from './components/ZenMantraReader';
 import { LocateLine } from './components/LocateLine';
+import { BackGuard } from './components/BackGuard';
 import { CadencePanel } from './components/CadencePanel';
 import { PrakaraBuilderModal } from './components/PrakaraBuilderModal';
 import { RoomPanel } from './components/RoomPanel';
@@ -252,7 +253,7 @@ export function App() {
 
   // While playing, the address always names the open prakaram (replaced, not pushed, so Back still leaves the player).
   useEffect(() => {
-    if (playing && window.location.hash !== playHash(activePrakaraId)) history.replaceState(null, '', playHash(activePrakaraId));
+    if (playing && window.location.hash !== playHash(activePrakaraId)) history.replaceState(history.state, '', playHash(activePrakaraId));
   }, [playing, activePrakaraId]);
 
   // Running a piece makes it the active prakara, then leaves the wiki for the player.
@@ -295,6 +296,7 @@ export function App() {
           <>
             <ZenMantraReader />
             <LocateLine />
+            <BackGuard />
           </>
         )
       ) : (

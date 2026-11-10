@@ -158,4 +158,24 @@
       transition: none;
     }
   }
+
+  /* The Back countdown (BackGuard): a clear pill at the top, over the text, until it times out. */
+  .back-guard {
+    position: fixed;
+    top: calc(var(--header-h) + 0.5rem);
+    left: 50%;
+    z-index: 46;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.1rem;
+    transform: translateX(-50%);
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--bg-base);
+    font: 600 1rem/1 'Geist', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+  }
 }
