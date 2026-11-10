@@ -145,7 +145,7 @@ export function ZenMantraReader() {
     <div className="main-content book-main">
       <PageNav chunks={chunks} />
       <div className="book" style={{ fontSize: `${fontSize}px` }} onScroll={onBookScroll}>
-        <div className={`book-text ${showTranslation ? 'with-translation' : ''}`} ref={containerRef}>
+        <div className={`book-text vedic-text ${showTranslation ? 'with-translation' : ''}`} ref={containerRef}>
           {chunks.map((chunk, idx) => {
             const translation = chunk.translation ?? translations[idx];
             return (

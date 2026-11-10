@@ -7,7 +7,8 @@
     transition: background-color 0.4s ease, color 0.4s ease;
   }
 
-  .vedic-text {
+  .vedic-text,
+  .settings-label .vedic {
     font-family: 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Geist', system-ui, sans-serif;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "mark" 1, "mkmk" 1;
     line-height: 1.85;

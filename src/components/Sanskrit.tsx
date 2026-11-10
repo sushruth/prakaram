@@ -38,9 +38,10 @@ export function useTitleText(): (title: string, opts?: { short?: boolean; full?:
 }
 
 /** Source text (Devanagari, or IAST written in code) in the selected script, swara syllables coloured through the CSS Custom Highlight API. */
-export function Sanskrit({ text }: { text: string }) {
+/** `literal` shows the text as written, ignoring the setting that spells gͫ as gṃ (for the label of that setting). */
+export function Sanskrit({ text, literal }: { text: string; literal?: boolean }) {
   const script = useScript();
-  const printedNasals = usePrintedNasals();
+  const printedNasals = usePrintedNasals() && !literal;
   const { text: line, ranges } = useMemo(() => vedicText(displayToDevanagari(text), script, printedNasals), [text, script, printedNasals]);
   const ref = useRef<HTMLSpanElement>(null);
   useSwaraHighlight(ref, ranges);
