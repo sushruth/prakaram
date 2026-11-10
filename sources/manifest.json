@@ -1,6 +1,6 @@
 {
   "pin": "local",
-  "generatedAt": "2026-11-10T00:56:46.908Z",
+  "generatedAt": "2026-11-10T01:14:21.320Z",
   "sources": [
     {
       "id": "narayana-upanishad",
@@ -479,6 +479,442 @@
           "sha256": "063057b7b3d6be627f76d99da220747ff0f4e48a08d9d0862a2dafabcdceeedf",
           "bytes": 15864,
           "gzip": 3563
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-1",
+      "index": "saswara-rigveda-1/index.json",
+      "sha256": "4aa1807e3af25b9b29681f6e84a4650098d9f10b8894ad65e47f63f93a7f24b0",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M01-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 1 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "4aa1807e3af25b9b29681f6e84a4650098d9f10b8894ad65e47f63f93a7f24b0"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-1/part-1.json",
+          "sha256": "51ac3407396c55bc3dd18e6d2033a020bca0cd0c763fa4f791637a80de5c97cb",
+          "bytes": 118242,
+          "gzip": 19583
+        },
+        {
+          "file": "saswara-rigveda-1/part-2.json",
+          "sha256": "81cffd7008c65ef96e8bf1641526ca7ea716cd5bc209d538ffbf8a790598b653",
+          "bytes": 102425,
+          "gzip": 19778
+        },
+        {
+          "file": "saswara-rigveda-1/part-3.json",
+          "sha256": "603d1a96011c0b099f9b5a38a8055ef6b3fd4be8ae1a377ee27c1d34cb515ded",
+          "bytes": 97890,
+          "gzip": 20256
+        },
+        {
+          "file": "saswara-rigveda-1/part-4.json",
+          "sha256": "48799bc1d0f8bd3e872e1eee56551f85857d567838fbbf2d0673c3656bb5a75d",
+          "bytes": 103657,
+          "gzip": 19847
+        },
+        {
+          "file": "saswara-rigveda-1/part-5.json",
+          "sha256": "1c251e7925db75af376b1cd114bd62c77bb7cbededc5e0854ad47ab3f292c7e0",
+          "bytes": 103535,
+          "gzip": 19969
+        },
+        {
+          "file": "saswara-rigveda-1/part-6.json",
+          "sha256": "c97b2f301d33aca467d2dd221173e6246ac2fe47199dce4cd3597cfa410af3e1",
+          "bytes": 97848,
+          "gzip": 20142
+        },
+        {
+          "file": "saswara-rigveda-1/part-7.json",
+          "sha256": "6da8111f661f4881a0e1e3147dd0edd98562df8d35ab20db37a16d5e0d43fa29",
+          "bytes": 94152,
+          "gzip": 19815
+        },
+        {
+          "file": "saswara-rigveda-1/part-8.json",
+          "sha256": "73bfec87ec2122ec598b5b25fe0ec5f5860aa014f4ae0267cf0a7b8f712bd290",
+          "bytes": 99398,
+          "gzip": 20475
+        },
+        {
+          "file": "saswara-rigveda-1/part-9.json",
+          "sha256": "53c3d5ec5fd90358cd43fbc80d9997e032112f913fcac0ce0b6c9df922f5e9db",
+          "bytes": 26467,
+          "gzip": 5574
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-10",
+      "index": "saswara-rigveda-10/index.json",
+      "sha256": "10b0f8dd716c972c3487c1922a277e40cbcd8b575797079e8ab4cf99571c58a1",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M10-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 10 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "10b0f8dd716c972c3487c1922a277e40cbcd8b575797079e8ab4cf99571c58a1"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-10/part-1.json",
+          "sha256": "21b93edbe801f8f12a17426fbea121c563695d7fd9757190be85c531b752a23d",
+          "bytes": 98088,
+          "gzip": 19788
+        },
+        {
+          "file": "saswara-rigveda-10/part-2.json",
+          "sha256": "0b8347fe24c718fad212fd33c12cda2072fb582d273ddd301c66595725be0e69",
+          "bytes": 96666,
+          "gzip": 20027
+        },
+        {
+          "file": "saswara-rigveda-10/part-3.json",
+          "sha256": "07cafba6e89088ecc4bd96f9a5179db54e00a8e500bc31705fa5229ae39642ab",
+          "bytes": 99389,
+          "gzip": 20183
+        },
+        {
+          "file": "saswara-rigveda-10/part-4.json",
+          "sha256": "04903347d1c5cb408092691cc464825419a5544048394c44455baf1e6aa93071",
+          "bytes": 84001,
+          "gzip": 17573
+        },
+        {
+          "file": "saswara-rigveda-10/part-5.json",
+          "sha256": "070111a6acdd9c35629dd4f9afefbf4362d50d7fc5f221094541e9714c0397da",
+          "bytes": 95238,
+          "gzip": 19838
+        },
+        {
+          "file": "saswara-rigveda-10/part-6.json",
+          "sha256": "77269574ae92be0bf1d4ffac07430ff03d8f64d8d9485a629272223537bb4f42",
+          "bytes": 96272,
+          "gzip": 20032
+        },
+        {
+          "file": "saswara-rigveda-10/part-7.json",
+          "sha256": "a43ed94ad0fbc89bbebf060a6ce30b48a56b000a441cda5b50323dbcc6e0aae1",
+          "bytes": 104817,
+          "gzip": 20317
+        },
+        {
+          "file": "saswara-rigveda-10/part-8.json",
+          "sha256": "c7944e6dea0d4a3486c3561e48fa06fba9061a299b4c2103c3c1ff52b5301918",
+          "bytes": 81674,
+          "gzip": 14808
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-2",
+      "index": "saswara-rigveda-2/index.json",
+      "sha256": "fb8dd335ca8f010a0bdfdf46991d62ed6e27e0f1c8ec0fcc3b0a7287eb32459a",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M02-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 2 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "fb8dd335ca8f010a0bdfdf46991d62ed6e27e0f1c8ec0fcc3b0a7287eb32459a"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-2/part-1.json",
+          "sha256": "717ca0360e5e1333e7abe2eb0703a2b47e1604b1544cbb0e5144faf7df6a69cf",
+          "bytes": 93668,
+          "gzip": 18685
+        },
+        {
+          "file": "saswara-rigveda-2/part-2.json",
+          "sha256": "959faa4955c21243c8a5cf28a5d3eb555e429566c8b3400d07e5d2b5558d04c3",
+          "bytes": 93468,
+          "gzip": 19577
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-3",
+      "index": "saswara-rigveda-3/index.json",
+      "sha256": "ffba6434bb5210fa3db2a30a131a552f620de2784802a6e1e4bf387b3fa31bea",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M03-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 3 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "ffba6434bb5210fa3db2a30a131a552f620de2784802a6e1e4bf387b3fa31bea"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-3/part-1.json",
+          "sha256": "29d6540eaf3f60729e69af100a529b93a62ac4069bf2542161109280d097d48d",
+          "bytes": 101956,
+          "gzip": 19461
+        },
+        {
+          "file": "saswara-rigveda-3/part-2.json",
+          "sha256": "866174cbdbc52bf335a4f0dd45679d63de2f3d124460bc6e8d684144a4108bf0",
+          "bytes": 103098,
+          "gzip": 20018
+        },
+        {
+          "file": "saswara-rigveda-3/part-3.json",
+          "sha256": "dbcab0261e4d3a823934778705bef1a59031db3939e2843272fe81487b07f3b4",
+          "bytes": 55760,
+          "gzip": 11683
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-4",
+      "index": "saswara-rigveda-4/index.json",
+      "sha256": "2b1e39cacf48e2cda13b22ae33707bb40f3afca8000a1bdc445f815dc661ab6e",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M04-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 4 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "2b1e39cacf48e2cda13b22ae33707bb40f3afca8000a1bdc445f815dc661ab6e"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-4/part-1.json",
+          "sha256": "73320a59119daa30f7f1ff003966957f2b31e5c6fce9a12108884bb0060288a2",
+          "bytes": 97446,
+          "gzip": 19970
+        },
+        {
+          "file": "saswara-rigveda-4/part-2.json",
+          "sha256": "bc1fdda4b0243824d0039a5c73ec08dc3240d84557e0884ef86ed34aa2bc03cf",
+          "bytes": 102609,
+          "gzip": 20215
+        },
+        {
+          "file": "saswara-rigveda-4/part-3.json",
+          "sha256": "07984c17d84956c1cbfda929fae6b3413a7be9400ae9e6550075591039eb7387",
+          "bytes": 47825,
+          "gzip": 9663
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-5",
+      "index": "saswara-rigveda-5/index.json",
+      "sha256": "482a0ccf0c388db3c5a063ef704d7a984b2841341c41ca14f17e8802f28a2b2a",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M05-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 5 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "482a0ccf0c388db3c5a063ef704d7a984b2841341c41ca14f17e8802f28a2b2a"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-5/part-1.json",
+          "sha256": "ec085fd7e7a2c0ef40c9f0dac0030b983e1e8ec5617b7285976e4e104e11ec77",
+          "bytes": 104770,
+          "gzip": 20239
+        },
+        {
+          "file": "saswara-rigveda-5/part-2.json",
+          "sha256": "597f5b0395529d1ecd95075bd02685561cb19ce457001f1a73873cc462866a89",
+          "bytes": 97617,
+          "gzip": 19966
+        },
+        {
+          "file": "saswara-rigveda-5/part-3.json",
+          "sha256": "e4c315a0d943e69d23ece394cab8be0b80d7cf4c2bee4b39234a309797f4ae60",
+          "bytes": 101804,
+          "gzip": 19255
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6",
+      "index": "saswara-rigveda-6/index.json",
+      "sha256": "59a015fdacd50c3046e0d4afb37c4e92131fa5bb49615f47de0763ee3195a9f6",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M06-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 6 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "59a015fdacd50c3046e0d4afb37c4e92131fa5bb49615f47de0763ee3195a9f6"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-6/part-1.json",
+          "sha256": "ad9000bfe182387bec4e5909dd3426ccea7b42d193299e5d072cc7a4dce57844",
+          "bytes": 100444,
+          "gzip": 20419
+        },
+        {
+          "file": "saswara-rigveda-6/part-2.json",
+          "sha256": "f605c7b50447c19e9fa858fd3d1f85e0d3edfa2b8d8ca6d86280b2d800cf08d8",
+          "bytes": 88499,
+          "gzip": 17888
+        },
+        {
+          "file": "saswara-rigveda-6/part-3.json",
+          "sha256": "e60f29997db98c2a74efc6dadb49637f94d50bff4aea1e20c0b8e552a5d78979",
+          "bytes": 98667,
+          "gzip": 19872
+        },
+        {
+          "file": "saswara-rigveda-6/part-4.json",
+          "sha256": "601939c8cb5e5659bfcbece64d9c2ff211b901d6f3e5f14d1aa7f272424c79fb",
+          "bytes": 32546,
+          "gzip": 7326
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-7",
+      "index": "saswara-rigveda-7/index.json",
+      "sha256": "1f9cce7fe1be0d32928c688133fd07e379413926f707db19287717c61f7a66ec",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M07-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 7 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "1f9cce7fe1be0d32928c688133fd07e379413926f707db19287717c61f7a66ec"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-7/part-1.json",
+          "sha256": "1c512060d24477778f3fa1433d42ebb1e70fcbb5df89223b97dd1bfc32e9a00f",
+          "bytes": 102882,
+          "gzip": 20304
+        },
+        {
+          "file": "saswara-rigveda-7/part-2.json",
+          "sha256": "a4fb4827e3621ce1b0cbe68e5d479f21d7813ffb2b7c8ce810dff21af5469b2e",
+          "bytes": 101060,
+          "gzip": 19995
+        },
+        {
+          "file": "saswara-rigveda-7/part-3.json",
+          "sha256": "50c354e8623d50894ef29ff615c77219a3baedc605dd74fba2ae799c6d7bf250",
+          "bytes": 106479,
+          "gzip": 20143
+        },
+        {
+          "file": "saswara-rigveda-7/part-4.json",
+          "sha256": "dd350872fafb9c9e394d5cfbb0572d51011cb8967f2fe13c1c4330720702e4fb",
+          "bytes": 46018,
+          "gzip": 9744
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-8",
+      "index": "saswara-rigveda-8/index.json",
+      "sha256": "11fad8999d1cbbf2dd03d7c49191615bde4ea0cac34b7dc1a248adbe5b37a9ce",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M08-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 8 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "11fad8999d1cbbf2dd03d7c49191615bde4ea0cac34b7dc1a248adbe5b37a9ce"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-8/part-1.json",
+          "sha256": "66fbb693bc9fd305c8bd6917e1f39652d7b9d3a62bcae431951d90f0f2004bab",
+          "bytes": 111192,
+          "gzip": 20050
+        },
+        {
+          "file": "saswara-rigveda-8/part-2.json",
+          "sha256": "5dfa803367a62d35b0bb80177ad8c63ed4df78cc86ed9a1ea54c4e29a3df3281",
+          "bytes": 111594,
+          "gzip": 20183
+        },
+        {
+          "file": "saswara-rigveda-8/part-3.json",
+          "sha256": "5bbb8ae8cf725ee4b39195489a79c56b3857fcd91b1a0a00351d2e6b77d02cfc",
+          "bytes": 112051,
+          "gzip": 19219
+        },
+        {
+          "file": "saswara-rigveda-8/part-4.json",
+          "sha256": "c29a42ce6ef97f619a0f1562c55e345ca5800d3f10a3b46cd8721ce6991f6ebe",
+          "bytes": 105707,
+          "gzip": 19960
+        },
+        {
+          "file": "saswara-rigveda-8/part-5.json",
+          "sha256": "9b347581f660b83935170c2469c0445f5dd70325c67d231851799fa5291361cc",
+          "bytes": 117594,
+          "gzip": 20325
+        },
+        {
+          "file": "saswara-rigveda-8/part-6.json",
+          "sha256": "6d748d7bb210e18ba4b36b4d69757e356f1d41e6704af05f75bf17eac4c076b5",
+          "bytes": 86756,
+          "gzip": 16309
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-9",
+      "index": "saswara-rigveda-9/index.json",
+      "sha256": "e8be408e368b93181856910a189b2210d633db2995f25c3877e38ae9e94d71c6",
+      "provenance": {
+        "upstreamUrl": "https://raw.githubusercontent.com/daithal/saswara-rigveda/3cdd92253da47cbe644901da62ceda659d989e8e/Rigveda/SamhitaPatha/Devanagari/Mandala/Format1/RVS-Devanagari-F1-M09-T1.html",
+        "upstreamRef": "3cdd92253da47cbe644901da62ceda659d989e8e",
+        "retrievedAt": "2026-11-10",
+        "parser": "saswara-rigveda@1",
+        "license": "None stated. Saswara Rigveda Samhita by Dayananda Aithal (https://github.com/daithal/saswara-rigveda) carries no licence; kept draft until permission is confirmed.",
+        "attribution": "Ṛgveda, maṇḍala 9 — Saswara Rigveda Samhita, Dayananda Aithal (https://github.com/daithal/saswara-rigveda), commit 3cdd92253da47cbe644901da62ceda659d989e8e",
+        "sha256": "e8be408e368b93181856910a189b2210d633db2995f25c3877e38ae9e94d71c6"
+      },
+      "parts": [
+        {
+          "file": "saswara-rigveda-9/part-1.json",
+          "sha256": "b7e38c8420d6b73ae1f176660e71e5e201121a006f2b74026c75e12aa079987c",
+          "bytes": 139829,
+          "gzip": 20331
+        },
+        {
+          "file": "saswara-rigveda-9/part-2.json",
+          "sha256": "6f1c0ace8aee8a283426203da2867e2808422f4be014ff3b1061ac8193cf3dbc",
+          "bytes": 118910,
+          "gzip": 20444
+        },
+        {
+          "file": "saswara-rigveda-9/part-3.json",
+          "sha256": "c6536d61f71e095e280ff0dd3e07e45427c54844d8fe65a224f1c796e71ecf08",
+          "bytes": 73965,
+          "gzip": 15408
+        },
+        {
+          "file": "saswara-rigveda-9/part-4.json",
+          "sha256": "f2914fecd65b99295af2460080f35f80350fd40b27d639dd0082bde7ae324a08",
+          "bytes": 94038,
+          "gzip": 17781
         }
       ]
     },
@@ -1067,12 +1503,12 @@
   ],
   "metrics": {
     "total": {
-      "raw": 6944069,
-      "gzip": 1279811
+      "raw": 11492507,
+      "gzip": 2142578
     },
     "largestPart": {
-      "file": "rigveda-8/part-5.json",
-      "gzip": 20466
+      "file": "saswara-rigveda-1/part-8.json",
+      "gzip": 20475
     },
     "works": [
       {

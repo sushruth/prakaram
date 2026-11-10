@@ -1,0 +1,879 @@
+{
+  "sections": [
+    {
+      "id": "saswara-rigveda-6-67",
+      "title": "Maṇḍala 6 · Sūkta 67",
+      "sectionNumber": 67,
+      "chunks": [
+        {
+          "id": "srv-6-67-1",
+          "chunkNumber": 1,
+          "sanskrit": "viśve̎ṣāṃ vaḥ sa̠tāṃ jyeṣṭha̍tamā gī̠rbhirmi̠trāvaru̍ṇā vāvṛ̠dhadhyai̎ |",
+          "section": 67,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-67-2",
+          "chunkNumber": 2,
+          "sanskrit": "saṃ yā ra̠śmeva̍ ya̠matu̠ryami̍ṣṭhā̠ dvā janām̠̐ asa̍mā bā̠hubhiḥ̠ svaiḥ || 1 ||"
+        },
+        {
+          "id": "srv-6-67-3",
+          "chunkNumber": 3,
+          "sanskrit": "i̠yaṃ mad vāṃ̠ pra stṛ̍ṇīte manī̠ṣopa̍ pri̠yā nama̍sā ba̠rhiraccha̍ |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-67-4",
+          "chunkNumber": 4,
+          "sanskrit": "ya̠ntaṃ no̎ mitrāvaruṇā̠vadhṛ̍ṣṭaṃ cha̠rdiryad vāṃ̎ varū̠thyaṃ̎ sudānū || 2 ||"
+        },
+        {
+          "id": "srv-6-67-5",
+          "chunkNumber": 5,
+          "sanskrit": "ā yā̎taṃ mitrāvaruṇā suśa̠styupa̍ pri̠yā nama̍sā hū̠yamā̎nā |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-67-6",
+          "chunkNumber": 6,
+          "sanskrit": "saṃ yāva̍pnaḥ̠stho a̠pase̎va̠ janā̎ñchrudhīya̠taści̍d yatatho mahi̠tvā || 3 ||"
+        },
+        {
+          "id": "srv-6-67-7",
+          "chunkNumber": 7,
+          "sanskrit": "aśvā̠ na yā vā̠jinā̎ pū̠taba̎ndhū ṛ̠tā yad garbha̠madi̍ti̠rbhara̍dhyai |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-67-8",
+          "chunkNumber": 8,
+          "sanskrit": "pra yā mahi̍ ma̠hāntā̠ jāya̍mānā gho̠rā martā̎ya ri̠pave̠ ni dī̎dhaḥ || 4 ||"
+        },
+        {
+          "id": "srv-6-67-9",
+          "chunkNumber": 9,
+          "sanskrit": "viśve̠ yad vāṃ̎ maṃ̠hanā̠ manda̍mānāḥ kṣa̠traṃ de̠vāso̠ ada̍dhuḥ sa̠joṣāḥ̎ |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-67-10",
+          "chunkNumber": 10,
+          "sanskrit": "pari̠ yad bhū̠tho roda̍sī cidu̠rvī santi̠ spaśo̠ ada̍bdhāso̠ amū̎rāḥ || 5 ||"
+        },
+        {
+          "id": "srv-6-67-11",
+          "chunkNumber": 11,
+          "sanskrit": "tā hi kṣa̠traṃ dhā̠raye̎the̠ anu̠ dyūn dṛṃ̠hethe̠ sānu̍mupa̠mādi̍va̠ dyoḥ |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-67-12",
+          "chunkNumber": 12,
+          "sanskrit": "dṛ̠ḷho nakṣa̍tra u̠ta vi̠śvade̎vo̠ bhūmi̠mātā̠n dyāṃ dhā̠sinā̠yoḥ || 6 ||"
+        },
+        {
+          "id": "srv-6-67-13",
+          "chunkNumber": 13,
+          "sanskrit": "tā vi̠graṃ dhai̎the ja̠ṭharaṃ̎ pṛ̠ṇadhyā̠ ā yat sadma̠ sabhṛ̍tayaḥ pṛ̠ṇanti̍ |",
+          "padya": 7
+        },
+        {
+          "id": "srv-6-67-14",
+          "chunkNumber": 14,
+          "sanskrit": "na mṛ̍ṣyante yuva̠tayo'vā̎tā̠ vi yat payo̎ viśvajinvā̠ bhara̎nte || 7 ||"
+        },
+        {
+          "id": "srv-6-67-15",
+          "chunkNumber": 15,
+          "sanskrit": "tā ji̠hvayā̠ sada̠medaṃ su̍me̠dhā ā yad vāṃ̎ sa̠tyo a̍ra̠tirṛ̠te bhūt |",
+          "padya": 8
+        },
+        {
+          "id": "srv-6-67-16",
+          "chunkNumber": 16,
+          "sanskrit": "tad vāṃ̎ mahi̠tvaṃ ghṛ̍tānnāvastu yu̠vaṃ dā̠śuṣe̠ vi ca̍yiṣṭa̠maṃhaḥ̍ || 8 ||"
+        },
+        {
+          "id": "srv-6-67-17",
+          "chunkNumber": 17,
+          "sanskrit": "pra yad vāṃ̎ mitrāvaruṇā spū̠rdhan pri̠yā dhāma̍ yu̠vadhi̍tā mi̠nanti̍ |",
+          "padya": 9
+        },
+        {
+          "id": "srv-6-67-18",
+          "chunkNumber": 18,
+          "sanskrit": "na ye de̠vāsa̠ oha̍sā̠ na martā̠ aya̍jñasāco̠ apyo̠ na pu̠trāḥ || 9 ||"
+        },
+        {
+          "id": "srv-6-67-19",
+          "chunkNumber": 19,
+          "sanskrit": "vi yad vācaṃ̎ kī̠stāso̠ bhara̎nte̠ śaṃsa̎nti̠ ke ci̎nni̠vido̎ manā̠nāḥ |",
+          "padya": 10
+        },
+        {
+          "id": "srv-6-67-20",
+          "chunkNumber": 20,
+          "sanskrit": "ād vāṃ̎ bravāma sa̠tyānyu̠kthā naki̍rde̠vebhi̎ryatatho mahi̠tvā || 10 ||"
+        },
+        {
+          "id": "srv-6-67-21",
+          "chunkNumber": 21,
+          "sanskrit": "a̠vori̠tthā vāṃ̎ cha̠rdiṣo̎ a̠bhiṣṭau̎ yu̠vormi̍trāvaruṇā̠vaskṛ̍dhoyu |",
+          "padya": 11
+        },
+        {
+          "id": "srv-6-67-22",
+          "chunkNumber": 22,
+          "sanskrit": "anu̠ yad gāvaḥ̍ sphu̠rānṛ̍ji̠pyaṃ dhṛ̠ṣṇuṃ yad raṇe̠ vṛṣa̍ṇaṃ yu̠naja̍n || 11 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-68",
+      "title": "Maṇḍala 6 · Sūkta 68",
+      "sectionNumber": 68,
+      "chunks": [
+        {
+          "id": "srv-6-68-1",
+          "chunkNumber": 1,
+          "sanskrit": "śru̠ṣṭī vāṃ̎ ya̠jña udya̍taḥ sa̠joṣā̎ manu̠ṣvad vṛ̠ktaba̎rhiṣo̠ yaja̍dhyai |",
+          "section": 68,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-68-2",
+          "chunkNumber": 2,
+          "sanskrit": "ā ya indrā̠varu̍ṇāvi̠ṣe a̠dya ma̠he su̠mnāya̍ ma̠ha ā̎va̠varta̍t || 1 ||"
+        },
+        {
+          "id": "srv-6-68-3",
+          "chunkNumber": 3,
+          "sanskrit": "tā hi śreṣṭhā̎ de̠vatā̎tā tu̠jā śūrā̎ṇāṃ̠ śavi̍ṣṭhā̠ tā hi bhū̠tam |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-68-4",
+          "chunkNumber": 4,
+          "sanskrit": "ma̠ghonāṃ̠ maṃhi̍ṣṭhā tuvi̠śuṣma̍ ṛ̠tena̍ vṛtra̠turā̠ sarva̍senā || 2 ||"
+        },
+        {
+          "id": "srv-6-68-5",
+          "chunkNumber": 5,
+          "sanskrit": "tā gṛ̍ṇīhi nama̠sye̎bhiḥ śū̠ṣaiḥ su̠mnebhi̠rindrā̠varu̍ṇā cakā̠nā |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-68-6",
+          "chunkNumber": 6,
+          "sanskrit": "vajre̎ṇā̠nyaḥ śava̍sā̠ hanti̍ vṛ̠traṃ siṣa̍ktya̠nyo vṛ̠jane̎ṣu̠ vipraḥ̍ || 3 ||"
+        },
+        {
+          "id": "srv-6-68-7",
+          "chunkNumber": 7,
+          "sanskrit": "gnāśca̠ yannara̍śca vāvṛ̠dhanta̠ viśve̎ de̠vāso̎ na̠rāṃ svagū̎rtāḥ |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-68-8",
+          "chunkNumber": 8,
+          "sanskrit": "praibhya̍ indrāvaruṇā mahi̠tvā dyauśca̍ pṛthivi bhūtamu̠rvī || 4 ||"
+        },
+        {
+          "id": "srv-6-68-9",
+          "chunkNumber": 9,
+          "sanskrit": "sa it su̠dānuḥ̠ svavām̐̎ ṛ̠tāvendrā̠ yo vāṃ̎ varuṇa̠ dāśa̍ti̠ tman |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-68-10",
+          "chunkNumber": 10,
+          "sanskrit": "i̠ṣā sa dvi̠ṣasta̍re̠d dāsvā̠n vaṃsa̍d ra̠yiṃ ra̍yi̠vata̍śca̠ janā̍n || 5 ||"
+        },
+        {
+          "id": "srv-6-68-11",
+          "chunkNumber": 11,
+          "sanskrit": "yaṃ yu̠vaṃ dā̠śva̍dhvarāya devā ra̠yiṃ dha̠ttho vasu̍mantaṃ puru̠kṣum |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-68-12",
+          "chunkNumber": 12,
+          "sanskrit": "a̠sme sa i̎ndrāvaruṇā̠vapi̍ ṣyā̠t pra yo bha̠nakti̍ va̠nuṣā̠maśa̍stīḥ || 6 ||"
+        },
+        {
+          "id": "srv-6-68-13",
+          "chunkNumber": 13,
+          "sanskrit": "u̠ta naḥ̍ sutrā̠tro de̠vago̎pāḥ sū̠ribhya̍ indrāvaruṇā ra̠yiḥ ṣyā̎t |",
+          "padya": 7
+        },
+        {
+          "id": "srv-6-68-14",
+          "chunkNumber": 14,
+          "sanskrit": "yeṣāṃ̠ śuṣmaḥ̠ pṛta̍nāsu sā̠hvān pra sa̠dyo dyu̠mnā ti̠rate̠ tatu̍riḥ || 7 ||"
+        },
+        {
+          "id": "srv-6-68-15",
+          "chunkNumber": 15,
+          "sanskrit": "nū na̍ indrāvaruṇā gṛṇā̠nā pṛ̠ṅktaṃ ra̠yiṃ sau̎śrava̠sāya̍ devā |",
+          "padya": 8
+        },
+        {
+          "id": "srv-6-68-16",
+          "chunkNumber": 16,
+          "sanskrit": "i̠tthā gṛ̠ṇanto̎ ma̠hina̍sya̠ śardho̠ 'po na nā̠vā du̍ri̠tā ta̍rema || 8 ||"
+        },
+        {
+          "id": "srv-6-68-17",
+          "chunkNumber": 17,
+          "sanskrit": "pra sa̠mrāje̎ bṛha̠te manma̠ nu pri̠yamarca̍ de̠vāya̠ varu̍ṇāya sa̠prathaḥ̍ |",
+          "padya": 9
+        },
+        {
+          "id": "srv-6-68-18",
+          "chunkNumber": 18,
+          "sanskrit": "a̠yaṃ ya u̠rvī ma̍hi̠nā mahi̎vrataḥ̠ kratvā̎ vi̠bhātya̠jaro̠ na śo̠ciṣā̎ || 9 ||"
+        },
+        {
+          "id": "srv-6-68-19",
+          "chunkNumber": 19,
+          "sanskrit": "indrā̎varuṇā sutapāvi̠maṃ su̠taṃ somaṃ̎ pibataṃ̠ madyaṃ̎ dhṛtavratā |",
+          "padya": 10
+        },
+        {
+          "id": "srv-6-68-20",
+          "chunkNumber": 20,
+          "sanskrit": "yu̠vo ratho̎ adhva̠raṃ de̠vavī̎taye̠ prati̠ svasa̍ra̠mupa̍ yāti pī̠taye̎ || 10 ||"
+        },
+        {
+          "id": "srv-6-68-21",
+          "chunkNumber": 21,
+          "sanskrit": "indrā̎varuṇā̠ madhu̍mattamasya̠ vṛṣṇaḥ̠ soma̍sya vṛṣa̠ṇā vṛ̍ṣethām |",
+          "padya": 11
+        },
+        {
+          "id": "srv-6-68-22",
+          "chunkNumber": 22,
+          "sanskrit": "i̠daṃ vā̠mandhaḥ̠ pari̍ṣiktama̠sme ā̠sadyā̠smin ba̠rhiṣi̍ mādayethām || 11 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-69",
+      "title": "Maṇḍala 6 · Sūkta 69",
+      "sectionNumber": 69,
+      "chunks": [
+        {
+          "id": "srv-6-69-1",
+          "chunkNumber": 1,
+          "sanskrit": "saṃ vāṃ̠ karma̍ṇā̠ sami̠ṣā hi̍no̠mīndrā̎viṣṇū̠ apa̍saspā̠re a̠sya |",
+          "section": 69,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-69-2",
+          "chunkNumber": 2,
+          "sanskrit": "ju̠ṣethāṃ̎ ya̠jñaṃ dravi̍ṇaṃ ca dhatta̠mari̍ṣṭairnaḥ pa̠thibhiḥ̍ pā̠raya̎ntā || 1 ||"
+        },
+        {
+          "id": "srv-6-69-3",
+          "chunkNumber": 3,
+          "sanskrit": "yā viśvā̎sāṃ jani̠tārā̎ matī̠nāmindrā̠viṣṇū̎ ka̠laśā̎ soma̠dhānā̎ |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-69-4",
+          "chunkNumber": 4,
+          "sanskrit": "pra vāṃ̠ giraḥ̍ śa̠syamā̎nā avantu̠ pra stomā̎so gī̠yamā̎nāso a̠rkaiḥ || 2 ||"
+        },
+        {
+          "id": "srv-6-69-5",
+          "chunkNumber": 5,
+          "sanskrit": "indrā̎viṣṇū madapatī madānā̠mā somaṃ̎ yātaṃ̠ dravi̍ṇo̠ dadhā̎nā |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-69-6",
+          "chunkNumber": 6,
+          "sanskrit": "saṃ vā̎mañjan tva̠ktubhi̎rmatī̠nāṃ saṃ stomā̎saḥ śa̠syamā̎nāsa u̠kthaiḥ || 3 ||"
+        },
+        {
+          "id": "srv-6-69-7",
+          "chunkNumber": 7,
+          "sanskrit": "ā vā̠maśvā̎so abhimāti̠ṣāha̠ indrā̎viṣṇū sadha̠mādo̎ vahantu |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-69-8",
+          "chunkNumber": 8,
+          "sanskrit": "ju̠ṣethāṃ̠ viśvā̠ hava̍nā matī̠nāmupa̠ brahmā̎ṇi śṛṇutaṃ̠ giro̎ me || 4 ||"
+        },
+        {
+          "id": "srv-6-69-9",
+          "chunkNumber": 9,
+          "sanskrit": "indrā̎viṣṇū̠ tat pa̍na̠yāyyaṃ̎ vāṃ̠ soma̍sya̠ mada̍ u̠ru ca̍kramāthe |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-69-10",
+          "chunkNumber": 10,
+          "sanskrit": "akṛ̍ṇutama̠ntari̍kṣaṃ̠ varī̠yo 'pra̍thataṃ jī̠vase̎ no̠ rajāṃ̎si || 5 ||"
+        },
+        {
+          "id": "srv-6-69-11",
+          "chunkNumber": 11,
+          "sanskrit": "indrā̎viṣṇū ha̠viṣā̎ vāvṛdhā̠nā'grā̎dvānā̠ nama̍sā rātahavyā |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-69-12",
+          "chunkNumber": 12,
+          "sanskrit": "ghṛtā̎sutī̠ dravi̍ṇaṃ dhattama̠sme sa̍mu̠draḥ sthaḥ̍ ka̠laśaḥ̍ soma̠dhānaḥ̍ || 6 ||"
+        },
+        {
+          "id": "srv-6-69-13",
+          "chunkNumber": 13,
+          "sanskrit": "indrā̎viṣṇū̠ piba̍taṃ̠ madhvo̎ a̠sya soma̍sya dasrā ja̠ṭharaṃ̎ pṛṇethām |",
+          "padya": 7
+        },
+        {
+          "id": "srv-6-69-14",
+          "chunkNumber": 14,
+          "sanskrit": "ā vā̠mandhāṃ̎si madi̠rāṇya̍gma̠nnupa̠ brahmā̎ṇi śṛṇutaṃ̠ havaṃ̎ me || 7 ||"
+        },
+        {
+          "id": "srv-6-69-15",
+          "chunkNumber": 15,
+          "sanskrit": "u̠bhā ji̍gyathu̠rna parā̎ jayethe̠ na parā̎ jigye kata̠raśca̠nainoḥ̎ |",
+          "padya": 8
+        },
+        {
+          "id": "srv-6-69-16",
+          "chunkNumber": 16,
+          "sanskrit": "indra̍śca viṣṇo̠ yadapa̍spṛdhethāṃ tre̠dhā sa̠hasraṃ̠ vi tadai̎rayethām || 8 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-70",
+      "title": "Maṇḍala 6 · Sūkta 70",
+      "sectionNumber": 70,
+      "chunks": [
+        {
+          "id": "srv-6-70-1",
+          "chunkNumber": 1,
+          "sanskrit": "ghṛ̠tava̍tī̠ bhuva̍nānāmabhi̠śriyo̠rvī pṛ̠thvī ma̍dhu̠dughe̎ su̠peśa̍sā |",
+          "section": 70,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-70-2",
+          "chunkNumber": 2,
+          "sanskrit": "dyāvā̎pṛthi̠vī varu̍ṇasya̠ dharma̍ṇā̠ viṣka̍bhite a̠jare̠ bhūri̍retasā || 1 ||"
+        },
+        {
+          "id": "srv-6-70-3",
+          "chunkNumber": 3,
+          "sanskrit": "asa̍ścantī̠ bhūri̍dhāre̠ paya̍svatī ghṛ̠taṃ du̍hāte su̠kṛte̠ śuci̎vrate |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-70-4",
+          "chunkNumber": 4,
+          "sanskrit": "rāja̎ntī a̠sya bhuva̍nasya rodasī a̠sme retaḥ̍ siñcataṃ̠ yanmanu̎rhitam || 2 ||"
+        },
+        {
+          "id": "srv-6-70-5",
+          "chunkNumber": 5,
+          "sanskrit": "yo vā̎mṛ̠jave̠ krama̍ṇāya rodasī̠ marto̎ da̠dāśa̍ dhiṣaṇe̠ sa sā̎dhati |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-70-6",
+          "chunkNumber": 6,
+          "sanskrit": "pra pra̠jābhi̍rjāyate̠ dharma̍ṇa̠spari̍ yu̠voḥ si̠ktā viṣu̍rūpāṇi̠ savra̍tā || 3 ||"
+        },
+        {
+          "id": "srv-6-70-7",
+          "chunkNumber": 7,
+          "sanskrit": "ghṛ̠tena̠ dyāvā̎pṛthi̠vī a̠bhīvṛ̍te ghṛta̠śriyā̎ ghṛta̠pṛcā̎ ghṛtā̠vṛdhā̎ |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-70-8",
+          "chunkNumber": 8,
+          "sanskrit": "u̠rvī pṛ̠thvī ho̎tṛ̠vūrye̎ pu̠rohi̍te̠ te id viprā̎ īḷate su̠mnami̠ṣṭaye̎ || 4 ||"
+        },
+        {
+          "id": "srv-6-70-9",
+          "chunkNumber": 9,
+          "sanskrit": "madhu̍ no̠ dyāvā̎pṛthi̠vī mi̍mikṣatāṃ madhu̠ścutā̎ madhu̠dughe̠ madhu̎vrate |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-70-10",
+          "chunkNumber": 10,
+          "sanskrit": "dadhā̎ne ya̠jñaṃ dravi̍ṇaṃ ca de̠vatā̠ mahi̠ śravo̠ vāja̍ma̠sme su̠vīrya̎m || 5 ||"
+        },
+        {
+          "id": "srv-6-70-11",
+          "chunkNumber": 11,
+          "sanskrit": "ūrjaṃ̎ no̠ dyauśca̍ pṛthi̠vī ca̍ pinvatāṃ pi̠tā mā̠tā vi̍śva̠vidā̎ su̠daṃsa̍sā |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-70-12",
+          "chunkNumber": 12,
+          "sanskrit": "saṃ̠ra̠rā̠ṇe roda̍sī vi̠śvaśa̎mbhuvā sa̠niṃ vājaṃ̎ ra̠yima̠sme sami̎nvatām || 6 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-71",
+      "title": "Maṇḍala 6 · Sūkta 71",
+      "sectionNumber": 71,
+      "chunks": [
+        {
+          "id": "srv-6-71-1",
+          "chunkNumber": 1,
+          "sanskrit": "udu̠ ṣya de̠vaḥ sa̍vi̠tā hi̍ra̠ṇyayā̎ bā̠hū a̍yaṃsta̠ sava̍nāya su̠kratuḥ̍ |",
+          "section": 71,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-71-2",
+          "chunkNumber": 2,
+          "sanskrit": "ghṛ̠tena̍ pā̠ṇī a̠bhi pru̍ṣṇute ma̠kho yuvā̎ su̠dakṣo̠ raja̍so̠ vidha̎rmaṇi || 1 ||"
+        },
+        {
+          "id": "srv-6-71-3",
+          "chunkNumber": 3,
+          "sanskrit": "de̠vasya̍ va̠yaṃ sa̍vi̠tuḥ savī̎mani̠ śreṣṭhe̎ syāma̠ vasu̍naśca dā̠vane̎ |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-71-4",
+          "chunkNumber": 4,
+          "sanskrit": "yo viśva̍sya dvi̠pado̠ yaścatu̍ṣpado ni̠veśa̍ne prasa̠ve cāsi̠ bhūma̍naḥ || 2 ||"
+        },
+        {
+          "id": "srv-6-71-5",
+          "chunkNumber": 5,
+          "sanskrit": "ada̍bdhebhiḥ savitaḥ pā̠yubhi̠ṣṭvaṃ śi̠vebhi̍ra̠dya pari̍ pāhi no̠ gaya̎m |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-71-6",
+          "chunkNumber": 6,
+          "sanskrit": "hira̎ṇyajihvaḥ suvi̠tāya̠ navya̍se̠ rakṣā̠ māki̎rno a̠ghaśaṃ̎sa īśata || 3 ||"
+        },
+        {
+          "id": "srv-6-71-7",
+          "chunkNumber": 7,
+          "sanskrit": "udu̠ ṣya de̠vaḥ sa̍vi̠tā damū̎nā̠ hira̎ṇyapāṇiḥ pratido̠ṣama̍sthāt |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-71-8",
+          "chunkNumber": 8,
+          "sanskrit": "ayo̎hanuryaja̠to ma̠ndraji̍hva̠ ā dā̠śuṣe̎ suvati̠ bhūri̍ vā̠mam || 4 ||"
+        },
+        {
+          "id": "srv-6-71-9",
+          "chunkNumber": 9,
+          "sanskrit": "udū̎ ayām̐ upava̠kteva̍ bā̠hū hi̍ra̠ṇyayā̎ savi̠tā su̠pratī̎kā |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-71-10",
+          "chunkNumber": 10,
+          "sanskrit": "di̠vo rohāṃ̎syaruhat pṛthi̠vyā arī̎ramat pa̠taya̠t kacci̠dabhva̎m || 5 ||"
+        },
+        {
+          "id": "srv-6-71-11",
+          "chunkNumber": 11,
+          "sanskrit": "vā̠mama̠dya sa̍vitarvā̠mamu̠ śvo di̠vedi̍ve vā̠mama̠smabhyaṃ̎ sāvīḥ |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-71-12",
+          "chunkNumber": 12,
+          "sanskrit": "vā̠masya̠ hi kṣaya̍sya deva̠ bhūre̎ra̠yā dhi̠yā vā̎ma̠bhājaḥ̍ syāma || 6 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-72",
+      "title": "Maṇḍala 6 · Sūkta 72",
+      "sectionNumber": 72,
+      "chunks": [
+        {
+          "id": "srv-6-72-1",
+          "chunkNumber": 1,
+          "sanskrit": "indrā̎somā̠ mahi̠ tad vāṃ̎ mahi̠tvaṃ yu̠vaṃ ma̠hāni̍ pratha̠māni̍ cakrathuḥ |",
+          "section": 72,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-72-2",
+          "chunkNumber": 2,
+          "sanskrit": "yu̠vaṃ sūryaṃ̎ vivi̠dathu̎ryu̠vaṃ sva1̍(a̠)rviśvā̠ tamāṃ̎syahataṃ ni̠daśca̍ || 1 ||"
+        },
+        {
+          "id": "srv-6-72-3",
+          "chunkNumber": 3,
+          "sanskrit": "indrā̎somā vā̠saya̍tha u̠ṣāsa̠mut sūryaṃ̎ nayatho̠ jyoti̍ṣā sa̠ha |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-72-4",
+          "chunkNumber": 4,
+          "sanskrit": "upa̠ dyāṃ ska̠mbhathuḥ̠ skambha̍ne̠nāpra̍thataṃ pṛthi̠vīṃ mā̠taraṃ̠ vi || 2 ||"
+        },
+        {
+          "id": "srv-6-72-5",
+          "chunkNumber": 5,
+          "sanskrit": "indrā̎somā̠vahi̍ma̠paḥ pa̍ri̠ṣṭhāṃ ha̠tho vṛ̠tramanu̍ vāṃ̠ dyaura̍manyata |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-72-6",
+          "chunkNumber": 6,
+          "sanskrit": "prārṇāṃ̎syairayataṃ na̠dīnā̠mā sa̍mu̠drāṇi̍ paprathuḥ pu̠rūṇi̍ || 3 ||"
+        },
+        {
+          "id": "srv-6-72-7",
+          "chunkNumber": 7,
+          "sanskrit": "indrā̎somā pa̠kvamā̠māsva̠ntarni gavā̠mid da̍dhathurva̠kṣaṇā̎su |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-72-8",
+          "chunkNumber": 8,
+          "sanskrit": "ja̠gṛ̠bhathu̠rana̍pinaddhamāsu̠ ruśa̍cci̠trāsu̠ jaga̍tīṣva̠ntaḥ || 4 ||"
+        },
+        {
+          "id": "srv-6-72-9",
+          "chunkNumber": 9,
+          "sanskrit": "indrā̎somā yu̠vama̠ṅga taru̍tramapatya̠sācaṃ̠ śrutyaṃ̎ rarāthe |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-72-10",
+          "chunkNumber": 10,
+          "sanskrit": "yu̠vaṃ śuṣmaṃ̠ naryaṃ̎ carṣa̠ṇibhyaḥ̠ saṃ vi̎vyathuḥ pṛtanā̠ṣāha̍mugrā || 5 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-73",
+      "title": "Maṇḍala 6 · Sūkta 73",
+      "sectionNumber": 73,
+      "chunks": [
+        {
+          "id": "srv-6-73-1",
+          "chunkNumber": 1,
+          "sanskrit": "yo a̍dri̠bhit pra̍thama̠jā ṛ̠tāvā̠ bṛha̠spati̍rāṅgira̠so ha̠viṣmā̍n |",
+          "section": 73,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-73-2",
+          "chunkNumber": 2,
+          "sanskrit": "dvi̠barha̍jmā prāgharma̠sat pi̠tā na̠ ā roda̍sī vṛṣa̠bho ro̎ravīti || 1 ||"
+        },
+        {
+          "id": "srv-6-73-3",
+          "chunkNumber": 3,
+          "sanskrit": "janā̎ya ci̠d ya īva̍ta u lo̠kaṃ bṛha̠spati̍rde̠vahū̎tau ca̠kāra̍ |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-73-4",
+          "chunkNumber": 4,
+          "sanskrit": "ghnan vṛ̠trāṇi̠ vi puro̎ dardarīti̠ jaya̠ñchatrūm̐̎ra̠mitrā̎n pṛ̠tsu sāha̍n || 2 ||"
+        },
+        {
+          "id": "srv-6-73-5",
+          "chunkNumber": 5,
+          "sanskrit": "bṛha̠spatiḥ̠ sama̍jaya̠d vasū̎ni ma̠ho vra̠jān goma̍to de̠va e̠ṣaḥ |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-73-6",
+          "chunkNumber": 6,
+          "sanskrit": "a̠paḥ siṣā̎sa̠n tsva1̍(a̠)rapra̍tīto̠ bṛha̠spati̠rhantya̠mitra̍ma̠rkaiḥ || 3 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-74",
+      "title": "Maṇḍala 6 · Sūkta 74",
+      "sectionNumber": 74,
+      "chunks": [
+        {
+          "id": "srv-6-74-1",
+          "chunkNumber": 1,
+          "sanskrit": "somā̎rudrā dhā̠raye̎thāmasu̠rya1̍(aṃ̠) pra vā̎mi̠ṣṭayo'ra̍maśnuvantu |",
+          "section": 74,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-74-2",
+          "chunkNumber": 2,
+          "sanskrit": "dame̎dame sa̠pta ratnā̠ dadhā̎nā̠ śaṃ no̎ bhūtaṃ dvi̠pade̠ śaṃ catu̍ṣpade || 1 ||"
+        },
+        {
+          "id": "srv-6-74-3",
+          "chunkNumber": 3,
+          "sanskrit": "somā̎rudrā̠ vi vṛ̍hataṃ̠ viṣū̎cī̠mamī̎vā̠ yā no̠ gaya̍māvi̠veśa̍ |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-74-4",
+          "chunkNumber": 4,
+          "sanskrit": "ā̠re bā̎dhethāṃ̠ nirṛ̍tiṃ parā̠caira̠sme bha̠drā sau̎śrava̠sāni̍ santu || 2 ||"
+        },
+        {
+          "id": "srv-6-74-5",
+          "chunkNumber": 5,
+          "sanskrit": "somā̎rudrā yu̠vame̠tānya̠sme viśvā̎ ta̠nūṣu̍ bheṣa̠jāni̍ dhattam |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-74-6",
+          "chunkNumber": 6,
+          "sanskrit": "ava̍ syataṃ mu̠ñcataṃ̠ yanno̠ asti̍ ta̠nūṣu̍ ba̠ddhaṃ kṛ̠tameno̎ a̠smat || 3 ||"
+        },
+        {
+          "id": "srv-6-74-7",
+          "chunkNumber": 7,
+          "sanskrit": "ti̠gmāyu̍dhau ti̠gmahe̎tī su̠śevau̠ somā̎rudrāvi̠ha su mṛ̍ḷataṃ naḥ |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-74-8",
+          "chunkNumber": 8,
+          "sanskrit": "pra no̎ muñcataṃ̠ varu̍ṇasya̠ pāśā̎d gopā̠yataṃ̎ naḥ sumana̠syamā̎nā || 4 ||"
+        }
+      ]
+    },
+    {
+      "id": "saswara-rigveda-6-75",
+      "title": "Maṇḍala 6 · Sūkta 75",
+      "sectionNumber": 75,
+      "chunks": [
+        {
+          "id": "srv-6-75-1",
+          "chunkNumber": 1,
+          "sanskrit": "jī̠mūta̍syeva bhavati̠ pratī̎kaṃ̠ yad va̠rmī yāti̍ sa̠madā̎mu̠pasthe̎ |",
+          "section": 75,
+          "padya": 1
+        },
+        {
+          "id": "srv-6-75-2",
+          "chunkNumber": 2,
+          "sanskrit": "anā̎viddhayā ta̠nvā̎ jaya̠ tvaṃ sa tvā̠ varma̍ṇo mahi̠mā pi̍partu || 1 ||"
+        },
+        {
+          "id": "srv-6-75-3",
+          "chunkNumber": 3,
+          "sanskrit": "dhanva̍nā̠ gā dhanva̍nā̠jiṃ ja̍yema̠ dhanva̍nā tī̠vrāḥ sa̠mado̎ jayema |",
+          "padya": 2
+        },
+        {
+          "id": "srv-6-75-4",
+          "chunkNumber": 4,
+          "sanskrit": "dhanuḥ̠ śatro̎rapakā̠maṃ kṛ̍ṇoti̠ dhanva̍nā̠ sarvāḥ̎ pra̠diśo̎ jayema || 2 ||"
+        },
+        {
+          "id": "srv-6-75-5",
+          "chunkNumber": 5,
+          "sanskrit": "va̠kṣyantī̠vedā ga̍nīganti̠ karṇaṃ̎ pri̠yaṃ sakhā̎yaṃ pariṣasvajā̠nā |",
+          "padya": 3
+        },
+        {
+          "id": "srv-6-75-6",
+          "chunkNumber": 6,
+          "sanskrit": "yoṣe̎va śiṅkte̠ vita̠tādhi̠ dhanva̠ñjyā i̠yaṃ sama̍ne pā̠raya̎ntī || 3 ||"
+        },
+        {
+          "id": "srv-6-75-7",
+          "chunkNumber": 7,
+          "sanskrit": "te ā̠cara̎ntī̠ sama̍neva̠ yoṣā̎ mā̠teva̍ pu̠traṃ bi̍bhṛtāmu̠pasthe̎ |",
+          "padya": 4
+        },
+        {
+          "id": "srv-6-75-8",
+          "chunkNumber": 8,
+          "sanskrit": "apa̠ śatrū̎n vidhyatāṃ saṃvidā̠ne ārtnī̎ i̠me vi̍ṣphu̠rantī̎ a̠mitrā̍n || 4 ||"
+        },
+        {
+          "id": "srv-6-75-9",
+          "chunkNumber": 9,
+          "sanskrit": "ba̠hvī̠nāṃ pi̠tā ba̠hura̍sya pu̠traści̠ścā kṛ̍ṇoti̠ sama̍nāva̠gatya̍ |",
+          "padya": 5
+        },
+        {
+          "id": "srv-6-75-10",
+          "chunkNumber": 10,
+          "sanskrit": "i̠ṣu̠dhiḥ saṅkāḥ̠ pṛta̍nāśca̠ sarvāḥ̎ pṛ̠ṣṭhe nina̍ddho jayati̠ prasū̎taḥ || 5 ||"
+        },
+        {
+          "id": "srv-6-75-11",
+          "chunkNumber": 11,
+          "sanskrit": "rathe̠ tiṣṭha̎n nayati vā̠jinaḥ̍ pu̠ro yatra̍yatra kā̠maya̍te suṣāra̠thiḥ |",
+          "padya": 6
+        },
+        {
+          "id": "srv-6-75-12",
+          "chunkNumber": 12,
+          "sanskrit": "a̠bhīśū̎nāṃ mahi̠mānaṃ̎ panāyata̠ manaḥ̍ pa̠ścādanu̍ yacchanti ra̠śmayaḥ̍ || 6 ||"
+        },
+        {
+          "id": "srv-6-75-13",
+          "chunkNumber": 13,
+          "sanskrit": "tī̠vrān ghoṣā̎n kṛṇvate̠ vṛṣa̍pāṇa̠yo 'śvā̠ rathe̎bhiḥ sa̠ha vā̠jaya̎ntaḥ |",
+          "padya": 7
+        },
+        {
+          "id": "srv-6-75-14",
+          "chunkNumber": 14,
+          "sanskrit": "a̠va̠krāma̎ntaḥ̠ prapa̍daira̠mitrā̎n kṣi̠ṇanti̠ śatrūm̠̐rana̍pavyayantaḥ || 7 ||"
+        },
+        {
+          "id": "srv-6-75-15",
+          "chunkNumber": 15,
+          "sanskrit": "ra̠tha̠vāha̍naṃ ha̠vira̍sya̠ nāma̠ yatrāyu̍dhaṃ̠ nihi̍tamasya̠ varma̍ |",
+          "padya": 8
+        },
+        {
+          "id": "srv-6-75-16",
+          "chunkNumber": 16,
+          "sanskrit": "tatrā̠ ratha̠mupa̍ śa̠gmaṃ sa̍dema vi̠śvāhā̎ va̠yaṃ su̍mana̠syamā̎nāḥ || 8 ||"
+        },
+        {
+          "id": "srv-6-75-17",
+          "chunkNumber": 17,
+          "sanskrit": "svā̠du̠ṣaṃ̠sadaḥ̍ pi̠taro̎ vayo̠dhāḥ kṛ̍cchre̠śritaḥ̠ śaktī̎vanto gabhī̠rāḥ |",
+          "padya": 9
+        },
+        {
+          "id": "srv-6-75-18",
+          "chunkNumber": 18,
+          "sanskrit": "ci̠trase̎nā̠ iṣu̍balā̠ amṛ̍dhrāḥ sa̠tovī̎rā u̠ravo̎ vrātasā̠hāḥ || 9 ||"
+        },
+        {
+          "id": "srv-6-75-19",
+          "chunkNumber": 19,
+          "sanskrit": "brāhma̍ṇāsaḥ̠ pita̍raḥ̠ somyā̎saḥ śi̠ve no̠ dyāvā̎pṛthi̠vī a̍ne̠hasā̎ |",
+          "padya": 10
+        },
+        {
+          "id": "srv-6-75-20",
+          "chunkNumber": 20,
+          "sanskrit": "pū̠ṣā naḥ̍ pātu duri̠tādṛ̍tāvṛdho̠ rakṣā̠ māki̎rno a̠ghaśaṃ̎sa īśata || 10 ||"
+        },
+        {
+          "id": "srv-6-75-21",
+          "chunkNumber": 21,
+          "sanskrit": "su̠pa̠rṇaṃ va̍ste mṛ̠go a̍syā̠ danto̠ gobhiḥ̠ saṃna̍ddhā patati̠ prasū̎tā |",
+          "padya": 11
+        },
+        {
+          "id": "srv-6-75-22",
+          "chunkNumber": 22,
+          "sanskrit": "yatrā̠ naraḥ̠ saṃ ca̠ vi ca̠ drava̎nti̠ tatrā̠smabhya̠miṣa̍vaḥ̠ śarma̍ yaṃsan || 11 ||"
+        },
+        {
+          "id": "srv-6-75-23",
+          "chunkNumber": 23,
+          "sanskrit": "ṛjī̎te̠ pari̍ vṛṅdhi̠ no 'śmā̎ bhavatu nasta̠nūḥ |",
+          "padya": 12
+        },
+        {
+          "id": "srv-6-75-24",
+          "chunkNumber": 24,
+          "sanskrit": "somo̠ adhi̍ bravītu̠ no 'di̍tiḥ̠ śarma̍ yacchatu || 12 ||"
+        },
+        {
+          "id": "srv-6-75-25",
+          "chunkNumber": 25,
+          "sanskrit": "ā ja̎ṅghanti̠ sānve̎ṣāṃ ja̠ghanām̠̐ upa̍ jighnate |",
+          "padya": 13
+        },
+        {
+          "id": "srv-6-75-26",
+          "chunkNumber": 26,
+          "sanskrit": "aśvā̎jani̠ prace̎ta̠so 'śvā̎n tsa̠matsu̍ codaya || 13 ||"
+        },
+        {
+          "id": "srv-6-75-27",
+          "chunkNumber": 27,
+          "sanskrit": "ahi̍riva bho̠gaiḥ parye̎ti bā̠huṃ jyāyā̎ he̠tiṃ pa̍ri̠bādha̍mānaḥ |",
+          "padya": 14
+        },
+        {
+          "id": "srv-6-75-28",
+          "chunkNumber": 28,
+          "sanskrit": "ha̠sta̠ghno viśvā̎ va̠yunā̎ni vi̠dvān pumā̠n pumāṃ̎saṃ̠ pari̍ pātu vi̠śvataḥ̍ || 14 ||"
+        },
+        {
+          "id": "srv-6-75-29",
+          "chunkNumber": 29,
+          "sanskrit": "ālā̎ktā̠ yā ruru̍śī̠rṣṇyatho̠ yasyā̠ ayo̠ mukha̎m |",
+          "padya": 15
+        },
+        {
+          "id": "srv-6-75-30",
+          "chunkNumber": 30,
+          "sanskrit": "i̠daṃ pa̠rjanya̍retasa̠ iṣvai̎ de̠vyai bṛ̠hannamaḥ̍ || 15 ||"
+        },
+        {
+          "id": "srv-6-75-31",
+          "chunkNumber": 31,
+          "sanskrit": "ava̍sṛṣṭā̠ parā̎ pata̠ śara̎vye̠ brahma̍saṃśite |",
+          "padya": 16
+        },
+        {
+          "id": "srv-6-75-32",
+          "chunkNumber": 32,
+          "sanskrit": "gacchā̠mitrā̠n pra pa̍dyasva̠ māmīṣāṃ̠ kaṃ ca̠nocchi̍ṣaḥ || 16 ||"
+        },
+        {
+          "id": "srv-6-75-33",
+          "chunkNumber": 33,
+          "sanskrit": "yatra̍ bā̠ṇāḥ sa̠mpata̎nti kumā̠rā vi̍śi̠khā i̍va |",
+          "padya": 17
+        },
+        {
+          "id": "srv-6-75-34",
+          "chunkNumber": 34,
+          "sanskrit": "tatrā̎ no̠ brahma̍ṇa̠spati̠radi̍tiḥ̠ śarma̍ yacchatu vi̠śvāhā̠ śarma̍ yacchatu || 17 ||"
+        },
+        {
+          "id": "srv-6-75-35",
+          "chunkNumber": 35,
+          "sanskrit": "marmā̎ṇi te̠ varma̍ṇā chādayāmi̠ soma̍stvā̠ rājā̠mṛte̠nānu̍ vastām |",
+          "padya": 18
+        },
+        {
+          "id": "srv-6-75-36",
+          "chunkNumber": 36,
+          "sanskrit": "u̠rorvarī̎yo̠ varu̍ṇaste kṛṇotu̠ jaya̎ntaṃ̠ tvānu̍ de̠vā ma̍dantu || 18 ||"
+        },
+        {
+          "id": "srv-6-75-37",
+          "chunkNumber": 37,
+          "sanskrit": "yo naḥ̠ svo ara̍ṇo̠ yaśca̠ niṣṭyo̠ jighāṃ̎sati |",
+          "padya": 19
+        },
+        {
+          "id": "srv-6-75-38",
+          "chunkNumber": 38,
+          "sanskrit": "de̠vāstaṃ sarve̎ dhūrvantu̠ brahma̠ varma̠ mamānta̍ram || 19 ||"
+        }
+      ]
+    }
+  ]
+}
