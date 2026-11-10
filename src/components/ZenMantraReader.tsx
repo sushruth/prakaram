@@ -17,7 +17,7 @@ import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
 import { Sanskrit, SanskritTitle } from './Sanskrit';
 import { PageNav } from './PageNav';
-import { showActivePage, snapToPage } from '../services/bookPages';
+import { keepPadasWhole, showActivePage, snapToPage } from '../services/bookPages';
 import { Term } from './Term';
 import { SourceList } from './SourceList';
 import { SUKTA_MAP } from '../data';
@@ -26,6 +26,7 @@ import { chantingRoom } from '../services/webrtcRoom';
 
 export function ZenMantraReader() {
   const fontSize = useSettingsStore((s) => s.fontSize);
+  const script = useSettingsStore((s) => s.script);
   // Off unless the translation experiment is explicitly enabled (src/config/features.ts).
   const showTranslation = TRANSLATION_ENABLED && useSettingsStore((s) => s.showTranslation);
 
@@ -62,13 +63,18 @@ export function ZenMantraReader() {
   useEffect(() => showActivePage('smooth'), [activeChunkIndex]);
   // A new prakaram, text size or screen size re-cuts the pages; jump straight to the highlight's page.
   useLayoutEffect(() => {
-    showActivePage('instant');
+    const relayout = () => {
+      keepPadasWhole();
+      showActivePage('instant');
+    };
+    relayout();
+    document.fonts.ready.then(relayout);
     const el = document.querySelector('.book');
     if (!el) return;
-    const observer = new ResizeObserver(() => showActivePage('instant'));
+    const observer = new ResizeObserver(relayout);
     observer.observe(el);
     return () => observer.disconnect();
-  }, [chunks, fontSize]);
+  }, [chunks, fontSize, script]);
 
   const settle = useRef<ReturnType<typeof setTimeout>>();
   const onBookScroll = () => {

@@ -26,6 +26,27 @@ function activePage(el: HTMLElement, step: number): number | null {
   return Math.max(0, Math.floor((first.left - t.getBoundingClientRect().left + 1) / step));
 }
 
+/**
+ * Keep every pada on one page. Inline text cannot avoid a column break in CSS, so a pada that straddles two pages
+ * becomes an atomic inline box (`.keep`), which moves whole to the next page. Fixing one pushes the rest along, so
+ * this walks forward in document order and re-measures only after a change.
+ */
+export function keepPadasWhole(): void {
+  const el = book();
+  const t = el && text(el);
+  const g = el && geometry(el);
+  if (!t || !g) return;
+  t.querySelectorAll('.pada.keep').forEach((p) => p.classList.remove('keep'));
+  const origin = () => t.getBoundingClientRect().left;
+  const column = (x: number, left: number) => Math.floor((x - left + 1) / g.step);
+  for (const pada of t.querySelectorAll<HTMLElement>('.pada')) {
+    const rects = pada.getClientRects();
+    if (rects.length < 2) continue;
+    const left = origin();
+    if (column(rects[0].left, left) !== column(rects[rects.length - 1].left, left)) pada.classList.add('keep');
+  }
+}
+
 /** Slide so the highlighted pada's page is the first one showing. */
 export function showActivePage(behavior: ScrollBehavior = 'smooth'): void {
   const el = book();
