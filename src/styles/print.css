@@ -55,10 +55,9 @@
     mask-image: none !important;
   }
 
-  .pada,
-  .zen-active .pada:not(.active) {
+  .pada {
     opacity: 1 !important;
-    background: none !important;
+    filter: none !important;
   }
 
   .page-nav,

@@ -150,9 +150,14 @@ export function ZenMantraReader() {
             const translation = chunk.translation ?? translations[idx];
             return (
               <Fragment key={`${chunk.id}-${idx}`}>
-                {chunk.kriya && <h2 className="book-kriya"><SanskritTitle title={chunk.kriya} full /></h2>}
-                <KriyaNote note={chunk.note} />
-                {chunk.section !== undefined && (
+                {chunk.kriya && (
+                  <h2 className="book-kriya">
+                    <SanskritTitle title={chunk.kriya} full />
+                    <KriyaNote note={chunk.note} />
+                  </h2>
+                )}
+                {/* A kriyā's heading already says where it starts; only a new anuvāka inside it gets a marker. */}
+                {chunk.section !== undefined && !chunk.kriya && (
                   <span className="book-anuvaka"><Term id="anuvaka" /> {chunk.section}</span>
                 )}
                 <span data-translation-row={idx} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`}>

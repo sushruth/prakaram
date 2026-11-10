@@ -23,10 +23,6 @@
   .zen-active .zen-toggle {
     pointer-events: auto;
   }
-
-  .zen-active .pada:not(.active) {
-    opacity: 0.35;
-  }
 }
 
 @layer zen {

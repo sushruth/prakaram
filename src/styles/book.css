@@ -44,15 +44,16 @@
     overflow-wrap: break-word;
   }
 
+  /* Every pada is pale and grey; only the highlighted one is at full ink with its swara colours. */
   .pada {
-    transition: background-color var(--focus-dur) var(--focus-ease);
-    border-radius: 0.2em;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
+    opacity: 0.32;
+    filter: grayscale(1);
+    transition: opacity var(--focus-dur) var(--focus-ease), filter var(--focus-dur) var(--focus-ease);
   }
 
   .pada.active {
-    background: color-mix(in srgb, var(--accent) 16%, transparent);
+    opacity: 1;
+    filter: none;
   }
 
   /* A kriyā starts like a new section in a book: a small heading with some air above, the text running on. */
