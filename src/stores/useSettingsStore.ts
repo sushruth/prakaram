@@ -6,7 +6,7 @@ import { applyTheme } from '../services/theme';
 import { TargetScript } from '../types/mantra';
 import { boolOr, clampNumber, oneOf } from './persistence';
 
-export const FONT_SIZE = { min: 16, max: 42, fallback: 26 } as const;
+export const FONT_SIZE = { min: 16, max: 42, fallback: 22 } as const;
 
 export interface SettingsState {
   theme: AppTheme;
