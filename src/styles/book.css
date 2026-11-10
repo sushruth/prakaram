@@ -90,7 +90,12 @@
   /* A silent kriyā starts on a line of its own, with the air of a new section but no heading. */
   .book-break {
     display: block;
-    height: 0.9em;
+    height: 0.6em;
+  }
+
+  /* After a break the anuvāka marker needs no extra air of its own, so the gaps either side of a silent kriyā match. */
+  .book-break + .book-anuvaka {
+    margin-top: 0;
   }
 
   .book-anuvaka {

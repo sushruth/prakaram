@@ -56,7 +56,11 @@ export const usePrakaraStore = create<PrakaraState>()(
 
         const sectioned = prakara.items.some((it) => it.section);
         const headingOf = (item: PrakaraItem) => (sectioned ? item.section : item.customTitle);
+        // A silent kriyā stands apart: it starts on a line of its own, and so does whatever follows it.
+        let afterSilent = false;
         for (const item of prakara.items) {
+          const breakBefore = !!item.silent || afterSilent;
+          afterSilent = !!item.silent;
           if (item.type === 'sukta_ref' && item.suktaId) {
             const r = resolveNirdesa(itemNirdesa(item) ?? item.suktaId);
             if (!r.ok || r.document.id !== item.suktaId) continue;
@@ -72,7 +76,7 @@ export const usePrakaraStore = create<PrakaraState>()(
               }
             }
             for (const [i, ch] of r.chunks.entries()) {
-              chunks.push({ ...ch, ...(doc.sections.length > 1 ? {} : { section: undefined }), ...opens.get(ch.id), ...(i === 0 ? { kriya: headingOf(item), ...(item.silent ? { breakBefore: true } : {}), ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: doc.metadata.veda ? 'mantra' : 'uncategorized', isLead: true, sourceId: doc.id });
+              chunks.push({ ...ch, ...(doc.sections.length > 1 ? {} : { section: undefined }), ...opens.get(ch.id), ...(i === 0 ? { kriya: headingOf(item), ...(breakBefore ? { breakBefore: true } : {}), ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: doc.metadata.veda ? 'mantra' : 'uncategorized', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({
