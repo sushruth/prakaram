@@ -173,6 +173,12 @@ export interface PrakaraItem {
   kriyaName?: string;
   /** Generated from `kriyaName`: '<kriyaName> kariṣye'. */
   sankalpa?: string;
+  /**
+   * Opens a section of the prakaram under this heading (e.g. 'Gaṇeśa Sūktam'). A kriyā without one continues the
+   * section before it, or is a silent reference (a salutation, a dhūpam mantra) with no heading of its own. A prakaram
+   * that names no sections at all shows each kriyā's `customTitle` instead.
+   */
+  section?: string;
   /** A note on this kriyā shown behind an asterisk, e.g. where printed editions start a part differently. */
   note?: string;
 }

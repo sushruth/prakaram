@@ -11,6 +11,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     items: [
       {
         id: 'ns-1',
+        section: 'Gaṇeśa Sūktam',
         type: 'sukta_ref',
         suktaId: 'saswara-rigveda-8',
         nirdesa: 'saswara-rigveda-8/81',
@@ -32,6 +33,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-4',
+        section: 'Rudra Praśnaḥ',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/48',
@@ -54,6 +56,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-5',
+        section: 'Camaka Praśnaḥ',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/68.1-82.24',
@@ -61,6 +64,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-6',
+        section: 'Śivopāsana Mantrāḥ',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/16.1-25.3',
@@ -68,6 +72,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-7',
+        section: 'Durgā Sūktam',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/2',
@@ -82,6 +87,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-9',
+        section: 'Puruṣa Sūktam',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-3',
         nirdesa: 'taittiriya-aranyaka-3/12.1-13.26',
@@ -89,6 +95,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-10',
+        section: 'Nārāyaṇa Sūktam',
         type: 'sukta_ref',
         suktaId: 'taittiriya-aranyaka-10',
         nirdesa: 'taittiriya-aranyaka-10/13',
@@ -110,6 +117,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-v1',
+        section: 'Viṣṇu Sūktam',
         type: 'sukta_ref',
         suktaId: 'taittiriya-brahmana-2-8',
         nirdesa: 'taittiriya-brahmana-2-8/3.18-3.38',
@@ -133,6 +141,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-nu',
+        section: 'Nārāyaṇopaniṣat',
         type: 'sukta_ref',
         suktaId: 'narayana-upanishad',
         customTitle: 'Nārāyaṇopaniṣat',
@@ -140,6 +149,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'ns-13',
+        section: 'Śrī Sūktam',
         type: 'sukta_ref',
         suktaId: 'rigveda-khila-sri',
         nirdesa: 'rigveda-khila-sri/1',
@@ -278,6 +288,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     items: [
       {
         id: 'rts-1',
+        section: 'Rudra Praśnaḥ',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/48',
@@ -300,6 +311,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
       },
       {
         id: 'rts-2',
+        section: 'Camaka Praśnaḥ',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
         nirdesa: 'taittiriya-samhita-4/68.1-82.24',

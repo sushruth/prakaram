@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Prakara, MantraChunk } from '../types/mantra';
+import { Prakara, PrakaraItem, MantraChunk } from '../types/mantra';
 import { ALL_SUKTAMS, DEFAULT_PRAKARAS } from '../data';
 import { PIECE_PREFIX, findPiece, itemNirdesa, nirdesaAsPrakara, normalizePrakara, pieceAsPrakara } from '../services/koshah';
 import { padyas } from '../services/padya';
@@ -54,6 +54,8 @@ export const usePrakaraStore = create<PrakaraState>()(
         const chunks: MantraChunk[] = [];
         let chunkCounter = 1;
 
+        const sectioned = prakara.items.some((it) => it.section);
+        const headingOf = (item: PrakaraItem) => (sectioned ? item.section : item.customTitle);
         for (const item of prakara.items) {
           if (item.type === 'sukta_ref' && item.suktaId) {
             const r = resolveNirdesa(itemNirdesa(item) ?? item.suktaId);
@@ -70,7 +72,7 @@ export const usePrakaraStore = create<PrakaraState>()(
               }
             }
             for (const [i, ch] of r.chunks.entries()) {
-              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 ? { kriya: item.customTitle, ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: doc.metadata.veda ? 'mantra' : 'uncategorized', isLead: true, sourceId: doc.id });
+              chunks.push({ ...ch, ...opens.get(ch.id), ...(i === 0 ? { kriya: headingOf(item), ...(item.note ? { note: item.note } : {}) } : {}), chunkNumber: chunkCounter++, kind: doc.metadata.veda ? 'mantra' : 'uncategorized', isLead: true, sourceId: doc.id });
             }
           } else if (item.type === 'vakya') {
             chunks.push({
@@ -80,7 +82,7 @@ export const usePrakaraStore = create<PrakaraState>()(
               translation: item.customTranslation || item.customTitle || 'Procedural Vakya',
               kind: item.customText?.includes('॥') ? 'shloka' : 'vakya',
               isLead: true,
-              kriya: item.customTitle,
+              kriya: headingOf(item),
             });
           }
         }
