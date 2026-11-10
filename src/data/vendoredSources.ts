@@ -44,6 +44,7 @@ export const VENDORED_SOURCES: VendoredSource[] = [
   { id: 'taittiriya-samhita-5', index: 'taittiriya-samhita-5/index.json', label: 'Taittirīya Saṃhitā, Kāṇḍa 5', sanskrit: 'Taittirīya Saṃhitā, Kāṇḍaḥ 5' },
   ...Array.from({ length: 8 }, (_, i) => brahmanaPrapathaka(2, i + 1)),
   ...Array.from({ length: 10 }, (_, i) => aranyakaPrapathaka(i + 1)),
+  { id: 'narayana-upanishad', index: 'narayana-upanishad/index.json', label: 'Nārāyaṇa Upaniṣad', sanskrit: 'Nārāyaṇopaniṣat' },
   { id: 'rigveda-khila-sri', index: 'rigveda-khila-sri/index.json', label: 'Śrī Sūkta (Ṛgveda Khila)', sanskrit: 'श्री सूक्तम् (ऋग्वेद खिलम्)' },
 ];
 

@@ -105,7 +105,7 @@ describe('source adapters', () => {
   });
 
   it('gives every navigable live source an adapter', () => {
-    expect(LIVE_SOURCES.length).toBe(32);
+    expect(LIVE_SOURCES.length).toBe(33);
     for (const s of LIVE_SOURCES) expect(adapterFor(s.id)).toBeDefined();
   });
 });

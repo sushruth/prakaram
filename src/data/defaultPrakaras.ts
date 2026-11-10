@@ -5,7 +5,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
     id: 'nava-sukta',
     title: 'Śrī Kṛṣṇa Vṛndāvana Prayāṇam',
     author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
-    description: 'As in the Saswara Veda Mantraḥ book. Narayanopanishat is not in the library yet.',
+    description: 'As in the Saswara Veda Mantraḥ book.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
     items: [
@@ -115,6 +115,13 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         nirdesa: 'taittiriya-samhita-5/47.3',
         customTitle: 'Vishnu Suktam · paryāptyā',
         note: 'Saswara Veda Mantrāḥ and vignanam start at “paryāptyā”. This line of the Saṃhitā (5.4.12) has 27 more words of aśvamedha prose before it, from “yata īśvaro” to “sarvatvāya”.'
+      },
+      {
+        id: 'ns-nu',
+        type: 'sukta_ref',
+        suktaId: 'narayana-upanishad',
+        customTitle: 'Nārāyaṇopaniṣat',
+        note: 'From sanskritdocuments.org, which prints no swara marks. In khaṇḍa 2 it has a bare “nārāyaṇaḥ” where Saswara Veda Mantrāḥ reads “kālaś ca nārāyaṇaḥ”.'
       },
       {
         id: 'ns-13',
