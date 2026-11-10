@@ -59,6 +59,12 @@
     filter: none;
   }
 
+  /* A printed verse number is read, not said, so it stays unlit with the highlighted pada. */
+  .pada.active .pada-number {
+    opacity: 0.32;
+    filter: grayscale(1);
+  }
+
   /* A pada that would straddle two pages; set by keepPadasWhole() so it moves whole to the next page. */
   .pada.keep {
     display: inline-block;
@@ -78,6 +84,8 @@
   }
 
   .book-anuvaka {
+    display: block;
+    margin-top: 0.6em;
     margin-inline-end: 0.4em;
     font: 500 0.7rem/1 'Geist', system-ui, sans-serif;
     letter-spacing: 0.06em;

@@ -355,12 +355,13 @@
     text-transform: none;
     letter-spacing: normal;
     font-weight: 400;
-    padding: 0.5rem 0.75rem;
-    background: var(--bg-base);
+    padding: 0.6rem 0.85rem;
+    background: var(--bg-card);
     color: var(--text-primary);
     border: 0;
-    box-shadow: none;
-    font: 400 0.875rem/1.4 var(--font-ui, inherit);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.25);
+    font: 400 0.95rem/1.45 'Geist', system-ui, sans-serif;
     text-align: left;
     pointer-events: none;
     animation: term-fade 120ms ease-out;

@@ -384,7 +384,7 @@ Text first. The app is words on paper, and controls are words too.
 - **Pressed state is a small scale-down and the flame glow on the icon.** No background change on press.
 - **Disabled is the palest version.** A disabled control drops to 30% opacity and takes no input. It keeps its shape and words.
 - **Surfaces are fills, not frames.** A panel is an opaque `--bg-base` surface with no border and no shadow. Content behind a flyout sits under the half-strength `--scrim`.
-- **Glossary tooltips** (`components/Term.tsx`). A jargon term is a text button with a muted dot after it (no underline, no border). Its tooltip is an opaque `--bg-base` surface above the word with a short fade, no border and no shadow, clamped to the viewport. Hover or keyboard focus opens it on desktop, tap toggles it on touch, tap elsewhere or Escape closes it, one at a time. It never sits inside another link or button.
+- **Glossary tooltips** (`components/Term.tsx`). A jargon term is a text button with a muted dot after it (no underline, no border). Its tooltip is an opaque `--bg-card` surface above the word with rounded corners, a mild shadow and a short fade (the one shadow in the app: it has to read as separate from the text under it), no border, clamped to the viewport. Hover or keyboard focus opens it on desktop, tap toggles it on touch, tap elsewhere or Escape closes it, one at a time. It never sits inside another link or button.
 - **Separation is space**, not lines. Use spacing and type scale before adding any rule.
 - **The wiki obeys the same rules.** Articles, the main page, search, My prakaram and the wiki bar use text, space and type scale only (§5f).
 

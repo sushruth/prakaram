@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { splitAtDanda, splitForReading, splitLong } from './chunking';
+import { splitAtDanda, splitForReading, splitLong, splitVerseNumber } from './chunking';
+import { devanagariToIast, iastToDevanagari } from './transliteration/iastCodec';
 import { MantraChunk } from '../types/mantra';
 
 const chunk = (id: string, sanskrit: string, kind: MantraChunk['kind'] = 'vakya'): MantraChunk => ({
@@ -26,5 +27,17 @@ describe('chunking', () => {
     expect(out.map((c) => c.id)).toEqual(['x-0', 'x-1']);
     expect(out.map((c) => c.kind)).toEqual(['shloka', 'shloka']);
     expect(out.map((c) => c.isLead)).toEqual([true, false]);
+  });
+});
+
+describe('verse numbers', () => {
+  const d = iastToDevanagari;
+  test('a printed verse number stays with the phrase before it', () => {
+    const out = splitForReading([chunk('x', d('vārayante || 3 || etonvindram |'), 'mantra')]);
+    expect(out.map((c) => devanagariToIast(c.sanskrit))).toEqual(['vārayante || 3 ||', 'etonvindram |']);
+  });
+
+  test('splitVerseNumber separates the unspoken number', () => {
+    expect(splitVerseNumber(d('vārayante || 3 ||')).map(devanagariToIast)).toEqual(['vārayante', ' || 3 ||']);
   });
 });

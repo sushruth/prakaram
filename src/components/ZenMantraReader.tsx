@@ -17,6 +17,7 @@ import { advanceChunk } from '../services/advance';
 import { lineClass } from '../config/lineClass';
 import { Sanskrit, SanskritTitle } from './Sanskrit';
 import { PageNav } from './PageNav';
+import { splitVerseNumber } from '../services/chunking';
 import { keepPadasWhole, showActivePage, snapToPage } from '../services/bookPages';
 import { Term } from './Term';
 import { SourceList } from './SourceList';
@@ -167,7 +168,7 @@ export function ZenMantraReader() {
                   <span className="book-anuvaka"><Term id="anuvaka" /> {chunk.section}</span>
                 )}
                 <span data-translation-row={idx} className={`pada ${lineClass(chunk)} ${idx === activeChunkIndex ? 'active' : ''}`}>
-                  <Sanskrit text={chunk.sanskrit} />
+                  <PadaText text={chunk.sanskrit} />
                 </span>
                 {showTranslation && translation && <span className="pada-translation">{translation}</span>}{' '}
               </Fragment>
@@ -184,5 +185,16 @@ export function ZenMantraReader() {
         </div>
       </div>
     </div>
+  );
+}
+
+/** A pada's chanted text, with its printed verse number unlit: only what is said aloud is highlighted. */
+function PadaText({ text }: { text: string }) {
+  const [said, number] = splitVerseNumber(text);
+  return (
+    <>
+      <Sanskrit text={said} />
+      {number && <span className="pada-number"><Sanskrit text={number} /></span>}
+    </>
   );
 }
