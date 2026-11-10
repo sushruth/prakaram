@@ -24,15 +24,8 @@
     pointer-events: auto;
   }
 
-  .zen-active .chunk-row:not(.active) {
-    opacity: 0.18;
-    filter: blur(0.4px);
-  }
-
-  .zen-active .chunk-row.active {
-    opacity: 1;
-    filter: none;
-    transform: none;
+  .zen-active .pada:not(.active) {
+    opacity: 0.35;
   }
 }
 

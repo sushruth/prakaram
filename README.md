@@ -12,15 +12,14 @@ Open it at **[prakaram.sushruth.dev](https://prakaram.sushruth.dev)**. It instal
 
 ## ✨ What it does
 
-### Chant line by line
-* **Three-line focus:** the line you are on is bold, its neighbours are softer, and the rest fade away.
+### Chant from pages, like a book
+* **Pages, not lines:** the verses run on as prose, as on a palm leaf. A phone shows one page, a wide screen two, and the next page peeks in at the edge. Text size and screen size decide where pages break; nothing reflows while you chant.
+* **The highlight leads:** the pada you are on is highlighted, and the pages slide on by themselves when it moves past the page.
 * **Swaras in colour:** svarita is purple, anudātta blue and dīrgha svarita red.
-* **Auto and Learn:** move the lines yourself, or turn on Auto to advance at a set pace. With Learn, six taps teach the app your pace (laya), which it measures in mātrās as Chandaḥ-śāstra does.
-* **Pace:** one slider sets the time per mātrā.
-* **Touch to pause:** hold the highlighted line to pause, and let go to resume. Tap the countdown ring in the header to pause or resume.
-* **Back to line:** if the line scrolls away, a green arrow brings you back.
-* **Your place is kept:** each prakaram remembers the line you were on.
-* **Zen mode:** press `Z` or the lotus icon to hide everything but the verses.
+* **Moving the highlight:** the arrow buttons (at the bottom on a phone, top right on a desktop) or the arrow keys and Space. Tapping the text does nothing, so a stray touch cannot lose your place.
+* **Auto and Learn:** turn on Auto to advance at a set pace. With Learn, six taps of Next teach the app your pace (laya), which it measures in mātrās as Chandaḥ-śāstra does.
+* **Back to your place:** swipe ahead to look, and an arrow slides you back to the highlight. Each prakaram remembers where you were.
+* **Zen mode:** press `Z` or the lotus icon to hide everything but the text.
 
 ### Read in your script
 Every verse and title follows the script you choose: Devanagari, Telugu, Kannada, Tamil (with South Indian subscript numerals), Malayalam or IAST, all with Vedic swaras.

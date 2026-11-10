@@ -45,21 +45,25 @@
     display: none !important;
   }
 
-  /* The whole text prints, at full ink, with no active-line emphasis or zen dimming. */
-  .chunk-row,
-  .chunk-row .vedic-text,
-  .zen-active .chunk-row:not(.active),
-  .zen-active .chunk-row.active {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-    content-visibility: visible !important;
+  /* The whole text prints as one flowing block at full ink, with no pages, highlight or zen dimming. */
+  .book,
+  .book-text {
+    height: auto !important;
+    overflow: visible !important;
+    columns: auto !important;
+    width: auto !important;
+    mask-image: none !important;
   }
 
-  .chunk-row .vedic-text {
-    max-width: 100% !important;
-    overflow: visible !important;
-    white-space: normal !important;
+  .pada,
+  .zen-active .pada:not(.active) {
+    opacity: 1 !important;
+    background: none !important;
+  }
+
+  .page-nav,
+  .book-tail {
+    display: none !important;
   }
 
   /* Swara colours are painted through the Custom Highlight API; keep them on paper. */
@@ -76,12 +80,11 @@
   }
 
   /* Keep a pada and a verse together, and each heading with what follows. */
-  .chunk-row,
   .wiki-line {
     break-inside: avoid;
   }
 
-  .chunk-heading,
+  .book-kriya,
   .wiki-section-title,
   .wiki-sources-title,
   .player-sources-title {

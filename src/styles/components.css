@@ -51,62 +51,6 @@
     filter: var(--flame);
   }
 
-  /* Layout never changes with the active line: the focus shows through opacity, a transform on the row (neighbours drift
-     outward) and a transform on the text (the current line is scaled). They all share one curve and time. */
-  .chunk-row {
-    position: relative;
-    padding: 0.2rem 0;
-    margin-bottom: 1.1rem;
-    cursor: pointer;
-    opacity: 0.35;
-    /* Long prakarams: skip layout and paint for rows off screen. The DOM stays, so scroll-to-line, the minimap and print keep working. */
-    content-visibility: auto;
-    contain-intrinsic-size: auto 3rem;
-    transition: opacity var(--focus-dur) var(--focus-ease), transform var(--focus-dur) var(--focus-ease), filter var(--focus-dur) var(--focus-ease);
-  }
-
-  .chunk-row.active {
-    opacity: 1;
-  }
-
-  .chunk-row.is-near {
-    opacity: 0.6;
-  }
-
-  /* More air between the three lines, less below the group. */
-  .chunk-row.is-near:has(+ .active) {
-    transform: translateY(-0.4rem);
-  }
-
-  .chunk-row.active + .chunk-row {
-    transform: translateY(0.6rem);
-  }
-
-  /* Every line wraps at the width the scaled current line fills, so the wrap does not change when the line does. */
-  .chunk-row .vedic-text {
-    max-width: calc(100% / var(--focus-scale));
-    transform-origin: left center;
-    transition: transform var(--focus-dur) var(--focus-ease), color var(--focus-dur) var(--focus-ease);
-  }
-
-  .chunk-row.active .vedic-text {
-    transform: scale(var(--focus-scale));
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .chunk-row,
-    .chunk-row .vedic-text {
-      transition-duration: 0.01s;
-    }
-
-    .chunk-row.active .vedic-text {
-      transform: none;
-    }
-  }
-
-  .chunk-row:not(.active):hover {
-    opacity: 0.6;
-  }
 
 
   .modal-overlay {
@@ -269,30 +213,8 @@
     color: var(--text-secondary);
   }
 
-  .chunk-heading {
-    margin: 1.5rem 0 0.5rem;
-    font: 600 0.8rem/1 'Geist', system-ui, sans-serif;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
 
-  .chunk-padya {
-    display: block;
-    margin-bottom: 0.2rem;
-    font: 500 0.7rem/1 'Geist', system-ui, sans-serif;
-    font-variant-numeric: tabular-nums;
-    color: var(--text-muted);
-  }
 
-  .kind-label {
-    display: block;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.3rem;
-  }
 
   .line-mantra {
     color: var(--text-primary);
@@ -460,41 +382,11 @@
   }
 }
 
-/* On-the-wire translation (ZenMantraReader): a muted line under the pada, off by default. DESIGN.md §7b. */
+/* On-the-wire translation (ZenMantraReader): a muted gloss after the pada, off by default. DESIGN.md §7b. */
 @layer components {
-  .chunk-translation {
-    max-width: calc(100% / var(--focus-scale));
-    margin: 0.15rem 0 0;
-    font-size: 0.82rem;
-    line-height: 1.5;
+  .pada-translation {
+    margin-inline: 0.3em;
+    font-size: 0.6em;
     color: var(--text-muted);
-  }
-
-  .chunk-translation-pending {
-    display: inline-block;
-    min-height: 1.2em;
-    animation: translation-pulse 1.4s ease-in-out infinite;
-  }
-
-  @keyframes translation-pulse {
-    0%,
-    100% {
-      opacity: 0.4;
-    }
-    50% {
-      opacity: 0.85;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .chunk-translation-pending {
-      animation: none;
-      opacity: 0.5;
-    }
-  }
-
-  /* Reserve room for the translation line, so turning it on does not change the scroll estimate. */
-  .chunks-container.with-translation .chunk-row {
-    contain-intrinsic-size: auto 4.5rem;
   }
 }
