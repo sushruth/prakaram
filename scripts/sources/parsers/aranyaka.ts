@@ -47,7 +47,7 @@ function devanagariNumber(s: string): number | undefined {
 }
 
 /** The sections of the page, each with the HTML between its marker and the next. */
-function splitSections(html: string): { key: string; html: string }[] {
+export function splitSections(html: string): { key: string; html: string }[] {
   const marks = [...html.matchAll(SECTION)];
   return marks.map((m, i) => ({
     key: m[1],
@@ -60,10 +60,10 @@ function splitSections(html: string): { key: string; html: string }[] {
  * entities decoded, zero-width characters dropped. The other four scripts, the anuvāka/pancashati number
  * markers and the korvai passages carry no `sentence` spans and are left out. Swara is kept exactly.
  */
-function devanagariText(sectionHtml: string): string {
+export function devanagariText(sectionHtml: string): string {
   const parts: string[] = [];
   for (const m of sectionHtml.matchAll(DEVANAGARI_BLOCK)) {
-    if (!m[1].includes('class="sentence"')) continue;
+    if (!/class="?sentence\b/.test(m[1])) continue;
     const text = decodeEntities(m[1].replace(TAGS, '')).replace(ZERO_WIDTH, '').replace(/\s+/g, ' ').trim();
     if (text) parts.push(text);
   }
@@ -71,7 +71,7 @@ function devanagariText(sectionHtml: string): string {
 }
 
 /** The anuvāka's number: the numeral printed in its `anuvaka-number`, else the number in its id (`K`). */
-function anuvakaNumber(sectionHtml: string, key: string, fallback: number): number {
+export function anuvakaNumber(sectionHtml: string, key: string, fallback: number): number {
   const printed = ANUVAKA_NUMBER.exec(sectionHtml);
   const n = printed ? devanagariNumber(printed[1]) : undefined;
   if (n !== undefined) return n;
