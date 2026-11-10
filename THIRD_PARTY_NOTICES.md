@@ -37,7 +37,7 @@ SOFTWARE.
 The app's live sources are compiled into `sources/` by `bun run sources:refresh` and served to the app from
 jsDelivr at the commit `SOURCES_PIN` points at (`src/services/vendored.ts`). Parsing lives in `scripts/sources/`;
 there is no proxy. Every processed file carries `metadata.provenance` and stays `status: "draft"` until proofread.
-Four upstreams feed the 43 sources.
+Four upstreams feed the 44 sources.
 
 ### Ṛgveda — DharmicData (ODbL 1.0)
 
@@ -70,6 +70,7 @@ re-serialise into a MantraDocument) is the "alteration method" required by ODbL 
 `sources/rigveda-khila-sri.json` is compiled from the accented page `sanskritdocuments.org/doc_veda/s-sukta-accent.html`.
 **Permission to reuse this text has not been confirmed**; the file stays `status: "draft"`.
 
+`sources/namaste-astu-bhagavan/` is compiled from the Rudram without svara at `sanskritdocuments.org/doc_shiva/rudram.html` (the passage it numbers 2.0), under the same terms.
 `sources/narayana-upanishad/` is compiled from `sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html`, under the same terms.
 
 - Śrī Sūkta encoded by Avinash Sathaye and Anant Upadhyayula; Nārāyaṇa Upaniṣad encoded and proofread by Sunder Hattangadi, as named on the pages.

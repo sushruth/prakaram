@@ -4,7 +4,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'sri-krishna-vrundavana-prayanam',
     title: 'Śrī Kṛṣṇa Vṛndāvana Prayāṇam',
-    author: 'Ṛgveda (DharmicData, ODbL) · Taittirīya Saṃhitā and Āraṇyaka (taittiriya.com) · Śrī Sūkta (sanskritdocuments.org)',
+    author: 'Ṛgveda (Saswara Rigveda Samhita) · Taittirīya Saṃhitā, Brāhmaṇa and Āraṇyaka (taittiriya.com) · Nārāyaṇa Upaniṣad, Śrī Sūkta and namaste astu bhagavan (sanskritdocuments.org)',
     description: 'As in the Saswara Veda Mantraḥ book.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
@@ -34,7 +34,22 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         id: 'ns-4',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
-        nirdesa: 'taittiriya-samhita-4/48.1-58.13',
+        nirdesa: 'taittiriya-samhita-4/48',
+        customTitle: 'Rudra Praśna · Namakam · anuvāka 1'
+      },
+      {
+        id: 'ns-namaste',
+        type: 'sukta_ref',
+        suktaId: 'namaste-astu-bhagavan',
+        nirdesa: 'namaste-astu-bhagavan/1',
+        customTitle: 'namaste astu bhagavan',
+        note: 'Not in the Taittirīya Saṃhitā and has no svara. The Śivarahasya sets it after the first anuvāka; Nīlakaṇṭha Dīkṣita (17th century) calls its names known from śruti. Text from sanskritdocuments.org.'
+      },
+      {
+        id: 'ns-namakam-2',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/49.1-58.13',
         customTitle: 'Rudra Praśna · Namakam'
       },
       {
@@ -256,7 +271,7 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
   {
     id: 'rudram-ts',
     title: 'श्री रुद्रम् — तैत्तिरीय संहिता (Sri Rudram, from the Taittirīya Saṃhitā)',
-    author: 'Taittirīya Saṃhitā, kāṇḍa 4 (taittiriya.com)',
+    author: 'Taittirīya Saṃhitā, kāṇḍa 4 (taittiriya.com) · namaste astu bhagavan (sanskritdocuments.org)',
     description: 'The Namakam (TS 4.5) and Chamakam (TS 4.7) described as ranges of the Taittirīya Saṃhitā source.',
     preferredBpm: 60,
     createdTimestamp: Date.now(),
@@ -265,7 +280,22 @@ export const DEFAULT_PRAKARAS: Prakara[] = [
         id: 'rts-1',
         type: 'sukta_ref',
         suktaId: 'taittiriya-samhita-4',
-        nirdesa: 'taittiriya-samhita-4/48.1-58.13',
+        nirdesa: 'taittiriya-samhita-4/48',
+        customTitle: 'Namakam (TS 4.5) · anuvāka 1'
+      },
+      {
+        id: 'rts-namaste',
+        type: 'sukta_ref',
+        suktaId: 'namaste-astu-bhagavan',
+        nirdesa: 'namaste-astu-bhagavan/1',
+        customTitle: 'namaste astu bhagavan',
+        note: 'Not in the Taittirīya Saṃhitā and has no svara. The Śivarahasya sets it after the first anuvāka; Nīlakaṇṭha Dīkṣita (17th century) calls its names known from śruti. Text from sanskritdocuments.org.'
+      },
+      {
+        id: 'rts-namakam-2',
+        type: 'sukta_ref',
+        suktaId: 'taittiriya-samhita-4',
+        nirdesa: 'taittiriya-samhita-4/49.1-58.13',
         customTitle: 'Namakam (TS 4.5)'
       },
       {

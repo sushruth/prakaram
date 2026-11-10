@@ -52,6 +52,7 @@ The texts in the Koshah come from these editions, and we are grateful to the peo
 * **Taittirīya Saṃhitā, Brāhmaṇa and Āraṇyaka:** [taittiriya.com](https://taittiriya.com/), edited by [Sridhar Iyer](https://taittiriya.com/about) from the edition of Mullaivasal Sri Krishnamurthy Sastrigal.
 * **Śrī Sūkta:** [sanskritdocuments.org](https://sanskritdocuments.org/doc_veda/s-sukta-accent.html), encoded by Avinash Sathaye and Anant Upadhyayula.
 * **Nārāyaṇa Upaniṣad:** [sanskritdocuments.org](https://sanskritdocuments.org/doc_upanishhat/nArAyaNopaniShat.html), encoded and proofread by Sunder Hattangadi.
+* **Namaste astu bhagavan** (chanted after the first anuvāka of the Rudram): [sanskritdocuments.org](https://sanskritdocuments.org/doc_shiva/rudram.html).
 * **Icons:** [Phosphor Icons](https://phosphoricons.com) (MIT).
 
 ## 📜 License

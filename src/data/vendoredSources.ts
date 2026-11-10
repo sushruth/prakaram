@@ -52,6 +52,7 @@ export const VENDORED_SOURCES: VendoredSource[] = [
   ...Array.from({ length: 8 }, (_, i) => brahmanaPrapathaka(2, i + 1)),
   ...Array.from({ length: 10 }, (_, i) => aranyakaPrapathaka(i + 1)),
   { id: 'narayana-upanishad', index: 'narayana-upanishad/index.json', label: 'Nārāyaṇa Upaniṣad', sanskrit: 'Nārāyaṇopaniṣat' },
+  { id: 'namaste-astu-bhagavan', index: 'namaste-astu-bhagavan/index.json', label: 'Namaste astu bhagavan', sanskrit: 'namaste astu bhagavan' },
   { id: 'rigveda-khila-sri', index: 'rigveda-khila-sri/index.json', label: 'Śrī Sūkta (Ṛgveda Khila)', sanskrit: 'श्री सूक्तम् (ऋग्वेद खिलम्)' },
 ];
 
