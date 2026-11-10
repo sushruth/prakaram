@@ -13,7 +13,7 @@ import { buildSource, writeSource } from '../lib/parts';
 import type { ManifestEntry } from '../lib/manifest';
 
 const ID = 'taittiriya-samhita';
-const PARSER = 'taittiriya@2';
+const PARSER = 'taittiriya@3';
 /** The kāṇḍas in the vendored table and their prapāṭhaka counts. */
 const KANDAS: Record<number, number> = { 1: 8, 4: 7, 5: 7 };
 const SOURCES_DIR = join(import.meta.dir, '../../..', 'sources');

@@ -4,7 +4,8 @@ import { splitAtDanda } from './danda';
 
 /**
  * Parse taittiriya.com Taittirīya Saṃhitā prashna pages (samhita/kanda_K_prashna_P) into one kāṇḍa's
- * MantraDocument: one section per anuvāka, numbered in reading order across the kāṇḍa, one pada per daṇḍa.
+ * MantraDocument: one section per anuvāka, numbered in reading order across the kāṇḍa, one pada per daṇḍa,
+ * or one per pañcāśat in prose that prints no daṇḍa.
  * The fetch and cache live in the generator; only the parse lives here.
  */
 const SECTION = /<section class="anuvaka-section" id="anuvaka-([^"]+)">/g;
@@ -18,24 +19,27 @@ export interface PrashnaPage {
 
 const text = (html: string): string => decodeEntities(html.replace(TAGS, '')).replace(ZERO_WIDTH, '').replace(/\s+/g, ' ').trim();
 
-/** The Devanagari text of each anuvāka on a page, in order, with its printed id. */
-function anuvakas(html: string): { id: string; text: string }[] {
+/** The Devanagari text of each anuvāka on a page, in order, with its printed id, one entry per pañcāśat. */
+function anuvakas(html: string): { id: string; blocks: string[] }[] {
   const marks = [...html.matchAll(SECTION)];
   return marks.map((m, i) => {
     const body = html.slice(m.index! + m[0].length, i + 1 < marks.length ? marks[i + 1].index! : html.length);
-    return { id: m[1], text: [...body.matchAll(PANCASHATI)].map((p) => text(p[1])).filter(Boolean).join(' ') };
+    return { id: m[1], blocks: [...body.matchAll(PANCASHATI)].map((p) => text(p[1])).filter(Boolean) };
   });
 }
+
+/** Verse splits at its daṇḍas. Prose prints no daṇḍa, so its lines are the pañcāśats. */
+const linesOf = (blocks: string[]): string[] => (blocks.some((b) => /[।॥]/.test(b)) ? splitAtDanda(blocks.join(' ')) : blocks);
 
 /** One kāṇḍa of the Taittirīya Saṃhitā as a document; `pages` are its prashnas in order. */
 export function parseTaittiriya(pages: PrashnaPage[], kanda: number): MantraDocument {
   let n = 0;
   const sections = pages.flatMap(({ prashna, html }) =>
     anuvakas(html)
-      .filter((a) => a.text)
+      .filter((a) => a.blocks.length)
       .map((a) => {
         const anuvaka = Number(a.id);
-        const chunks: MantraChunk[] = splitAtDanda(a.text).map((sanskrit, j) => ({
+        const chunks: MantraChunk[] = linesOf(a.blocks).map((sanskrit, j) => ({
           id: `ts-${kanda}-${prashna}-${anuvaka}-${j + 1}`,
           chunkNumber: j + 1,
           sanskrit,
